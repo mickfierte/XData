@@ -13,15 +13,15 @@
 Для работы с большим бинарным объектом (BLOB) с использованием отложенного (lazy) связывания в XData предлагается использовать тип свойства *Lob*. Для этого типа определены следующие 
 
 свойства:
-	* byte[] *Value* - с помощью этого свойства можно получить и/или обновить значение бинарного объекта
-	* (readonly) bool *Assigned* - проверяет значение бинарного объекта на значение NULL
+* byte[] *Value* - с помощью этого свойства можно получить и/или обновить значение бинарного объекта
+* (readonly) bool *Assigned* - проверяет значение бинарного объекта на значение NULL
 
 методы:
-	* *GetSize*() - возвращает размер бинарного объекта
-	* (extension) Modify(Action<byte[]> action) - хелпер для удобства изменения значения бинарного объекта
+* *GetSize*() - возвращает размер бинарного объекта
+* (extension) Modify(Action<byte[]> action) - хелпер для удобства изменения значения бинарного объекта
 
 операции: 
-	* += - "синтаксический сахар", _data.SomeBlob += _someVariable идентично _data.SomeBlob.Value = _someVariable.
+* += - "синтаксический сахар", _data.SomeBlob += _someVariable идентично _data.SomeBlob.Value = _someVariable.
 	
 Например:
 ```csharp
@@ -36,15 +36,15 @@ invoice.Scan.Modify(x => x = new byte[0]);
 Для работы с Xml с использованием отложенного (lazy) связывания в XData предлагается использовать тип свойства *Xml*. Для этого типа определены следующие 
 
 свойства:
-	* XDocument *Document* - с помощью этого свойства можно получить и/или обновить значение XML
-	* (readonly) bool *Assigned* - проверяет значение XML на значение NULL
+* XDocument *Document* - с помощью этого свойства можно получить и/или обновить значение XML
+* (readonly) bool *Assigned* - проверяет значение XML на значение NULL
 
 методы:
-	* *Extract*(string path, params KeyValuePair<string, string>[] namespaces) - возвращает результат XPath выражения *path* с использованием пространств имен *namespaces* (пара: псевдоним пространства имен - URL), в случае если БД поддерживает операции с XML выполнение XPath выражения производится на стороне БД.
-	* (extension) *Modify*(Action<XDocument> action) - хелпер для удобства изменения значения XML
+* *Extract*(string path, params KeyValuePair<string, string>[] namespaces) - возвращает результат XPath выражения *path* с использованием пространств имен *namespaces* (пара: псевдоним пространства имен - URL), в случае если БД поддерживает операции с XML выполнение XPath выражения производится на стороне БД.
+* (extension) *Modify*(Action<XDocument> action) - хелпер для удобства изменения значения XML
 
 операции: 
-	* += - "синтаксический сахар", _data.SomeXml += _someVariable идентично _data.SomeXml.Document = _someVariable.
+* += - "синтаксический сахар", _data.SomeXml += _someVariable идентично _data.SomeXml.Document = _someVariable.
 	
 Например:
 ```csharp
@@ -60,12 +60,12 @@ invoice.Source.Modify(x => x = new XDocument());
 Для обеспечения возможности работы с внешними ссылками на объекты вне текущего бизнес объекта без оперирования сурогатными ключами (первичными (PK) и внешними (FK)), в XData предлагается использовать тип свойства *Link<TVal,TSrc>*, где *TVal* - тип свойства для просмотра, *TSrc* - тип ссылки на объект. Для этого типа определены следующие
 
 свойства:
-	* TVal *Value* - с помощью этого свойства можно получить значение для просмотра ссылки
-	* TSrc *Source* - с помощью этого свойства можно установить текущее значение ссылки
-	* (readonly) bool *Assigned* - проверяет значение XML на значение NULL
+* TVal *Value* - с помощью этого свойства можно получить значение для просмотра ссылки
+* TSrc *Source* - с помощью этого свойства можно установить текущее значение ссылки
+* (readonly) bool *Assigned* - проверяет значение XML на значение NULL
 
 операции: 
-	* += - "синтаксический сахар", _data.Source += _someDictionaryValue идентично _data.SomeXml.Source = _someDictionaryValue.
+* += - "синтаксический сахар", _data.Source += _someDictionaryValue идентично _data.SomeXml.Source = _someDictionaryValue.
 	
 ```csharp
 newInvoice.DocState += XDataManager.GetDictionaryValue<DocState>(x => x.Code == "CREATED");
