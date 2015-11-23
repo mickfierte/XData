@@ -40,4 +40,4 @@ ADO .Net providers are supported:
 
 New SQL dialect support module and/or provider adapter module will be added as needed. Each such unit is usually not more than 100 lines of code and is not difficult to implement (1 or 2 days).
 
-Detailed description available on [english](./docs/en/common.md) and [russian](./docs/ru/common.md) languages
+Detailed description available on [english :uk: :us:](./docs/en/common.md) and [russian :ru:](./docs/ru/common.md) languages
