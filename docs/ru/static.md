@@ -430,9 +430,9 @@ public class CatalogueTreeFolders : ISqlObject {}
 public class TestProcedure : IDataObject
 {
 	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
-	public int Id { get; set; }
+	public int Id { get { return this.GetProperty(x => x.Id); } }
 	[Property("T", "Name")]
-	public string Name { get; set; }
+	public string Name { get { return this.GetProperty(x => x.Name); } }
 }
 ```
 * Использование хранимых процедур возвращающих несколько наборов данных
@@ -448,9 +448,9 @@ public class TestProcedure : IDataObject
 public class TestProcedure2 : IDataObject
 {
 	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
-	public int Id { get; set; }
+	public int Id { get { return this.GetProperty(x => x.Id); } }
 	[Property("T", "Name")]
-	public string Name { get; set; }
+	public string Name { get { return this.GetProperty(x => x.Name); } }
 	public IEnumerable<TestResult> SecondResult 
 		{ get { return this.GetResultSet(x => x.SecondResult); } }
 }
@@ -487,9 +487,9 @@ public class TestProcedure3 : IDataObject
 public class TestProcedure4 : IDataObject
 {
 	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
-	public int Id { get; set; }
+	public int Id { get { return this.GetProperty(x => x.Id); } }
 	[Property("T", "Name")]
-	public string Name { get; set; }
+	public string Name { get { return this.GetProperty(x => x.Name); } }
 	public string OutParameter 
 		{ get { return this.GetParameter(x => x.OutParameter); } }
 }
@@ -524,9 +524,9 @@ public class TestProcedure5 : IDataObject
 public class TestProcedure6 : IDataObject
 {
 	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
-	public int Id { get; set; }
+	public int Id { get { return this.GetProperty(x => x.Id); } }
 	[Property("T", "Name")]
-	public string Name { get; set; }
+	public string Name { get { return this.GetProperty(x => x.Name); } }
 	public int ResultParameter 
 		{ get { return this.GetParameter(x => x.ResultParameter); } }
 }
@@ -569,9 +569,9 @@ public class Classifier
 public class TestProcedure7 : IDataObject
 {
 	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
-	public int Id { get; set; }
+	public int Id { get { return this.GetProperty(x => x.Id); } }
 	[Property("T", "Name")]
-	public string Name { get; set; }
+	public string Name { get { return this.GetProperty(x => x.Name); } }
 }
 ```
 * Использование в качестве источника данных скалярной функции
@@ -596,9 +596,9 @@ public class TestFunction2 : IDataObject
 public class TestFunction3 : IDataObject
 {
 	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
-	public int Id { get; set; }
+	public int Id { get { return this.GetProperty(x => x.Id); } }
 	[Property("T", "Name")]
-	public string Name { get; set; }
+	public string Name { get { return this.GetProperty(x => x.Name); } }
 }
 ```   
 * Использование скалярной функции в качестве источника данных свойства
