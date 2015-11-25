@@ -2,7 +2,7 @@ XData
 ======
 version 1.0
 ## Description
-.Net domain object oriented data access layer component. XData is not "yet another ORM", but а feature rich data access layer for Your solutions. Basic idea to create this component was a suppling high quality tool to professional developers, having deep competences in data storage modeling and access.
+.Net domain object oriented data access layer component. XData is not "yet another ORM", but а comlete feature rich data access layer for Your solutions. Basic idea to create this component was a suppling high quality tool to professional developers, having deep competences in data storage modeling and access.
 ### Basic features
 * Single domain object can be mapped on multiple tables (or views, or procedures) in DB. Every DB object can be mapped multiple times in one (or more mappings).
 * _IQueryable_ interface is fully supported.
