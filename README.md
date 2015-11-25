@@ -42,4 +42,4 @@ New SQL dialect support module and/or provider adapter module will be added as n
 
 Detailed description is available on [russian :ru:](./docs/ru/common.md) only for now, but we are working on english translation now. Check this page a bit later...
 
-[//]: <> Detailed description available on [english :uk: :us:](./docs/en/common.md) and [russian :ru:](./docs/ru/common.md) languages
+<!-- Detailed description available on [english :uk: :us:](./docs/en/common.md) and [russian :ru:](./docs/ru/common.md) languages. -->
