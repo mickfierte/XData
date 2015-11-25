@@ -200,7 +200,8 @@
 	"AllowedDiscount" /* ExpressionText: имя статичного поля - описания выражения */, 
 	Operation: FilterOperation.NotEqual /* операция фильтра */)]
 …
-//Статическое поле отражаемого объекта 
+//Статическое поле отражаемого объекта помеченное атрибутом SqlExpression
+[SqlExpression]
 private static Calculate<int> AllowedDiscount = x => x.Case<Product, int>( 
 	z => z.Field<bool>("is_vip"), z => 0, 1.SetValue(10));
 ```
@@ -287,7 +288,8 @@ private static Calculate<int> AllowedDiscount = x => x.Case<Product, int>(
 	ExprSize = 17, 
 	ExprScale = 5)]
 …
-//Статическое поле отражаемого объекта 
+//Статическое поле отражаемого объекта помеченное атрибутом SqlExpression
+[SqlExpression]
 private static Calculate<int> AllowedDiscount = x => x.Case<Product, int>( 
 	z => z.Field<bool>("is_vip"), z => 0, 1.SetValue(10));	
 ```
@@ -415,18 +417,207 @@ public class CatalogueTreeFolders : ISqlObject {}
 Для описания параметра хранимой процедуры используется атрибут *ParameterAttribute* с параметрами: *Alias* - псевдоним (alias) источника данных, *Order* - порядковый номер параметра, *Binding* - имя под которым этот параметр будет доступен из программного кода (часто удобно когда имя параметра в коде будет иметь другую нотификацию нежели в БД), *Type* - тип который будет использоваться  для доступа к значению параметра в программном коде, *DbType* - тип данных на уровне ADO .Net провайдера, *Direction* - опционально, направление передачи данных параметра, по умолчанию *ParameterDirection*.**Input**, *Size* - опционально, длина значения параметра (если применимо), *Scale* - опционально, тесятичная точность значения параметра (если применимо), *Name* - опционально, имя параметра, по умолчанию равно *Binding*, *DefaultType* - [тип значения по умолчанию](./glossary.md#Тип-значения-свойства-по-умолчанию), *DefaultValue* опционально, в зависимости от значения *DefaultType*, *NativeSqlType* - опционально, имя SQL типа в базе данных (*NativeSqlType* указывается в случае конфликта преобразования типа данных используемого по умолчанию), *UdtTypeName* - опционально, имя пользовательского типа данных SQL (UDT), *UdtElementTypeName* - опционально, имя пользовательского типа данных SQL (UDT) элемента коллекции *UdtTypeName* (в случае если *UdtTypeName* - коллекция), *IsArray* - опционально, признак того, что параметр является массивом элементов *UdtElementTypeName* (если *UdtElementTypeName* не указан, массивом элементов *DbType*), по умолчанию - **false**.
 
 #####Описание возвращаемого набора данных
-Для описания набора данных возвращаемого хранимой процедурой используется атрибут *ResultSetAttribute* с параметрами: *Alias* - псевдоним (alias) источника данных - хранимой процедуры SQL, *Name* - имя возвращаемого набора данных под которым он будет доступен из программного кода, *Order* - опционально, порядковый номер возвращаемого набора данных (для хранимых процедур возвращающих несколько наборов данных указание этого параметра - обязательно), *ResultType* - опционально, тип который будет использован для отражения элементов возвращаемого набора данных, по умолчанию используется тип которому назначен этот атрибут.
+Для описания набора данных возвращаемого хранимой процедурой используется атрибут *ResultSetAttribute* с параметрами: *Alias* - псевдоним (alias) источника данных - хранимой процедуры SQL, *Name* - имя возвращаемого набора данных под которым он будет доступен из программного кода, *Order* - опционально, порядковый номер возвращаемого набора данных (для хранимых процедур возвращающих несколько наборов данных указание этого параметра - обязательно), *ResultType* - опционально, тип который будет использован для отражения элементов возвращаемого набора данных, по умолчанию используется тип которому назначен этот атрибут, *IsDefault* - опционально, признак возвращаемого набора данных по умолчанию (используется только для хранимых процедур возвращающих несколько наборов данных), по умолчанию **false**.
 
 #####Примеры описания объектного преобразования хранимых процедур и функций SQL
 * Использование в качестве источника данных набора записей возвращаемый хранимой процедурой
+```csharp
+[DataObject("T"),
+	Procedure("T", "dbo.TestProcedure", ProcedureType.Procedure),
+	Parameter("T", 1, "param1", typeof(int), DbType.Int32),
+	Parameter("T", 2, "param2", typeof(string), DbType.String),
+	ResultSet("T", "Result")]
+public class TestProcedure : IDataObject
+{
+	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
+	public int Id { get; set; }
+	[Property("T", "Name")]
+	public string Name { get; set; }
+}
+```
 * Использование хранимых процедур возвращающих несколько наборов данных
+```csharp
+[DataObject("T"),
+	Procedure("T", "dbo.TestProcedure2", ProcedureType.Procedure),
+	Parameter("T", 1, "param1", typeof(int), DbType.Int32),
+	Parameter("T", 2, "param2", typeof(string), DbType.String),
+	Parameter("T", 3, "param3", typeof(int), DbType.Int32),
+	Parameter("T", 4, "param4", typeof(string), DbType.String),
+	ResultSet("T", "Result", IsDefault = true),
+	ResultSet("T", "SecondResult", ResultType = typeof(TestResult), Order = 2)]
+public class TestProcedure2 : IDataObject
+{
+	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
+	public int Id { get; set; }
+	[Property("T", "Name")]
+	public string Name { get; set; }
+	public IEnumerable<TestResult> SecondResult 
+		{ get { return this.GetResultSet(x => x.SecondResult); } }
+}
+```
 * Использование возвращаемого (out) параметра хранимой процедуры
+```csharp
+[DataObject("T"),
+        Procedure("T", "dbo.TestProcedure3", ProcedureType.Procedure),
+        Parameter("T", 1, "param1", typeof(int), DbType.Int32),
+        Parameter("T", 2, "param2", typeof(string), DbType.String),
+        Parameter("T", 3, "OutParameter", typeof(string), 
+        	DbType.String, 
+        	Size = 20, 
+        	Direction = ParameterDirection.Output, 
+        	Name = "param3")]
+public class TestProcedure3 : IDataObject
+{
+	public string OutParameter 
+		{ get { return this.GetParameter(x => x.OutParameter); } }
+}
+```
 * Тоже самое совместно с возвращением набора записей
+```csharp
+[DataObject("T"),
+        Procedure("T", "dbo.TestProcedure4", ProcedureType.Procedure),
+        Parameter("T", 1, "param1", typeof(int), DbType.Int32),
+        Parameter("T", 2, "param2", typeof(string), DbType.String),
+        Parameter("T", 3, "OutParameter", typeof(string), 
+        	DbType.String, 
+        	Size = 20, 
+        	Direction = ParameterDirection.Output, 
+        	Name = "param3"),
+        ResultSet("T", "Result")]
+public class TestProcedure4 : IDataObject
+{
+	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
+	public int Id { get; set; }
+	[Property("T", "Name")]
+	public string Name { get; set; }
+	public string OutParameter 
+		{ get { return this.GetParameter(x => x.OutParameter); } }
+}
+```
 * Использование возвращаемого значения (return value) хранимой процедуры
+```csharp
+[DataObject("T"),
+        Procedure("T", "dbo.TestProcedure5", ProcedureType.Procedure),
+        Parameter("T", 1, "param1", typeof(int), DbType.Int32),
+        Parameter("T", 2, "param2", typeof(string), DbType.String),
+        Parameter("T", 3, "OutParameter", typeof(string), 
+        	DbType.String, 
+        	Size = 20, 
+        	Direction = ParameterDirection.Output, 
+        	Name = "param3")]
+public class TestProcedure5 : IDataObject
+{
+	public string OutParameter 
+		{ get { return this.GetParameter(x => x.OutParameter); } }
+}
+```
 * Тоже самое совместно с возвращением набора записей
+```csharp
+[DataObject("T"),
+	Procedure("T", "dbo.TestProcedure6", ProcedureType.Procedure),
+	Parameter("T", 1, "param1", typeof(int), DbType.Int32),
+	Parameter("T", 2, "param2", typeof(string), DbType.String),
+	Parameter("T", 3, "ResultParameter", typeof(int), 
+		DbType.Int32, 
+		Direction = ParameterDirection.ReturnValue),
+	ResultSet("T", "Result")]
+public class TestProcedure6 : IDataObject
+{
+	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
+	public int Id { get; set; }
+	[Property("T", "Name")]
+	public string Name { get; set; }
+	public int ResultParameter 
+		{ get { return this.GetParameter(x => x.ResultParameter); } }
+}
+```
+* Использование в качестве параметра хранимой процедуры массива простых типов
+```csharp
+[DataObject("T"),
+	Procedure("T", "TestFunction", ProcedureType.Function),
+	Parameter("T", 1, "param1", typeof(int[]), DbType.Int32, IsArray = true),
+	Parameter("T", 2, "Result", typeof(int), DbType.Int32, 
+		Direction = ParameterDirection.ReturnValue)]
+public class TestFunction : IDataObject
+{
+	public int Result { get { return this.GetParameter(x => x.Result); } }
+}
+```
 * Использование в качестве параметра хранимой процедуры набора записей
-* Тоже самое для UDT (пользовательский тип данных SQL)
-* Использование в качестве источника данных скалярной функции (возможно с табличным или UDT параметром)
-* Использование в качестве источника данных табличной функции (возможно с табличным или UDT параметром)
+```csharp
+/* тип отражаемый в UDT должен поддерживать 
+	Xml сериализацию стандартными методами */
+[Serializable]
+public class Classifier
+{
+	[XmlAttribute]
+	public int Id { get; set; }
+	[XmlAttribute]
+	public string Name { get; set; }
+}
+...
+[DataObject("T"),
+	Procedure("T", "dbo.TestProcedure7", ProcedureType.Procedure),
+	Parameter("T", 1, "param1", 
+		typeof(Classifier[]) /* тип параметра должен быть 
+			массивом объектов отражаемых на UDT */, 
+		DbType.Object /* для использования UDT тип на уровне 
+			провайдера должен быть указан равным DbType.Object */, 
+		UdtTypeName = "dbo.Classifier" /* рекомендуется 
+			использовать полное имя типа */ ),
+	ResultSet("T", "Result")]
+public class TestProcedure7 : IDataObject
+{
+	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
+	public int Id { get; set; }
+	[Property("T", "Name")]
+	public string Name { get; set; }
+}
+```
+* Использование в качестве источника данных скалярной функции
+```csharp
+[DataObject("T"),
+	Procedure("T", "dbo.TestFunction2", ProcedureType.Function),
+	Parameter("T", 1, "param1", typeof(int), DbType.Int32),
+	Parameter("T", 2, "param2", typeof(string), DbType.String),
+	Parameter("T", 3, "Result", typeof(string), DbType.String, Direction = ParameterDirection.ReturnValue)]
+public class TestFunction2 : IDataObject
+{
+	public string Result { get { return this.GetParameter(x => x.Result); } }
+}
+```   
+* Использование в качестве источника данных табличной функции
+```csharp
+[DataObject("T"),
+	Procedure("T", "dbo.TestFunction3", ProcedureType.Function),
+	Parameter("T", 1, "param1", typeof(int), DbType.Int32),
+	Parameter("T", 2, "param2", typeof(string), DbType.String),
+	ResultSet("T", "Result")]
+public class TestFunction3 : IDataObject
+{
+	[Property("T", "Id", Flags = DataPropertyFlag.Id)]
+	public int Id { get; set; }
+	[Property("T", "Name")]
+	public string Name { get; set; }
+}
+```   
 * Использование скалярной функции в качестве источника данных свойства
-* Тоже самое с использованием LINQ выражения в качестве описания SQL выражения - источника
+```csharp
+[DataObject("T"),
+	DataTable("T_DOC_TYPE", "T"),
+	Column("DocTypeId", typeof(long), Flags = DataPropertyFlag.Id)]
+public class TestFunction4 : IDataObject
+{
+	[Property("T")]
+	public Code { get; set; }
+	[Property("T")]
+	public Name { get; set; }
+	[Property, 
+		PropertyExpression("test", DataExpressionType.LinqExpression, ExprSize = 20)]
+	public Test { get; set; }
+	//Статическое поле отражаемого объекта помеченное атрибутом SqlExpression
+	[SqlExpression]
+	private static Calculate<string> test z => z.SqlFn<string>("dbo.TestFunction2",
+		y => y.Field<long>("T", "doc_type_id"), y => y.Field<string>("T", "name"))
+}
+```
