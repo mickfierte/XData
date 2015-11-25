@@ -614,7 +614,7 @@ public class TestFunction4 : IDataObject
 	public Name { get; set; }
 	[Property, 
 		PropertyExpression("test", DataExpressionType.LinqExpression, ExprSize = 20)]
-	public Test { get; set; }
+	public Test { get { return this.GetProperty(x => x.Test); } }
 	//Статическое поле отражаемого объекта помеченное атрибутом SqlExpression
 	[SqlExpression]
 	private static Calculate<string> test z => z.SqlFn<string>("dbo.TestFunction2",
