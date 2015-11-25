@@ -9,4 +9,16 @@
 
 Для очистки значения ограничения времени исполнения необходимо передать в качестве его значения **null**. 
 
+Для сброса всех значений ограничений времени исполнения необходимо вызвать метод *Reset* репозитория.
+
 >При установке пустого значения необходимо учитывать назначенный этому ограничению [метод обработки пустых значений фильтров](./glossary.md#Методы-обработки-пустых-значений-фильтров)
+```csharp
+var rep = invoice.GetRepository();
+var hist = XDataManager.GetRepository<DocHistory>(rep.Layer, context: rep.Context)
+    .Reset()
+    .SetFilterValue(DocHistory.FilterByDocId, invoice.GetProperty<long>("DocId"))
+    .SetFilterValue(DocHistory.FilterByDocStateId, invoice.DocState.Key);
+var newHist = hist.New();
+newHist.HistoryDate = DateTime.UtcNow;
+return hist.Submit(ref newHist);
+```
