@@ -51,7 +51,7 @@ XData
   * [Статическое преобразование (static mapping)](./static.md)
   * [Динамическое преобразование (dynamic mapping)](./dynamic.md)
 * [Динамические запросы](./queries.md)
-* [Ограничения времени исполнения](./runtime_filters.md)
+* [Фильтры времени исполнения](./runtime_filters.md)
 * [Поддержка LINQ](./linq.md)
 * [Использование 3-х уровневой архитектуры](./three_tier.md)
 * [Обработка взаимосвязанных объектов (Unit of Work)](./work_set.md)
