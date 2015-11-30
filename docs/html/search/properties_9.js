@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['key',['Key',['../struct_x_data_object_1_1_data_source_1_1_structure_1_1_tagged_value.html#a603deddd02e12612618ee3f92b4f4b4b',1,'XDataObject.DataSource.Structure.TaggedValue.Key()'],['../interface_x_data_object_1_1_mapping_1_1_dynamic_1_1_i_tagged_expression.html#a521b14d42b7ab4f7bc8aadc78a971cf2',1,'XDataObject.Mapping.Dynamic.ITaggedExpression.Key()'],['../class_x_data_object_1_1_mapping_1_1_dynamic_1_1_tagged_expression.html#a90080fd72e60416cada84804e7c7ee1d',1,'XDataObject.Mapping.Dynamic.TaggedExpression.Key()'],['../class_x_data_object_1_1_mapping_1_1_link.html#a03bc27d8239ad1e6c19d521ea165eea8',1,'XDataObject.Mapping.Link.Key()']]],
+  ['keytype',['KeyType',['../interface_x_data_object_1_1_mapping_1_1_dynamic_1_1_i_tagged_expression.html#a545397255cb7559898f030b2e96695aa',1,'XDataObject.Mapping.Dynamic.ITaggedExpression.KeyType()'],['../class_x_data_object_1_1_mapping_1_1_dynamic_1_1_tagged_expression.html#ab5a007a5ef6daf9b09aa83328f5740d1',1,'XDataObject.Mapping.Dynamic.TaggedExpression.KeyType()']]]
+];
