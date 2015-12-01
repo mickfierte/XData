@@ -40,6 +40,8 @@ ADO .Net providers are supported:
 
 New SQL dialect support module and/or provider adapter module will be added as needed. Each such unit is usually not more than 100 lines of code and is not difficult to implement (1 or 2 days).
 
+Auto-generated documentaion (english :en: :us:) is [located here](https://htmlpreview.github.io/?https://github.com/mickfierte/XData/blob/master/docs/html/index.html)
+
 Detailed description is available on [russian :ru:](./docs/ru/common.md) only for now, but we are working on english translation now. Check this page a bit later...
 
 <!-- Detailed description available on [english :uk: :us:](./docs/en/common.md) and [russian :ru:](./docs/ru/common.md) languages. -->
