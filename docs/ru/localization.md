@@ -19,7 +19,11 @@
 2. Перезапустите Ваше приложение или сайт (например, для перезапуска сайта под управлением IIS выполните команду IISRESET).
 
 >Рекомендуемые материалы:
+
 >https://msdn.microsoft.com/en-us/library/f45fce5x(v=vs.100).aspx
+
 >https://msdn.microsoft.com/en-us/library/ccec7sz1(v=vs.110).aspx
+
 >https://msdn.microsoft.com/en-us/library/sb6a8618(v=vs.100).aspx
->http://www.codeproject.com/Articles/5447/NET-Localization-using-Resource-file 
+
+>http://www.codeproject.com/Articles/5447/NET-Localization-using-Resource-file
