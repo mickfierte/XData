@@ -9,7 +9,7 @@
 
 Покажем это на конкретном примере:
 
-Инициализация нового UoW конейнера для нового корневого объекта (insert) производится с помощью статичного метода *Add* класса *Work*:
+Инициализация нового UoW конейнера для нового корневого объекта (insert) производится с помощью статичного метода [*Add*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/335.html) класса [*Work*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/323.html):
 ```csharp
 var rep = XDataManager.GetRepository<Model.Patient>(Instance);
 var instance = rep.New();
@@ -43,32 +43,32 @@ using (var work = Work.Add(patient,
 }
 ```
 
-Инициализация единичного подчиненного объекта в UoW конейнере (в том случае когда свойство в основном объекте не коллекция, а единичный экземляр) производится с помощью статичного метода *Get* класса *Work*. Его использование аналогично методам *Empty* и *Fill*.
+Инициализация единичного подчиненного объекта в UoW конейнере (в том случае когда свойство в основном объекте не коллекция, а единичный экземляр) производится с помощью статичного метода [*Get*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/338.html) класса [*Work*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/323.html). Его использование аналогично методам [*Empty*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/336.html) и [*Fill*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/337.html).
 
-UoW конейнер можно также инциализировать коллекцией корневых объектов. Для этого используется соответствующая перегрузка метода *Add* класса *Work* которая принмает в качестве первого параметра последовательность (*IEnumerable*) корневых объектов.
+UoW конейнер можно также инциализировать коллекцией корневых объектов. Для этого используется соответствующая перегрузка метода [*Add*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/340.html) класса [*Work*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/323.html) которая принмает в качестве первого параметра последовательность (*IEnumerable*) корневых объектов.
 
-Получение единичного объекта из UoW конейнера производится с помощью метода *Get* в котором можно указать лямбда предиткат для выборки из коллекции корневых объектов, после получения объекта его можно будет редактировать (или удалять как в примере ниже):
+Получение единичного объекта из UoW конейнера производится с помощью метода [*Get*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/354.html) в котором можно указать лямбда предиткат для выборки из коллекции корневых объектов, после получения объекта его можно будет редактировать (или удалять как в примере ниже):
 ```csharp
 _patient = work.Get();
 _patient.SetDeleted(True);
 ```
 
-Получение набора объектов из UoW конейнера производится с помощью метода *Select*:
+Получение набора объектов из UoW конейнера производится с помощью метода [*Select*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/358.html):
 ```csharp
 var newOperations = work.Find(x => x.PatientOperList).Select(x => x.Date > startDate);
 ```
 
-Получение единичного подчиненного UoW конейнера производится с помощью метода *Find* в котором можно указать лямбда предиткат для выборки из коллекции корневых объектов, а Добавление нового объекта в UoW конейнер производится с помощью метода *Add*:
+Получение единичного подчиненного UoW конейнера производится с помощью метода [*Find*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/352.html) в котором можно указать лямбда предиткат для выборки из коллекции корневых объектов, а Добавление нового объекта в UoW конейнер производится с помощью метода [*Add*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/348.html):
 ```csharp
 work.Find(x => x.PatientOperList).Add(() => n.Data);
 ```
 
-Замену объекта в UoW конейнере производится с помощью метода *Assign* (при этом все все подчиненные UoW контейнеры будут сброшены и все изменения в них будут потеряны):
+Замену объекта в UoW конейнере производится с помощью метода [*Assign*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/350.html) (при этом все все подчиненные UoW контейнеры будут сброшены и все изменения в них будут потеряны):
 ```csharp
 work.Assign(x => true, repository.New());
 ```
 
->Не используйте метод Assign для редактирования свойств объекта! Редактирование объекта в UoW контейнере производится путем получения экземпляра объекта с помощью метода *Get* и редактирования его свойств. Метод *Assign* служит именно для замены объекта целиком вместе с подчиненными ему UoW контейнерами!
+>Не используйте метод Assign для редактирования свойств объекта! Редактирование объекта в UoW контейнере производится путем получения экземпляра объекта с помощью метода *Get* и редактирования его свойств. Метод [*Assign*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/5/350.html) служит именно для замены объекта целиком вместе с подчиненными ему UoW контейнерами!
 
 <!-- -->
->**ВАЖНОЕ ЗАМЕЧАНИЕ:** Понимая, что несмотря на несомненную полезность данного функционала, он не является постоянно необходимым программисту, возможность использования совместной обработки взаимосвязанных объектов вынесена в отдельный модуль XDataObject.WorkSet и при необходимости может быть подключена программистом отдельно.
+>**ВАЖНОЕ ЗАМЕЧАНИЕ:** Понимая, что несмотря на несомненную полезность данного функционала, он не является постоянно необходимым программисту, возможность использования совместной обработки взаимосвязанных объектов вынесена в отдельный модуль [*XDataObject.WorkSet*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/3.html) и при необходимости может быть подключена программистом отдельно.
