@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This comment will force IE7 to go into quirks mode. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
+<script type="text/javascript" src="../../JS/Common.js"></script>
+<title>JoinedEnumerable.Join&lt;TOuter, TInner, TKey, TResult&gt; Method (JoinedEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</title>
+</head>
+<body>
+<div id="Header">
+<div id="ProjectTitle">XData</div>
+<div id="PageTitle">JoinedEnumerable.Join&lt;TOuter, TInner, TKey, TResult&gt; Method (JoinedEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</div>
+<div id="HeaderShortcuts">
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
+</div>
+<div class="DarkLine"></div>
+<div class="LightLine"></div>
+<div id="HeaderToolbar">
+<img id="ExpandCollapseAllImg" src="../../GFX/SmallSquareExpanded.gif" alt="" style="vertical-align: top;" onclick="javascript: ToggleAllSectionsVisibility();" />
+<span id="ExpandCollapseAllSpan" onclick="javascript: ToggleAllSectionsVisibility();">Collapse All</span>
+</div>
+</div>
+<div id="Contents">
+<a id="ContentsAnchor">&nbsp;</a>
+Join extension for Joined enumerable
+<div id="ItemLocation">
+<b>Declaring type:</b> <a href="../../Contents/4/280.html">JoinedEnumerable</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/11.html">XDataObject.Extensions</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
+</div>
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static IEnumerable&lt;TResult&gt; Join&lt;TOuter, TInner, TKey, TResult&gt; (
+        JoinedEnumerable&lt;TOuter&gt; <i>outer</i>,
+        IEnumerable&lt;TInner&gt; <i>inner</i>,
+        Func&lt;TOuter, TKey&gt; <i>outerKeySelector</i>,
+        Func&lt;TInner, TKey&gt; <i>innerKeySelector</i>,
+        Func&lt;TOuter, TInner, TResult&gt; <i>resultSelector</i>,
+        IEqualityComparer&lt;TKey&gt; <i>comparer</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">TOuter</div>
+<div class="ParameterCommentContainer">
+Outer enumerable type
+</div>
+<div class="CommentParameterName">TInner</div>
+<div class="ParameterCommentContainer">
+Inner enumerable type
+</div>
+<div class="CommentParameterName">TKey</div>
+<div class="ParameterCommentContainer">
+Join key type
+</div>
+<div class="CommentParameterName">TResult</div>
+<div class="ParameterCommentContainer">
+Result sequence type
+</div>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">outer</div>
+<div class="ParameterCommentContainer">
+Outer enumerable
+</div>
+<div class="CommentParameterName">inner</div>
+<div class="ParameterCommentContainer">
+Inner enumerable
+</div>
+<div class="CommentParameterName">outerKeySelector</div>
+<div class="ParameterCommentContainer">
+Outer key selector
+</div>
+<div class="CommentParameterName">innerKeySelector</div>
+<div class="ParameterCommentContainer">
+Inner key selector
+</div>
+<div class="CommentParameterName">resultSelector</div>
+<div class="ParameterCommentContainer">
+Result selector
+</div>
+<div class="CommentParameterName">comparer</div>
+<div class="ParameterCommentContainer">
+Key type comparer
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+Joined sequence
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<table class="MembersTable">
+<col width="25%" />
+<col width="75%" />
+<tr>
+<th>Exception type</th>
+<th>Condition</th>
+</tr>
+<tr>
+<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
+<td>Argument null</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+</div>
+<div id="Footer">
+<span class="Footer">Generated by <a href="http://immdocnet.codeplex.com/" target="_blank">ImmDoc .NET</a></span>.
+</div>
+
+</body>
+
+</html>

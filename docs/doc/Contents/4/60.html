@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This comment will force IE7 to go into quirks mode. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
+<script type="text/javascript" src="../../JS/Common.js"></script>
+<title>QueryDescriptionExtensions.ToDataSet&lt;T&gt; Method (IEnumerable&lt;T&gt;, string, ISqlBuilder)</title>
+</head>
+<body>
+<div id="Header">
+<div id="ProjectTitle">XData</div>
+<div id="PageTitle">QueryDescriptionExtensions.ToDataSet&lt;T&gt; Method (IEnumerable&lt;T&gt;, string, ISqlBuilder)</div>
+<div id="HeaderShortcuts">
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
+</div>
+<div class="DarkLine"></div>
+<div class="LightLine"></div>
+<div id="HeaderToolbar">
+<img id="ExpandCollapseAllImg" src="../../GFX/SmallSquareExpanded.gif" alt="" style="vertical-align: top;" onclick="javascript: ToggleAllSectionsVisibility();" />
+<span id="ExpandCollapseAllSpan" onclick="javascript: ToggleAllSectionsVisibility();">Collapse All</span>
+</div>
+</div>
+<div id="Contents">
+<a id="ContentsAnchor">&nbsp;</a>
+Composes data source text from sequence
+<div id="ItemLocation">
+<b>Declaring type:</b> <a href="../../Contents/3/495.html">QueryDescriptionExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
+</div>
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static string ToDataSet&lt;T&gt; (
+        IEnumerable&lt;T&gt; <i>source</i>,
+        string <i>prefix</i>,
+        ISqlBuilder <i>builder</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T</div>
+<div class="ParameterCommentContainer">
+Source object type
+</div>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">source</div>
+<div class="ParameterCommentContainer">
+Source sequence
+</div>
+<div class="CommentParameterName">prefix</div>
+<div class="ParameterCommentContainer">
+Source column prefix
+</div>
+<div class="CommentParameterName">builder</div>
+<div class="ParameterCommentContainer">
+SQL dialect adapter
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+Data source text
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Remarks
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<div class="RemarksContainer">
+<p>Used to compose synthetic data source from object sequence</p>
+<example>
+  <code language="cs">
+            var ds = Enumerable.Range(1,3).ToDataSet("val", XDataManager.GetContext().DialectAdapter);
+            // for MSSQL dialect ds will contains "(select 1 as val union select 2 as val union select 3 as val)"
+            // for Oracle dialect ds will contains "(select 1 as val from dual union select 2 as val from dual union select 3 as val from dual)"
+            // Enumeration types can be used as 
+            var ds = Enum.GetValues(typeof(SomeEnumType)).Cast&lt;int&gt;().ToDataSet("val", XDataManager.GetContext().DialectAdapter);
+            // Object types properties are represented as fields
+            var test = new []{new {Id=1, Name="Test"}, new {Id=2, Name="Another"}};
+            var ds = test.ToDataSet("X", XDataManager.GetContext().DialectAdapter);
+            // for MSSQL dialect ds will contains "(select 1 as X_Id, 'Test' as X_Name union select 2 as X_Id, 'Another' as X_Name)"
+            </code>
+</example>
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+</div>
+<div id="Footer">
+<span class="Footer">Generated by <a href="http://immdocnet.codeplex.com/" target="_blank">ImmDoc .NET</a></span>.
+</div>
+
+</body>
+
+</html>

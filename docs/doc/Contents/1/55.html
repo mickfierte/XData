@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This comment will force IE7 to go into quirks mode. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
+<script type="text/javascript" src="../../JS/Common.js"></script>
+<title>IDataObject Interface</title>
+</head>
+<body>
+<div id="Header">
+<div id="ProjectTitle">XData</div>
+<div id="PageTitle">IDataObject Interface</div>
+<div id="HeaderShortcuts">
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
+<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
+<a href="#SectionHeader3" onclick="javascript: SetSectionVisibility(3, true); SetExpandCollapseAllToCollapseAll();">Example</a>&nbsp;
+</div>
+<div class="DarkLine"></div>
+<div class="LightLine"></div>
+<div id="HeaderToolbar">
+<img id="ExpandCollapseAllImg" src="../../GFX/SmallSquareExpanded.gif" alt="" style="vertical-align: top;" onclick="javascript: ToggleAllSectionsVisibility();" />
+<span id="ExpandCollapseAllSpan" onclick="javascript: ToggleAllSectionsVisibility();">Collapse All</span>
+</div>
+</div>
+<div id="Contents">
+<a id="ContentsAnchor">&nbsp;</a>
+Data object interface
+<div id="ItemLocation">
+<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
+</div>
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
+<col width="0%" />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">public interface IDataObject :&nbsp;</td>
+<td>
+ISqlObject
+</td>
+</tr>
+</table>
+</td></tr></table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Remarks
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<div class="RemarksContainer">
+<p>Mapping domain object to database</p>
+<p>WARNING! Data object mapping requires <a href="../../Contents/2/194.html">DataObjectAttribute</a>!</p>
+<p>Hint: Use <a href="../../Contents/2/195.html">DataTableAttribute</a>, <a href="../../Contents/2/196.html">SubqueryAttribute</a> and <a href="../../Contents/2/197.html">InnerViewAttribute</a> to map data object to data sources</p>
+<p>Hint: Use <a href="../../Contents/2/198.html">FilterAttribute</a>'s specific successor to link data sources and apply filters to data</p>
+<p>Hint: Use <a href="../../Contents/1/333.html">ExternalLinkAttribute</a> to declare master/slave relations between repositories</p>
+<p>Hint: Use <a href="../../Contents/2/199.html">Lob</a> to map binary fields<code language="cs">
+                [Property("scan", "SC", Flags = DataPropertyFlag.OuterFlag)]
+                public Lob Scan { get; set; }
+            </code></p>
+<p>Hint: Use <a href="../../Contents/2/200.html">Xml</a> to map Xml fields<code language="cs">
+                [Property("source", "SR", Flags = DataPropertyFlag.OuterFlag)]
+                public Xml Source { get; set; }
+            </code></p>
+<p>Hint: Use <a href="../../Contents/2/201.html">Link&lt;TVal, TSrc&gt;</a> to map data link<code language="cs">
+                [Property("name", "S"), 
+                    DictionaryProperty("Name", "DocState"),
+                    DictionaryProperty("Code", "DocStateCode")]
+                public Link&lt;string, DocState&gt; DocState { get; set; }
+            </code></p>
+<p>Hint: Use <span class="PseudoLink">identity key</span>)<code language="cs">
+                [DataObject("S"), 
+                    DataTable("T_DOC_STATE", "S"), 
+                    Column("DocStateId", "doc_state_id", typeof(long?), "S", Flags = DataPropertyFlag.Id)] 
+            </code></p>
+<p>Hint: Use <a href="../../Contents/2/202.html">PropertyExpressionAttribute</a> or <a href="../../Contents/2/203.html">ColumnExpressionAttribute</a> to use SQL expression or subquery as property (or mapped column) data source<code language="cs">
+                [Property("doc_amount"), 
+                    PropertyExpression("A", DataExpressionType.SubQuery, DbType.Decimal, ExprSize = 17, ExprScale = 5)] 
+                public double? DocAmount { get { return this.GetProperty(() =&gt; DocAmount); } }
+            </code></p>
+<p>Hint: Use <a href="../../Contents/2/204.html">PropertyDefaultAttribute</a> or <a href="../../Contents/2/205.html">ColumnDefaultAttribute</a> to set default value generation rule to property (or mapped column)<code language="cs">
+                [Property("doc_date", "D"), 
+                    PropertyDefault(DefaultType.CurrentDate)] 
+                public DateTime? DocDate { get; set; }
+            </code></p>
+<p>Hint: Use <a href="../../Contents/2/206.html">ReferenceAttribute</a> to use inner view property in parent data object<code language="cs">
+                [PropertyLink("HistoryDate", "H")] 
+                public DateTime? DocLastChange { get { return this.GetProperty(() =&gt; DocLastChange); } }
+            </code></p>
+<p>Hint: Declare readonly fields as<code language="cs">
+                [PropertyLink("HistoryDate", "H")] 
+                public DateTime? DocLastChange { get { return this.GetProperty(() =&gt; DocLastChange); } }
+            </code></p>
+<p>Hint: Declare custom logic functions (see <a href="../../Contents/1/54.html">IDataLogic&lt;T&gt;</a> and 
+            <see cref="M:XDataObject.DataObjectExtensions.Execute``1(System.Collections.Generic.ICollection{``0},System.String,System.Collections.Generic.IDictionary{System.String,System.Action{System.Byte[]}},System.Collections.Generic.IDictionary{System.String,System.Func{System.Byte[],System.Byte[]}})">
+            (IDataObject extension) Execute(string,System.Collections.Generic.IDictionary&lt;string,System.Action&lt;byte[]&gt;&gt;,System.Collections.Generic.IDictionary&lt;string,System.Func&lt;byte[],byte[]&gt;&gt;)</see>) as<code language="cs">
+            //generate unique action key and use it for mark it realization in IDataLogic&lt;Invoice&gt;
+                [CustomAction("{ab12d6f0-69d0-4997-bb0b-5f5f7c0581d1}")]
+                public static CustomLogic&lt;Invoice&gt; TestCustomLogic;
+            //using
+                obj.Execute(() =&gt; Invoice.TestCustomLogic);    
+            </code></p>
+<p>Hint: <a href="../../Contents/2/150.html">Repository variables</a> can be used as temporary values storage<code language="cs">
+            // store    
+                obj.GetRepository().Variables.Add("SomeName", "SomeValue");
+            // and somewhere you can get it
+                var something = obj.GetRepository().Variables["SomeName"];
+            </code></p>
+<p>Hint: <a href="../../Contents/2/207.html">HierarchyAttribute</a> can be used to fill and maintain hierarchy tables automatically<code language="cs">
+            // Table T_TEST has parent_id field tree linked to test_id (T_TEST's pk)
+            // Table L_TEST has two fields parent_id and child_id all linked to T_TEST.test_id 
+            // Table L_TEST contains all subtree relations inside T_TEST
+            // For example: for T_TEST (test_id, parent_id): (1, null) : (2, 1) : (3, 2)
+            // L_TEST will contain (parent_id, child_id): (1, 1) : (1, 2) : (1, 3) : (2, 2) : (2, 3) : (3, 3)
+                [DataObject("T"),
+                    DataTable("T_TEST", "T"),
+                    Hierarchy("T", "L_TEST", "parent_id", "parent_id", "child_id"),
+                    Column("TestId", "test_id", typeof(long?), "T", Flags = DataPropertyFlag.Id)]
+            </code></p>
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader2" class="SectionHeader">
+<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
+Members
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv2" class="SectionContainer">
+<p>There are no members.</p>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader3" class="SectionHeader">
+<img id="SectionExpanderImg3" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(3);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(3);">
+Example
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv3" class="SectionContainer">
+<code language="cs">
+            [DataObject("T"),
+                DataTable("T_DOC_TYPE", "T"),
+                Column("DocTypeId", "doc_type_id", typeof(long?), "T", Flags = DataPropertyFlag.Id)]
+            public class DocType : IDataObject {
+            
+                [Property("name", "T")]
+                public string Name { get; set; }
+            
+                [Property("code", "T")]
+                public string Code { get; set; }
+            }</code>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+</div>
+<div id="Footer">
+<span class="Footer">Generated by <a href="http://immdocnet.codeplex.com/" target="_blank">ImmDoc .NET</a></span>.
+</div>
+
+</body>
+
+</html>
