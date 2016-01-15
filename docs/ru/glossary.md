@@ -48,7 +48,7 @@ Cтроковый псевдоним, ассоциированный с конк
 Перечисление [*DataExpressionType*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/21.html) содержит варианты описания SQL выражения:
 * **PlainSql** - SQL выражение описывается в явном виде, 
 * **SubQuery** - SQL выражение представляет собой подзапрос,
-* **LinqExpression** - SQL выражение описано в виде статичного поля объекта типа *Calculate<T>*, где T результирующий тип SQL выражения и значение которого описывает SQL выражение в виде LINQ выражения (LINQ expression).
+* **LinqExpression** - SQL выражение описано в виде статичного поля объекта типа [*Calculate<T>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/61.html), где T результирующий тип SQL выражения и значение которого описывает SQL выражение в виде LINQ выражения (LINQ expression).
 
 ######Тип значения свойства по умолчанию
 Перечисление [*DefaultType*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/32.html) содержит варианты значений свойств по умолчанию:
