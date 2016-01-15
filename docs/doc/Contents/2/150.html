@@ -75,10 +75,10 @@ Example
 
 <div id="SectionContainerDiv2" class="SectionContainer">
 <code language="cs">
-            var rep = XDataManager.GetRepository&lt;Customer&gt;(Owner, variables: new []{"OurCode", "SELF"});
-            var newInvoice = XDataManager.GetRepository&lt;Invoice&gt;(Owner).New();
-            newInvoice.CustomerFrom += rep.First(x =&gt; x.Code.CompareVariable(FilterOperation.Equal, "SELF"));
-            </code>
+  <p>var rep = XDataManager.GetRepository&lt;Customer&gt;(Owner, variables: new []{"OurCode", "SELF"});</p>
+  <p>var newInvoice = XDataManager.GetRepository&lt;Invoice&gt;(Owner).New();</p>
+  <p>newInvoice.CustomerFrom += rep.First(x =&gt; x.Code.CompareVariable(FilterOperation.Equal, "SELF"));</p>
+</code>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

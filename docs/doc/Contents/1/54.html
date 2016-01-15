@@ -108,15 +108,16 @@ Example
 
 <div id="SectionContainerDiv3" class="SectionContainer">
 <code language="cs">
-            public abstract class InvoiceLogic : IDataLogic&lt;Invoice&gt; {
-            
-                [Action(DataActionType.BeforeClear)]
-                public readonly static RepositoryTrigger&lt;Invoice&gt; ClearHistoryBatch = 
-                    ((IRepository&lt;Invoice&gt; invoiceRepository, ref DataTriggerFlag flag) =&gt; DoSomething());
-            
-                [CustomAction("{ab12d6f0-69d0-4997-bb0b-5f5f7c0581d1}")]
-                public static readonly CustomLogic&lt;Invoice&gt; TestCustomLogic = (objects =&gt; { return DoSomethingElse(); });
-            }</code>
+  <p>public abstract class InvoiceLogic : IDataLogic&lt;Invoice&gt; {</p>
+  <p></p>
+  <p>    [Action(DataActionType.BeforeClear)]</p>
+  <p>    public readonly static RepositoryTrigger&lt;Invoice&gt; ClearHistoryBatch = </p>
+  <p>        ((IRepository&lt;Invoice&gt; invoiceRepository, ref DataTriggerFlag flag) =&gt; DoSomething());</p>
+  <p></p>
+  <p>    [CustomAction("{ab12d6f0-69d0-4997-bb0b-5f5f7c0581d1}")]</p>
+  <p>    public static readonly CustomLogic&lt;Invoice&gt; TestCustomLogic = (objects =&gt; { return DoSomethingElse(); });</p>
+  <p>}</p>
+</code>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

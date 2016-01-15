@@ -90,13 +90,13 @@ Remarks
 <div class="RemarksContainer">
 <p>Hint: Its possible to use any DI container with XData:</p>
 <code language="cs">
-            // example with Autofac syntax
-            // register
-            Container.Register(() =&gt; XDataManager.GetRepository&lt;Invoice&gt;(Owner)).As&lt;IRepository&lt;Invoice&gt;&gt;();
-            Container.Register(() =&gt; XDataManager.GetRepository&lt;Invoice&gt;(Owner).GetChild&lt;InvoiceSpec&gt;()).As&lt;IRepository&lt;InvoiceSpec&gt;&gt;();
-            // resolve
-            var spec = Container.Resolve&lt;IRepository&lt;InvoiceSpec&gt;&gt;(); //spec is linked with Invoice repository as a slave!
-            </code>
+  <p>// example with Autofac syntax</p>
+  <p>// register</p>
+  <p>Container.Register(() =&gt; XDataManager.GetRepository&lt;Invoice&gt;(Owner)).As&lt;IRepository&lt;Invoice&gt;&gt;();</p>
+  <p>Container.Register(() =&gt; XDataManager.GetRepository&lt;Invoice&gt;(Owner).GetChild&lt;InvoiceSpec&gt;()).As&lt;IRepository&lt;InvoiceSpec&gt;&gt;();</p>
+  <p>// resolve</p>
+  <p>var spec = Container.Resolve&lt;IRepository&lt;InvoiceSpec&gt;&gt;(); //spec is linked with Invoice repository as a slave!</p>
+</code>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader2" class="SectionHeader">

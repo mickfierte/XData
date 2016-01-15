@@ -70,69 +70,82 @@ Remarks
 <p>Hint: Use <a href="../../Contents/2/195.html">DataTableAttribute</a>, <a href="../../Contents/2/196.html">SubqueryAttribute</a> and <a href="../../Contents/2/197.html">InnerViewAttribute</a> to map data object to data sources</p>
 <p>Hint: Use <a href="../../Contents/2/198.html">FilterAttribute</a>'s specific successor to link data sources and apply filters to data</p>
 <p>Hint: Use <a href="../../Contents/1/333.html">ExternalLinkAttribute</a> to declare master/slave relations between repositories</p>
-<p>Hint: Use <a href="../../Contents/2/199.html">Lob</a> to map binary fields<code language="cs">
-                [Property("scan", "SC", Flags = DataPropertyFlag.OuterFlag)]
-                public Lob Scan { get; set; }
-            </code></p>
-<p>Hint: Use <a href="../../Contents/2/200.html">Xml</a> to map Xml fields<code language="cs">
-                [Property("source", "SR", Flags = DataPropertyFlag.OuterFlag)]
-                public Xml Source { get; set; }
-            </code></p>
-<p>Hint: Use <a href="../../Contents/2/201.html">Link&lt;TVal, TSrc&gt;</a> to map data link<code language="cs">
-                [Property("name", "S"), 
-                    DictionaryProperty("Name", "DocState"),
-                    DictionaryProperty("Code", "DocStateCode")]
-                public Link&lt;string, DocState&gt; DocState { get; set; }
-            </code></p>
-<p>Hint: Use <span class="PseudoLink">identity key</span>)<code language="cs">
-                [DataObject("S"), 
-                    DataTable("T_DOC_STATE", "S"), 
-                    Column("DocStateId", "doc_state_id", typeof(long?), "S", Flags = DataPropertyFlag.Id)] 
-            </code></p>
-<p>Hint: Use <a href="../../Contents/2/202.html">PropertyExpressionAttribute</a> or <a href="../../Contents/2/203.html">ColumnExpressionAttribute</a> to use SQL expression or subquery as property (or mapped column) data source<code language="cs">
-                [Property("doc_amount"), 
-                    PropertyExpression("A", DataExpressionType.SubQuery, DbType.Decimal, ExprSize = 17, ExprScale = 5)] 
-                public double? DocAmount { get { return this.GetProperty(() =&gt; DocAmount); } }
-            </code></p>
-<p>Hint: Use <a href="../../Contents/2/204.html">PropertyDefaultAttribute</a> or <a href="../../Contents/2/205.html">ColumnDefaultAttribute</a> to set default value generation rule to property (or mapped column)<code language="cs">
-                [Property("doc_date", "D"), 
-                    PropertyDefault(DefaultType.CurrentDate)] 
-                public DateTime? DocDate { get; set; }
-            </code></p>
-<p>Hint: Use <a href="../../Contents/2/206.html">ReferenceAttribute</a> to use inner view property in parent data object<code language="cs">
-                [PropertyLink("HistoryDate", "H")] 
-                public DateTime? DocLastChange { get { return this.GetProperty(() =&gt; DocLastChange); } }
-            </code></p>
-<p>Hint: Declare readonly fields as<code language="cs">
-                [PropertyLink("HistoryDate", "H")] 
-                public DateTime? DocLastChange { get { return this.GetProperty(() =&gt; DocLastChange); } }
-            </code></p>
+<p>Hint: Use <a href="../../Contents/2/199.html">Lob</a> to map binary fields</p>
+<code language="cs">
+  <p>    [Property("scan", "SC", Flags = DataPropertyFlag.OuterFlag)]</p>
+  <p>    public Lob Scan { get; set; }</p>
+</code>
+<p>Hint: Use <a href="../../Contents/2/200.html">Xml</a> to map Xml fields</p>
+<code language="cs">
+  <p>    [Property("source", "SR", Flags = DataPropertyFlag.OuterFlag)]</p>
+  <p>    public Xml Source { get; set; }</p>
+</code>
+<p>Hint: Use <a href="../../Contents/2/201.html">Link&lt;TVal, TSrc&gt;</a> to map data link</p>
+<code language="cs">
+  <p>    [Property("name", "S"), </p>
+  <p>        DictionaryProperty("Name", "DocState"),</p>
+  <p>        DictionaryProperty("Code", "DocStateCode")]</p>
+  <p>    public Link&lt;string, DocState&gt; DocState { get; set; }</p>
+</code>
+<p>Hint: Use <span class="PseudoLink">identity key</span>)
+            </p>
+<code language="cs">
+  <p>    [DataObject("S"), </p>
+  <p>        DataTable("T_DOC_STATE", "S"), </p>
+  <p>        Column("DocStateId", "doc_state_id", typeof(long?), "S", Flags = DataPropertyFlag.Id)] </p>
+</code>
+<p>Hint: Use <a href="../../Contents/2/202.html">PropertyExpressionAttribute</a> or <a href="../../Contents/2/203.html">ColumnExpressionAttribute</a> to use SQL expression or subquery as property (or mapped column) data source
+            </p>
+<code language="cs">
+  <p>    [Property("doc_amount"), </p>
+  <p>        PropertyExpression("A", DataExpressionType.SubQuery, DbType.Decimal, ExprSize = 17, ExprScale = 5)] </p>
+  <p>    public double? DocAmount { get { return this.GetProperty(() =&gt; DocAmount); } }</p>
+</code>
+<p>Hint: Use <a href="../../Contents/2/204.html">PropertyDefaultAttribute</a> or <a href="../../Contents/2/205.html">ColumnDefaultAttribute</a> to set default value generation rule to property (or mapped column)</p>
+<code language="cs">
+  <p>    [Property("doc_date", "D"), </p>
+  <p>        PropertyDefault(DefaultType.CurrentDate)] </p>
+  <p>    public DateTime? DocDate { get; set; }</p>
+</code>
+<p>Hint: Use <a href="../../Contents/2/206.html">ReferenceAttribute</a> to use inner view property in parent data object</p>
+<code language="cs">
+  <p>    [PropertyLink("HistoryDate", "H")] </p>
+  <p>    public DateTime? DocLastChange { get { return this.GetProperty(() =&gt; DocLastChange); } }</p>
+</code>
+<p>Hint: Declare readonly fields as</p>
+<code language="cs">
+  <p>    [PropertyLink("HistoryDate", "H")] </p>
+  <p>    public DateTime? DocLastChange { get { return this.GetProperty(() =&gt; DocLastChange); } }</p>
+</code>
 <p>Hint: Declare custom logic functions (see <a href="../../Contents/1/54.html">IDataLogic&lt;T&gt;</a> and 
             <see cref="M:XDataObject.DataObjectExtensions.Execute``1(System.Collections.Generic.ICollection{``0},System.String,System.Collections.Generic.IDictionary{System.String,System.Action{System.Byte[]}},System.Collections.Generic.IDictionary{System.String,System.Func{System.Byte[],System.Byte[]}})">
-            (IDataObject extension) Execute(string,System.Collections.Generic.IDictionary&lt;string,System.Action&lt;byte[]&gt;&gt;,System.Collections.Generic.IDictionary&lt;string,System.Func&lt;byte[],byte[]&gt;&gt;)</see>) as<code language="cs">
-            //generate unique action key and use it for mark it realization in IDataLogic&lt;Invoice&gt;
-                [CustomAction("{ab12d6f0-69d0-4997-bb0b-5f5f7c0581d1}")]
-                public static CustomLogic&lt;Invoice&gt; TestCustomLogic;
-            //using
-                obj.Execute(() =&gt; Invoice.TestCustomLogic);    
-            </code></p>
-<p>Hint: <a href="../../Contents/2/150.html">Repository variables</a> can be used as temporary values storage<code language="cs">
-            // store    
-                obj.GetRepository().Variables.Add("SomeName", "SomeValue");
-            // and somewhere you can get it
-                var something = obj.GetRepository().Variables["SomeName"];
-            </code></p>
-<p>Hint: <a href="../../Contents/2/207.html">HierarchyAttribute</a> can be used to fill and maintain hierarchy tables automatically<code language="cs">
-            // Table T_TEST has parent_id field tree linked to test_id (T_TEST's pk)
-            // Table L_TEST has two fields parent_id and child_id all linked to T_TEST.test_id 
-            // Table L_TEST contains all subtree relations inside T_TEST
-            // For example: for T_TEST (test_id, parent_id): (1, null) : (2, 1) : (3, 2)
-            // L_TEST will contain (parent_id, child_id): (1, 1) : (1, 2) : (1, 3) : (2, 2) : (2, 3) : (3, 3)
-                [DataObject("T"),
-                    DataTable("T_TEST", "T"),
-                    Hierarchy("T", "L_TEST", "parent_id", "parent_id", "child_id"),
-                    Column("TestId", "test_id", typeof(long?), "T", Flags = DataPropertyFlag.Id)]
-            </code></p>
+            (IDataObject extension) Execute(string,System.Collections.Generic.IDictionary&lt;string,System.Action&lt;byte[]&gt;&gt;,System.Collections.Generic.IDictionary&lt;string,System.Func&lt;byte[],byte[]&gt;&gt;)</see>) as</p>
+<code language="cs">
+  <p>//generate unique action key and use it for mark it realization in IDataLogic&lt;Invoice&gt;</p>
+  <p>    [CustomAction("{ab12d6f0-69d0-4997-bb0b-5f5f7c0581d1}")]</p>
+  <p>    public static CustomLogic&lt;Invoice&gt; TestCustomLogic;</p>
+  <p>//using</p>
+  <p>    obj.Execute(() =&gt; Invoice.TestCustomLogic);</p>
+</code>
+<p>Hint: <a href="../../Contents/2/150.html">Repository variables</a> can be used as temporary values storage</p>
+<code language="cs">
+  <p>// store</p>
+  <p>    obj.GetRepository().Variables.Add("SomeName", "SomeValue");</p>
+  <p>// and somewhere you can get it</p>
+  <p>    var something = obj.GetRepository().Variables["SomeName"];</p>
+</code>
+<p>Hint: <a href="../../Contents/2/207.html">HierarchyAttribute</a> can be used to fill and maintain hierarchy tables automatically</p>
+<code language="cs">
+  <p>// Table T_TEST has parent_id field tree linked to test_id (T_TEST's pk)</p>
+  <p>// Table L_TEST has two fields parent_id and child_id all linked to T_TEST.test_id </p>
+  <p>// Table L_TEST contains all subtree relations inside T_TEST</p>
+  <p>// For example: for T_TEST (test_id, parent_id): (1, null) : (2, 1) : (3, 2)</p>
+  <p>// L_TEST will contain (parent_id, child_id): (1, 1) : (1, 2) : (1, 3) : (2, 2) : (2, 3) : (3, 3)</p>
+  <p>    [DataObject("T"),</p>
+  <p>        DataTable("T_TEST", "T"),</p>
+  <p>        Hierarchy("T", "L_TEST", "parent_id", "parent_id", "child_id"),</p>
+  <p>        Column("TestId", "test_id", typeof(long?), "T", Flags = DataPropertyFlag.Id)]</p>
+</code>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader2" class="SectionHeader">
@@ -158,16 +171,16 @@ Example
 
 <div id="SectionContainerDiv3" class="SectionContainer">
 <code language="cs">
-            [DataObject("T"),
-                DataTable("T_DOC_TYPE", "T"),
-                Column("DocTypeId", "doc_type_id", typeof(long?), "T", Flags = DataPropertyFlag.Id)]
-            public class DocType : IDataObject {
-            
-                [Property("name", "T")]
-                public string Name { get; set; }
-            
-                [Property("code", "T")]
-                public string Code { get; set; }
+  <p>[DataObject("T"),</p>
+  <p>    DataTable("T_DOC_TYPE", "T"),</p>
+  <p>    Column("DocTypeId", "doc_type_id", typeof(long?), "T", Flags = DataPropertyFlag.Id)]</p>
+  <p>public class DocType : IDataObject {</p>
+  <p></p>
+  <p>    [Property("name", "T")]</p>
+  <p>    public string Name { get; set; }</p>
+  <p></p>
+  <p>    [Property("code", "T")]</p>
+  <p>    public string Code { get; set; }</p>
             }</code>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
