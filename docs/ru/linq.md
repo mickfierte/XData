@@ -1,9 +1,9 @@
 ##Поддержка LINQ
-[Репозитории](./glossary.md#Репозиторий) и [динамические запросы](./queries.md) XData реализуют интерфейс *IOrderedQueryable<T>* и поддерживают полный набор функций IQueriable.
+[Репозитории](./glossary.md#Репозиторий) и [динамические запросы](./queries.md) XData реализуют интерфейс [*IOrderedQueryable<T>*](https://msdn.microsoft.com/ru-ru/library/bb340178(v=vs.110).aspx) и поддерживают полный набор функций IQueriable.
 
 >**ВАЖНОЕ ЗАМЕЧАНИЕ:** Методы *SkipWhile*, *TakeWhile*, *Join*, *Select* и *SelectMany* поддерживаются, но приводят к запросу исходных данных и выполняются уже на уровне Linq2Object. Это ограничение связано с невозможностью преобразования кода делегатов - обработчиков для первых двух в SQL и изменения результирующего типа для остальных. Для обеспечения эффективного доступа к данным на пересечении нескольких объектов предметной области рекомендуется использовать отдельное описание объектного преобразования, либо механизм [динамических запросов](./queries.md)
 
-Кроме поддержки стандартных методов LINQ XData предоставляет расширения для удобной работы с внешними объединениями *LeftOuterJoin*, *RightOuterJoin*, *FullOuterJoin*, и маркер - методы расширения *Inner* и *Outer*:
+Кроме поддержки стандартных методов LINQ XData предоставляет расширения для удобной работы с внешними объединениями [*LeftOuterJoin*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/332.html), [*RightOuterJoin*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/334.html), [*FullOuterJoin*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/329.html), и маркер - методы расширения [*Inner*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/330.html) и [*Outer*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/333.html):
 ```csharp
 Console.WriteLine("*** Inner join");
 var innerJoined = XDataManager.GetRepository<Invoice>(Owner, context: Context)
