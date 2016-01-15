@@ -54,7 +54,7 @@ XDataManager.Close(layerId);
 
 #### Закрытие сессии работы с данными
 
-Команда *XDataManager* [**Close**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/403.html):
+Команда *XDataManager* [**Close**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/403.html) без параметров:
 ```csharp
 XDataManager.Close();
 ```
