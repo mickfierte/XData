@@ -1,6 +1,6 @@
 ### Работа с данными
 #### Получение источника данных
-Для получения источника данных можно воспользоваться статическим методом *XDataManager* [**GetRepository**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/410.html):
+Для получения источника данных можно воспользоваться статическим методом *XDataManager*.[**GetRepository**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/410.html):
 ```csharp
 var layerId = Guid.NewGuid();
 var source = XDataManager.GetRepository<Invoice>(layerId);
@@ -33,20 +33,20 @@ newInvoice.Source += new XDocument(new XElement("invoice", new XAttribute("numbe
 newInvoice.Scan += Encoding.UTF8.GetBytes(newInvoice.Source.Document.ToString());
 ```
 #### Удаление объектов
-В XData принято удаление путем пометки объекта на удаление, при этом есть возможность до применения изменений в БД эту отметку снять. Пометка и снятие пометки осуществляется с помощью метода расширения интерфейса *IDataObject* [**SetDeleted**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/119.html)
+В XData принято удаление путем пометки объекта на удаление, при этом есть возможность до применения изменений в БД эту отметку снять. Пометка и снятие пометки осуществляется с помощью метода расширения интерфейса *IDataObject*.[**SetDeleted**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/119.html)
 ```csharp
 invoice.SetDeleted(true); //для пометки на удаление
 ...
 invoice.SetDeleted(false); //для снятия пометки на удаление
 ```
 #### Применение изменений
-Применить сделанные изменения в отдельном объекте можно с помощью метода расширения интерфейса *IDataObject* [**Submit**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/120.html)
+Применить сделанные изменения в отдельном объекте можно с помощью метода расширения интерфейса *IDataObject*.[**Submit**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/120.html)
 ```csharp
 newInvoice.Submit();
 ```
-Если требуется применить изменения в нескольких объектах налогичный метод есть в интерфейсе *IRepository<T>* [**Submit**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/120.html) отличие только в том, что он принимает в качестве параметра последовательность объектов этого репозитория (*IEnumerable<T>*). В этом случае, если объект не был изменен он будет пропущен при применении изменений в БД.
+Если требуется применить изменения в нескольких объектах налогичный метод есть в интерфейсе *IRepository<T>*.[**Submit**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/120.html) отличие только в том, что он принимает в качестве параметра последовательность объектов этого репозитория (*IEnumerable<T>*). В этом случае, если объект не был изменен он будет пропущен при применении изменений в БД.
 #### Закрытие слоя
-После завершения использования слоя настоятельно рекомендуется его закрыть с помощью команды *XDataManager* [**Close**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/403.html):
+После завершения использования слоя настоятельно рекомендуется его закрыть с помощью команды *XDataManager*.[**Close**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/403.html):
 ```csharp
 XDataManager.Close(layerId);
 ```
@@ -54,7 +54,7 @@ XDataManager.Close(layerId);
 
 #### Закрытие сессии работы с данными
 
-Команда *XDataManager* [**Close**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/403.html) без параметров:
+Команда *XDataManager*.[**Close**](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/403.html) без параметров:
 ```csharp
 XDataManager.Close();
 ```
