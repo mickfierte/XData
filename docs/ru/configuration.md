@@ -21,8 +21,14 @@
   <configSections>
     <section name="xdata" type="System.Configuration.IgnoreSectionHandler"/>
   </configSections>
+...  
 ```
 
+2) Строки подключения для каждого из [контекстов](.glossary.md#Контекст) определяются в стандартной секции и должны иметь значение атрибута *name* равное имени контекста.
+
+>Существует несколько способов обезопасить хранение строки подключения в настройках приложения:
+- !!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
 ####Настройка XData программным способом
 Для настройки конфигурации XData программным способом необходимо перед первым использованием доступа к данным зарегистрировать все необходимые для работы [контексты](.glossary.md#Контекст) с помощью статического метода [**XDataManager**.*RegisterContext*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/413.html). Заполнение структуры [*DefaultContext*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/209.html) аналогично структуре конфигурации описанной выше в разделе ["Настройка XData с помощью файла конфигурации"](#Настройка-XData-с-помощью-файла-конфигурации)
 
