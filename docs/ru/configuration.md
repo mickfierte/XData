@@ -15,6 +15,7 @@
 1) Зарегистрировать секцию *xdata* в секции *configSections* указав в качестве типа секции *System.Configuration.IgnoreSectionHandler*.
 
 >Обратите внимание, что секция *configSections* должна быть определена первой внутри секции *configuration*
+
 ```xml
 <configuration>
   <configSections>
