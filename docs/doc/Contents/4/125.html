@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IQueryStructure.Procedure Method (string, string, ProcedureType, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</title>
+<title>IQueryStructure.Parameter&lt;T&gt; Method (string, int, string, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IQueryStructure.Procedure Method (string, string, ProcedureType, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</div>
+<div id="PageTitle">IQueryStructure.Parameter&lt;T&gt; Method (string, int, string, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dynamic query procedure mapping
+Dynamic query procedure parameter mapping
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/4/12.html">IQueryStructure</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/4/13.html">IQueryStructure</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,28 +40,38 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryStructure Procedure (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryStructure Parameter&lt;T&gt; (
         string <i>alias</i>,
-        string <i>name</i>,
-        ProcedureType <i>type</i>,
-        params Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[] <i>filters</i>
+        int <i>order</i>,
+        string <i>binding</i>,
+        DbType <i>type</i>,
+        params Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[] <i>attributes</i>
 ) </pre></td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T</div>
+<div class="ParameterCommentContainer">
+Parameter data type
+</div>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">alias</div>
 <div class="ParameterCommentContainer">
 Procedure alias
 </div>
-<div class="CommentParameterName">name</div>
+<div class="CommentParameterName">order</div>
 <div class="ParameterCommentContainer">
-Procedure name
+Parameter order
+</div>
+<div class="CommentParameterName">binding</div>
+<div class="ParameterCommentContainer">
+Parameter value binding
 </div>
 <div class="CommentParameterName">type</div>
 <div class="ParameterCommentContainer">
-Procedure type
+Parameter SQL data type
 </div>
-<div class="CommentParameterName">filters</div>
+<div class="CommentParameterName">attributes</div>
 <div class="ParameterCommentContainer">
-Filters and links applied to table
+Parameter mapping attributes
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">

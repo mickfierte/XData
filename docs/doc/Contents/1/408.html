@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XDataManager.GetDictionaryValue&lt;T&gt; Method</title>
+<title>XDataManager.GetContext Method (string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">XDataManager.GetDictionaryValue&lt;T&gt; Method</div>
+<div id="PageTitle">XDataManager.GetContext Method (string)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,42 +25,59 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns dictionary value by find expression and cache result
+Returns context by name
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/52.html">XDataManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/53.html">XDataManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static XDataContext GetContext (
+        string <i>context</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">context</div>
+<div class="ParameterCommentContainer">
+Context name
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+Context
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
 <table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
+<col width="25%" />
+<col width="75%" />
 <tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
+<th>Exception type</th>
+<th>Condition</th>
 </tr>
 <tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/1/414.html">XDataManager.GetDictionaryValue&lt;T&gt; (Expression&lt;Func&lt;T, bool&gt;&gt;, Guid, string, string, ISecuritySession, Variable[])</a></td>
-<td>Returns dictionary value by find expression and cache result</td>
+<td><a href="../../Contents/1/421.html">XDataConfigurationException</a></td>
+<td>XData configuration errors. </td>
 </tr>
 <tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/1/415.html">XDataManager.GetDictionaryValue&lt;T&gt; (object, Expression&lt;Func&lt;T, bool&gt;&gt;, string, string, ISecuritySession, Variable[])</a></td>
-<td>Returns dictionary value by find expression and cache result</td>
+<td><a href="../../Contents/1/422.html">XDataAdapterException</a></td>
+<td>XData adapter errors. </td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

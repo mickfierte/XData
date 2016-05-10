@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.ToArray&lt;T&gt; Method (IRepository&lt;T&gt;, Expression&lt;Func&lt;T, bool&gt;&gt;)</title>
+<title>DataObjectExtensions.Submit&lt;T&gt; Method (T, DataSubmitFlag)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.ToArray&lt;T&gt; Method (IRepository&lt;T&gt;, Expression&lt;Func&lt;T, bool&gt;&gt;)</div>
+<div id="PageTitle">DataObjectExtensions.Submit&lt;T&gt; Method (T, DataSubmitFlag)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns repository select result filtered by predicate as array and reset repository
+Submit data object changes
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,9 +40,9 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static T[] ToArray&lt;T&gt; (
-        IRepository&lt;T&gt; <i>repository</i>,
-        Expression&lt;Func&lt;T, bool&gt;&gt; <i>predicate</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool Submit&lt;T&gt; (
+        T <i>obj</i>,
+        DataSubmitFlag <i>flag</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
@@ -59,20 +59,20 @@ Syntax
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">T</div>
 <div class="ParameterCommentContainer">
-Repository object type
+Data object type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">repository</div>
+<div class="CommentParameterName">obj</div>
 <div class="ParameterCommentContainer">
-Source repository
+Data object instance
 </div>
-<div class="CommentParameterName">predicate</div>
+<div class="CommentParameterName">flag</div>
 <div class="ParameterCommentContainer">
-Filter predicate
+Submit flag
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Select result filtered by predicate as array
+Submit success
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

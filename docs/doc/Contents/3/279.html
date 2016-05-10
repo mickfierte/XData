@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>HierarchyAttribute.LinkChild Property </title>
+<title>HierarchyAttribute Constructor (string, string, string, string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">HierarchyAttribute.LinkChild Property </div>
+<div id="PageTitle">HierarchyAttribute Constructor (string, string, string, string, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Link table child column name
+Hierarchy attribute
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/207.html">HierarchyAttribute</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">XDataObject.Mapping</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/208.html">HierarchyAttribute</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,11 +41,73 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public string LinkChild { get; set; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public HierarchyAttribute (
+        string <i>source</i>,
+        string <i>treeTableName</i>,
+        string <i>parent</i>,
+        string <i>linkParent</i>,
+        string <i>linkChild</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">source</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Source table alias
 </div>
+<div class="CommentParameterName">treeTableName</div>
+<div class="ParameterCommentContainer">
+Link table name
+</div>
+<div class="CommentParameterName">parent</div>
+<div class="ParameterCommentContainer">
+Source table parent column name
+</div>
+<div class="CommentParameterName">linkParent</div>
+<div class="ParameterCommentContainer">
+Link table parent column name
+</div>
+<div class="CommentParameterName">linkChild</div>
+<div class="ParameterCommentContainer">
+Link table child column name
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<table class="MembersTable">
+<col width="25%" />
+<col width="75%" />
+<tr>
+<th>Exception type</th>
+<th>Condition</th>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Source table alias cannot be null or empty string</td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Link table name cannot be null or empty string</td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Source table parent column name cannot be null or empty string</td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Link table parent column name cannot be null or empty string</td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Link table child column name cannot be null or empty string</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BaseSqlBuilder.GetClearQuery Method (IDataStructure)</title>
+<title>BaseSqlBuilder.GetCall Method (IDataStructure, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">BaseSqlBuilder.GetClearQuery Method (IDataStructure)</div>
+<div id="PageTitle">BaseSqlBuilder.GetCall Method (IDataStructure, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns query to clear all repository objects
+<p>There is no summary.</p>
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/211.html">BaseSqlBuilder</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">XDataObject.Database.Dialect</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/212.html">BaseSqlBuilder</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.Database.Dialect</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,17 +41,22 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public Query GetClearQuery (
-        IDataStructure <i>structure</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public StoredProcedure GetCall (
+        IDataStructure <i>structure</i>,
+        string <i>userName</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">structure</div>
 <div class="ParameterCommentContainer">
-Structure metadata
+<p>There is no description.</p>
+</div>
+<div class="CommentParameterName">userName</div>
+<div class="ParameterCommentContainer">
+<p>There is no description.</p>
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Query
+<p>There is no description.</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -72,8 +77,12 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/100.html">XDataQueryStructureException</a></td>
+<td><a href="../../Contents/1/101.html">XDataQueryStructureException</a></td>
 <td><p>There is no summary.</p></td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/422.html">XDataAdapterException</a></td>
+<td>stored procedure</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

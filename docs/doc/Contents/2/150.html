@@ -6,16 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IDataQuery.Variables Property </title>
+<title>IDataQuery.Layer Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IDataQuery.Variables Property </div>
+<div id="PageTitle">IDataQuery.Layer Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
-<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Example</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -26,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Data query/repository/call result variables
+Data repository layer
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/56.html">IDataQuery</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/57.html">IDataQuery</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,7 +41,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract VariableIndexer Variables { get; }</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid Layer { get; }</pre></td></tr></table>
 <div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
 <p>There is no description.</p>
@@ -59,26 +58,11 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-<p>Variable values can be used to set the filter values (query/repository)</p>
-<p>Variable values can be used in custom logic (repository)</p>
-<p>Variables is stored in query/repository/call result instance</p>
+<p>Sharing same layer the data object repositories can interact automatically as parent/child (see <a href="../../Contents/1/334.html">ExternalLinkAttribute</a>)</p>
+<p>Repositories on different layers but same data object are independent for each other</p>
+<p>Repositories on same layer based on same data object is the same repository</p>
+<p>Hint: Use <a href="../../Contents/1/426.html">GetRepository&lt;T&gt;</a> overload to control layers by owner objects (for example: interface window or control)</p>
 </div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader2" class="SectionHeader">
-<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
-Example
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv2" class="SectionContainer">
-<code language="cs">
-  <p>var rep = XDataManager.GetRepository&lt;Customer&gt;(Owner, variables: new []{"OurCode", "SELF"});</p>
-  <p>var newInvoice = XDataManager.GetRepository&lt;Invoice&gt;(Owner).New();</p>
-  <p>newInvoice.CustomerFrom += rep.First(x =&gt; x.Code.CompareVariable(FilterOperation.Equal, "SELF"));</p>
-</code>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

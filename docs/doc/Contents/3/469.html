@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>PropertyDefaultAttribute.AlwaysUseDefault Property </title>
+<title>PropertyDefaultAttribute Constructor (DefaultType, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">PropertyDefaultAttribute.AlwaysUseDefault Property </div>
+<div id="PageTitle">PropertyDefaultAttribute Constructor (DefaultType, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Always use the default value (also when updating)
+Data object property default value attribute
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/204.html">PropertyDefaultAttribute</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">XDataObject.Mapping</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/205.html">PropertyDefaultAttribute</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,10 +40,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool AlwaysUseDefault { get; set; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public PropertyDefaultAttribute (
+        DefaultType <i>source</i>,
+        string <i>val</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">source</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Default value source
+</div>
+<div class="CommentParameterName">val</div>
+<div class="ParameterCommentContainer">
+Default value
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

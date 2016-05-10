@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IDataStructure.IsOuterJoined Method (string, string)</title>
+<title>IDataStructure.GetVariableValue Method (string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IDataStructure.IsOuterJoined Method (string, string)</div>
+<div id="PageTitle">IDataStructure.GetVariableValue Method (string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Check source is outer joined to parent
+Returns variable value
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/403.html">IDataStructure</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.DataSource.Structure</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/404.html">IDataStructure</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/10.html">XDataObject.DataSource.Structure</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,22 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract bool IsOuterJoined (
-        string <i>alias</i>,
-        string <i>parentAlias</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract string GetVariableValue (
+        string <i>variableName</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">alias</div>
+<div class="CommentParameterName">variableName</div>
 <div class="ParameterCommentContainer">
-Checked source alias
-</div>
-<div class="CommentParameterName">parentAlias</div>
-<div class="ParameterCommentContainer">
-Parent source alias
+Variable name
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Outer joined flag
+Variable value
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.GetLayer Method (IDataObject)</title>
+<title>DataObjectExtensions.GetContext Method (IDataObject)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.GetLayer Method (IDataObject)</div>
+<div id="PageTitle">DataObjectExtensions.GetContext Method (IDataObject)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns repository layer for object
+Returns context name for object
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,7 +41,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static Guid GetLayer (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static string GetContext (
         IDataObject <i>obj</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
@@ -51,7 +51,7 @@ Data object
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Repository layer
+Context name
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -72,7 +72,7 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
 <td><p>There is no summary.</p></td>
 </tr>
 </table>

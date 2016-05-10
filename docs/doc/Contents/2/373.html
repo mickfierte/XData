@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BaseSqlBuilder.ToDataSet&lt;TSource&gt; Method (string, IEnumerable&lt;TSource&gt;)</title>
+<title>BaseSqlBuilder.SetQueryParameterValues Method (ref Query, SortedList&lt;string, object&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">BaseSqlBuilder.ToDataSet&lt;TSource&gt; Method (string, IEnumerable&lt;TSource&gt;)</div>
+<div id="PageTitle">BaseSqlBuilder.SetQueryParameterValues Method (ref Query, SortedList&lt;string, object&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Compose union structure over source object sequence
+Set query parameter values
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/211.html">BaseSqlBuilder</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">XDataObject.Database.Dialect</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/212.html">BaseSqlBuilder</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.Database.Dialect</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,27 +40,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public string ToDataSet&lt;TSource&gt; (
-        string <i>prefix</i>,
-        IEnumerable&lt;TSource&gt; <i>source</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void SetQueryParameterValues (
+        ref Query <i>query</i>,
+        SortedList&lt;string, object&gt; <i>paramValues</i>
 ) </pre></td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">TSource</div>
-<div class="ParameterCommentContainer">
-Source type
-</div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">prefix</div>
+<div class="CommentParameterName">query</div>
 <div class="ParameterCommentContainer">
-Column prefix
+Query
 </div>
-<div class="CommentParameterName">source</div>
+<div class="CommentParameterName">paramValues</div>
 <div class="ParameterCommentContainer">
-Source sequence
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-Data source
+Parameter values
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

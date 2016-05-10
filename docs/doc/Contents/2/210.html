@@ -6,13 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IDataLogic&lt;T&gt; Interface Members</title>
+<title>XDataConfiguration Class</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IDataLogic&lt;T&gt; Interface Members</div>
+<div id="PageTitle">XDataConfiguration Class</div>
 <div id="HeaderShortcuts">
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
+<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Example</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -23,12 +26,91 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Data logic interface
+XData configuration
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/54.html">IDataLogic&lt;T&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/6.html">XDataObject.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
+<col width="0%" />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">public sealed class XDataConfiguration </td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td></tr></table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Members
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<p>Click <a href="../../Contents/5/292.html">here</a> to see the list of members.</p>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader2" class="SectionHeader">
+<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
+Example
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv2" class="SectionContainer">
+<code language="xml">
+            &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+            &lt;configuration&gt;
+              &lt;!-- *** WARNING! configSections section with declaration of "xdata" is required and mast be first child section of configuration! --&gt;
+              &lt;configSections&gt;
+                &lt;section name="xdata" type="System.Configuration.IgnoreSectionHandler" /&gt;
+              &lt;/configSections&gt;
+              &lt;!-- *** You can configure Your application to direct connect database OR use application server --&gt;
+              &lt;!-- *** Endpoint required using application server only --&gt;
+              &lt;!--&lt;system.serviceModel&gt;
+              &lt;client&gt;
+                &lt;endpoint address="net.tcp://localhost:8733/AppServer/"
+                  binding="netTcpBinding"
+                  contract="XDataProxy.IAppServer"
+                  name="XAppServer" /&gt;
+              &lt;/client&gt;
+              &lt;/system.serviceModel&gt;--&gt;
+              &lt;!-- *** Connection strings required using direct connect only --&gt;
+              &lt;connectionStrings&gt;
+                &lt;add name="TEST" connectionString="Data Source=(local);Initial Catalog=XDataTest;User Id=test;Password=test" /&gt;
+              &lt;/connectionStrings&gt;
+              &lt;!-- *** xdata section (see XDataConfiguration.DefaultContext, XDataConfiguration.AssemblyPath, XDataConfiguration.WriteDebugInfo, XDataConfiguration.LogWriter documentation) --&gt;
+              &lt;xdata default="TEST" assemblyPath=".\" debug="false" log="TraceLogWriter, XTraceLog"&gt;
+                &lt;!-- *** Specific SQL data access adapter required using direct database access  (see XDataConfiguration.Adapters documentation) --&gt;
+                &lt;adapter name="MSSQL" file="C:\Projects\XData\_Debug\XMsSqlAdapter.dll"/&gt;
+                &lt;!-- *** Specific SQL dialect adapter  (see XDataConfiguration.Dialects documentation) --&gt;
+                &lt;dialect name="MSSQL" file="C:\Projects\XData\_Debug\XMsSqlDialect.dll"/&gt;
+                &lt;!-- *** Proxy adapter required using application server only --&gt;
+                &lt;!--&lt;adapter name="PROXY" file="C:\XData\XProxyAdapter.dll"/&gt;--&gt;
+                &lt;!-- *** Context can be configured by direct or proxy adapter according Your needs (see XDataConfiguration.Contexts, ContextConfig.SequenceNameComposer documentation) --&gt;
+                &lt;!--&lt;context name="TEST" adapter="PROXY"/&gt;--&gt;
+                &lt;context name="TEST" adapter="MSSQL" sequence="MyDbSequence, XMyCustomLib"/&gt;
+                &lt;!-- *** Context proxy configuration required using application server only (see XDataConfiguration.ProxyList documentation) --&gt;
+                &lt;!--&lt;proxy name="TEST" adapter="MSSQL" endpoint="XAppServer" /&gt;--&gt;
+              &lt;/xdata&gt;
+            &lt;/configuration&gt;
+            </code>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">
 <span class="Footer">Generated by <a href="http://immdocnet.codeplex.com/" target="_blank">ImmDoc .NET</a></span>.

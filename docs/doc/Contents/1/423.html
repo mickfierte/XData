@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XDataManager.GetRepository&lt;T&gt; Method (object, TextReader)</title>
+<title>XDataManager.GetRepository&lt;T&gt; Method (Guid, TextReader)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">XDataManager.GetRepository&lt;T&gt; Method (object, TextReader)</div>
+<div id="PageTitle">XDataManager.GetRepository&lt;T&gt; Method (Guid, TextReader)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -27,8 +27,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Get repository
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/52.html">XDataManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/53.html">XDataManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,7 +42,7 @@ Syntax
 
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static IRepository&lt;T&gt; GetRepository&lt;T&gt; (
-        object <i>owner</i>,
+        Guid <i>layer</i>,
         TextReader <i>reader</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
@@ -63,9 +63,9 @@ Syntax
 Data object type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">owner</div>
+<div class="CommentParameterName">layer</div>
 <div class="ParameterCommentContainer">
-Owner object
+Layer
 </div>
 <div class="CommentParameterName">reader</div>
 <div class="ParameterCommentContainer">
@@ -94,20 +94,20 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/420.html">XDataConfigurationException</a></td>
+<td><a href="../../Contents/1/421.html">XDataConfigurationException</a></td>
 <td>XData configuration errors. </td>
 </tr>
 <tr>
-<td><a href="../../Contents/1/421.html">XDataAdapterException</a></td>
+<td><a href="../../Contents/1/422.html">XDataAdapterException</a></td>
 <td>XData adapter errors. </td>
 </tr>
 <tr>
-<td><a href="../../Contents/1/421.html">XDataAdapterException</a></td>
-<td>Custom logic error. </td>
+<td><a href="../../Contents/1/422.html">XDataAdapterException</a></td>
+<td>Adapter logic error. </td>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>owner parameter can not be null</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>reader parameter can not be null</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

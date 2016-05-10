@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IQueryStructureAdapter.Field&lt;TValue&gt; Method (string, string, Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[])</title>
+<title>IQueryStructureAdapter.Ref&lt;TValue, TDobj&gt; Method (string, Expression&lt;Func&lt;TDobj, object&gt;&gt;, Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IQueryStructureAdapter.Field&lt;TValue&gt; Method (string, string, Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[])</div>
+<div id="PageTitle">IQueryStructureAdapter.Ref&lt;TValue, TDobj&gt; Method (string, Expression&lt;Func&lt;TDobj, object&gt;&gt;, Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Field mapping
+Inner view property reference mapping
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/4/13.html">IQueryStructureAdapter</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/4/14.html">IQueryStructureAdapter</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,24 +41,40 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract TValue Field&lt;TValue&gt; (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract TValue Ref&lt;TValue, TDobj&gt; (
         string <i>sourceAlias</i>,
-        string <i>fieldName</i>,
+        Expression&lt;Func&lt;TDobj, object&gt;&gt; <i>property</i>,
         params Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[] <i>attributes</i>
-) </pre></td></tr></table>
+) </pre>
+<div style="padding-left: 30px; margin-top: 0px;">
+<table class="InsideCodeBlock">
+<col />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">where TDobj</td>
+<td>&nbsp;: class</td>
+</td>
+</tr>
+</table>
+</div>
+</td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">TValue</div>
 <div class="ParameterCommentContainer">
-Field type
+Referenced property type
+</div>
+<div class="CommentParameterName">TDobj</div>
+<div class="ParameterCommentContainer">
+Referenced inner view type
 </div>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">sourceAlias</div>
 <div class="ParameterCommentContainer">
-Source alias
+Referenced property subquery alias
 </div>
-<div class="CommentParameterName">fieldName</div>
+<div class="CommentParameterName">property</div>
 <div class="ParameterCommentContainer">
-Field name
+Referenced property name
 </div>
 <div class="CommentParameterName">attributes</div>
 <div class="ParameterCommentContainer">
@@ -66,7 +82,7 @@ Property mapping attributes
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Field value
+Referenced property value
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">

@@ -6,15 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>FilterType.Runtime Field</title>
+<title>FilterType.Range Field</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">FilterType.Runtime Field</div>
+<div id="PageTitle">FilterType.Range Field</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
+<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Example</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,10 +26,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Runtime value filter
+Range filter
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/37.html">FilterType</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/38.html">FilterType</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,7 +42,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const FilterType Runtime = 8</td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const FilterType Range = 7</td></tr></table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
 <img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
@@ -54,8 +55,25 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-Filter by runtime specified value
+<p>Filter by range of values (example: <span class="Code">state in (1, 2, 3)</span>)</p>
+<p>Hint: Using dynamic LINQ range filters will increase code flexibility (see example).</p>
 </div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader2" class="SectionHeader">
+<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
+Example
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv2" class="SectionContainer">
+<code language="cs">
+  <p>var states = new List&lt;int&gt;();</p>
+  <p>// fill states from somewhere</p>
+  <p>XDataManager.GetRepository&lt;Invoice&gt;(Owner).Where(x =&gt; states.Contains(x.State));</p>
+</code>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

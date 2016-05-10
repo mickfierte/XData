@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IDataQuery Interface Members</title>
+<title>DataObjectExtensions.GetResultSet&lt;TRes&gt; Method (IDataQuery, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IDataQuery Interface Members</div>
+<div id="PageTitle">DataObjectExtensions.GetResultSet&lt;TRes&gt; Method (IDataQuery, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt;)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,54 +25,77 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Read only data source basic interface
+Returns SQL procedure/function result set
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/56.html">IDataQuery</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
-<div id="SectionHeader40" class="SectionHeader">
-<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
-Public Properties
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv40" class="SectionContainer">
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;TRes&gt; (
+        IDataQuery <i>query</i>,
+        Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt; <i>resultSetName</i>
+) </pre>
+<div style="padding-left: 30px; margin-top: 0px;">
+<table class="InsideCodeBlock">
+<col />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">where TRes</td>
+<td>&nbsp;: class</td>
+</td>
+</tr>
+</table>
+</div>
+</td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">TRes</div>
+<div class="ParameterCommentContainer">
+Result set object type
+</div>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">query</div>
+<div class="ParameterCommentContainer">
+Data query
+</div>
+<div class="CommentParameterName">resultSetName</div>
+<div class="ParameterCommentContainer">
+Result set name expression using same name property (case insensitive)<br />Example: x =&gt; x.SomePropertyName
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+Result set object sequence
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
 <table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
+<col width="25%" />
+<col width="75%" />
 <tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
+<th>Exception type</th>
+<th>Condition</th>
 </tr>
 <tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/147.html">Alias</a></td>
-<td>Data repository alias</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/148.html">Context</a></td>
-<td>Data context</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/149.html">Layer</a></td>
-<td>Data repository layer</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/150.html">Variables</a></td>
-<td>Data query/repository/call result variables</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Result set name expression can not be null</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

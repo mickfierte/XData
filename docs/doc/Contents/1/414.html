@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XDataManager.GetDictionaryValue&lt;T&gt; Method (Expression&lt;Func&lt;T, bool&gt;&gt;, Guid, string, string, ISecuritySession, Variable[])</title>
+<title>XDataManager.RegisterContext Method (string, XDataConfiguration, string, string, bool?, string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">XDataManager.GetDictionaryValue&lt;T&gt; Method (Expression&lt;Func&lt;T, bool&gt;&gt;, Guid, string, string, ISecuritySession, Variable[])</div>
+<div id="PageTitle">XDataManager.RegisterContext Method (string, XDataConfiguration, string, string, bool?, string, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns dictionary value by find expression and cache result
+Register context by name
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/52.html">XDataManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/53.html">XDataManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,59 +41,43 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static T GetDictionaryValue&lt;T&gt; (
-        Expression&lt;Func&lt;T, bool&gt;&gt; <i>findExpression</i>,
-        Guid <i>layer</i>,
-        string <i>alias</i>,
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static void RegisterContext (
         string <i>context</i>,
-        ISecuritySession <i>security</i>,
-        params Variable[] <i>variables</i>
-) </pre>
-<div style="padding-left: 30px; margin-top: 0px;">
-<table class="InsideCodeBlock">
-<col />
-<col width="100%" />
-<tr>
-<td class="NoWrapTop">where T</td>
-<td>&nbsp;: class, IDataObject, new()</td>
-</td>
-</tr>
-</table>
-</div>
-</td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T</div>
-<div class="ParameterCommentContainer">
-Dictionary type
-</div>
+        XDataConfiguration <i>cfg</i>,
+        string <i>dbServer</i>,
+        string <i>dbSchema</i>,
+        bool? <i>dbIntegratedSecurity</i>,
+        string <i>dbLogin</i>,
+        string <i>dbPassword</i>
+) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">findExpression</div>
-<div class="ParameterCommentContainer">
-Expression to find value
-</div>
-<div class="CommentParameterName">layer</div>
-<div class="ParameterCommentContainer">
-Repository layer
-</div>
-<div class="CommentParameterName">alias</div>
-<div class="ParameterCommentContainer">
-Repository alias
-</div>
 <div class="CommentParameterName">context</div>
 <div class="ParameterCommentContainer">
-Repository context
+Context name
 </div>
-<div class="CommentParameterName">security</div>
+<div class="CommentParameterName">cfg</div>
 <div class="ParameterCommentContainer">
-Security session
+Configuration
 </div>
-<div class="CommentParameterName">variables</div>
+<div class="CommentParameterName">dbServer</div>
 <div class="ParameterCommentContainer">
-Repository variables
+Database server
 </div>
-<div class="CommentHeader">Return Value</div>
+<div class="CommentParameterName">dbSchema</div>
 <div class="ParameterCommentContainer">
-Dictionary object
+Database schema
+</div>
+<div class="CommentParameterName">dbIntegratedSecurity</div>
+<div class="ParameterCommentContainer">
+Database integrated security flag
+</div>
+<div class="CommentParameterName">dbLogin</div>
+<div class="ParameterCommentContainer">
+Database login
+</div>
+<div class="CommentParameterName">dbPassword</div>
+<div class="ParameterCommentContainer">
+Database password
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -114,16 +98,20 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/1/421.html">XDataConfigurationException</a></td>
+<td>XData configuration errors. </td>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>No original data found for object</td>
+<td><a href="../../Contents/1/422.html">XDataAdapterException</a></td>
+<td>XData adapter errors. </td>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>findExpression parameter is null</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>context parameter can not be null</td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>RegisterContext</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

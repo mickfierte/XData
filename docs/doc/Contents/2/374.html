@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BaseSqlBuilder.AddOrderBy Method (IDataStructure, SortedList&lt;string, object&gt;, ref StringBuilder, ref Query, ref List&lt;Tuple&lt;string, Type, string&gt;&gt;, ICollection&lt;string&gt;, ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt;, bool)</title>
+<title>BaseSqlBuilder.ToDataSet&lt;TSource&gt; Method (string, IEnumerable&lt;TSource&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">BaseSqlBuilder.AddOrderBy Method (IDataStructure, SortedList&lt;string, object&gt;, ref StringBuilder, ref Query, ref List&lt;Tuple&lt;string, Type, string&gt;&gt;, ICollection&lt;string&gt;, ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt;, bool)</div>
+<div id="PageTitle">BaseSqlBuilder.ToDataSet&lt;TSource&gt; Method (string, IEnumerable&lt;TSource&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Add order by statement to query
+Compose union structure over source object sequence
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/211.html">BaseSqlBuilder</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">XDataObject.Database.Dialect</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/212.html">BaseSqlBuilder</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.Database.Dialect</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,48 +40,27 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected void AddOrderBy (
-        IDataStructure <i>structure</i>,
-        SortedList&lt;string, object&gt; <i>filterValues</i>,
-        ref StringBuilder <i>strCommand</i>,
-        ref Query <i>query</i>,
-        ref List&lt;Tuple&lt;string, Type, string&gt;&gt; <i>withSources</i>,
-        ICollection&lt;string&gt; <i>skipped</i>,
-        ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt; <i>fields</i>,
-        bool <i>doNotSkip</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public string ToDataSet&lt;TSource&gt; (
+        string <i>prefix</i>,
+        IEnumerable&lt;TSource&gt; <i>source</i>
 ) </pre></td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">TSource</div>
+<div class="ParameterCommentContainer">
+Source type
+</div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">structure</div>
+<div class="CommentParameterName">prefix</div>
 <div class="ParameterCommentContainer">
-Structure metadata
+Column prefix
 </div>
-<div class="CommentParameterName">filterValues</div>
+<div class="CommentParameterName">source</div>
 <div class="ParameterCommentContainer">
-Filter values
+Source sequence
 </div>
-<div class="CommentParameterName">strCommand</div>
+<div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Query string builder
-</div>
-<div class="CommentParameterName">query</div>
-<div class="ParameterCommentContainer">
-Query
-</div>
-<div class="CommentParameterName">withSources</div>
-<div class="ParameterCommentContainer">
-Common-Table-Expression (WITH) data sources
-</div>
-<div class="CommentParameterName">skipped</div>
-<div class="ParameterCommentContainer">
-Skipped sources collection
-</div>
-<div class="CommentParameterName">fields</div>
-<div class="ParameterCommentContainer">
-Parsed fields
-</div>
-<div class="CommentParameterName">doNotSkip</div>
-<div class="ParameterCommentContainer">
-Don't skip empty sources
+Data source
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IDataSource.GetField Method (string, string, out string, out string)</title>
+<title>IDataSource.GetField Method (string, out string, out string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IDataSource.GetField Method (string, string, out string, out string)</div>
+<div id="PageTitle">IDataSource.GetField Method (string, out string, out string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -26,8 +26,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Returns property field
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/402.html">IDataSource</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.DataSource.Structure</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/403.html">IDataSource</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/10.html">XDataObject.DataSource.Structure</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,25 +41,20 @@ Syntax
 
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IField GetField (
-        string <i>sourceAlias</i>,
-        string <i>fieldName</i>,
+        string <i>propertyName</i>,
         out string <i>alias</i>,
-        out string <i>fullName</i>
+        out string <i>fieldName</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">sourceAlias</div>
+<div class="CommentParameterName">propertyName</div>
 <div class="ParameterCommentContainer">
-Source alias
-</div>
-<div class="CommentParameterName">fieldName</div>
-<div class="ParameterCommentContainer">
-Field name
+Property name
 </div>
 <div class="CommentParameterName">alias</div>
 <div class="ParameterCommentContainer">
 Relative source alias
 </div>
-<div class="CommentParameterName">fullName</div>
+<div class="CommentParameterName">fieldName</div>
 <div class="ParameterCommentContainer">
 Relative field full name
 </div>

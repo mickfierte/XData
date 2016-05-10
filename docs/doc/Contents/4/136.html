@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IQueryStructure.Select&lt;TResult&gt; Method ()</title>
+<title>IQueryStructure.Select&lt;TResult&gt; Method (Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IQueryStructure.Select&lt;TResult&gt; Method ()</div>
+<div id="PageTitle">IQueryStructure.Select&lt;TResult&gt; Method (Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dynamic query result mapping using statically mapped data
+Dynamic query result mapping
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/4/12.html">IQueryStructure</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/4/13.html">IQueryStructure</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,14 +40,16 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryDescription&lt;TResult&gt; Select&lt;TResult&gt; ()</pre>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryDescription&lt;TResult&gt; Select&lt;TResult&gt; (
+        Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt; <i>mapper</i>
+) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
 <col />
 <col width="100%" />
 <tr>
 <td class="NoWrapTop">where TResult</td>
-<td>&nbsp;: class, IDataObject, new()</td>
+<td>&nbsp;: class</td>
 </td>
 </tr>
 </table>
@@ -57,6 +59,11 @@ Syntax
 <div class="CommentParameterName">TResult</div>
 <div class="ParameterCommentContainer">
 Dynamic query result type
+</div>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">mapper</div>
+<div class="ParameterCommentContainer">
+Mapping expression
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">

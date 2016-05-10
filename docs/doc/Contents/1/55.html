@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IDataObject Interface</title>
+<title>IDataLogic&lt;T&gt; Interface</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IDataObject Interface</div>
+<div id="PageTitle">IDataLogic&lt;T&gt; Interface</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -27,9 +27,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Data object interface
+Data logic interface
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -46,13 +46,27 @@ Syntax
 <col width="0%" />
 <col width="100%" />
 <tr>
-<td class="NoWrapTop">public interface IDataObject :&nbsp;</td>
-<td>
-ISqlObject
+<td class="NoWrapTop">public interface IDataLogic&lt;T&gt; </td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<div style="padding-left: 30px; margin-top: 0px;">
+<table class="InsideCodeBlock">
+<col />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">where T</td>
+<td>&nbsp;: class, IDataObject</td>
 </td>
 </tr>
 </table>
+</div>
 </td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T</div>
+<div class="ParameterCommentContainer">
+<p>There is no description.</p>
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
 <img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
@@ -65,87 +79,10 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-<p>Mapping domain object to database</p>
-<p>WARNING! Data object mapping requires <a href="../../Contents/2/194.html">DataObjectAttribute</a>!</p>
-<p>Hint: Use <a href="../../Contents/2/195.html">DataTableAttribute</a>, <a href="../../Contents/2/196.html">SubqueryAttribute</a> and <a href="../../Contents/2/197.html">InnerViewAttribute</a> to map data object to data sources</p>
-<p>Hint: Use <a href="../../Contents/2/198.html">FilterAttribute</a>'s specific successor to link data sources and apply filters to data</p>
-<p>Hint: Use <a href="../../Contents/1/333.html">ExternalLinkAttribute</a> to declare master/slave relations between repositories</p>
-<p>Hint: Use <a href="../../Contents/2/199.html">Lob</a> to map binary fields</p>
-<code language="cs">
-  <p>    [Property("scan", "SC", Flags = DataPropertyFlag.OuterFlag)]</p>
-  <p>    public Lob Scan { get; set; }</p>
-</code>
-<p>Hint: Use <a href="../../Contents/2/200.html">Xml</a> to map Xml fields</p>
-<code language="cs">
-  <p>    [Property("source", "SR", Flags = DataPropertyFlag.OuterFlag)]</p>
-  <p>    public Xml Source { get; set; }</p>
-</code>
-<p>Hint: Use <a href="../../Contents/2/201.html">Link&lt;TVal, TSrc&gt;</a> to map data link</p>
-<code language="cs">
-  <p>    [Property("name", "S"), </p>
-  <p>        DictionaryProperty("Name", "DocState"),</p>
-  <p>        DictionaryProperty("Code", "DocStateCode")]</p>
-  <p>    public Link&lt;string, DocState&gt; DocState { get; set; }</p>
-</code>
-<p>Hint: Use <span class="PseudoLink">identity key</span>)
-            </p>
-<code language="cs">
-  <p>    [DataObject("S"), </p>
-  <p>        DataTable("T_DOC_STATE", "S"), </p>
-  <p>        Column("DocStateId", "doc_state_id", typeof(long?), "S", Flags = DataPropertyFlag.Id)] </p>
-</code>
-<p>Hint: Use <a href="../../Contents/2/202.html">PropertyExpressionAttribute</a> or <a href="../../Contents/2/203.html">ColumnExpressionAttribute</a> to use SQL expression or subquery as property (or mapped column) data source
-            </p>
-<code language="cs">
-  <p>    [Property("doc_amount"), </p>
-  <p>        PropertyExpression("A", DataExpressionType.SubQuery, DbType.Decimal, ExprSize = 17, ExprScale = 5)] </p>
-  <p>    public double? DocAmount { get { return this.GetProperty(() =&gt; DocAmount); } }</p>
-</code>
-<p>Hint: Use <a href="../../Contents/2/204.html">PropertyDefaultAttribute</a> or <a href="../../Contents/2/205.html">ColumnDefaultAttribute</a> to set default value generation rule to property (or mapped column)</p>
-<code language="cs">
-  <p>    [Property("doc_date", "D"), </p>
-  <p>        PropertyDefault(DefaultType.CurrentDate)] </p>
-  <p>    public DateTime? DocDate { get; set; }</p>
-</code>
-<p>Hint: Use <a href="../../Contents/2/206.html">ReferenceAttribute</a> to use inner view property in parent data object</p>
-<code language="cs">
-  <p>    [PropertyLink("HistoryDate", "H")] </p>
-  <p>    public DateTime? DocLastChange { get { return this.GetProperty(() =&gt; DocLastChange); } }</p>
-</code>
-<p>Hint: Declare readonly fields as</p>
-<code language="cs">
-  <p>    [PropertyLink("HistoryDate", "H")] </p>
-  <p>    public DateTime? DocLastChange { get { return this.GetProperty(() =&gt; DocLastChange); } }</p>
-</code>
-<p>Hint: Declare custom logic functions (see <a href="../../Contents/1/54.html">IDataLogic&lt;T&gt;</a> and 
-            <see cref="M:XDataObject.DataObjectExtensions.Execute``1(System.Collections.Generic.ICollection{``0},System.String,System.Collections.Generic.IDictionary{System.String,System.Action{System.Byte[]}},System.Collections.Generic.IDictionary{System.String,System.Func{System.Byte[],System.Byte[]}})">
-            (IDataObject extension) Execute(string,System.Collections.Generic.IDictionary&lt;string,System.Action&lt;byte[]&gt;&gt;,System.Collections.Generic.IDictionary&lt;string,System.Func&lt;byte[],byte[]&gt;&gt;)</see>) as</p>
-<code language="cs">
-  <p>//generate unique action key and use it for mark it realization in IDataLogic&lt;Invoice&gt;</p>
-  <p>    [CustomAction("{ab12d6f0-69d0-4997-bb0b-5f5f7c0581d1}")]</p>
-  <p>    public static CustomLogic&lt;Invoice&gt; TestCustomLogic;</p>
-  <p>//using</p>
-  <p>    obj.Execute(() =&gt; Invoice.TestCustomLogic);</p>
-</code>
-<p>Hint: <a href="../../Contents/2/150.html">Repository variables</a> can be used as temporary values storage</p>
-<code language="cs">
-  <p>// store</p>
-  <p>    obj.GetRepository().Variables.Add("SomeName", "SomeValue");</p>
-  <p>// and somewhere you can get it</p>
-  <p>    var something = obj.GetRepository().Variables["SomeName"];</p>
-</code>
-<p>Hint: <a href="../../Contents/2/207.html">HierarchyAttribute</a> can be used to fill and maintain hierarchy tables automatically</p>
-<code language="cs">
-  <p>// Table T_TEST has parent_id field tree linked to test_id (T_TEST's pk)</p>
-  <p>// Table L_TEST has two fields parent_id and child_id all linked to T_TEST.test_id </p>
-  <p>// Table L_TEST contains all subtree relations inside T_TEST</p>
-  <p>// For example: for T_TEST (test_id, parent_id): (1, null) : (2, 1) : (3, 2)</p>
-  <p>// L_TEST will contain (parent_id, child_id): (1, 1) : (1, 2) : (1, 3) : (2, 2) : (2, 3) : (3, 3)</p>
-  <p>    [DataObject("T"),</p>
-  <p>        DataTable("T_TEST", "T"),</p>
-  <p>        Hierarchy("T", "L_TEST", "parent_id", "parent_id", "child_id"),</p>
-  <p>        Column("TestId", "test_id", typeof(long?), "T", Flags = DataPropertyFlag.Id)]</p>
-</code>
+<p>Marking interface for classes contains data aware logic of mapped objects</p>
+<p>Used to divide data aware logic from mapping</p>
+<p>Hint: Separating mapping and logic to different assemblies allows to run data aware logic on XData application server</p>
+<p>Hint: Application can use XData application server or direct connect to database depending of configuration (see <a href="../../Contents/2/210.html">XDataConfiguration</a>)</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader2" class="SectionHeader">
@@ -171,17 +108,16 @@ Example
 
 <div id="SectionContainerDiv3" class="SectionContainer">
 <code language="cs">
-  <p>[DataObject("T"),</p>
-  <p>    DataTable("T_DOC_TYPE", "T"),</p>
-  <p>    Column("DocTypeId", "doc_type_id", typeof(long?), "T", Flags = DataPropertyFlag.Id)]</p>
-  <p>public class DocType : IDataObject {</p>
+  <p>public abstract class InvoiceLogic : IDataLogic&lt;Invoice&gt; {</p>
   <p></p>
-  <p>    [Property("name", "T")]</p>
-  <p>    public string Name { get; set; }</p>
+  <p>    [Action(DataActionType.BeforeClear)]</p>
+  <p>    public readonly static RepositoryTrigger&lt;Invoice&gt; ClearHistoryBatch = </p>
+  <p>        ((IRepository&lt;Invoice&gt; invoiceRepository, ref DataTriggerFlag flag) =&gt; DoSomething());</p>
   <p></p>
-  <p>    [Property("code", "T")]</p>
-  <p>    public string Code { get; set; }</p>
-            }</code>
+  <p>    [CustomAction("{ab12d6f0-69d0-4997-bb0b-5f5f7c0581d1}")]</p>
+  <p>    public static readonly CustomLogic&lt;Invoice&gt; TestCustomLogic = (objects =&gt; { return DoSomethingElse(); });</p>
+  <p>}</p>
+</code>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

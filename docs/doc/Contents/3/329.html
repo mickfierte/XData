@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Link&lt;TVal, TSrc&gt;.Key Property </title>
+<title>Link&lt;TVal, TSrc&gt;.operator implicit Method (Link&lt;TVal, TSrc&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">Link&lt;TVal, TSrc&gt;.Key Property </div>
+<div id="PageTitle">Link&lt;TVal, TSrc&gt;.operator implicit Method (Link&lt;TVal, TSrc&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dictionary key
+Implicitly returns dictionary value
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/201.html">Link&lt;TVal, TSrc&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">XDataObject.Mapping</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/202.html">Link&lt;TVal, TSrc&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,10 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public object Key { get; set; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static implicit operator TVal (
+        Link&lt;TVal, TSrc&gt; <i>val</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">val</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Dictionary property
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+Value
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

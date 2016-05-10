@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SetXmlAttachedHandler Delegate</title>
+<title>SetLobAttachedHandler Delegate</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">SetXmlAttachedHandler Delegate</div>
+<div id="PageTitle">SetLobAttachedHandler Delegate</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Set Xml attached handler delegate
+Set Lob attached handler delegate
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -39,10 +39,10 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public delegate bool SetXmlAttachedHandler (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public delegate void SetLobAttachedHandler (
         string <i>property</i>,
         IComparable[] <i>primaryKeyValue</i>,
-        string <i>xml</i>
+        byte[] <i>body</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">property</div>
@@ -53,13 +53,9 @@ Lob property name
 <div class="ParameterCommentContainer">
 Lob table primary key values
 </div>
-<div class="CommentParameterName">xml</div>
+<div class="CommentParameterName">body</div>
 <div class="ParameterCommentContainer">
-Xml string
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Lob body
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

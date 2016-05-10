@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IRepository&lt;T&gt;.Attach Method (ref T, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, DataObjectState, AttachedHandler&lt;T&gt;[])</title>
+<title>ExternalLinkAttribute.DirectLink Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IRepository&lt;T&gt;.Attach Method (ref T, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;, DataObjectState, AttachedHandler&lt;T&gt;[])</div>
+<div id="PageTitle">ExternalLinkAttribute.DirectLink Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Attach object to repository
+Direct link slave to selected tree node
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/59.html">IRepository&lt;T&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/334.html">ExternalLinkAttribute</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,32 +41,10 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IRepository&lt;T&gt; Attach (
-        ref T <i>obj</i>,
-        IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; <i>originalValues</i>,
-        DataObjectState <i>state</i>,
-        params AttachedHandler&lt;T&gt;[] <i>handlers</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">obj</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool DirectLink { get; set; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
-Object instance
-</div>
-<div class="CommentParameterName">originalValues</div>
-<div class="ParameterCommentContainer">
-Original property values
-</div>
-<div class="CommentParameterName">state</div>
-<div class="ParameterCommentContainer">
-Object state
-</div>
-<div class="CommentParameterName">handlers</div>
-<div class="ParameterCommentContainer">
-Attached handlers
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-Repository
+<p>There is no description.</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -80,12 +58,10 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-<p>Hint: Object attaching set <a href="../../Contents/2/166.html">Manual</a> property to True automatically</p>
-<p>Hint: The originalValues parameter can contain only necessary not null valued properties</p>
-<p>Hint: Use <a href="../../Contents/1/426.html">SetValue&lt;TKey, T&gt;</a> to fill originalValues parameter </p>
-<p>Hint: Use <a href="../../Contents/1/16.html">AttachedHandler&lt;T&gt;</a> convert operators to attach object specific handlers</p>
-<table class="ExampleCodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre><p>(SubmitObjectAttachedHandler&lt;Invoice&gt;)((ref Invoice i, DataSubmitFlag f) =&gt; true)</p></pre></td></tr></table>
-<p>WARNING!  Use repository <a href="../../Contents/2/191.html">SetAttachedHandlers</a> method to apply same handler for all objects!</p>
+<p>Used to show/hide subtree related items in slave view when master is tree</p>
+<p>When ShowSubtree = false - slave contains selected node child items only</p>
+<p>When ShowSubtree = true - selected node and it's subtree child items</p>
+<p>Works with <a href="../../Contents/2/168.html">ShowSubtree</a>: External links marked as DirectLink is filled while ShowSubtree is false and omitted otherwise</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

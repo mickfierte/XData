@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.GetResultSet&lt;TRes&gt; Method (IDataQuery, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt;)</title>
+<title>DataObjectExtensions.GetResultSet&lt;TRes&gt; Method (IDataQuery, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.GetResultSet&lt;TRes&gt; Method (IDataQuery, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt;)</div>
+<div id="PageTitle">DataObjectExtensions.GetResultSet&lt;TRes&gt; Method (IDataQuery, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -27,8 +27,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Returns SQL procedure/function result set
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -43,7 +43,7 @@ Syntax
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;TRes&gt; (
         IDataQuery <i>query</i>,
-        Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt; <i>resultSetName</i>
+        string <i>resultSetName</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
@@ -69,11 +69,11 @@ Data query
 </div>
 <div class="CommentParameterName">resultSetName</div>
 <div class="ParameterCommentContainer">
-Result set name expression using same name property (case insensitive)<br />Example: x =&gt; x.SomePropertyName
+Result set name name
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Result set object sequence
+Parameter value
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -94,8 +94,8 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>Result set name expression can not be null</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Result set name can not be null or empty</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.Callback&lt;T&gt; Method (T, string, ref byte[])</title>
+<title>DataObjectExtensions.AsString&lt;T&gt; Method (IQueryable&lt;T&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.Callback&lt;T&gt; Method (T, string, ref byte[])</div>
+<div id="PageTitle">DataObjectExtensions.AsString&lt;T&gt; Method (IQueryable&lt;T&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Callback to client
+Repository select query text
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,10 +41,8 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool Callback&lt;T&gt; (
-        T <i>obj</i>,
-        string <i>message</i>,
-        ref byte[] <i>data</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static string AsString&lt;T&gt; (
+        IQueryable&lt;T&gt; <i>queryable</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
@@ -51,7 +50,7 @@ Syntax
 <col width="100%" />
 <tr>
 <td class="NoWrapTop">where T</td>
-<td>&nbsp;: class, IDataObject, new()</td>
+<td>&nbsp;: class, IDataObject</td>
 </td>
 </tr>
 </table>
@@ -63,21 +62,27 @@ Syntax
 Data object type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">obj</div>
+<div class="CommentParameterName">queryable</div>
 <div class="ParameterCommentContainer">
-Object context
-</div>
-<div class="CommentParameterName">message</div>
-<div class="ParameterCommentContainer">
-Message name
-</div>
-<div class="CommentParameterName">data</div>
-<div class="ParameterCommentContainer">
-Data to post
+Queryable source of data object
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Repository
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Remarks
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<div class="RemarksContainer">
+WARNING!  High resource utilization! Use it for debug only!
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,16 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.Modify Method (Xml, Action&lt;XDocument&gt;)</title>
+<title>DataObjectExtensions.Refresh&lt;T&gt; Method (T)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.Modify Method (Xml, Action&lt;XDocument&gt;)</div>
+<div id="PageTitle">DataObjectExtensions.Refresh&lt;T&gt; Method (T)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
-<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Example</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -26,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Xml field modify
+Refresh single data object from database
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,60 +40,35 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static Xml Modify (
-        Xml <i>source</i>,
-        Action&lt;XDocument&gt; <i>action</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">source</div>
-<div class="ParameterCommentContainer">
-Source document
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool Refresh&lt;T&gt; (
+        T <i>obj</i>
+) </pre>
+<div style="padding-left: 30px; margin-top: 0px;">
+<table class="InsideCodeBlock">
+<col />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">where T</td>
+<td>&nbsp;: class, IDataObject, new()</td>
+</td>
+</tr>
+</table>
 </div>
-<div class="CommentParameterName">action</div>
+</td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T</div>
 <div class="ParameterCommentContainer">
-Modify action
+Data object type
+</div>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">obj</div>
+<div class="ParameterCommentContainer">
+Data object instance
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Modified xml
+Success flag
 </div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Exceptions
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<table class="MembersTable">
-<col width="25%" />
-<col width="75%" />
-<tr>
-<th>Exception type</th>
-<th>Condition</th>
-</tr>
-<tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>Modify logic error</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader2" class="SectionHeader">
-<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
-Example
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv2" class="SectionContainer">
-<code language="cs">
-  <p>invoice.Source.Modify(doc =&gt; doc.Element("invoice").Attribute("state").Value = "ACTIVE");</p>
-</code>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

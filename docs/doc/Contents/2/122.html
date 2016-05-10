@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.Refresh&lt;T&gt; Method (IRepository&lt;T&gt;)</title>
+<title>DataObjectExtensions.ToArray&lt;T&gt; Method (IRepository&lt;T&gt;, Expression&lt;Func&lt;T, bool&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.Refresh&lt;T&gt; Method (IRepository&lt;T&gt;)</div>
+<div id="PageTitle">DataObjectExtensions.ToArray&lt;T&gt; Method (IRepository&lt;T&gt;, Expression&lt;Func&lt;T, bool&gt;&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Refresh repository data
+Returns repository select result filtered by predicate as array and reset repository
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,8 +40,9 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static IRepository&lt;T&gt; Refresh&lt;T&gt; (
-        IRepository&lt;T&gt; <i>source</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static T[] ToArray&lt;T&gt; (
+        IRepository&lt;T&gt; <i>repository</i>,
+        Expression&lt;Func&lt;T, bool&gt;&gt; <i>predicate</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
@@ -58,16 +59,20 @@ Syntax
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">T</div>
 <div class="ParameterCommentContainer">
-Data object type
+Repository object type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">source</div>
+<div class="CommentParameterName">repository</div>
 <div class="ParameterCommentContainer">
-Repository
+Source repository
+</div>
+<div class="CommentParameterName">predicate</div>
+<div class="ParameterCommentContainer">
+Filter predicate
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Repository
+Select result filtered by predicate as array
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

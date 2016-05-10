@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SubmitAttachedHandler&lt;T&gt; Delegate</title>
+<title>SetXmlAttachedHandler Delegate</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">SubmitAttachedHandler&lt;T&gt; Delegate</div>
+<div id="PageTitle">SetXmlAttachedHandler Delegate</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Submit attached handler delegate
+Set Xml attached handler delegate
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -39,35 +39,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public delegate bool SubmitAttachedHandler&lt;T&gt; (
-        IEnumerable&lt;T&gt; <i>objects</i>,
-        DataSubmitFlag <i>flag</i>
-) </pre>
-<div style="padding-left: 30px; margin-top: 0px;">
-<table class="InsideCodeBlock">
-<col />
-<col width="100%" />
-<tr>
-<td class="NoWrapTop">where T</td>
-<td>&nbsp;: class, IDataObject</td>
-</td>
-</tr>
-</table>
-</div>
-</td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T</div>
-<div class="ParameterCommentContainer">
-Object type
-</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public delegate bool SetXmlAttachedHandler (
+        string <i>property</i>,
+        IComparable[] <i>primaryKeyValue</i>,
+        string <i>xml</i>
+) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">objects</div>
+<div class="CommentParameterName">property</div>
 <div class="ParameterCommentContainer">
-Object sequence
+Lob property name
 </div>
-<div class="CommentParameterName">flag</div>
+<div class="CommentParameterName">primaryKeyValue</div>
 <div class="ParameterCommentContainer">
-Submit flag
+Lob table primary key values
+</div>
+<div class="CommentParameterName">xml</div>
+<div class="ParameterCommentContainer">
+Xml string
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">

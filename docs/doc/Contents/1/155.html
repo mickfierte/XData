@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>AttachedHandler&lt;T&gt;.operator explicit Method (AttachedHandler&lt;T&gt;)</title>
+<title>AttachedHandler&lt;T&gt;.operator implicit Method (SubmitQueryAttachedHandler&lt;T&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">AttachedHandler&lt;T&gt;.operator explicit Method (AttachedHandler&lt;T&gt;)</div>
+<div id="PageTitle">AttachedHandler&lt;T&gt;.operator implicit Method (SubmitQueryAttachedHandler&lt;T&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Explicitly unwrap submit object handler
+Implicitly wrap submit query handler
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/16.html">AttachedHandler&lt;T&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/17.html">AttachedHandler&lt;T&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,17 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static explicit operator SubmitObjectAttachedHandler&lt;T&gt; (
-        AttachedHandler&lt;T&gt; <i>handler</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static implicit operator AttachedHandler&lt;T&gt; (
+        SubmitQueryAttachedHandler&lt;T&gt; <i>handler</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">handler</div>
 <div class="ParameterCommentContainer">
-Wrapped handler
+Submit query handler
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Unwrapped attached handler
+Data object attached handler
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

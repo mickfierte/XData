@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XDataManager.BeginTransaction Method (string, bool)</title>
+<title>XDataManager Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">XDataManager.BeginTransaction Method (string, bool)</div>
+<div id="PageTitle">XDataManager Class Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,68 +24,109 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Begins single context transaction
+Data manager
+            Defines user session context across (possible) multiple data sources
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/52.html">XDataManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/53.html">XDataManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static ITransaction BeginTransaction (
-        string <i>context</i>,
-        bool <i>read</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">context</div>
-<div class="ParameterCommentContainer">
-Context
-</div>
-<div class="CommentParameterName">read</div>
-<div class="ParameterCommentContainer">
-Read only transaction
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-Transaction wrapper
-</div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Exceptions
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
+<div id="SectionContainerDiv35" class="SectionContainer">
 <table class="MembersTable">
-<col width="25%" />
-<col width="75%" />
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
 <tr>
-<th>Exception type</th>
-<th>Condition</th>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/420.html">XDataConfigurationException</a></td>
-<td>XData configuration errors. </td>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/402.html">BeginTransaction</a></td>
+<td>Begins single context transaction</td>
 </tr>
 <tr>
-<td><a href="../../Contents/1/421.html">XDataAdapterException</a></td>
-<td>XData adapter errors. </td>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/403.html">ClearDictionaryCache</a></td>
+<td>Clears dictionary cache</td>
 </tr>
 <tr>
-<td><a href="../../Contents/1/430.html">XDataSqlException</a></td>
-<td>SQL exceptions while beginning transaction. </td>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/404.html">Close</a></td>
+<td>Overloaded. Close connections</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/405.html">CustomMapping&lt;T&gt;</a></td>
+<td>Returns dynamic repository structure</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/406.html">Exists&lt;T&gt;</a></td>
+<td>Overloaded. Checks for repository existence</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/407.html">GetConcurrencyErrorId</a></td>
+<td>Returns concurrency error id for context</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/408.html">GetContext</a></td>
+<td>Returns context by name</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/409.html">GetDictionaryValue&lt;T&gt;</a></td>
+<td>Overloaded. Returns dictionary value by find expression and cache result</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/410.html">GetQuery&lt;T&gt;</a></td>
+<td>Overloaded. Get query</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/411.html">GetRepository&lt;T&gt;</a></td>
+<td>Overloaded. Get repository</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/412.html">GetStructure</a></td>
+<td>Returns dynamic query structure</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/413.html">GetStructure&lt;T&gt;</a></td>
+<td>Returns dynamic query structure based on static mapping</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/414.html">RegisterContext</a></td>
+<td>Register context by name</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

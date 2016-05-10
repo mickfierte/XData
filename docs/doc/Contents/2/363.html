@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BaseSqlBuilder.GetSaveBlobQuery Method (string, string, IEnumerable&lt;string&gt;, IComparable[], ref byte[], string)</title>
+<title>BaseSqlBuilder.GetSafeConvertExpression Method (Type, Expression, Expression)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">BaseSqlBuilder.GetSaveBlobQuery Method (string, string, IEnumerable&lt;string&gt;, IComparable[], ref byte[], string)</div>
+<div id="PageTitle">BaseSqlBuilder.GetSafeConvertExpression Method (Type, Expression, Expression)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns query to save blob data
+Safe convert expression
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/211.html">BaseSqlBuilder</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">XDataObject.Database.Dialect</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/212.html">BaseSqlBuilder</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.Database.Dialect</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,42 +40,27 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public Query GetSaveBlobQuery (
-        string <i>table</i>,
-        string <i>column</i>,
-        IEnumerable&lt;string&gt; <i>tablePrimaryKey</i>,
-        IComparable[] <i>primaryKeyValue</i>,
-        ref byte[] <i>body</i>,
-        string <i>nativeSqlType</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public virtual Expression GetSafeConvertExpression (
+        Type <i>type</i>,
+        Expression <i>dataRow</i>,
+        Expression <i>fieldName</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">table</div>
+<div class="CommentParameterName">type</div>
 <div class="ParameterCommentContainer">
-Table name
+Type of expression
 </div>
-<div class="CommentParameterName">column</div>
+<div class="CommentParameterName">dataRow</div>
 <div class="ParameterCommentContainer">
-Blob column name
+Data row expression
 </div>
-<div class="CommentParameterName">tablePrimaryKey</div>
+<div class="CommentParameterName">fieldName</div>
 <div class="ParameterCommentContainer">
-Table primary key columns
-</div>
-<div class="CommentParameterName">primaryKeyValue</div>
-<div class="ParameterCommentContainer">
-Table primary key values
-</div>
-<div class="CommentParameterName">body</div>
-<div class="ParameterCommentContainer">
-Blob body
-</div>
-<div class="CommentParameterName">nativeSqlType</div>
-<div class="ParameterCommentContainer">
-Native SQL type name
+Field name expression
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Query
+Expression
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>TaggedExpression&lt;TTag, TResult&gt;.Key Property </title>
+<title>TaggedExpression&lt;TTag, TResult&gt;.operator implicit Method (KeyValuePair&lt;TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">TaggedExpression&lt;TTag, TResult&gt;.Key Property </div>
+<div id="PageTitle">TaggedExpression&lt;TTag, TResult&gt;.operator implicit Method (KeyValuePair&lt;TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Tag key
+Tagged expression implicit conversion operator
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/496.html">TaggedExpression&lt;TTag, TResult&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/497.html">TaggedExpression&lt;TTag, TResult&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,10 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public object Key { get; set; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static implicit operator TaggedExpression&lt;TTag, TResult&gt; (
+        KeyValuePair&lt;TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;&gt; <i>pair</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">pair</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Key value pair
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+Tagged expression
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DictionaryFilterAttribute.DictionaryCode Property </title>
+<title>DictionaryFilterAttribute Constructor (string, string, string, string, string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DictionaryFilterAttribute.DictionaryCode Property </div>
+<div id="PageTitle">DictionaryFilterAttribute Constructor (string, string, string, string, string, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dictionary code field
+Dictionary filter attribute
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/224.html">DictionaryFilterAttribute</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">XDataObject.Mapping</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/225.html">DictionaryFilterAttribute</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,11 +41,74 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public string DictionaryCode { get; set; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public DictionaryFilterAttribute (
+        string <i>dictionaryTable</i>,
+        string <i>dictionaryIdField</i>,
+        string <i>dictionaryCodeField</i>,
+        string <i>dictionaryValue</i>,
+        string <i>source</i>,
+        string <i>fieldName</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">dictionaryTable</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Dictionary table name
 </div>
+<div class="CommentParameterName">dictionaryIdField</div>
+<div class="ParameterCommentContainer">
+Dictionary id field
+</div>
+<div class="CommentParameterName">dictionaryCodeField</div>
+<div class="ParameterCommentContainer">
+Dictionary code field
+</div>
+<div class="CommentParameterName">dictionaryValue</div>
+<div class="ParameterCommentContainer">
+Dictionary code value
+</div>
+<div class="CommentParameterName">source</div>
+<div class="ParameterCommentContainer">
+Filter source alias
+</div>
+<div class="CommentParameterName">fieldName</div>
+<div class="ParameterCommentContainer">
+Filter field name
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<table class="MembersTable">
+<col width="25%" />
+<col width="75%" />
+<tr>
+<th>Exception type</th>
+<th>Condition</th>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Dictionary table name cannot be null or empty string</td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Dictionary id field cannot be null or empty string</td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Dictionary code field cannot be null or empty string</td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Dictionary code value cannot be null or empty string</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

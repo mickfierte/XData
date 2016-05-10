@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.GetParameter&lt;T, TRet&gt; Method (IDataQuery&lt;T&gt;, Expression&lt;Func&lt;T, TRet&gt;&gt;)</title>
+<title>DataObjectExtensions.GetParameter&lt;T, TRet&gt; Method (T, Expression&lt;Func&lt;T, TRet&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.GetParameter&lt;T, TRet&gt; Method (IDataQuery&lt;T&gt;, Expression&lt;Func&lt;T, TRet&gt;&gt;)</div>
+<div id="PageTitle">DataObjectExtensions.GetParameter&lt;T, TRet&gt; Method (T, Expression&lt;Func&lt;T, TRet&gt;&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -27,8 +27,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Returns SQL procedure/function out parameter value
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,7 +42,7 @@ Syntax
 
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static TRet GetParameter&lt;T, TRet&gt; (
-        IDataQuery&lt;T&gt; <i>query</i>,
+        T <i>obj</i>,
         Expression&lt;Func&lt;T, TRet&gt;&gt; <i>param</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
@@ -51,7 +51,7 @@ Syntax
 <col width="100%" />
 <tr>
 <td class="NoWrapTop">where T</td>
-<td>&nbsp;: class, new()</td>
+<td>&nbsp;: class, IDataObject, new()</td>
 </td>
 </tr>
 </table>
@@ -67,9 +67,9 @@ Data object type
 Parameter type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">query</div>
+<div class="CommentParameterName">obj</div>
 <div class="ParameterCommentContainer">
-Data query
+Data object instance
 </div>
 <div class="CommentParameterName">param</div>
 <div class="ParameterCommentContainer">
@@ -98,7 +98,7 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
 <td>Parameter name expression can not be null</td>
 </tr>
 </table>

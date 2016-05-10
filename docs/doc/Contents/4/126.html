@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IQueryStructure.Return&lt;T&gt; Method (string, string, int, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt;)</title>
+<title>IQueryStructure.Procedure Method (string, string, ProcedureType, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IQueryStructure.Return&lt;T&gt; Method (string, string, int, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt;)</div>
+<div id="PageTitle">IQueryStructure.Procedure Method (string, string, ProcedureType, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dynamic query procedure result set mapping
+Dynamic query procedure mapping
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/4/12.html">IQueryStructure</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/4/13.html">IQueryStructure</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,29 +40,12 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryStructure Return&lt;T&gt; (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryStructure Procedure (
         string <i>alias</i>,
         string <i>name</i>,
-        int <i>order</i>,
-        Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; <i>mapper</i>
-) </pre>
-<div style="padding-left: 30px; margin-top: 0px;">
-<table class="InsideCodeBlock">
-<col />
-<col width="100%" />
-<tr>
-<td class="NoWrapTop">where T</td>
-<td>&nbsp;: class</td>
-</td>
-</tr>
-</table>
-</div>
-</td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T</div>
-<div class="ParameterCommentContainer">
-Parameter data type
-</div>
+        ProcedureType <i>type</i>,
+        params Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[] <i>filters</i>
+) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">alias</div>
 <div class="ParameterCommentContainer">
@@ -70,15 +53,15 @@ Procedure alias
 </div>
 <div class="CommentParameterName">name</div>
 <div class="ParameterCommentContainer">
-Result set name
+Procedure name
 </div>
-<div class="CommentParameterName">order</div>
+<div class="CommentParameterName">type</div>
 <div class="ParameterCommentContainer">
-Result set order
+Procedure type
 </div>
-<div class="CommentParameterName">mapper</div>
+<div class="CommentParameterName">filters</div>
 <div class="ParameterCommentContainer">
-Result set mapper
+Filters and links applied to table
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">

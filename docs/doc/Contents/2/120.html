@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.Submit&lt;T&gt; Method (T, DataSubmitFlag)</title>
+<title>DataObjectExtensions.SetDeleted&lt;T&gt; Method (T, bool)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.Submit&lt;T&gt; Method (T, DataSubmitFlag)</div>
+<div id="PageTitle">DataObjectExtensions.SetDeleted&lt;T&gt; Method (T, bool)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Submit data object changes
+Set deleted state to object
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,9 +41,9 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool Submit&lt;T&gt; (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static void SetDeleted&lt;T&gt; (
         T <i>obj</i>,
-        DataSubmitFlag <i>flag</i>
+        bool <i>setState</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
@@ -66,14 +67,33 @@ Data object type
 <div class="ParameterCommentContainer">
 Data object instance
 </div>
-<div class="CommentParameterName">flag</div>
+<div class="CommentParameterName">setState</div>
 <div class="ParameterCommentContainer">
-Submit flag
+Set or remove DataObjectState.Deleted state flag
 </div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-Submit success
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
 </div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<table class="MembersTable">
+<col width="25%" />
+<col width="75%" />
+<tr>
+<th>Exception type</th>
+<th>Condition</th>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>No state attached to object</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

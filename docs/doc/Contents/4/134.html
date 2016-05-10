@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IQueryStructure.Subquery&lt;TDobj&gt; Method (string, IQueryDescription&lt;TDobj&gt;, string, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</title>
+<title>IQueryStructure.Subquery&lt;TDobj&gt; Method (string, Expression&lt;Func&lt;TDobj, object&gt;&gt;, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IQueryStructure.Subquery&lt;TDobj&gt; Method (string, IQueryDescription&lt;TDobj&gt;, string, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</div>
+<div id="PageTitle">IQueryStructure.Subquery&lt;TDobj&gt; Method (string, Expression&lt;Func&lt;TDobj, object&gt;&gt;, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -26,8 +26,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Dynamic query subquery mapping
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/4/12.html">IQueryStructure</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/4/13.html">IQueryStructure</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,8 +42,7 @@ Syntax
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryStructure Subquery&lt;TDobj&gt; (
         string <i>alias</i>,
-        IQueryDescription&lt;TDobj&gt; <i>sub</i>,
-        string <i>property</i>,
+        Expression&lt;Func&lt;TDobj, object&gt;&gt; <i>property</i>,
         DataGrouping <i>grouping</i>,
         params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] <i>filters</i>
 ) </pre>
@@ -62,20 +61,16 @@ Syntax
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">TDobj</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Subquery statically mapped type
 </div>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">alias</div>
 <div class="ParameterCommentContainer">
 Subquery alias
 </div>
-<div class="CommentParameterName">sub</div>
-<div class="ParameterCommentContainer">
-Subquery query structure
-</div>
 <div class="CommentParameterName">property</div>
 <div class="ParameterCommentContainer">
-Subquery selected property
+Subquery selected property expression
 </div>
 <div class="CommentParameterName">grouping</div>
 <div class="ParameterCommentContainer">

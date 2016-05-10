@@ -6,15 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IRepository&lt;T&gt;.Add&lt;TFrom&gt; Method (IQueryable&lt;TFrom&gt;, Mapping&lt;TFrom, T&gt;)</title>
+<title>IRepository&lt;T&gt; Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IRepository&lt;T&gt;.Add&lt;TFrom&gt; Method (IQueryable&lt;TFrom&gt;, Mapping&lt;TFrom, T&gt;)</div>
+<div id="PageTitle">IRepository&lt;T&gt; Interface Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
+<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
+<a href="#SectionHeader45" onclick="javascript: SetSectionVisibility(45, true); SetExpandCollapseAllToCollapseAll();">Events</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,81 +26,186 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Copy objects from source repository
+Data repository (data object collection) type specific interface
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/59.html">IRepository&lt;T&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/60.html">IRepository&lt;T&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract bool Add&lt;TFrom&gt; (
-        IQueryable&lt;TFrom&gt; <i>source</i>,
-        Mapping&lt;TFrom, T&gt; <i>mapping</i>
-) </pre>
-<div style="padding-left: 30px; margin-top: 0px;">
-<table class="InsideCodeBlock">
-<col />
-<col width="100%" />
+<div id="SectionContainerDiv35" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
 <tr>
-<td class="NoWrapTop">where TFrom</td>
-<td>&nbsp;: class</td>
-</td>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/173.html">Add&lt;TFrom&gt;</a></td>
+<td>Copy objects from source repository</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/170.html">Attach</a></td>
+<td>Attach object to repository</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/174.html">Clear</a></td>
+<td>Clear repository objects</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/171.html">ClearAttachedObjects</a></td>
+<td>Clear attached objects</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/175.html">Execute</a></td>
+<td>Run custom logic over object instances</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/176.html">Lock</a></td>
+<td>Lock object in database</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/177.html">New</a></td>
+<td>Get new instance of data object</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/178.html">Refresh</a></td>
+<td>Refresh object data from database</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/179.html">Reset</a></td>
+<td>Reset repository structure and filter values</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/180.html">SetAttachedHandlers</a></td>
+<td>Overloaded. Attach extra handlers to repository</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/181.html">SetFilterValue</a></td>
+<td>Set metadata defined RuntimeFilter value</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/182.html">Submit</a></td>
+<td>Overloaded. Save single data object changes</td>
 </tr>
 </table>
-</div>
-</td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">TFrom</div>
-<div class="ParameterCommentContainer">
-<p>There is no description.</p>
-</div>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">source</div>
-<div class="ParameterCommentContainer">
-Source repository
-</div>
-<div class="CommentParameterName">mapping</div>
-<div class="ParameterCommentContainer">
-Data mapping
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-Success flag
-</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<div id="SectionHeader40" class="SectionHeader">
+<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Exceptions
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
+Public Properties
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv1" class="SectionContainer">
+<div id="SectionContainerDiv40" class="SectionContainer">
 <table class="MembersTable">
-<col width="25%" />
-<col width="75%" />
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
 <tr>
-<th>Exception type</th>
-<th>Condition</th>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>"source" parameter is null. </td>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/183.html">Current</a></td>
+<td>Get/set current data object</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader45" class="SectionHeader">
+<img id="SectionExpanderImg45" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(45);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(45);">
+Public Events
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv45" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>mapping error. </td>
+<td class="IconColumn">
+<img src="../../GFX/PublicEvent.gif" alt="Public Event" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/184.html">OnCurrentObjectChanged</a></td>
+<td>Event fired when repository current object is changed</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicEvent.gif" alt="Public Event" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/185.html">OnCurrentObjectChanging</a></td>
+<td>Event fired when repository current object changing occurred</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicEvent.gif" alt="Public Event" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/186.html">OnInit</a></td>
+<td>Event fired when repository is initialized</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicEvent.gif" alt="Public Event" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/187.html">OnInitObject</a></td>
+<td>Event fired when object is initialized</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicEvent.gif" alt="Public Event" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/188.html">OnInvalidate</a></td>
+<td>Event fired when repository need to be refreshed</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicEvent.gif" alt="Public Event" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/189.html">OnInvalidateObject</a></td>
+<td>Event fired when object need to be refreshed</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

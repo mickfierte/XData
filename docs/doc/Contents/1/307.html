@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataPropertyFlag.None Field</title>
+<title>DataPropertyFlag.Id Field</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataPropertyFlag.None Field</div>
+<div id="PageTitle">DataPropertyFlag.Id Field</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Common data property
+Data object unique key part
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/25.html">DataPropertyFlag</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/26.html">DataPropertyFlag</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,7 +41,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const DataPropertyFlag None = 0</td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const DataPropertyFlag Id = 1</td></tr></table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
 <img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
@@ -54,7 +54,10 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-Default flag value
+<p>Mast to be unique across all repository entries!</p>
+<p>Every Data object (class realized <a href="../../Contents/1/56.html">IDataObject</a>) mast contain at least one <a href="../../Contents/1/311.html">PropertyAttribute</a> or <a href="../../Contents/1/312.html">ColumnAttribute</a> marked by this flag!</p>
+<p>Subquery (class realized <a href="../../Contents/1/61.html">ISqlObject</a>) can have no unique key.</p>
+<p>WARNING!  Do not use with nested table primary keys!</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

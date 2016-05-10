@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IInnerFilterAdapter.ConstFilter Method (string, string, FilterConstantType, string, FilterNullable)</title>
+<title>IInnerFilterAdapter.Link Method (string, string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IInnerFilterAdapter.ConstFilter Method (string, string, FilterConstantType, string, FilterNullable)</div>
+<div id="PageTitle">IInnerFilterAdapter.Link Method (string, string, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Constant valued filter description
+Inner link filter description
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/4/4.html">IInnerFilterAdapter</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/4/5.html">IInnerFilterAdapter</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,33 +40,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IFilterDescription ConstFilter (
-        string <i>name</i>,
-        string <i>field</i>,
-        FilterConstantType <i>constantType</i>,
-        string <i>constantValue</i>,
-        FilterNullable <i>nullable</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IFilterDescription Link (
+        string <i>linkedAlias</i>,
+        string <i>linkedField</i>,
+        string <i>field</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">name</div>
+<div class="CommentParameterName">linkedAlias</div>
 <div class="ParameterCommentContainer">
-Filter name
+Linked source alias
+</div>
+<div class="CommentParameterName">linkedField</div>
+<div class="ParameterCommentContainer">
+Linked source field name to link
 </div>
 <div class="CommentParameterName">field</div>
 <div class="ParameterCommentContainer">
-Field name to filter on
-</div>
-<div class="CommentParameterName">constantType</div>
-<div class="ParameterCommentContainer">
-Constant type
-</div>
-<div class="CommentParameterName">constantValue</div>
-<div class="ParameterCommentContainer">
-Constant value
-</div>
-<div class="CommentParameterName">nullable</div>
-<div class="ParameterCommentContainer">
-Filter null value handling mode
+Current field name to link
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.GetProperty&lt;T, TRet&gt; Method (T, Expression&lt;Func&lt;T, TRet&gt;&gt;)</title>
+<title>DataObjectExtensions.IsEmpty&lt;T&gt; Method (T, Expression&lt;Func&lt;T, object&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.GetProperty&lt;T, TRet&gt; Method (T, Expression&lt;Func&lt;T, TRet&gt;&gt;)</div>
+<div id="PageTitle">DataObjectExtensions.IsEmpty&lt;T&gt; Method (T, Expression&lt;Func&lt;T, object&gt;&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns property value
+Test property value is empty
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,9 +41,9 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static TRet GetProperty&lt;T, TRet&gt; (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool IsEmpty&lt;T&gt; (
         T <i>obj</i>,
-        Expression&lt;Func&lt;T, TRet&gt;&gt; <i>prop</i>
+        Expression&lt;Func&lt;T, object&gt;&gt; <i>prop</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
@@ -51,7 +51,7 @@ Syntax
 <col width="100%" />
 <tr>
 <td class="NoWrapTop">where T</td>
-<td>&nbsp;: class, IDataObject, new()</td>
+<td>&nbsp;: class, IDataObject</td>
 </td>
 </tr>
 </table>
@@ -62,10 +62,6 @@ Syntax
 <div class="ParameterCommentContainer">
 Data object type
 </div>
-<div class="CommentParameterName">TRet</div>
-<div class="ParameterCommentContainer">
-Property type
-</div>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">obj</div>
 <div class="ParameterCommentContainer">
@@ -73,11 +69,11 @@ Data object instance
 </div>
 <div class="CommentParameterName">prop</div>
 <div class="ParameterCommentContainer">
-Property name expression: x =&gt; x.SomePropertyName
+Property name expression<br />Example: x =&gt; x.SomePropertyName
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Property value
+Property is empty
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -98,7 +94,7 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
 <td>Property name expression can not be null</td>
 </tr>
 </table>

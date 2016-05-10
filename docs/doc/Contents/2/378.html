@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BaseSqlBuilder.FormatSql Method (SqlStringType, object[])</title>
+<title>BaseSqlBuilder.CompleteInsert Method (string, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt;, Type)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">BaseSqlBuilder.FormatSql Method (SqlStringType, object[])</div>
+<div id="PageTitle">BaseSqlBuilder.CompleteInsert Method (string, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt;, Type)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Format SQL dialect specific syntax strings<br />
-            Hint: Override to realize ugly non standard syntax (if needed)
+Returns string contains SQL expression to complete insert statement
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/211.html">BaseSqlBuilder</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">XDataObject.Database.Dialect</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/212.html">BaseSqlBuilder</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.Database.Dialect</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,22 +40,27 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected virtual string FormatSql (
-        SqlStringType <i>sqlStringType</i>,
-        params object[] <i>args</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected virtual string CompleteInsert (
+        string <i>alias</i>,
+        SortedList&lt;string, Tuple&lt;string, bool&gt;&gt; <i>identity</i>,
+        Type <i>objectType</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">sqlStringType</div>
+<div class="CommentParameterName">alias</div>
 <div class="ParameterCommentContainer">
-SQL syntax key
+Base table alias
 </div>
-<div class="CommentParameterName">args</div>
+<div class="CommentParameterName">identity</div>
 <div class="ParameterCommentContainer">
-Syntax arguments
+Identity fields and query parameters
+</div>
+<div class="CommentParameterName">objectType</div>
+<div class="ParameterCommentContainer">
+Mapped object type
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+SQL expression to complete insert statement
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

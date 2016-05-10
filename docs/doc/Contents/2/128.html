@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.GetProperties&lt;T&gt; Method (T, DataVersion, string[])</title>
+<title>DataObjectExtensions.GetProperties&lt;T&gt; Method (T, string[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.GetProperties&lt;T&gt; Method (T, DataVersion, string[])</div>
+<div id="PageTitle">DataObjectExtensions.GetProperties&lt;T&gt; Method (T, string[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -25,10 +25,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns properties values
+Returns properties values<br />
+            Hint: To get a single property value use GetProperty function.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -43,7 +44,6 @@ Syntax
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; GetProperties&lt;T&gt; (
         T <i>obj</i>,
-        DataVersion <i>version</i>,
         params string[] <i>props</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
@@ -68,10 +68,6 @@ Data object type
 <div class="ParameterCommentContainer">
 Data object instance
 </div>
-<div class="CommentParameterName">version</div>
-<div class="ParameterCommentContainer">
-Data version
-</div>
 <div class="CommentParameterName">props</div>
 <div class="ParameterCommentContainer">
 Properties array
@@ -92,7 +88,7 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-Hint: To get a single property value use <a href="../../Contents/2/129.html">GetProperty&lt;T, TRet&gt;</a> function.
+Hint: To get a single property value use <a href="../../Contents/2/130.html">GetProperty&lt;T, TRet&gt;</a> function.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

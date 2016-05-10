@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ColumnAttribute.NativeSqlType Property </title>
+<title>ColumnAttribute.Hidden Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">ColumnAttribute.NativeSqlType Property </div>
+<div id="PageTitle">ColumnAttribute.Hidden Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Native SQL type name
+Hidden column flag
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/311.html">ColumnAttribute</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">XDataObject.Mapping</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/312.html">ColumnAttribute</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,7 +41,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public string NativeSqlType { get; set; }</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool Hidden { get; set; }</pre></td></tr></table>
 <div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
 <p>There is no description.</p>
@@ -58,8 +58,8 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-<p>Used to specify native SQL column type when conflicted with default type mapping</p>
-<p>WARNING!  May be not supported by database adapter!</p>
+<p>Used to exclude column from query selected columns</p>
+<p>Hidden column can be used as: <a href="../../Contents/3/45.html">RuntimeFilter.PropertyName</a>, <a href="../../Contents/3/268.html">ExternalLinkAttribute.ChildProperty</a> or for grouping (see <a href="../../Contents/3/371.html">GroupOrder</a>)</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

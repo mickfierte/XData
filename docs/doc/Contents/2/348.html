@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BaseSqlBuilder.GetAllQuery Method (IDataStructure)</title>
+<title>BaseSqlBuilder.GetAcquireXmlQuery Method (string, string, string[], IComparable[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">BaseSqlBuilder.GetAllQuery Method (IDataStructure)</div>
+<div id="PageTitle">BaseSqlBuilder.GetAcquireXmlQuery Method (string, string, string[], IComparable[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,11 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns query to check compliance of all repository objects<br />
-            Hint: Used in XData LINQ expressions
+Returns query to acquire xml data
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/211.html">BaseSqlBuilder</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">XDataObject.Database.Dialect</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/212.html">BaseSqlBuilder</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.Database.Dialect</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,18 +41,56 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public Query GetAllQuery (
-        IDataStructure <i>structure</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public Query GetAcquireXmlQuery (
+        string <i>table</i>,
+        string <i>column</i>,
+        string[] <i>tablePrimaryKey</i>,
+        IComparable[] <i>primaryKeyValue</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">structure</div>
+<div class="CommentParameterName">table</div>
 <div class="ParameterCommentContainer">
-Structure metadata
+Table name
+</div>
+<div class="CommentParameterName">column</div>
+<div class="ParameterCommentContainer">
+Xml column name
+</div>
+<div class="CommentParameterName">tablePrimaryKey</div>
+<div class="ParameterCommentContainer">
+Table primary key columns
+</div>
+<div class="CommentParameterName">primaryKeyValue</div>
+<div class="ParameterCommentContainer">
+Table primary key values
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
 Query
 </div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<table class="MembersTable">
+<col width="25%" />
+<col width="75%" />
+<tr>
+<th>Exception type</th>
+<th>Condition</th>
+</tr>
+<tr>
+<td><a href="../../Contents/1/101.html">XDataQueryStructureException</a></td>
+<td>Field not found</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

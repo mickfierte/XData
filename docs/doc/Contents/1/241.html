@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataCombination.Except Field</title>
+<title>DataCombination Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataCombination.Except Field</div>
+<div id="PageTitle">DataCombination Class Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Example</a>&nbsp;
+<a href="#SectionHeader25" onclick="javascript: SetSectionVisibility(25, true); SetExpandCollapseAllToCollapseAll();">Fields</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,38 +24,68 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-EXCEPT(MINUS)
+Data set combination modes
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/20.html">DataCombination</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/21.html">DataCombination</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader25" class="SectionHeader">
+<img id="SectionExpanderImg25" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(25);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(25);">
+Public Fields
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const DataCombination Except = 3</td></tr></table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Example
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<code language="cs">
-  <p>var united = XDataManager.GetRepository&lt;Something&gt;(Owner).Where(x =&gt; x.Name.Like("%one%"))</p>
-  <p>    .Except(XDataManager.GetRepository&lt;Something&gt;(Owner).Where(x =&gt; x.Name.Like("%another%")));</p>
-</code>
+<div id="SectionContainerDiv25" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/242.html">Except</a></td>
+<td>EXCEPT(MINUS)</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/243.html">Intersect</a></td>
+<td>INTERSECT</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/244.html">None</a></td>
+<td>Data object not use combination</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/245.html">Union</a></td>
+<td>UNION</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/1/246.html">UnionAll</a></td>
+<td>UNION ALL</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" /></td>
+<td><a href="../../Contents/1/247.html">value__</a></td>
+<td><p>There is no summary.</p></td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

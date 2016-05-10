@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SerializationExtensions.Serialize&lt;T&gt; Method (IDataQuery&lt;T&gt;, TextWriter)</title>
+<title>SerializationExtensions.ToXml&lt;T&gt; Method (T)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">SerializationExtensions.Serialize&lt;T&gt; Method (IDataQuery&lt;T&gt;, TextWriter)</div>
+<div id="PageTitle">SerializationExtensions.ToXml&lt;T&gt; Method (T)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Serialize data query helper
+Serialize helper
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/46.html">SerializationExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/47.html">SerializationExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,59 +40,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static void Serialize&lt;T&gt; (
-        IDataQuery&lt;T&gt; <i>query</i>,
-        TextWriter <i>writer</i>
-) </pre>
-<div style="padding-left: 30px; margin-top: 0px;">
-<table class="InsideCodeBlock">
-<col />
-<col width="100%" />
-<tr>
-<td class="NoWrapTop">where T</td>
-<td>&nbsp;: class, IDataObject, new()</td>
-</td>
-</tr>
-</table>
-</div>
-</td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static string ToXml&lt;T&gt; (
+        T <i>source</i>
+) </pre></td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">T</div>
 <div class="ParameterCommentContainer">
-Data object type
+Object type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">query</div>
+<div class="CommentParameterName">source</div>
 <div class="ParameterCommentContainer">
-Query
+Object to serialize
 </div>
-<div class="CommentParameterName">writer</div>
+<div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Writer to serialize
+Serialized collection
 </div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Exceptions
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<table class="MembersTable">
-<col width="25%" />
-<col width="75%" />
-<tr>
-<th>Exception type</th>
-<th>Condition</th>
-</tr>
-<tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>Writer is null</td>
-</tr>
-</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

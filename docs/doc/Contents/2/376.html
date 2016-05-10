@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BaseSqlBuilder.AddSkipLimitAndOrder Method (IDataStructure, SortedList&lt;string, object&gt;, ref StringBuilder, int, string, ref Query, ref List&lt;Tuple&lt;string, Type, string&gt;&gt;, ICollection&lt;string&gt;, ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt;, bool)</title>
+<title>BaseSqlBuilder.AddReturning2Command Method (ref StringBuilder, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">BaseSqlBuilder.AddSkipLimitAndOrder Method (IDataStructure, SortedList&lt;string, object&gt;, ref StringBuilder, int, string, ref Query, ref List&lt;Tuple&lt;string, Type, string&gt;&gt;, ICollection&lt;string&gt;, ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt;, bool)</div>
+<div id="PageTitle">BaseSqlBuilder.AddReturning2Command Method (ref StringBuilder, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Add skip, limit, and order statements to query
+Add returning auto increment identity column values statement in query
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/211.html">BaseSqlBuilder</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">XDataObject.Database.Dialect</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/212.html">BaseSqlBuilder</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">XDataObject.Database.Dialect</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,58 +40,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected abstract void AddSkipLimitAndOrder (
-        IDataStructure <i>structure</i>,
-        SortedList&lt;string, object&gt; <i>filterValues</i>,
-        ref StringBuilder <i>strCommand</i>,
-        int <i>fromPosition</i>,
-        string <i>selectAll</i>,
-        ref Query <i>query</i>,
-        ref List&lt;Tuple&lt;string, Type, string&gt;&gt; <i>withSources</i>,
-        ICollection&lt;string&gt; <i>skipped</i>,
-        ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt; <i>fields</i>,
-        bool <i>doNotSkip</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected abstract void AddReturning2Command (
+        ref StringBuilder <i>sb</i>,
+        SortedList&lt;string, Tuple&lt;string, bool&gt;&gt; <i>identity</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">structure</div>
-<div class="ParameterCommentContainer">
-Structure metadata
-</div>
-<div class="CommentParameterName">filterValues</div>
-<div class="ParameterCommentContainer">
-Filter values
-</div>
-<div class="CommentParameterName">strCommand</div>
+<div class="CommentParameterName">sb</div>
 <div class="ParameterCommentContainer">
 Query string builder
 </div>
-<div class="CommentParameterName">fromPosition</div>
+<div class="CommentParameterName">identity</div>
 <div class="ParameterCommentContainer">
-From statement start position
-</div>
-<div class="CommentParameterName">selectAll</div>
-<div class="ParameterCommentContainer">
-All fields list string
-</div>
-<div class="CommentParameterName">query</div>
-<div class="ParameterCommentContainer">
-Query
-</div>
-<div class="CommentParameterName">withSources</div>
-<div class="ParameterCommentContainer">
-Common-Table-Expression (WITH) data sources
-</div>
-<div class="CommentParameterName">skipped</div>
-<div class="ParameterCommentContainer">
-Skipped sources collection
-</div>
-<div class="CommentParameterName">fields</div>
-<div class="ParameterCommentContainer">
-Parsed fields
-</div>
-<div class="CommentParameterName">doNotSkip</div>
-<div class="ParameterCommentContainer">
-Don't skip empty sources
+Identity column name and parameter name
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

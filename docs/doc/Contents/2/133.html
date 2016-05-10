@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.Execute&lt;T&gt; Method (T, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt;, IDictionary&lt;string, Action&lt;byte[]&gt;&gt;, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt;)</title>
+<title>DataObjectExtensions.Execute&lt;T&gt; Method (T, string, IDictionary&lt;string, Action&lt;byte[]&gt;&gt;, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.Execute&lt;T&gt; Method (T, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt;, IDictionary&lt;string, Action&lt;byte[]&gt;&gt;, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt;)</div>
+<div id="PageTitle">DataObjectExtensions.Execute&lt;T&gt; Method (T, string, IDictionary&lt;string, Action&lt;byte[]&gt;&gt;, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -28,8 +28,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Run custom logic over single object
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -44,7 +44,7 @@ Syntax
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool Execute&lt;T&gt; (
         T <i>obj</i>,
-        Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt; <i>routine</i>,
+        string <i>key</i>,
         IDictionary&lt;string, Action&lt;byte[]&gt;&gt; <i>post</i>,
         IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; <i>callback</i>
 ) </pre>
@@ -70,9 +70,9 @@ Data object type
 <div class="ParameterCommentContainer">
 Data object instance
 </div>
-<div class="CommentParameterName">routine</div>
+<div class="CommentParameterName">key</div>
 <div class="ParameterCommentContainer">
-Action field name expression<br />Example: () =&gt; SomeCustomActionField
+Action key
 </div>
 <div class="CommentParameterName">post</div>
 <div class="ParameterCommentContainer">
@@ -105,12 +105,8 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>Action field expression is null</td>
-</tr>
-<tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>CustomActionAttribute not found for expression specified field</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Object repository is detached</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

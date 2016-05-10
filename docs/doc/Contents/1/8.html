@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XDataObject.Database.Dialect Namespace</title>
+<title>XDataObject.Database.Adapter Namespace</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">XDataObject.Database.Dialect Namespace</div>
+<div id="PageTitle">XDataObject.Database.Adapter Namespace</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Classes</a>&nbsp;
+<a href="#SectionHeader5" onclick="javascript: SetSectionVisibility(5, true); SetExpandCollapseAllToCollapseAll();">Interfaces</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,7 +26,7 @@
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
 
-                Base XData SQL dialect adapter
+                Base XData database adapter
             
 <div id="ItemLocation">
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
@@ -52,20 +53,89 @@ Public Classes
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/211.html">BaseSqlBuilder</a></td>
-<td>SQL builder base class</td>
+<td><a href="../../Contents/4/427.html">BaseDatabaseAdapter&lt;TConnection, TParameter&gt;</a></td>
+<td>Database adapter base class</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/212.html">ExpressionContext</a></td>
-<td>SQL expression context</td>
+<td><a href="../../Contents/4/428.html">CallResult</a></td>
+<td>Stored procedure call result</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/213.html">SqlStringType</a></td>
-<td>SQL dialect specific format strings types</td>
+<td><a href="../../Contents/4/429.html">DatabaseAdapterAttribute</a></td>
+<td>Database adapter attribute</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/4/430.html">Query</a></td>
+<td>SQL query</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/4/431.html">QueryParam</a></td>
+<td>SQL query parameter</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/4/432.html">QueryResult</a></td>
+<td>SQL query result</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/4/433.html">QueryResultBase</a></td>
+<td>SQL query result</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/4/434.html">StoredProcedure</a></td>
+<td>SQL stored procedure</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/4/435.html">UdtSqlType</a></td>
+<td>User defined type (UDT) description</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader5" class="SectionHeader">
+<img id="SectionExpanderImg5" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(5);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(5);">
+Public Interfaces
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv5" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
+<td><a href="../../Contents/4/436.html">IDatabaseAdapter</a></td>
+<td>Database adapter basic interface</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
+<td><a href="../../Contents/4/437.html">IDatabaseAdapterMetadata</a></td>
+<td>Database adapter description interface</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

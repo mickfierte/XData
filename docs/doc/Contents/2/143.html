@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.GetResultSet&lt;T, TRes&gt; Method (IRepository&lt;T&gt;, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt;)</title>
+<title>DataObjectExtensions.GetResultSet&lt;T, TRes&gt; Method (T, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.GetResultSet&lt;T, TRes&gt; Method (IRepository&lt;T&gt;, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt;)</div>
+<div id="PageTitle">DataObjectExtensions.GetResultSet&lt;T, TRes&gt; Method (T, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -27,8 +27,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Returns SQL procedure/function result set
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,7 +42,7 @@ Syntax
 
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;T, TRes&gt; (
-        IRepository&lt;T&gt; <i>repository</i>,
+        T <i>obj</i>,
         Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt; <i>resultSetName</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
@@ -65,16 +65,16 @@ Syntax
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">T</div>
 <div class="ParameterCommentContainer">
-Object type
+Data object type
 </div>
 <div class="CommentParameterName">TRes</div>
 <div class="ParameterCommentContainer">
 Result set object type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">repository</div>
+<div class="CommentParameterName">obj</div>
 <div class="ParameterCommentContainer">
-Data object repository
+Data object instance
 </div>
 <div class="CommentParameterName">resultSetName</div>
 <div class="ParameterCommentContainer">
@@ -103,7 +103,7 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
 <td>Result set name expression can not be null</td>
 </tr>
 </table>

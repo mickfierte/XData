@@ -6,14 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IRepository&lt;T&gt;.Submit Method</title>
+<title>IRepository&lt;T&gt;.SetFilterValue Method (RuntimeFilter, object)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IRepository&lt;T&gt;.Submit Method</div>
+<div id="PageTitle">IRepository&lt;T&gt;.SetFilterValue Method (RuntimeFilter, object)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
+<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,44 +26,76 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Save single data object changes
+Set metadata defined RuntimeFilter value
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/59.html">IRepository&lt;T&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/60.html">IRepository&lt;T&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IRepository&lt;T&gt; SetFilterValue (
+        RuntimeFilter <i>filter</i>,
+        object <i>val</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">filter</div>
+<div class="ParameterCommentContainer">
+Filter
+</div>
+<div class="CommentParameterName">val</div>
+<div class="ParameterCommentContainer">
+Filter value
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+Self repository link
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
 <table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
+<col width="25%" />
+<col width="75%" />
 <tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
+<th>Exception type</th>
+<th>Condition</th>
 </tr>
 <tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/189.html">IRepository&lt;T&gt;.Submit (ref T, DataSubmitFlag)</a></td>
-<td>Save single data object changes</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/190.html">IRepository&lt;T&gt;.Submit (IEnumerable&lt;T&gt;, DataSubmitFlag)</a></td>
-<td>Save multiple data objects changes</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>"filter" parameter is null. </td>
 </tr>
 </table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader2" class="SectionHeader">
+<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
+Remarks
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv2" class="SectionContainer">
+<div class="RemarksContainer">
+Hint: Set <span class="Code">val = null</span> to clear filter
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

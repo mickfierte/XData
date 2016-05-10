@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ISubqueryFilterAdapter&lt;TDObj&gt; Interface</title>
+<title>ISubqueryFilterAdapter&lt;T, TDObj&gt; Interface</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">ISubqueryFilterAdapter&lt;TDObj&gt; Interface</div>
+<div id="PageTitle">ISubqueryFilterAdapter&lt;T, TDObj&gt; Interface</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
@@ -27,7 +27,7 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Subquery link filter description adapter
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -44,8 +44,9 @@ Syntax
 <col width="0%" />
 <col width="100%" />
 <tr>
-<td class="NoWrapTop">public interface ISubqueryFilterAdapter&lt;TDObj&gt; :&nbsp;</td>
+<td class="NoWrapTop">public interface ISubqueryFilterAdapter&lt;T, TDObj&gt; :&nbsp;</td>
 <td>
+ISubqueryFilterAdapter&lt;TDObj&gt;,<br />
 ISubqueryFilterAdapter,<br />
 IFilterAdapter
 </td>
@@ -56,6 +57,11 @@ IFilterAdapter
 <col />
 <col width="100%" />
 <tr>
+<td class="NoWrapTop">where T</td>
+<td>&nbsp;: class</td>
+</td>
+</tr>
+<tr>
 <td class="NoWrapTop">where TDObj</td>
 <td>&nbsp;: class</td>
 </td>
@@ -64,6 +70,10 @@ IFilterAdapter
 </div>
 </td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T</div>
+<div class="ParameterCommentContainer">
+Repository data object type
+</div>
 <div class="CommentParameterName">TDObj</div>
 <div class="ParameterCommentContainer">
 Subquery mapped type
@@ -79,7 +89,7 @@ Members
 </div>
 
 <div id="SectionContainerDiv1" class="SectionContainer">
-<p>Click <a href="../../Contents/4/112.html">here</a> to see the list of members.</p>
+<p>Click <a href="../../Contents/4/159.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

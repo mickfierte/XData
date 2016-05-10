@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ExternalLinkAttribute.DirectLink Property </title>
+<title>IRepository.ShowSubtree Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">ExternalLinkAttribute.DirectLink Property </div>
+<div id="PageTitle">IRepository.ShowSubtree Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Direct link slave to selected tree node
+Data repository tree modifier
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/333.html">ExternalLinkAttribute</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">XDataObject.Mapping</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/59.html">IRepository</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,7 +41,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool DirectLink { get; set; }</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract bool ShowSubtree { get; set; }</pre></td></tr></table>
 <div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
 <p>There is no description.</p>
@@ -61,7 +61,7 @@ Remarks
 <p>Used to show/hide subtree related items in slave view when master is tree</p>
 <p>When ShowSubtree = false - slave contains selected node child items only</p>
 <p>When ShowSubtree = true - selected node and it's subtree child items</p>
-<p>Works with <a href="../../Contents/2/167.html">ShowSubtree</a>: External links marked as DirectLink is filled while ShowSubtree is false and omitted otherwise</p>
+<p>Works with <a href="../../Contents/2/169.html">DirectLink</a>: External links marked as DirectLink is filled while ShowSubtree is false and omitted otherwise</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

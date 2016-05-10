@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XDataManager.Exists&lt;T&gt; Method (object, string)</title>
+<title>XDataManager.Exists&lt;T&gt; Method (Guid, string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">XDataManager.Exists&lt;T&gt; Method (object, string)</div>
+<div id="PageTitle">XDataManager.Exists&lt;T&gt; Method (Guid, string, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -27,8 +26,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Checks for repository existence
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/52.html">XDataManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/53.html">XDataManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,7 +41,8 @@ Syntax
 
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool Exists&lt;T&gt; (
-        object <i>owner</i>,
+        Guid <i>layer</i>,
+        string <i>context</i>,
         string <i>alias</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
@@ -63,9 +63,13 @@ Syntax
 Data object type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">owner</div>
+<div class="CommentParameterName">layer</div>
 <div class="ParameterCommentContainer">
-Owner object
+Layer
+</div>
+<div class="CommentParameterName">context</div>
+<div class="ParameterCommentContainer">
+Context
 </div>
 <div class="CommentParameterName">alias</div>
 <div class="ParameterCommentContainer">
@@ -75,29 +79,6 @@ Data object alias
 <div class="ParameterCommentContainer">
 Repository exists
 </div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Exceptions
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<table class="MembersTable">
-<col width="25%" />
-<col width="75%" />
-<tr>
-<th>Exception type</th>
-<th>Condition</th>
-</tr>
-<tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>owner parameter can not be null</td>
-</tr>
-</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

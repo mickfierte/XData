@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.CheckState&lt;T&gt; Method (T, DataObjectState)</title>
+<title>DataObjectExtensions.Callback&lt;T&gt; Method (T, string, ref byte[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.CheckState&lt;T&gt; Method (T, DataObjectState)</div>
+<div id="PageTitle">DataObjectExtensions.Callback&lt;T&gt; Method (T, string, ref byte[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Checks object for state
+Callback to client
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,9 +40,10 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool CheckState&lt;T&gt; (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool Callback&lt;T&gt; (
         T <i>obj</i>,
-        DataObjectState <i>state</i>
+        string <i>message</i>,
+        ref byte[] <i>data</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
@@ -51,7 +51,7 @@ Syntax
 <col width="100%" />
 <tr>
 <td class="NoWrapTop">where T</td>
-<td>&nbsp;: class, IDataObject</td>
+<td>&nbsp;: class, IDataObject, new()</td>
 </td>
 </tr>
 </table>
@@ -65,39 +65,20 @@ Data object type
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">obj</div>
 <div class="ParameterCommentContainer">
-Data object instance
+Object context
 </div>
-<div class="CommentParameterName">state</div>
+<div class="CommentParameterName">message</div>
 <div class="ParameterCommentContainer">
-State
+Message name
+</div>
+<div class="CommentParameterName">data</div>
+<div class="ParameterCommentContainer">
+Data to post
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Object has desired state flag
+<p>There is no description.</p>
 </div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Exceptions
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<table class="MembersTable">
-<col width="25%" />
-<col width="75%" />
-<tr>
-<th>Exception type</th>
-<th>Condition</th>
-</tr>
-<tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>No state attached to object</td>
-</tr>
-</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

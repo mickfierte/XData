@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>QueryDescriptionExtensions.Case&lt;T, TResult&gt; Method (IQueryStructureAdapter, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt;, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;, TaggedExpression&lt;T, TResult&gt;[])</title>
+<title>QueryDescriptionExtensions.AsPrimary&lt;T&gt; Method (T)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">QueryDescriptionExtensions.Case&lt;T, TResult&gt; Method (IQueryStructureAdapter, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt;, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;, TaggedExpression&lt;T, TResult&gt;[])</div>
+<div id="PageTitle">QueryDescriptionExtensions.AsPrimary&lt;T&gt; Method (T)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Case
+Set primary filter flag to filter description
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/495.html">QueryDescriptionExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/496.html">QueryDescriptionExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,41 +41,34 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static TResult Case&lt;T, TResult&gt; (
-        IQueryStructureAdapter <i>adapter</i>,
-        Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; <i>expression</i>,
-        Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt; <i>elseValue</i>,
-        params TaggedExpression&lt;T, TResult&gt;[] <i>switchValues</i>
-) </pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static T AsPrimary&lt;T&gt; (
+        T <i>desc</i>
+) </pre>
+<div style="padding-left: 30px; margin-top: 0px;">
+<table class="InsideCodeBlock">
+<col />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">where T</td>
+<td>&nbsp;: IFilterDescription</td>
+</td>
+</tr>
+</table>
+</div>
+</td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">T</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
-</div>
-<div class="CommentParameterName">TResult</div>
-<div class="ParameterCommentContainer">
-<p>There is no description.</p>
+Filter description type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">adapter</div>
+<div class="CommentParameterName">desc</div>
 <div class="ParameterCommentContainer">
-Source query structure adapter
-</div>
-<div class="CommentParameterName">expression</div>
-<div class="ParameterCommentContainer">
-Case expression
-</div>
-<div class="CommentParameterName">elseValue</div>
-<div class="ParameterCommentContainer">
-Else value
-</div>
-<div class="CommentParameterName">switchValues</div>
-<div class="ParameterCommentContainer">
-Case switch values
+Filter description
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Case result
+Filter description
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -96,8 +89,8 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>Function accessible in XData LINQ expressions only</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>desc argument can not be null</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

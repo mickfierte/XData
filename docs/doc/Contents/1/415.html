@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XDataManager.GetDictionaryValue&lt;T&gt; Method (object, Expression&lt;Func&lt;T, bool&gt;&gt;, string, string, ISecuritySession, Variable[])</title>
+<title>XDataManager.GetDictionaryValue&lt;T&gt; Method (Expression&lt;Func&lt;T, bool&gt;&gt;, Guid, string, string, ISecuritySession, Variable[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">XDataManager.GetDictionaryValue&lt;T&gt; Method (object, Expression&lt;Func&lt;T, bool&gt;&gt;, string, string, ISecuritySession, Variable[])</div>
+<div id="PageTitle">XDataManager.GetDictionaryValue&lt;T&gt; Method (Expression&lt;Func&lt;T, bool&gt;&gt;, Guid, string, string, ISecuritySession, Variable[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -27,8 +27,8 @@
 <a id="ContentsAnchor">&nbsp;</a>
 Returns dictionary value by find expression and cache result
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/52.html">XDataManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/53.html">XDataManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,8 +42,8 @@ Syntax
 
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static T GetDictionaryValue&lt;T&gt; (
-        object <i>owner</i>,
         Expression&lt;Func&lt;T, bool&gt;&gt; <i>findExpression</i>,
+        Guid <i>layer</i>,
         string <i>alias</i>,
         string <i>context</i>,
         ISecuritySession <i>security</i>,
@@ -67,13 +67,13 @@ Syntax
 Dictionary type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">owner</div>
-<div class="ParameterCommentContainer">
-Repository owner object
-</div>
 <div class="CommentParameterName">findExpression</div>
 <div class="ParameterCommentContainer">
 Expression to find value
+</div>
+<div class="CommentParameterName">layer</div>
+<div class="ParameterCommentContainer">
+Repository layer
 </div>
 <div class="CommentParameterName">alias</div>
 <div class="ParameterCommentContainer">
@@ -114,15 +114,15 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td><p>There is no summary.</p></td>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
 <td>No original data found for object</td>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>owner parameter is null</td>
-</tr>
-<tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
 <td>findExpression parameter is null</td>
 </tr>
 </table>

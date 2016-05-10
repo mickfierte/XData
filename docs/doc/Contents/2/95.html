@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.Execute&lt;T&gt; Method</title>
+<title>DataObjectExtensions.CheckState&lt;T&gt; Method (T, DataObjectState)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.Execute&lt;T&gt; Method</div>
+<div id="PageTitle">DataObjectExtensions.CheckState&lt;T&gt; Method (T, DataObjectState)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,54 +25,77 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Run custom logic over array of objects
+Checks object for state
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static bool CheckState&lt;T&gt; (
+        T <i>obj</i>,
+        DataObjectState <i>state</i>
+) </pre>
+<div style="padding-left: 30px; margin-top: 0px;">
+<table class="InsideCodeBlock">
+<col />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">where T</td>
+<td>&nbsp;: class, IDataObject</td>
+</td>
+</tr>
+</table>
+</div>
+</td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T</div>
+<div class="ParameterCommentContainer">
+Data object type
+</div>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">obj</div>
+<div class="ParameterCommentContainer">
+Data object instance
+</div>
+<div class="CommentParameterName">state</div>
+<div class="ParameterCommentContainer">
+State
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+Object has desired state flag
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
 <table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
+<col width="25%" />
+<col width="75%" />
 <tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
+<th>Exception type</th>
+<th>Condition</th>
 </tr>
 <tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/130.html">DataObjectExtensions.Execute&lt;T&gt; (ICollection&lt;T&gt;, string, IDictionary&lt;string, Action&lt;byte[]&gt;&gt;, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt;)</a></td>
-<td>Run custom logic over array of objects</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/131.html">DataObjectExtensions.Execute&lt;T&gt; (ICollection&lt;T&gt;, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt;, IDictionary&lt;string, Action&lt;byte[]&gt;&gt;, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt;)</a></td>
-<td>Run custom logic over array of objects</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/132.html">DataObjectExtensions.Execute&lt;T&gt; (T, string, IDictionary&lt;string, Action&lt;byte[]&gt;&gt;, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt;)</a></td>
-<td>Run custom logic over single object</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/133.html">DataObjectExtensions.Execute&lt;T&gt; (T, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt;, IDictionary&lt;string, Action&lt;byte[]&gt;&gt;, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt;)</a></td>
-<td>Run custom logic over single object</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>No state attached to object</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

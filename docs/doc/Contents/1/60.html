@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ISqlObject Interface</title>
+<title>IRepository&lt;T&gt; Interface</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">ISqlObject Interface</div>
+<div id="PageTitle">IRepository&lt;T&gt; Interface</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -26,9 +26,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-SQL (sub)query part interface
+Data repository (data object collection) type specific interface
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -45,11 +45,37 @@ Syntax
 <col width="0%" />
 <col width="100%" />
 <tr>
-<td class="NoWrapTop">public interface ISqlObject </td>
-<td>&nbsp;</td>
+<td class="NoWrapTop">public interface IRepository&lt;T&gt; :&nbsp;</td>
+<td>
+IDataQuery&lt;T&gt;,<br />
+IOrderedQueryable&lt;T&gt;,<br />
+IQueryable&lt;T&gt;,<br />
+IEnumerable&lt;T&gt;,<br />
+IRepository,<br />
+IDataQuery,<br />
+IOrderedQueryable,<br />
+IQueryable,<br />
+IEnumerable
+</td>
 </tr>
 </table>
+<div style="padding-left: 30px; margin-top: 0px;">
+<table class="InsideCodeBlock">
+<col />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">where T</td>
+<td>&nbsp;: class, IDataObject</td>
+</td>
+</tr>
+</table>
+</div>
 </td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T</div>
+<div class="ParameterCommentContainer">
+<p>There is no description.</p>
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
 <img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
@@ -62,8 +88,15 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-<p>Mapping object as subquery</p>
-<p>Hint: Use abstract classes to map subquery</p>
+<p>Hint: Its possible to use any DI container with XData:</p>
+<code language="cs">
+  <p>// example with Autofac syntax</p>
+  <p>// register</p>
+  <p>Container.Register(() =&gt; XDataManager.GetRepository&lt;Invoice&gt;(Owner)).As&lt;IRepository&lt;Invoice&gt;&gt;();</p>
+  <p>Container.Register(() =&gt; XDataManager.GetRepository&lt;Invoice&gt;(Owner).GetChild&lt;InvoiceSpec&gt;()).As&lt;IRepository&lt;InvoiceSpec&gt;&gt;();</p>
+  <p>// resolve</p>
+  <p>var spec = Container.Resolve&lt;IRepository&lt;InvoiceSpec&gt;&gt;(); //spec is linked with Invoice repository as a slave!</p>
+</code>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader2" class="SectionHeader">
@@ -76,7 +109,7 @@ Members
 </div>
 
 <div id="SectionContainerDiv2" class="SectionContainer">
-<p>There are no members.</p>
+<p>Click <a href="../../Contents/2/172.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

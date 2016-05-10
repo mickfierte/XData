@@ -6,17 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RangeFilterAttribute Class</title>
+<title>PropertyGroupingAttribute Class</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">RangeFilterAttribute Class</div>
+<div id="PageTitle">PropertyGroupingAttribute Class</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
-<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
-<a href="#SectionHeader3" onclick="javascript: SetSectionVisibility(3, true); SetExpandCollapseAllToCollapseAll();">Example</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -27,9 +25,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Data object range filter attribute
+Data object property grouping attribute
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/13.html">XDataObject.Mapping</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -46,9 +44,9 @@ Syntax
 <col width="0%" />
 <col width="100%" />
 <tr>
-<td class="NoWrapTop">public sealed class RangeFilterAttribute :&nbsp;</td>
+<td class="NoWrapTop">public sealed class PropertyGroupingAttribute :&nbsp;</td>
 <td>
-FilterAttribute<br />
+Attribute<br />
 </td>
 </tr>
 </table>
@@ -58,44 +56,13 @@ FilterAttribute<br />
 <img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Remarks
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<div class="RemarksContainer">
-<p>Used to filter data by range of values (for example: <span class="Code">some_field in (1, 2, 3)</span> or <span class="Code">some_field not in (1, 2, 3)</span>)</p>
-<p>Hint: Using dynamic LINQ range filters will increase code flexibility (see example).</p>
-</div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader2" class="SectionHeader">
-<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
 Members
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv2" class="SectionContainer">
-<p>Click <a href="../../Contents/3/445.html">here</a> to see the list of members.</p>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader3" class="SectionHeader">
-<img id="SectionExpanderImg3" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(3);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(3);">
-Example
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv3" class="SectionContainer">
-<code language="cs">
-            var states = new List&lt;int&gt;();
-            // fill states from somewhere
-            XDataManager.GetRepository&lt;Invoice&gt;(Owner).Where(x =&gt; states.Contains(x.State));
-            </code>
+<div id="SectionContainerDiv1" class="SectionContainer">
+<p>Click <a href="../../Contents/3/460.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

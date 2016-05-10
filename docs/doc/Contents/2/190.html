@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IRepository&lt;T&gt;.Submit Method (IEnumerable&lt;T&gt;, DataSubmitFlag)</title>
+<title>IRepository&lt;T&gt;.Submit Method (ref T, DataSubmitFlag)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IRepository&lt;T&gt;.Submit Method (IEnumerable&lt;T&gt;, DataSubmitFlag)</div>
+<div id="PageTitle">IRepository&lt;T&gt;.Submit Method (ref T, DataSubmitFlag)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Save multiple data objects changes
+Save single data object changes
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/59.html">IRepository&lt;T&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/60.html">IRepository&lt;T&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,13 +42,13 @@ Syntax
 
 <div id="SectionContainerDiv0" class="SectionContainer">
 <table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract bool Submit (
-        IEnumerable&lt;T&gt; <i>objects</i>,
+        ref T <i>obj</i>,
         DataSubmitFlag <i>flag</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">objects</div>
+<div class="CommentParameterName">obj</div>
 <div class="ParameterCommentContainer">
-Data object sequence
+Data object instance
 </div>
 <div class="CommentParameterName">flag</div>
 <div class="ParameterCommentContainer">
@@ -77,8 +77,8 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>"objects" is null or empty sequence. </td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>"objects" is null. </td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

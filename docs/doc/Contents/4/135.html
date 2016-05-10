@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IQueryStructure.Select&lt;TResult&gt; Method (Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</title>
+<title>IQueryStructure.Subquery&lt;TDobj&gt; Method (string, IQueryDescription&lt;TDobj&gt;, string, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IQueryStructure.Select&lt;TResult&gt; Method (Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</div>
+<div id="PageTitle">IQueryStructure.Subquery&lt;TDobj&gt; Method (string, IQueryDescription&lt;TDobj&gt;, string, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dynamic query result mapping
+Dynamic query subquery mapping
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/4/12.html">IQueryStructure</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/4/13.html">IQueryStructure</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,15 +40,19 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryDescription&lt;TResult&gt; Select&lt;TResult&gt; (
-        Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt; <i>mapper</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryStructure Subquery&lt;TDobj&gt; (
+        string <i>alias</i>,
+        IQueryDescription&lt;TDobj&gt; <i>sub</i>,
+        string <i>property</i>,
+        DataGrouping <i>grouping</i>,
+        params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] <i>filters</i>
 ) </pre>
 <div style="padding-left: 30px; margin-top: 0px;">
 <table class="InsideCodeBlock">
 <col />
 <col width="100%" />
 <tr>
-<td class="NoWrapTop">where TResult</td>
+<td class="NoWrapTop">where TDobj</td>
 <td>&nbsp;: class</td>
 </td>
 </tr>
@@ -56,18 +60,34 @@ Syntax
 </div>
 </td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">TResult</div>
+<div class="CommentParameterName">TDobj</div>
 <div class="ParameterCommentContainer">
-Dynamic query result type
+<p>There is no description.</p>
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">mapper</div>
+<div class="CommentParameterName">alias</div>
 <div class="ParameterCommentContainer">
-Mapping expression
+Subquery alias
+</div>
+<div class="CommentParameterName">sub</div>
+<div class="ParameterCommentContainer">
+Subquery query structure
+</div>
+<div class="CommentParameterName">property</div>
+<div class="ParameterCommentContainer">
+Subquery selected property
+</div>
+<div class="CommentParameterName">grouping</div>
+<div class="ParameterCommentContainer">
+Subquery selected property aggregate function
+</div>
+<div class="CommentParameterName">filters</div>
+<div class="ParameterCommentContainer">
+Filters and links applied to subquery
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Dynamic query description
+Query structure
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

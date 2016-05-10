@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IQueryStructure.Subquery Method (string, Type, string, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter, IFilterDescription&gt;&gt;[])</title>
+<title>IQueryStructure.Select&lt;TResult&gt; Method</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">IQueryStructure.Subquery Method (string, Type, string, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter, IFilterDescription&gt;&gt;[])</div>
+<div id="PageTitle">IQueryStructure.Select&lt;TResult&gt; Method</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,54 +24,44 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dynamic query subquery mapping
+Dynamic query result mapping using statically mapped data
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/4/12.html">IQueryStructure</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/4/13.html">IQueryStructure</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+Overload List
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IQueryStructure Subquery (
-        string <i>alias</i>,
-        Type <i>dobjType</i>,
-        string <i>property</i>,
-        DataGrouping <i>grouping</i>,
-        params Expression&lt;Func&lt;ISubqueryFilterAdapter, IFilterDescription&gt;&gt;[] <i>filters</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">alias</div>
-<div class="ParameterCommentContainer">
-Subquery alias
-</div>
-<div class="CommentParameterName">dobjType</div>
-<div class="ParameterCommentContainer">
-Subquery statically mapped type
-</div>
-<div class="CommentParameterName">property</div>
-<div class="ParameterCommentContainer">
-Subquery selected property
-</div>
-<div class="CommentParameterName">grouping</div>
-<div class="ParameterCommentContainer">
-Subquery selected property aggregate function
-</div>
-<div class="CommentParameterName">filters</div>
-<div class="ParameterCommentContainer">
-Filters and links applied to subquery
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-Query structure
-</div>
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/4/136.html">IQueryStructure.Select&lt;TResult&gt; (Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a></td>
+<td>Dynamic query result mapping</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/4/137.html">IQueryStructure.Select&lt;TResult&gt; ()</a></td>
+<td>Dynamic query result mapping using statically mapped data</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

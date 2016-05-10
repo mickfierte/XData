@@ -6,16 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DataObjectExtensions.GetProperties&lt;T&gt; Method (T, IEnumerable&lt;string&gt;, DataVersion)</title>
+<title>DataObjectExtensions.Modify Method (Lob, Action&lt;byte[]&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">DataObjectExtensions.GetProperties&lt;T&gt; Method (T, IEnumerable&lt;string&gt;, DataVersion)</div>
+<div id="PageTitle">DataObjectExtensions.Modify Method (Lob, Action&lt;byte[]&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
-<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -26,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns properties values
+Lob field modify
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/23.html">DataObjectExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">XDataObject</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/24.html">DataObjectExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/5.html">XDataObject</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,44 +41,22 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; GetProperties&lt;T&gt; (
-        T <i>obj</i>,
-        IEnumerable&lt;string&gt; <i>props</i>,
-        DataVersion <i>version</i>
-) </pre>
-<div style="padding-left: 30px; margin-top: 0px;">
-<table class="InsideCodeBlock">
-<col />
-<col width="100%" />
-<tr>
-<td class="NoWrapTop">where T</td>
-<td>&nbsp;: class, IDataObject</td>
-</td>
-</tr>
-</table>
-</div>
-</td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T</div>
-<div class="ParameterCommentContainer">
-Data object type
-</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static Lob Modify (
+        Lob <i>source</i>,
+        Action&lt;byte[]&gt; <i>action</i>
+) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">obj</div>
+<div class="CommentParameterName">source</div>
 <div class="ParameterCommentContainer">
-Data object instance
+Source Lob
 </div>
-<div class="CommentParameterName">props</div>
+<div class="CommentParameterName">action</div>
 <div class="ParameterCommentContainer">
-Properties sequence
-</div>
-<div class="CommentParameterName">version</div>
-<div class="ParameterCommentContainer">
-Data version
+Modify action
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Sequence of name value pairs
+Modified Lob
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -100,24 +77,10 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
-<td>Properties sequence is null</td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Modify logic error</td>
 </tr>
 </table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader2" class="SectionHeader">
-<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
-Remarks
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv2" class="SectionContainer">
-<div class="RemarksContainer">
-Hint: To get a single property value use <a href="../../Contents/2/129.html">GetProperty&lt;T, TRet&gt;</a> function.
-</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

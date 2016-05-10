@@ -6,15 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>QueryDescriptionExtensions.ToDataSet&lt;T&gt; Method (IEnumerable&lt;T&gt;, string, ISqlBuilder)</title>
+<title>QueryDescriptionExtensions.SqlParam&lt;TResult&gt; Method (IQueryStructureAdapter, string, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">QueryDescriptionExtensions.ToDataSet&lt;T&gt; Method (IEnumerable&lt;T&gt;, string, ISqlBuilder)</div>
+<div id="PageTitle">QueryDescriptionExtensions.SqlParam&lt;TResult&gt; Method (IQueryStructureAdapter, string, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Composes data source text from sequence
+SQL parameter definition
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/495.html">QueryDescriptionExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/496.html">QueryDescriptionExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,60 +41,61 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static string ToDataSet&lt;T&gt; (
-        IEnumerable&lt;T&gt; <i>source</i>,
-        string <i>prefix</i>,
-        ISqlBuilder <i>builder</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static TResult SqlParam&lt;TResult&gt; (
+        IQueryStructureAdapter <i>adapter</i>,
+        string <i>binding</i>,
+        DbType <i>type</i>,
+        params Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[] <i>attributes</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T</div>
+<div class="CommentParameterName">TResult</div>
 <div class="ParameterCommentContainer">
-Source object type
+Parameter mapped type
 </div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">source</div>
+<div class="CommentParameterName">adapter</div>
 <div class="ParameterCommentContainer">
-Source sequence
+Query structure adapter
 </div>
-<div class="CommentParameterName">prefix</div>
+<div class="CommentParameterName">binding</div>
 <div class="ParameterCommentContainer">
-Source column prefix
+Parameter data binding name
 </div>
-<div class="CommentParameterName">builder</div>
+<div class="CommentParameterName">type</div>
 <div class="ParameterCommentContainer">
-SQL dialect adapter
+Parameter database type
+</div>
+<div class="CommentParameterName">attributes</div>
+<div class="ParameterCommentContainer">
+Parameter mapping attributes
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Data source text
+Parameter
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
 <img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Remarks
+Exceptions
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv1" class="SectionContainer">
-<div class="RemarksContainer">
-<p>Used to compose synthetic data source from object sequence</p>
-<example>
-  <code language="cs">
-            var ds = Enumerable.Range(1,3).ToDataSet("val", XDataManager.GetContext().DialectAdapter);
-            // for MSSQL dialect ds will contains "(select 1 as val union select 2 as val union select 3 as val)"
-            // for Oracle dialect ds will contains "(select 1 as val from dual union select 2 as val from dual union select 3 as val from dual)"
-            // Enumeration types can be used as 
-            var ds = Enum.GetValues(typeof(SomeEnumType)).Cast&lt;int&gt;().ToDataSet("val", XDataManager.GetContext().DialectAdapter);
-            // Object types properties are represented as fields
-            var test = new []{new {Id=1, Name="Test"}, new {Id=2, Name="Another"}};
-            var ds = test.ToDataSet("X", XDataManager.GetContext().DialectAdapter);
-            // for MSSQL dialect ds will contains "(select 1 as X_Id, 'Test' as X_Name union select 2 as X_Id, 'Another' as X_Name)"
-            </code>
-</example>
-</div>
+<table class="MembersTable">
+<col width="25%" />
+<col width="75%" />
+<tr>
+<th>Exception type</th>
+<th>Condition</th>
+</tr>
+<tr>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
+<td>Function accessible in XData LINQ expressions only</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

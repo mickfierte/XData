@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>QueryDescriptionExtensions.DateDiff&lt;T&gt; Method (IQueryStructureAdapter, Expression&lt;Func&lt;IQueryStructureAdapter, DateTime&gt;&gt;, Expression&lt;Func&lt;IQueryStructureAdapter, DateTime&gt;&gt;, DateDiffKind)</title>
+<title>QueryDescriptionExtensions.Case&lt;T, TResult&gt; Method (IQueryStructureAdapter, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt;, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;, TaggedExpression&lt;T, TResult&gt;[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">XData</div>
-<div id="PageTitle">QueryDescriptionExtensions.DateDiff&lt;T&gt; Method (IQueryStructureAdapter, Expression&lt;Func&lt;IQueryStructureAdapter, DateTime&gt;&gt;, Expression&lt;Func&lt;IQueryStructureAdapter, DateTime&gt;&gt;, DateDiffKind)</div>
+<div id="PageTitle">QueryDescriptionExtensions.Case&lt;T, TResult&gt; Method (IQueryStructureAdapter, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt;, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;, TaggedExpression&lt;T, TResult&gt;[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dates difference
+Case
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/495.html">QueryDescriptionExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">XDataObject.Mapping.Dynamic</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/496.html">QueryDescriptionExtensions</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">XDataObject.Mapping.Dynamic</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">XDataObject</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,14 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static T DateDiff&lt;T&gt; (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static TResult Case&lt;T, TResult&gt; (
         IQueryStructureAdapter <i>adapter</i>,
-        Expression&lt;Func&lt;IQueryStructureAdapter, DateTime&gt;&gt; <i>finalDate</i>,
-        Expression&lt;Func&lt;IQueryStructureAdapter, DateTime&gt;&gt; <i>startDate</i>,
-        DateDiffKind <i>kind</i>
+        Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; <i>expression</i>,
+        Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt; <i>elseValue</i>,
+        params TaggedExpression&lt;T, TResult&gt;[] <i>switchValues</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">T</div>
+<div class="ParameterCommentContainer">
+<p>There is no description.</p>
+</div>
+<div class="CommentParameterName">TResult</div>
 <div class="ParameterCommentContainer">
 <p>There is no description.</p>
 </div>
@@ -57,21 +61,21 @@ Syntax
 <div class="ParameterCommentContainer">
 Source query structure adapter
 </div>
-<div class="CommentParameterName">finalDate</div>
+<div class="CommentParameterName">expression</div>
 <div class="ParameterCommentContainer">
-Final date
+Case expression
 </div>
-<div class="CommentParameterName">startDate</div>
+<div class="CommentParameterName">elseValue</div>
 <div class="ParameterCommentContainer">
-Start date
+Else value
 </div>
-<div class="CommentParameterName">kind</div>
+<div class="CommentParameterName">switchValues</div>
 <div class="ParameterCommentContainer">
-Dates differences kind
+Case switch values
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-Dates difference
+Case result
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -92,7 +96,7 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><a href="../../Contents/1/99.html">XDataRuntimeException</a></td>
+<td><a href="../../Contents/1/100.html">XDataRuntimeException</a></td>
 <td>Function accessible in XData LINQ expressions only</td>
 </tr>
 </table>
