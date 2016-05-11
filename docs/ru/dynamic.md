@@ -188,12 +188,16 @@
 * Фильтры по подзапросу
 * Связи внутри объекта данных
 
-Каждый из них описывается соответствующим LINQ выражением (LINQ expression) описывающим параметры описания фильтров в зависимости от контекста их использования и типа самого фильтра (см. ниже). Описания фильтров передаются в качестве значений параметра *filters* методов [*DataTable*, *Subquery*, *InnerView*, *Procedure* интерфейса **](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/177.html) или [*WithRecursive* интерфейса *IQueryWithAdapter<TRoot>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/199.html). При этом каждое значение описывает один фильтр. Тип фильтра определяется вызовом одного из фабричных методов интерфейса адаптеров:
+Каждый из них описывается соответствующим LINQ выражением (LINQ expression) описывающим параметры описания фильтров в зависимости от контекста их использования и типа самого фильтра (см. ниже). Описания фильтров передаются в качестве значений параметра *filters* методов [*DataTable*, *Subquery*, *InnerView*, *Procedure* интерфейса *IRepositoryDescription<T>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/177.html) или [*WithRecursive* интерфейса *IQueryWithAdapter<TRoot>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/199.html). При этом каждое значение описывает один фильтр. Тип фильтра определяется вызовом одного из фабричных методов интерфейса одного из нижеперечисленных адаптеров внутри лямбда выражения с входящим параметром типа одного из адаптеров:
 	- [*IFilterAdapter*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/87.html) - базовый класс перечисленных ниже адаптеров для описания фильтров,
 	- [*IInnerFilterAdapter*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/91.html) - который используется для описания фильтров и связей внутри запроса (*DataTable*, *Procedure*),
 	- [*ISubqueryFilterAdapter*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/109.html), [*ISubqueryFilterAdapter<TDObj>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/113.html) и [*ISubqueryFilterAdapter<T,TDObj>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/159.html) - которые применяются в различных перегрузках методов [описания подзапросов](#Описание-преобразования-с-использованием подзапросов) для описания связей с подзапросами.
 
-При этом заполняются обязательные параметры описания фильтров, но есть возможность доопределить описания опциональными параметрами путем продолжения цепочки LINQ вызовов методов расширения 
+При этом заполняются обязательные параметры описания фильтров, но есть возможность доопределить описания опциональными параметрами путем продолжения цепочки LINQ вызовов методов расширения:
+	- [*SetOperation*]() - для указания [операции фильтра](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/36.html)
+	- [*AsPrimary*]() - для указания опционального фильтра
+	- [*SetCombination*]()
+	- [*SetSourceAlias*]()
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
