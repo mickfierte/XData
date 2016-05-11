@@ -143,31 +143,41 @@
 	}, x => x.ExternalLink<InvoiceSpec>("DocId")).SetBaseTable("D").SetLogicAssembly("XDataObjectTest")
 ...	
 ```
-Все таблицы участвующие в запросе [источника данных](./glossary.md#Источник-данных) перечисляются с помощью вызовов одной из перегрузок метода [*DataTable*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/179.html) интерфейса [*IRepositoryDescription<T>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/17.html). Те из таблиц, которые участвуют в [иерархии обновляемых таблиц](./glossary.md#Иерархия-обновляемых-таблиц) (кроме базовой таблицы) должны использовать специальную [перегрузку](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/191.html) с помощью которой можно указать псевдоним родительской таблицы.
+Подробности описания отражения свойств репозитория описаны [ниже](#Описание-преобразования-свойств).
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Все таблицы участвующие в запросе [источника данных](./glossary.md#Источник-данных) описываются с помощью вызовов одной из перегрузок метода [*DataTable*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/179.html) интерфейса [*IRepositoryDescription<T>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/17.html). Те из таблиц, которые участвуют в [иерархии обновляемых таблиц](./glossary.md#Иерархия-обновляемых-таблиц) (кроме базовой таблицы) должны использовать специальную [перегрузку](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/191.html) с помощью которой можно указать псевдоним родительской таблицы.
 
 ```csharp
-[DataTable("P" /* псевдоним (alias) таблицы */, 
-	"patient" /* имя таблицы */, 
-	"D" /* псевдоним (alias) родительской таблицы в иерархии обновления */)]
+...
+	.DataTable("T_DOC", "D", x => x.DictFilter("T_DOC_TYPE", "doc_type_id", "code", "INVOICE"))
+        .DataTable("T_DOC_DOC_STATE", "DS", "D", x => x.Link("D", "doc_id"))
+...
 ```
 Кроме таблиц подобным образом могут описываться представления (view), однако все используемые поля представления должны быть описаны явно в виде свойств только для чтения (см. [Свойства только для чтения](#Свойства-только-для-чтения)) или скрытых полей (см. [Скрытые поля](#Скрытые-поля)).
+
+Отдельно нужно отметить, что фильтры и связи между таблицами описываются в виде значений параметра filters. Детально описание фильтров при динамическом описании правил отображения объектов рассмотрено [ниже](#Фильтры).
 
 ####Описание преобразования с использованием подзапросов
 Есть возможность использовать в объектном преобразовании подзапросы. Такая возможность есть как для отражения SQL выражений представляющих собой подзапрос на свойства объектов данных (см. ниже), для описания фильтров использующих подзапросы (см. [Фильтры на основе SQL выражений](#Фильтры-на-основе-SQL-выражений)), так и в качестве описаний внутренних подзапросов (inner view).
 
 Глубина вложенности подзапросов не регламентируется.
 
-В описании объектного преобразования основного класса (класса который использует этот подзапрос) должен присутствовать атрибут [*SubqueryAttribute*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/196.html) или [*InnerViewAttribute*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/2/197.html) (для использования в качестве внутреннего подзапроса (inner view)). Оба этих атрибута имеют параметры *Alias* (псевдоним подзапроса в результирующем запросе). Кроме того *InnerViewAttribute* имеет параметр *InnerViewType* (тип, описывающий объектное преобразование (mapping) подзапроса), а *SubqueryAttribute* - параметры: *SubqueryType* (тип, описывающий объектное преобразование (mapping) подзапроса), *PropertyName* (результирующее свойство подзапроса) и *Grouping* (тип агрегации для результирующего свойства подзапроса).
-```csharp
-[Subquery("A" /* псевдоним (alias) подзапроса */, 
-	typeof(DocSpecAmounts) /* тип отражения подзапроса */, 
-	"Amount" /* результирующее поле подзапроса */, 
-	Grouping = DataGrouping.Sum /* агрегатная функция результирующего поля подзапроса */)]
+В описании объектного преобразования основного класса (класса который использует этот подзапрос) подчитенные запросы указываются с помощью вызовов одной из перегрузок метода [*Subquery* или *InnerView*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/index.html) интерфейса [*IRepositoryDescription<T>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/17.html) для подзапросов и внутренних представлений (inner view) соответственно.
 
-[InnerView("H" /* псевдоним (alias) внутреннего представления (inner view) */, 
-	typeof(DocLastChange) /* тип отражения внутреннего представления (inner view) */)]
+В случае когда используется параметризованные (generic) варианты методов *Subquery* и *InnerView* с параметром *IQueryDescription<TDobj> sub* имеется возможность использовать нотацию [динамических запросов](./queries.md) для описания структуры подзапросов непосредственно в ходе описания правила отображения внешнего запроса.
+
+```csharp
+...
+	.Subquery("A", typeof(DocSpecAmounts), "Amount", DataGrouping.Sum, x => x.SubqueryLink("DocId"))
+        .Subquery<CatalogueTree>("UT", x => x.CatalogueId, DataGrouping.None)
+        .InnerView("H", XDataManager.GetStructure("H", null, DataStructureFlag.Grouping, new Variable[0])
+            .DataTable("T_DOC_HISTORY", "H")
+            .Select(x => new {
+                DocId = x.Field<long?>("H", string.Empty, z => z.Group(DataGrouping.None)),
+                HistoryDate = x.Field<DateTime?>("H", string.Empty, z => z.Group(DataGrouping.Max))
+            }), x => x.SubqueryLink("DocId").SetOperation(FilterOperation.OuterJoin))
+        .InnerView<DocBySpecType>("ST", x => x.SubqueryLink("DocId"))
+...        
 ```
 ####Фильтры
 Фильтры внутри основного запроса объекта данных могут быть описаны как:
@@ -178,7 +188,16 @@
 * Фильтры по подзапросу
 * Связи внутри объекта данных
 
-Каждый из них описывается соответствующим атрибутом класса объекта данных (см. ниже). Для всех из них должны быть определены следующие параметры: *Source* - псевдоним (alias) источника данных к полю которого применяется фильтр, *FieldName* - имя поля, *Operation* - операция фильтра (опционально, по умолчанию *FilterOperation*.**Equal**), *Combination* - имя группы фильтров, к которой относится данный фильтр (опционально, по умолчанию группа фильтров по умолчанию). Кроме этого каждый фильтр имеет свои специфичные параметры описанные в соответствующих разделах ниже.
+Каждый из них описывается соответствующим LINQ выражением (LINQ expression) описывающим параметры описания фильтров в зависимости от контекста их использования и типа самого фильтра (см. ниже). Описания фильтров передаются в качестве значений параметра *filters* методов [*DataTable*, *Subquery*, *InnerView*, *Procedure* интерфейса **](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/177.html) или [*WithRecursive* интерфейса *IQueryWithAdapter<TRoot>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/199.html). При этом каждое значение описывает один фильтр. Тип фильтра определяется вызовом одного из фабричных методов интерфейса адаптеров:
+	- [*IFilterAdapter*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/87.html) - базовый класс перечисленных ниже адаптеров для описания фильтров,
+	- [*IInnerFilterAdapter*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/91.html) - который используется для описания фильтров и связей внутри запроса (*DataTable*, *Procedure*),
+	- [*ISubqueryFilterAdapter*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/109.html), [*ISubqueryFilterAdapter<TDObj>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/113.html) и [*ISubqueryFilterAdapter<T,TDObj>*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/4/159.html) - которые применяются в различных перегрузках методов [описания подзапросов](#Описание-преобразования-с-использованием подзапросов) для описания связей с подзапросами.
+
+При этом заполняются обязательные параметры описания фильтров, но есть возможность доопределить описания опциональными параметрами путем продолжения цепочки LINQ вызовов методов расширения 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Для всех из них должны быть определены следующие параметры: *Source* - псевдоним (alias) источника данных к полю которого применяется фильтр, *FieldName* - имя поля, *Operation* - операция фильтра (опционально, по умолчанию *FilterOperation*.**Equal**), *Combination* - имя группы фильтров, к которой относится данный фильтр (опционально, по умолчанию группа фильтров по умолчанию). Кроме этого каждый фильтр имеет свои специфичные параметры описанные в соответствующих разделах ниже.
 
 Список операций представлен перечислением [*FilterOperation*](https://htmlpreview.github.io/?https://raw.githubusercontent.com/mickfierte/XData/master/docs/doc/Contents/1/36.html):
 * **Equal** - равно
