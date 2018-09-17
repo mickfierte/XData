@@ -8,11 +8,11 @@ version 1.1.0
 [![NuGet](https://img.shields.io/nuget/v/XData.DataAccessLayer_BrokenLink.svg?style=plastic)]()
 [![NuGet](https://img.shields.io/nuget/dt/XData.DataAccessLayer_BrokenLink.svg?style=plastic)]()
 
-[XData UnitOfWork package](https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/) - required to use [XData UnitOfWork](xref:unit_of_work.md) implementation
+[XData UnitOfWork package](https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/) - required to use [XData UnitOfWork](http://mickfierte.github.io/XData/tutorial/unit_of_work.html) implementation
 [![NuGet](https://img.shields.io/nuget/v/XData.WorkSet_BrokenLink.svg?style=plastic)]()
 [![NuGet](https://img.shields.io/nuget/dt/XData.WorkSet_BrokenLink.svg?style=plastic)]()
 
-[XData Security package](https://packages.nuget.org/packages/XData.Security.Abstractions_BrokenLink/) - [_ISecuritySession_](xref:XData.Interfaces.ISecuritySession) interface implementation helper required to use [XData security](xref:security.md) functionality
+[XData Security package](https://packages.nuget.org/packages/XData.Security.Abstractions_BrokenLink/) - [_ISecuritySession_](http://mickfierte.github.io/XData/api/XData.Interfaces.ISecuritySession.html) interface implementation helper required to use [XData security](http://mickfierte.github.io/XData/tutorial/security.html) functionality
 [![NuGet](https://img.shields.io/nuget/v/XData.WorkSet_BrokenLink.svg?style=plastic)]()
 [![NuGet](https://img.shields.io/nuget/dt/XData.WorkSet_BrokenLink.svg?style=plastic)]()
 
