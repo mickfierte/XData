@@ -71,15 +71,15 @@ version 1.1.0
 >
 >2) (Optional) Download one of [logger binaries](http://mickfierte.github.io/XData/index.html#Net-4.0)
 >
->3) Download XData database [adapter binaries](http://mickfierte.github.io/XData/index.html#Net-4.0) for Your database (or multiple databases).
+>3) Install XData database adapter Nuget package (see [above](http://mickfierte.github.io/XData/#nuget-packages)) for Your database (or multiple databases).
 >
->4) Configuration is described [here](http://mickfierte.github.io/XData/)
+>4) Configuration is described [here](http://mickfierte.github.io/XData/tutorial/config.html)
 
 ### (Optional) Net 4.0 three-tier architecture client libraries
 
->1) Additionally required to download XData [three tier client libraries](http://mickfierte.github.io/XData/index.html#Net-4.0)
+>1) Additionally required to install XData [three tier client package](https://packages.nuget.org/packages/XData.Remote_BrokenLink/)
 >
->2) Configuration is described [here](http://mickfierte.github.io/XData/)
+>2) Configuration is described [here](http://mickfierte.github.io/XData/tutorial/three_tier.html)
 
 ### (Optional) Net 4.0 three-tier architecture server
 
@@ -87,15 +87,15 @@ version 1.1.0
 >
 >2) Copy data mapping and data logic assemblies to service catalog.
 >
->3) Serice configuration is described [here](http://mickfierte.github.io/XData/)
+>3) Service configuration is described [here](http://mickfierte.github.io/XData/tutorial/config.html)
 
 ### NetStandard 2.0
 
 >1) Install Nuget package of XData [engine package](https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/).
 >
->2) Download XData database [adapter binaries](http://mickfierte.github.io/XData/index.html#Net-Standard-2.0) for Your database (or multiple databases).
+>2) Install XData database adapter Nuget package (see [above](http://mickfierte.github.io/XData/#nuget-packages)) for Your database (or multiple databases).
 >
->3) Configuration is described [here](http://mickfierte.github.io/XData/)
+>3) Configuration is described [here](http://mickfierte.github.io/XData/tutorial/config.html)
 
 
 ## Usage example
