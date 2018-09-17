@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SQL procedures &amp; functions | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SQL procedures &amp; functions | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure.md">
+<h3 id="sql-procedures--functions">SQL procedures &amp; functions</h3>
+
+<p>Common information about mapping to SQL procedures and functions described in <a href="../../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just reprensent dynamic mapping rules for various procedure types.</p>
+<h4 id="sql-procedure-as-query">SQL procedure as query</h4>
+<p>To define procedure as data source of mapping used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a> method call of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
+<h4 id="sql-procedure-parameter">SQL procedure parameter</h4>
+<p>To define SQL procedure parameter used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____">Parameter</a> method call of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
+<h4 id="sql-procedure-resultset">SQL procedure resultset</h4>
+<p>To describe resultset of SQL procedure used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___">Return</a> method call of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
+<h4 id="sql-procedure-resultset-as-query-sample">SQL procedure resultset as query sample</h4>
+<pre><code class="lang-csharp">var res = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Return(&quot;T&quot;, &quot;Result&quot;, 1, convertor)
+    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
+        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+foreach (var classifier in res)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><h4 id="sql-procedure-with-multiple-resultsets-sample">SQL procedure with multiple resultsets sample</h4>
+<pre><code class="lang-csharp">var res2 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;param3&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 4, &quot;param4&quot;, DbType.String)
+    .Return(&quot;T&quot;, &quot;Result1&quot;, 1, convertor)
+    .Return(&quot;T&quot;, &quot;Result2&quot;, 2, convertor)
+    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result1&quot;, &quot;param1&quot;.SetValue(&quot;1&quot;), 
+        &quot;param2&quot;.SetValue(&quot;Test&quot;), &quot;param3&quot;.SetValue(&quot;2&quot;), &quot;param4&quot;.SetValue(&quot;Some&quot;));
+foreach (var classifier in res2)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quot;))
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><h4 id="sql-procedure-with-out-parameter-sample">SQL procedure with out parameter sample</h4>
+<pre><code class="lang-csharp">var res3 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure3&quot;, ProcedureType.Procedure)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;param3&quot;, DbType.String, 
+        z =&gt; z.Size(20), z =&gt; z.Direction(ParameterDirection.Output))
+    .Call(DataScope.Layer, 
+        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
+</code></pre><h4 id="sql-procedure-with-out-parameter-and-resultset-sample">SQL procedure with out parameter and resultset sample</h4>
+<pre><code class="lang-csharp">var res4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+        z =&gt; z.Direction(ParameterDirection.ReturnValue))
+    .Return(&quot;T&quot;, &quot;Result&quot;, 1, x =&gt; new Classifier { 
+        Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
+    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
+        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+Console.WriteLine(res4.GetParameter&lt;int&gt;(&quot;result&quot;));
+foreach (var classifier in res4)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><h4 id="sql-procedure-with-return-value-sample">SQL procedure with return value sample</h4>
+<pre><code class="lang-csharp">var res5 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+        z =&gt; z.Direction(ParameterDirection.ReturnValue))
+    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
+        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+Console.WriteLine(res5.GetParameter&lt;int&gt;(&quot;result&quot;));
+</code></pre><h4 id="sql-procedure-with-return-value-and-resultset-sample">SQL procedure with return value and resultset sample</h4>
+<pre><code class="lang-csharp">var res6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure)
+    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
+        z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
+    .Return(&quot;T&quot;, &quot;Result&quot;, 1, x =&gt; new Classifier { 
+        Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
+    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, &quot;param1&quot;.SetValue(param));
+foreach (var classifier in res6)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
+<pre><code class="lang-csharp">var arr = new[] { 1, 2, 3 }.ToXml();
+var f6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;TestFunction6&quot;, ProcedureType.Function)
+    .Parameter&lt;int[]&gt;(&quot;T&quot;, 1, &quot;p_arr&quot;, DbType.Int32, z =&gt; z.Array())
+    .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
+        z =&gt; z.Direction(ParameterDirection.ReturnValue))
+    .Call(DataScope.Layer, &quot;p_arr&quot;.SetValue(arr));
+Console.WriteLine(f6.GetParameter&lt;int&gt;(&quot;result&quot;));
+</code></pre><h4 id="sql-procedure-with-udt-parameter-sample">SQL procedure with UDT parameter sample</h4>
+<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
+[Serializable]
+public class Classifier
+{
+    [XmlAttribute]
+    public int Id { get; set; }
+    [XmlAttribute]
+    public string Name { get; set; }
+}
+...
+var f5 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function)
+    .Parameter&lt;Classifier&gt;(&quot;T&quot;, 1, &quot;p_obj&quot;, DbType.Object, 
+        z =&gt; z.UdtDataType(&quot;classifier_rec&quot;))
+    .Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.String, 
+        z =&gt; z.Size(20),
+        z =&gt; z.Direction(ParameterDirection.ReturnValue), 
+        z =&gt; z.NativeSqlType(&quot;VARCHAR&quot;))
+    .Call(DataScope.Layer, &quot;p_obj&quot;.SetValue(
+        new Classifier { Id = 1, Name = &quot;Test&quot; }.ToXml()));
+Console.WriteLine(f5.GetParameter&lt;string&gt;(&quot;result&quot;));
+</code></pre><h4 id="sql-procedure-with-udt-array-parameter-sample">SQL procedure with UDT array parameter sample</h4>
+<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
+[Serializable]
+public class Classifier
+{
+    [XmlAttribute]
+    public int Id { get; set; }
+    [XmlAttribute]
+    public string Name { get; set; }
+}
+...
+var param = new[] { new Classifier { Id = 1, Name = &quot;Test&quot; },
+    new Classifier { Id = 2, Name = &quot;Some&quot; } }.ToXml();
+var f4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction4&quot;, ProcedureType.Function)
+    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
+        z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
+    .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
+        z =&gt; z.Direction(ParameterDirection.ReturnValue))
+    .Call(DataScope.Layer, &quot;param1&quot;.SetValue(param));
+Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
+</code></pre><h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
+<pre><code class="lang-csharp">var f3 = XDataMapping.GetStructure(context: DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function)
+    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
+        z =&gt; z.UdtDataType(&quot;dbo.Classifier&quot;))
+    .Select(x =&gt; new Classifier { 
+        Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
+        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
+    .AsQuery(DataScope.Layer, &quot;param1&quot;.SetValue(param));
+foreach (var classifier in f3)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
+<pre><code class="lang-csharp">var f1 = XDataMapping.GetStructure(context: DataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Select(x =&gt; new Classifier { 
+        Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
+        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
+    .AsQuery(DataScope.Layer, 
+        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+foreach (var classifier in f1)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

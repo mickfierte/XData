@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Glossary | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Glossary | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="glossary.md">
+<h2 id="glossary">Glossary</h2>
+
+<h3 id="data-object">Data object</h3>
+<p>Application domain objects mapped (statically or dynamically) to database representation. Data object instances can be obtained through generic <a href="#repository">repository</a> typed by data object type. Data objects non readonly proprties can be changed and that changes may be submitted to database.</p>
+<h3 id="updatable-tables-hierarchy">Updatable tables hierarchy</h3>
+<p>Hierarchically related tables can be updated on submit of <a href="#data-object">data object</a> changes. Real update of one or subtree of a tables in that hierarchy depends on changes of properties that mapped to concrete tables. When <a href="#optional-referencies">optional referencies</a> is declared between tables inside updatable tables hierarchy, update of data objects can be automatically translated to insert or delete SQL statement applied to concrete table. Updatable tables hierarchy has only one root node - <a href="#base-table">base table</a>.</p>
+<h3 id="base-table">Base table</h3>
+<p>Root table of <a href="#updatable-tables-hierarchy">updatable tables hierarchy</a>. In case of using readonly repository mapping, base table role can be assigned to any table (or virtual table) that contains <a href="#data-object">data object</a> unique key.</p>
+<h3 id="optional-referencies">Optional referencies</h3>
+<p>The outer join referencies between tables within <a href="#updatable-tables-hierarchy">updatable tables hierarchy</a>. Referenced (slave) table must contain one or more properties marked as <a href="#property-flags">mandatory</a>. At least one mandatory property are required and it can not be mapped on primary key (or part of primary key). In most cases that properties is natural key of the table. The values assigned to that properties will be used to make a decision with operation applied to table.</p>
+<h3 id="data-scope">Data scope</h3>
+<p>Data scope termin is required to describe an independent evironment of operating the same data inside the application. Each data scope has an GUID identifier - layer. In each data scope application logic can set independent <a href="#filters">filters</a> values over the same <a href="#repository">repository</a>. Same repositories can be linked over diferent data scopes using different ways and rules.</p>
+<h3 id="repository">Repository</h3>
+<p>Repository grant access to acquire <a href="#data-object">data objects</a> and apply their changes to database. Repository is represented by XData internal structures and available using interface <a class="xref" href="../api/XData.IRepository-1.html">IRepository&lt;T&gt;</a> extend <a href="https://msdn.microsoft.com/ru-ru/library/bb351562(v=vs.110).aspx">IQueryable&lt;T&gt;</a>, where T is data object type.</p>
+<h3 id="context">Context</h3>
+<p>String alias associated to one of application database instance and all configuration options to use it inside XData environment. Configuration options can be obtained from configuration file or registred dynamically during runtime (see <a href="config.html#installation-and-configuration">Installation &amp; configuration</a>).</p>
+<h3 id="repository-alias">Repository alias</h3>
+<p>Optional <a href="#repository">repository</a> alias string.  Required to unique identification repository used multiple times within one <a href="#data-scope">data scope</a>. Sometimes the same repository (but arranged by different <a href="#runtime-filters">runtime filters</a> and <a class="xref" href="../api/XData.IDataQuery.html#XData_IDataQuery_Variables">variables</a>) can be useful as multiple slave data sources in master-slave relations inside single data scope (master-slave relations is limited to use single data scope).</p>
+<h3 id="filters">Filters</h3>
+<p>Filters statically (by mapping) or dynamicaly applied to <a href="#repository">repository</a>. </p>
+<p>To define complex filtration rules filters can be grouped in filter groups characterized by name and logical filter combination operation (<em>AND</em> or <em>OR</em>). Filter groups can combine filters and/or depended filter groups. Root filter group of <a href="#repository">repository</a> with filters combined using <em>AND</em> logical operation, can be omited and will be automatically created in runtime. Default filter group name is empty string. By default all filters are linked to default filter group. To specify other filter group to certain filter set filter property <em>Combination</em> to name of this filter group. </p>
+<p>The master-slave relations is realized on slave repository filters values set up also. In other cases, repository can be filtered by apply <a href="https://msdn.microsoft.com/en-us/library/system.linq.expressions.expression(v=vs.110).aspx">LINQ expressions</a> on it.</p>
+<h3 id="runtime-filters">Runtime filters</h3>
+<p>Filters, that allow set the value during runtime. Runtime filter value set can be automated using describing master-slave relation between <a href="#repository">repositories</a>, or manualy, using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_SetFilterValue_XData_DataSource_Structure_RuntimeFilter_System_Object_">SetFilterValue</a> method of repository.</p>
+<h3 id="data-source-flags">Data source flags</h3>
+<p><a class="xref" href="../api/XData.DataStructureFlag.html">DataStructureFlags</a> enumeration contains set of flags that defines structure of data source. Data source can be marked with combination of values:</p>
+<ul>
+<li><strong>None</strong> - default data source structure, plain object structire, can be edited, data grouping not applyed.</li>
+<li><strong>ReadOnly</strong> - data source marked as readonly. In optimization goals is recommended to use this flag for all data sources readonly by application logic.</li>
+<li><strong>Tree</strong> - data source is marked as hierarchically organized. Allow to use multiple ways to filter slave data sources (when master is marked as <strong>Tree</strong>) - using plain links to active tree node, or to active tree node and subtree.</li>
+<li><strong>Grouping</strong> - data source is marked as grouped. Required to describe grouped data source.</li>
+</ul>
+<h3 id="property-flags">Property flags</h3>
+<p><a class="xref" href="../api/XData.DataPropertyFlag.html">DataPropertyFlag</a> enumeration contains set flags that defines specific role of property:</p>
+<ul>
+<li><strong>None</strong> - default value, property marked with no specific roles</li>
+<li><strong>Id</strong> - property is part of <a href="#data-object">data object</a> primary key</li>
+<li><strong>OuterFlag</strong> - property is marked as mapped to mandatory field of <a href="#optional-referencies">optional referenced</a> table. The value of this property is used to make a decisign with operation over optional referenced table.</li>
+<li><strong>ConcurrencyToken</strong> - concurrency token used within optimistic <a href="concurrency.html#concurrency-resolving">locking</a>.</li>
+</ul>
+<h3 id="sql-expression-type">SQL expression type</h3>
+<p><a class="xref" href="../api/XData.DataExpressionType.html">DataExpressionType</a> enumeration contans types of SQL expression description:</p>
+<ul>
+<li><strong>PlainSql</strong> - SQL expression is plain SQL code, </li>
+<li><strong>SubQuery</strong> - SQL expression is subquery with specified alias,</li>
+<li><strong>LinqExpression</strong> - SQL expression defined as a static private field typed as <a class="xref" href="../api/XData.Calculate-1.html">Calculate&lt;T&gt;</a>, where T is a SQL expression result type, and the field value is LINQ style expression reflects SQL expression logic.</li>
+</ul>
+<h3 id="default-value-type">Default value type</h3>
+<p><a class="xref" href="../api/XData.DefaultType.html">DefaultType</a> enumeration contains types of values used to set default values of properties:</p>
+<ul>
+<li><strong>CurrentDate</strong> - current date (database time settings used)</li>
+<li><strong>CurrentDateTime</strong> - current date and time (database time settings used)</li>
+<li><strong>CurrentDateTimeUTC</strong> - current date and time UTC (database time settings used)</li>
+<li><strong>Variable</strong> - <a class="xref" href="../api/XData.IDataQuery.html#XData_IDataQuery_Variables">variable</a> value with name stored in <em>DefaultValue</em></li>
+<li><strong>Const</strong> - constant value stored in <em>DefaultValue</em></li>
+<li><strong>AutoIncrement</strong> - value generated by database by autoincrement fields or sequence. In case of using sequence is required to match the rules described <a class="xref" href="../api/XData.Interfaces.ISequenceNameRule.html">here</a>.</li>
+<li><strong>NewGuid</strong> - new GUID value is generated</li>
+<li><strong>UserName</strong> - current user name. <a href="security.html">Security provider subsystem</a> using is required to fill this type of default value.</li>
+</ul>
+<h3 id="aggregation-type">Aggregation type</h3>
+<p><a class="xref" href="../api/XData.DataGrouping.html">DataGrouping</a> enumeration contains data aggregation functions used inside grouped data source:</p>
+<ul>
+<li><strong>None</strong> - mapped field or SQL expression is one of data source grouped by.</li>
+<li><strong>Count, Sum, Min Max, Avg</strong> - corresponded function is applied to mapped field or SQL expression.</li>
+</ul>
+<h3 id="property-data-source">Property data source</h3>
+<p>Table field, view field, SQL procedure (or function) parameter or SQL expression mapped to <a href="#data-object">data object</a> property value.</p>
+<h3 id="virtual-table">Virtual table</h3>
+<p>Various RDBMS has mechanics to select the data without specifying real source (&quot;dual&quot; table in ORACLE, omit &quot;from&quot; section in MsSqlServer and so on). Virtual data table is recommended for use as source of <a href="../tips/tips.html#business-logic-calculated-fields">calclated fields</a>, <a href="mapping/static/property/property.html#sql-expression-property">SQL expressions</a>, when <a href="../tips/tips.html#virtual-data-and-attached-handlers">virtual data</a> processing is required. Virtual table is not described in mapping. To set virtual data source as source of property set data source alias as empty string.</p>
+<h3 id="filter-group">Filter group</h3>
+<p>Named group of filters (or submittal filter groups) linked with the same logical operator (<strong>AND</strong> or <strong>OR</strong>). Root filter group named as empty string and have an <strong>AND</strong> logical operator. Root filter group can be omited in mapping description. All filters without explicit group specification is assigned to root filter group. Filter group names must to be unique named within dataobject mapping description.</p>
+<h3 id="filter-null-processing-behaviour">Filter null processing behaviour</h3>
+<p><a class="xref" href="../api/XData.FilterNullable.html">FilterNullable</a> enumeration contains behaviours applied to null value processing while comparing data to filter value:</p>
+<ul>
+<li><strong>Nullable</strong> - (default) filter null value is omits the filter (no filter limitation applied)</li>
+<li><strong>NullsAllowed</strong> - null and not null values of filter and data is compared separatly (filter within SQL query will looks like <em>((field is null and :param is null) or field = :param)</em>)</li>
+<li><strong>NullsNotAllowed</strong> - filter null value is translated as non valid and querybwill return no records (filter within SQL query will looks like <em>(:param is not null and field = :param)</em>)</li>
+<li><strong>NullsCompared</strong> - only null values of filter and data is translated as valid (filter within SQL query will looks like <em>(:param is null and field is null)</em>)</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

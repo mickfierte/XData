@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Virtual data and attached handlers | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Virtual data and attached handlers | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="tips_attached.md">
+<h2 id="virtual-data-and-attached-handlers">Virtual data and attached handlers</h2>
+
+<p>You can use XData as database mock engine. XData has feature to replace database interactions with attached handlers call. Virtual objects is attached to repository using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0____">Attach</a> method of <a class="xref" href="../api/XData.IRepository-1.html">IRepository&lt;T&gt;</a> interface. To dettach virtual objects used <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Dettach_System_Predicate__0__">Dettach</a> method. Multiple virtual entities can be attached to repository as new objects using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_AttachNewObjects_System_Collections_Generic_IEnumerable__0__XData_AttachedHandler__0____">AttachNewObjects</a> method. </p>
+<div class="TIP"><h5>Tip</h5><p>This method (<em>AttachNewObjects</em>) can be used to add multiple dettached objects to real repository. </p>
+</div>
+<p>Every virtual entity can override handlers attached to repository with their own realization using parameters of <em>AttachNewObjects</em> method or <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_SetAttachedHandlers__0__XData_AttachedHandler__0____">SetAttachedHandlers</a> method call. To set repository level handlers use special overload of <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_SetAttachedHandlers_XData_RepositoryAttachedHandler__0____">SetAttachedHandlers</a>. To clear attached objects You can use <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_ClearAttachedObjects">ClearAttachedObjects</a> method. To help wrap handlers to abstract <a class="xref" href="../api/XData.AttachedHandler-1.html">AttachedHandler&lt;T&gt;</a> class and unwrap it back to specialized handlers XData has a wrapper class <a class="xref" href="../api/XData.RepositoryAttachedHandler-1.html">RepositoryAttachedHandler</a>.</p>
+<p>Attached hendlers can have followed types (see <a class="xref" href="../api/XData.AttachedHandlerType.html">AttachedHandlerType</a>):</p>
+<ul>
+<li><em>OnClear</em> - (<a class="xref" href="../api/XData.ClearAttachedHandler.html">ClearAttachedHandler</a>) handler called instead of <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_Clear_XData_DataSubmitFlag_">Clear</a></li>
+<li><em>OnExecute</em> - (<a class="xref" href="../api/XData.ExecuteAttachedHandler-1.html">ExecuteAttachedHandler&lt;T&gt;</a>) handler called instead of <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Execute_System_String_System_Collections_Generic_IEnumerable__0__System_Collections_Generic_IDictionary_System_String_System_Action_System_Byte_____System_Collections_Generic_IDictionary_System_String_System_Func_System_Byte___System_Byte_____">Execute</a></li>
+<li><em>OnGetLob</em> - (<a class="xref" href="../api/XData.GetLobAttachedHandler.html">GetLobAttachedHandler</a>) handler called instead of requesting LOB data</li>
+<li><em>OnGetLobSize</em> - (<a class="xref" href="../api/XData.GetLobSizeAttachedHandler.html">GetLobSizeAttachedHandler</a>) handler called instead of requesting LOB size</li>
+<li><em>OnGetXml</em> - (<a class="xref" href="../api/XData.GetXmlAttachedHandler.html">GetXmlAttachedHandler</a>) handler called instead of requesting XML data</li>
+<li><em>OnLock</em> - (<a class="xref" href="../api/XData.LockAttachedHandler-1.html">LockAttachedHandler&lt;T&gt;</a>) handler called instead of <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Lock__0_">Lock</a></li>
+<li><em>OnRefresh</em> - (<a class="xref" href="../api/XData.RefreshAttachedHandler-1.html">RefreshAttachedHandler&lt;T&gt;</a>) handler called instead of refreshing data</li>
+<li><em>OnSetLob</em> - (<a class="xref" href="../api/XData.SetLobAttachedHandler.html">SetLobAttachedHandler</a>) handler called instead of saving LOB data</li>
+<li><em>OnSetXml</em> - (<a class="xref" href="../api/XData.SetXmlAttachedHandler.html">SetXmlAttachedHandler</a>) handler called instead of saving XML data</li>
+<li><em>OnSubmit</em> - (<a class="xref" href="../api/XData.SubmitAttachedHandler-1.html">SubmitAttachedHandler&lt;T&gt;</a>) handler called instead of <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Submit__0__XData_DataSubmitFlag_">Submit</a> multiple objects</li>
+<li><em>OnSubmitObject</em> - (<a class="xref" href="../api/XData.SubmitObjectAttachedHandler-1.html">SubmitObjectAttachedHandler&lt;T&gt;</a>) handler called instead of submitting single object</li>
+<li><em>OnSubmitQuery</em> - (<a class="xref" href="../api/XData.SubmitQueryAttachedHandler-1.html">SubmitQueryAttachedHandler&lt;T&gt;</a>) handler called instead of submitting query generation</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

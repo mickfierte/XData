@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SQL expression property | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SQL expression property | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping_dynamic_property_sql_expr.md">
+
+<h4 id="sql-expression-property">SQL expression property</h4>
+<p><a href="../../mapping.html#readonly-properties">Readonly property</a> can be mapped to SQL expression. Dynamic mapping of SQL expression is defined by one of  <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html">IRepositoryStructureAdapter</a> interface <em>Expr</em> method overload:</p>
+<ul>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr&lt;TValue&gt;(string fieldName, Expression&lt;Func&lt;IQueryStructureAdapter, TValue&gt;&gt; expr, DbType dbType, params Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[] attributes)</a></li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr&lt;TValue&gt;(string fieldName, DataExpressionType type, string exprText, DbType dbType, params Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[] attributes)</a> - used to define sql expression <em>DataExpressionType.SubQuery</em> or <em>DataExpressionType.PlainSql</em></li>
+</ul>
+<p>When first overload used, SQL expression is defined by <em>expr</em> parameter value as lambda function with <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IQueryStructureAdapter.html">IQueryStructureAdapter</a> interface extension methods inside:</p>
+<ul>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_Case__2_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___XData_Mapping_Dynamic_TaggedExpression___0___1____">Case&lt;T, TResult&gt;(this IQueryStructureAdapter adapter, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; expression, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt; elseValue, params TaggedExpression&lt;T, TResult&gt;[] switchValues)</a> - <em>case when ... then ... else ... end</em> SQL construction</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_DateDiff__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter_System_DateTime___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter_System_DateTime___XData_DateDiffKind_">DateDiff&lt;T&gt;(this IQueryStructureAdapter adapter, Expression&lt;Func&lt;IQueryStructureAdapter, DateTime&gt;&gt; finalDate, Expression&lt;Func&lt;IQueryStructureAdapter, DateTime&gt;&gt; startDate, DateDiffKind kind)</a> - date difference</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_Exists_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_">Exists(this IQueryStructureAdapter adapter, string subQueryAlias)</a> - <em>exists(select ...)</em> SQL construction</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_HasFlag__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___">HasFlag&lt;T&gt;(this IQueryStructureAdapter adapter, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; expression, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; flagValue, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; trueValue, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; falseValue)</a> - bitwise mask checking for value</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlExpr__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0_____">SqlExpr&lt;TResult&gt;(this IQueryStructureAdapter adapter, string format, params Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;[] expressions)</a> - mixing plain SQL expressions with LINQ style defined expression subparts, parameter <em>format</em> is the string.Format mask</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlFn__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Object_____">SqlFn&lt;TResult&gt;(this IQueryStructureAdapter adapter, string name, params Expression&lt;Func&lt;IQueryStructureAdapter, object&gt;&gt;[] parameters)</a> - SQL function call expression</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlParam__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____">SqlParam&lt;TResult&gt;(this IQueryStructureAdapter adapter, string binding, DbType type, params Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[] attributes)</a> - SQL function parameter value expression</li>
+</ul>
+<p>Mapping parameters of SQL expressions is defined by <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter.html">IRepositoryExpressionMappingAdapter</a> interface methods:</p>
+<ul>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_NativeSqlType_System_String_">NativeSqlType(string nativeSqlType)</a> - set native SQL type name of expression result, used when expression result type has specific SQL type</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_Size_System_Int32_">Size(int size)</a> - set number or varchar length of SQL expression result type</li>
+<li><p><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_Size_System_Int32_System_Int32_">Size(int size, int scale)</a> - set length and scale for floating point SQL data types</p>
+</li>
+<li><p>subquery,</p>
+</li>
+</ul>
+<pre><code class="lang-csharp">...
+.ReadOnlyProperty(x =&gt; x.DocAmount, 
+    x =&gt; x.Expr&lt;decimal?&gt;(null, DataExpressionType.SubQuery, 
+        &quot;A&quot;, DbType.Decimal, z =&gt; z.Size(17, 5)))
+...
+</code></pre><ul>
+<li>LINQ expression,</li>
+</ul>
+<pre><code class="lang-csharp">...
+.ReadOnlyProperty(x =&gt; x.AllowedDiscount, 
+    x =&gt; x.Expr&lt;int&gt;(null, y =&gt; y.Case&lt;Product, int&gt;( 
+        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10)), 
+        DbType.Decimal, z =&gt; z.Size(17, 5)))
+...
+</code></pre><ul>
+<li>plain text SQL expression.</li>
+</ul>
+<pre><code class="lang-csharp">...
+.ReadOnlyProperty(x =&gt; x.AllowedDiscount, 
+    x =&gt; x.Expr&lt;int&gt;(null, DataExpressionType.PlainSql, 
+        &quot;case P.is_vip when 1 then 10 else 0 end&quot;,
+        DbType.Decimal, z =&gt; z.Size(17, 5)))
+...
+</code></pre><div class="IMPORTANT"><h5>Important</h5><p>If possible do not use plain SQL expressions. It possibly use specific SQL dialect features not supported by other DBMS or providers.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

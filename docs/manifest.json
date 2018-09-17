@@ -1,0 +1,4788 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Projects/XData/doc",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../RELEASENOTE.md",
+      "output": {
+        ".html": {
+          "relative_path": "RELEASENOTE.html",
+          "hash": "/ET/SBQ5fQ91T1fpMVbguA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "artifacts/net40/XData.Server.zip",
+      "output": {
+        "resource": {
+          "relative_path": "artifacts/net40/XData.Server.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "artifacts/net40/loggers/XData.Logging.Log4Net.zip",
+      "output": {
+        "resource": {
+          "relative_path": "artifacts/net40/loggers/XData.Logging.Log4Net.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "artifacts/net40/loggers/XData.Logging.Trace.zip",
+      "output": {
+        "resource": {
+          "relative_path": "artifacts/net40/loggers/XData.Logging.Trace.zip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "artifacts/xdata.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "artifacts/xdata.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/cube-white.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/cube-white.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/cube.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/cube.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/cube.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/cube.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "MFLX0/RNlWngVJqWF70fUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "langwordmapping/langwordMapping.yml",
+      "output": {
+        "resource": {
+          "relative_path": "langwordmapping/langwordMapping.yml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Actions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Actions.html",
+          "hash": "ZLEQsFjKitxUZjqYKG6Obw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.AttachedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.AttachedHandler-1.html",
+          "hash": "92Mn1PnIX+TybTjIQBccGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.AttachedHandlerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.AttachedHandlerType.html",
+          "hash": "ogEdF3WHktgQOaAbW8lQFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Calculate-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Calculate-1.html",
+          "hash": "LoYO7ULBi163Wa97oGif/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.ClearAttachedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.ClearAttachedHandler.html",
+          "hash": "e/jmpwrKjSQxf1RyerbTTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Combination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Combination.html",
+          "hash": "3HvHkGyv3xgAjTmXX0eQEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.CurrentObjectChanged-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.CurrentObjectChanged-1.html",
+          "hash": "RCjLCQRowBWjvOV6p6yeGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.CurrentObjectChanging-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.CurrentObjectChanging-1.html",
+          "hash": "/apK7Cw9PC7Hiya1g18NCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.CustomLogic-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.CustomLogic-1.html",
+          "hash": "UXoUcwi5Rew9JOHzTD2sWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.CustomMapping-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.CustomMapping-1.html",
+          "hash": "95Fb0FwymSr3w9oqzek9ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataActionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataActionType.html",
+          "hash": "nlgAJlp16yV76f16fOVAxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataCombination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataCombination.html",
+          "hash": "wKwkoLonxPLQ4NSG31WjQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataExpressionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataExpressionType.html",
+          "hash": "VaPFis7F+08xjGv3wE5kDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataGrouping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataGrouping.html",
+          "hash": "ReOpo57cENN690Ftmjw1jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.html",
+          "hash": "wTjlsZc4gMaX4b/dj8Q74g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectState.html",
+          "hash": "4n98U/evZ1L6OMBbHOXsdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataPropertyFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataPropertyFlag.html",
+          "hash": "vQEmsrUphC3ZqgUHp/TQQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.DataQueryState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.DataQueryState.html",
+          "hash": "c0IxLL8knWTAySLgSp5gpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.DataStructureState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.DataStructureState.html",
+          "hash": "32o4LktjwB8JQyo0ok/X1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.Field.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.Field.html",
+          "hash": "S0nfmvPlEr4RPpmV0sbSbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.FilterCombinationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.FilterCombinationState.html",
+          "hash": "t27/vY16Rj3KcFKTCk0i3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.FilterName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.FilterName.html",
+          "hash": "6qDDscjJMyF+Odx6rdDOWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.FilterState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.FilterState.html",
+          "hash": "XrlpD/k9CO3v8o2NqUJGAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.Grouping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.Grouping.html",
+          "hash": "FdfktapGIzBvl19mzOhU+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.Hierarchy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.Hierarchy.html",
+          "hash": "8F/yJVjKTcpwnSEeoocLwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IConstantFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IConstantFilter.html",
+          "hash": "dSO3WvLrj4uA5ARl5EjMCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IDataSource.html",
+          "hash": "5E5KjFSOJidSplAWuRVodg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IDataStructure.html",
+          "hash": "0v9TEMADXSv5Ine6Ap8S4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IDictionaryFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IDictionaryFilter.html",
+          "hash": "I+6wYbPeT3V0q2JuNAtj/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IExpressionFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IExpressionFilter.html",
+          "hash": "kIhx9/ESLiqQpx5eVkbGcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IExternalLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IExternalLink.html",
+          "hash": "z1iRshVuHx7vbDo5Cc0iRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IField.html",
+          "hash": "ZDIen+SaJyUfdkWPMdM45Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IFilter.html",
+          "hash": "gQhBcRBohen8LD1jjGliig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IFilterCombination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IFilterCombination.html",
+          "hash": "Y8ROAWbjqAjN0rjdGS2yaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IInnerLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IInnerLink.html",
+          "hash": "flamwqNEbHBwiYd72w17mA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IInnerViewLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IInnerViewLink.html",
+          "hash": "Q1JcdbcUiCwTR45hAaYdOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.INamedFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.INamedFilter.html",
+          "hash": "26/NfwGBAFqR+vy9MLiSPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IOptionalFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IOptionalFilter.html",
+          "hash": "8p6yr6PL3Uc+gbdFgWfOvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IProcedure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IProcedure.html",
+          "hash": "JhATx15HknPvE32A1uEVJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IRangeFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IRangeFilter.html",
+          "hash": "fK48QRxKlfGzsayhzp3Rgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IRuntimeFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IRuntimeFilter.html",
+          "hash": "3L58/BoPJRokWe4bEb+6cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.ISqlPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.ISqlPart.html",
+          "hash": "5svOUgRN90WDUhSX6/1j3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.ISubqueryFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.ISubqueryFilter.html",
+          "hash": "T04NtK/m3IPfqN46K2nAfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.ISubqueryLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.ISubqueryLink.html",
+          "hash": "JM++RhT4LYkg8OjL+cw1lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.ITable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.ITable.html",
+          "hash": "fud3nHgSVVyFRN3cf/Esmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.Order.html",
+          "hash": "eigrZbAhUxp4fKaPYXrd3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.RepositoryState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.RepositoryState.html",
+          "hash": "bBj+i3ltYiGLutRh57C6og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.RuntimeFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.RuntimeFilter.html",
+          "hash": "uCFzNZR5QjHkqrV6T2dhAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.SelectedField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.SelectedField.html",
+          "hash": "HKcoHP6gUg/CElGRF6vAOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.TaggedValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.TaggedValue.html",
+          "hash": "eHkpzFUQhfR6pHlf1b43GQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.html",
+          "hash": "aQIgFADX0zoIdmKmjGiP6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSourceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSourceType.html",
+          "hash": "SQY5m8uXshmY4MzmhAeXzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataStructureFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataStructureFlag.html",
+          "hash": "8KyUvJmYB/3FFmvxSq0tMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSubmitFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSubmitFlag.html",
+          "hash": "sUEomjIjT4j/kMWDG8htsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataTriggerFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataTriggerFlag.html",
+          "hash": "8pAgc3E/Rv3diA+k9V5Ckw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataVersion.html",
+          "hash": "OYYNliPMUqrcyLXECgWxig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.BaseDatabaseAdapter-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.html",
+          "hash": "zXZdPfBIjlxTeF6YSSdYWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.CallResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.CallResult.html",
+          "hash": "lKJ5zTLjl5+o/rQMVXL8ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.DatabaseAdapterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.DatabaseAdapterAttribute.html",
+          "hash": "csSrzlDqvyqPN9V28Y3HGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.IDatabaseAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.IDatabaseAdapter.html",
+          "hash": "froZ+wdlMH1K455ZnkLxlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.IDatabaseAdapterMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.IDatabaseAdapterMetadata.html",
+          "hash": "4HuZIUPg6qoILfrd87LZMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.Query.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.Query.html",
+          "hash": "0byDxbpWzJKdECQtm5E3+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.QueryParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.QueryParam.html",
+          "hash": "VqrthUO2jrmhv1ZedWQmZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.QueryResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.QueryResult.html",
+          "hash": "SW5trp4F6n5fuHete/SPmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.QueryResultBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.QueryResultBase.html",
+          "hash": "88fAWNueBzjpBpOv7WtRTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.StoredProcedure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.StoredProcedure.html",
+          "hash": "lrDLgG3zs8Tj+bNaEv9+EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.UdtSqlType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.UdtSqlType.html",
+          "hash": "zCFhZdYgr8ZwytlOeEXnRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.html",
+          "hash": "IUUeQdgweWF/a8mKUDRhxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.DataQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.DataQueries.html",
+          "hash": "lEo6aVPkXfGmwH1CXV3h6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Dialect.BaseSqlBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Dialect.BaseSqlBuilder.html",
+          "hash": "aCBrmZ5SxMUY7Ii5DCgqEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Dialect.ExpressionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Dialect.ExpressionContext.html",
+          "hash": "7N3B9MzIjt2dUJDVrZ7HJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Dialect.SqlStringType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Dialect.SqlStringType.html",
+          "hash": "SOjLY/L2nhbaSNV+DYQJog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Dialect.XConnectionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Dialect.XConnectionInfo.html",
+          "hash": "mh3EWLP98ZqLP3ae8uYwrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Dialect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Dialect.html",
+          "hash": "49H5FffB8gp3TTl4U1W79Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.FieldInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.FieldInfo.html",
+          "hash": "QUSn9Bi300q6a6gFIWmI5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.ITransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.ITransaction.html",
+          "hash": "qLaWrdEfzZKzdwoAaeEeqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.TableInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.TableInfo.html",
+          "hash": "wLpYXAsPpQUCebU2s9KHtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.XDataContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.XDataContext.html",
+          "hash": "Pw1FGwBHd4SkQ8NDhHYQgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.html",
+          "hash": "4FwqvOBhT8B68Ect2cJ0mA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DateDiffKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DateDiffKind.html",
+          "hash": "WKpLIlhcdclgU2BxFVaSLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DefaultType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DefaultType.html",
+          "hash": "XiCx/l4QYCuqcvE8TPW6Ww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DialectOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DialectOptions.html",
+          "hash": "L5Ici3MZdS8fKmMIbU0cQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.AdditionalInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.AdditionalInfo.html",
+          "hash": "QsxhqfLX5yrN6dBvrxsISQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataAdapterException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataAdapterException.html",
+          "hash": "raqK5hlN4ANLDz36v6JqWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataAdapterExceptionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataAdapterExceptionType.html",
+          "hash": "uBBvlRHQVGbDyCIDY/zNFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataConcurrencyException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataConcurrencyException.html",
+          "hash": "keq35HIKNNgQNNcWNnq1HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataConfigurationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataConfigurationException.html",
+          "hash": "ERqm/Ljjzp31RcfCPm3MSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataConfigurationExceptionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataConfigurationExceptionType.html",
+          "hash": "rLrkMjzwp3yeex4rjnhF+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataException.html",
+          "hash": "7NxFknc2bhBEGfFNNaXtJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataExceptionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataExceptionAttribute.html",
+          "hash": "1mGBljKWZ6/7R2vRedS8lg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataQueryStructureException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataQueryStructureException.html",
+          "hash": "j4+rH6JbdnU5e45WQ2pEcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataQueryStructureExceptionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataQueryStructureExceptionType.html",
+          "hash": "WiWIDtLz+v17xTpuShdqPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataRuntimeException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataRuntimeException.html",
+          "hash": "oMPYxXQ5Ih28aARI2qiRvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataRuntimeExceptionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataRuntimeExceptionType.html",
+          "hash": "B/LOho0I/73sYJV71HDpDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataSecurityException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataSecurityException.html",
+          "hash": "K7QDEYRms1JUAEW/CxjQvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataSqlException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataSqlException.html",
+          "hash": "NuZ8cSjgd7C7uzlQaWH7kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.html",
+          "hash": "pbYF56NTPXefuXuqg+mBXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.ExecuteAttachedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.ExecuteAttachedHandler-1.html",
+          "hash": "pGvRx7wBWr4QOiZPOjROvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.CollectionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.CollectionsExtensions.html",
+          "hash": "QDd5/T4CSsJca8xvFj2oWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.DataObjectQueryableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.DataObjectQueryableExtensions.html",
+          "hash": "ry6d/XMjCZJD7F46quJOKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.ExpressionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.ExpressionExtensions.html",
+          "hash": "h5EBQZno48tlF7Gj9W7cMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.IndexAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.IndexAttribute.html",
+          "hash": "tq7k7G6pn7AHMU87QfEz4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.Indexer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.Indexer-1.html",
+          "hash": "ZP6wH7nVryoZm37Y/DknaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.JoinedEnumerable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.JoinedEnumerable-1.html",
+          "hash": "jvE85pg5iBYENZ/AdOgs0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.JoinedEnumerable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.JoinedEnumerable.html",
+          "hash": "K+4YkhPRGCHXei9VE2+NUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.TypeComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.TypeComparer.html",
+          "hash": "AD4im4H5nZZFn23RIdkclw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.TypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.TypeExtensions.html",
+          "hash": "9Jj4MCk0O7LUgC7EFfVh1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.html",
+          "hash": "xFdBTzGCvMG5657VRS3rJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.FilterConstantType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.FilterConstantType.html",
+          "hash": "YA3ysDwCqY7VdDwqTm6rJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.FilterNullable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.FilterNullable.html",
+          "hash": "G+xaQHpdpB2oH40bUvNaqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.FilterOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.FilterOperation.html",
+          "hash": "ZQj2nYJZNKe5LRndPXNR1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.FilterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.FilterType.html",
+          "hash": "qhlngtJLyq6DjTTGsr5Jnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.GetLobAttachedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.GetLobAttachedHandler.html",
+          "hash": "HDDz/xiBKzyLLNJ/nS2qlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.GetLobSizeAttachedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.GetLobSizeAttachedHandler.html",
+          "hash": "cL0SDSEaz7xLewCOLoD28w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.GetXmlAttachedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.GetXmlAttachedHandler.html",
+          "hash": "KhgiBeEAzeaLuWsbWQpz6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataEngine.html",
+          "hash": "GAnczKfR92EO3MH81MKwqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataLogic-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataLogic-1.html",
+          "hash": "8pSiHuWsytzJ88HmNqK6bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataObject.html",
+          "hash": "uckIrVZFPny/dnkij98SKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataOptions.html",
+          "hash": "U5hS6bPck9CjlbT0T9oQaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataQuery-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataQuery-1.html",
+          "hash": "6BAv/r6lQ2/ej20jtEn0FQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataQuery.html",
+          "hash": "Ey5URVcNzwb0BebbLgE6HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataScope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataScope.html",
+          "hash": "ktvrLgXsuHbo3qshyvlhWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IRepository-1.html",
+          "hash": "Z22hRv1SX7s9Y/bN3IFTLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IRepository.html",
+          "hash": "sazoCa3nA+7UE6iD6Ouu6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.ISqlObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.ISqlObject.html",
+          "hash": "RpHNxN1ESsbKUnRBx6pZaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IWorkSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IWorkSet-1.html",
+          "hash": "1aNgnOFk0vJjTSal1VeKIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IWorkSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IWorkSet.html",
+          "hash": "1uC9Ud90Y+2NEdcQLzj4jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.InitObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.InitObject-1.html",
+          "hash": "2lXATt9LrJhlxRlyfHMUbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.InitRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.InitRepository-1.html",
+          "hash": "7KYYcmNzJd1sGSRbUlKoGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.AdapterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.AdapterConfig.html",
+          "hash": "bIGSm1vhvxeO218cVfz78g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.ContextConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.ContextConfig.html",
+          "hash": "fOV49tH7epVqAqoPHdJo+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.DialectConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.DialectConfig.html",
+          "hash": "gMinQ+65+R+9WXdMcBIQ7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.IConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.IConfiguration.html",
+          "hash": "8uOVTF5K+j4hxZD5IQQiUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.ILogWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.ILogWriter.html",
+          "hash": "n0VXQ5Zs+E/JNQ/616jybQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.IProxy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.IProxy.html",
+          "hash": "NT9YZVEOgO/IejKm13KO8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.IProxyManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.IProxyManager.html",
+          "hash": "So5LBlPLbXqVMjUD8O4/vQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.ISecuritySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.ISecuritySession.html",
+          "hash": "NW3bzEVrBSWKs4kAMsHjvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.ISequenceNameRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.ISequenceNameRule.html",
+          "hash": "8twfSET//YEpxJDVNoAjDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.ISqlBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.ISqlBuilder.html",
+          "hash": "SHTAk4F+qDR7sGPo9ZPHIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.ProxyConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.ProxyConfig.html",
+          "hash": "lmhDsD1jJhAUw2Xx7Eo6aQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Interfaces.html",
+          "hash": "N7PmbMdOKwxnDqlT8/0HmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.InvalidateObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.InvalidateObject-1.html",
+          "hash": "xCqTG53zoxEJxgtdlxpo9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.InvalidateRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.InvalidateRepository-1.html",
+          "hash": "ZKgzigCDoXRbAA2TzFJ8zA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.LockAttachedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.LockAttachedHandler-1.html",
+          "hash": "/INBnb1Won4+UtvTzOgWCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Log.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Log.html",
+          "hash": "9NuF3kKlvJu1BETNPymtfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping-2.html",
+          "hash": "D8TBni69ljpNbpM2fiQ8cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ActionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ActionAttribute.html",
+          "hash": "CVqUW2jJ5zdF5my9vNTQMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ColumnAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ColumnAttribute.html",
+          "hash": "Yma10NT10V7mD/rakLkQ6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ColumnDefaultAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ColumnDefaultAttribute.html",
+          "hash": "Erejqd6bFP0oPjfpM576eA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ColumnExpressionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ColumnExpressionAttribute.html",
+          "hash": "g+jYLmkD8QdYd0J7hb6Ztw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ConstantFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ConstantFilterAttribute.html",
+          "hash": "NIfp5oIUEmlxIN2O7DJvzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.DataObjectAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.DataObjectAttribute.html",
+          "hash": "OLXf93+qJbs/DI7ZTJZ6Jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.DataSourceAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.DataSourceAttribute.html",
+          "hash": "hJgi9ZYEE+d+5Qz/KiezuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.DataTableAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.DataTableAttribute.html",
+          "hash": "QM00OosBOCwH8+CbL/qy+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.DictionaryFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.DictionaryFilterAttribute.html",
+          "hash": "lLLm1tY+jNAhKtYFKygkew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html",
+          "hash": "nz+85MuxANFMU5O2rxysAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html",
+          "hash": "9TFXGu9lRVbOXA2J7vwT6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IExternalLinkDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IExternalLinkDefinition.html",
+          "hash": "M/ncYEnz3vjkFPAA5dDfiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html",
+          "hash": "O1fzQ80I8DbwsRDR89wB9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IExternalLinkFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IExternalLinkFlag.html",
+          "hash": "6Y8WVHX7Ms9jbgIHeosUQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IFilterAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IFilterAdapter.html",
+          "hash": "CEcaHjTtLtrsOFuAjeS10g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IFilterDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IFilterDescription.html",
+          "hash": "/bCOtuXmxWTtmISo/Wx1IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IInnerFilterAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IInnerFilterAdapter.html",
+          "hash": "3CkNLztYgbKpiIUdb80nUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html",
+          "hash": "Sa0jwHuVl/slorUvSGmHHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IParameterDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IParameterDescription.html",
+          "hash": "ctYXeCHia1c0cn0qvX6tAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IProcedureParameterAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html",
+          "hash": "2PxTPLqBfe4xIKHchjlNTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IProcedureParameterFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterFlag.html",
+          "hash": "rIzZ0wq7awoiLD7/HjILSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IPropertyMappingAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IPropertyMappingAdapter.html",
+          "hash": "XBPGI4vCAut7DOqWYCDpQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IQueryDescription-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IQueryDescription-1.html",
+          "hash": "2imkdceBlhrHqDfBymHBbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IQueryDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IQueryDescription.html",
+          "hash": "oFJYFFvrns63PPM+hUZrJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IQueryStructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IQueryStructure.html",
+          "hash": "rr8nQBJUXLrfrASPmFAdIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IQueryStructureAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IQueryStructureAdapter.html",
+          "hash": "AbCAVugJkNX0r/aYJfwa6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IQueryWithAdapter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html",
+          "hash": "N9TPfOOaiCeZtHXpI+CVGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IQueryWithFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IQueryWithFlag.html",
+          "hash": "G+l/WsT9iRdHTbdTwO1NZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryDescription-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IRepositoryDescription-1.html",
+          "hash": "gVmNSd2+3byqYrbzcfymaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter.html",
+          "hash": "q0Xq92piMZqIjffyT3/4DA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.html",
+          "hash": "5JpranXgX8RgjioaETwpjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryStructure-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructure-1.html",
+          "hash": "mef3fkLZeAAo1DidraDsxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html",
+          "hash": "2y1vVqdeRP03ycgOkdsARw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html",
+          "hash": "iNk932EXYSLo91cXkHHz8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IResultSetDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IResultSetDescription.html",
+          "hash": "AdfdZuKKI0d+HwQ45TOCPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IStructureFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IStructureFlag.html",
+          "hash": "IfpUKk5Txo4AF7g7fXnojA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html",
+          "hash": "if/nJDtKqsbxaJSzrhEQcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-2.html",
+          "hash": "JWm9Vd114yVQ4QJklkmwUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.ISubqueryFilterAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.ISubqueryFilterAdapter.html",
+          "hash": "SGl7NciITD3DMS5X1Y8oFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.ITaggedExpression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.ITaggedExpression.html",
+          "hash": "5zdLQ4E7DErlZqch0zlNiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.ParameterDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.ParameterDescription.html",
+          "hash": "0jWv6CzhLPbSeBHMOwT18A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.QueryDescriptionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html",
+          "hash": "DVxGj2fyqxTYgRpg0GgJ4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.TaggedExpression-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.TaggedExpression-2.html",
+          "hash": "XhaaTClO4zyjU7DqP5vlJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.XDataMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.XDataMapping.html",
+          "hash": "d8TYfPWsUn4Vp4iY0w9AgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.html",
+          "hash": "q+2fLNkqZ/InfxwKdBWcCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ExpressionFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ExpressionFilterAttribute.html",
+          "hash": "vrzo9YGLycXKEufxe/XPFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ExternalLinkAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ExternalLinkAttribute.html",
+          "hash": "pX0qSdubFd6rccKI09uL2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.FilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.FilterAttribute.html",
+          "hash": "Q3ELhUWpGxjVsE0u24CeDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.FilterBaseAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.FilterBaseAttribute.html",
+          "hash": "BobCKKSh9bpdzOLXYKEJVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.FilterCombinationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.FilterCombinationAttribute.html",
+          "hash": "3N7V8rbgcEnBs0voOa74Qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.HierarchyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.HierarchyAttribute.html",
+          "hash": "ygZTgVEzGsj69xccGZK+bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.HintAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.HintAttribute.html",
+          "hash": "iBFH+w3rt0OaFKAs5U/r8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.HintInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.HintInfo.html",
+          "hash": "3BYRSOhF8qT5ElFvlHLVIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.HintType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.HintType.html",
+          "hash": "yQpVxbI4gLZZX3s3PhRgXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.InnerViewAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.InnerViewAttribute.html",
+          "hash": "ncd4eKzL26WLQ0mqxPhGoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Link-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Link-2.html",
+          "hash": "IUqAoQDun6sGqrKo+B7MCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.LinkAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.LinkAttribute.html",
+          "hash": "s5evxmJiM/7EZ8h7sNhjSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.LinkPropertyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.LinkPropertyAttribute.html",
+          "hash": "cRloG6JJ3B6XFZnHBJJB9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Lob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Lob.html",
+          "hash": "7p6vreUj9FrHU3dTtbjyZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.OptionalFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.OptionalFilterAttribute.html",
+          "hash": "LZ5mWoU+yKTWMUCi5OjsvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ParameterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ParameterAttribute.html",
+          "hash": "0pQSPdhXVd4RzOPQ8pNN+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ProcedureAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ProcedureAttribute.html",
+          "hash": "k5Xkiv68MFGjUepMPNNFLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.PropertyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.PropertyAttribute.html",
+          "hash": "r0TJxtFGACmq1ZkYaLDaBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.PropertyBaseAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.PropertyBaseAttribute.html",
+          "hash": "+8tkYA+qlUCiucX4PG04pQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.PropertyDefaultAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.PropertyDefaultAttribute.html",
+          "hash": "yykzlTD/kdrNIL3bR2ZXfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.PropertyExpressionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.PropertyExpressionAttribute.html",
+          "hash": "/x5L7G1mHdcrjYAxBq459A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.PropertyGroupingAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.PropertyGroupingAttribute.html",
+          "hash": "32V6kNyw36EhBecpN8YGYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.RangeFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.RangeFilterAttribute.html",
+          "hash": "o2I9m2MrbCtsEWkwaEH57Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ReferenceAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ReferenceAttribute.html",
+          "hash": "qQzrH2dIYidsAZ2xp2ySLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ResultSetAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ResultSetAttribute.html",
+          "hash": "raRPi0lUlovEgTHMyqoKTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.SqlExpressionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.SqlExpressionAttribute.html",
+          "hash": "LMBQ+KjbWr4I9R54fPhTQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.SubqueryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.SubqueryAttribute.html",
+          "hash": "6MG2Hu4xQav1S3VNcrh1ww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.SubqueryFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.SubqueryFilterAttribute.html",
+          "hash": "gXATRcJSeTMH+WO71BdWqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.SubqueryLinkAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.SubqueryLinkAttribute.html",
+          "hash": "LMHftCz6SKbWA3zb6fzopg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.WithAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.WithAttribute.html",
+          "hash": "yXV2iOlD0caEsxGUf7XUwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.WithRecursiveAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.WithRecursiveAttribute.html",
+          "hash": "jg+huieFNPxN5GJ4d9dKSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Xml.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.Xml.html",
+          "hash": "2SAhWNoHPsq0fIrGxqumaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.html",
+          "hash": "J9pTUyapfw0uXx7chxfjYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.MessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.MessageType.html",
+          "hash": "vlyNB42WEVme/XocVBkkaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.ParameterIndexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.ParameterIndexer.html",
+          "hash": "o7e/dVvFmR0hVAqruERcYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.ProcedureType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.ProcedureType.html",
+          "hash": "5f5erAiJ99f2tHAfvRLmvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.RefreshAttachedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.RefreshAttachedHandler-1.html",
+          "hash": "y3w+iYNi6/UFzzEbrqt4VA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.RepositoryAttachedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.RepositoryAttachedHandler-1.html",
+          "hash": "C8zdq/pSvcDoWEdIA+jpNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.RepositoryIndexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.RepositoryIndexer.html",
+          "hash": "xC7i7/td4RaTyBonaw+jxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.RepositoryTrigger-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.RepositoryTrigger-1.html",
+          "hash": "9PuLchtPlG9fbpHr7+4zNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Resources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Resources.html",
+          "hash": "EF1nFYCypEFS/LUWO0dHgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.ResultSetIndexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.ResultSetIndexer.html",
+          "hash": "rwKcbHoLZ1de8QdewF57bA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.RuntimeAssemblyLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.RuntimeAssemblyLoader.html",
+          "hash": "FBbis/BGj5zff6C9ogt6Tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Security.SecuritySession.html",
+          "hash": "IrYRDjf3UA9KUjFvi4gDgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Security.html",
+          "hash": "4T3MsATYt4ThAnDnBkgDLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.SerializationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.SerializationExtensions.html",
+          "hash": "qXn0EMsm3m5KeVupvdUEyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.SerializedData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.SerializedData.html",
+          "hash": "o6+2qQ25DCMiwJKWLqXbmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.SerializedValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.SerializedValue.html",
+          "hash": "iuM/x2FtfQnrq1pTD7iPAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.SetLobAttachedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.SetLobAttachedHandler.html",
+          "hash": "VUAGfoS4LSJxVHLBXNSn+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.SetXmlAttachedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.SetXmlAttachedHandler.html",
+          "hash": "JyFUKWdAk51ighGl4sB7Ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.SubmitAttachedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.SubmitAttachedHandler-1.html",
+          "hash": "inSSNkFeW2YaDLqqIv8Lbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.SubmitObjectAttachedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.SubmitObjectAttachedHandler-1.html",
+          "hash": "1ibCwbL8Hh7a3PZezqh+cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.SubmitQueryAttachedHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.SubmitQueryAttachedHandler-1.html",
+          "hash": "U2Y/4z698EOqIm1q+iH5SA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Trigger-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Trigger-1.html",
+          "hash": "ryxoWrw1q06jTVQn78SXdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Variable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Variable.html",
+          "hash": "oA1fgbIZgitDX/FZZkiAIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.VariableIndexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.VariableIndexer.html",
+          "hash": "hD9Hvtg8En8fYz27PstGQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.WithRecursiveType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.WithRecursiveType.html",
+          "hash": "qMfuZcyxZBCAy72+4EwE2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Work.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Work.html",
+          "hash": "PylhWt3EKmjWFFRTweJ31w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.WorkState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.WorkState.html",
+          "hash": "vCG+gYTrsKHfpnkBzYu+zA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.XDataLogic-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.XDataLogic-1.html",
+          "hash": "Nrm58W77yrZOX3tR84C5NQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.XDataManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.XDataManager.html",
+          "hash": "Kuc3QF+zynS1I7fdCtMdew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.XDataPureLinqMethodAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.XDataPureLinqMethodAttribute.html",
+          "hash": "b5Eke1V3sHFWOZTk1R2U2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.html",
+          "hash": "keilM6nMjzBg6Vrr8Owazw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "1c0CTpqskvYvnbfqzfIrag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/attached.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/attached.html",
+          "hash": "k94jDQAn0g+D92hkxfb7sQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/calculated.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/calculated.html",
+          "hash": "QSk4xWRBXY0xacu071N+pA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/callback.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/callback.html",
+          "hash": "EwEaxXPTO8ogQBqVxGXtBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/container.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/container.html",
+          "hash": "zSwyTjJiK/+DYZfjzxrj6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/copy_data.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/copy_data.html",
+          "hash": "r2KCNgBUk4e2tUkfuPeYaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/custom_logic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/custom_logic.html",
+          "hash": "ufpzY1qvZYi7RT+eBF2IxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/custom_sql.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/custom_sql.html",
+          "hash": "Tlal7G98wn0W2f0SwnfuOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/dictionary.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/dictionary.html",
+          "hash": "yaUp1+WFFgqiFLEY1coWIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/events.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/events.html",
+          "hash": "RAxP/qEIubMBn3Aym9w7ZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/fixed.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/fixed.html",
+          "hash": "e3pbuBvZwJyspiaqMEm9tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/get_credentials.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/get_credentials.html",
+          "hash": "W8sikZVff3v14/TsfAMVGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/optional.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/optional.html",
+          "hash": "SXmYm67KyTxGg7eYuym8Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/tips.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/tips.html",
+          "hash": "qPoegTjwG+XwbcoIJAglzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tips/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/toc.html",
+          "hash": "F3ZPzinY2YtIViiASRkUfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/transactions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/transactions.html",
+          "hash": "qZNzSzsUHhCEqgZ5dBBpnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/tree_childs.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/tree_childs.html",
+          "hash": "0dfQ70CrirrtKw0GDK4BfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/trigger_logic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/trigger_logic.html",
+          "hash": "amWLIErPWQ6RH4wlzz9TTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/udt.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/udt.html",
+          "hash": "4Ri1EHCdjR/SPQ5U30BCGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tips/view.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/view.html",
+          "hash": "Qxn5fSVcwI4PITAVBreYzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "s69XTqVXIJfbsPdb+IsYOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/adapter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/adapter.html",
+          "hash": "RBgVl4ubNCOhX5BTg/k2Jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/concurrency.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/concurrency.html",
+          "hash": "5dpykE1DCZQjjYT3ArmwWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/config.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/config.html",
+          "hash": "FYwSkTcd1HSYDt1NthrFFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/glossary.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/glossary.html",
+          "hash": "+ie8e8CdWC4v7H6A9V8PPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/linq.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/linq.html",
+          "hash": "USJYbG8uRQM/pAfqOoUgtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/localization.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/localization.html",
+          "hash": "fRQERROd7WXcXlhcd+dvrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/logging.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/logging.html",
+          "hash": "4RGG9yIqnxNdyLoSqiwTRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/binary_type.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/binary_type.html",
+          "hash": "amznideJ+nvDH9hTWBSnyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/column.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/column.html",
+          "hash": "45xUECDYQFfCQQTJpGtITg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/common_type.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/common_type.html",
+          "hash": "NlHegpEcNjLhiXruYJe6VA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/dynamic.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/dynamic.html",
+          "hash": "llPIVu6Gmu3DwqfKnDWMZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/external_link.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/external_link.html",
+          "hash": "hHcxMhJJbC1QT5C/LnOWvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/constant.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/constant.html",
+          "hash": "BCvTi8cMT/C2PuoqFp/IbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/dictionary.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/dictionary.html",
+          "hash": "UiqfHwZdqOp7yhEjVz0cQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/filter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/filter.html",
+          "hash": "rDDzLTGV/UjxwcpXj5Cl+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/group.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/group.html",
+          "hash": "8S0yksIfBWhFLmETcJSysg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/inner_links.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/inner_links.html",
+          "hash": "8/NADVBScib8LeQ7eu6Elw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/range.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/range.html",
+          "hash": "PBeSAQIOEV2zuXSb6ZSQkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/sql_expr.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/sql_expr.html",
+          "hash": "IXucWixa0dwBaS71EaIIGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/subquery.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/subquery.html",
+          "hash": "ScfW9rA2prjjhtaFWvI66Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/subquery_links.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/subquery_links.html",
+          "hash": "Ghl7bAs5w23M1ESk4HMaPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/dynamic/filter/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/filter/toc.html",
+          "hash": "5QYr2sHJOAmbJDA0wTA6yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/parameters.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/parameters.html",
+          "hash": "sJG8+/kH9yhPwiSylswvvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/parameter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/parameter.html",
+          "hash": "/aI3VqgYuH83Ykz6L8Jxcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/procedure.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/procedure.html",
+          "hash": "iPlOgj3pSrYm1LJQZoOLIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/result.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/result.html",
+          "hash": "igr7R697aru/ynnY3u2JEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_array.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_array.html",
+          "hash": "m1Uqa7hwPuKB4e0IPzTGOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_cursor.html",
+          "hash": "ZTpsrlwHSzS+N7ml3B7urg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_multiple_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_multiple_cursor.html",
+          "hash": "zR1jxiBx4wz+e33YeAxGNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_out_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_out_cursor.html",
+          "hash": "AVtS6zx3M/Uuox2w9JFO0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_out_param.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_out_param.html",
+          "hash": "ZofEVL9m1nn5pdw08xqMEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_retval.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_retval.html",
+          "hash": "Dt5foqbu28xk2RuyxbPuIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_retval_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_retval_cursor.html",
+          "hash": "xcQtRjxVTznF4YzYNMm0OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_scalar_func.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_scalar_func.html",
+          "hash": "OXuZ6GQIqoPIbpD0tIHITg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_table_func.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_table_func.html",
+          "hash": "Fj5hbuW5e4VTanHDpH5csA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_udt.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_udt.html",
+          "hash": "Vxsp2LXvbFdI3Z9v8eaGEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/sample_udt_array.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/sample_udt_array.html",
+          "hash": "HZEWbNpr5h6o8+bmZoAd8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/source.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/source.html",
+          "hash": "g0mV3Vu12pBIgrYj+6geXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/dynamic/procedure/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/procedure/toc.html",
+          "hash": "O4ZHXt9onalCN2omsa3viA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/property/column.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/property/column.html",
+          "hash": "46s5dluRD44CJv4r6Bda0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/property/default.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/property/default.html",
+          "hash": "SZqsgh9P6U8Hgz23ZdON8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/property/grouping.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/property/grouping.html",
+          "hash": "BE3kapy/6s9IUS5X519MHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/property/link.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/property/link.html",
+          "hash": "i9cW8viS1yL2scf7CDFtFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/property/property.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/property/property.html",
+          "hash": "QgD1RPzb/aT9dV+XTQSvmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/property/reference.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/property/reference.html",
+          "hash": "szFAxNvLJq/eKi3kFZhuNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/property/sql_expr.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/property/sql_expr.html",
+          "hash": "HU6hTveZcykOKH1a+uBeIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/dynamic/property/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/property/toc.html",
+          "hash": "QHzsKv9TZQddfLXR0j+mPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/sample.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/sample.html",
+          "hash": "pyS/qRr6vaa5mW6IdYfRVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/subquery.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/subquery.html",
+          "hash": "c7KpziiymLkPYrrKOBTxuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/dynamic/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/toc.html",
+          "hash": "Q0pz8Wcj22+7HjTpnCqSBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/dynamic/tree.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/dynamic/tree.html",
+          "hash": "Hl0jRxbua6OqJv0fQDEa1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/link.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/link.html",
+          "hash": "j2LHFExoer7A26OQjrWLRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/mapping.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/mapping.html",
+          "hash": "8T28J5KcuL/+2GFUEUYgGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/master_slave.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/master_slave.html",
+          "hash": "d80yYBYI0CPBjBEqn79XBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedures.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedures.html",
+          "hash": "GbsH+V+1e4vhe8lddg+MTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/readonly.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/readonly.html",
+          "hash": "ci2eFoFTpOUFoRtHWfl+VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/reference.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/reference.html",
+          "hash": "I5sVadVcLR9qsOpIiHfXvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/external_link.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/external_link.html",
+          "hash": "x+rjTc4J/pncCgfbX/DNPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/constant.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/constant.html",
+          "hash": "KUBVTzNib/KkMv5f22jT9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/dictionary.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/dictionary.html",
+          "hash": "qafXW0KNXBd5kZdwltHbBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/filter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/filter.html",
+          "hash": "8KaMBb4hvx12RWCV9dNQZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/group.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/group.html",
+          "hash": "c2dlU0sf4WpMMsRq2gZ/vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/inner_links.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/inner_links.html",
+          "hash": "8sFy0DF+KbRijabH7xaORw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/range.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/range.html",
+          "hash": "+HWRd/853vDNt1eTDoxJNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/sql_expr.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/sql_expr.html",
+          "hash": "mo/c81JQ2Y2vTylzFEfYPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/subquery.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/subquery.html",
+          "hash": "EAeaVh+NssICg7726rnHPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/filter/subquery_links.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/subquery_links.html",
+          "hash": "2Fcy3ULXEcZ8ZPfNNjRp4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/static/filter/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/filter/toc.html",
+          "hash": "5QYr2sHJOAmbJDA0wTA6yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/parameters.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/parameters.html",
+          "hash": "Qc5y96O9DCU1Xjzqecw+Zg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/parameter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/parameter.html",
+          "hash": "XV8Wdrd5SmKgBzi/Ks1mjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/procedure.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/procedure.html",
+          "hash": "dOL912YnS7EgTfUWsDgdmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/result.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/result.html",
+          "hash": "HJDdq8a7M1BF3K0ZLJWXDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_array.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_array.html",
+          "hash": "sYTHZXfJkUUJ4FRIBsrzEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_cursor.html",
+          "hash": "5vUTQxMfFw5ZMeh6slD5nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_multiple_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_multiple_cursor.html",
+          "hash": "UeEBMH9QKxqSK2rCAFZ+uA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_out_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_out_cursor.html",
+          "hash": "wC7RRzQPyfsIsnoIwvYtFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_out_param.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_out_param.html",
+          "hash": "5Wa6O6c6JpJnuuB+2ZlSkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_retval.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_retval.html",
+          "hash": "WZzQOd+7QRRrMs/QZoZG1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_retval_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_retval_cursor.html",
+          "hash": "305GTrQpMpX7xr1Usjzxng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_scalar_func.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_scalar_func.html",
+          "hash": "aelnFB7FeBT3f3cW6MEV3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_table_func.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_table_func.html",
+          "hash": "diLMR48ZwT7fEBlSNZplWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_udt.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_udt.html",
+          "hash": "WaoE0BjH2o4A9xMJJRSIzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/sample_udt_array.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/sample_udt_array.html",
+          "hash": "zJNoPyUSZZCqsucaHuyxXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/procedure/source.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/source.html",
+          "hash": "pYWB/S0TY6GRK2sP/lpHeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/static/procedure/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/procedure/toc.html",
+          "hash": "O4ZHXt9onalCN2omsa3viA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/property/column.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/property/column.html",
+          "hash": "GGApPba6ebEFBqMfgMoNvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/property/default.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/property/default.html",
+          "hash": "WNlsTpLjbWkhQHouwoKtDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/property/grouping.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/property/grouping.html",
+          "hash": "054Nfnq3vBp0790cT9pyuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/property/link.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/property/link.html",
+          "hash": "NCby9BRtgsjTSf2BXGXwTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/property/property.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/property/property.html",
+          "hash": "gpBOv0bOMyFt39wcj6unQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/property/reference.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/property/reference.html",
+          "hash": "XSGB3x9wAM9cIpewU+L7zA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/property/sql_expr.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/property/sql_expr.html",
+          "hash": "lzRaNJCG6nNuwoONt69Jcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/static/property/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/property/toc.html",
+          "hash": "QHzsKv9TZQddfLXR0j+mPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/sample.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/sample.html",
+          "hash": "aG8t0wmJKAipeZDgVSZJag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/static.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/static.html",
+          "hash": "SHmbClDCI3zMnQUiYUi+Bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/subquery.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/subquery.html",
+          "hash": "oryxSnqKFyRzclaI6GLLww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/static/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/toc.html",
+          "hash": "f+413HklPl5GayNBzTexlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/static/tree.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/static/tree.html",
+          "hash": "9uarlsP6KOGtU4b/3Y9y5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/mapping/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/toc.html",
+          "hash": "uUk0YfywtiGVTHPfBKc9TA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/tree.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/tree.html",
+          "hash": "D2iyx9q3bwYN9Yj4b105IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/xml_type.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/xml_type.html",
+          "hash": "cXDvhstxmG1cDvT5qiAifw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/query.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/query.html",
+          "hash": "m/TvYWDDjePTRgT0Oh/Mgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/runtime_filter.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/runtime_filter.html",
+          "hash": "2mIMBXwZuxgJnr/WPvso3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/security.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/security.html",
+          "hash": "7ywUWCcMkVMfi2O6p4tgug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/three_tier.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/three_tier.html",
+          "hash": "EUCN44t6YxUlIW7lWYeM0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorial/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/toc.html",
+          "hash": "KamwWMr3c/RCiuK5X3DumA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/unit_of_work.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/unit_of_work.html",
+          "hash": "NVcBuy1JcFJbLTpuOo29zQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/using.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/using.html",
+          "hash": "Z5kenZfR+WpMdcZO6353qQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/versions.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/versions.html",
+          "hash": "3bvmS40pN5uMhzOaFUFRrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

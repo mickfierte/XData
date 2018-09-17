@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Filters | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Filters | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping_static_filter.md">
+<h3 id="filters">Filters</h3>
+
+<p>Filters can be defined as:</p>
+<ul>
+<li>Constant filters</li>
+<li>SQL expression filters</li>
+<li>Dictionary filters</li>
+<li>Range filters</li>
+<li>Subquery filters</li>
+<li>Inner links</li>
+</ul>
+<p>Each of filter type is defined by own special attribute of data object class. Each of attributes has parameters: <em>Source</em> - data source alias of filtered field, <em>FieldName</em> - filtered field name, <em>Operation</em> - filter operation (optional, default is <em>FilterOperation</em>.<strong>Equal</strong>), <em>Combination</em> - <a href="../../../glossary.html#filter-group">filter group</a> name (optional, default is root filter group). Above this every filter attribute has their own specific parameters described below.</p>
+<p>Filter operation is defined by enum <a class="xref" href="../../../../api/XData.FilterOperation.html">FilterOperation</a>:</p>
+<ul>
+<li><strong>Equal</strong> - equal</li>
+<li><strong>NotEqual</strong> - not equal</li>
+<li><strong>LessThan</strong> - less then</li>
+<li><strong>GreaterThan</strong> - greater then</li>
+<li><strong>LessThanOrEqual</strong> - less or equal</li>
+<li><strong>GreaterThanOrEqual</strong> - greater or equal</li>
+<li><strong>In</strong> - field value in range or subquery</li>
+<li><strong>NotIn</strong> - field value is not in range or subquery</li>
+<li><strong>Exists</strong> - subquery returns one or more rows</li>
+<li><strong>NotExists</strong> - subquery returns no rows</li>
+<li><strong>Like</strong> - field value correlated with find expression</li>
+<li><strong>NotLike</strong> - field value not correlated with find expression</li>
+<li><strong>OuterJoin</strong> - left outer join link between query sources (tables or inner views)</li>
+<li><strong>Contains</strong> - field value correlated with fulltext search</li>
+<li><strong>NotContains</strong> - field value not correlated with fulltext search</li>
+</ul>
+<h4 id="filter-group">Filter group</h4>
+<p>Filter group can be defined by <a class="xref" href="../../../../api/XData.Mapping.FilterCombinationAttribute.html">FilterCombinationAttribute</a> with parameters: <em>Name</em> - filter group unique name, <em>Combination</em> - logical operation between filters and subgroups inside group (optional, default is <em>FilterCombination</em>.<strong>And</strong>), <em>Parent</em> - parent filter group name (optional, can be omited for filter groups with parent - root filter group).</p>
+<p>Logic operation inside filter group is defined by enum <a class="xref" href="../../../../api/XData.Combination.html">Combination</a>:</p>
+<ul>
+<li><strong>And</strong> - and</li>
+<li><strong>Or</strong> - or</li>
+</ul>
+<pre><code class="lang-csharp">[FilterCombination(&quot;OrGroup&quot; /* group filter name */, 
+    Combination: Combination.OR /* logical operation */)]
+</code></pre><h4 id="constant-filters">Constant filters</h4>
+<p>Constant filters can restrict query by constant value. This filter is defined by <a class="xref" href="../../../../api/XData.Mapping.ConstantFilterAttribute.html">ConstantFilterAttribute</a>, with specific (over described <a href="../static.html#filters">above</a>) parameters: <em>Name</em> - filter name (will be transformed to query parameter name), <em>ConstantType</em> - constant type (see below) and <em>ConstantValue</em> - constant value depends on <em>ConstantType</em>.</p>
+<p>Constant types is defined by enum <a class="xref" href="../../../../api/XData.FilterConstantType.html">FilterConstantType</a>:</p>
+<ul>
+<li><strong>Const</strong> - value of <em>ConstantValue</em>.</li>
+<li><strong>Variable</strong> - value of <a class="xref" href="../../../../api/XData.Variable.html">variable</a> with name equals <em>ConstantValue</em>.</li>
+<li><strong>CurrentDate</strong> - current date.</li>
+<li><strong>CurrentDateTime</strong> - current date/time.</li>
+<li><strong>CurrentDateTimeUTC</strong> - current date/time (UTC).</li>
+</ul>
+<pre><code class="lang-csharp">[ConstantFilter(&quot;FilterByZero&quot; /* filter name */, 
+    &quot;P&quot; /* table alias */, 
+    &quot;discount&quot; /* DB field name */, 
+    &quot;0&quot; /* constant value */, 
+    Operation: FilterOperation.Equal /* filter operation */, 
+    ConstantType: FilterConstantType.Const /* constant type */)]
+</code></pre><h4 id="sql-expression-filters">SQL expression filters</h4>
+<p>To define filter over SQL expression used <a class="xref" href="../../../../api/XData.Mapping.ExpressionFilterAttribute.html">ExpressionFilterAttribute</a> with specific (over described <a href="../static.html#filters">above</a>) parameter: <em>ExpressionText</em> - depends on value can be: </p>
+<ul>
+<li>subquery alias,</li>
+</ul>
+<pre><code class="lang-csharp">[ExpressionFilter(&quot;P&quot; /* table alias */, 
+    &quot;discount&quot; /* field name */, 
+    &quot;D&quot; /* ExpressionText: subquery alias */, 
+    Operation: FilterOperation.In /* filter operation */)]
+</code></pre><ul>
+<li>private static field name contains dynamic definition of SQL expression,</li>
+</ul>
+<pre><code class="lang-csharp">[ExpressionFilter(&quot;P&quot; /* table alias */, 
+    &quot;discount&quot; /* field name */, 
+    &quot;AllowedDiscount&quot; /* ExpressionText: SQL expression description field name */, 
+    Operation: FilterOperation.NotEqual /* filter operation */)]
+...
+//Private static field of mapped class marked with SqlExpression attribute
+[SqlExpression]
+private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product, int&gt;( 
+    z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10));
+</code></pre><ul>
+<li>plain SQL expression text.</li>
+</ul>
+<pre><code class="lang-csharp">[ExpressionFilter(&quot;P&quot; /* table alias */, 
+    &quot;discount&quot; /* field name */, 
+    &quot;case P.is_vip when 1 then 10 else 0 end&quot; /* ExpressionText: plain SQL expression */, 
+    Operation: FilterOperation.NotEqual /* filter operation */)]
+</code></pre><div class="IMPORTANT"><h5>Important</h5><p>If possible do not use plain SQL expressions. It possibly use specific SQL dialect features not supported by other DBMS or providers.</p>
+</div>
+<h4 id="range-filters">Range filters</h4>
+<p>To define filter checks field value over array of values used <a class="xref" href="../../../../api/XData.Mapping.RangeFilterAttribute.html">RangeFilterAttribute</a> with specific (over described <a href="../static.html#filters">above</a>) parameter: <em>Range</em> - array of values to filter on.</p>
+<pre><code class="lang-csharp">[RangeFilter(&quot;P&quot; /* table ealias */, 
+    &quot;discount&quot; /* field name */, 
+    new[] {0,5,10} /* range of values */, 
+    Operation: FilterOperation.In /* filter operation */)]
+</code></pre><h4 id="dictionary-filters">Dictionary filters</h4>
+<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recomended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
+<p>XData supports using mnemonic code when define filters on dictionary value - dictionary filters. They defined by <a class="xref" href="../../../../api/XData.Mapping.DictionaryFilterAttribute.html">DictionaryFilterAttribute</a> with specific (over described <a href="../static.html#filters">above</a>) parameters: <em>DictionaryTable</em> - dictionary table name, <em>DictionaryId</em> - dictionary id field name, <em>DictionaryCode</em> - dictionary mnemonic code field name, <em>DictionaryValue</em> - mnemonic code value to filter query on, <em>ValueIsVariable</em> - flag <em>DictionaryValue</em> contains not a value but name of <a class="xref" href="../../../../api/XData.Variable.html">variable</a> with value.</p>
+<div class="TIP"><h5>Tip</h5><p>In case filter field name is equals dictionary id field name, parameter <em>FieldName</em> can be omited. </p>
+</div>
+<div class="IMPORTANT"><h5>Important</h5><p>This filter can be used when dictionary has simple (one field only) identity field and mnemonic code field. But it&#39;s a very common case.</p>
+</div>
+<pre><code class="lang-csharp">[DictionaryFilter(&quot;t_doc_state&quot; /* dictionary table name */, 
+    &quot;doc_state_id&quot; /* dictionary id field name */, 
+    &quot;code&quot; /* dictionary mnemonic code field name */, 
+    &quot;CREATED&quot; /* mnemonic code value */, 
+    &quot;D&quot; /* filtered table alias */)]
+</code></pre><h4 id="inner-links">Inner links</h4>
+<p>To define links between data sources inside query used <a class="xref" href="../../../../api/XData.Mapping.LinkAttribute.html">LinkAttribute</a> with specific parameters: <em>LinkedSourceAlias</em> - linked table alias, <em>LinkedFieldName</em> - linked table field name (optional, can be omited when equals with <em>FieldName</em>). </p>
+<div class="TIP"><h5>Tip</h5><p>Inner links can be used to define <a href="../../../../tips/tips.html#optional-filters">optional filters</a>. To specify role in optional filter chain need to set parameter <em>PrimaryFilter</em> to <em>true</em>.</p>
+</div>
+<pre><code class="lang-csharp">[Link(&quot;D&quot; /* table alias */, 
+    &quot;doc_id&quot; /* field name */, 
+    &quot;DD&quot; /* linked table alias */)]
+</code></pre><h4 id="subquery-filters">Subquery filters</h4>
+<p>To define filters checks field value is correspond subquery results used <a class="xref" href="../../../../api/XData.Mapping.SubqueryFilterAttribute.html">SubqueryFilterAttribute</a> with specific (over defined <a href="../static.html#filters">above</a>) parameter: <em>Subquery</em> - subquery alias (see <a href="../static.html#subqueries">Subqueries</a>). Inner view can not be used with subquery filters.</p>
+<pre><code class="lang-csharp">[SubqueryFilter(&quot;D&quot; /* table alias */, 
+    &quot;doc_state_id&quot; /* field name */, 
+    &quot;A&quot; /* subquery alias */, 
+    Operation: FilterOperation.In /* filter operation */)]
+</code></pre><p>When flag <em>PrimaryFilter</em> is set to <em>true</em> optional part of query is defined by followed rules: when one of linked data sources is skiped then other one will skipped too. When <a href="../../../glossary.html#base-table">base table</a> of subquery is skipped then subquery is skipped completely.</p>
+<h4 id="subquery-links">Subquery links</h4>
+<p>Links with subqueries is used to link not table fields but properties of base class and subquery mapped class including <a href="../../mapping.html#hidden-properties">hidden properties</a>. To link with subquery or inner view used <a class="xref" href="../../../../api/XData.Mapping.SubqueryLinkAttribute.html">SubqueryLinkAttribute</a> with parameters: <em>Subquery</em> - subquery alias, <em>SubqueryProperty</em> - linked property from subquery, <em>PropertyName</em> - optional, linked property from base class (when omit, base class property name is equal <em>SubqueryProperty</em>), also optional properties: <em>Operation</em>, <em>Combination</em> и <em>PrimaryFilter</em> is supported. They was described above in topics <a href="../static.html#filters">Filters</a> and <a href="../static.html#inner-links">Inner links</a>.</p>
+<pre><code class="lang-csharp">[SubqueryLink(&quot;H&quot; /* subquery alias */, 
+    &quot;DocId&quot; /* subquery property to link */)]
+</code></pre><p>When flag <em>PrimaryFilter</em> is set to <em>true</em> optional part of query is defined by followed rules: when subquery is skipped, then data source linked to subquery by this filter will be skipped too, and skip data sources analisys will continue inside base class (see <a href="../static.html#inner-links">Inner links</a>).</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

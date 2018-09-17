@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Tips &amp; Trics | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Tips &amp; Trics | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="tips.md">
+<h1 id="tips--trics">Tips &amp; Trics</h1>
+
+<p>There are some special themes related with using XData in uncommon scenarios, or more detetailed information about not trivial internal XData mechanics.</p>
+<h2 id="using-di-container">Using DI container</h2>
+<p>XData can be effecively used with any DI containers You prefer. </p>
+<p>Net 4.0 version not used DI containers inside, but <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a>, <a class="xref" href="../api/XData.IDataScope.html">IDataScope</a> and <a class="xref" href="../api/XData.IRepository.html">IRepository&lt;T&gt;</a> interfaces can be obtained from container. IDataEngine must to be registered as singleton with <em>XDataManager.GetDataEngine</em> method call. IDataScope can be registered as lifetime service over data logic module (for example: Controller module in MVC pattern) using fabric method with obtaining IDataEngine service and creating (<a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_System_String_">IDataEngine.NewDataScope</a>) or request from internal XData cache (<a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_GetDataScope_System_Guid_System_String_System_Boolean_">IDataEngine.GetDataScope</a>) IDataScope instance when Layer is provided. IRepository&lt;T&gt; can be registered as transistent service using fabric method with obtaining IDataScope service and call <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">IDataScope.GetRepository&lt;T&gt;</a> method. Using container to obtain IRepository&lt;T&gt; service seems to be a kind of a joke, but sometimes it&#39;s usefull.</p>
+<p>Net Standard 2.0 version used Net Core Dependency Abstraction inside and this asbtraction can be implemented by any You like DI container. In this version <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> is registered by calling <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a> method. Other interfaces can be registered manually (if required) with described above or any You like logic.</p>
+<h2 id="mapping-view">Mapping view</h2>
+<p>To map <a href="../tutorial/glossary.html#data-object">data objects</a> to SQL views used same technics and commands as data table, but then mapping non readonly <a href="../tutorial/glossary.html#repository">repository</a> to table some fields of <a href="../tutorial/glossary.html#updatable-tables-hierarchy">updatable table</a> can be mapped automatically by XData engine using metadata information from source database. When mapping is described over view, all fields must to be described explicitly. Same rule is worked when source of data is text represented SQL expression or virtual recordset defined as union of records (see <a class="xref" href="../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_ToDataSet__1_System_Collections_Generic_IEnumerable___0__System_String_XData_Interfaces_ISqlBuilder_">ToDataSet</a> as example, similar result can be reached using string SQL expression as table name). All fields must to be described explicitly.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>Repositiory mapping is required to marked as <a href="../tutorial/glossary.html#data-source-flags">ReadOnly</a> when view is a base table!</p>
+</div>
+<h2 id="get-connection-settings-in-runtime">Get connection settings in runtime</h2>
+<p>Connection settings can be obtained from initialized context using code below:</p>
+<pre><code class="lang-csharp">var ctx = XDataManager.GetContext(s);
+Console.WriteLine(&quot;*** Testing context: {0} (DB type: {1})&quot;, ctx.Name, ctx.DatabaseAdapter.ConnectType);
+Console.WriteLine(&quot;*** Server: {0}, Schema: {1}&quot;, ctx.ConnectionInfo.Server, ctx.ConnectionInfo.Schema);
+</code></pre><h2 id="optional-filters">Optional filters</h2>
+<p>Optional filters is the mechanic to simplify query structure when some filters are not set. For example, we can map data structure to some class and to alow filter objects over some property of dictionary linked to main data structure. When filter applied this link to dictionary table is used, but when not we ineffectively rize query complexity.</p>
+<p>To avoid unplanned query complexity XData has <em>optional filter</em> feature. Some filters marked as <em>primary</em> - when this filter has value, query has full form. When filter value has cleared or set to null, data source of filtered field (table or view) will be skiped when SQL query composed. When data source has been skipped then links between already skipped and other data sources are analized. And when found link marked as <em>primary</em> linked data source will also skipped. When <a href="../tutorial/glossary.html#base-table">base table</a> of subquery has been skipped - all subquery will be skipped and subquery links analizis for <em>primary</em> links will be provided over outer query. Until no <em>primary</em> filters found.</p>
+<p>This alowes to compose complex query relations over multiple tables and subqueries that reflect on real query only when it realy necessary.</p>
+<h2 id="tree-organized-repository-child-specifics">Tree organized repository child specifics</h2>
+<p>When master repository has hierarchy structure, than slave objects can be filtered by two methods to choose slave repository data: filter data linked with selected tree node only (<a class="xref" href="../api/XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_DirectLink">direct links</a>), and linked to subtree from selected node and below by hierarchy. XData has functional to choose one of this methods in runtime. To provide this ability mapping of master objects must describe <a href="../tutorial/mapping/mapping.html#master-slave-relations">external links</a> marked as <a class="xref" href="../api/XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_DirectLink">direct links</a>. Than master repository flag <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_ShowSubtree">ShowSubtree</a> can be used as a switch between this two methods.</p>
+<h2 id="using-dictionaries">Using dictionaries</h2>
+<p>Dictionaries can be used to reduse data requery count when rarely changed data of dictionary will linked multiple times through <a class="xref" href="../api/XData.Mapping.Link-2.html">Link&lt;T,TSource&gt;</a> data type properties over small amount of time (one business process). Dictionaries is cached as single mapped objects (not a data cahe as described in <a href="tips.html#caching-repository-data">Caching repository data</a> topic).</p>
+<h2 id="caching-repository-data">Caching repository data</h2>
+<p>Some data is changed often, some is rarely, but some data will never changed untill application has upgraded. To reduse requery of this static data, XData has mechanism to cache requested data (not a mapped objects) in XData. Repository property <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_FixedQuery">FixedQuery</a> can be assigned to true when caching is required. All LINQ queries will be translated to this cache without requery data from database. When this property resets to false, the cache will erased and repository returns to common algorithms of database requests. Similar feature is used to access rarely changed <a href="dictionary.html">dictionary</a> data over multiple related operative data canges.</p>
+<h2 id="copy-data">Copy data</h2>
+<p>Data can be copied from one repository to another using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Add__1_System_Linq_IQueryable___0__XData_Mapping___0__0__">IRepository&lt;T&gt;.Add&lt;TFrom&gt;</a> method as illustrated in followed example:</p>
+<pre><code class="lang-csharp">// Query source data (statically, or dynamically) into sourceQuery variable 
+var rep = dataScope.GetRepository&lt;Target&gt;();
+using(var tr = dataScope.BeginTransaction())
+{
+    rep.Add&lt;Source&gt;(sourceQuery, 
+        x =&gt; new Target{ 
+            TargetSome = x.Some, 
+            TargetAnother = x.Another });
+    tr.Commit();
+}
+</code></pre><h2 id="trigger-business-logic">Trigger business logic</h2>
+<p><a href="tips.html#execute-custom-business-logic">Custom logic</a> called over <a href="../tutorial/glossary.html#data-object">data object</a> explicitly. But XData can call trigger logic over business valuable <a href="../tutorial/glossary.html#data-object">data object</a> (not a single table!) on middleware level (no matter extracted this logic to dedicated application server or not). This logic will be called automatically when corresponded changes are applied:</p>
+<ul>
+<li><em>InitRepository</em> - middleware trigger executed when Repository has been initialized (trigger delegate type -<a class="xref" href="../api/XData.InitRepository-1.html">InitRepository&lt;T&gt;</a>)</li>
+<li><em>InvalidateRepository</em> - middleware trigger executed when Repository data need to be reseted (trigger delegate type -<a class="xref" href="../api/XData.InvalidateRepository-1.html">InvalidateRepository&lt;T&gt;</a>)</li>
+<li><em>InvalidateObject</em> - middleware trigger executed when Repository object need to be reloaded (trigger delegate type -<a class="xref" href="../api/XData.InvalidateObject-1.html">InvalidateObject&lt;T&gt;</a>)</li>
+<li><em>InitObject</em> - middleware trigger executed when Repository object has been initialized (trigger delegate type -<a class="xref" href="../api/XData.InitObject-1.html">InitObject&lt;T&gt;</a>)</li>
+<li><em>BeforeInsert</em> - middleware trigger executed before object inserted into Repository (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>)</li>
+<li><em>BeforeUpdate</em> - middleware trigger executed before Repository object has been updated (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>)</li>
+<li><em>BeforeDelete</em> - middleware trigger executed before object has been deleted from Repository (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>)</li>
+<li><em>AfterInsert</em> - middleware trigger executed after object inserted into Repository (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>). <a class="xref" href="../api/XData.DataTriggerFlag.html">Skip</a> flag is not applicable!</li>
+<li><em>AfterUpdate</em> - middleware trigger executed after Repository object has been updated (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>). <a class="xref" href="../api/XData.DataTriggerFlag.html">Skip</a> flag is not applicable!</li>
+<li><em>AfterDelete</em> - middleware trigger executed after object has been deleted from Repository (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>). <a class="xref" href="../api/XData.DataTriggerFlag.html">Skip</a> flag is not applicable!</li>
+<li><em>BeforeClear</em> - middleware trigger executed before Repository has been cleared (trigger delegate type -<a class="xref" href="../api/XData.RepositoryTrigger-1.html">RepositoryTrigger&lt;T&gt;</a>)</li>
+<li><em>AfterClear</em> - middleware trigger executed after Repository has been cleared (trigger delegate type -<a class="xref" href="../api/XData.RepositoryTrigger-1.html">RepositoryTrigger&lt;T&gt;</a>). <a class="xref" href="../api/XData.DataTriggerFlag.html">Skip</a> flag is not applicable!</li>
+</ul>
+<p>Trigger delegate type - it&#39;s a method signature for middleware trigger handler.</p>
+<pre><code class="lang-csharp">public class InvoiceLogic : XDataLogic&lt;Invoice&gt;
+{
+    [Action(DataActionType.AfterInsert), Action(DataActionType.AfterUpdate)]
+    public Trigger&lt;Invoice&gt; UpdateHistory =&gt; 
+        ((ref Invoice invoice, ref DataTriggerFlag flag) =&gt;
+        {
+            if (!invoice.CheckState(DataObjectState.New) 
+                &amp;&amp; !invoice.IsChanged(x =&gt; x.DocState)) return true;
+            var rep = invoice.GetRepository();
+            using (var hist = 
+                GetRepository&lt;DocHistory&gt;(rep.Layer, context: rep.Context))
+            {
+                hist.Reset()
+                    .SetFilterValue(DocHistory.FilterByDocId, 
+                        invoice.GetProperty&lt;long&gt;(&quot;DocId&quot;))
+                    .SetFilterValue(DocHistory.FilterByDocStateId, 
+                        invoice.DocState.Key);
+                var newHist = hist.New();
+                newHist.HistoryDate = DateTime.UtcNow;
+                return hist.Submit(ref newHist);
+            }
+        });
+
+    [Action(DataActionType.BeforeDelete)]
+    public Trigger&lt;Invoice&gt; ClearHistory =&gt; 
+    ((ref Invoice invoice, ref DataTriggerFlag flag) =&gt;
+        {
+            var i = invoice;
+            using (var hist = GetRepository&lt;DocHistory&gt;(i.GetLayer(), 
+                context: i.GetContext()))
+            {
+                return hist.Reset()
+                    .Clear(x =&gt; x.GetProperty&lt;long&gt;(&quot;DocId&quot;) 
+                        == i.GetProperty&lt;long&gt;(&quot;DocId&quot;));
+            }
+        });
+
+    [Action(DataActionType.BeforeClear)]
+    public RepositoryTrigger&lt;Invoice&gt; ClearHistoryBatch =&gt;
+    ((IRepository&lt;Invoice&gt; invoiceRepository, ref DataTriggerFlag flag) =&gt;
+    {
+        using (var hist = GetRepository&lt;DocHistory&gt;(invoiceRepository.Layer, 
+            context: invoiceRepository.Context))
+        {
+            return hist.Reset().Clear(x =&gt; invoiceRepository
+                .Any(z =&gt; x.GetProperty&lt;long&gt;(&quot;DocId&quot;) 
+                    == z.GetProperty&lt;long&gt;(&quot;DocId&quot;)));
+        }
+    });
+}
+</code></pre><p>Trigger and RepositoryTrigger delegates has a reference parameter of type <a class="xref" href="../api/XData.DataTriggerFlag.html">DataTriggerFlag</a> to specify behaviour of data processing after trigger executed. There are three possible behaviours defined:</p>
+<ul>
+<li><em>None</em> - Submit using default algorithm, representation layer is already refreshed</li>
+<li><em>Skip</em> - Data submitting have completed in trigger logic or not applicable. No standard updates will called. It&#39;s a kind of &quot;instead of&quot; trigger logic flag.</li>
+<li><em>Refresh</em> - Default value. Representation layer manual data refreshing is needed.</li>
+</ul>
+<p>Trigger logic defined as attributed by <a class="xref" href="../api/XData.Mapping.ActionAttribute.html">Action attribute</a> read only property of <a class="xref" href="../api/XData.XDataLogic-1.html">XDataLogic&lt;T&gt;</a> class descendant. One property can be attributed as a handler for multiple triggers. Property type must to be <a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a> except repository based triggers (<em>BeforeClear</em>, <em>AfterCLear</em>, <em>InitRepository</em> or <em>InvalidateRepository</em>) - <a class="xref" href="../api/XData.RepositoryTrigger-1.html">RepositoryTrigger&lt;T&gt;</a>.</p>
+<h2 id="execute-custom-business-logic">Execute custom business logic</h2>
+<p>XData has many features targeting this technology as not only ORM, but a full featured Data Access Layer. This is one of this features.</p>
+<p>Custom logic defined as public property of <a class="xref" href="../api/XData.XDataLogic-1.html">XDataLogic&lt;T&gt;</a> class descendant with type of <a class="xref" href="../api/XData.CustomLogic-1.html">CustomLogic&lt;T&gt;</a>.</p>
+<pre><code class="lang-csharp">    public class InvoiceLogic : XDataLogic&lt;Invoice&gt;
+    {
+        public CustomLogic&lt;Invoice&gt; TestCustomLogic =&gt; (objects =&gt; {
+            Log.Write(MessageType.Information, 
+                () =&gt; $&quot;TestCustomLogic called with {objects.Length} objects&quot;); 
+            foreach (var invoice in objects)
+            {
+                var i = invoice;
+                invoice.PostData(&quot;testPost&quot;, 
+                    () =&gt; Encoding.UTF8.GetBytes(i.DocNumb));
+                var p = Encoding.UTF8.GetBytes(i.DocNumb);
+                var r = i.Callback(&quot;testCall&quot;, ref p);
+                Log.Write(MessageType.Information, () =&gt;
+                    @$&quot;Call for \&quot;{i.DocNumb}\&quot; returned \&quot;{r}\&quot; 
+                with data \&quot;{(p == null ? null : Encoding.UTF8.GetString(p))}\&quot;&quot;);
+            }
+            return true;
+        });
+    }
+
+    ...
+
+    //Call example logic
+    var random = new Random();
+    return dataScope.GetRepository&lt;Invoice&gt;().ToArray().Execute(() =&gt; &quot;TestCustomLogic&quot;,
+                &quot;testPost&quot;.SetValue((Action&lt;byte[]&gt;)(data =&gt; 
+                    Console.WriteLine(&quot;Post message received (data=\&quot;{0}\&quot;)&quot;, 
+                        data == null ? null : Encoding.UTF8.GetString(data))))
+                        .AsEnum().ToDictionary(),
+                &quot;testCall&quot;.SetValue((Func&lt;byte[], byte[]&gt;)(data =&gt; {
+    Console.WriteLine(&quot;Call received \&quot;{0}\&quot;)&quot;, 
+        data == null ? null : Encoding.UTF8.GetString(data));
+    return random.NextDouble() &gt;= 0.5 ? null : Encoding.UTF8.GetBytes(
+        $&quot;reply for \&quot;{(data == null ? null : Encoding.UTF8.GetString(data))}\&quot;&quot;);
+                })).AsEnum().ToDictionary());
+</code></pre><p>Programmer can develope data centric logic over some of mapped objects with ability to execute this logic in the middleware layer of three-tier architecture on a dedicated server (or cluster). And this code can be simple and representable debuged in two-tier environment. Architecture can be switched by configuration! No code modification, no side effects... This feature is linked with <a href="tips.html#trigger-business-logic">Trigger logic</a> and reached by <a class="xref" href="tips.html#using-business-logic-callbacks">Callbacks</a>.</p>
+<p>When code is organized using data mapping modules, data logic modules and client (or Web site) it can help programmer to keep module relations clean and get ready to changes, with no matter of middleware layer existance. And this rules are not dictated, You can use it or not. You can write this logic anywhere You architect to do. Nothing will be breakes, exept of ability to use XData three-tier architecture. But if You realy don&#39;t need it, what is wrong?</p>
+<h2 id="using-business-logic-callbacks">Using business logic callbacks</h2>
+<p>XData alowes to use business logic callbacks to interact backend modules with frontend using synchronious <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Callback__1___0_System_String_System_Byte____">Callback</a> and asynchronious <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_PostData__1___0_System_String_System_Func_System_Byte____">PostData</a> models. Synchronious calls can return result value. Callbacks can be used with <a href="../tutorial/three_tier.html">three-tier-architecture</a> as well as with client-server model. Callbacks has provided business logic clear, complete view and alowes debug same code in two-tier environment as code will be executed in three-tier.</p>
+<pre><code class="lang-csharp">    public class InvoiceLogic : XDataLogic&lt;Invoice&gt;
+    {
+        public CustomLogic&lt;Invoice&gt; TestCustomLogic =&gt; (objects =&gt; {
+            Log.Write(MessageType.Information, 
+                () =&gt; $&quot;TestCustomLogic called with {objects.Length} objects&quot;); 
+            foreach (var invoice in objects)
+            {
+                var i = invoice;
+                invoice.PostData(&quot;testPost&quot;, () =&gt; Encoding.UTF8.GetBytes(i.DocNumb));
+                var p = Encoding.UTF8.GetBytes(i.DocNumb);
+                var r = i.Callback(&quot;testCall&quot;, ref p);
+                Log.Write(MessageType.Information, () =&gt;
+                    @$&quot;Call for \&quot;{i.DocNumb}\&quot; returned \&quot;{r}\&quot; with data 
+\&quot;{(p == null ? null : Encoding.UTF8.GetString(p))}\&quot;&quot;);
+            }
+            return true;
+        });
+    }
+</code></pre><h2 id="business-logic-calculated-fields">Business logic calculated fields</h2>
+<p>XData alowed to calculate fields not only using <a href="../tutorial/mapping/static/property/property.html#sql-expression-property">SQL expressions</a>. You can subscribe <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_OnInvalidateObject">OnInvalidateObject</a> event and calculate some fields on client side. More detailed events dicassed <a href="events.html">below</a>.</p>
+<h2 id="using-events">Using events</h2>
+<p><a href="tips.html#execute-custom-business-logic">Custom logic</a> call and <a href="tips.html#trigger-business-logic">trigger logic</a> is executed on the midleware layer, deployed on the application server or not. But some reaction on data change events may be required on client side. XData has followed events to subscribe changes of data:
+<a class="xref" href="../api/XData.InitRepository-1.html">InitRepository&lt;T&gt;</a> <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_OnInit">OnInit</a> - event acquired when repository has been initialized
+<a class="xref" href="../api/XData.InitObject-1.html">InitObject&lt;T&gt;</a> <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_OnInitObject">OnInitObject</a> - event acquired when object has been initialized by database or default values
+<a class="xref" href="../api/XData.InvalidateRepository-1.html">InvalidateRepository&lt;T&gt;</a> <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_OnInvalidate">OnInvalidate</a> - repository data has been requeried from database
+<a class="xref" href="../api/XData.InvalidateObject-1.html">InvalidateObject&lt;T&gt;</a> <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_OnInvalidateObject">OnInvalidateObject</a> - object has been changed and requeied from database
+<a class="xref" href="../api/XData.CurrentObjectChanging-1.html">CurrentObjectChanging&lt;T&gt;</a> <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_OnCurrentObjectChanging">OnCurrentObjectChanging</a> - current object is changing
+<a class="xref" href="../api/XData.CurrentObjectChanged-1.html">CurrentObjectChanged&lt;T&gt;</a> <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_OnCurrentObjectChanged">OnCurrentObjectChanged</a> - current object has been changed</p>
+<h2 id="virtual-data-and-attached-handlers">Virtual data and attached handlers</h2>
+<p>You can use XData as database mock engine. XData has feature to replace database interactions with attached handlers call. Virtual objects is attached to repository using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0____">Attach</a> method of <a class="xref" href="../api/XData.IRepository-1.html">IRepository&lt;T&gt;</a> interface. To dettach virtual objects used <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Dettach_System_Predicate__0__">Dettach</a> method. Multiple virtual entities can be attached to repository as new objects using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_AttachNewObjects_System_Collections_Generic_IEnumerable__0__XData_AttachedHandler__0____">AttachNewObjects</a> method. </p>
+<div class="TIP"><h5>Tip</h5><p>This method (<em>AttachNewObjects</em>) can be used to add multiple dettached objects to real repository. </p>
+</div>
+<p>Every virtual entity can override handlers attached to repository with their own realization using parameters of <em>AttachNewObjects</em> method or <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_SetAttachedHandlers__0__XData_AttachedHandler__0____">SetAttachedHandlers</a> method call. To set repository level handlers use special overload of <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_SetAttachedHandlers_XData_RepositoryAttachedHandler__0____">SetAttachedHandlers</a>. To clear attached objects You can use <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_ClearAttachedObjects">ClearAttachedObjects</a> method. To help wrap handlers to abstract <a class="xref" href="../api/XData.AttachedHandler-1.html">AttachedHandler&lt;T&gt;</a> class and unwrap it back to specialized handlers XData has a wrapper class <a class="xref" href="../api/XData.RepositoryAttachedHandler-1.html">RepositoryAttachedHandler</a>.</p>
+<p>Attached hendlers can have followed types (see <a class="xref" href="../api/XData.AttachedHandlerType.html">AttachedHandlerType</a>):</p>
+<ul>
+<li><em>OnClear</em> - (<a class="xref" href="../api/XData.ClearAttachedHandler.html">ClearAttachedHandler</a>) handler called instead of <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_Clear_XData_DataSubmitFlag_">Clear</a></li>
+<li><em>OnExecute</em> - (<a class="xref" href="../api/XData.ExecuteAttachedHandler-1.html">ExecuteAttachedHandler&lt;T&gt;</a>) handler called instead of <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Execute_System_String_System_Collections_Generic_IEnumerable__0__System_Collections_Generic_IDictionary_System_String_System_Action_System_Byte_____System_Collections_Generic_IDictionary_System_String_System_Func_System_Byte___System_Byte_____">Execute</a></li>
+<li><em>OnGetLob</em> - (<a class="xref" href="../api/XData.GetLobAttachedHandler.html">GetLobAttachedHandler</a>) handler called instead of requesting LOB data</li>
+<li><em>OnGetLobSize</em> - (<a class="xref" href="../api/XData.GetLobSizeAttachedHandler.html">GetLobSizeAttachedHandler</a>) handler called instead of requesting LOB size</li>
+<li><em>OnGetXml</em> - (<a class="xref" href="../api/XData.GetXmlAttachedHandler.html">GetXmlAttachedHandler</a>) handler called instead of requesting XML data</li>
+<li><em>OnLock</em> - (<a class="xref" href="../api/XData.LockAttachedHandler-1.html">LockAttachedHandler&lt;T&gt;</a>) handler called instead of <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Lock__0_">Lock</a></li>
+<li><em>OnRefresh</em> - (<a class="xref" href="../api/XData.RefreshAttachedHandler-1.html">RefreshAttachedHandler&lt;T&gt;</a>) handler called instead of refreshing data</li>
+<li><em>OnSetLob</em> - (<a class="xref" href="../api/XData.SetLobAttachedHandler.html">SetLobAttachedHandler</a>) handler called instead of saving LOB data</li>
+<li><em>OnSetXml</em> - (<a class="xref" href="../api/XData.SetXmlAttachedHandler.html">SetXmlAttachedHandler</a>) handler called instead of saving XML data</li>
+<li><em>OnSubmit</em> - (<a class="xref" href="../api/XData.SubmitAttachedHandler-1.html">SubmitAttachedHandler&lt;T&gt;</a>) handler called instead of <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Submit__0__XData_DataSubmitFlag_">Submit</a> multiple objects</li>
+<li><em>OnSubmitObject</em> - (<a class="xref" href="../api/XData.SubmitObjectAttachedHandler-1.html">SubmitObjectAttachedHandler&lt;T&gt;</a>) handler called instead of submitting single object</li>
+<li><em>OnSubmitQuery</em> - (<a class="xref" href="../api/XData.SubmitQueryAttachedHandler-1.html">SubmitQueryAttachedHandler&lt;T&gt;</a>) handler called instead of submitting query generation</li>
+</ul>
+<h2 id="transactions">Transactions</h2>
+<p>XData use automatic transactions handling by default. But allows to manage transacions manually using IDataScope interface method <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_BeginTransaction_System_String_System_Boolean_System_Data_IsolationLevel_">BeginTransaction</a> returned transaction state interface <a class="xref" href="../api/XData.Database.ITransaction.html">ITransaction</a>. Transaction state is a IDisposable object. Transaction is commited when method <a class="xref" href="../api/XData.Database.ITransaction.html#XData_Database_ITransaction_Commit">Commit</a> is called. When transaction state is disposed without call Commit method, transaction is rolled back. Transaction can be started as readonly or read/write. This depends on parameter <em>read</em> of BeginTransaction method. XData can symulationaly wrap transactions one over another. First non read only transaction is related to real database tranaction, and all wrapped transactions is related to transaction labels. When wrapped transaction is rolled back real transaction is rolled back to label only. Only rolling back the &quot;main&quot; transaction calls ROLLBACK statement over database.</p>
+<h2 id="call-custom-sql-code">Call custom SQL code</h2>
+<p>XData can help the programmer to obtain data and process it with many ways. But also we hold in mind XData is just a common tool with limited quantity of features, and some very specific (but handy and powerfull) SQL dialect constructions may be out of XData possibilities. </p>
+<p>To call dialect specific SQL statements used raw <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html">database adapter interface</a> with methods: <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_XData_Database_Adapter_Query_System_Data_CommandBehavior_">FillTable</a>, <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_XData_Database_Adapter_Query_">ExecuteScalar</a> and <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_XData_Database_Adapter_Query_">ExecuteNonQuery</a>. </p>
+<p>To access <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html">database adapter interface</a> used <a href="../tutorial/glossary.html#context">context</a> descriptor through <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_GetContext_System_String_">XDataManager.GetContext</a> method:</p>
+<pre><code class="lang-csharp">const string getCoordComResourceStateChangesForCaseCommand = @&quot;
+select x.ResourceCode, x.ReportedDateTime, x.UserName, x.MissionStatusCode, 
+x.ResourceStatusCode
+from (select h.ResourceCode, h.ReportedDateTime, h.MissionStatusCode, 
+h.ResourceStatusCode,
+isnull((select top(1) log.Creator from cse_CaseFolderLog_tab log with (nolock)
+       where log.CallCenterId = h.CallCenterId
+           and log.CaseFolderId = h.CaseFolderId and log.CaseId = h.CaseId
+           and log.Created &gt;= h.ReportedDateTime
+           and datediff(s, h.ReportedDateTime, log.Created) &lt;= 10
+           and (charindex(case h.MissionStatusCode when &#39;---&#39; then &#39;ready&#39; 
+                    else h.MissionStatusCode end, 
+                    log.LogText COLLATE Latin1_General_CS_AS) &gt; 0
+                or charindex(case h.MissionStatusCode when &#39;---&#39; then &#39;disconnected&#39; 
+                    else h.MissionStatusCode end, 
+                    log.LogText COLLATE Latin1_General_CS_AS) &gt; 0)
+           and charindex(h.ResourceCode, 
+            log.LogText COLLATE Latin1_General_CS_AS) &gt; 0
+           and charindex(&#39;|&#39; + log.Creator + &#39;|&#39;, @IntegrationUsers) = 0
+       order by log.Created )
+,
+(select top(1) log.Creator from cse_CaseFolderLogFinished_tab log with (nolock)
+       where log.CallCenterId = h.CallCenterId
+           and log.CaseFolderId = h.CaseFolderId and log.CaseId = h.CaseId
+           and log.Created &gt;= h.ReportedDateTime
+           and datediff(s,h.ReportedDateTime, log.Created) &lt;= 10
+           and (charindex(case h.MissionStatusCode when &#39;---&#39; then &#39;ready&#39; 
+                else h.MissionStatusCode end, 
+                    log.LogText COLLATE Latin1_General_CS_AS) &gt; 0
+                or charindex(case h.MissionStatusCode when &#39;---&#39; then &#39;disconnected&#39; 
+                else h.MissionStatusCode end, 
+                    log.LogText COLLATE Latin1_General_CS_AS) &gt; 0)
+           and charindex(h.ResourceCode, 
+                log.LogText COLLATE Latin1_General_CS_AS) &gt; 0
+           and charindex(&#39;|&#39; + log.Creator + &#39;|&#39;, @IntegrationUsers) = 0
+       order by log.Created )) as UserName
+from res_ResourceHistory_tab h
+where h.CallCenterId = @CallCenterId and h.CaseFolderId = @CaseFolderId 
+and h.CaseId = @CaseId
+and not exists(select 1 from sph_ResourceHistory_tab sh
+    where sh.CallCenterId = h.CallCenterId and sh.CaseFolderId = h.CaseFolderId 
+    and sh.CaseId = h.CaseId
+    and sh.ResourceCode = h.ResourceCode 
+    and (sh.MissionStatusCode = h.MissionStatusCode
+        or (sh.MissionStatusCode = &#39;---&#39; 
+            and sh.ResourceStatusCode = @ClosedStatusCode))
+    and sh.ReportedDateTime = h.ReportedDateTime)) x 
+where x.UserName is not null&quot;;
+
+using (var dataScope = DataEngine.Value.NewDataScope(CoordComDb))
+{
+    return XDataManager.GetContext(CoordComDb).DatabaseAdapter.FillTable(dataScope.Layer,
+        new Query(getCoordComResourceStateChangesForCaseCommand, CommandType.Text,
+            new QueryParam(&quot;@CaseFolderId&quot;, caseIdentity.CaseFolderId, DbType.Int32),
+            new QueryParam(&quot;@CallCenterId&quot;, caseIdentity.CallCenterId, DbType.Int32),
+            new QueryParam(&quot;@CaseId&quot;, caseIdentity.CaseId, DbType.Int32),
+            new QueryParam(&quot;@IntegrationUsers&quot;, $&quot;|{string.Join(&quot;|&quot;, integrationUsers)}|&quot;),
+            new QueryParam(&quot;@ClosedStatusCode&quot;, closedStatusCode)
+        ), CommandBehavior.SingleResult).Rows.OfType&lt;DataRow&gt;()
+        .Select(x =&gt; new Tuple&lt;string, DateTime, string, string&gt;(
+            x.Field&lt;string&gt;(0), x.Field&lt;DateTime&gt;(1), x.Field&lt;string&gt;(2),
+            x.Field&lt;string&gt;(3) == &quot;---&quot; ? x.Field&lt;string&gt;(4) : x.Field&lt;string&gt;(3))).ToList();
+}
+</code></pre><div class="TIP"><h5>Tip</h5><p>Use this mechanism with maximum care! This eliminates cross dialect approach of XData development, but we are in a real world with real programmers tasks... and we are never seen real tasks are correspond the rules of ideal programm system architecture ;) Anyway this <em>bad</em> feature is a backdoor we must provide while XData is not support all features of all specific SQL dialects.<br>
+Is this realy possible?. We think that not, but we will try to provide most of nessesary features inside XData as soon as possible. We are need Your help to choose the order of features implementation and ideas to do it best!</p>
+</div>
+<div class="IMPORTANT"><h5>Important</h5><p>DDL instructions is not implemented by design. We believe DDL in big complicated real business application is not a thing we can delegate to &quot;dumb-metal-doll&quot;. This is why XData has no mechanics to &quot;CodeFirst&quot;... If You&#39;re task can use CodeFirst approach - use EF. This way is historically reserved by EF, and no reason to fight for it. Calling custom SQL code is a legal way to apply DDL in XData context. Programmer or database administrator write this SQL script. This code is prodused by human, real (not artifical) intellect of professional... XData only has ability to run it over database.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

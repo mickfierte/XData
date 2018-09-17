@@ -1,0 +1,1111 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AttachedHandler&lt;T&gt;
+   | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AttachedHandler&lt;T&gt;
+   | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="XData.AttachedHandler`1">
+  
+  
+  <h1 id="XData_AttachedHandler_1" data-uid="XData.AttachedHandler`1" class="text-break">Class AttachedHandler&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Data object level attached handler wrapper</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">AttachedHandler&lt;T&gt;</span></div>
+      <div class="level2"><a class="xref" href="XData.RepositoryAttachedHandler-1.html">RepositoryAttachedHandler&lt;T&gt;</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
+  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h5 id="XData_AttachedHandler_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AttachedHandler&lt;T&gt;
+    where T : class, IDataObject</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="XData_AttachedHandler_1__ctor_" data-uid="XData.AttachedHandler`1.#ctor*"></a>
+  <h4 id="XData_AttachedHandler_1__ctor_XData_AttachedHandlerType_System_Object_" data-uid="XData.AttachedHandler`1.#ctor(XData.AttachedHandlerType,System.Object)">AttachedHandler(AttachedHandlerType, Object)</h4>
+  <div class="markdown level1 summary"><p>DataObjectAttachedHandler constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AttachedHandler(AttachedHandlerType type, object handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandlerType.html">AttachedHandlerType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">handler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="XData_AttachedHandler_1_Handler_" data-uid="XData.AttachedHandler`1.Handler*"></a>
+  <h4 id="XData_AttachedHandler_1_Handler" data-uid="XData.AttachedHandler`1.Handler">Handler</h4>
+  <div class="markdown level1 summary"><p>Attached handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected object Handler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_Type_" data-uid="XData.AttachedHandler`1.Type*"></a>
+  <h4 id="XData_AttachedHandler_1_Type" data-uid="XData.AttachedHandler`1.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Attached handler type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AttachedHandlerType Type { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandlerType.html">AttachedHandlerType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_GetLobAttachedHandler" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.GetLobAttachedHandler">Explicit(AttachedHandler&lt;T&gt; to GetLobAttachedHandler)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap get Lob handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator GetLobAttachedHandler(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.GetLobAttachedHandler.html">GetLobAttachedHandler</a></td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_GetLobSizeAttachedHandler" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.GetLobSizeAttachedHandler">Explicit(AttachedHandler&lt;T&gt; to GetLobSizeAttachedHandler)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap get Lob size handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator GetLobSizeAttachedHandler(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.GetLobSizeAttachedHandler.html">GetLobSizeAttachedHandler</a></td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_GetXmlAttachedHandler" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.GetXmlAttachedHandler">Explicit(AttachedHandler&lt;T&gt; to GetXmlAttachedHandler)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap get Xml handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator GetXmlAttachedHandler(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.GetXmlAttachedHandler.html">GetXmlAttachedHandler</a></td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_LockAttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.LockAttachedHandler{`0}">Explicit(AttachedHandler&lt;T&gt; to LockAttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap lock object handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator LockAttachedHandler&lt;T&gt;(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.LockAttachedHandler-1.html">LockAttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_RefreshAttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.RefreshAttachedHandler{`0}">Explicit(AttachedHandler&lt;T&gt; to RefreshAttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap refresh object handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator RefreshAttachedHandler&lt;T&gt;(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.RefreshAttachedHandler-1.html">RefreshAttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_SetLobAttachedHandler" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.SetLobAttachedHandler">Explicit(AttachedHandler&lt;T&gt; to SetLobAttachedHandler)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap set Lob handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator SetLobAttachedHandler(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SetLobAttachedHandler.html">SetLobAttachedHandler</a></td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_SetXmlAttachedHandler" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.SetXmlAttachedHandler">Explicit(AttachedHandler&lt;T&gt; to SetXmlAttachedHandler)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap set Xml handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator SetXmlAttachedHandler(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SetXmlAttachedHandler.html">SetXmlAttachedHandler</a></td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_SubmitObjectAttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.SubmitObjectAttachedHandler{`0}">Explicit(AttachedHandler&lt;T&gt; to SubmitObjectAttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap submit object handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator SubmitObjectAttachedHandler&lt;T&gt;(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SubmitObjectAttachedHandler-1.html">SubmitObjectAttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Explicit_" data-uid="XData.AttachedHandler`1.op_Explicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Explicit_XData_AttachedHandler__0___XData_SubmitQueryAttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Explicit(XData.AttachedHandler{`0})~XData.SubmitQueryAttachedHandler{`0}">Explicit(AttachedHandler&lt;T&gt; to SubmitQueryAttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Explicitly unwrap submit query handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator SubmitQueryAttachedHandler&lt;T&gt;(AttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Wrapped handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SubmitQueryAttachedHandler-1.html">SubmitQueryAttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Unwrapped attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_GetLobAttachedHandler__XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.GetLobAttachedHandler)~XData.AttachedHandler{`0}">Implicit(GetLobAttachedHandler to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap get Lob handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(GetLobAttachedHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.GetLobAttachedHandler.html">GetLobAttachedHandler</a></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Get Lob handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_GetLobSizeAttachedHandler__XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.GetLobSizeAttachedHandler)~XData.AttachedHandler{`0}">Implicit(GetLobSizeAttachedHandler to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap get Lob size handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(GetLobSizeAttachedHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.GetLobSizeAttachedHandler.html">GetLobSizeAttachedHandler</a></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Get Lob handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_GetXmlAttachedHandler__XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.GetXmlAttachedHandler)~XData.AttachedHandler{`0}">Implicit(GetXmlAttachedHandler to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap get Xml handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(GetXmlAttachedHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.GetXmlAttachedHandler.html">GetXmlAttachedHandler</a></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Get Xml handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_LockAttachedHandler__0___XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.LockAttachedHandler{`0})~XData.AttachedHandler{`0}">Implicit(LockAttachedHandler&lt;T&gt; to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap lock handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(LockAttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.LockAttachedHandler-1.html">LockAttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Lock handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_RefreshAttachedHandler__0___XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.RefreshAttachedHandler{`0})~XData.AttachedHandler{`0}">Implicit(RefreshAttachedHandler&lt;T&gt; to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap refresh object handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(RefreshAttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.RefreshAttachedHandler-1.html">RefreshAttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Refresh handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_SetLobAttachedHandler__XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.SetLobAttachedHandler)~XData.AttachedHandler{`0}">Implicit(SetLobAttachedHandler to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap set Lob handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(SetLobAttachedHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SetLobAttachedHandler.html">SetLobAttachedHandler</a></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Set Lob handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_SetXmlAttachedHandler__XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.SetXmlAttachedHandler)~XData.AttachedHandler{`0}">Implicit(SetXmlAttachedHandler to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap set Xml handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(SetXmlAttachedHandler handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SetXmlAttachedHandler.html">SetXmlAttachedHandler</a></td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Set Xml handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_SubmitObjectAttachedHandler__0___XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.SubmitObjectAttachedHandler{`0})~XData.AttachedHandler{`0}">Implicit(SubmitObjectAttachedHandler&lt;T&gt; to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap submit object handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(SubmitObjectAttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SubmitObjectAttachedHandler-1.html">SubmitObjectAttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Submit handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_AttachedHandler_1_op_Implicit_" data-uid="XData.AttachedHandler`1.op_Implicit*"></a>
+  <h4 id="XData_AttachedHandler_1_op_Implicit_XData_SubmitQueryAttachedHandler__0___XData_AttachedHandler__0_" data-uid="XData.AttachedHandler`1.op_Implicit(XData.SubmitQueryAttachedHandler{`0})~XData.AttachedHandler{`0}">Implicit(SubmitQueryAttachedHandler&lt;T&gt; to AttachedHandler&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Implicitly wrap submit query handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AttachedHandler&lt;T&gt;(SubmitQueryAttachedHandler&lt;T&gt; handler)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SubmitQueryAttachedHandler-1.html">SubmitQueryAttachedHandler</a>&lt;T&gt;</td>
+        <td><span class="parametername">handler</span></td>
+        <td><p>Submit query handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;</td>
+        <td><p>Data object attached handler</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mapping common rules | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Mapping common rules | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../.././images/cube.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping.md">
+
+<hr>
+<p><a href="../glossary.html">XData tutorial</a></p>
+<hr>
+<h2 id="mapping-common-rules">Mapping common rules</h2>
+<p>All data objects must to be signed with marker interface (empty interface) <a class="xref" href="../../api/XData.IDataObject.html">IDataObject</a>. All objects describes subqueries must to be signed with marker interface <a class="xref" href="../../api/XData.ISqlObject.html">ISqlObject</a>.</p>
+<div class="TIP"><h5>Tip</h5><p>Ability of defining maping to marker interface is key feature of XData alowed get flexible and natural objects deriving hierarchy with full featured and handy methods to work with it (using extension methods).</p>
+</div>
+<p>Mapping rules can be declared statically with attributes of class and its properties (see <a href="static/static.html">static mapping</a>), and dynamically using LINQ style expression (see <a href="dynamic/dynamic.html">dynamic mapping</a>).</p>
+<h3 id="common-types-properties">Common types properties</h3>
+<p>Common types properties (string, bool, int...) including nullable (int?, bool?...), and enum properties is declared as common class properties. Data access to this properties is usual. Only mapping description is depends on <a href="static/static.html#properties">static</a> or <a href="dynamic/dynamic.html#properties">dynamic</a> method of declaration.</p>
+<h3 id="bynary-properties">Bynary properties</h3>
+<p>To work with large binary object (BLOB) using lazy coupling XData represent property type <a class="xref" href="../../api/XData.Mapping.Lob.html">Lob</a>. This type has followed...</p>
+<p>properties:</p>
+<ul>
+<li>byte[] <em>Value</em> - binary object value</li>
+<li>(readonly) bool <em>Assigned</em> - check object has value (including empty value) or NULL</li>
+</ul>
+<p>methods:</p>
+<ul>
+<li><em>GetSize</em>() - returns size of binary object</li>
+<li>(extension) Modify(Action&lt;byte[]&gt; action) - helper method to simplify changing of binary object value</li>
+</ul>
+<p>operation: </p>
+<ul>
+<li>+= - &quot;syntax sugar&quot;, _data.SomeBlob += _someVariable identic with _data.SomeBlob.Value = _someVariable.</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="lang-csharp">newInvoice.Scan += _image;
+...
+if(newInvoice.Scan.Assigned) 
+    _size = newInvoice.Scan.GetSize();
+...
+invoice.Scan.Modify(x =&gt; x = new byte[0]);
+</code></pre><h3 id="xml-properties">Xml properties</h3>
+<p>To work with Xml using lazy coupling XData represent property type <a class="xref" href="../../api/XData.Mapping.Xml.html">Xml</a>. This type has followed...</p>
+<p>properties:</p>
+<ul>
+<li>XDocument <em>Document</em> - get or set Xml value</li>
+<li>(readonly) bool <em>Assigned</em> - check Xml field for NULL value</li>
+</ul>
+<p>methods:</p>
+<ul>
+<li><em>Extract</em>(string path, params KeyValuePair&lt;string, string&gt;[] namespaces) - returning result of XPath expression <em>path</em> using <em>namespaces</em> (pair: namespace - URL)</li>
+<li>(extension) <em>Modify</em>(Action<xdocument> action) - helper method to change Xml value</xdocument></li>
+</ul>
+<p>operations: </p>
+<ul>
+<li>+= - &quot;syntax sugar&quot;, _data.SomeXml += _someVariable identical with _data.SomeXml.Document = _someVariable.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-csharp">newInvoice.Source += new XDocument(new XElement(&quot;invoice&quot;, 
+    new XAttribute(&quot;number&quot;, number), new XAttribute(&quot;state&quot;, newInvoice.DocStateCode)));
+...
+dataScope.GetRepository&lt;Invoice&gt;(Owner, context: Context)
+    .First(x =&gt; x.Source.Extract(&quot;(/invoice/@state)[1]&quot;) == &quot;ACTIVE&quot;).DocNumb
+...
+invoice.Source.Modify(x =&gt; x = new XDocument());
+</code></pre><h3 id="link-properties">Link properties</h3>
+<p>To work with external links to data objects outside current object without operating surogate keys, XData represent special property type - <a class="xref" href="../../api/XData.Mapping.Link-2.html">Link&lt;TVal,TSrc&gt;</a>, where <em>TVal</em> - type of property for preview, <em>TSrc</em> - type of external object. For type <em>Link</em> is defined...</p>
+<p>properties:</p>
+<ul>
+<li>TVal <em>Value</em> - this property to get preview of linked object</li>
+<li>TSrc <em>Source</em> - this property can be used to set linked object</li>
+<li>(readonly) bool <em>Assigned</em> - check link value for NULL value</li>
+</ul>
+<p>operations: </p>
+<ul>
+<li>+= - &quot;syntax sugar&quot;, _data.SomeLink += _someDictionaryObject identic with _data.SomeLink.Source = _someDictionaryObject.</li>
+</ul>
+<pre><code class="lang-csharp">newInvoice.DocState += dataScope.GetDictionaryValue&lt;DocState&gt;(x =&gt; x.Code == &quot;CREATED&quot;);
+</code></pre><p>To make link properties work correct, at mapping level need to be defined pairs of properties source and current objects, that values will be copied from source object to current when link is applied. Link description is deferent for <a href="static/static.html#links">static</a> and <a href="dynamic/dynamic.html#links">dynamic</a> methods of mapping.</p>
+<h3 id="readonly-properties">Readonly properties</h3>
+<p>Read only properties XData require to perform as in example below: </p>
+<pre><code class="lang-csharp">public string DocStateCode { get { return this.GetProperty(x =&gt; x.DocStateCode); } }
+</code></pre><p>Data access is provided through extension method <a class="xref" href="../../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetProperty__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">GetProperty</a>, but property is read only.</p>
+<h3 id="child-repositories-referencies">Child repositories referencies</h3>
+<p>Slave related repositories XData require to perform as:</p>
+<pre><code class="lang-csharp">public IRepository&lt;InvoiceSpec&gt; Spec { 
+    get { 
+            return this.GetRepository().GetChild&lt;InvoiceSpec&gt;(); 
+        } 
+}
+</code></pre><p>No additional mapping description are needed. Only <a href="mapping.html#master-slave-relations">external reference</a> is required.</p>
+<div class="TIP"><h5>Tip</h5><p>To use XData Unit of Work realization (<a href="../unit_of_work.html">WorkSet</a>), child repositories referencies are required.</p>
+</div>
+<h3 id="hidden-properties">Hidden properties</h3>
+<p>Some columns in database is needed to full description of mapping, but not required to business logic. This columns is declared as part of mapping named <em>Column</em> is selected from database, but not mapped on data object properties.</p>
+<p>For example - XData can operate primary (PK) and foreign (FK) keys of business objects and work with master-slave references between them, but mapping to property of <a href="mapping.html#master-slave-relations">external references</a> is not required to operate with key. </p>
+<p>Second case - optimistic concurrency resolving (see <a href="../concurrency.html">concurrency resolving</a>) required concurrency token field, but this field is not required to busines logic.</p>
+<p>Third example - when data is grouped, needed to declare some field to link with <a href="mapping.html#master-slave-relations">external reference</a>, but in this case possibly we can`t include this field in SELECT expression because of GROUP BY syntax. This case is resolved by <a class="xref" href="../../api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_Hidden">Hidden</a> property of column declaration. When <em>Hidden</em> is true - column will be not included into SELECT expression of resulted SQL query.</p>
+<p>Hidden properties description is various to <a href="static/static.html#hidden-properties">static</a> and <a href="dynamic/dynamic.html#hidden-properties">dynamic</a> mapping declaration methods.</p>
+<h2 id="master-slave-relations">Master slave relations</h2>
+<p>External referencies is the base element of master-slave references definition in XData. It describes link rules between related slave entities from master entities. XData support multi master and multi slave relation (many-to-many). And it&#39;s possible to define multiple relations between every two data objects. </p>
+<p>External referencies is the declarations of <em>possible</em> master-detail relations between <a href="../glossary.html#data-object">data objects</a>. Each of external reference is describe master property (or <a href="mapping.html#hidden-properties">column</a>) to slave filter relation, used to filter slave collections data when master <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_Current">current</a> object is set. </p>
+<div class="TIP"><h5>Tip</h5><p>External referencies applied to <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_GetChild__1_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">manualy attached</a> slave data sources only.</p>
+</div>
+<p>External references definition is differs for <a href="static/static.html#external-link">static</a> and <a href="dynamic/dynamic.html#external-link">dynamic</a> methods of mapping.</p>
+<p>Reference rules is defined at mapping level, and when slave object will be attached using <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_GetChild__1_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> method, that rules will be applyed.</p>
+<p>To break master-slave reference call <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_DetachChild__1_System_String_">DetachChild</a> method. When <a href="../glossary.html#data-scope">data scope</a> or one of referenced <a href="../glossary.html#repository">repositories</a> will be disposed - reference is breaked automatically.</p>
+<p>Slave object reference filter value is set when <a class="xref" href="../../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetCurrent__1___0_">SetCurrent</a> extension method is called for master object.</p>
+<pre><code class="lang-csharp">if (newInvoice.Submit())
+{
+    newInvoice.SetCurrent();
+    return true;
+}
+</code></pre><p>Master-slave linked repositories can be used for cascade delete operation over multiple related data objects:</p>
+<pre><code class="lang-csharp">newInvoice.SetDeleted(true);
+newInvoice.Submit(DataSubmitFlag.Cascade);
+</code></pre><p>or cascade delete applyed for filtered subset of repository objects and their slave objects:</p>
+<pre><code class="lang-csharp">invoices.Clear(x =&gt; x.DocStateCode == &quot;REJECTED&quot;, DataSubmitFlag.Cascade);
+</code></pre><h2 id="tree">Tree</h2>
+<p>XData can use CTE (common table expression) as part of <a href="../glossary.html#repository">repository</a> data source definition. Supported as plain (WITH), as recursive (WITH RECURSIVE) expressions.</p>
+<p>CTE is defined in mapping diferently for <a href="static/static.html#tree">static</a> and <a href="dynamic/dynamic.html#tree">dynamic</a> mapping paradigm, but it can be used with similar way: defined one or more tables with unique aliases and name equals CTE name.</p>
+<p>Recursive CTE can be used as independent data source too. In this case CTE name must to be declared as base table of repository.</p>
+<h2 id="sql-functions--procedures">SQL functions &amp; procedures</h2>
+<p>Stored procedures and functions can be used as data source of mapping (if used DBMS and ADO .Net provider is support this). </p>
+<div class="IMPORTANT"><h5>Important</h5><p>At this moment we has various limitations of using SQL procedures as on DBMS SQL dialect level, as on ADO .Net provider realization level. Please, choose DBMS and ADO .Net provider with keep in mind limitations they have. XData support many procedure mapping styles and call conventions, but can not garant all of them is supported by DBMS and ADO .Net provider You choose.</p>
+</div>
+<p>XData has support followed SQL procedure mapping styles and call conventions and it combinations:</p>
+<ul>
+<li>Using procedure resultset as data source</li>
+<li>Using procedure with multiple resultsets</li>
+<li>Using out parameters</li>
+<li>Using return value of stored procedure </li>
+<li>Using symple type array as parameter</li>
+<li>Using cursor as parameter</li>
+<li>Using UTD (user defined type) as parameter</li>
+<li>Using table valued function as data source</li>
+<li>Using scalar function as single property source</li>
+</ul>
+<div class="WARNING"><h5>Warning</h5><p>Class mapped to UDT must support native XML serialization! </p>
+</div>
+<p>All this mapping features described as for <a href="static/static.html#sql-procedures--functions">static</a> as for <a href="dynamic/dynamic.html#sql-procedures--functions">dynamic</a> mapping paradigm.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

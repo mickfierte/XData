@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IConfiguration
+   | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IConfiguration
+   | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="XData.Interfaces.IConfiguration">
+  
+  
+  <h1 id="XData_Interfaces_IConfiguration" data-uid="XData.Interfaces.IConfiguration" class="text-break">Interface IConfiguration
+  </h1>
+  <div class="markdown level0 summary"><p>XData configuration</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="XData.Interfaces.html">XData.Interfaces</a></h6>
+  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h5 id="XData_Interfaces_IConfiguration_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IConfiguration</code></pre>
+  </div>
+  <h5 id="XData_Interfaces_IConfiguration_examples"><strong>Examples</strong></h5>
+  <pre><code class="xml">    &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?>
+    &lt;configuration>
+      &lt;!-- *** WARNING! configSections section with declaration of &quot;xdata&quot; is required and mast be first child section of configuration! -->
+      &lt;configSections>
+        &lt;section name=&quot;xdata&quot; type=&quot;System.Configuration.IgnoreSectionHandler&quot; />
+      &lt;/configSections>
+      &lt;!-- *** You can configure Your application to direct connect database OR use application server -->
+      &lt;!-- *** Endpoint required using application server only -->
+      &lt;!--&lt;system.serviceModel>
+      &lt;client>
+        &lt;endpoint address=&quot;net.tcp://localhost:8733/AppServer/&quot;
+          binding=&quot;netTcpBinding&quot;
+          contract=&quot;XDataProxy.IAppServer&quot;
+          name=&quot;XAppServer&quot; />
+      &lt;/client>
+      &lt;/system.serviceModel>-->
+      &lt;!-- *** Connection strings required using direct connect only -->
+      &lt;connectionStrings>
+        &lt;add name=&quot;TEST&quot; connectionString=&quot;Data Source=(local);Initial Catalog=XDataTest;User Id=test;Password=test&quot; />
+      &lt;/connectionStrings>
+      &lt;!-- *** xdata section (see XDataConfiguration.DefaultContext, XDataConfiguration.AssemblyPath, XDataConfiguration.WriteDebugInfo, XDataConfiguration.LogWriter documentation) -->
+      &lt;xdata default=&quot;TEST&quot; assemblyPath=&quot;.\&quot; debug=&quot;false&quot; log=&quot;XData.Logging.Trace.TraceWriter, XData.Logging.Trace&quot;>
+        &lt;!-- *** Specific SQL data access adapter required using direct database access  (see XDataConfiguration.Adapters documentation) -->
+        &lt;adapter name=&quot;MSSQL&quot; file=&quot;C:\Projects\Net40\XData\_Debug\XMsSqlAdapter.dll&quot;/>
+        &lt;!-- *** Specific SQL dialect adapter  (see XDataConfiguration.Dialects documentation) -->
+        &lt;dialect name=&quot;MSSQL&quot; file=&quot;C:\Projects\Net40\XData\_Debug\XMsSqlDialect.dll&quot;/>
+        &lt;!-- *** Proxy adapter required using application server only -->
+        &lt;!--&lt;adapter name=&quot;PROXY&quot; file=&quot;C:\XData\XProxyAdapter.dll&quot;/>-->
+        &lt;!-- *** Context can be configured by direct or proxy adapter according Your needs (see XDataConfiguration.Contexts, ContextConfig.SequenceNameRule documentation) -->
+        &lt;!--&lt;context name=&quot;TEST&quot; adapter=&quot;PROXY&quot;/>-->
+        &lt;context name=&quot;TEST&quot; adapter=&quot;MSSQL&quot; sequence=&quot;XMyCustomLib.MyDbSequence, XMyCustomLib&quot;/>
+        &lt;!-- *** Context proxy configuration required using application server only (see XDataConfiguration.ProxyList documentation) -->
+        &lt;!--&lt;proxy name=&quot;TEST&quot; adapter=&quot;MSSQL&quot; endpoint=&quot;XAppServer&quot; />-->
+      &lt;/xdata>
+    &lt;/configuration></code></pre>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_Adapters_" data-uid="XData.Interfaces.IConfiguration.Adapters*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_Adapters" data-uid="XData.Interfaces.IConfiguration.Adapters">Adapters</h4>
+  <div class="markdown level1 summary"><p>Registered adapters collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;AdapterConfig&gt; Adapters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="XData.Interfaces.AdapterConfig.html">AdapterConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Interfaces_IConfiguration_Adapters_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Interfaces.AdapterConfig.html">AdapterConfig</a></div>
+  </div>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_Contexts_" data-uid="XData.Interfaces.IConfiguration.Contexts*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_Contexts" data-uid="XData.Interfaces.IConfiguration.Contexts">Contexts</h4>
+  <div class="markdown level1 summary"><p>Registered contexts collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;ContextConfig&gt; Contexts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="XData.Interfaces.ContextConfig.html">ContextConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Interfaces_IConfiguration_Contexts_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Interfaces.ContextConfig.html">ContextConfig</a></div>
+  </div>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_DefaultContext_" data-uid="XData.Interfaces.IConfiguration.DefaultContext*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_DefaultContext" data-uid="XData.Interfaces.IConfiguration.DefaultContext">DefaultContext</h4>
+  <div class="markdown level1 summary"><p>Default context name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DefaultContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Interfaces_IConfiguration_DefaultContext_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>WARNING! Required configuration attribute!</p>
+</div>
+  <h5 id="XData_Interfaces_IConfiguration_DefaultContext_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.IDataQuery.html#XData_IDataQuery_Context">Context</a></div>
+      <div><a class="xref" href="XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Context">Context</a></div>
+  </div>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_Dialects_" data-uid="XData.Interfaces.IConfiguration.Dialects*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_Dialects" data-uid="XData.Interfaces.IConfiguration.Dialects">Dialects</h4>
+  <div class="markdown level1 summary"><p>Registered SQL dialects collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;DialectConfig&gt; Dialects { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="XData.Interfaces.DialectConfig.html">DialectConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Interfaces_IConfiguration_Dialects_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Interfaces.DialectConfig.html">DialectConfig</a></div>
+  </div>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_LifeTimeLimit_" data-uid="XData.Interfaces.IConfiguration.LifeTimeLimit*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_LifeTimeLimit" data-uid="XData.Interfaces.IConfiguration.LifeTimeLimit">LifeTimeLimit</h4>
+  <div class="markdown level1 summary"><p>XData objects lifetime limit (minutes)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int LifeTimeLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_LogWriter_" data-uid="XData.Interfaces.IConfiguration.LogWriter*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_LogWriter" data-uid="XData.Interfaces.IConfiguration.LogWriter">LogWriter</h4>
+  <div class="markdown level1 summary"><p>Log writer class name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string LogWriter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_MonitoringContext_" data-uid="XData.Interfaces.IConfiguration.MonitoringContext*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_MonitoringContext" data-uid="XData.Interfaces.IConfiguration.MonitoringContext">MonitoringContext</h4>
+  <div class="markdown level1 summary"><p>Health monitoring context name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string MonitoringContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Interfaces_IConfiguration_MonitoringContext_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.IDataQuery.html#XData_IDataQuery_Context">Context</a></div>
+      <div><a class="xref" href="XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Context">Context</a></div>
+  </div>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_ProxyList_" data-uid="XData.Interfaces.IConfiguration.ProxyList*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_ProxyList" data-uid="XData.Interfaces.IConfiguration.ProxyList">ProxyList</h4>
+  <div class="markdown level1 summary"><p>Registered proxy collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;ProxyConfig&gt; ProxyList { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="XData.Interfaces.ProxyConfig.html">ProxyConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Interfaces_IConfiguration_ProxyList_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Interfaces.ProxyConfig.html">ProxyConfig</a></div>
+  </div>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_SecurityContext_" data-uid="XData.Interfaces.IConfiguration.SecurityContext*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_SecurityContext" data-uid="XData.Interfaces.IConfiguration.SecurityContext">SecurityContext</h4>
+  <div class="markdown level1 summary"><p>Security context name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SecurityContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Interfaces_IConfiguration_SecurityContext_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.IDataQuery.html#XData_IDataQuery_Context">Context</a></div>
+      <div><a class="xref" href="XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Context">Context</a></div>
+  </div>
+  
+  
+  <a id="XData_Interfaces_IConfiguration_WriteDebugInfo_" data-uid="XData.Interfaces.IConfiguration.WriteDebugInfo*"></a>
+  <h4 id="XData_Interfaces_IConfiguration_WriteDebugInfo" data-uid="XData.Interfaces.IConfiguration.WriteDebugInfo">WriteDebugInfo</h4>
+  <div class="markdown level1 summary"><p>Write debug info</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool WriteDebugInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Interfaces_IConfiguration_WriteDebugInfo_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Default value is false</p>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Interfaces.IConfiguration.html#XData_Interfaces_IConfiguration_Adapters">Adapters</a></div>
+      <div><a class="xref" href="XData.Interfaces.IConfiguration.html#XData_Interfaces_IConfiguration_Dialects">Dialects</a></div>
+      <div><a class="xref" href="XData.Interfaces.IConfiguration.html#XData_Interfaces_IConfiguration_Contexts">Contexts</a></div>
+      <div><a class="xref" href="XData.Interfaces.IConfiguration.html#XData_Interfaces_IConfiguration_ProxyList">ProxyList</a></div>
+      <div><a class="xref" href="XData.Interfaces.IConfiguration.html#XData_Interfaces_IConfiguration_DefaultContext">DefaultContext</a></div>
+      <div><a class="xref" href="XData.Interfaces.IConfiguration.html#XData_Interfaces_IConfiguration_WriteDebugInfo">WriteDebugInfo</a></div>
+      <div><a class="xref" href="XData.Interfaces.IConfiguration.html#XData_Interfaces_IConfiguration_LogWriter">LogWriter</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

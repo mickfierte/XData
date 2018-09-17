@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dynamic mapping sample | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Dynamic mapping sample | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping_dynamic_sample.md">
+<h2 id="dynamic-mapping-sample">Dynamic mapping sample</h2>
+
+<p>Dynamic mapping example for same data object as represented in <a href="../static/static.html#static-mapping-sample">static mapping</a> description:</p>
+<pre><code class="lang-csharp">public partial class Invoice: IDataObject
+{
+    public static CustomLogic&lt;Invoice&gt; TestCustomLogic;
+
+    private static Expression&lt;CustomMapping&lt;Invoice&gt;&gt; _mapping = (
+        () =&gt; XDataMapping.CustomMapping&lt;Invoice&gt;()
+            .DataTable(&quot;T_DOC&quot;, &quot;D&quot;, 
+                x =&gt; x.DictFilter(&quot;T_DOC_TYPE&quot;, &quot;doc_type_id&quot;, &quot;code&quot;, &quot;INVOICE&quot;))
+            .DataTable(&quot;T_DOC_DOC_STATE&quot;, &quot;DS&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;))
+            .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;, x =&gt; x.Link(&quot;DS&quot;, &quot;doc_state_id&quot;))
+            .DataTable(&quot;T_DOC_CATALOGUE&quot;, &quot;DC&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;), 
+                x =&gt; x.SubqueryFilter(&quot;catalogue_id&quot;, &quot;UT&quot;).SetOperation(FilterOperation.In))
+            .DataTable(&quot;T_CATALOGUE&quot;, &quot;U&quot;, x =&gt; x.Link(&quot;DC&quot;, &quot;catalogue_id&quot;))
+            .DataTable(&quot;T_DOC_NUMBER&quot;, &quot;N&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;))
+            .DataTable(&quot;T_DOC_CUST&quot;, &quot;CF&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;), 
+                x =&gt; x.DictFilter(&quot;T_DOC_CUST_TYPE&quot;, &quot;doc_cust_type_id&quot;, &quot;code&quot;, &quot;FROM&quot;))
+            .DataTable(&quot;T_CUSTOMER&quot;, &quot;F&quot;, x =&gt; x.Link(&quot;CF&quot;, &quot;customer_id&quot;))
+            .DataTable(&quot;T_DOC_CUST&quot;, &quot;CT&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;), 
+                x =&gt; x.DictFilter(&quot;T_DOC_CUST_TYPE&quot;, &quot;doc_cust_type_id&quot;, &quot;code&quot;, &quot;TO&quot;))
+            .DataTable(&quot;T_CUSTOMER&quot;, &quot;T&quot;, 
+                x =&gt; x.Link(&quot;CT&quot;, &quot;customer_id&quot;))
+            .DataTable(&quot;T_DOC_SCAN&quot;, &quot;SC&quot;, &quot;D&quot;, 
+                x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;).SetOperation(FilterOperation.OuterJoin))
+            .DataTable(&quot;T_DOC_SOURCE&quot;, &quot;SR&quot;, &quot;D&quot;, 
+                x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;).SetOperation(FilterOperation.OuterJoin))
+            .DataTable(&quot;T_DOC_DELIVERY&quot;, &quot;DD&quot;, &quot;D&quot;, 
+                x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;).SetOperation(FilterOperation.OuterJoin))
+            .Subquery(&quot;A&quot;, typeof(DocSpecAmounts), &quot;Amount&quot;, DataGrouping.Sum, 
+                x =&gt; x.SubqueryLink(&quot;DocId&quot;))
+            .Subquery&lt;CatalogueTree&gt;(&quot;UT&quot;, x =&gt; x.CatalogueId, DataGrouping.None)
+            .InnerView(&quot;H&quot;, XDataMapping.GetStructure(&quot;H&quot;, null, 
+                DataStructureFlag.Grouping, new Variable[0])
+                .DataTable(&quot;T_DOC_HISTORY&quot;, &quot;H&quot;)
+                .Select(x =&gt; new {
+                    DocId = x.Field&lt;long?&gt;(&quot;H&quot;, string.Empty, 
+                        z =&gt; z.Group(DataGrouping.None)),
+                    HistoryDate = x.Field&lt;DateTime?&gt;(&quot;H&quot;, string.Empty, 
+                        z =&gt; z.Group(DataGrouping.Max))
+                }), x =&gt; x.SubqueryLink(&quot;DocId&quot;).SetOperation(FilterOperation.OuterJoin))
+            .InnerView&lt;DocBySpecType&gt;(&quot;ST&quot;, x =&gt; x.SubqueryLink(&quot;DocId&quot;))
+            .Column(&quot;DocId&quot;, x =&gt; x.Field&lt;long?&gt;(&quot;D&quot;, string.Empty, 
+                z =&gt; z.Key(), z =&gt; z.Default(DefaultType.AutoIncrement)))
+            .Column(&quot;CatalogueId&quot;, x =&gt; x.Field&lt;long?&gt;(&quot;U&quot;, string.Empty))
+            .ReadOnlyProperty(x =&gt; x.DocStateCode, x =&gt; x.Field&lt;string&gt;(&quot;S&quot;, &quot;code&quot;))
+            .ReadOnlyProperty(x =&gt; x.Generation, 
+                x =&gt; x.Field&lt;long&gt;(&quot;D&quot;, string.Empty, 
+                    z =&gt; z.ConcurrencyToken(), z =&gt; z.Default(DefaultType.AutoIncrement)))
+            .ReadOnlyProperty(x =&gt; x.Changed, 
+                x =&gt; x.Field&lt;DateTime&gt;(&quot;D&quot;, string.Empty, 
+                    z =&gt; z.Default(DefaultType.CurrentDateTime, true)))
+            .ReadOnlyProperty(x =&gt; x.Author, 
+                x =&gt; x.Field&lt;string&gt;(&quot;D&quot;, string.Empty, 
+                    z =&gt; z.Default(DefaultType.UserName, true)))
+            .ReadOnlyProperty(x =&gt; x.DocAmount, 
+                x =&gt; x.Expr&lt;decimal?&gt;(null, DataExpressionType.SubQuery, 
+                    &quot;A&quot;, DbType.Decimal, z =&gt; z.Size(17, 5)))
+            .ReadOnlyProperty(x =&gt; x.DocLastChange, x =&gt; x.Ref&lt;DateTime?&gt;(&quot;H&quot;, &quot;HistoryDate&quot;))
+            .Map(x =&gt; new Invoice {
+                DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
+                    z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Name),
+                    z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Code, y =&gt; y.DocStateCode)),
+                DocCatalog = x.Link&lt;string, Catalogue&gt;(&quot;U&quot;, &quot;name&quot;, 
+                    z =&gt; z.LinkProperty&lt;Catalogue&gt;(y =&gt; y.Name)),
+                DocNumb = x.Field&lt;string&gt;(&quot;N&quot;, &quot;numb&quot;),
+                DocDate = x.Field&lt;DateTime?&gt;(&quot;D&quot;, string.Empty, 
+                    z =&gt; z.Default(DefaultType.CurrentDate)),
+                Scan = x.Lob(&quot;SC&quot;, z =&gt; z.OuterFlag()),
+                Source = x.Xml(&quot;SR&quot;, z =&gt; z.OuterFlag()),
+                CustomerFrom = x.Link&lt;string, Customer&gt;(&quot;F&quot;, &quot;name&quot;, 
+                    z =&gt; z.LinkProperty&lt;Customer&gt;(y =&gt; y.Name)),
+                CustomerTo = x.Link&lt;string, Customer&gt;(&quot;T&quot;, &quot;name&quot;, 
+                    z =&gt; z.LinkProperty&lt;Customer&gt;(y =&gt; y.Name)),
+                DeliveryType = x.Field&lt;DeliveryTypeEnum&gt;(&quot;DD&quot;, string.Empty),
+                DeliveryDate = x.Field&lt;DateTime?&gt;(&quot;DD&quot;, string.Empty, 
+                    z =&gt; z.Default(DefaultType.CurrentDate))
+            }, x =&gt; x.ExternalLink&lt;InvoiceSpec&gt;(&quot;DocId&quot;))
+            .SetBaseTable(&quot;D&quot;).SetLogicAssembly(&quot;XDataObjectTest&quot;)
+    );
+}
+...    
+public partial class Invoice: IDataObject
+{
+    public string DocStateCode { get 
+        { return this.GetProperty(x =&gt; x.DocStateCode); } 
+    }
+    public Link&lt;string, DocState&gt; DocState { get; set; }
+    public Link&lt;string, Catalogue&gt; DocCatalog { get; set; }
+    public string DocNumb { get; set; }
+    public DateTime? DocDate { get; set; }
+    public long Generation { get { return this.GetProperty(x =&gt; x.Generation); } }
+    public DateTime Changed { get { return this.GetProperty(x =&gt; x.Changed); } }
+    public string Author { get { return this.GetProperty(x =&gt; x.Author); } }
+    public decimal? DocAmount { get { return this.GetProperty(x =&gt; x.DocAmount); } }
+    public DateTime? DocLastChange { get 
+        { return this.GetProperty(x =&gt; x.DocLastChange); } 
+    }
+    public Lob Scan { get; set; }
+    public Xml Source { get; set; }
+    public Link&lt;string, Customer&gt; CustomerFrom { get; set; }
+    public Link&lt;string, Customer&gt; CustomerTo { get; set; }
+    public DeliveryTypeEnum DeliveryType { get; set; }
+    public DateTime? DeliveryDate { get; set; }
+
+    public IRepository&lt;InvoiceSpec&gt; Spec { get 
+        { return this.GetRepository().GetChild&lt;InvoiceSpec&gt;(); } 
+    }
+}
+</code></pre><p>Dynamic mapping provide more representable mechanics to define mapping because of no attribute parameters limitation. Subqueries and inner views can be described in place using <a href="../../query.html">dynamic query</a> mechanics. SQL expressions can be described in LINQ style in place. This abilities enreach representability of dynamic mapping.</p>
+<p>Dynamic mapping alowes split <a href="../../glossary.html#data-object">data object</a> to partial class definitions with basic class definition and mapping.</p>
+<p>Dynamic mapping is described as private static field of type Expression&lt;CustomMapping&lt;T&gt;&gt; where T - data object type. The value of this property is assigned by call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_CustomMapping__1">XDataMapping.CustomMapping&lt;T&gt;</a> method returning <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a>. Interface <em>IRepositoryStructure&lt;T&gt;</em> has a number of methods to describe all of mapping entities analog to <a href="../static/static.html">static mapping</a> attributes.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

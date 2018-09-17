@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IDataObject
+   | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IDataObject
+   | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="XData.IDataObject">
+  
+  
+  <h1 id="XData_IDataObject" data-uid="XData.IDataObject" class="text-break">Interface IDataObject
+  </h1>
+  <div class="markdown level0 summary"><p>Data object interface</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
+  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h5 id="XData_IDataObject_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDataObject : ISqlObject</code></pre>
+  </div>
+  <h5 id="XData_IDataObject_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><p>Mapping domain object to database</p>
+<p>WARNING! Data object mapping requires <a class="xref" href="XData.Mapping.DataObjectAttribute.html">DataObjectAttribute</a>!</p>
+<p>Hint: Use <a class="xref" href="XData.Mapping.DataTableAttribute.html">DataTableAttribute</a>, <a class="xref" href="XData.Mapping.SubqueryAttribute.html">SubqueryAttribute</a> and <a class="xref" href="XData.Mapping.InnerViewAttribute.html">InnerViewAttribute</a> to map data object to data sources</p>
+<p>Hint: Use <a class="xref" href="XData.Mapping.FilterAttribute.html">FilterAttribute</a>&apos;s specific successor to link data sources and apply filters to data</p>
+<p>Hint: Use <a class="xref" href="XData.Mapping.ExternalLinkAttribute.html">ExternalLinkAttribute</a> to declare master/slave relations between repositories</p>
+<p>Hint: Use <a class="xref" href="XData.Mapping.Lob.html">Lob</a> to map binary fields</p><pre><code class="cs"><p>    [Property(&quot;scan&quot;, &quot;SC&quot;, Flags = DataPropertyFlag.OuterFlag)]</p>
+<p>    public Lob Scan { get; set; }</p></code></pre>
+<p>Hint: Use <a class="xref" href="XData.Mapping.Xml.html">Xml</a> to map Xml fields</p><pre><code class="cs"><p>    [Property(&quot;source&quot;, &quot;SR&quot;, Flags = DataPropertyFlag.OuterFlag)]</p>
+<p>    public Xml Source { get; set; }</p></code></pre>
+<p>Hint: Use <a class="xref" href="XData.Mapping.Link-2.html">Link&lt;TVal, TSrc&gt;</a> to map data link</p><pre><code class="cs"><p>    [Property(&quot;name&quot;, &quot;S&quot;), </p>
+<p>        DictionaryProperty(&quot;Name&quot;, &quot;DocState&quot;),</p>
+<p>        DictionaryProperty(&quot;Code&quot;, &quot;DocStateCode&quot;)]</p>
+<p>    public Link&lt;string, DocState> DocState { get; set; }</p></code></pre>
+<p>Hint: Use <a class="xref" href="XData.Mapping.ColumnAttribute.html">ColumnAttribute</a> to map data without declaring property (for example to declare <a class="xref" href="XData.DataPropertyFlag.html#XData_DataPropertyFlag_Id">Id</a>)
+</p><pre><code class="cs"><p>    [DataObject(&quot;S&quot;), </p>
+<p>        DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;), </p>
+<p>        Column(&quot;DocStateId&quot;, &quot;doc_state_id&quot;, typeof(long?), &quot;S&quot;, Flags = DataPropertyFlag.Id)] </p></code></pre>
+<p>Hint: Use <a class="xref" href="XData.Mapping.PropertyExpressionAttribute.html">PropertyExpressionAttribute</a> or <a class="xref" href="XData.Mapping.ColumnExpressionAttribute.html">ColumnExpressionAttribute</a> to use SQL expression or subquery as property (or mapped column) data source
+</p><pre><code class="cs"><p>    [Property(&quot;doc_amount&quot;), </p>
+<p>        PropertyExpression(&quot;A&quot;, DataExpressionType.SubQuery, DbType.Decimal, ExprSize = 17, ExprScale = 5)] </p>
+<p>    public double? DocAmount { get { return this.GetProperty(() => DocAmount); } }</p></code></pre>
+<p>Hint: Use <a class="xref" href="XData.Mapping.PropertyDefaultAttribute.html">PropertyDefaultAttribute</a> or <a class="xref" href="XData.Mapping.ColumnDefaultAttribute.html">ColumnDefaultAttribute</a> to set default value generation rule to property (or mapped column)</p><pre><code class="cs"><p>    [Property(&quot;doc_date&quot;, &quot;D&quot;), </p>
+<p>        PropertyDefault(DefaultType.CurrentDate)] </p>
+<p>    public DateTime? DocDate { get; set; }</p></code></pre>
+<p>Hint: Use <a class="xref" href="XData.Mapping.ReferenceAttribute.html">ReferenceAttribute</a> to use inner view property in parent data object</p><pre><code class="cs"><p>    [PropertyLink(&quot;HistoryDate&quot;, &quot;H&quot;)] </p>
+<p>    public DateTime? DocLastChange { get { return this.GetProperty(() => DocLastChange); } }</p></code></pre>
+<p>Hint: Declare readonly fields as</p><pre><code class="cs"><p>    [PropertyLink(&quot;HistoryDate&quot;, &quot;H&quot;)] </p>
+<p>    public DateTime? DocLastChange { get { return this.GetProperty(() => DocLastChange); } }</p></code></pre>
+<p>Hint: Declare custom logic functions (see <a class="xref" href="XData.IDataLogic-1.html">IDataLogic&lt;T&gt;</a> and 
+<a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_Execute__1_System_Collections_Generic_ICollection___0__System_String_System_Collections_Generic_IDictionary_System_String_System_Action_System_Byte_____System_Collections_Generic_IDictionary_System_String_System_Func_System_Byte___System_Byte_____">Execute&lt;T&gt;(ICollection&lt;T&gt;, String, IDictionary&lt;String, Action&lt;Byte[]&gt;&gt;, IDictionary&lt;String, Func&lt;Byte[], Byte[]&gt;&gt;)</a>) as</p></p>
+<pre><code class="cs"><p>//generate unique action key and use it for mark it realization in IDataLogic&lt;Invoice></p>
+<p>    [CustomAction(&quot;{ab12d6f0-69d0-4997-bb0b-5f5f7c0581d1}&quot;)]</p>
+<p>    public static CustomLogic&lt;Invoice> TestCustomLogic;</p>
+<p>//using</p>
+<p>    obj.Execute(() => Invoice.TestCustomLogic);</p></code></pre>
+<p><p>Hint: <a class="xref" href="XData.IDataQuery.html#XData_IDataQuery_Variables">Variables</a> can be used as temporary values storage</p></p>
+<pre><code class="cs"><p>// store</p>    
+<p>    obj.GetRepository().Variables.Add(&quot;SomeName&quot;, &quot;SomeValue&quot;);</p>
+<p>// and somewhere you can get it</p>
+<p>    var something = obj.GetRepository().Variables[&quot;SomeName&quot;];</p></code></pre>
+<p><p>Hint: <a class="xref" href="XData.Mapping.HierarchyAttribute.html">HierarchyAttribute</a> can be used to fill and maintain hierarchy tables automatically</p><pre><code class="cs"><p>// Table T_TEST has parent_id field tree linked to test_id (T_TEST&apos;s pk)</p>
+<p>// Table L_TEST has two fields parent_id and child_id all linked to T_TEST.test_id </p>
+<p>// Table L_TEST contains all subtree relations inside T_TEST</p>
+<p>// For example: for T_TEST (test_id, parent_id): (1, null) : (2, 1) : (3, 2)</p>
+<p>// L_TEST will contain (parent_id, child_id): (1, 1) : (1, 2) : (1, 3) : (2, 2) : (2, 3) : (3, 3)</p>
+<p>    [DataObject(&quot;T&quot;),</p>
+<p>        DataTable(&quot;T_TEST&quot;, &quot;T&quot;),</p>
+<p>        Hierarchy(&quot;T&quot;, &quot;L_TEST&quot;, &quot;parent_id&quot;, &quot;parent_id&quot;, &quot;child_id&quot;),</p>
+<p>        Column(&quot;TestId&quot;, &quot;test_id&quot;, typeof(long?), &quot;T&quot;, Flags = DataPropertyFlag.Id)]</p></code></pre></p>
+</div>
+  <h5 id="XData_IDataObject_examples"><strong>Examples</strong></h5>
+  <pre><code class="cs"><p>[DataObject(&quot;T&quot;),</p>
+<p>    DataTable(&quot;T_DOC_TYPE&quot;, &quot;T&quot;),</p>
+<p>    Column(&quot;DocTypeId&quot;, &quot;doc_type_id&quot;, typeof(long?), &quot;T&quot;, Flags = DataPropertyFlag.Id)]</p>
+<p>public class DocType : IDataObject {</p>
+<p>
+<p>    [Property(&quot;name&quot;, &quot;T&quot;)]</p>
+<p>    public string Name { get; set; }</p>
+<p>
+<p>    [Property(&quot;code&quot;, &quot;T&quot;)]</p>
+<p>    public string Code { get; set; }</p>
+}</code></pre>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_Modify__1___0_System_Action___0____">DataObjectExtensions.Modify&lt;T&gt;(T, Action&lt;T&gt;[])</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetProperties__1___0_System_Collections_Generic_IEnumerable_System_String__XData_DataVersion_">DataObjectExtensions.GetProperties&lt;T&gt;(T, IEnumerable&lt;String&gt;, DataVersion)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetProperties__1___0_System_String___">DataObjectExtensions.GetProperties&lt;T&gt;(T, String[])</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetProperties__1___0_XData_DataVersion_System_String___">DataObjectExtensions.GetProperties&lt;T&gt;(T, DataVersion, String[])</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsCleared__1___0_System_String_">DataObjectExtensions.IsCleared&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsChanged__1___0_System_String_">DataObjectExtensions.IsChanged&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsChanged__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">DataObjectExtensions.IsChanged&lt;T&gt;(T, Expression&lt;Func&lt;T, Object&gt;&gt;[])</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsEmpty__1___0_System_String_">DataObjectExtensions.IsEmpty&lt;T&gt;(T, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsEmpty__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object___">DataObjectExtensions.IsEmpty&lt;T&gt;(T, Expression&lt;Func&lt;T, Object&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetProperty__1_XData_IDataObject_System_String_">DataObjectExtensions.GetProperty&lt;TRet&gt;(IDataObject, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetContext_XData_IDataObject_">DataObjectExtensions.GetContext(IDataObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetLayer_XData_IDataObject_">DataObjectExtensions.GetLayer(IDataObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetRepositoryAlias_XData_IDataObject_">DataObjectExtensions.GetRepositoryAlias(IDataObject)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsAttached_XData_IDataObject_System_Type_">DataObjectExtensions.IsAttached(IDataObject, Type)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetState__1___0_">DataObjectExtensions.GetState&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_CheckState__1___0_XData_DataObjectState_">DataObjectExtensions.CheckState&lt;T&gt;(T, DataObjectState)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="XData.IRepository-1.html">IRepository</a>&lt;T&gt;</div>
+      <div><a class="xref" href="XData.IDataLogic-1.html">IDataLogic</a>&lt;T&gt;</div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_CheckState__1___0_XData_DataObjectState_">CheckState&lt;T&gt;</a>(T, <a class="xref" href="XData.DataObjectState.html">DataObjectState</a>)</div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetDeleted__1___0_System_Boolean_">SetDeleted&lt;T&gt;(T, Boolean)</a></div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_Execute__1___0_System_Linq_Expressions_Expression_System_Func_XData_CustomLogic___0____System_Collections_Generic_IDictionary_System_String_System_Action_System_Byte_____System_Collections_Generic_IDictionary_System_String_System_Func_System_Byte___System_Byte_____">Execute&lt;T&gt;(T, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt;, IDictionary&lt;String, Action&lt;Byte[]&gt;&gt;, IDictionary&lt;String, Func&lt;Byte[], Byte[]&gt;&gt;)</a></div>
+      <div><a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_Serialize__1___0_">Serialize&lt;T&gt;(T)</a></div>
+      <div><a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_Restore__1___0_XData_SerializedData_">Restore&lt;T&gt;(T, SerializedData)</a></div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetProperties__1___0_XData_DataVersion_System_String___">GetProperties&lt;T&gt;</a>(T, <a class="xref" href="XData.DataVersion.html">DataVersion</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[])</div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetProperty__2___0_System_Linq_Expressions_Expression_System_Func___0___1___XData_DataVersion_">GetProperty&lt;T, TRet&gt;(T, Expression&lt;Func&lt;T, TRet&gt;&gt;, DataVersion)</a></div>
+      <div><span class="xref">XData.DataObjectExtensions.GetProperty``1(``0,System.String,XData.DataVersion)</span></div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetRepository__1___0_">GetRepository&lt;T&gt;(T)</a></div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsChanged__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">IsChanged&lt;T&gt;</a>(T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;[])</div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsEmpty__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object___">IsEmpty&lt;T&gt;</a>(T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;)</div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_IsCleared__1___0_System_String_">IsCleared&lt;T&gt;</a>(T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>)</div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetCurrent__1___0_">SetCurrent&lt;T&gt;(T)</a></div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0_XData_DataSubmitFlag_">Submit&lt;T&gt;(T, DataSubmitFlag)</a></div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_Lock__1___0_">Lock&lt;T&gt;(T)</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

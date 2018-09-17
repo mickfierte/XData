@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Trigger business logic | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Trigger business logic | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="tips_trigger_logic.md">
+<h2 id="trigger-business-logic">Trigger business logic</h2>
+
+<p><a href="tips.html#execute-custom-business-logic">Custom logic</a> called over <a href="../tutorial/glossary.html#data-object">data object</a> explicitly. But XData can call trigger logic over business valuable <a href="../tutorial/glossary.html#data-object">data object</a> (not a single table!) on middleware level (no matter extracted this logic to dedicated application server or not). This logic will be called automatically when corresponded changes are applied:</p>
+<ul>
+<li><em>InitRepository</em> - middleware trigger executed when Repository has been initialized (trigger delegate type -<a class="xref" href="../api/XData.InitRepository-1.html">InitRepository&lt;T&gt;</a>)</li>
+<li><em>InvalidateRepository</em> - middleware trigger executed when Repository data need to be reseted (trigger delegate type -<a class="xref" href="../api/XData.InvalidateRepository-1.html">InvalidateRepository&lt;T&gt;</a>)</li>
+<li><em>InvalidateObject</em> - middleware trigger executed when Repository object need to be reloaded (trigger delegate type -<a class="xref" href="../api/XData.InvalidateObject-1.html">InvalidateObject&lt;T&gt;</a>)</li>
+<li><em>InitObject</em> - middleware trigger executed when Repository object has been initialized (trigger delegate type -<a class="xref" href="../api/XData.InitObject-1.html">InitObject&lt;T&gt;</a>)</li>
+<li><em>BeforeInsert</em> - middleware trigger executed before object inserted into Repository (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>)</li>
+<li><em>BeforeUpdate</em> - middleware trigger executed before Repository object has been updated (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>)</li>
+<li><em>BeforeDelete</em> - middleware trigger executed before object has been deleted from Repository (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>)</li>
+<li><em>AfterInsert</em> - middleware trigger executed after object inserted into Repository (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>). <a class="xref" href="../api/XData.DataTriggerFlag.html">Skip</a> flag is not applicable!</li>
+<li><em>AfterUpdate</em> - middleware trigger executed after Repository object has been updated (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>). <a class="xref" href="../api/XData.DataTriggerFlag.html">Skip</a> flag is not applicable!</li>
+<li><em>AfterDelete</em> - middleware trigger executed after object has been deleted from Repository (trigger delegate type -<a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a>). <a class="xref" href="../api/XData.DataTriggerFlag.html">Skip</a> flag is not applicable!</li>
+<li><em>BeforeClear</em> - middleware trigger executed before Repository has been cleared (trigger delegate type -<a class="xref" href="../api/XData.RepositoryTrigger-1.html">RepositoryTrigger&lt;T&gt;</a>)</li>
+<li><em>AfterClear</em> - middleware trigger executed after Repository has been cleared (trigger delegate type -<a class="xref" href="../api/XData.RepositoryTrigger-1.html">RepositoryTrigger&lt;T&gt;</a>). <a class="xref" href="../api/XData.DataTriggerFlag.html">Skip</a> flag is not applicable!</li>
+</ul>
+<p>Trigger delegate type - it&#39;s a method signature for middleware trigger handler.</p>
+<pre><code class="lang-csharp">public class InvoiceLogic : XDataLogic&lt;Invoice&gt;
+{
+    [Action(DataActionType.AfterInsert), Action(DataActionType.AfterUpdate)]
+    public Trigger&lt;Invoice&gt; UpdateHistory =&gt; 
+        ((ref Invoice invoice, ref DataTriggerFlag flag) =&gt;
+        {
+            if (!invoice.CheckState(DataObjectState.New) 
+                &amp;&amp; !invoice.IsChanged(x =&gt; x.DocState)) return true;
+            var rep = invoice.GetRepository();
+            using (var hist = 
+                GetRepository&lt;DocHistory&gt;(rep.Layer, context: rep.Context))
+            {
+                hist.Reset()
+                    .SetFilterValue(DocHistory.FilterByDocId, 
+                        invoice.GetProperty&lt;long&gt;(&quot;DocId&quot;))
+                    .SetFilterValue(DocHistory.FilterByDocStateId, 
+                        invoice.DocState.Key);
+                var newHist = hist.New();
+                newHist.HistoryDate = DateTime.UtcNow;
+                return hist.Submit(ref newHist);
+            }
+        });
+
+    [Action(DataActionType.BeforeDelete)]
+    public Trigger&lt;Invoice&gt; ClearHistory =&gt; 
+    ((ref Invoice invoice, ref DataTriggerFlag flag) =&gt;
+        {
+            var i = invoice;
+            using (var hist = GetRepository&lt;DocHistory&gt;(i.GetLayer(), 
+                context: i.GetContext()))
+            {
+                return hist.Reset()
+                    .Clear(x =&gt; x.GetProperty&lt;long&gt;(&quot;DocId&quot;) 
+                        == i.GetProperty&lt;long&gt;(&quot;DocId&quot;));
+            }
+        });
+
+    [Action(DataActionType.BeforeClear)]
+    public RepositoryTrigger&lt;Invoice&gt; ClearHistoryBatch =&gt;
+    ((IRepository&lt;Invoice&gt; invoiceRepository, ref DataTriggerFlag flag) =&gt;
+    {
+        using (var hist = GetRepository&lt;DocHistory&gt;(invoiceRepository.Layer, 
+            context: invoiceRepository.Context))
+        {
+            return hist.Reset().Clear(x =&gt; invoiceRepository
+                .Any(z =&gt; x.GetProperty&lt;long&gt;(&quot;DocId&quot;) 
+                    == z.GetProperty&lt;long&gt;(&quot;DocId&quot;)));
+        }
+    });
+}
+</code></pre><p>Trigger and RepositoryTrigger delegates has a reference parameter of type <a class="xref" href="../api/XData.DataTriggerFlag.html">DataTriggerFlag</a> to specify behaviour of data processing after trigger executed. There are three possible behaviours defined:</p>
+<ul>
+<li><em>None</em> - Submit using default algorithm, representation layer is already refreshed</li>
+<li><em>Skip</em> - Data submitting have completed in trigger logic or not applicable. No standard updates will called. It&#39;s a kind of &quot;instead of&quot; trigger logic flag.</li>
+<li><em>Refresh</em> - Default value. Representation layer manual data refreshing is needed.</li>
+</ul>
+<p>Trigger logic defined as attributed by <a class="xref" href="../api/XData.Mapping.ActionAttribute.html">Action attribute</a> read only property of <a class="xref" href="../api/XData.XDataLogic-1.html">XDataLogic&lt;T&gt;</a> class descendant. One property can be attributed as a handler for multiple triggers. Property type must to be <a class="xref" href="../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a> except repository based triggers (<em>BeforeClear</em>, <em>AfterCLear</em>, <em>InitRepository</em> or <em>InvalidateRepository</em>) - <a class="xref" href="../api/XData.RepositoryTrigger-1.html">RepositoryTrigger&lt;T&gt;</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SQL procedures &amp; functions | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SQL procedures &amp; functions | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping_static_procedure.md">
+<h3 id="sql-procedures--functions">SQL procedures &amp; functions</h3>
+
+<p>Common information about mapping to SQL procedures and functions has described in <a href="../../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just reprensent static mapping rules for various procedure types.</p>
+<h4 id="sql-procedure-as-query">SQL procedure as query</h4>
+<p>To define procedure as data source of mapping used <a class="xref" href="../../../../api/XData.Mapping.ProcedureAttribute.html">ProcedureAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - procedure or function name, <em>ProcedureType</em> - <a class="xref" href="../../../../api/XData.ProcedureType.html">ProcedureType</a>: <em>ProcedureType</em>.<strong>Procedure</strong> or <em>ProcedureType</em>.<strong>Function</strong>.</p>
+<h4 id="sql-procedure-parameter">SQL procedure parameter</h4>
+<p>To define SQL procedure parameter used <a class="xref" href="../../../../api/XData.Mapping.ParameterAttribute.html">ParameterAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Order</em> - order number of parameter, <em>Binding</em> - name used inside application code (it&#39;s handy to use parameter with another name, not the name defined inside DB), <em>Type</em> - data type used inside application code, <em>DbType</em> - data type on ADO .Net provider level, <em>Direction</em> - optional, parameter direction, default is <em>ParameterDirection</em>.<strong>Input</strong>, <em>Size</em> - optional, parameter size(if applicable), <em>Scale</em> - optional, parameter presision (if applicable), <em>Name</em> - optional, parameter name, default is equal with <em>Binding</em>, <em>DefaultType</em> - <a href="../../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultType</em>, <em>NativeSqlType</em> - optional, SQL type name (<em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type), <em>UdtTypeName</em> - optional, user defined type (UDT), <em>UdtElementTypeName</em> - optional, user defined type (UDT) of <em>UdtTypeName</em> element (in case where <em>UdtTypeName</em> - array or table), <em>IsArray</em> - optional, parameter is array of <em>UdtElementTypeName</em> (when <em>UdtElementTypeName</em> is omited, array of <em>DbType</em>), default is <strong>false</strong>.</p>
+<h4 id="sql-procedure-resultset">SQL procedure resultset</h4>
+<p>To describe resultset of SQL procedure used <a class="xref" href="../../../../api/XData.Mapping.ResultSetAttribute.html">ResultSetAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - resultset name used inside application code, <em>Order</em> - optional, order number of resultset (required to procedures returns multiple resultsets), <em>ResultType</em> - optional, mapped type of resultset, default is attributed class itself, <em>IsDefault</em> - optional, resultset is default - mapped to attributed class (used when procedure returns multiple resultsets), default is <strong>false</strong>.</p>
+<h4 id="sql-procedure-resultset-as-query-sample">SQL procedure resultset as query sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+    Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure),
+    Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+    Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+public class TestProcedure : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
+}
+</code></pre><h4 id="sql-procedure-with-multiple-resultsets-sample">SQL procedure with multiple resultsets sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+    Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure),
+    Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+    Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+    Parameter(&quot;T&quot;, 3, &quot;param3&quot;, typeof(int), DbType.Int32),
+    Parameter(&quot;T&quot;, 4, &quot;param4&quot;, typeof(string), DbType.String),
+    ResultSet(&quot;T&quot;, &quot;Result&quot;, IsDefault = true),
+    ResultSet(&quot;T&quot;, &quot;SecondResult&quot;, ResultType = typeof(TestResult), Order = 2)]
+public class TestProcedure2 : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
+    public IEnumerable&lt;TestResult&gt; SecondResult 
+        { get { return this.GetResultSet(x =&gt; x.SecondResult); } }
+}
+</code></pre><h4 id="sql-procedure-with-out-parameter-sample">SQL procedure with out parameter sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+        Procedure(&quot;T&quot;, &quot;dbo.TestProcedure3&quot;, ProcedureType.Procedure),
+        Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+        Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+        Parameter(&quot;T&quot;, 3, &quot;OutParameter&quot;, typeof(string), 
+            DbType.String, 
+            Size = 20, 
+            Direction = ParameterDirection.Output, 
+            Name = &quot;param3&quot;)]
+public class TestProcedure3 : IDataObject
+{
+    public string OutParameter 
+        { get { return this.GetParameter(x =&gt; x.OutParameter); } }
+}
+</code></pre><h4 id="sql-procedure-with-out-parameter-and-resultset-sample">SQL procedure with out parameter and resultset sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+        Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure),
+        Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+        Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+        Parameter(&quot;T&quot;, 3, &quot;OutParameter&quot;, typeof(string), 
+            DbType.String, 
+            Size = 20, 
+            Direction = ParameterDirection.Output, 
+            Name = &quot;param3&quot;),
+        ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+public class TestProcedure4 : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
+    public string OutParameter 
+        { get { return this.GetParameter(x =&gt; x.OutParameter); } }
+}
+</code></pre><h4 id="sql-procedure-with-return-value-sample">SQL procedure with return value sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+        Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure),
+        Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+        Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+        Parameter(&quot;T&quot;, 3, &quot;OutParameter&quot;, typeof(string), 
+            DbType.String, 
+            Size = 20, 
+            Direction = ParameterDirection.Output, 
+            Name = &quot;param3&quot;)]
+public class TestProcedure5 : IDataObject
+{
+    public string OutParameter 
+        { get { return this.GetParameter(x =&gt; x.OutParameter); } }
+}
+</code></pre><h4 id="sql-procedure-with-return-value-and-resultset-sample">SQL procedure with return value and resultset sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+    Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure),
+    Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+    Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+    Parameter(&quot;T&quot;, 3, &quot;ResultParameter&quot;, typeof(int), 
+        DbType.Int32, 
+        Direction = ParameterDirection.ReturnValue),
+    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+public class TestProcedure6 : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
+    public int ResultParameter 
+        { get { return this.GetParameter(x =&gt; x.ResultParameter); } }
+}
+</code></pre><h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+    Procedure(&quot;T&quot;, &quot;TestFunction&quot;, ProcedureType.Function),
+    Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int[]), DbType.Int32, IsArray = true),
+    Parameter(&quot;T&quot;, 2, &quot;Result&quot;, typeof(int), DbType.Int32, 
+        Direction = ParameterDirection.ReturnValue)]
+public class TestFunction : IDataObject
+{
+    public int Result { get { return this.GetParameter(x =&gt; x.Result); } }
+}
+</code></pre><h4 id="sql-procedure-with-udt-parameter-sample">SQL procedure with UDT parameter sample</h4>
+<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
+[Serializable]
+public class Classifier
+{
+    [XmlAttribute]
+    public int Id { get; set; }
+    [XmlAttribute]
+    public string Name { get; set; }
+}
+...
+[DataObject(&quot;T&quot;),
+        Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function),
+        Parameter(&quot;T&quot;, 1, &quot;p_obj&quot;, 
+            typeof(Classifier), 
+            DbType.Object, 
+            UdtTypeName =  &quot;dbo.Classifier&quot; /* Full qualified name of UDT */ ),
+        Parameter(&quot;T&quot;, 2, &quot;Result&quot;, typeof(string), DbType.String, Size = 20, 
+            Direction = ParameterDirection.ReturnValue)]
+public class PostgreSqlTestFunction5 : IDataObject
+{
+    public string Result { get { return this.GetParameter(x =&gt; x.Result); } }
+}
+</code></pre><h4 id="sql-procedure-with-udt-array-parameter-sample">SQL procedure with UDT array parameter sample</h4>
+<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
+[Serializable]
+public class Classifier
+{
+    [XmlAttribute]
+    public int Id { get; set; }
+    [XmlAttribute]
+    public string Name { get; set; }
+}
+...
+[DataObject(&quot;T&quot;),
+    Procedure(&quot;T&quot;, &quot;dbo.TestProcedure7&quot;, ProcedureType.Procedure),
+    Parameter(&quot;T&quot;, 1, &quot;param1&quot;, 
+        typeof(Classifier[]) /* Parameter type must be an array of mapped type */, 
+        DbType.Object, 
+        UdtTypeName = &quot;dbo.Classifier&quot; /* Full qualified name of UDT */ ),
+    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+public class TestProcedure7 : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
+}
+</code></pre><h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+    Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function),
+    Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+    Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+public class TestFunction3 : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
+}
+</code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+    DataTable(&quot;T_DOC_TYPE&quot;, &quot;T&quot;),
+    Column(&quot;DocTypeId&quot;, typeof(long), Flags = DataPropertyFlag.Id)]
+public class TestFunction4 : IDataObject
+{
+    [Property(&quot;T&quot;)]
+    public string Code { get; set; }
+    [Property(&quot;T&quot;)]
+    public string Name { get; set; }
+    [Property, 
+        // Property expression attribute &quot;name&quot; is the name of private static field 
+        // with type Calculate&lt;string&gt; and attributed by SqlExpressionAttribute
+        PropertyExpression(&quot;test&quot;, DataExpressionType.LinqExpression, ExprSize = 20)]
+    public string Test { get { return this.GetProperty(x =&gt; x.Test); } }
+
+    // Private static field with type Calculate&lt;string&gt; and attributed by 
+    // SqlExpressionAttribute
+    [SqlExpression]
+    private static Calculate&lt;string&gt; test z =&gt; z.SqlFn&lt;string&gt;(&quot;dbo.TestFunction2&quot;,
+        y =&gt; y.Field&lt;long&gt;(&quot;T&quot;, &quot;doc_type_id&quot;), y =&gt; y.Field&lt;string&gt;(&quot;T&quot;, &quot;name&quot;))
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

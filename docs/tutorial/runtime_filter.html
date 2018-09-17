@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Runtime filters | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Runtime filters | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="runtime_filter.md">
+<h2 id="runtime-filters">Runtime filters</h2>
+
+<p>Runtime filters used for filtering data by field (or SQL expression) where filter value will be accessable during runtime only. Similar results can be reached using LINQ, but may be field to filter on is not selected. Or the result we need is not a readonly dynamic dataset (see <a href="linq.html">LINQ support</a> and <a href="query.html">Dynamic queries</a>), but feature rich <a href="glossary.html#repository">repository</a>, only filtered.</p>
+<p>Runtime filters in XData are defined as static fields of <a href="glossary.html#data-object">data object</a> typed as <a class="xref" href="../api/XData.DataSource.Structure.RuntimeFilter.html">RuntimeFilter</a>. Name of runtime filter is mast to be unique over data object mapping structure (with subqueries). When value of runtime filter is set and filter with same name is not found in mapping, it will be dynamicaly added to mapping structure.</p>
+<p>To set value of runtime filter, use <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_SetFilterValue_XData_DataSource_Structure_RuntimeFilter_System_Object_">SetFilterValue</a> method of <a href="glossary.html#repository">repository</a>. To clear one runtime filter value, set <em>null</em> value. To reset all runtime filters, use <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Reset">Reset</a> method of repository.</p>
+<div class="TIP"><h5>Tip</h5><p>When rintime filter value is set to <em>null</em> check <a href="glossary.html#filter-null-processing-behaviour">filter null processing behaviour</a> assigned to this filter!</p>
+</div>
+<pre><code class="lang-csharp">var rep = invoice.GetRepository();
+var hist = dataScope.GetRepository&lt;DocHistory&gt;(rep.Layer, context: rep.Context)
+    .Reset()
+    .SetFilterValue(DocHistory.FilterByDocId, invoice.GetProperty&lt;long&gt;(&quot;DocId&quot;))
+    .SetFilterValue(DocHistory.FilterByDocStateId, invoice.DocState.Key);
+var newHist = hist.New();
+newHist.HistoryDate = DateTime.UtcNow;
+return hist.Submit(ref newHist);
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

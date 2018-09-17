@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>External link | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="External link | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping_static_external_link.md">
+<h3 id="external-link">External link</h3>
+
+<p><a href="../mapping.html#master-slave-relations">External link</a> can be statically defined using <a class="xref" href="../../../api/XData.Mapping.ExternalLinkAttribute.html">ExternalLinkAttribute</a> with parameters: <em>ChildType</em> - slave <a href="../../glossary.html#repository">repository</a> mapped type, <em>ChildProperty</em> - link property in slave repository, <em>Property</em> - optional, link property in master repository, default used same name as <em>ChildProperty</em>, <em>FilterName</em> - optional, slave repository filter name, default used <strong>&quot;FilterBy&quot;</strong> + <em>ChildProperty</em>, <em>MasterRefresh</em> - optional, refresh master repository current row data on submit slave changes flag (usefull when master has calculated properties over slave repository data), default is <strong>false</strong>, <em>DirectLink</em> - optional, see <a href="../../../tips/tips.html#tree-organized-repository-child-specifics">tree master-slave specifics</a> for details, default is <strong>false</strong> <em>Operation</em> - optional, link filter operation (see <a href="static.html#filters">Filters</a>), default <em>FilterOperation</em>.<strong>Equal</strong>, <em>Nullable</em> - optional, <a href="../../glossary.html#filter-null-processing-behaviour">filter null processing behaviour</a>, default is  <em>FilterNullable</em>.<strong>Nullable</strong>, <em>Combination</em> - optional, <a href="static.html#filter-group">filter group</a> name in slave repository. External links can be used in optional filters description (see <a href="../../../tips/tips.html#optional-filters">Optional filters and optional subqueries</a>). To specify external link is optional filter part You can set primary filter flag <em>PrimaryFilter</em>.</p>
+<pre><code class="lang-csharp">[ExternalLink(typeof(InvoiceSpec), &quot;DocId&quot;)]
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

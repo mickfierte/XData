@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Static mapping sample | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Static mapping sample | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping_static_sample.md">
+<h3 id="static-mapping-sample">Static mapping sample</h3>
+
+<p>Here is example of data object static mapping. Of course, real mapping is much simpler then this, but as example of XData capabilities it&#39;s realy representative...</p>
+<pre><code class="lang-csharp">    [DataObject(&quot;D&quot;, LogicAssemblyName = &quot;XDataObjectTest&quot;),
+        DataTable(&quot;T_DOC&quot;, &quot;D&quot;),
+        DictionaryFilter(&quot;T_DOC_TYPE&quot;, &quot;doc_type_id&quot;, &quot;code&quot;, &quot;INVOICE&quot;, &quot;D&quot;),
+        DataTable(&quot;T_DOC_DOC_STATE&quot;, &quot;DS&quot;, Parent = &quot;D&quot;),
+        Link(&quot;D&quot;, &quot;doc_id&quot;, &quot;DS&quot;),
+        DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;),
+        Link(&quot;DS&quot;, &quot;doc_state_id&quot;, &quot;S&quot;),
+        DataTable(&quot;T_DOC_NUMBER&quot;, &quot;N&quot;, Parent = &quot;D&quot;),
+        Link(&quot;D&quot;, &quot;doc_id&quot;, &quot;N&quot;),
+        DataTable(&quot;T_DOC_CUST&quot;, &quot;CF&quot;, Parent = &quot;D&quot;),
+        Link(&quot;D&quot;, &quot;doc_id&quot;, &quot;CF&quot;),
+        DataTable(&quot;T_CUSTOMER&quot;, &quot;F&quot;),
+        Link(&quot;CF&quot;, &quot;customer_id&quot;, &quot;F&quot;),
+        DictionaryFilter(&quot;T_DOC_CUST_TYPE&quot;, &quot;doc_cust_type_id&quot;, &quot;code&quot;, &quot;FROM&quot;, &quot;CF&quot;),
+        DataTable(&quot;T_DOC_CUST&quot;, &quot;CT&quot;, Parent = &quot;D&quot;),
+        Link(&quot;D&quot;, &quot;doc_id&quot;, &quot;CT&quot;),
+        DataTable(&quot;T_CUSTOMER&quot;, &quot;T&quot;),
+        Link(&quot;CT&quot;, &quot;customer_id&quot;, &quot;T&quot;),
+        DictionaryFilter(&quot;T_DOC_CUST_TYPE&quot;, &quot;doc_cust_type_id&quot;, &quot;code&quot;, &quot;TO&quot;, &quot;CT&quot;),
+        DataTable(&quot;T_DOC_SCAN&quot;, &quot;SC&quot;, Parent = &quot;D&quot;),
+        Link(&quot;D&quot;, &quot;doc_id&quot;, &quot;SC&quot;,  Operation = FilterOperation.OuterJoin),
+        DataTable(&quot;T_DOC_SOURCE&quot;, &quot;SR&quot;, Parent = &quot;D&quot;),
+        Link(&quot;D&quot;, &quot;doc_id&quot;, &quot;SR&quot;, Operation = FilterOperation.OuterJoin),
+        DataTable(&quot;T_DOC_DELIVERY&quot;, &quot;DD&quot;, Parent = &quot;D&quot;),
+        Link(&quot;D&quot;, &quot;doc_id&quot;, &quot;DD&quot;, Operation = FilterOperation.OuterJoin),
+        DataTable(&quot;T_DOC_CATALOGUE&quot;, &quot;DC&quot;, Parent = &quot;D&quot;),
+        Link(&quot;D&quot;, &quot;doc_id&quot;, &quot;DC&quot;),
+        DataTable(&quot;T_CATALOGUE&quot;, &quot;U&quot;),
+        Link(&quot;U&quot;, &quot;catalogue_id&quot;, &quot;DC&quot;),
+        Subquery(&quot;A&quot;, typeof(DocSpecAmounts), &quot;Amount&quot;, Grouping = DataGrouping.Sum),
+        SubqueryLink(&quot;A&quot;, &quot;DocId&quot;),
+        InnerView(&quot;H&quot;, typeof(DocLastChange)),
+        SubqueryLink(&quot;H&quot;, &quot;DocId&quot;, Operation = FilterOperation.OuterJoin),
+        ExternalLink(typeof(InvoiceSpec), &quot;DocId&quot;),
+        InnerView(&quot;ST&quot;, typeof(DocBySpecType)),
+        SubqueryLink(&quot;ST&quot;, &quot;DocId&quot;),
+        Subquery(&quot;UT&quot;, typeof(CatalogueTree), &quot;CatalogueId&quot;),
+        SubqueryFilter(&quot;UT&quot;, &quot;DC&quot;, &quot;catalogue_id&quot;, Operation = FilterOperation.In),
+        Column(&quot;DocId&quot;, typeof(long?), &quot;D&quot;, Flags = DataPropertyFlag.Id),
+        ColumnDefault(&quot;DocId&quot;, DefaultType.AutoIncrement)]
+    public class Invoice: IDataObject
+    {
+        [Property(&quot;S&quot;, &quot;code&quot;)]
+        public string DocStateCode { get { return this.GetProperty(x =&gt; x.DocStateCode); } }
+        [Property(&quot;S&quot;, &quot;name&quot;),
+            LinkProperty(&quot;Name&quot;),
+            LinkProperty(&quot;Code&quot;, &quot;DocStateCode&quot;)]
+        public Link&lt;string, DocState&gt; DocState { get; set; }
+        [Property(&quot;U&quot;, &quot;name&quot;),
+            LinkProperty(&quot;Name&quot;)]
+        public Link&lt;string, Catalogue&gt; DocCatalog { get; set; }
+        [Property(&quot;N&quot;, &quot;numb&quot;)]
+        public string DocNumb { get; set; }
+        [Property(&quot;D&quot;),
+            PropertyDefault(DefaultType.CurrentDate)]
+        public DateTime? DocDate { get; set; }
+        [Property(&quot;D&quot;, Flags = DataPropertyFlag.ConcurrencyToken),
+            PropertyDefault(DefaultType.AutoIncrement)]
+        public long Generation { get { return this.GetProperty(x =&gt; x.Generation); } }
+        [Property(&quot;D&quot;),
+            PropertyDefault(DefaultType.CurrentDateTime, AlwaysUseDefault = true)]
+        public DateTime Changed { get { return this.GetProperty(x =&gt; x.Changed); } }
+        [Property(&quot;D&quot;),
+            PropertyDefault(DefaultType.UserName, AlwaysUseDefault = true)]
+        public string Author { get { return this.GetProperty(x =&gt; x.Author); } }
+        [Property,
+            PropertyExpression(&quot;A&quot;, DataExpressionType.SubQuery, DbType.Decimal, 
+                ExprSize = 17, ExprScale = 5)]
+        public decimal? DocAmount { get { return this.GetProperty(x =&gt; x.DocAmount); } }
+        [Reference(&quot;H&quot;, &quot;HistoryDate&quot;)]
+        public DateTime? DocLastChange { 
+            get { return this.GetProperty(x =&gt; x.DocLastChange); } 
+        }
+        [Property(&quot;SC&quot;, Flags = DataPropertyFlag.OuterFlag)]
+        public Lob Scan { get; set; }
+        [Property(&quot;SR&quot;, Flags = DataPropertyFlag.OuterFlag)]
+        public Xml Source { get; set; }
+        [Property(&quot;F&quot;, &quot;name&quot;),
+            LinkProperty(&quot;Name&quot;)]
+        public Link&lt;string, Customer&gt; CustomerFrom { get; set; }
+        [Property(&quot;T&quot;, &quot;name&quot;),
+            LinkProperty(&quot;Name&quot;)]
+        public Link&lt;string, Customer&gt; CustomerTo { get; set; }
+        [Property(&quot;DD&quot;)]
+        public DeliveryTypeEnum DeliveryType { get; set; }
+        [Property(&quot;DD&quot;),
+            PropertyDefault(DefaultType.CurrentDate)]
+        public DateTime? DeliveryDate { get; set; }
+        public IRepository&lt;InvoiceSpec&gt; Spec { 
+            get { return this.GetRepository().GetChild&lt;InvoiceSpec&gt;(); } 
+        }
+    }
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Filters | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Filters | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href="../../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="mapping_dynamic_filter.md">
+<h3 id="filters">Filters</h3>
+
+<p>Filters can be defined as:</p>
+<ul>
+<li>Constant filters</li>
+<li>SQL expression filters</li>
+<li>Dictionary filters</li>
+<li>Range filters</li>
+<li>Subquery filters</li>
+<li>Inner links</li>
+</ul>
+<p>Each of them described by corresponding LINQ expression define their parameters depending on the context of their use and the type of the filter itself (see below). Filter descriptions are provided to <em>filters</em> paramter value of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView</a> and <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a> methods of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface, or <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html#XData_Mapping_Dynamic_IQueryWithAdapter_1_WithRecursive__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">WithRecursive</a> method of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html">IQueryWithAdapter&lt;TRoot&gt;</a>. Each of expression has described one filter. Type of filter is declared by one of fabric method of interface inside lambda expression with one of followed filter adapter:</p>
+<ul>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> - filter adapter to define filters and links inside plain query (see <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a>),</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter.html">ISubqueryFilterAdapter</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html">ISubqueryFilterAdapter&lt;TDObj&gt;</a> and <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-2.html">ISubqueryFilterAdapter&lt;T,TDObj&gt;</a> - used in various overloads of subquery definition (see <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView</a> and <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html#XData_Mapping_Dynamic_IQueryWithAdapter_1_WithRecursive__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">WithRecursive</a>) to declare links with subqueries.</li>
+</ul>
+<p>Specific parameters for each type of filter is described in filter fabric methods described below in specific topics. And some optional modificators can be defined using continue LINQ calls with extension methods:</p>
+<ul>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetOperation__1___0_XData_FilterOperation_">SetOperation</a> - to set <a class="xref" href="../../../../api/XData.FilterOperation.html">filter operation</a></li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> - to set <a href="../../../glossary.html#optional-referencies">optional filter</a> flag</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetCombination__1___0_System_String_">SetCombination</a> - to set <a href="../../../glossary.html#filter-group">filter combination</a></li>
+</ul>
+<p>Each of filter type is defined by own special method of corresponding filter adapter. </p>
+<p>Filter operation is defined by enum <a class="xref" href="../../../../api/XData.FilterOperation.html">FilterOperation</a>:</p>
+<ul>
+<li><strong>Equal</strong> - equal</li>
+<li><strong>NotEqual</strong> - not equal</li>
+<li><strong>LessThan</strong> - less then</li>
+<li><strong>GreaterThan</strong> - greater then</li>
+<li><strong>LessThanOrEqual</strong> - less or equal</li>
+<li><strong>GreaterThanOrEqual</strong> - greater or equal</li>
+<li><strong>In</strong> - field value in range or subquery</li>
+<li><strong>NotIn</strong> - field value is not in range or subquery</li>
+<li><strong>Exists</strong> - subquery returns one or more rows</li>
+<li><strong>NotExists</strong> - subquery returns no rows</li>
+<li><strong>Like</strong> - field value correlated with find expression</li>
+<li><strong>NotLike</strong> - field value not correlated with find expression</li>
+<li><strong>OuterJoin</strong> - left outer join link between query sources (tables or inner views)</li>
+<li><strong>Contains</strong> - field value correlated with fulltext search</li>
+<li><strong>NotContains</strong> - field value not correlated with fulltext search</li>
+</ul>
+<h4 id="filter-group">Filter group</h4>
+<p>Filter group of filter can be assigned to it declaration by <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetCombination__1___0_System_String_">SetCombination</a> extension of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a> interface.</p>
+<pre><code class="lang-csharp">...
+, x =&gt; x.ConstFilter(&quot;FilterByCathalogue&quot;, &quot;catalogue_id&quot;, 
+    FilterConstantType.Const, null, FilterNullable.NullsNotAllowed)
+    .SetCombination(&quot;root&quot;)
+...
+</code></pre><h4 id="constant-filters">Constant filters</h4>
+<p>Constant filters alowes to restict selection of data by some constant value. This filter defined by one of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_String_">ConstFilter</a> method overloads of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface. </p>
+<p>Constant type list restricted by enum <a class="xref" href="../../../../api/XData.FilterConstantType.html">FilterConstantType</a>:</p>
+<ul>
+<li><strong>Const</strong> - constant with value setted by <em>ConstantValue</em>.</li>
+<li><strong>Variable</strong> - value of <a class="xref" href="../../../../api/XData.Variable.html">variable</a> with name setted by <em>ConstantValue</em>.</li>
+<li><strong>CurrentDate</strong> - current date.</li>
+<li><strong>CurrentDateTime</strong> - current date and time.</li>
+<li><strong>CurrentDateTimeUTC</strong> - current date and time (UTC).</li>
+</ul>
+<pre><code class="lang-csharp">...
+, x =&gt; x.ConstFilter(&quot;FilterByCathalogue&quot;, &quot;catalogue_id&quot;, 
+    FilterConstantType.Const, null, FilterNullable.NullsNotAllowed)
+    .SetCombination(&quot;root&quot;)
+...
+</code></pre><h4 id="sql-expression-filters">SQL expression filters</h4>
+<p>To define filter over SQL expression used one of <em>ExprFilter</em> method overloads of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface. There are two overloads of <em>ExprFilter</em> method:</p>
+<ul>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ExprFilter_System_String_System_String_">IFilterDescription ExprFilter(string field, string exprText)</a> - to use with plain SQL expressions or subquery alias</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ExprFilter__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___">IFilterDescription ExprFilter&lt;T&gt;(string field, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; expression)</a> - to use with SQL expressions as LINQ style expressions</li>
+</ul>
+<p>Depending style of SQL expression description that overloads can be used with: </p>
+<ul>
+<li>subquery alias,</li>
+</ul>
+<pre><code class="lang-csharp">, ExprFilter(&quot;discount&quot; /* field name */, 
+    &quot;D&quot; /* ExpressionText: subquery alias */)
+    .SetOperation(FilterOperation.In)
+</code></pre><ul>
+<li>dynamic definition of SQL expression,</li>
+</ul>
+<pre><code class="lang-csharp">, ExprFilter(&quot;discount&quot; /* field name */, 
+    /* expression: SQL expression LINQ style definition */
+    x =&gt; x.Case&lt;Product, int&gt;( 
+        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10)), 
+    Operation: FilterOperation.NotEqual /* filter operation */)]
+</code></pre><ul>
+<li>plain SQL expression text.</li>
+</ul>
+<pre><code class="lang-csharp">, ExprFilter(&quot;discount&quot; /* field name */, 
+    /* ExpressionText: plain SQL expression */
+    &quot;case P.is_vip when 1 then 10 else 0 end&quot;)
+    .SetOperation(FilterOperation.NotEqual)
+</code></pre><div class="IMPORTANT"><h5>Important</h5><p>If possible do not use plain SQL expressions. It possibly use specific SQL dialect features not supported by other DBMS or providers.</p>
+</div>
+<h4 id="range-filters">Range filters</h4>
+<p>To define filter checks field value over array of values used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_RangeFilter_System_String_System_Object___">RangeFilter</a> methods of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface.</p>
+<pre><code class="lang-csharp">...
+, RangeFilter(&quot;discount&quot;, new[] {0,5,10})
+    .SetOperation(FilterOperation.In)
+... 
+</code></pre><h4 id="dictionary-filters">Dictionary filters</h4>
+<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recomended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
+<p>XData supports using mnemonic code when define filters on dictionary value - dictionary filters. They defined by one of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_DictFilter_System_String_System_String_System_String_System_String_">DictFilter</a> overloads of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>This filter can be used when dictionary has simple (one field only) identity field and mnemonic code field. But it&#39;s a very common case.</p>
+</div>
+<pre><code class="lang-csharp">...
+, x =&gt; x.DictFilter(&quot;T_DOC_CUST_TYPE&quot;, &quot;doc_cust_type_id&quot;, &quot;code&quot;, &quot;TO&quot;)
+...
+</code></pre><h4 id="inner-links">Inner links</h4>
+<p>To define links between data sources inside query used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_Link_System_String_System_String_">Link</a> overloads of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface.</p>
+<pre><code class="lang-csharp">...
+, x =&gt; x.Link(&quot;DS&quot;, &quot;doc_state_id&quot;)
+...
+</code></pre><div class="TIP"><h5>Tip</h5><p>Inner links can be used to define <a href="../../../../tips/tips.html#optional-filters">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
+</div>
+<h4 id="subquery-filters">Subquery filters</h4>
+<p>To define filters checks field value is correspond subquery results used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_SubqueryFilter_System_String_System_String_">SubqueryFilter</a> method of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a>.</p>
+<pre><code class="lang-csharp">...
+.DataTable(&quot;T_DOC_CATALOGUE&quot;, &quot;DC&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;), 
+    x =&gt; x.SubqueryFilter(&quot;catalogue_id&quot;, &quot;UT&quot;)
+    .SetOperation(FilterOperation.In))
+.Subquery&lt;CatalogueTree&gt;(&quot;UT&quot;, x =&gt; x.CatalogueId, DataGrouping.None)                   
+... 
+</code></pre><div class="TIP"><h5>Tip</h5><p>Subquery filters can be used to define <a href="../../../../tips/tips.html#optional-filters">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
+</div>
+<h4 id="subquery-links">Subquery links</h4>
+<p>Links with subqueries is used to link not table fields but properties of base class and subquery mapped class including <a href="../../mapping.html#hidden-properties">hidden properties</a>. To link with subquery or inner view used one of <em>SubqueryLink</em> method overload of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter.html">ISubqueryFilterAdapter</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html">ISubqueryFilterAdapter&lt;TDObj&gt;</a> or <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-2.html">ISubqueryFilterAdapter&lt;T,TDObj&gt;</a> depending by outer method signature and subquery declaration specific.</p>
+<pre><code class="lang-csharp">...
+.InnerView&lt;DocBySpecType&gt;(&quot;ST&quot;, x =&gt; x.SubqueryLink(&quot;DocId&quot;))
+...
+</code></pre><div class="TIP"><h5>Tip</h5><p>Subquery links can be used to define <a href="../../../../tips/tips.html#optional-filters">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

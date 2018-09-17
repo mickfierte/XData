@@ -1,0 +1,3191 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseSqlBuilder
+   | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseSqlBuilder
+   | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="XData.Database.Dialect.BaseSqlBuilder">
+  
+  
+  <h1 id="XData_Database_Dialect_BaseSqlBuilder" data-uid="XData.Database.Dialect.BaseSqlBuilder" class="text-break">Class BaseSqlBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>SQL builder base class</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">BaseSqlBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="XData.Interfaces.ISqlBuilder.html">ISqlBuilder</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="XData.Database.Adapter.Query.html">Query</a>&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="XData.Database.Dialect.html">XData.Database.Dialect</a></h6>
+  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h5 id="XData_Database_Dialect_BaseSqlBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DatabaseAdapter(&quot;NONE&quot;)]
+public abstract class BaseSqlBuilder : ISqlBuilder, ISqlBuilderInternal, IEnumerable&lt;Query&gt;, IEnumerable</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_SqlStrings" data-uid="XData.Database.Dialect.BaseSqlBuilder.SqlStrings">SqlStrings</h4>
+  <div class="markdown level1 summary"><p>SQL dialect specific format strings<br>
+WARNING!  Mast be filled in constructor!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SortedList&lt;SqlStringType, string&gt; SqlStrings</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="XData.Database.Dialect.SqlStringType.html">SqlStringType</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_Config_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Config*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_Config" data-uid="XData.Database.Dialect.BaseSqlBuilder.Config">Config</h4>
+  <div class="markdown level1 summary"><p>SQL dialect configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IConfiguration Config { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_Context_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Context*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_Context" data-uid="XData.Database.Dialect.BaseSqlBuilder.Context">Context</h4>
+  <div class="markdown level1 summary"><p>Context name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string Context { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_DialectOptions_" data-uid="XData.Database.Dialect.BaseSqlBuilder.DialectOptions*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_DialectOptions" data-uid="XData.Database.Dialect.BaseSqlBuilder.DialectOptions">DialectOptions</h4>
+  <div class="markdown level1 summary"><p>Dialect options<br>
+WARNING!  Mast to be filled in constructor!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DialectOptions DialectOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DialectOptions.html">DialectOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_Item_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Item*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_Item_System_Enum_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Item(System.Enum)">Item[Enum]</h4>
+  <div class="markdown level1 summary"><p>Predefined queries enumerator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query this[Enum i] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.enum">Enum</a></td>
+        <td><span class="parametername">i</span></td>
+        <td><p>Predefined query enumeration key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_ParameterPrefix_" data-uid="XData.Database.Dialect.BaseSqlBuilder.ParameterPrefix*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_ParameterPrefix" data-uid="XData.Database.Dialect.BaseSqlBuilder.ParameterPrefix">ParameterPrefix</h4>
+  <div class="markdown level1 summary"><p>Parameter prefix symbol</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string ParameterPrefix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_Queries_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Queries*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_Queries" data-uid="XData.Database.Dialect.BaseSqlBuilder.Queries">Queries</h4>
+  <div class="markdown level1 summary"><p>List of predefined queries<br>
+WARNING!  Mast to be filled in constructor!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected List&lt;Query&gt; Queries { set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="XData.Database.Adapter.Query.html">Query</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_SqlTypes_" data-uid="XData.Database.Dialect.BaseSqlBuilder.SqlTypes*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_SqlTypes" data-uid="XData.Database.Dialect.BaseSqlBuilder.SqlTypes">SqlTypes</h4>
+  <div class="markdown level1 summary"><p>List of supported SQL types<br>
+WARNING!  Mast to be filled in constructor!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbType[] SqlTypes { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_TypeNames_" data-uid="XData.Database.Dialect.BaseSqlBuilder.TypeNames*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_TypeNames" data-uid="XData.Database.Dialect.BaseSqlBuilder.TypeNames">TypeNames</h4>
+  <div class="markdown level1 summary"><p>List of supported column type names<br>
+WARNING!  Mast to be filled in constructor!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] TypeNames { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_TypeSynonyms_" data-uid="XData.Database.Dialect.BaseSqlBuilder.TypeSynonyms*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_TypeSynonyms" data-uid="XData.Database.Dialect.BaseSqlBuilder.TypeSynonyms">TypeSynonyms</h4>
+  <div class="markdown level1 summary"><p>List of supported type synonyms<br>
+WARNING!  Mast to be filled in constructor!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] TypeSynonyms { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_AddOrderBy_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddOrderBy*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_AddOrderBy_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__System_Text_StringBuilder__XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean)">AddOrderBy(IDataStructure, SortedList&lt;String, Object&gt;, ref StringBuilder, ref Query, ref List&lt;Tuple&lt;String, Type, String&gt;&gt;, ICollection&lt;String&gt;, ref SortedList&lt;String, Tuple&lt;String, String&gt;&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Add order by statement to query</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddOrderBy(IDataStructure structure, SortedList&lt;string, object&gt; filterValues, ref StringBuilder strCommand, ref Query query, ref List&lt;Tuple&lt;string, Type, string&gt;&gt; withSources, ICollection&lt;string&gt; skipped, ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt; fields, bool doNotSkip)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">filterValues</span></td>
+        <td><p>Filter values</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></td>
+        <td><span class="parametername">strCommand</span></td>
+        <td><p>Query string builder</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-3">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="parametername">withSources</span></td>
+        <td><p>Common-Table-Expression (WITH) data sources</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">skipped</span></td>
+        <td><p>Skipped sources collection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="parametername">fields</span></td>
+        <td><p>Parsed fields</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">doNotSkip</span></td>
+        <td><p>Don&apos;t skip empty sources</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_System_Text_StringBuilder__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}})">AddReturning2Command(ref StringBuilder, SortedList&lt;String, Tuple&lt;String, Boolean&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Add returning auto increment identity column values statement in query</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void AddReturning2Command(ref StringBuilder sb, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt; identity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></td>
+        <td><span class="parametername">sb</span></td>
+        <td><p>Query string builder</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;&gt;</td>
+        <td><span class="parametername">identity</span></td>
+        <td><p>Identity column name and parameter name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_AddSkipLimitAndOrder_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_AddSkipLimitAndOrder_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__System_Text_StringBuilder__System_Int32_System_String_XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,System.Int32,System.String,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean)">AddSkipLimitAndOrder(IDataStructure, SortedList&lt;String, Object&gt;, ref StringBuilder, Int32, String, ref Query, ref List&lt;Tuple&lt;String, Type, String&gt;&gt;, ICollection&lt;String&gt;, ref SortedList&lt;String, Tuple&lt;String, String&gt;&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Add skip, limit, and order statements to query</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void AddSkipLimitAndOrder(IDataStructure structure, SortedList&lt;string, object&gt; filterValues, ref StringBuilder strCommand, int fromPosition, string selectAll, ref Query query, ref List&lt;Tuple&lt;string, Type, string&gt;&gt; withSources, ICollection&lt;string&gt; skipped, ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt; fields, bool doNotSkip = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">filterValues</span></td>
+        <td><p>Filter values</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></td>
+        <td><span class="parametername">strCommand</span></td>
+        <td><p>Query string builder</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">fromPosition</span></td>
+        <td><p>From statement start position</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">selectAll</span></td>
+        <td><p>All fields list string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-3">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="parametername">withSources</span></td>
+        <td><p>Common-Table-Expression (WITH) data sources</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">skipped</span></td>
+        <td><p>Skipped sources collection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="parametername">fields</span></td>
+        <td><p>Parsed fields</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">doNotSkip</span></td>
+        <td><p>Don&apos;t skip empty sources</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_Beautify_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Beautify*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_Beautify_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Beautify(System.String)">Beautify(String)</h4>
+  <div class="markdown level1 summary"><p>Returns formatted SQL string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string Beautify(string sql)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td><p>SQL string to format</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Formatted SQL string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_BeautifyRtf_" data-uid="XData.Database.Dialect.BaseSqlBuilder.BeautifyRtf*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_BeautifyRtf_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.BeautifyRtf(System.String)">BeautifyRtf(String)</h4>
+  <div class="markdown level1 summary"><p>Returns RTF formatted SQL string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string BeautifyRtf(string sql)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sql</span></td>
+        <td><p>SQL string to format</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>RTF formatted SQL string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_CompleteInsert_" data-uid="XData.Database.Dialect.BaseSqlBuilder.CompleteInsert*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_CompleteInsert_System_String_System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___System_Type_" data-uid="XData.Database.Dialect.BaseSqlBuilder.CompleteInsert(System.String,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}},System.Type)">CompleteInsert(String, SortedList&lt;String, Tuple&lt;String, Boolean&gt;&gt;, Type)</h4>
+  <div class="markdown level1 summary"><p>Returns string contains SQL expression to complete insert statement</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string CompleteInsert(string alias, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt; identity, Type objectType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>Base table alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;&gt;</td>
+        <td><span class="parametername">identity</span></td>
+        <td><p>Identity fields and query parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">objectType</span></td>
+        <td><p>Mapped object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>SQL expression to complete insert statement</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_ExtractXmlQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.ExtractXmlQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_ExtractXmlQuery_System_String_System_String_System_String___System_IComparable___System_String_System_Collections_Generic_KeyValuePair_System_String_System_String____" data-uid="XData.Database.Dialect.BaseSqlBuilder.ExtractXmlQuery(System.String,System.String,System.String[],System.IComparable[],System.String,System.Collections.Generic.KeyValuePair{System.String,System.String}[])">ExtractXmlQuery(String, String, String[], IComparable[], String, KeyValuePair&lt;String, String&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Returns query to extract xml data by XPath expression</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query ExtractXmlQuery(string table, string column, string[] tablePrimaryKey, IComparable[] primaryKeyValue, string path, params KeyValuePair&lt;string, string&gt;[] namespaces)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">table</span></td>
+        <td><p>Table name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">column</span></td>
+        <td><p>Xml column name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">tablePrimaryKey</span></td>
+        <td><p>Table primary key columns</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>[]</td>
+        <td><span class="parametername">primaryKeyValue</span></td>
+        <td><p>Table primary key values</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>XPath expression</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;[]</td>
+        <td><span class="parametername">namespaces</span></td>
+        <td><p>XPath namespaces</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>XPath result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>Field not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_FormatFieldName_" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatFieldName*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_FormatFieldName_System_String_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatFieldName(System.String,System.String)">FormatFieldName(String, String)</h4>
+  <div class="markdown level1 summary"><p>Format field name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string FormatFieldName(string alias, string fieldName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>Source alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>Field name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Formatted field name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_FormatQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_FormatQuery_XData_Database_Adapter_Query_System_Object___" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatQuery(XData.Database.Adapter.Query,System.Object[])">FormatQuery(Query, Object[])</h4>
+  <div class="markdown level1 summary"><p>Returns formatted query string with parameter values</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string FormatQuery(Query query, params object[] paramValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">paramValues</span></td>
+        <td><p>Parameter values</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Formatted SQL string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_FormatSql_" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatSql*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_FormatSql_XData_Database_Dialect_SqlStringType_System_Object___" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatSql(XData.Database.Dialect.SqlStringType,System.Object[])">FormatSql(SqlStringType, Object[])</h4>
+  <div class="markdown level1 summary"><p>Format SQL dialect specific syntax strings<br>
+Hint: Override to realize ugly non standard syntax (if needed)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string FormatSql(SqlStringType sqlStringType, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Dialect.SqlStringType.html">SqlStringType</a></td>
+        <td><span class="parametername">sqlStringType</span></td>
+        <td><p>SQL syntax key</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Syntax arguments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_FormatStoredProcedure_" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatStoredProcedure*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_FormatStoredProcedure_XData_Database_Adapter_StoredProcedure_System_Object___" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatStoredProcedure(XData.Database.Adapter.StoredProcedure,System.Object[])">FormatStoredProcedure(StoredProcedure, Object[])</h4>
+  <div class="markdown level1 summary"><p>Returns formatted query string with parameter values</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string FormatStoredProcedure(StoredProcedure storedProcedure, params object[] paramValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.StoredProcedure.html">StoredProcedure</a></td>
+        <td><span class="parametername">storedProcedure</span></td>
+        <td><p>Stored procedure</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">paramValues</span></td>
+        <td><p>Parameter values</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Formatted SQL string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetAcquireBlobQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetAcquireBlobQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetAcquireBlobQuery_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_IComparable___System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetAcquireBlobQuery(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.IComparable[],System.String)">GetAcquireBlobQuery(String, String, IEnumerable&lt;String&gt;, IComparable[], String)</h4>
+  <div class="markdown level1 summary"><p>Returns query to acquire blob data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetAcquireBlobQuery(string table, string column, IEnumerable&lt;string&gt; tablePrimaryKey, IComparable[] primaryKeyValue, string nativeSqlType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">table</span></td>
+        <td><p>Table name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">column</span></td>
+        <td><p>Blob column name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">tablePrimaryKey</span></td>
+        <td><p>Table primary key columns</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>[]</td>
+        <td><span class="parametername">primaryKeyValue</span></td>
+        <td><p>Table primary key values</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">nativeSqlType</span></td>
+        <td><p>Native SQL type name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetAcquireXmlQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetAcquireXmlQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetAcquireXmlQuery_System_String_System_String_System_String___System_IComparable___" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetAcquireXmlQuery(System.String,System.String,System.String[],System.IComparable[])">GetAcquireXmlQuery(String, String, String[], IComparable[])</h4>
+  <div class="markdown level1 summary"><p>Returns query to acquire xml data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetAcquireXmlQuery(string table, string column, string[] tablePrimaryKey, IComparable[] primaryKeyValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">table</span></td>
+        <td><p>Table name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">column</span></td>
+        <td><p>Xml column name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">tablePrimaryKey</span></td>
+        <td><p>Table primary key columns</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>[]</td>
+        <td><span class="parametername">primaryKeyValue</span></td>
+        <td><p>Table primary key values</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>Field not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetAllQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetAllQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetAllQuery_XData_DataSource_Structure_IDataStructure_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetAllQuery(XData.DataSource.Structure.IDataStructure)">GetAllQuery(IDataStructure)</h4>
+  <div class="markdown level1 summary"><p>Returns query to check compliance of all repository objects<br>
+Hint: Used in XData LINQ expressions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetAllQuery(IDataStructure structure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetAnyQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetAnyQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetAnyQuery_XData_DataSource_Structure_IDataStructure_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetAnyQuery(XData.DataSource.Structure.IDataStructure)">GetAnyQuery(IDataStructure)</h4>
+  <div class="markdown level1 summary"><p>Returns query to check existence of repository objects<br>
+Hint: Used in XData LINQ expressions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetAnyQuery(IDataStructure structure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetBlobSizeQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetBlobSizeQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetBlobSizeQuery_System_String_System_String_System_String___System_IComparable___" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetBlobSizeQuery(System.String,System.String,System.String[],System.IComparable[])">GetBlobSizeQuery(String, String, String[], IComparable[])</h4>
+  <div class="markdown level1 summary"><p>Returns query to get Large Object size</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetBlobSizeQuery(string table, string column, string[] tablePrimaryKey, IComparable[] primaryKeyValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">table</span></td>
+        <td><p>Table name contained LOB</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">column</span></td>
+        <td><p>LOB column name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">tablePrimaryKey</span></td>
+        <td><p>Primary key column names</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>[]</td>
+        <td><span class="parametername">primaryKeyValue</span></td>
+        <td><p>Primary key values</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query to get Large Object size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetCall_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetCall*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetCall_XData_DataSource_Structure_IDataStructure_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetCall(XData.DataSource.Structure.IDataStructure,System.String)">GetCall(IDataStructure, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StoredProcedure GetCall(IDataStructure structure, string userName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">userName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.StoredProcedure.html">StoredProcedure</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td><p>stored procedure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetClearQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetClearQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetClearQuery_XData_DataSource_Structure_IDataStructure_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetClearQuery(XData.DataSource.Structure.IDataStructure)">GetClearQuery(IDataStructure)</h4>
+  <div class="markdown level1 summary"><p>Returns query to clear all repository objects</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetClearQuery(IDataStructure structure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetConnectionInfo_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetConnectionInfo_System_String_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String,System.String,System.String,System.Nullable{System.Boolean},System.String,System.String)">GetConnectionInfo(String, String, String, Nullable&lt;Boolean&gt;, String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XConnectionInfo GetConnectionInfo(string connectionString, string server, string schema, bool? integratedSecurity, string dbLogin, string dbPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">connectionString</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">server</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">schema</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">integratedSecurity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dbLogin</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dbPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Dialect.XConnectionInfo.html">XConnectionInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetConnectionString_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetConnectionString*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetConnectionString_System_String_System_String_System_Boolean_System_String_System_String_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetConnectionString(System.String,System.String,System.Boolean,System.String,System.String,System.String)">GetConnectionString(String, String, Boolean, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Compose specific connection string from parts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract string GetConnectionString(string server, string schema, bool integratedSecurity, string user, string password, string partialConnectionString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">server</span></td>
+        <td><p>Server name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">schema</span></td>
+        <td><p>Schema name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">integratedSecurity</span></td>
+        <td><p>Integrated security flag</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>User login</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>User password</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">partialConnectionString</span></td>
+        <td><p>Additional connection string settings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Connection string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetCountQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetCountQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetCountQuery_XData_DataSource_Structure_IDataStructure_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetCountQuery(XData.DataSource.Structure.IDataStructure)">GetCountQuery(IDataStructure)</h4>
+  <div class="markdown level1 summary"><p>Returns query to select count of data objects in repository</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetCountQuery(IDataStructure structure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetDeleteQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetDeleteQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetDeleteQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetDeleteQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String,System.Boolean)">GetDeleteQuery(IDataStructure, IDataObject, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns query to delete data object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetDeleteQuery(IDataStructure structure, IDataObject data, string userName, bool ignoreConcurrency = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.IDataObject.html">IDataObject</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Data object instance</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>User name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">ignoreConcurrency</span></td>
+        <td><p>Ignore concurrency flag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetEnumerator_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetEnumerator*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetEnumerator" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Predefined queries enumerator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;Query&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="XData.Database.Adapter.Query.html">Query</a>&gt;</td>
+        <td><p>Predefined queries enumerator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetExpressionText_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetExpressionText*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetExpressionText_XData_DataSource_Structure_IDataStructure_XData_Database_Dialect_ExpressionContext_System_Type_System_Linq_Expressions_Expression_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetExpressionText(XData.DataSource.Structure.IDataStructure,XData.Database.Dialect.ExpressionContext,System.Type,System.Linq.Expressions.Expression)">GetExpressionText(IDataStructure, ExpressionContext, Type, Expression)</h4>
+  <div class="markdown level1 summary"><p>Compose SQL expression from XData LINQ expression</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetExpressionText(IDataStructure structure, ExpressionContext context, Type queryType, Expression expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Database.Dialect.ExpressionContext.html">ExpressionContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Expression context</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">queryType</span></td>
+        <td><p>Data query type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression">Expression</a></td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>XData LINQ expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>SQL expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>LINQ expression has unsupported type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>Property not found</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>LINQ expression has unsupported method parameters</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetInsertQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetInsertQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String)">GetInsertQuery(IDataStructure, IDataObject, String)</h4>
+  <div class="markdown level1 summary"><p>Returns query to insert data object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetInsertQuery(IDataStructure structure, IDataObject data, string userName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.IDataObject.html">IDataObject</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Data object instance</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>User name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetLockQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetLockQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetLockQuery_XData_DataSource_Structure_IDataStructure_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetLockQuery(XData.DataSource.Structure.IDataStructure)">GetLockQuery(IDataStructure)</h4>
+  <div class="markdown level1 summary"><p>Returns query to lock single data object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetLockQuery(IDataStructure structure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetOrderByString_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetOrderByString*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetOrderByString_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean)">GetOrderByString(IDataStructure, SortedList&lt;String, Object&gt;, ref Query, ref List&lt;Tuple&lt;String, Type, String&gt;&gt;, ICollection&lt;String&gt;, ref SortedList&lt;String, Tuple&lt;String, String&gt;&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns order by string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string GetOrderByString(IDataStructure structure, SortedList&lt;string, object&gt; filterValues, ref Query query, ref List&lt;Tuple&lt;string, Type, string&gt;&gt; withSources, ICollection&lt;string&gt; skipped, ref SortedList&lt;string, Tuple&lt;string, string&gt;&gt; fields, bool doNotSkip)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">filterValues</span></td>
+        <td><p>Filter values</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-3">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="parametername">withSources</span></td>
+        <td><p>Common-Table-Expression (WITH) data sources</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">skipped</span></td>
+        <td><p>Skipped sources collection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="parametername">fields</span></td>
+        <td><p>Parsed fields</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">doNotSkip</span></td>
+        <td><p>Don&apos;t skip empty sources</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Order by string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>Field not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetParameterName_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetParameterName*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetParameterName_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetParameterName(System.String)">GetParameterName(String)</h4>
+  <div class="markdown level1 summary"><p>Formats field name as parameter name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string GetParameterName(string fieldName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>Field name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Parameter name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetRefreshQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetRefreshQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetRefreshQuery_XData_DataSource_Structure_IDataStructure_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetRefreshQuery(XData.DataSource.Structure.IDataStructure)">GetRefreshQuery(IDataStructure)</h4>
+  <div class="markdown level1 summary"><p>Returns query to refresh single data object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetRefreshQuery(IDataStructure structure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetSafeConvertExpression_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSafeConvertExpression*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetSafeConvertExpression_System_Type_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSafeConvertExpression(System.Type,System.Linq.Expressions.Expression,System.Linq.Expressions.Expression)">GetSafeConvertExpression(Type, Expression, Expression)</h4>
+  <div class="markdown level1 summary"><p>Safe convert expression</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Expression GetSafeConvertExpression(Type type, Expression dataRow, Expression fieldName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type of expression</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression">Expression</a></td>
+        <td><span class="parametername">dataRow</span></td>
+        <td><p>Data row expression</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression">Expression</a></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>Field name expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression">Expression</a></td>
+        <td><p>Expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetSaveBlobQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSaveBlobQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetSaveBlobQuery_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_IComparable___System_Byte____System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSaveBlobQuery(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.IComparable[],System.Byte[]@,System.String)">GetSaveBlobQuery(String, String, IEnumerable&lt;String&gt;, IComparable[], ref Byte[], String)</h4>
+  <div class="markdown level1 summary"><p>Returns query to save blob data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetSaveBlobQuery(string table, string column, IEnumerable&lt;string&gt; tablePrimaryKey, IComparable[] primaryKeyValue, ref byte[] body, string nativeSqlType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">table</span></td>
+        <td><p>Table name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">column</span></td>
+        <td><p>Blob column name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">tablePrimaryKey</span></td>
+        <td><p>Table primary key columns</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>[]</td>
+        <td><span class="parametername">primaryKeyValue</span></td>
+        <td><p>Table primary key values</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">body</span></td>
+        <td><p>Blob body</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">nativeSqlType</span></td>
+        <td><p>Native SQL type name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetSaveXmlQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSaveXmlQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetSaveXmlQuery_System_String_System_String_System_String___System_IComparable___System_String__" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSaveXmlQuery(System.String,System.String,System.String[],System.IComparable[],System.String@)">GetSaveXmlQuery(String, String, String[], IComparable[], ref String)</h4>
+  <div class="markdown level1 summary"><p>Returns query to save xml data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetSaveXmlQuery(string table, string column, string[] tablePrimaryKey, IComparable[] primaryKeyValue, ref string body)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">table</span></td>
+        <td><p>Table name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">column</span></td>
+        <td><p>Xml column name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">tablePrimaryKey</span></td>
+        <td><p>Table primary key columns</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>[]</td>
+        <td><span class="parametername">primaryKeyValue</span></td>
+        <td><p>Table primary key values</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">body</span></td>
+        <td><p>Blob body</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>Field not found</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetSelectQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSelectQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetSelectQuery_XData_DataSource_Structure_IDataStructure_System_Boolean_System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSelectQuery(XData.DataSource.Structure.IDataStructure,System.Boolean,System.Boolean)">GetSelectQuery(IDataStructure, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns query to select data objects</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetSelectQuery(IDataStructure structure, bool markProperties = false, bool doNotSkip = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">markProperties</span></td>
+        <td><p>Mark properties with comments</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">doNotSkip</span></td>
+        <td><p>Don&apos;t skip sources</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetSequenceName_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSequenceName*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetSequenceName_System_String_System_String_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSequenceName(System.String,System.String,System.String)">GetSequenceName(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns sequence name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetSequenceName(string context, string table, string column)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Context name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">table</span></td>
+        <td><p>Table name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">column</span></td>
+        <td><p>Column name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Sequence name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetSqlTypeName_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetSqlTypeName_System_Data_DbType_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName(System.Data.DbType)">GetSqlTypeName(DbType)</h4>
+  <div class="markdown level1 summary"><p>Returns SQL type name for System.DbType</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string GetSqlTypeName(DbType dbType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td><span class="parametername">dbType</span></td>
+        <td><p>System.DbType enumeration key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>SQL type name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td><p>Type not supported</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetUpdateQuery_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetUpdateQuery*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetUpdateQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetUpdateQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String,System.Boolean)">GetUpdateQuery(IDataStructure, IDataObject, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns query to update data object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Query GetUpdateQuery(IDataStructure structure, IDataObject data, string userName, bool ignoreConcurrency = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure metadata</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.IDataObject.html">IDataObject</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Data object instance</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">userName</span></td>
+        <td><p>User name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">ignoreConcurrency</span></td>
+        <td><p>Ignore concurrency flag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetXmlNamespaces_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetXmlNamespaces*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetXmlNamespaces_System_Collections_Generic_KeyValuePair_System_String_System_String____" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetXmlNamespaces(System.Collections.Generic.KeyValuePair{System.String,System.String}[])">GetXmlNamespaces(KeyValuePair&lt;String, String&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Returns Xml namespaces string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract string GetXmlNamespaces(KeyValuePair&lt;string, string&gt;[] namespaces)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;[]</td>
+        <td><span class="parametername">namespaces</span></td>
+        <td><p>Xml namespaces</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Xml namespaces string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_Init_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Init*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_Init_System_String_Microsoft_Extensions_Configuration_IConfiguration_System_String_" data-uid="XData.Database.Dialect.BaseSqlBuilder.Init(System.String,Microsoft.Extensions.Configuration.IConfiguration,System.String)">Init(String, IConfiguration, String)</h4>
+  <div class="markdown level1 summary"><p>Dialect adapter initialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Init(string context, IConfiguration config, string sequence)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Context name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>Specific dialect adapter configuration Xml</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sequence</span></td>
+        <td><p>Sequence generator assembly qualified class name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_ParseConnectionString_" data-uid="XData.Database.Dialect.BaseSqlBuilder.ParseConnectionString*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_ParseConnectionString_System_String_System_String__System_String__System_Boolean__System_String__System_String__System_String__" data-uid="XData.Database.Dialect.BaseSqlBuilder.ParseConnectionString(System.String,System.String@,System.String@,System.Boolean@,System.String@,System.String@,System.String@)">ParseConnectionString(String, ref String, ref String, ref Boolean, ref String, ref String, out String)</h4>
+  <div class="markdown level1 summary"><p>Parse specific connection string to parts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ParseConnectionString(string connectionString, ref string server, ref string schema, ref bool integratedSecurity, ref string user, ref string password, out string partialConnectionString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">connectionString</span></td>
+        <td><p>Connection string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">server</span></td>
+        <td><p>Server name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">schema</span></td>
+        <td><p>Schema name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">integratedSecurity</span></td>
+        <td><p>Integrated security flag</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>User login</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>User password</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">partialConnectionString</span></td>
+        <td><p>Additional connection string settings</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_RegisterResultSet_" data-uid="XData.Database.Dialect.BaseSqlBuilder.RegisterResultSet*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_RegisterResultSet_XData_Mapping_Dynamic_IResultSetDescription_" data-uid="XData.Database.Dialect.BaseSqlBuilder.RegisterResultSet(XData.Mapping.Dynamic.IResultSetDescription)">RegisterResultSet(IResultSetDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual QueryParam RegisterResultSet(IResultSetDescription resultSet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IResultSetDescription.html">IResultSetDescription</a></td>
+        <td><span class="parametername">resultSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.QueryParam.html">QueryParam</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_SequenceGeneration_" data-uid="XData.Database.Dialect.BaseSqlBuilder.SequenceGeneration*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_SequenceGeneration_System_Boolean__" data-uid="XData.Database.Dialect.BaseSqlBuilder.SequenceGeneration(System.Boolean@)">SequenceGeneration(out Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sequence generation supported</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SequenceGeneration(out bool required)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">required</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Sequence generation supported flag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Database_Dialect_BaseSqlBuilder_SequenceGeneration_System_Boolean___seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetSequenceName_System_String_System_String_System_String_">GetSequenceName(String, String, String)</a></div>
+      <div><a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_SequenceRequired">SequenceRequired</a></div>
+  </div>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_SetQueryParameters_" data-uid="XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_SetQueryParameters_XData_Database_Adapter_Query__System_Collections_Generic_IEnumerable_XData_Mapping_Dynamic_IParameterDescription__System_Collections_Generic_SortedList_System_String_System_String__System_String_XData_DialectOptions_" data-uid="XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(XData.Database.Adapter.Query@,System.Collections.Generic.IEnumerable{XData.Mapping.Dynamic.IParameterDescription},System.Collections.Generic.SortedList{System.String,System.String},System.String,XData.DialectOptions)">SetQueryParameters(ref Query, IEnumerable&lt;IParameterDescription&gt;, SortedList&lt;String, String&gt;, String, DialectOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetQueryParameters(ref Query query, IEnumerable&lt;IParameterDescription&gt; parameters, SortedList&lt;string, string&gt; variableValues, string userName, DialectOptions dialectOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IParameterDescription.html">IParameterDescription</a>&gt;</td>
+        <td><span class="parametername">parameters</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">variableValues</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">userName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.DialectOptions.html">DialectOptions</a></td>
+        <td><span class="parametername">dialectOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_SetQueryParameterValues_" data-uid="XData.Database.Dialect.BaseSqlBuilder.SetQueryParameterValues*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_SetQueryParameterValues_XData_Database_Adapter_Query__System_Collections_Generic_SortedList_System_String_System_Object__" data-uid="XData.Database.Dialect.BaseSqlBuilder.SetQueryParameterValues(XData.Database.Adapter.Query@,System.Collections.Generic.SortedList{System.String,System.Object})">SetQueryParameterValues(ref Query, SortedList&lt;String, Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set query parameter values</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetQueryParameterValues(ref Query query, SortedList&lt;string, object&gt; paramValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">paramValues</span></td>
+        <td><p>Parameter values</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_ToDataSet_" data-uid="XData.Database.Dialect.BaseSqlBuilder.ToDataSet*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_ToDataSet__1_System_String_System_Collections_Generic_IEnumerable___0__" data-uid="XData.Database.Dialect.BaseSqlBuilder.ToDataSet``1(System.String,System.Collections.Generic.IEnumerable{``0})">ToDataSet&lt;TSource&gt;(String, IEnumerable&lt;TSource&gt;)</h4>
+  <div class="markdown level1 summary"><p>Compose union structure over source object sequence</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToDataSet&lt;TSource&gt;(string prefix, IEnumerable&lt;TSource&gt; source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">prefix</span></td>
+        <td><p>Column prefix</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TSource&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source sequence</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Data source</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSource</span></td>
+        <td><p>Source type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_System_Collections_IEnumerable_GetEnumerator_" data-uid="XData.Database.Dialect.BaseSqlBuilder.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_System_Collections_IEnumerable_GetEnumerator" data-uid="XData.Database.Dialect.BaseSqlBuilder.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Predefined queries enumerator</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
+        <td><p>Predefined queries enumerator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="XData.Interfaces.ISqlBuilder.html">ISqlBuilder</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_ToSortedSet__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__">CollectionsExtensions.ToSortedSet&lt;T&gt;(IEnumerable&lt;T&gt;, IComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_Inner__1_System_Collections_Generic_IEnumerable___0__">JoinedEnumerable.Inner&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_Outer__1_System_Collections_Generic_IEnumerable___0__">JoinedEnumerable.Outer&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_LeftOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.LeftOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_RightOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.RightOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_FullOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.FullOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_ToDataSet__1_System_Collections_Generic_IEnumerable___0__System_String_XData_Interfaces_ISqlBuilder_">QueryDescriptionExtensions.ToDataSet&lt;T&gt;(IEnumerable&lt;T&gt;, String, ISqlBuilder)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

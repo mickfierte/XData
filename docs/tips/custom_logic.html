@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Execute custom business logic | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Execute custom business logic | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="tips_custom_logic.md">
+<h2 id="execute-custom-business-logic">Execute custom business logic</h2>
+
+<p>XData has many features targeting this technology as not only ORM, but a full featured Data Access Layer. This is one of this features.</p>
+<p>Custom logic defined as public property of <a class="xref" href="../api/XData.XDataLogic-1.html">XDataLogic&lt;T&gt;</a> class descendant with type of <a class="xref" href="../api/XData.CustomLogic-1.html">CustomLogic&lt;T&gt;</a>.</p>
+<pre><code class="lang-csharp">    public class InvoiceLogic : XDataLogic&lt;Invoice&gt;
+    {
+        public CustomLogic&lt;Invoice&gt; TestCustomLogic =&gt; (objects =&gt; {
+            Log.Write(MessageType.Information, 
+                () =&gt; $&quot;TestCustomLogic called with {objects.Length} objects&quot;); 
+            foreach (var invoice in objects)
+            {
+                var i = invoice;
+                invoice.PostData(&quot;testPost&quot;, 
+                    () =&gt; Encoding.UTF8.GetBytes(i.DocNumb));
+                var p = Encoding.UTF8.GetBytes(i.DocNumb);
+                var r = i.Callback(&quot;testCall&quot;, ref p);
+                Log.Write(MessageType.Information, () =&gt;
+                    @$&quot;Call for \&quot;{i.DocNumb}\&quot; returned \&quot;{r}\&quot; 
+                with data \&quot;{(p == null ? null : Encoding.UTF8.GetString(p))}\&quot;&quot;);
+            }
+            return true;
+        });
+    }
+
+    ...
+
+    //Call example logic
+    var random = new Random();
+    return dataScope.GetRepository&lt;Invoice&gt;().ToArray().Execute(() =&gt; &quot;TestCustomLogic&quot;,
+                &quot;testPost&quot;.SetValue((Action&lt;byte[]&gt;)(data =&gt; 
+                    Console.WriteLine(&quot;Post message received (data=\&quot;{0}\&quot;)&quot;, 
+                        data == null ? null : Encoding.UTF8.GetString(data))))
+                        .AsEnum().ToDictionary(),
+                &quot;testCall&quot;.SetValue((Func&lt;byte[], byte[]&gt;)(data =&gt; {
+    Console.WriteLine(&quot;Call received \&quot;{0}\&quot;)&quot;, 
+        data == null ? null : Encoding.UTF8.GetString(data));
+    return random.NextDouble() &gt;= 0.5 ? null : Encoding.UTF8.GetBytes(
+        $&quot;reply for \&quot;{(data == null ? null : Encoding.UTF8.GetString(data))}\&quot;&quot;);
+                })).AsEnum().ToDictionary());
+</code></pre><p>Programmer can develope data centric logic over some of mapped objects with ability to execute this logic in the middleware layer of three-tier architecture on a dedicated server (or cluster). And this code can be simple and representable debuged in two-tier environment. Architecture can be switched by configuration! No code modification, no side effects... This feature is linked with <a href="tips.html#trigger-business-logic">Trigger logic</a> and reached by <a class="xref" href="tips.html#using-business-logic-callbacks">Callbacks</a>.</p>
+<p>When code is organized using data mapping modules, data logic modules and client (or Web site) it can help programmer to keep module relations clean and get ready to changes, with no matter of middleware layer existance. And this rules are not dictated, You can use it or not. You can write this logic anywhere You architect to do. Nothing will be breakes, exept of ability to use XData three-tier architecture. But if You realy don&#39;t need it, what is wrong?</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

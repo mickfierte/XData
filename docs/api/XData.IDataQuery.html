@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IDataQuery
+   | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IDataQuery
+   | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="XData.IDataQuery">
+  
+  
+  <h1 id="XData_IDataQuery" data-uid="XData.IDataQuery" class="text-break">Interface IDataQuery
+  </h1>
+  <div class="markdown level0 summary"><p>Read only data source basic interface</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.iqueryable.elementtype#System_Linq_IQueryable_ElementType">IQueryable.ElementType</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.iqueryable.expression#System_Linq_IQueryable_Expression">IQueryable.Expression</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.iqueryable.provider#System_Linq_IQueryable_Provider">IQueryable.Provider</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator#System_Collections_IEnumerable_GetEnumerator">IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
+  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h5 id="XData_IDataQuery_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDataQuery : IOrderedQueryable, IQueryable, IEnumerable, IDisposable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="XData_IDataQuery_Alias_" data-uid="XData.IDataQuery.Alias*"></a>
+  <h4 id="XData_IDataQuery_Alias" data-uid="XData.IDataQuery.Alias">Alias</h4>
+  <div class="markdown level1 summary"><p>Data repository alias</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Alias { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_IDataQuery_Alias_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Default value is data object type name</p>
+</div>
+  
+  
+  <a id="XData_IDataQuery_Context_" data-uid="XData.IDataQuery.Context*"></a>
+  <h4 id="XData_IDataQuery_Context" data-uid="XData.IDataQuery.Context">Context</h4>
+  <div class="markdown level1 summary"><p>Data context</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Context { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_IDataQuery_Layer_" data-uid="XData.IDataQuery.Layer*"></a>
+  <h4 id="XData_IDataQuery_Layer" data-uid="XData.IDataQuery.Layer">Layer</h4>
+  <div class="markdown level1 summary"><p>Data repository layer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid Layer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_IDataQuery_Layer_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Sharing same layer the data object repositories can interact automatically as parent/child (see <a class="xref" href="XData.Mapping.ExternalLinkAttribute.html">ExternalLinkAttribute</a>)</p>
+<p>Repositories on different layers but same data object are independent for each other</p>
+<p>Repositories on same layer based on same data object is the same repository</p>
+</div>
+  
+  
+  <a id="XData_IDataQuery_Variables_" data-uid="XData.IDataQuery.Variables*"></a>
+  <h4 id="XData_IDataQuery_Variables" data-uid="XData.IDataQuery.Variables">Variables</h4>
+  <div class="markdown level1 summary"><p>Data query/repository/call result variables</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">VariableIndexer Variables { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.VariableIndexer.html">VariableIndexer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_IDataQuery_Variables_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Variable values can be used to set the filter values (query/repository)</p>
+<p>Variable values can be used in custom logic (repository)</p>
+<p>Variables is stored in query/repository/call result instance</p></div>
+  <h5 id="XData_IDataQuery_Variables_examples">Examples</h5>
+  <pre><code class="cs"><p>var rep = dataScope.GetRepository&lt;Customer>(variables: new []{&quot;OurCode&quot;, &quot;SELF&quot;});</p>
+<p>var newInvoice = dataScope.GetRepository&lt;Invoice>().New();</p>
+<p>newInvoice.CustomerFrom += rep.First(x => x.Code.CompareVariable(FilterOperation.Equal, &quot;SELF&quot;));</p></code></pre>
+  <h5 id="XData_IDataQuery_Variables_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.FilterConstantType.html#XData_FilterConstantType_Variable">Variable</a></div>
+      <div><a class="xref" href="XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetRepository&lt;T&gt;(String, String, ISecuritySession, Variable[])</a></div>
+      <div><span class="xref">XData.DataObjectExtensions.CompareVariable(XData.IDataQueryInternal,System.Object,XData.FilterOperation,System.String)</span></div>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetParameter__1_XData_IDataQuery_System_String_">DataObjectExtensions.GetParameter&lt;T&gt;(IDataQuery, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetResultSet__1_XData_IDataQuery_System_String_">DataObjectExtensions.GetResultSet&lt;TRes&gt;(IDataQuery, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetResultSet__1_XData_IDataQuery_System_Linq_Expressions_Expression_System_Func_System_Collections_Generic_IEnumerable___0____">DataObjectExtensions.GetResultSet&lt;TRes&gt;(IDataQuery, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

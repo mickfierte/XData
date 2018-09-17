@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Concurrency resolving | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Concurrency resolving | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="concurrency.md">
+<h2 id="concurrency-resolving">Concurrency resolving</h2>
+
+<p>Concurrency can be resolved by <a href="https://blogs.msdn.microsoft.com/marcelolr/2010/07/16/optimistic-and-pessimistic-concurrency-a-simple-explanation/">pessimistic or optimistic locking</a> on transaction management level. XData is supported an automatic (or manual) transaction management with both locking types support (when locking is supported on RDBMS level).</p>
+<p>Pessimistic locking is RDBMS ability to define lock over one record for one thread of application until transaction is commited. In case of concurrent rase first thread acquired and lock data and other threads will get an exception. XData pessimistic locking is acquired by <a href="glossary.html#repository">repository</a> <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Lock__0_">Lock</a> method call, or an extension method <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Lock__1___0_">Lock</a> of <a class="xref" href="../api/XData.IDataObject.html">IDataObject</a> interface. In case of reject of locking the exception is catched, but method returns false. To acquire the pessimistic lock the transaction is required. When no transaction is defined then runtime <a class="xref" href="../api/XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a> is raised. </p>
+<p>Optimistic locking require a special field inside datatable table - the concurrency token. Concurrency token is always updated on insert or update of the table using some algorithm. When data changes submitted (update or delete) the value is checked for not changed until request data. If value is changes the <a class="xref" href="../api/XData.Exceptions.XDataConcurrencyException.html">XDataConcurrencyException</a> is rised. To mark property as concurrency token then define mapping use <a href="glossary.html#property-flags">property flag</a> - ConcurrencyToken and set one of <a href="glossary.html#default-value-type">default value type</a> to choose one of concurrency value generation algorithm. Concurrency token value checking is provided automatically. There is possible to set <a class="xref" href="../api/XData.DataSubmitFlag.html">IgnoreConcurrency</a> flag to ignore concurrency when submitting changes using repository <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Submit__0__XData_DataSubmitFlag_">Submit</a> method, or an extension method <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0_XData_DataSubmitFlag_">Submit</a> of <a class="xref" href="../api/XData.IDataObject.html">IDataObject</a> interface. When concurrency is ignored no checks are provided and concurrency is resolved with &quot;last change is applied&quot; rule.</p>
+<div class="TIP"><h5>Tip</h5><p>Concurrency token field can be hidden, but recured to be selected from data source table (see <a href="mapping/mapping.html#hidden-properties">Hidden property</a>).</p>
+</div>
+<div class="IMPORTANT"><h5>Important</h5><p>Concurrency token property mapping required to define default value behaviour with <a class="xref" href="../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_System_Boolean_">AlwaysSetDefault</a> flag assigned to true.</p>
+</div>
+<p>Ways to define concurrency token property mapping is various to <a href="mapping/static/static.html">static</a> and <a href="mapping/dynamic/dynamic.html">dynamic</a> notation and described in corresponding topics.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Install &amp; configuration | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Install &amp; configuration | XData website ">
+    <meta name="generator" content="docfx 2.37.2.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="config.md">
+<h2 id="installation-and-configuration">Installation and configuration</h2>
+
+<h2 id="installation">Installation</h2>
+<p>To start use XData basic functionality is required to setup NuGet <a href="https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/">XData package</a>. XData <a href="../index.html#plugins">plugins or additional modules</a> can be downloaded and used separately.</p>
+<p>To work with <a href="unit_of_work.html">related objects</a> (<a href="https://www.martinfowler.com/eaaCatalog/unitOfWork.html">Unit of Work</a> implementation) is required to setup NuGet <a href="https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/">XData UnitOfWork package</a>.</p>
+<p>To implement <a href="security.html">security session</a> and use application data access with XData is required to setup NuGet <a href="https://packages.nuget.org/packages/XData.Security.Abstractions_BrokenLink/">XData Security package</a>.</p>
+<p>To use one or more <a href="../index.html#plugins">SQL dialect, SQL adapter, specific log writer</a> XData plugins it can be downloaded and unzipped to application binary folder (same as XData.dll located). Read this topic to the end for configuration rules to any plugin. Read provided readme.txt file to get specific knowledge about choosen plugin.</p>
+<p>To deploy application in three-tier architecture read <a href="three_tier.html">here</a></p>
+<h3 id="acquiring-xdata-configuration-during-runtime">Acquiring XData configuration during runtime</h3>
+<p>.Net Standard 2.0:</p>
+<p>XData can be dynamically configured when defining XData service (see <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a>) in ServiceCollection using optional parameter <em>options</em> in LINQ style.</p>
+<pre><code class="lang-csharp">    .AddSingleton(typeof(IConfigurationRoot), x =&gt; null)
+    .AddXData(x =&gt; x.SetWriteDebugInfo(true)
+        .AddDialect(&quot;postgresql&quot;, &quot;XData.PostgreSql.Dialect&quot;)
+        .AddAdapter(&quot;postgresql&quot;, &quot;XData.PostgreSql.NpgSql.Adapter&quot;)
+        .AddContext(&quot;test&quot;, &quot;postgresql&quot;, &quot;postgresql&quot;, 
+&quot;Server=localhost;Database=XDataTest;User Id=postgres;Password=123456&quot;, true))
+</code></pre><p>Configuration file in .Net Standard 2.0 version is readed by <a href="https://www.nuget.org/packages/Microsoft.Extensions.Configuration/">Microsoft.Extensions.Configuration</a> service registered during application startup.</p>
+<p>.Net 4.0:</p>
+<p>XData can be dynamically configured when acquiring XData engine <em>XDataManager.AddXData</em> using optional parameter <em>options</em> in LINQ style.</p>
+<div class="WARNING"><h5>Warning</h5><p>Signature of XDataManager.AddXData method is slightly different for .Net 4.0 version! See <a href="versions.html">versions comparision</a> for details.</p>
+</div>
+<pre><code class="lang-csharp">    var dataEngine = XDataManager.AddXData(x =&gt; x.SetWriteDebugInfo(true)
+        .AddDialect(&quot;postgresql&quot;, &quot;XData.PostgreSql.Dialect&quot;)
+        .AddAdapter(&quot;postgresql&quot;, &quot;XData.PostgreSql.NpgSql.Adapter&quot;)
+        .AddContext(&quot;test&quot;, &quot;postgresql&quot;, &quot;postgresql&quot;, 
+&quot;Server=localhost;Database=XDataTest;User Id=postgres;Password=123456&quot;, true));
+    //or using configuration file
+    var dataEngine = XDataManager.AddXData(x =&gt; x.UseConfiguration(
+        System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(&quot;~&quot;)))
+</code></pre><div class="TIP"><h5>Tip</h5><p><strong>When using both versions</strong> You can use <a class="xref" href="../api/XData.IDataOptions.html">IDataOptions</a> methods to store partial non secure connection string only and fill credentials during runtime. Security related information can be obtained separatly from some secure source.</p>
+</div>
+<h3 id="configuration-xdata-using-config-file">Configuration XData using config file</h3>
+<div class="TIP"><h5>Tip</h5><p>When using .Net Standard 2.0 version config file can be formatted in any notation but structure of config file need to be correspond XML structure described here</p>
+</div>
+<div class="IMPORTANT"><h5>Important</h5><p>When using XML formatted config file required to add specific descriptor for XData specific section &quot;xdata&quot;</p>
+</div>
+<pre><code class="lang-xml">&lt;configuration&gt;
+  &lt;configSections&gt;
+    &lt;section name=&quot;xdata&quot; type=&quot;System.Configuration.IgnoreSectionHandler&quot;/&gt;
+  &lt;/configSections&gt;
+...  
+</code></pre><div class="IMPORTANT"><h5>Important</h5><p>Check <em>configSections</em> section is first section inside XML configuration file!</p>
+</div>
+<p>Connection strings for each of <a href="glossary.html#context">context</a> must to be declared in standard section <em>connectionStrings</em> and name attribute should equal to context name. Connection strings is required on client side only when two-tier (client-server) architecture used.</p>
+<pre><code class="lang-xml">  &lt;connectionStrings&gt;
+    &lt;add name=&quot;TEST&quot; connectionString=&quot;Data Source=(local);Initial Catalog=XDataTest;User Id=test;Password=test&quot;/&gt;
+  &lt;/connectionStrings&gt;
+</code></pre><p>There are three possible ways to secure connection string in configuration file:</p>
+<ul>
+<li><a href="https://msdn.microsoft.com/en-us/library/ms254494(v=vs.110).aspx">Chipher config file section</a> <em>connectionStrings</em> section</li>
+<li>Using <a class="xref" href="../api/XData.IDataOptions.html#XData_IDataOptions_UseCredentials_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_">partial connection strings</a> during runtime</li>
+<li>Deploy application in <a href="three_tier.html">three tier mode</a>. In this case connection string is not required to be configured on client side.</li>
+</ul>
+<p>XData specific section <em>xdata</em> has a structure: </p>
+<pre><code class="lang-xml">&lt;xdata default=&quot;TEST_ORACLE_ODP&quot; debug=&quot;true&quot; log=&quot;XDataTraceLog.TraceLog, XDataTraceLog&quot;&gt;
+  &lt;adapter name=&quot;ORACLE_ODP&quot; assembly=&quot;XOracleODPAdapter&quot;/&gt;
+  &lt;dialect name=&quot;ORACLE&quot; assembly=&quot;XOracleDialect&quot;/&gt;
+  &lt;context name=&quot;TEST_ORACLE_ODP&quot; adapter=&quot;ORACLE_ODP&quot; dialect=&quot;ORACLE&quot; sequence=&quot;XDataObjectTest.MySequenceRule, XDataObjectTest&quot; concurrencyError=&quot;-20001&quot;/&gt;
+&lt;/xdata&gt;  
+</code></pre><p>The <em>xdata</em> section required to contain attribute <em>default</em> with <a href="glossary.html#context">context</a> name used by default. Attribure <em>debug</em> is optional, by default debug mode switched off (debug = <em>false</em>). Attribute <em>log</em> optional, used for .Net 4.0 version only (.Net Standard 2.0 version used <a href="https://www.nuget.org/packages/Microsoft.Extensions.Logging.Abstractions/">Microsoft.Extensions.Logging</a> service). Log attribute value is assembly qualified type name for <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> realization (see <a href="../index.html#plugins">available</a> log plugins or implement any You want log system adapter).</p>
+<p>Inside xdata section for each of <a href="glossary.html#context">context</a> required elements:</p>
+<ul>
+<li><strong>dialect</strong> (required always, can be shared between multiple contexts) - register an unique alias to specific RDBMS SQL dialect support. Attribute <em>name</em> contains an alias of dialect. Attribute <em>assembly</em> - assembly name of specific dialect plugin. When plugin implementation support additional configuration settings, element <em>dialect</em> may have an specifically organized internal structure described in plugin readme file.</li>
+<li><strong>adapter</strong> (required when two-tier architecture is used only, can be shared between multiple contexts) - register unique alias to adapter for specific ADO.Net provider. Attribute <em>name</em> contains an alias of adapter. Attribute <em>assembly</em> - assembly name of specific adapter plugin. When plugin implementation support additional configuration settings, element <em>adapter</em> may have an specifically organized internal structure described in plugin readme file.</li>
+<li><strong>context</strong> (required always) - contains <a href="glossary.html#context">context</a> settings. Attribute <em>name</em> contains context name. Attribute <em>adapter</em> (required when two-tier architecture is used only) contains adapter alias. Attribute <em>dialect</em> - dialect alias. In case of using sequences required to specify attribute <em>sequence</em> contains assembly qualified type name of <a class="xref" href="../api/XData.Interfaces.ISequenceNameRule.html">ISequenceNameRule</a> implementation. When <a class="xref" href="../api/XData.Exceptions.XDataConcurrencyException.html">optimistic concurrention</a> error code need to have a special value for some reason (see specific adapter readme file) set <em>concurrencyError</em> attribute to specific error code value.</li>
+<li><strong>proxy</strong> (required when three-tier architecture is used only) - declare WCF client endpoint name for context named same as proxy attribute <em>name</em> value. WCF client endpoint name is stored in <em>endpoint</em> attribute value. Same WCF endpoint can be used for multiple contexts. Contexts names on client and server must to have same names. Deploing and configuration process for three tier architecture is described <a href="three_tier.html">here</a>.</li>
+</ul>
+<h3 id="deploing-application-in-three-three-tier-architecture">Deploing application in three three-tier architecture</h3>
+<p>Project organization rules and assembly deployment principles to deploy application using three-tier architecture described <a href="three_tier.html">here</a>.</p>
+<div class="NOTE"><h5>Note</h5><p>Three-tier architecture can be apllied over .Net 4.0 version only! See next versions to use three-tier feature on .Net Standard 2.0 version.</p>
+</div>
+<h4 id="install-and-configure-server">Install and configure server</h4>
+<p>Server is implemented as WCF service <a href="../artifacts/net40/XData.Server.zip">XData.Server.dll</a>. Base engine XData.dll library is required to server functionality. As well as log plugins, dialects and adapters to connect database directly. To run Your application business logic on server side server logic and data mapping modules are required on server side two. </p>
+<p>Limits to choose protocol can be used as transport between client and server:</p>
+<ul>
+<li>Duplex support</li>
+<li>Reenterability inside one session support</li>
+</ul>
+<p>It&#39;s recomended to host XData.Server on IIS. By default IIS is not configured to activate service over net.tcp, and if You whant to use this protocol, see <a href="http://www.codeproject.com/Articles/717327/WCF-NetTcp-Binding">here</a> to configure it.</p>
+<h4 id="changes-on-client-side">Changes on client side</h4>
+<p>When three-tier architecture is used, required to obtain special module <a href="https://packages.nuget.org/packages/XData.Remote_BrokenLink/">XData.Remote</a>. Application folder must contain client logic and data mapping modules, as well as used by Your application log modules, SQL dialect modules <strong>BUT</strong> now adapters not required to contexts used in three-tier mode.</p>
+<p>In configuration file, is required to configure WCF client according Your server settings. Section <em>xdata</em> must to be configured as described above with defining of <em>proxy</em> elements for every context that used three-tier architecture. Remote contexts must to have same names on client and server. Sample three-tier configuration can be obtained from XData test project.</p>
+<div class="TIP"><h5>Tip</h5><p>You able to combine local connections to some databases with one or more three-tier servers. In the same time You can use multiple dedicated servers, each for one or more contexts.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>You can fast and simple switch from three-tier mode to client server mode and then back to three-tier by commenting/uncommenting <em>proxy</em> descriptions. It&#39;s a very usefull feature to debug server logic code ;)</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
