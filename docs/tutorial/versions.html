@@ -100,20 +100,20 @@ builder.AddXmlFile(&quot;MyConsoleApp.config&quot;);
 var configFile = builder.Build();
 
 //Set services
-var serviceProvider = new ServiceCollection()
+using(var serviceProvider = new ServiceCollection()
     .AddLogging()
     // Localization only for ASP.NET Core
     .AddSingleton(typeof(IStringLocalizerFactory), x =&gt; null)
     .AddSingleton(typeof(IConfigurationRoot), x =&gt; configFile)
     .AddXData()
-    .BuildServiceProvider();
-
-//Configure logging
-serviceProvider.GetRequiredService&lt;ILoggerFactory&gt;()
-    .AddConsole(LogLevel.Warning).AddDebug();
-
-using (var dataEngine = serviceProvider.GetRequiredService&lt;IDataEngine&gt;())
+    .BuildServiceProvider())
 {
+    //Configure logging
+    serviceProvider.GetRequiredService&lt;ILoggerFactory&gt;()
+        .AddConsole(LogLevel.Warning).AddDebug();
+
+    var dataEngine = serviceProvider.GetRequiredService&lt;IDataEngine&gt;();
+
     using (var dataScope = dataEngine.NewDataScope())
     {
         foreach(var data in dataScope.GetRepository&lt;SomeObject&gt;())

@@ -4,25 +4,45 @@ XData is .Net domain object oriented data access layer component. It is not "yet
 version 1.1.0
 ## NuGet packages
 
-[XData Data Access Layer package](https://packages.nuget.org/packages/XData.DataAccessLayer/) - basic package
-[![NuGet](https://img.shields.io/nuget/v/XData.DataAccessLayer.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.DataAccessLayer.svg?style=plastic)]()
+[XData Data Access Layer package](https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/)
+[![NuGet](https://img.shields.io/nuget/v/XData.DataAccessLayer_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.DataAccessLayer_BrokenLink.svg?style=plastic)]()
 
-[XData UnitOfWork package](https://packages.nuget.org/packages/XData.WorkSet/) - required to use [XData UnitOfWork](xref:unit_of_work.md) implementation
-[![NuGet](https://img.shields.io/nuget/v/XData.WorkSet.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.WorkSet.svg?style=plastic)]()
+[XData UnitOfWork package](https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/) - required to use [XData UnitOfWork](xref:unit_of_work.md) implementation
+[![NuGet](https://img.shields.io/nuget/v/XData.WorkSet_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.WorkSet_BrokenLink.svg?style=plastic)]()
 
-[XData Security package](https://packages.nuget.org/packages/XData.Security.Abstractions/) - [_ISecuritySession_](xref:XData.Interfaces.ISecuritySession) interface implementation helper required to use [XData security](xref:security.md) functionality
-[![NuGet](https://img.shields.io/nuget/v/XData.Security.Abstractions.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.Security.Abstractions.svg?style=plastic)]()
+[XData Security package](https://packages.nuget.org/packages/XData.Security.Abstractions_BrokenLink/) - [_ISecuritySession_](xref:XData.Interfaces.ISecuritySession) interface implementation helper required to use [XData security](xref:security.md) functionality
+[![NuGet](https://img.shields.io/nuget/v/XData.WorkSet_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.WorkSet_BrokenLink.svg?style=plastic)]()
 
-[XData Three-tier client proxy package](https://packages.nuget.org/packages/XData.Remote/) - client proxy to use in three-tier envirounment (Net 4.0 only, required full Net 4.0 Framework version)
-[![NuGet](https://img.shields.io/nuget/v/XData.Remote.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.Remote.svg?style=plastic)]()
+[XData Three-tier client proxy package](https://packages.nuget.org/packages/XData.Remote_BrokenLink/) - client proxy to use in three-tier envirounment (Net 4.0 only, required full Net 4.0 Framework version)
+[![NuGet](https://img.shields.io/nuget/v/XData.Remote_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.Remote_BrokenLink.svg?style=plastic)]()
 
-[XData Cache package](https://packages.nuget.org/packages/XData.Cache/) - time limited object caching (Net 4.0 only, required full Net 4.0 Framework version)
-[![NuGet](https://img.shields.io/nuget/v/XData.Cache.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.Cache.svg?style=plastic)]()
+[XData Cache package](https://packages.nuget.org/packages/XData.Cache_BrokenLink/) - time limited object caching (Net 4.0 only, required full Net 4.0 Framework version)
+[![NuGet](https://img.shields.io/nuget/v/XData.Cache_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.Cache_BrokenLink.svg?style=plastic)]()
+
+[XData MsSqlSever adapter package](https://packages.nuget.org/packages/XData.MsSqlServer_BrokenLink/) - Ms SQL Server database dialect and adapter
+[![NuGet](https://img.shields.io/nuget/v/XData.MsSqlServer_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.MsSqlServer_BrokenLink.svg?style=plastic)]()
+
+[XData Oracle adapter package](https://packages.nuget.org/packages/XData.Oracle.Odp_BrokenLink/) - Oracle database dialect and adapter based on Oracle ODP provider
+[![NuGet](https://img.shields.io/nuget/v/XData.Oracle.Odp_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.Oracle.Odp_BrokenLink.svg?style=plastic)]()
+
+[XData PostgreSql adapter package](https://packages.nuget.org/packages/XData.PostgreSql.NpgSql_BrokenLink/) - Postgre SQL database dialect and adapter based on NpgSql provider
+[![NuGet](https://img.shields.io/nuget/v/XData.PostgreSql.NpgSql_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.PostgreSql.NpgSql_BrokenLink.svg?style=plastic)]()
+
+[XData SQLite adapter package](https://packages.nuget.org/packages/XData.SQLite_BrokenLink/) - SQLite database dialect and adapter (Net 4.0 version use System.Data.SQLite provider, Net Standard 2.0 version use Microsoft.Data.Sqlite provider)
+[![NuGet](https://img.shields.io/nuget/v/XData.SQLite_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.SQLite_BrokenLink.svg?style=plastic)]()
+
+[XData MySql adapter package](https://packages.nuget.org/packages/XData.MySql_BrokenLink/) - MySQL database dialect and adapter based on MySql.Data provider
+[![NuGet](https://img.shields.io/nuget/v/XData.MySql_BrokenLink.svg?style=plastic)]()
+[![NuGet](https://img.shields.io/nuget/dt/XData.MySql_BrokenLink.svg?style=plastic)]()
 
 ## Basic features
 * Single domain object can be mapped on multiple tables (or views, or procedures) in DB. Every DB object can be mapped multiple times in one (or more mappings).
@@ -47,35 +67,35 @@ version 1.1.0
 
 ### Net 4.0
 
->1) Install Nuget package of XData [engine package](https://packages.nuget.org/packages/XDataFramework/).
+>1) Install Nuget package of XData [engine package](https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/).
 >
->2) (Optional) Download one of [logger binaries](http://mickfierte.github.io/xdata/index.html#Net-4.0)
+>2) (Optional) Download one of [logger binaries](http://mickfierte.github.io/XData/index.html#Net-4.0)
 >
->3) Download XData database [adapter binaries](http://mickfierte.github.io/xdata/index.html#Net-4.0) for Your database (or multiple databases).
+>3) Download XData database [adapter binaries](http://mickfierte.github.io/XData/index.html#Net-4.0) for Your database (or multiple databases).
 >
->4) Configuration is described [here](http://mickfierte.github.io/xdata)
+>4) Configuration is described [here](http://mickfierte.github.io/XData/)
 
 ### (Optional) Net 4.0 three-tier architecture client libraries
 
->1) Additionally required to download XData [three tier client libraries](http://mickfierte.github.io/xdata/index.html#Net-4.0)
+>1) Additionally required to download XData [three tier client libraries](http://mickfierte.github.io/XData/index.html#Net-4.0)
 >
->2) Configuration is described [here](http://mickfierte.github.io/xdata)
+>2) Configuration is described [here](http://mickfierte.github.io/XData/)
 
 ### (Optional) Net 4.0 three-tier architecture server
 
->1) Download and deploy [XData three-tier service](http://mickfierte.github.io/xdata/index.html#Net-4.0) on any You like WCF host.
+>1) Download and deploy [XData three-tier service](http://mickfierte.github.io/XData/index.html#Net-4.0) on any You like WCF host.
 >
 >2) Copy data mapping and data logic assemblies to service catalog.
 >
->3) Serice configuration is described [here](http://mickfierte.github.io/xdata)
+>3) Serice configuration is described [here](http://mickfierte.github.io/XData/)
 
 ### NetStandard 2.0
 
->1) Install Nuget package of XData [engine package](https://packages.nuget.org/packages/XData.NetStandard20.DataAccessLayer/).
+>1) Install Nuget package of XData [engine package](https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/).
 >
->2) Download XData database [adapter binaries](http://mickfierte.github.io/xdata/index.html#Net-Standard-2.0) for Your database (or multiple databases).
+>2) Download XData database [adapter binaries](http://mickfierte.github.io/XData/index.html#Net-Standard-2.0) for Your database (or multiple databases).
 >
->3) Configuration is described [here](http://mickfierte.github.io/xdata)
+>3) Configuration is described [here](http://mickfierte.github.io/XData/)
 
 
 ## Usage example
@@ -100,25 +120,25 @@ builder.AddXmlFile("MyConsoleApp.config");
 var configFile = builder.Build();
 
 //Set services
-var serviceProvider = new ServiceCollection()
+using(var serviceProvider = new ServiceCollection()
     .AddLogging()
     // Localization only for ASP.NET Core
     .AddSingleton(typeof(IStringLocalizerFactory), x => null)
     .AddSingleton(typeof(IConfigurationRoot), x => configFile)
     .AddXData()
-    .BuildServiceProvider();
-
-//Configure logging
-serviceProvider.GetRequiredService<ILoggerFactory>()
-    .AddConsole(LogLevel.Warning).AddDebug();
-
-using (var dataEngine = serviceProvider.GetRequiredService<IDataEngine>())
+    .BuildServiceProvider())
 {
-    using (var dataScope = dataEngine.NewDataScope())
-    {
-        foreach(var data in dataScope.GetRepository<SomeObject>())
-            Console.WriteLine($"{data.SomeId}, {data.Name}");
-    }
+	//Configure logging
+	serviceProvider.GetRequiredService<ILoggerFactory>()
+		.AddConsole(LogLevel.Warning).AddDebug();
+
+	var dataEngine = serviceProvider.GetRequiredService<IDataEngine>();
+	
+	using (var dataScope = dataEngine.NewDataScope())
+	{
+		foreach(var data in dataScope.GetRepository<SomeObject>())
+			Console.WriteLine($"{data.SomeId}, {data.Name}");
+	}
 }
 ```
 static mapping:
@@ -152,7 +172,7 @@ public partial class SomeObject : IDataObject
 }
 ```
 
-_For more examples and usage, please refer to the [documentation](http://mickfierte.github.io/xdata)._
+_For more examples and usage, please refer to the [documentation](http://mickfierte.github.io/XData/)._
 
 ## Release History
 
