@@ -90,14 +90,14 @@ public class Classifier
 }
 ...
 var param = new[] { new Classifier { Id = 1, Name = &quot;Test&quot; },
-    new Classifier { Id = 2, Name = &quot;Some&quot; } }.ToXml();
+    new Classifier { Id = 2, Name = &quot;Some&quot; } };
 var f4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestFunction4&quot;, ProcedureType.Function)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
     .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call(DataScope.Layer, &quot;param1&quot;.SetValue(param));
+    .Call(DataScope.Layer, &quot;param1&quot;.SetVar(param));
 Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
 </code></pre></article>
           </div>

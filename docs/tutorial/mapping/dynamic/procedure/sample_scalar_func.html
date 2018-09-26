@@ -87,7 +87,7 @@
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
     .AsQuery(DataScope.Layer, 
-        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in f1)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre></article>

@@ -85,7 +85,7 @@
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
     .Return(&quot;T&quot;, &quot;Result&quot;, 1, convertor)
     .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
-        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in res)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre></article>

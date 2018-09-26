@@ -126,7 +126,7 @@
     .SetCombination(&quot;root&quot;)
 ...
 </code></pre><h4 id="constant-filters">Constant filters</h4>
-<p>Constant filters alowes to restict selection of data by some constant value. This filter defined by one of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_String_">ConstFilter</a> method overloads of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface. </p>
+<p>Constant filters alowes to restict selection of data by some constant value. This filter defined by one of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_Object_">ConstFilter</a> method overloads of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface. </p>
 <p>Constant type list restricted by enum <a class="xref" href="../../../../api/XData.FilterConstantType.html">FilterConstantType</a>:</p>
 <ul>
 <li><strong>Const</strong> - constant with value setted by <em>ConstantValue</em>.</li>
@@ -159,7 +159,7 @@
 <pre><code class="lang-csharp">, ExprFilter(&quot;discount&quot; /* field name */, 
     /* expression: SQL expression LINQ style definition */
     x =&gt; x.Case&lt;Product, int&gt;( 
-        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10)), 
+        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetExpression(z =&gt; 10)), 
     Operation: FilterOperation.NotEqual /* filter operation */)]
 </code></pre><ul>
 <li>plain SQL expression text.</li>

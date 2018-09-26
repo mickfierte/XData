@@ -97,7 +97,7 @@
 <pre><code class="lang-csharp">, ExprFilter(&quot;discount&quot; /* field name */, 
     /* expression: SQL expression LINQ style definition */
     x =&gt; x.Case&lt;Product, int&gt;( 
-        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10)), 
+        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetExpression(z =&gt; 10)), 
     Operation: FilterOperation.NotEqual /* filter operation */)]
 </code></pre><ul>
 <li>plain SQL expression text.</li>

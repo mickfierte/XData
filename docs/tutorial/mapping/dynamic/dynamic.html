@@ -317,7 +317,7 @@ Example:</p>
     .SetCombination(&quot;root&quot;)
 ...
 </code></pre><h4 id="constant-filters">Constant filters</h4>
-<p>Constant filters alowes to restict selection of data by some constant value. This filter defined by one of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_String_">ConstFilter</a> method overloads of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface. </p>
+<p>Constant filters alowes to restict selection of data by some constant value. This filter defined by one of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_Object_">ConstFilter</a> method overloads of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface. </p>
 <p>Constant type list restricted by enum <a class="xref" href="../../../api/XData.FilterConstantType.html">FilterConstantType</a>:</p>
 <ul>
 <li><strong>Const</strong> - constant with value setted by <em>ConstantValue</em>.</li>
@@ -350,7 +350,7 @@ Example:</p>
 <pre><code class="lang-csharp">, ExprFilter(&quot;discount&quot; /* field name */, 
     /* expression: SQL expression LINQ style definition */
     x =&gt; x.Case&lt;Product, int&gt;( 
-        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10)), 
+        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetExpression(z =&gt; 10)), 
     Operation: FilterOperation.NotEqual /* filter operation */)]
 </code></pre><ul>
 <li>plain SQL expression text.</li>
@@ -502,7 +502,7 @@ Interface <em>IRepositoryPropertyMappingAdapter</em> is inherited from [IPropert
 <pre><code class="lang-csharp">...
 .ReadOnlyProperty(x =&gt; x.AllowedDiscount, 
     x =&gt; x.Expr&lt;int&gt;(null, y =&gt; y.Case&lt;Product, int&gt;( 
-        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10)), 
+        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetExpression(z =&gt; 10)), 
         DbType.Decimal, z =&gt; z.Size(17, 5)))
 ...
 </code></pre><ul>
@@ -660,7 +660,7 @@ DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
     .Return(&quot;T&quot;, &quot;Result&quot;, 1, convertor)
     .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
-        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in res)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-procedure-with-multiple-resultsets-sample">SQL procedure with multiple resultsets sample</h4>
@@ -672,8 +672,8 @@ foreach (var classifier in res)
     .Parameter&lt;string&gt;(&quot;T&quot;, 4, &quot;param4&quot;, DbType.String)
     .Return(&quot;T&quot;, &quot;Result1&quot;, 1, convertor)
     .Return(&quot;T&quot;, &quot;Result2&quot;, 2, convertor)
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result1&quot;, &quot;param1&quot;.SetValue(&quot;1&quot;), 
-        &quot;param2&quot;.SetValue(&quot;Test&quot;), &quot;param3&quot;.SetValue(&quot;2&quot;), &quot;param4&quot;.SetValue(&quot;Some&quot;));
+    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result1&quot;, &quot;param1&quot;.SetVar(1), 
+        &quot;param2&quot;.SetVar(&quot;Test&quot;), &quot;param3&quot;.SetVar(2), &quot;param4&quot;.SetVar(&quot;Some&quot;));
 foreach (var classifier in res2)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quot;))
@@ -686,7 +686,7 @@ foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quo
     .Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;param3&quot;, DbType.String, 
         z =&gt; z.Size(20), z =&gt; z.Direction(ParameterDirection.Output))
     .Call(DataScope.Layer, 
-        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
 </code></pre><h4 id="sql-procedure-with-out-parameter-and-resultset-sample">SQL procedure with out parameter and resultset sample</h4>
 <pre><code class="lang-csharp">var res4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
@@ -698,7 +698,7 @@ Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
     .Return(&quot;T&quot;, &quot;Result&quot;, 1, x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
     .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
-        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res4.GetParameter&lt;int&gt;(&quot;result&quot;));
 foreach (var classifier in res4)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
@@ -710,7 +710,7 @@ foreach (var classifier in res4)
     .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
     .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
-        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res5.GetParameter&lt;int&gt;(&quot;result&quot;));
 </code></pre><h4 id="sql-procedure-with-return-value-and-resultset-sample">SQL procedure with return value and resultset sample</h4>
 <pre><code class="lang-csharp">var res6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
@@ -719,17 +719,17 @@ Console.WriteLine(res5.GetParameter&lt;int&gt;(&quot;result&quot;));
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
     .Return(&quot;T&quot;, &quot;Result&quot;, 1, x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, &quot;param1&quot;.SetValue(param));
+    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in res6)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
-<pre><code class="lang-csharp">var arr = new[] { 1, 2, 3 }.ToXml();
+<pre><code class="lang-csharp">var arr = new[] { 1, 2, 3 };
 var f6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;TestFunction6&quot;, ProcedureType.Function)
     .Parameter&lt;int[]&gt;(&quot;T&quot;, 1, &quot;p_arr&quot;, DbType.Int32, z =&gt; z.Array())
     .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call(DataScope.Layer, &quot;p_arr&quot;.SetValue(arr));
+    .Call(DataScope.Layer, &quot;p_arr&quot;.SetVar(arr));
 Console.WriteLine(f6.GetParameter&lt;int&gt;(&quot;result&quot;));
 </code></pre><h4 id="sql-procedure-with-udt-parameter-sample">SQL procedure with UDT parameter sample</h4>
 <pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
@@ -750,8 +750,8 @@ var f5 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
         z =&gt; z.Size(20),
         z =&gt; z.Direction(ParameterDirection.ReturnValue), 
         z =&gt; z.NativeSqlType(&quot;VARCHAR&quot;))
-    .Call(DataScope.Layer, &quot;p_obj&quot;.SetValue(
-        new Classifier { Id = 1, Name = &quot;Test&quot; }.ToXml()));
+    .Call(DataScope.Layer, &quot;p_obj&quot;.SetVar(
+        new Classifier { Id = 1, Name = &quot;Test&quot; }));
 Console.WriteLine(f5.GetParameter&lt;string&gt;(&quot;result&quot;));
 </code></pre><h4 id="sql-procedure-with-udt-array-parameter-sample">SQL procedure with UDT array parameter sample</h4>
 <pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
@@ -765,14 +765,14 @@ public class Classifier
 }
 ...
 var param = new[] { new Classifier { Id = 1, Name = &quot;Test&quot; },
-    new Classifier { Id = 2, Name = &quot;Some&quot; } }.ToXml();
+    new Classifier { Id = 2, Name = &quot;Some&quot; } };
 var f4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestFunction4&quot;, ProcedureType.Function)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
     .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call(DataScope.Layer, &quot;param1&quot;.SetValue(param));
+    .Call(DataScope.Layer, &quot;param1&quot;.SetVar(param));
 Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
 </code></pre><h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
 <pre><code class="lang-csharp">var f3 = XDataMapping.GetStructure(context: DataScope.DefaultContext)
@@ -782,7 +782,7 @@ Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
     .Select(x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
-    .AsQuery(DataScope.Layer, &quot;param1&quot;.SetValue(param));
+    .AsQuery(DataScope.Layer, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in f3)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
@@ -794,7 +794,7 @@ foreach (var classifier in f3)
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
     .AsQuery(DataScope.Layer, 
-        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in f1)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre></article>

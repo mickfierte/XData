@@ -246,13 +246,13 @@ public sealed class ConstantFilterAttribute : FilterAttribute</code></pre>
   
   
   <a id="XData_Mapping_ConstantFilterAttribute__ctor_" data-uid="XData.Mapping.ConstantFilterAttribute.#ctor*"></a>
-  <h4 id="XData_Mapping_ConstantFilterAttribute__ctor_System_String_System_String_System_String_System_String_" data-uid="XData.Mapping.ConstantFilterAttribute.#ctor(System.String,System.String,System.String,System.String)">ConstantFilterAttribute(String, String, String, String)</h4>
+  <h4 id="XData_Mapping_ConstantFilterAttribute__ctor_System_String_System_String_System_String_System_Object_" data-uid="XData.Mapping.ConstantFilterAttribute.#ctor(System.String,System.String,System.String,System.Object)">ConstantFilterAttribute(String, String, String, Object)</h4>
   <div class="markdown level1 summary"><p>Constant filter attribute</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConstantFilterAttribute(string name, string source, string fieldName, string constant = &quot;&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public ConstantFilterAttribute(string name, string source, string fieldName, object constant)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,7 +283,7 @@ public sealed class ConstantFilterAttribute : FilterAttribute</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">constant</span></td>
         <td><p>Filter value</p>
 </td>
@@ -347,7 +347,7 @@ public sealed class ConstantFilterAttribute : FilterAttribute</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ConstantValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public object ConstantValue { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,7 +359,7 @@ public sealed class ConstantFilterAttribute : FilterAttribute</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td></td>
       </tr>
     </tbody>

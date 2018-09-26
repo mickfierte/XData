@@ -3478,15 +3478,15 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.SequenceGeneration
   nameWithType: BaseSqlBuilder.SequenceGeneration
-- uid: XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(XData.Database.Adapter.Query@,System.Collections.Generic.IEnumerable{XData.Mapping.Dynamic.IParameterDescription},System.Collections.Generic.SortedList{System.String,System.String},System.String,XData.DialectOptions)
-  name: SetQueryParameters(ref Query, IEnumerable<IParameterDescription>, SortedList<String, String>, String, DialectOptions)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_SetQueryParameters_XData_Database_Adapter_Query__System_Collections_Generic_IEnumerable_XData_Mapping_Dynamic_IParameterDescription__System_Collections_Generic_SortedList_System_String_System_String__System_String_XData_DialectOptions_
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(XData.Database.Adapter.Query@,System.Collections.Generic.IEnumerable{XData.Mapping.Dynamic.IParameterDescription},System.Collections.Generic.SortedList{System.String,System.String},System.String,XData.DialectOptions)
-  name.vb: SetQueryParameters(ByRef Query, IEnumerable(Of IParameterDescription), SortedList(Of String, String), String, DialectOptions)
-  fullName: XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(ref XData.Database.Adapter.Query, System.Collections.Generic.IEnumerable<XData.Mapping.Dynamic.IParameterDescription>, System.Collections.Generic.SortedList<System.String, System.String>, System.String, XData.DialectOptions)
-  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(ByRef XData.Database.Adapter.Query, System.Collections.Generic.IEnumerable(Of XData.Mapping.Dynamic.IParameterDescription), System.Collections.Generic.SortedList(Of System.String, System.String), System.String, XData.DialectOptions)
-  nameWithType: BaseSqlBuilder.SetQueryParameters(ref Query, IEnumerable<IParameterDescription>, SortedList<String, String>, String, DialectOptions)
-  nameWithType.vb: BaseSqlBuilder.SetQueryParameters(ByRef Query, IEnumerable(Of IParameterDescription), SortedList(Of String, String), String, DialectOptions)
+- uid: XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(XData.Database.Adapter.Query@,System.Collections.Generic.IEnumerable{XData.Mapping.Dynamic.IParameterDescription},System.Collections.Generic.SortedList{System.String,System.Object},System.String,XData.DialectOptions)
+  name: SetQueryParameters(ref Query, IEnumerable<IParameterDescription>, SortedList<String, Object>, String, DialectOptions)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_SetQueryParameters_XData_Database_Adapter_Query__System_Collections_Generic_IEnumerable_XData_Mapping_Dynamic_IParameterDescription__System_Collections_Generic_SortedList_System_String_System_Object__System_String_XData_DialectOptions_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(XData.Database.Adapter.Query@,System.Collections.Generic.IEnumerable{XData.Mapping.Dynamic.IParameterDescription},System.Collections.Generic.SortedList{System.String,System.Object},System.String,XData.DialectOptions)
+  name.vb: SetQueryParameters(ByRef Query, IEnumerable(Of IParameterDescription), SortedList(Of String, Object), String, DialectOptions)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(ref XData.Database.Adapter.Query, System.Collections.Generic.IEnumerable<XData.Mapping.Dynamic.IParameterDescription>, System.Collections.Generic.SortedList<System.String, System.Object>, System.String, XData.DialectOptions)
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters(ByRef XData.Database.Adapter.Query, System.Collections.Generic.IEnumerable(Of XData.Mapping.Dynamic.IParameterDescription), System.Collections.Generic.SortedList(Of System.String, System.Object), System.String, XData.DialectOptions)
+  nameWithType: BaseSqlBuilder.SetQueryParameters(ref Query, IEnumerable<IParameterDescription>, SortedList<String, Object>, String, DialectOptions)
+  nameWithType.vb: BaseSqlBuilder.SetQueryParameters(ByRef Query, IEnumerable(Of IParameterDescription), SortedList(Of String, Object), String, DialectOptions)
 - uid: XData.Database.Dialect.BaseSqlBuilder.SetQueryParameters*
   name: SetQueryParameters
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_SetQueryParameters_
@@ -5412,6 +5412,22 @@ references:
   fullName.vb: XData.DataObjectExtensions.SetFilterValue(Of T, TRes)(XData.IRepository(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, TRes)), TRes)
   nameWithType: DataObjectExtensions.SetFilterValue<T, TRes>(IRepository<T>, Expression<Func<T, TRes>>, TRes)
   nameWithType.vb: DataObjectExtensions.SetFilterValue(Of T, TRes)(IRepository(Of T), Expression(Of Func(Of T, TRes)), TRes)
+- uid: XData.DataObjectExtensions.SetVar*
+  name: SetVar
+  href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetVar_
+  commentId: Overload:XData.DataObjectExtensions.SetVar
+  isSpec: "True"
+  fullName: XData.DataObjectExtensions.SetVar
+  nameWithType: DataObjectExtensions.SetVar
+- uid: XData.DataObjectExtensions.SetVar``1(System.String,``0)
+  name: SetVar<T>(String, T)
+  href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetVar__1_System_String___0_
+  commentId: M:XData.DataObjectExtensions.SetVar``1(System.String,``0)
+  name.vb: SetVar(Of T)(String, T)
+  fullName: XData.DataObjectExtensions.SetVar<T>(System.String, T)
+  fullName.vb: XData.DataObjectExtensions.SetVar(Of T)(System.String, T)
+  nameWithType: DataObjectExtensions.SetVar<T>(String, T)
+  nameWithType.vb: DataObjectExtensions.SetVar(Of T)(String, T)
 - uid: XData.DataObjectExtensions.Submit*
   name: Submit
   href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit_
@@ -14083,12 +14099,12 @@ references:
   commentId: T:XData.Mapping.ConstantFilterAttribute
   fullName: XData.Mapping.ConstantFilterAttribute
   nameWithType: ConstantFilterAttribute
-- uid: XData.Mapping.ConstantFilterAttribute.#ctor(System.String,System.String,System.String,System.String)
-  name: ConstantFilterAttribute(String, String, String, String)
-  href: api/XData.Mapping.ConstantFilterAttribute.html#XData_Mapping_ConstantFilterAttribute__ctor_System_String_System_String_System_String_System_String_
-  commentId: M:XData.Mapping.ConstantFilterAttribute.#ctor(System.String,System.String,System.String,System.String)
-  fullName: XData.Mapping.ConstantFilterAttribute.ConstantFilterAttribute(System.String, System.String, System.String, System.String)
-  nameWithType: ConstantFilterAttribute.ConstantFilterAttribute(String, String, String, String)
+- uid: XData.Mapping.ConstantFilterAttribute.#ctor(System.String,System.String,System.String,System.Object)
+  name: ConstantFilterAttribute(String, String, String, Object)
+  href: api/XData.Mapping.ConstantFilterAttribute.html#XData_Mapping_ConstantFilterAttribute__ctor_System_String_System_String_System_String_System_Object_
+  commentId: M:XData.Mapping.ConstantFilterAttribute.#ctor(System.String,System.String,System.String,System.Object)
+  fullName: XData.Mapping.ConstantFilterAttribute.ConstantFilterAttribute(System.String, System.String, System.String, System.Object)
+  nameWithType: ConstantFilterAttribute.ConstantFilterAttribute(String, String, String, Object)
 - uid: XData.Mapping.ConstantFilterAttribute.#ctor*
   name: ConstantFilterAttribute
   href: api/XData.Mapping.ConstantFilterAttribute.html#XData_Mapping_ConstantFilterAttribute__ctor_
@@ -14782,30 +14798,30 @@ references:
   commentId: T:XData.Mapping.Dynamic.IInnerFilterAdapter
   fullName: XData.Mapping.Dynamic.IInnerFilterAdapter
   nameWithType: IInnerFilterAdapter
-- uid: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,System.String)
-  name: ConstFilter(String, String, String)
-  href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_String_
-  commentId: M:XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,System.String)
-  fullName: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String, System.String, System.String)
-  nameWithType: IInnerFilterAdapter.ConstFilter(String, String, String)
+- uid: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,System.Object)
+  name: ConstFilter(String, String, Object)
+  href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_Object_
+  commentId: M:XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,System.Object)
+  fullName: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String, System.String, System.Object)
+  nameWithType: IInnerFilterAdapter.ConstFilter(String, String, Object)
 - uid: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType)
   name: ConstFilter(String, String, FilterConstantType)
   href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_XData_FilterConstantType_
   commentId: M:XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType)
   fullName: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String, System.String, XData.FilterConstantType)
   nameWithType: IInnerFilterAdapter.ConstFilter(String, String, FilterConstantType)
-- uid: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType,System.String)
-  name: ConstFilter(String, String, FilterConstantType, String)
-  href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_XData_FilterConstantType_System_String_
-  commentId: M:XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType,System.String)
-  fullName: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String, System.String, XData.FilterConstantType, System.String)
-  nameWithType: IInnerFilterAdapter.ConstFilter(String, String, FilterConstantType, String)
-- uid: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType,System.String,XData.FilterNullable)
-  name: ConstFilter(String, String, FilterConstantType, String, FilterNullable)
-  href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_XData_FilterConstantType_System_String_XData_FilterNullable_
-  commentId: M:XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType,System.String,XData.FilterNullable)
-  fullName: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String, System.String, XData.FilterConstantType, System.String, XData.FilterNullable)
-  nameWithType: IInnerFilterAdapter.ConstFilter(String, String, FilterConstantType, String, FilterNullable)
+- uid: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType,System.Object)
+  name: ConstFilter(String, String, FilterConstantType, Object)
+  href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_XData_FilterConstantType_System_Object_
+  commentId: M:XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType,System.Object)
+  fullName: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String, System.String, XData.FilterConstantType, System.Object)
+  nameWithType: IInnerFilterAdapter.ConstFilter(String, String, FilterConstantType, Object)
+- uid: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType,System.Object,XData.FilterNullable)
+  name: ConstFilter(String, String, FilterConstantType, Object, FilterNullable)
+  href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_XData_FilterConstantType_System_Object_XData_FilterNullable_
+  commentId: M:XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String,System.String,XData.FilterConstantType,System.Object,XData.FilterNullable)
+  fullName: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter(System.String, System.String, XData.FilterConstantType, System.Object, XData.FilterNullable)
+  nameWithType: IInnerFilterAdapter.ConstFilter(String, String, FilterConstantType, Object, FilterNullable)
 - uid: XData.Mapping.Dynamic.IInnerFilterAdapter.ConstFilter*
   name: ConstFilter
   href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_
@@ -22674,12 +22690,12 @@ references:
   commentId: T:XData.Variable
   fullName: XData.Variable
   nameWithType: Variable
-- uid: XData.Variable.#ctor(System.String,System.String)
-  name: Variable(String, String)
-  href: api/XData.Variable.html#XData_Variable__ctor_System_String_System_String_
-  commentId: M:XData.Variable.#ctor(System.String,System.String)
-  fullName: XData.Variable.Variable(System.String, System.String)
-  nameWithType: Variable.Variable(String, String)
+- uid: XData.Variable.#ctor(System.String,System.Object)
+  name: Variable(String, Object)
+  href: api/XData.Variable.html#XData_Variable__ctor_System_String_System_Object_
+  commentId: M:XData.Variable.#ctor(System.String,System.Object)
+  fullName: XData.Variable.Variable(System.String, System.Object)
+  nameWithType: Variable.Variable(String, Object)
 - uid: XData.Variable.#ctor*
   name: Variable
   href: api/XData.Variable.html#XData_Variable__ctor_
@@ -22700,34 +22716,6 @@ references:
   isSpec: "True"
   fullName: XData.Variable.Name
   nameWithType: Variable.Name
-- uid: XData.Variable.op_Implicit(System.Collections.Generic.KeyValuePair{System.String,System.String})~XData.Variable
-  name: Implicit(KeyValuePair<String, String> to Variable)
-  href: api/XData.Variable.html#XData_Variable_op_Implicit_System_Collections_Generic_KeyValuePair_System_String_System_String___XData_Variable
-  commentId: M:XData.Variable.op_Implicit(System.Collections.Generic.KeyValuePair{System.String,System.String})~XData.Variable
-  name.vb: Widening(KeyValuePair(Of String, String) to Variable)
-  fullName: XData.Variable.Implicit(System.Collections.Generic.KeyValuePair<System.String, System.String> to XData.Variable)
-  fullName.vb: XData.Variable.Widening(System.Collections.Generic.KeyValuePair(Of System.String, System.String) to XData.Variable)
-  nameWithType: Variable.Implicit(KeyValuePair<String, String> to Variable)
-  nameWithType.vb: Variable.Widening(KeyValuePair(Of String, String) to Variable)
-- uid: XData.Variable.op_Implicit(System.String[])~XData.Variable
-  name: Implicit(String[] to Variable)
-  href: api/XData.Variable.html#XData_Variable_op_Implicit_System_String____XData_Variable
-  commentId: M:XData.Variable.op_Implicit(System.String[])~XData.Variable
-  name.vb: Widening(String() to Variable)
-  fullName: XData.Variable.Implicit(System.String[] to XData.Variable)
-  fullName.vb: XData.Variable.Widening(System.String() to XData.Variable)
-  nameWithType: Variable.Implicit(String[] to Variable)
-  nameWithType.vb: Variable.Widening(String() to Variable)
-- uid: XData.Variable.op_Implicit*
-  name: Implicit
-  href: api/XData.Variable.html#XData_Variable_op_Implicit_
-  commentId: Overload:XData.Variable.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: XData.Variable.Implicit
-  fullName.vb: XData.Variable.Widening
-  nameWithType: Variable.Implicit
-  nameWithType.vb: Variable.Widening
 - uid: XData.Variable.ToString
   name: ToString()
   href: api/XData.Variable.html#XData_Variable_ToString

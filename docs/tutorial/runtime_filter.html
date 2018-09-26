@@ -92,6 +92,13 @@ var hist = dataScope.GetRepository&lt;DocHistory&gt;(rep.Layer, context: rep.Con
 var newHist = hist.New();
 newHist.HistoryDate = DateTime.UtcNow;
 return hist.Submit(ref newHist);
+</code></pre><p>Runtime filters can be described on place:</p>
+<pre><code class="lang-csharp">    //Using column name
+    .SetFilterValue(&quot;DocId&quot;, doc_id)
+    //Using property expression
+    .SetFilterValue(x =&gt; DocNumber, docNumber)
+    //Using FilterName helper
+    .SetFilterValue(new FilterName(&quot;FilterByDocId&quot;), doc_id)
 </code></pre></article>
           </div>
           

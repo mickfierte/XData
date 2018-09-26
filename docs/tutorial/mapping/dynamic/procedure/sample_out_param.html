@@ -86,7 +86,7 @@
     .Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;param3&quot;, DbType.String, 
         z =&gt; z.Size(20), z =&gt; z.Direction(ParameterDirection.Output))
     .Call(DataScope.Layer, 
-        &quot;param1&quot;.SetValue(&quot;1&quot;), &quot;param2&quot;.SetValue(&quot;Test&quot;));
+        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
 </code></pre></article>
           </div>

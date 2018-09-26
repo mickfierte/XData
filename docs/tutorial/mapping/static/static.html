@@ -275,7 +275,7 @@
 //Private static field of mapped class marked with SqlExpression attribute
 [SqlExpression]
 private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product, int&gt;( 
-    z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10));
+    z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetExpression(z =&gt; 10));
 </code></pre><ul>
 <li>plain SQL expression text.</li>
 </ul>
@@ -347,7 +347,7 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 //Private static field of mapped class marked with SqlExpression attribute
 [SqlExpression]
 private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product, int&gt;( 
-    z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10));  
+    z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetExpression(z =&gt; 10));    
 </code></pre><ul>
 <li>plain text SQL expression.</li>
 </ul>

@@ -86,7 +86,7 @@
 <h3 id="base-table">Base table</h3>
 <p>Root table of <a href="#updatable-tables-hierarchy">updatable tables hierarchy</a>. In case of using readonly repository mapping, base table role can be assigned to any table (or virtual table) that contains <a href="#data-object">data object</a> unique key.</p>
 <h3 id="optional-referencies">Optional referencies</h3>
-<p>The outer join referencies between tables within <a href="#updatable-tables-hierarchy">updatable tables hierarchy</a>. Referenced (slave) table must contain one or more properties marked as <a href="#property-flags">mandatory</a>. At least one mandatory property are required and it can not be mapped on primary key (or part of primary key). In most cases that properties is natural key of the table. The values assigned to that properties will be used to make a decision with operation applied to table.</p>
+<p>The outer join referencies between tables within <a href="#updatable-tables-hierarchy">updatable tables hierarchy</a>. Referenced (slave) table must contain one or more properties marked as <a href="#property-flags">mandatory</a>. At least one mandatory property are required and it can not be mapped on primary key (or part of primary key). In most cases that properties is natural key of the table. The values assigned to that properties will be used to make a decision over operation applied to table.</p>
 <h3 id="data-scope">Data scope</h3>
 <p>Data scope termin is required to describe an independent evironment of operating the same data inside the application. Each data scope has an GUID identifier - layer. In each data scope application logic can set independent <a href="#filters">filters</a> values over the same <a href="#repository">repository</a>. Same repositories can be linked over diferent data scopes using different ways and rules.</p>
 <h3 id="repository">Repository</h3>
@@ -114,7 +114,7 @@
 <ul>
 <li><strong>None</strong> - default value, property marked with no specific roles</li>
 <li><strong>Id</strong> - property is part of <a href="#data-object">data object</a> primary key</li>
-<li><strong>OuterFlag</strong> - property is marked as mapped to mandatory field of <a href="#optional-referencies">optional referenced</a> table. The value of this property is used to make a decisign with operation over optional referenced table.</li>
+<li><strong>OuterFlag</strong> - property is marked as mapped to mandatory field of <a href="#optional-referencies">optional referenced</a> table. The value of this property is used to make a decisign over operation applyed to optional referenced table.</li>
 <li><strong>ConcurrencyToken</strong> - concurrency token used within optimistic <a href="concurrency.html#concurrency-resolving">locking</a>.</li>
 </ul>
 <h3 id="sql-expression-type">SQL expression type</h3>

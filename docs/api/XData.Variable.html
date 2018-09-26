@@ -123,13 +123,13 @@
   
   
   <a id="XData_Variable__ctor_" data-uid="XData.Variable.#ctor*"></a>
-  <h4 id="XData_Variable__ctor_System_String_System_String_" data-uid="XData.Variable.#ctor(System.String,System.String)">Variable(String, String)</h4>
+  <h4 id="XData_Variable__ctor_System_String_System_Object_" data-uid="XData.Variable.#ctor(System.String,System.Object)">Variable(String, Object)</h4>
   <div class="markdown level1 summary"><p>Data object repository variable constructor</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Variable(string name, string val)</code></pre>
+    <pre><code class="lang-csharp hljs">public Variable(string name, object val)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +148,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">val</span></td>
         <td><p>Variable value</p>
 </td>
@@ -192,7 +192,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Value { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public object Value { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,7 +204,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -240,98 +240,6 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
-  <h3 id="operators">Operators
-  </h3>
-  
-  
-  <a id="XData_Variable_op_Implicit_" data-uid="XData.Variable.op_Implicit*"></a>
-  <h4 id="XData_Variable_op_Implicit_System_Collections_Generic_KeyValuePair_System_String_System_String___XData_Variable" data-uid="XData.Variable.op_Implicit(System.Collections.Generic.KeyValuePair{System.String,System.String})~XData.Variable">Implicit(KeyValuePair&lt;String, String&gt; to Variable)</h4>
-  <div class="markdown level1 summary"><p>Implicit key value convertor</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Variable(KeyValuePair&lt;string, string&gt; var)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">var</span></td>
-        <td><p>Key value pair</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Variable.html">Variable</a></td>
-        <td><p>Data object variable</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Variable_op_Implicit_" data-uid="XData.Variable.op_Implicit*"></a>
-  <h4 id="XData_Variable_op_Implicit_System_String____XData_Variable" data-uid="XData.Variable.op_Implicit(System.String[])~XData.Variable">Implicit(String[] to Variable)</h4>
-  <div class="markdown level1 summary"><p>Implicit string array convertor</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Variable(string[] var)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><span class="parametername">var</span></td>
-        <td><p>String array [name, value]</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Variable.html">Variable</a></td>
-        <td><p>Data object variable</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>

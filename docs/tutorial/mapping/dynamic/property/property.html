@@ -181,7 +181,7 @@ Interface <em>IRepositoryPropertyMappingAdapter</em> is inherited from [IPropert
 <pre><code class="lang-csharp">...
 .ReadOnlyProperty(x =&gt; x.AllowedDiscount, 
     x =&gt; x.Expr&lt;int&gt;(null, y =&gt; y.Case&lt;Product, int&gt;( 
-        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetValue(10)), 
+        z =&gt; z.Field&lt;bool&gt;(&quot;is_vip&quot;), z =&gt; 0, 1.SetExpression(z =&gt; 10)), 
         DbType.Decimal, z =&gt; z.Size(17, 5)))
 ...
 </code></pre><ul>

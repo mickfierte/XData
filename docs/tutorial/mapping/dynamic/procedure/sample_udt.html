@@ -97,8 +97,8 @@ var f5 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
         z =&gt; z.Size(20),
         z =&gt; z.Direction(ParameterDirection.ReturnValue), 
         z =&gt; z.NativeSqlType(&quot;VARCHAR&quot;))
-    .Call(DataScope.Layer, &quot;p_obj&quot;.SetValue(
-        new Classifier { Id = 1, Name = &quot;Test&quot; }.ToXml()));
+    .Call(DataScope.Layer, &quot;p_obj&quot;.SetVar(
+        new Classifier { Id = 1, Name = &quot;Test&quot; }));
 Console.WriteLine(f5.GetParameter&lt;string&gt;(&quot;result&quot;));
 </code></pre></article>
           </div>
