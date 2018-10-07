@@ -5396,6 +5396,15 @@ references:
   fullName.vb: XData.DataObjectExtensions.SetDeleted(Of T)(T, System.Boolean)
   nameWithType: DataObjectExtensions.SetDeleted<T>(T, Boolean)
   nameWithType.vb: DataObjectExtensions.SetDeleted(Of T)(T, Boolean)
+- uid: XData.DataObjectExtensions.SetDeleted``1(System.Collections.Generic.ICollection{``0},System.Boolean)
+  name: SetDeleted<T>(ICollection<T>, Boolean)
+  href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetDeleted__1_System_Collections_Generic_ICollection___0__System_Boolean_
+  commentId: M:XData.DataObjectExtensions.SetDeleted``1(System.Collections.Generic.ICollection{``0},System.Boolean)
+  name.vb: SetDeleted(Of T)(ICollection(Of T), Boolean)
+  fullName: XData.DataObjectExtensions.SetDeleted<T>(System.Collections.Generic.ICollection<T>, System.Boolean)
+  fullName.vb: XData.DataObjectExtensions.SetDeleted(Of T)(System.Collections.Generic.ICollection(Of T), System.Boolean)
+  nameWithType: DataObjectExtensions.SetDeleted<T>(ICollection<T>, Boolean)
+  nameWithType.vb: DataObjectExtensions.SetDeleted(Of T)(ICollection(Of T), Boolean)
 - uid: XData.DataObjectExtensions.SetFilterValue*
   name: SetFilterValue
   href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetFilterValue_

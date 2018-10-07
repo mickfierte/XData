@@ -3571,7 +3571,7 @@ Hint: To get a single property value use GetProperty function.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SetDeleted&lt;T&gt;(this T obj, bool setState)
+    <pre><code class="lang-csharp hljs">public static T SetDeleted&lt;T&gt;(this T obj, bool setState)
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3594,6 +3594,22 @@ Hint: To get a single property value use GetProperty function.</p>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">setState</span></td>
         <td><p>Set or remove DataObjectState.Deleted state flag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>Object marked as deleted/restored</p>
 </td>
       </tr>
     </tbody>
@@ -3631,6 +3647,95 @@ Hint: To get a single property value use GetProperty function.</p>
     </tbody>
   </table>
   <h5 id="XData_DataObjectExtensions_SetDeleted__1___0_System_Boolean__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_CheckState__1___0_XData_DataObjectState_">CheckState&lt;T&gt;(T, DataObjectState)</a></div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetState__1___0_">GetState&lt;T&gt;(T)</a></div>
+  </div>
+  
+  
+  <a id="XData_DataObjectExtensions_SetDeleted_" data-uid="XData.DataObjectExtensions.SetDeleted*"></a>
+  <h4 id="XData_DataObjectExtensions_SetDeleted__1_System_Collections_Generic_ICollection___0__System_Boolean_" data-uid="XData.DataObjectExtensions.SetDeleted``1(System.Collections.Generic.ICollection{``0},System.Boolean)">SetDeleted&lt;T&gt;(ICollection&lt;T&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Set deleted state to each object in collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ICollection&lt;T&gt; SetDeleted&lt;T&gt;(this ICollection&lt;T&gt; collection, bool setState)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td><p>Data object collection</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">setState</span></td>
+        <td><p>Set or remove DataObjectState.Deleted state flag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</td>
+        <td><p>Collection of objects marked as deleted/restored</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>No state attached to object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_DataObjectExtensions_SetDeleted__1_System_Collections_Generic_ICollection___0__System_Boolean__seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_CheckState__1___0_XData_DataObjectState_">CheckState&lt;T&gt;(T, DataObjectState)</a></div>
       <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetState__1___0_">GetState&lt;T&gt;(T)</a></div>
