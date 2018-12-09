@@ -36,7 +36,7 @@ version 1.1.0
 [![NuGet](https://img.shields.io/nuget/v/XData.PostgreSql.NpgSql_BrokenLink.svg?style=plastic)]()
 [![NuGet](https://img.shields.io/nuget/dt/XData.PostgreSql.NpgSql_BrokenLink.svg?style=plastic)]()
 
-[XData SQLite adapter package](https://packages.nuget.org/packages/XData.SQLite_BrokenLink/) - SQLite database dialect and adapter (Net 4.0 version use System.Data.SQLite provider, Net Standard 2.0 version use Microsoft.Data.Sqlite provider)
+[XData SQLite adapter package](https://packages.nuget.org/packages/XData.SQLite_BrokenLink/) - SQLite database dialect and adapter (Net 4.0 version has used System.Data.SQLite provider, Net Standard 2.0 version has used Microsoft.Data.Sqlite provider)
 [![NuGet](https://img.shields.io/nuget/v/XData.SQLite_BrokenLink.svg?style=plastic)]()
 [![NuGet](https://img.shields.io/nuget/dt/XData.SQLite_BrokenLink.svg?style=plastic)]()
 
@@ -101,7 +101,7 @@ version 1.1.0
 ## Usage example
 Net 4.0:
 ```csharp
-using (var dataEngine = XDataManager.AddXData(x => 
+using (var dataEngine = XDataManager.InitXData(x => 
 	x.UseConfiguration(ConfigurationManager
 		.OpenExeConfiguration(ConfigurationUserLevel.None))))
 {
@@ -177,15 +177,17 @@ _For more examples and usage, please refer to the [documentation](http://mickfie
 ## Release History
 
 * 1.0.0
-    * Initially published
+    * Initially published (deprecated now)
 * 1.1.0
     * .Net Standard 2.0 version released
 	* MySql is now supported
+	* XML data sources is now supported in dynamic queries
+	* Local temporary tables is now supported in dynamic queries
 	* Lot of bugs are fixed
-	* Documetation is realized now
+	* Documetation is available now
 
 ## Contacts
 
-Denis Dawydenko AKA Mick Fierte – d.dawydenko@gmail.com
+Denis Dawydenko – d.dawydenko@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
