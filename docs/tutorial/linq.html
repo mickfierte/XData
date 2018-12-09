@@ -8,7 +8,7 @@
     <title>Linq support | XData website </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Linq support | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,6 +82,15 @@
 <p>XData <a class="xref" href="../api/XData.IRepository-1.html">repositories</a> и <a class="xref" href="../api/XData.IDataQuery-1.html">dynamic queries</a> implements interface <a href="https://msdn.microsoft.com/en-us/library/bb340178(v=vs.110).aspx">IOrderedQueryable&lt;T&gt;</a> and granted full support for IQueriable methods.</p>
 <div class="IMPORTANT"><h5>Important</h5><p>Methods <em>SkipWhile</em>, <em>TakeWhile</em>, <em>Join</em>, <em>Select</em> и <em>SelectMany</em> is supported, but results with fullfecth of source data and executed over IEnumerable sources on Linq2Object level. This limitations is related to unexpected complexity of translation handlers to SQL for first two methods, and dynamic changes of result type in others. To effective access to joined or restricted by fields data sources with single database query use <a href="query.html">dynamic queries</a></p>
 </div>
+<p>For example:</p>
+<pre><code class="lang-csharp">// full data object has many fields but we want to select only two of them
+var query = XDataMapping.GetStructure&lt;SomeObject&gt;()
+    // we can use anonymous objects with dynamic query
+    .Select(x =&gt; new {
+        One = x.Field&lt;long&gt;(&quot;R&quot;, &quot;one&quot;),
+        Two = x.Field&lt;long&gt;(&quot;R&quot;, &quot;two&quot;)
+    }).AsQuery(dataScope.Layer);
+</code></pre><p>Instead of multiple data object joining or subselecting You can define various mappings and/or dynamic queries over same data as many as You need. This specific mappings or dynamic queries can be fine tuned for high speed and effective data access according any specialized requirements. Some of them can be reused, some not. But all of them will be as effective and low cost as You can write.</p>
 </article>
           </div>
           

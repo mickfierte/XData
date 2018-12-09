@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IQueryStructure
    | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -1391,6 +1391,72 @@
   </div>
   
   
+  <a id="XData_Mapping_Dynamic_IQueryStructure_TempTable_" data-uid="XData.Mapping.Dynamic.IQueryStructure.TempTable*"></a>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_TempTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.TempTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">TempTable(String, String, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Dynamic query temporary table mapping</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryStructure TempTable(string name, string alias, params Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Temporary table data variable name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>Temporary table data source alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
+        <td><span class="parametername">filters</span></td>
+        <td><p>Filters and links applied to temporary table data source</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></td>
+        <td><p>Query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_TempTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Data passed to query as variable with name equals name of temporary table data source</p>
+<p>Variable value must to be <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></p></div>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_TempTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
+  </div>
+  
+  
   <a id="XData_Mapping_Dynamic_IQueryStructure_With_" data-uid="XData.Mapping.Dynamic.IQueryStructure.With*"></a>
   <h4 id="XData_Mapping_Dynamic_IQueryStructure_With__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryWithAdapter___0__XData_Mapping_Dynamic_IQueryWithFlag_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.With``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryWithAdapter{``0},XData.Mapping.Dynamic.IQueryWithFlag}}[])">With&lt;TRoot&gt;(String, IQueryDescription&lt;TRoot&gt;, Expression&lt;Func&lt;IQueryWithAdapter&lt;TRoot&gt;, IQueryWithFlag&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic query Common-Table-Expression (WITH) subquery mapping</p>
@@ -1463,6 +1529,78 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="XData_Mapping_Dynamic_IQueryStructure_XmlSource_" data-uid="XData.Mapping.Dynamic.IQueryStructure.XmlSource*"></a>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_XmlSource_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.XmlSource(System.String,System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">XmlSource(String, String, String, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Dynamic query XML data source mapping</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IQueryStructure XmlSource(string name, string alias, string xmlRoot, params Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>XML data variable name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>XML data source alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">xmlRoot</span></td>
+        <td><p>XML data root XPath expression</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
+        <td><span class="parametername">filters</span></td>
+        <td><p>Filters and links applied to XML data source</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></td>
+        <td><p>Query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_XmlSource_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>XML data passed to query as variable with name equals name of XML data source</p>
+<p>Variable value must to be a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></p></div>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_XmlSource_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BaseSqlBuilder
    | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -507,13 +507,13 @@ WARNING!  Mast to be filled in constructor!</p>
   
   
   <a id="XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command*"></a>
-  <h4 id="XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_System_Text_StringBuilder__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}})">AddReturning2Command(ref StringBuilder, SortedList&lt;String, Tuple&lt;String, Boolean&gt;&gt;)</h4>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_System_Text_StringBuilder__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}},System.Boolean)">AddReturning2Command(ref StringBuilder, SortedList&lt;String, Tuple&lt;String, Boolean&gt;&gt;, Boolean)</h4>
   <div class="markdown level1 summary"><p>Add returning auto increment identity column values statement in query</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void AddReturning2Command(ref StringBuilder sb, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt; identity)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void AddReturning2Command(ref StringBuilder sb, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt; identity, bool defaultValues = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -535,6 +535,12 @@ WARNING!  Mast to be filled in constructor!</p>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedlist-2">SortedList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;&gt;</td>
         <td><span class="parametername">identity</span></td>
         <td><p>Identity column name and parameter name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">defaultValues</span></td>
+        <td><p>Insert default values</p>
 </td>
       </tr>
     </tbody>
@@ -857,6 +863,48 @@ WARNING!  Mast to be filled in constructor!</p>
         <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
         <td><p>Field not found</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_FormatConstValue_" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatConstValue*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_FormatConstValue_System_Object_" data-uid="XData.Database.Dialect.BaseSqlBuilder.FormatConstValue(System.Object)">FormatConstValue(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string FormatConstValue(object constVal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">constVal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1780,7 +1828,7 @@ Hint: Used in XData LINQ expressions</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="XData.Database.Adapter.Query.html">Query</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="XData.Database.Adapter.Query.html">Query</a>&gt;</td>
         <td><p>Predefined queries enumerator</p>
 </td>
       </tr>
@@ -1875,6 +1923,48 @@ Hint: Used in XData LINQ expressions</p>
       </tr>
       <tr>
         <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_GetExprSize_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetExprSize*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_GetExprSize_XData_DataSource_Structure_IField_" data-uid="XData.Database.Dialect.BaseSqlBuilder.GetExprSize(XData.DataSource.Structure.IField)">GetExprSize(IField)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string GetExprSize(IField field)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IField.html">IField</a></td>
+        <td><span class="parametername">field</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2801,6 +2891,73 @@ Hint: Used in XData LINQ expressions</p>
         <td><span class="parametername">partialConnectionString</span></td>
         <td><p>Additional connection string settings</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Dialect_BaseSqlBuilder_PrepareTempTables_" data-uid="XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables*"></a>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_PrepareTempTables_XData_DataSource_Structure_IDataStructure_System_Text_StringBuilder__XData_Database_Adapter_Query_System_Collections_Generic_ICollection_System_String__System_Boolean_System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables(XData.DataSource.Structure.IDataStructure,System.Text.StringBuilder@,XData.Database.Adapter.Query,System.Collections.Generic.ICollection{System.String},System.Boolean,System.Boolean)">PrepareTempTables(IDataStructure, ref StringBuilder, Query, ICollection&lt;String&gt;, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool PrepareTempTables(IDataStructure structure, ref StringBuilder strCommand, Query query, ICollection&lt;string&gt; skippedSources, bool riseErrors, bool doNotSkip)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataSource.Structure.IDataStructure.html">IDataStructure</a></td>
+        <td><span class="parametername">structure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></td>
+        <td><span class="parametername">strCommand</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">skippedSources</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">riseErrors</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">doNotSkip</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

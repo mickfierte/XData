@@ -8,7 +8,7 @@
     <title>Versions of XData | XData website </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Versions of XData | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
 <p>The versions has similar API but some diferent implementations of certain features:</p>
 <p>1) Different initialization of XData:</p>
 <p>Net 4.0:</p>
-<pre><code class="lang-csharp">using (var dataEngine = XDataManager.AddXData(x =&gt; 
+<pre><code class="lang-csharp">using (var dataEngine = XDataManager.InitXData(x =&gt; 
     x.UseConfiguration(ConfigurationManager
         .OpenExeConfiguration(ConfigurationUserLevel.None))))
 {

@@ -8,7 +8,7 @@
     <title>Install &amp; configuration | XData website </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Install &amp; configuration | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,22 +90,24 @@
 <p>XData can be dynamically configured when defining XData service (see <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a>) in ServiceCollection using optional parameter <em>options</em> in LINQ style.</p>
 <pre><code class="lang-csharp">    .AddSingleton(typeof(IConfigurationRoot), x =&gt; null)
     .AddXData(x =&gt; x.SetWriteDebugInfo(true)
-        .AddDialect(&quot;postgresql&quot;, &quot;XData.PostgreSql.Dialect&quot;)
-        .AddAdapter(&quot;postgresql&quot;, &quot;XData.PostgreSql.NpgSql.Adapter&quot;)
+        .AddDialect(&quot;postgresql&quot;, XDataAdapter.PostgreSql.Dialect)
+        .AddAdapter(&quot;postgresql&quot;, XDataAdapter.PostgreSql.Adapter)
         .AddContext(&quot;test&quot;, &quot;postgresql&quot;, &quot;postgresql&quot;, 
 &quot;Server=localhost;Database=XDataTest;User Id=postgres;Password=123456&quot;, true))
 </code></pre><p>Configuration file in .Net Standard 2.0 version is readed by <a href="https://www.nuget.org/packages/Microsoft.Extensions.Configuration/">Microsoft.Extensions.Configuration</a> service registered during application startup.</p>
-<p>.Net 4.0:</p>
-<p>XData can be dynamically configured when acquiring XData engine <em>XDataManager.AddXData</em> using optional parameter <em>options</em> in LINQ style.</p>
-<div class="WARNING"><h5>Warning</h5><p>Signature of XDataManager.AddXData method is slightly different for .Net 4.0 version! See <a href="versions.html">versions comparision</a> for details.</p>
+<div class="TIP"><h5>Tip</h5><p>XDataAdapter.PostgreSql.Dialect, XDataAdapter.PostgreSql.Adapter and similar constants for other databases is defined in adapter NuGet packages.</p>
 </div>
-<pre><code class="lang-csharp">    var dataEngine = XDataManager.AddXData(x =&gt; x.SetWriteDebugInfo(true)
-        .AddDialect(&quot;postgresql&quot;, &quot;XData.PostgreSql.Dialect&quot;)
-        .AddAdapter(&quot;postgresql&quot;, &quot;XData.PostgreSql.NpgSql.Adapter&quot;)
+<p>.Net 4.0:</p>
+<p>XData can be dynamically configured when acquiring XData engine <em>XDataManager.InitXData</em> using optional parameter <em>options</em> in LINQ style.</p>
+<div class="WARNING"><h5>Warning</h5><p>Signature of XDataManager.InitXData method is slightly different for .Net 4.0 version! See <a href="versions.html">versions comparision</a> for details.</p>
+</div>
+<pre><code class="lang-csharp">    var dataEngine = XDataManager.InitXData(x =&gt; x.SetWriteDebugInfo(true)
+        .AddDialect(&quot;postgresql&quot;, XData.PostgreSql.Dialect)
+        .AddAdapter(&quot;postgresql&quot;, XData.PostgreSql.Adapters)
         .AddContext(&quot;test&quot;, &quot;postgresql&quot;, &quot;postgresql&quot;, 
 &quot;Server=localhost;Database=XDataTest;User Id=postgres;Password=123456&quot;, true));
     //or using configuration file
-    var dataEngine = XDataManager.AddXData(x =&gt; x.UseConfiguration(
+    var dataEngine = XDataManager.InitXData(x =&gt; x.UseConfiguration(
         System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(&quot;~&quot;)))
 </code></pre><div class="TIP"><h5>Tip</h5><p><strong>When using both versions</strong> You can use <a class="xref" href="../api/XData.IDataOptions.html">IDataOptions</a> methods to store partial non secure connection string only and fill credentials during runtime. Security related information can be obtained separatly from some secure source.</p>
 </div>

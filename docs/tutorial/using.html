@@ -8,7 +8,7 @@
     <title>Basic operations with data | XData website </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Basic operations with data | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,7 +80,7 @@
 <h2 id="basic-operations-with-data">Basic operations with data</h2>
 
 <h3 id="data-engine-data-scope-and-repository">Data engine, data scope and repository</h3>
-<p>To start using XData You need get <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> interface reference (see examples below). It will be used to create new <a href="glossary.html#data-scope">data scopes</a> using <a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_System_String_">NewDataScope</a> method. </p>
+<p>To start using XData You need get <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> interface reference (see examples below). It will be used to create new <a href="glossary.html#data-scope">data scopes</a> using <a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_System_String_XData_Interfaces_ISecuritySession_">NewDataScope</a> method. </p>
 <p>XData use data scope isolation when same typed <a href="glossary.html#repository">repositories</a> used by multiple logic at the same time. Data scope is represented by <a class="xref" href="../api/XData.IDataScope.html">IDataScope</a> interface. Data scope identified by <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_Layer">Layer</a> (GUID).</p>
 <div class="IMPORTANT"><h5>Important</h5><p><em>IDataScope</em> is <em>IDisposable</em>. When disposing <em>IDataScope</em> all repositories, opened at this scope are disposed and XData free all memory used by this data scope.</p>
 </div>
@@ -89,7 +89,7 @@
 </div>
 <p>While repository is not disposed inside data scope it can be requested many times without recreating and database access and <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetRepository&lt;T&gt;</a> method of same <em>IDataScope</em> returns the same instance of repository.</p>
 <p>Net 4.0:</p>
-<pre><code class="lang-csharp">using (var dataEngine = XDataManager.AddXData(x =&gt;
+<pre><code class="lang-csharp">using (var dataEngine = XDataManager.InitXData(x =&gt;
     x.UseConfiguration(ConfigurationManager
         .OpenExeConfiguration(ConfigurationUserLevel.None))))
 {
@@ -169,10 +169,16 @@ return invoice.Modify(
     .Submit();
 </code></pre><h3 id="delete">Delete</h3>
 <p>XData has ability to mark data object as deleted. Before submit changes this flag can be undone. Marking and rejecting the mark can be done with extension method of interface <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetDeleted__1___0_System_Boolean_">IDataObject.SetDeleted</a></p>
-<pre><code class="lang-csharp">invoice.SetDeleted(true); //mark data object for delete
+<pre><code class="lang-csharp">invoice.SetDeleted(true); // mark data object for delete
 ...
-invoice.SetDeleted(false); //undone delete mark
-</code></pre><h3 id="submit-changes">Submit changes</h3>
+invoice.SetDeleted(false); // undone delete mark
+...
+//... and little more complex example:
+// set the delete flag and submit changes with submit success flag returning
+return invoice.SetDeleted(true).Submit(); 
+</code></pre><div class="TIP"><h5>Tip</h5><p>To delete a number of objects at once, it&#39;s a handy to use <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetDeleted__1_System_Collections_Generic_ICollection___0__System_Boolean_">ICollection&lt;T&gt;.SetDeleted</a> extension method.</p>
+</div>
+<h3 id="submit-changes">Submit changes</h3>
 <p>To submit changes can be used extension method of interface <em>IDataObject</em> <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0_XData_DataSubmitFlag_">Submit</a></p>
 <pre><code class="lang-csharp">newInvoice.Submit();
 </code></pre><p>To submit changes apllied to multiple data objects of the same type can be used <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Submit__0__XData_DataSubmitFlag_">IRepository&lt;T&gt;.Submit</a> method accepted (<em>IEnumerable&lt;T&gt;</em>) as one of parameters. When object is not changed this method will skip it while updating database.</p>

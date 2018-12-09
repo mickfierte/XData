@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IDataEngine
    | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -129,13 +129,13 @@
   
   
   <a id="XData_IDataEngine_GetDataScope_" data-uid="XData.IDataEngine.GetDataScope*"></a>
-  <h4 id="XData_IDataEngine_GetDataScope_System_Guid_System_String_System_Boolean_" data-uid="XData.IDataEngine.GetDataScope(System.Guid,System.String,System.Boolean)">GetDataScope(Guid, String, Boolean)</h4>
+  <h4 id="XData_IDataEngine_GetDataScope_System_Guid_System_String_XData_Interfaces_ISecuritySession_System_Boolean_" data-uid="XData.IDataEngine.GetDataScope(System.Guid,System.String,XData.Interfaces.ISecuritySession,System.Boolean)">GetDataScope(Guid, String, ISecuritySession, Boolean)</h4>
   <div class="markdown level1 summary"><p>Request existing or create data scope</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IDataScope GetDataScope(Guid layer, string defaultContext = null, bool throwIfNotFound = false)</code></pre>
+    <pre><code class="lang-csharp hljs">IDataScope GetDataScope(Guid layer, string defaultContext = null, ISecuritySession security = null, bool throwIfNotFound = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,6 +157,12 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">defaultContext</span></td>
         <td><p>Default context of scope (if nof found)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Interfaces.ISecuritySession.html">ISecuritySession</a></td>
+        <td><span class="parametername">security</span></td>
+        <td><p>Security session</p>
 </td>
       </tr>
       <tr>
@@ -183,20 +189,20 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_IDataEngine_GetDataScope_System_Guid_System_String_System_Boolean__seealso">See Also</h5>
+  <h5 id="XData_IDataEngine_GetDataScope_System_Guid_System_String_XData_Interfaces_ISecuritySession_System_Boolean__seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.IDataScope.html">IDataScope</a></div>
   </div>
   
   
   <a id="XData_IDataEngine_NewDataScope_" data-uid="XData.IDataEngine.NewDataScope*"></a>
-  <h4 id="XData_IDataEngine_NewDataScope_System_String_" data-uid="XData.IDataEngine.NewDataScope(System.String)">NewDataScope(String)</h4>
+  <h4 id="XData_IDataEngine_NewDataScope_System_String_XData_Interfaces_ISecuritySession_" data-uid="XData.IDataEngine.NewDataScope(System.String,XData.Interfaces.ISecuritySession)">NewDataScope(String, ISecuritySession)</h4>
   <div class="markdown level1 summary"><p>Create new data scope</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IDataScope NewDataScope(string defaultContext = null)</code></pre>
+    <pre><code class="lang-csharp hljs">IDataScope NewDataScope(string defaultContext = null, ISecuritySession security = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,6 +218,12 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">defaultContext</span></td>
         <td><p>Default context of scope</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Interfaces.ISecuritySession.html">ISecuritySession</a></td>
+        <td><span class="parametername">security</span></td>
+        <td><p>Security session</p>
 </td>
       </tr>
     </tbody>
@@ -232,7 +244,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_IDataEngine_NewDataScope_System_String__seealso">See Also</h5>
+  <h5 id="XData_IDataEngine_NewDataScope_System_String_XData_Interfaces_ISecuritySession__seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.IDataScope.html">IDataScope</a></div>
   </div>

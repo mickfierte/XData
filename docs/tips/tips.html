@@ -8,7 +8,7 @@
     <title>Tips &amp; Trics | XData website </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Tips &amp; Trics | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,9 +80,68 @@
 <h1 id="tips--trics">Tips &amp; Trics</h1>
 
 <p>There are some special themes related with using XData in uncommon scenarios, or more detetailed information about not trivial internal XData mechanics.</p>
-<h2 id="using-di-container">Using DI container</h2>
+<h2 id="yaml-configuration-file">YAML configuration file</h2>
+<p><em>(for .Net Standard 2.0 only!)</em></p>
+<p>Since .Net Core and .Net Standard 2.0 supported various configuration file formats it&#39;s possible to configure XData with, as a sample, YAML file.</p>
+<pre><code class="lang-yaml">connectionStrings:
+    add:
+        - name: &quot;DICT&quot;
+          connectionString: &quot;Server=server;Database=test;User Id=postgres;Password=123456;Search Path=dictionaries&quot;
+        - name: &quot;CONTACTS&quot;
+          connectionString: &quot;Server=server;Database=test;User Id=postgres;Password=123456;Search Path=contacts&quot;
+xdata: 
+    adapter:
+        - name: &quot;DICT_POSTGRESQL&quot;
+          assembly: &quot;XData.PostgreSql.NpgSql.Adapter&quot;
+          schema:
+            dictionaries:
+        - name: &quot;CONTACTS_POSTGRESQL&quot;
+          assembly: &quot;XData.PostgreSql.NpgSql.Adapter&quot;
+          schema:
+            contacts:
+    dialect:
+        - name: &quot;POSTGRESQL&quot;
+          assembly: &quot;XData.PostgreSql.Dialect&quot;
+    context:
+        - name: &quot;DICT&quot;
+          adapter: &quot;DICT_POSTGRESQL&quot;
+          dialect: &quot;POSTGRESQL&quot;
+        - name: &quot;CONTACTS&quot;
+          adapter: &quot;CONTACTS_POSTGRESQL&quot;
+          dialect: &quot;POSTGRESQL&quot;
+    default: &quot;CONTACTS&quot;
+    debug: true
+</code></pre><div class="TIP"><h5>Tip</h5><p>Note, the PostgreSQL connection strings can specify schema name in a <em>Search Path</em> key! That is required to work with tables from different then <em>public</em> schema without specify schema name in table name definitions.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>Names of adapters, that use various connection strings must to be unique! Names of contexts must correspond connection strings names.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>Be aware with PostgreSQL specific adapter configuration section <em>schema</em> required to specify home shema name for an adapter. Adapter and dialect specific configuration sections has described <a class="xref" href="tips.html#adapter-and-dialect-specific-configuration">here</a>.</p>
+</div>
+<h2 id="adapter-and-dialect-specific-configuration">Adapter and dialect specific configuration</h2>
+<p>Some of adapters and dialects has their own specific configuration settings to setup unique features and behaviors. That specific settings can be defined in configuration file or dynamically with <a class="xref" href="../api/XData.IDataOptions.html#XData_IDataOptions_AddAdapter_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_">AddAdapter</a> or <a class="xref" href="../api/XData.IDataOptions.html#XData_IDataOptions_AddDialect_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_">AddDialect</a> methods <em>options</em> parameter.</p>
+<div class="TIP"><h5>Tip</h5><p>Function signatures is slightly different for .Net 4.0 version.</p>
+</div>
+<h3 id="xdatapostgresqlnpgsqladapter">XData.PostgreSql.NpgSql.Adapter:</h3>
+<p>... when XML configuration file is used:</p>
+<pre><code class="lang-xml">&lt;adapter name=&quot;POSTGRESQL_NPG&quot; assembly=&quot;XData.PostgreSql.NpgSql.Adapter&quot;&gt;
+  &lt;schema name=&quot;public&quot;/&gt;
+&lt;/adapter
+</code></pre><p>... when YAML configuration file is used:</p>
+<pre><code class="lang-yaml">adapter:
+    - name: &quot;DICT_POSTGRESQL&quot;
+      assembly: &quot;XData.PostgreSql.NpgSql.Adapter&quot;
+      schema:
+        dictionaries:
+</code></pre><p>... when configuration is provided in runtime:</p>
+<pre><code class="lang-csharp">// replace someschemaname to real schema name
+var source = new MemoryConfigurationSource { InitialData = new[] {
+    new KeyValuePair&lt;string, string&gt;(&quot;schema:someschemaname&quot;, null) }};
+var conf = new ConfigurationBuilder().Add(source).Build();
+...
+.AddAdapter(&quot;postgresql&quot;, XData.PostgreSql.Adapter, conf)
+</code></pre><h2 id="using-di-container">Using DI container</h2>
 <p>XData can be effecively used with any DI containers You prefer. </p>
-<p>Net 4.0 version not used DI containers inside, but <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a>, <a class="xref" href="../api/XData.IDataScope.html">IDataScope</a> and <a class="xref" href="../api/XData.IRepository.html">IRepository&lt;T&gt;</a> interfaces can be obtained from container. IDataEngine must to be registered as singleton with <em>XDataManager.GetDataEngine</em> method call. IDataScope can be registered as lifetime service over data logic module (for example: Controller module in MVC pattern) using fabric method with obtaining IDataEngine service and creating (<a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_System_String_">IDataEngine.NewDataScope</a>) or request from internal XData cache (<a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_GetDataScope_System_Guid_System_String_System_Boolean_">IDataEngine.GetDataScope</a>) IDataScope instance when Layer is provided. IRepository&lt;T&gt; can be registered as transistent service using fabric method with obtaining IDataScope service and call <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">IDataScope.GetRepository&lt;T&gt;</a> method. Using container to obtain IRepository&lt;T&gt; service seems to be a kind of a joke, but sometimes it&#39;s usefull.</p>
+<p>Net 4.0 version not used DI containers inside, but <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a>, <a class="xref" href="../api/XData.IDataScope.html">IDataScope</a> and <a class="xref" href="../api/XData.IRepository.html">IRepository&lt;T&gt;</a> interfaces can be obtained from container. IDataEngine must to be registered as singleton with <em>XDataManager.InitXData</em> method call. IDataScope can be registered as lifetime service over data logic module (for example: Controller module in MVC pattern) using fabric method with obtaining IDataEngine service and creating (<a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_System_String_XData_Interfaces_ISecuritySession_">IDataEngine.NewDataScope</a>) or request from internal XData cache (<a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_GetDataScope_System_Guid_System_String_XData_Interfaces_ISecuritySession_System_Boolean_">IDataEngine.GetDataScope</a>) IDataScope instance when Layer is provided. IRepository&lt;T&gt; can be registered as transistent service using fabric method with obtaining IDataScope service and call <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">IDataScope.GetRepository&lt;T&gt;</a> method. Using container to obtain IRepository&lt;T&gt; service seems to be a kind of a joke, but sometimes it&#39;s usefull.</p>
 <p>Net Standard 2.0 version used Net Core Dependency Abstraction inside and this asbtraction can be implemented by any You like DI container. In this version <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> is registered by calling <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a> method. Other interfaces can be registered manually (if required) with described above or any You like logic.</p>
 <h2 id="mapping-view">Mapping view</h2>
 <p>To map <a href="../tutorial/glossary.html#data-object">data objects</a> to SQL views used same technics and commands as data table, but then mapping non readonly <a href="../tutorial/glossary.html#repository">repository</a> to table some fields of <a href="../tutorial/glossary.html#updatable-tables-hierarchy">updatable table</a> can be mapped automatically by XData engine using metadata information from source database. When mapping is described over view, all fields must to be described explicitly. Same rule is worked when source of data is text represented SQL expression or virtual recordset defined as union of records (see <a class="xref" href="../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_ToDataSet__1_System_Collections_Generic_IEnumerable___0__System_String_XData_Interfaces_ISqlBuilder_">ToDataSet</a> as example, similar result can be reached using string SQL expression as table name). All fields must to be described explicitly.</p>
@@ -90,16 +149,125 @@
 </div>
 <h2 id="get-connection-settings-in-runtime">Get connection settings in runtime</h2>
 <p>Connection settings can be obtained from initialized context using code below:</p>
-<pre><code class="lang-csharp">var ctx = XDataManager.GetContext(s);
+<pre><code class="lang-csharp">var ctx = dataScope.GetContext(s);
 Console.WriteLine(&quot;*** Testing context: {0} (DB type: {1})&quot;, ctx.Name, ctx.DatabaseAdapter.ConnectType);
 Console.WriteLine(&quot;*** Server: {0}, Schema: {1}&quot;, ctx.ConnectionInfo.Server, ctx.ConnectionInfo.Schema);
 </code></pre><h2 id="optional-filters">Optional filters</h2>
 <p>Optional filters is the mechanic to simplify query structure when some filters are not set. For example, we can map data structure to some class and to alow filter objects over some property of dictionary linked to main data structure. When filter applied this link to dictionary table is used, but when not we ineffectively rize query complexity.</p>
 <p>To avoid unplanned query complexity XData has <em>optional filter</em> feature. Some filters marked as <em>primary</em> - when this filter has value, query has full form. When filter value has cleared or set to null, data source of filtered field (table or view) will be skiped when SQL query composed. When data source has been skipped then links between already skipped and other data sources are analized. And when found link marked as <em>primary</em> linked data source will also skipped. When <a href="../tutorial/glossary.html#base-table">base table</a> of subquery has been skipped - all subquery will be skipped and subquery links analizis for <em>primary</em> links will be provided over outer query. Until no <em>primary</em> filters found.</p>
 <p>This alowes to compose complex query relations over multiple tables and subqueries that reflect on real query only when it realy necessary.</p>
+<h2 id="conditional-filters">Conditional filters</h2>
+<p>XData realization of LINQ &quot;Where&quot; method has provide ability to use runtime condition evaluation during predicate compilation into SQL statements to analyze runtime data and conditionaly omit non valued data (0, empty or null) filters.</p>
+<pre><code class="lang-csharp">// string author, int rating, decimal? lowerPrice and decimal? higherPrice is an optional filter values
+return dataScope.GetRepository&lt;Book&gt;()
+    .Where(x =&gt; (string.IsNullOrEmpty(author) || x.Author == author)
+    &amp;&amp; (rating &lt;= 0 || x.Rating &gt;= rating)
+    &amp;&amp; (lowerPrice.HasValue || x.Price &gt;= lowerPrice)
+    &amp;&amp; (higherPrice.HasValue || x.Price &lt;= higherPrice))
+.ToArray();
+</code></pre><p>When runtime condition is true and LINQ expression is OrElse whole expression is omitted while predicate compilation into SQL statements.</p>
+<h2 id="outer-joined-table-filtration-specifics">Outer joined table filtration specifics</h2>
+<pre><code class="lang-csharp">XDataMapping.CustomMapping&lt;UserList&gt;()
+    .DataTable(&quot;t_user&quot;, &quot;U&quot;)
+    // *t_user_claim* has inner joined to *t_user* by *user_id* field
+    .DataTable(&quot;t_user_claim&quot;, &quot;UC&quot;, z =&gt; z.Link(&quot;U&quot;, &quot;user_id&quot;),
+        // constant filter use defaut equal operation (see SQL result below)
+        z =&gt; z.ConstFilter(&quot;ClaimNickName&quot;, &quot;claim_type&quot;, &quot;nickname&quot;))
+    // *t_user_app* has outer joined to *t_user* by *user_id* field
+    .DataTable(&quot;t_user_app&quot;, &quot;A&quot;,
+        x =&gt; x.Link(&quot;U&quot;, &quot;user_id&quot;).SetOperation(FilterOperation.OuterJoin),
+        // IMOPRTANT! all filters for outer joined table must use *OuterJoin* operation to apply correct filtration
+        x =&gt; x.ConstFilter(&quot;FilterByAsubs&quot;, &quot;app_type&quot;, (int) AppType.Asubs).SetOperation(FilterOperation.OuterJoin),
+        x =&gt; x.ConstFilter(&quot;FilterByAsubsEnabled&quot;, &quot;enabled&quot;, 1).SetOperation(FilterOperation.OuterJoin))
+</code></pre><pre><code class="lang-sql">select ... from t_user U
+join t_user_claim UC on UC.user_id = U.user_id
+outer join t_user_app A on A.user_id = U.user_id and A.app_type = 1 and A.enabled = 1
+</code></pre><p>Constant filters are moved to outer join condition not in where statement conditions and query will return correct results.</p>
+<p>Similar rules is applied to static mapping and dynamic query.</p>
 <h2 id="tree-organized-repository-child-specifics">Tree organized repository child specifics</h2>
 <p>When master repository has hierarchy structure, than slave objects can be filtered by two methods to choose slave repository data: filter data linked with selected tree node only (<a class="xref" href="../api/XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_DirectLink">direct links</a>), and linked to subtree from selected node and below by hierarchy. XData has functional to choose one of this methods in runtime. To provide this ability mapping of master objects must describe <a href="../tutorial/mapping/mapping.html#master-slave-relations">external links</a> marked as <a class="xref" href="../api/XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_DirectLink">direct links</a>. Than master repository flag <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_ShowSubtree">ShowSubtree</a> can be used as a switch between this two methods.</p>
-<h2 id="using-dictionaries">Using dictionaries</h2>
+<h2 id="reuse-mapping-in-dynamic-query">Reuse mapping in dynamic query</h2>
+<p>Already declared mappings can be reused in <a href="../tutorial/query.html">dynamic query</a> construction with generic <a class="xref" href="../api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure__1_System_String_">GetStructure</a> method overload.</p>
+<p>See the example below to understand how it works:</p>
+<pre><code class="lang-csharp">using (var dataScope = DataEngine.NewDataScope())
+{
+    var user = dataScope.GetRepository&lt;User&gt;().SingleOrDefault(x =&gt; x.UserId.ToString() == userId);
+    if (user == null)
+        throw new Exception(&quot;User not found!&quot;);
+
+    // prepare enum values expression array to *Case* expression based on AppType enum
+    var enumValues = typeof(AppType).GetEnumKeyValuePairs()
+        .Select(i =&gt; i.Key.SetExpression(x =&gt; i.Value))
+        .ToArray();
+
+    // reuse *UserRole* mapping adding filter by *user_id* column and redefine select output
+    var roleClaims = XDataMapping.GetStructure&lt;UserRole&gt;().AddFilters(&quot;UR&quot;,
+        x =&gt; x.ConstFilter(&quot;FilterByUserId&quot;, &quot;user_id&quot;, userId.ToString()))
+        .Column(&quot;UserId&quot;, x =&gt; x.Field&lt;Guid&gt;(&quot;UR&quot;, string.Empty))
+        .Select(x =&gt; new UserClaim
+        {
+            // set negative id to preserve key uniqueness after appling *Union* operation using expression field
+            Id = x.Expr(&quot;id&quot;, z =&gt; -1 * z.Field&lt;long&gt;(&quot;R&quot;, &quot;role_id&quot;), DbType.Int64),
+            Type = x.Expr(&quot;role&quot;, z =&gt; &quot;role&quot;, DbType.String),
+            // construct role name based by *app_type* enum field and role name using SQL *Case* expression
+            Value = x.Expr(&quot;val&quot;, z =&gt; z.Case(y =&gt; y.Field&lt;long&gt;(&quot;R&quot;, &quot;app_type&quot;), y =&gt; &quot;&quot;, enumValues) 
+                + &quot;.&quot; + x.Field&lt;string&gt;(&quot;R&quot;, &quot;role&quot;), DbType.String)
+        }).AsQuery(dataScope.Layer);
+
+    user.Applications = apps.SetFilterValue(x =&gt; UserId, userId).ToArray();
+    user.Roles = dataScope.GetRepository&lt;UserRole&gt;().SetFilterValue(x =&gt; UserId, userId).ToArray();
+    // Combine simple claims and synthetic role claims
+    user.Claims = dataScope.GetRepository&lt;UserClaim&gt;()
+        .SetFilterValue(x =&gt; UserId, userId)
+        .Union(roleClaims).ToArray();
+
+    return user;
+}
+</code></pre><h2 id="dynamic-query-external-data-sources">Dynamic query external data sources</h2>
+<p>XData <a href="../tutorial/query.html">dynamic query</a> can use external data sources to operate with runtime tabular or xml data together with data stored inside database.</p>
+<div class="WARNING"><h5>Warning</h5><p>This feature is not supported by all of databases! XML data sources can be used with Ms SQL Server and PostgreSQL only. Local temporary tables is not supported by Oracle database.
+As You can see, Oracle not supported both of features. Use PL/SQL functions, packages or predefined global temporary tables instead.</p>
+</div>
+<h3 id="xml-data-source">XML data source</h3>
+<pre><code class="lang-csharp">// prepare XML document
+var doc = new XDocument(new XElement(&quot;root&quot;, 
+    new XElement(&quot;test&quot;, new XAttribute(&quot;doc_state_id&quot;, 1), new XAttribute(&quot;test&quot;, &quot;one&quot;)),
+    new XElement(&quot;test&quot;, new XAttribute(&quot;doc_state_id&quot;, 2), new XAttribute(&quot;test&quot;, &quot;two&quot;))
+    )).ToString();
+var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
+    .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;)
+    // use XmlSource definition providing XPath expression for data source
+    .XmlSource(&quot;Test&quot;, &quot;T&quot;, &quot;root/test&quot;, x =&gt; x.Link(&quot;S&quot;, &quot;doc_state_id&quot;))
+    .Select(x =&gt; new {
+        // use XmlField definition with XPath expression as a field source
+        DocStateId = x.XmlField&lt;int&gt;(&quot;T&quot;, string.Empty, &quot;@doc_state_id&quot;, DbType.Int32, z =&gt; z.Key()),
+        Code = x.Field&lt;string&gt;(&quot;S&quot;, string.Empty),
+        // note, string and number (decimal) xml fields need size defined, like an expression fields
+        Test = x.XmlField&lt;string&gt;(&quot;T&quot;, string.Empty, &quot;@test&quot;, DbType.String, z =&gt; z.Size(20))
+    // set XML string to variable with the same name as XmlSource
+    }).AsQuery(dataScope.Layer, &quot;Test&quot;.SetVar(doc));
+</code></pre><h3 id="temporary-table">Temporary table</h3>
+<pre><code class="lang-csharp">// prepare tabular data
+var table = new DataTable();
+table.Columns.AddRange(new [] { new DataColumn(&quot;doc_state_id&quot;, typeof(long)),
+    new DataColumn(&quot;test&quot;, typeof(string)) });
+table.Rows.Add(1, &quot;one&quot;);
+table.Rows.Add(2, &quot;two&quot;);
+table.AcceptChanges();
+
+var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
+    .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;)
+    // use temporary table definition
+    .TempTable(&quot;Test&quot;, &quot;T&quot;, x =&gt; x.Link(&quot;S&quot;, &quot;doc_state_id&quot;))
+    .Select(x =&gt; new {
+        // use Field method overload with dbType parameter to define temporary table field
+        DocStateId = x.Field&lt;long&gt;(&quot;T&quot;, string.Empty, DbType.Int64, z =&gt; z.Key()),
+        Code = x.Field&lt;string&gt;(&quot;S&quot;, string.Empty),
+        // note, string and number (decimal) xml fields need size defined, like an expression fields
+        Test = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty, DbType.String, z =&gt; z.Size(20))
+    // set DataTable to variable with the same name as TempTable
+    }).AsQuery(dataScope.Layer, &quot;Test&quot;.SetVar(table));
+</code></pre><h2 id="using-dictionaries">Using dictionaries</h2>
 <p>Dictionaries can be used to reduse data requery count when rarely changed data of dictionary will linked multiple times through <a class="xref" href="../api/XData.Mapping.Link-2.html">Link&lt;T,TSource&gt;</a> data type properties over small amount of time (one business process). Dictionaries is cached as single mapped objects (not a data cahe as described in <a href="tips.html#caching-repository-data">Caching repository data</a> topic).</p>
 <h2 id="caching-repository-data">Caching repository data</h2>
 <p>Some data is changed often, some is rarely, but some data will never changed untill application has upgraded. To reduse requery of this static data, XData has mechanism to cache requested data (not a mapped objects) in XData. Repository property <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_FixedQuery">FixedQuery</a> can be assigned to true when caching is required. All LINQ queries will be translated to this cache without requery data from database. When this property resets to false, the cache will erased and repository returns to common algorithms of database requests. Similar feature is used to access rarely changed <a href="dictionary.html">dictionary</a> data over multiple related operative data canges.</p>
@@ -281,10 +449,92 @@ using(var tr = dataScope.BeginTransaction())
 </ul>
 <h2 id="transactions">Transactions</h2>
 <p>XData use automatic transactions handling by default. But allows to manage transacions manually using IDataScope interface method <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_BeginTransaction_System_String_System_Boolean_System_Data_IsolationLevel_">BeginTransaction</a> returned transaction state interface <a class="xref" href="../api/XData.Database.ITransaction.html">ITransaction</a>. Transaction state is a IDisposable object. Transaction is commited when method <a class="xref" href="../api/XData.Database.ITransaction.html#XData_Database_ITransaction_Commit">Commit</a> is called. When transaction state is disposed without call Commit method, transaction is rolled back. Transaction can be started as readonly or read/write. This depends on parameter <em>read</em> of BeginTransaction method. XData can symulationaly wrap transactions one over another. First non read only transaction is related to real database tranaction, and all wrapped transactions is related to transaction labels. When wrapped transaction is rolled back real transaction is rolled back to label only. Only rolling back the &quot;main&quot; transaction calls ROLLBACK statement over database.</p>
-<h2 id="call-custom-sql-code">Call custom SQL code</h2>
+<h2 id="sql-hints">SQL hints</h2>
+<div class="WARNING"><h5>Warning</h5><p>Before using SQL hints, be sure to use all other query optimization features. This is a &quot;double-edged weapon.&quot; You need to understand very well why you are using what hints and how it will affect performance, and also make all the necessary tests confirming the effectiveness of the changes you made!</p>
+</div>
+<p>XData supports using SQL hints to improve SQL query productivity. All databases supports this feature using vaious mechanics and can change various parameters of SQL execution...</p>
+<p>Types of hints supported by XData for RDBMS...</p>
+<h3 id="ms-sql-server">MS SQL Server</h3>
+<p><a href="https://docs.microsoft.com/en-gb/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-2017">Query hints</a>
+<a href="https://docs.microsoft.com/en-gb/sql/t-sql/queries/hints-transact-sql-table?view=sql-server-2017">Table hints</a></p>
+<h3 id="oracle">Oracle</h3>
+<p><a href="https://docs.oracle.com/cd/B10500_01/server.920/a96533/hintsref.htm">Query hints</a></p>
+<h3 id="mysql">MySql</h3>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/optimizer-hints.html">Query hints</a></p>
+<h3 id="postgresql">PostgreSQL</h3>
+<p>PostgreSQL does not support hints for queries, but <a href="https://wiki.postgresql.org/wiki/Return_more_than_one_row_of_data_from_PL/pgSQL_functions">procedures that returns <em>setof record</em></a> required declare columns definition on call (see example below). Of coase, this is not a SQL hint actually, but...</p>
+<pre><code class="lang-sql">create or replace function GetRows(text) returns setof record as
+$
+declare
+r record;
+begin
+for r in EXECUTE &#39;&#39;select * from &#39;&#39; || $1 loop
+return next r;
+end loop;
+return;
+end
+$
+language &#39;plpgsql&#39;;
+
+select * from GetRows(&#39;Department&#39;) as dept(deptid int, deptname text);
+</code></pre><h3 id="sqlite">SQLite</h3>
+<p>SQLite does not support hints.</p>
+<h3 id="using-hints-in-static-mapping">Using hints in static mapping</h3>
+<p>Query hints:</p>
+<pre><code class="lang-csharp">// hint for epmty string alias is applied to query
+// possible to apply different hints on 
+// select, insert, update, delete statements or their combination
+[DataObject(&quot;T&quot;),
+ Hint(&quot;&quot;, &quot;SQL_NO_CACHE&quot;, HintType.Select),
+ Hint(&quot;&quot;, &quot;HIGH_PRIORITY&quot;, HintType.Select | HintType.Insert),
+ ...
+</code></pre><p>Table hints (MS SQL Server only):</p>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+ DataTable(&quot;Test&quot;, &quot;T&quot;),
+ Hint(&quot;T&quot;, &quot;nolock&quot;),
+ ...
+</code></pre><p>Procedure hints (PostgreSQL only):</p>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+ Procedure(&quot;T&quot;, &quot;TestFunction9&quot;, ProcedureType.Function),
+ Hint(&quot;T&quot;, &quot;Id integer, Name varchar(20)&quot;),
+ Parameter(&quot;T&quot;, 1, &quot;p_id1&quot;, typeof(int), DbType.Int32),
+ Parameter(&quot;T&quot;, 1, &quot;p_name1&quot;, typeof(string), DbType.String),
+ Parameter(&quot;T&quot;, 1, &quot;p_id2&quot;, typeof(int), DbType.Int32), 
+ Parameter(&quot;T&quot;, 1, &quot;p_name2&quot;, typeof(string), DbType.String),
+ ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+public class PostgreSqlTestFunction9 : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get; set; }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get; set; }
+}
+</code></pre><h3 id="using-hints-in-dynamic-mapping-and-dynamic-queries">Using hints in dynamic mapping and dynamic queries</h3>
+<p>Query hints:</p>
+<pre><code class="lang-csharp">// hint for epmty string alias is applied to query
+// possible to apply different hints on 
+// select, insert, update, delete statements or their combination
+XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
+    .Hint(&quot;&quot;, &quot;SQL_NO_CACHE&quot;, HintType.Select)
+    .Hint(&quot;&quot;, &quot;HIGH_PRIORITY&quot;, HintType.Select | HintType.Insert)...
+</code></pre><p>Table hints (MS SQL Server only):</p>
+<pre><code class="lang-csharp">XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
+    .DataTable(&quot;Test&quot;, &quot;T&quot;)
+    .Hint(&quot;T&quot;, &quot;nolock&quot;)...
+</code></pre><p>Procedure hints (PostgreSQL only):</p>
+<pre><code class="lang-csharp">XDataMapping.GetStructure(context: dataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;TestFunction8&quot;, ProcedureType.Function)
+    .Hint(&quot;T&quot;, &quot;Id integer, Name varchar(20)&quot;)
+    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;p_tab&quot;, DbType.Object, 
+        z =&gt; z.UdtDataType(null, &quot;classifier_rec&quot;), z =&gt; z.Array())
+    .Select(x =&gt; new Classifier { 
+        Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
+        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
+    .AsQuery(DataScope.Layer, &quot;p_tab&quot;.SetVar(param));
+</code></pre><h2 id="call-custom-sql-code">Call custom SQL code</h2>
 <p>XData can help the programmer to obtain data and process it with many ways. But also we hold in mind XData is just a common tool with limited quantity of features, and some very specific (but handy and powerfull) SQL dialect constructions may be out of XData possibilities. </p>
 <p>To call dialect specific SQL statements used raw <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html">database adapter interface</a> with methods: <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_XData_Database_Adapter_Query_System_Data_CommandBehavior_">FillTable</a>, <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_XData_Database_Adapter_Query_">ExecuteScalar</a> and <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_XData_Database_Adapter_Query_">ExecuteNonQuery</a>. </p>
-<p>To access <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html">database adapter interface</a> used <a href="../tutorial/glossary.html#context">context</a> descriptor through <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_GetContext_System_String_">XDataManager.GetContext</a> method:</p>
+<p>To access <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html">database adapter interface</a> used <a href="../tutorial/glossary.html#context">context</a> descriptor through <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetContext_System_String_">IDataScope.GetContext</a> method:</p>
 <pre><code class="lang-csharp">const string getCoordComResourceStateChangesForCaseCommand = @&quot;
 select x.ResourceCode, x.ReportedDateTime, x.UserName, x.MissionStatusCode, 
 x.ResourceStatusCode
@@ -336,7 +586,7 @@ where x.UserName is not null&quot;;
 
 using (var dataScope = DataEngine.Value.NewDataScope(CoordComDb))
 {
-    return XDataManager.GetContext(CoordComDb).DatabaseAdapter.FillTable(dataScope.Layer,
+    return dataScope.GetContext(CoordComDb).DatabaseAdapter.FillTable(dataScope.Layer,
         new Query(getCoordComResourceStateChangesForCaseCommand, CommandType.Text,
             new QueryParam(&quot;@CaseFolderId&quot;, caseIdentity.CaseFolderId, DbType.Int32),
             new QueryParam(&quot;@CallCenterId&quot;, caseIdentity.CallCenterId, DbType.Int32),

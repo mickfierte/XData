@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface ITable
    | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,6 +89,12 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="XData.DataSource.Structure.ITableLike.html#XData_DataSource_Structure_ITableLike_Name">ITableLike.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="XData.DataSource.Structure.ITableLike.html#XData_DataSource_Structure_ITableLike_Fields">ITableLike.Fields</a>
+    </div>
+    <div>
       <a class="xref" href="XData.DataSource.Structure.IDataSource.html#XData_DataSource_Structure_IDataSource_SourceType">IDataSource.SourceType</a>
     </div>
     <div>
@@ -117,36 +123,10 @@
   <h6><strong>Assembly</strong>: XData.dll</h6>
   <h5 id="XData_DataSource_Structure_ITable_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ITable : IDataSource, ICloneable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ITable : ITableLike, IDataSource, ICloneable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="XData_DataSource_Structure_ITable_Fields_" data-uid="XData.DataSource.Structure.ITable.Fields*"></a>
-  <h4 id="XData_DataSource_Structure_ITable_Fields" data-uid="XData.DataSource.Structure.ITable.Fields">Fields</h4>
-  <div class="markdown level1 summary"><p>Fields</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">SortedSet&lt;IField&gt; Fields { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.sortedset-1">SortedSet</a>&lt;<a class="xref" href="XData.DataSource.Structure.IField.html">IField</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="XData_DataSource_Structure_ITable_Hierarchies_" data-uid="XData.DataSource.Structure.ITable.Hierarchies*"></a>
@@ -195,32 +175,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="XData.Mapping.HintInfo.html">HintInfo</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_ITable_Name_" data-uid="XData.DataSource.Structure.ITable.Name*"></a>
-  <h4 id="XData_DataSource_Structure_ITable_Name" data-uid="XData.DataSource.Structure.ITable.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Table name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>

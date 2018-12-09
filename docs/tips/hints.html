@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SQL hints | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SQL hints | XData website ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="tips_hints.md">
+<h2 id="sql-hints">SQL hints</h2>
+
+<div class="WARNING"><h5>Warning</h5><p>Before using SQL hints, be sure to use all other query optimization features. This is a &quot;double-edged weapon.&quot; You need to understand very well why you are using what hints and how it will affect performance, and also make all the necessary tests confirming the effectiveness of the changes you made!</p>
+</div>
+<p>XData supports using SQL hints to improve SQL query productivity. All databases supports this feature using vaious mechanics and can change various parameters of SQL execution...</p>
+<p>Types of hints supported by XData for RDBMS...</p>
+<h3 id="ms-sql-server">MS SQL Server</h3>
+<p><a href="https://docs.microsoft.com/en-gb/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-2017">Query hints</a>
+<a href="https://docs.microsoft.com/en-gb/sql/t-sql/queries/hints-transact-sql-table?view=sql-server-2017">Table hints</a></p>
+<h3 id="oracle">Oracle</h3>
+<p><a href="https://docs.oracle.com/cd/B10500_01/server.920/a96533/hintsref.htm">Query hints</a></p>
+<h3 id="mysql">MySql</h3>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/optimizer-hints.html">Query hints</a></p>
+<h3 id="postgresql">PostgreSQL</h3>
+<p>PostgreSQL does not support hints for queries, but <a href="https://wiki.postgresql.org/wiki/Return_more_than_one_row_of_data_from_PL/pgSQL_functions">procedures that returns <em>setof record</em></a> required declare columns definition on call (see example below). Of coase, this is not a SQL hint actually, but...</p>
+<pre><code class="lang-sql">create or replace function GetRows(text) returns setof record as
+$
+declare
+r record;
+begin
+for r in EXECUTE &#39;&#39;select * from &#39;&#39; || $1 loop
+return next r;
+end loop;
+return;
+end
+$
+language &#39;plpgsql&#39;;
+
+select * from GetRows(&#39;Department&#39;) as dept(deptid int, deptname text);
+</code></pre><h3 id="sqlite">SQLite</h3>
+<p>SQLite does not support hints.</p>
+<h3 id="using-hints-in-static-mapping">Using hints in static mapping</h3>
+<p>Query hints:</p>
+<pre><code class="lang-csharp">// hint for epmty string alias is applied to query
+// possible to apply different hints on 
+// select, insert, update, delete statements or their combination
+[DataObject(&quot;T&quot;),
+ Hint(&quot;&quot;, &quot;SQL_NO_CACHE&quot;, HintType.Select),
+ Hint(&quot;&quot;, &quot;HIGH_PRIORITY&quot;, HintType.Select | HintType.Insert),
+ ...
+</code></pre><p>Table hints (MS SQL Server only):</p>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+ DataTable(&quot;Test&quot;, &quot;T&quot;),
+ Hint(&quot;T&quot;, &quot;nolock&quot;),
+ ...
+</code></pre><p>Procedure hints (PostgreSQL only):</p>
+<pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
+ Procedure(&quot;T&quot;, &quot;TestFunction9&quot;, ProcedureType.Function),
+ Hint(&quot;T&quot;, &quot;Id integer, Name varchar(20)&quot;),
+ Parameter(&quot;T&quot;, 1, &quot;p_id1&quot;, typeof(int), DbType.Int32),
+ Parameter(&quot;T&quot;, 1, &quot;p_name1&quot;, typeof(string), DbType.String),
+ Parameter(&quot;T&quot;, 1, &quot;p_id2&quot;, typeof(int), DbType.Int32), 
+ Parameter(&quot;T&quot;, 1, &quot;p_name2&quot;, typeof(string), DbType.String),
+ ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+public class PostgreSqlTestFunction9 : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get; set; }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get; set; }
+}
+</code></pre><h3 id="using-hints-in-dynamic-mapping-and-dynamic-queries">Using hints in dynamic mapping and dynamic queries</h3>
+<p>Query hints:</p>
+<pre><code class="lang-csharp">// hint for epmty string alias is applied to query
+// possible to apply different hints on 
+// select, insert, update, delete statements or their combination
+XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
+    .Hint(&quot;&quot;, &quot;SQL_NO_CACHE&quot;, HintType.Select)
+    .Hint(&quot;&quot;, &quot;HIGH_PRIORITY&quot;, HintType.Select | HintType.Insert)...
+</code></pre><p>Table hints (MS SQL Server only):</p>
+<pre><code class="lang-csharp">XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
+    .DataTable(&quot;Test&quot;, &quot;T&quot;)
+    .Hint(&quot;T&quot;, &quot;nolock&quot;)...
+</code></pre><p>Procedure hints (PostgreSQL only):</p>
+<pre><code class="lang-csharp">XDataMapping.GetStructure(context: dataScope.DefaultContext)
+    .Procedure(&quot;T&quot;, &quot;TestFunction8&quot;, ProcedureType.Function)
+    .Hint(&quot;T&quot;, &quot;Id integer, Name varchar(20)&quot;)
+    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;p_tab&quot;, DbType.Object, 
+        z =&gt; z.UdtDataType(null, &quot;classifier_rec&quot;), z =&gt; z.Array())
+    .Select(x =&gt; new Classifier { 
+        Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
+        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
+    .AsQuery(DataScope.Layer, &quot;p_tab&quot;.SetVar(param));
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

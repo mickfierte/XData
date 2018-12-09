@@ -295,6 +295,12 @@ references:
 - uid: tips.md
   name: Tips & Trics
   href: tips/tips.html
+- uid: tips_adapter_config.md
+  name: Adapter and dialect specific configuration
+  href: tips/adapter_config.html
+- uid: tips_add_filters.md
+  name: Reuse mapping in dynamic query
+  href: tips/add_filters.html
 - uid: tips_attached.md
   name: Virtual data and attached handlers
   href: tips/attached.html
@@ -304,6 +310,9 @@ references:
 - uid: tips_calculated.md
   name: Business logic calculated fields
   href: tips/calculated.html
+- uid: tips_conditional.md
+  name: Conditional filters
+  href: tips/conditional.html
 - uid: tips_container.md
   name: Using DI container
   href: tips/container.html
@@ -322,15 +331,24 @@ references:
 - uid: tips_events.md
   name: Using events
   href: tips/events.html
+- uid: tips_external.md
+  name: Dynamic query external data sources
+  href: tips/external.html
 - uid: tips_fixed.md
   name: Caching repository data
   href: tips/fixed.html
 - uid: tips_get_credentials.md
   name: Get connection settings in runtime
   href: tips/get_credentials.html
+- uid: tips_hints.md
+  name: SQL hints
+  href: tips/hints.html
 - uid: tips_optional.md
   name: Optional filters
   href: tips/optional.html
+- uid: tips_outer_join.md
+  name: Outer joined table filtration specifics
+  href: tips/outer_join.html
 - uid: tips_transactions.md
   name: Transactions
   href: tips/transactions.html
@@ -346,6 +364,9 @@ references:
 - uid: tips_view.md
   name: Mapping view
   href: tips/view.html
+- uid: tips_yaml_config.md
+  name: YAML configuration file
+  href: tips/yaml_config.html
 - uid: unit_of_work.md
   name: Processing of related objects (Unit of Work)
   href: tutorial/unit_of_work.html
@@ -1253,24 +1274,24 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetParameterValue(Of T)(XData.Database.Adapter.QueryParam)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetParameterValue<T>(QueryParam)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetParameterValue(Of T)(QueryParam)
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetProsedureCall(System.Data.IDbCommand@,XData.Database.Adapter.StoredProcedure,System.String,System.Boolean)
-  name: GetProsedureCall(ref IDbCommand, StoredProcedure, String, Boolean)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetProsedureCall_System_Data_IDbCommand__XData_Database_Adapter_StoredProcedure_System_String_System_Boolean_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.GetProsedureCall(System.Data.IDbCommand@,XData.Database.Adapter.StoredProcedure,System.String,System.Boolean)
-  name.vb: GetProsedureCall(ByRef IDbCommand, StoredProcedure, String, Boolean)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetProsedureCall(ref System.Data.IDbCommand, XData.Database.Adapter.StoredProcedure, System.String, System.Boolean)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetProsedureCall(ByRef System.Data.IDbCommand, XData.Database.Adapter.StoredProcedure, System.String, System.Boolean)
-  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetProsedureCall(ref IDbCommand, StoredProcedure, String, Boolean)
-  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetProsedureCall(ByRef IDbCommand, StoredProcedure, String, Boolean)
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetProsedureCall*
-  name: GetProsedureCall
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetProsedureCall_
-  commentId: Overload:XData.Database.Adapter.BaseDatabaseAdapter`2.GetProsedureCall
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall(System.Data.IDbCommand@,XData.Database.Adapter.StoredProcedure,System.String,System.Boolean)
+  name: GetProcedureCall(ref IDbCommand, StoredProcedure, String, Boolean)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetProcedureCall_System_Data_IDbCommand__XData_Database_Adapter_StoredProcedure_System_String_System_Boolean_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall(System.Data.IDbCommand@,XData.Database.Adapter.StoredProcedure,System.String,System.Boolean)
+  name.vb: GetProcedureCall(ByRef IDbCommand, StoredProcedure, String, Boolean)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetProcedureCall(ref System.Data.IDbCommand, XData.Database.Adapter.StoredProcedure, System.String, System.Boolean)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall(ByRef System.Data.IDbCommand, XData.Database.Adapter.StoredProcedure, System.String, System.Boolean)
+  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetProcedureCall(ref IDbCommand, StoredProcedure, String, Boolean)
+  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall(ByRef IDbCommand, StoredProcedure, String, Boolean)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall*
+  name: GetProcedureCall
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetProcedureCall_
+  commentId: Overload:XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall
   isSpec: "True"
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetProsedureCall
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetProsedureCall
-  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetProsedureCall
-  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetProsedureCall
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetProcedureCall
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall
+  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetProcedureCall
+  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetSqlType(System.String)
   name: GetSqlType(String)
   href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetSqlType_System_String_
@@ -2826,15 +2847,15 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.AddOrderBy
   nameWithType: BaseSqlBuilder.AddOrderBy
-- uid: XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}})
-  name: AddReturning2Command(ref StringBuilder, SortedList<String, Tuple<String, Boolean>>)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_System_Text_StringBuilder__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}})
-  name.vb: AddReturning2Command(ByRef StringBuilder, SortedList(Of String, Tuple(Of String, Boolean)))
-  fullName: XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(ref System.Text.StringBuilder, System.Collections.Generic.SortedList<System.String, System.Tuple<System.String, System.Boolean>>)
-  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(ByRef System.Text.StringBuilder, System.Collections.Generic.SortedList(Of System.String, System.Tuple(Of System.String, System.Boolean)))
-  nameWithType: BaseSqlBuilder.AddReturning2Command(ref StringBuilder, SortedList<String, Tuple<String, Boolean>>)
-  nameWithType.vb: BaseSqlBuilder.AddReturning2Command(ByRef StringBuilder, SortedList(Of String, Tuple(Of String, Boolean)))
+- uid: XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}},System.Boolean)
+  name: AddReturning2Command(ref StringBuilder, SortedList<String, Tuple<String, Boolean>>, Boolean)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_System_Text_StringBuilder__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___System_Boolean_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}},System.Boolean)
+  name.vb: AddReturning2Command(ByRef StringBuilder, SortedList(Of String, Tuple(Of String, Boolean)), Boolean)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(ref System.Text.StringBuilder, System.Collections.Generic.SortedList<System.String, System.Tuple<System.String, System.Boolean>>, System.Boolean)
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(ByRef System.Text.StringBuilder, System.Collections.Generic.SortedList(Of System.String, System.Tuple(Of System.String, System.Boolean)), System.Boolean)
+  nameWithType: BaseSqlBuilder.AddReturning2Command(ref StringBuilder, SortedList<String, Tuple<String, Boolean>>, Boolean)
+  nameWithType.vb: BaseSqlBuilder.AddReturning2Command(ByRef StringBuilder, SortedList(Of String, Tuple(Of String, Boolean)), Boolean)
 - uid: XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command*
   name: AddReturning2Command
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_
@@ -2955,6 +2976,19 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.ExtractXmlQuery
   nameWithType: BaseSqlBuilder.ExtractXmlQuery
+- uid: XData.Database.Dialect.BaseSqlBuilder.FormatConstValue(System.Object)
+  name: FormatConstValue(Object)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_FormatConstValue_System_Object_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.FormatConstValue(System.Object)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.FormatConstValue(System.Object)
+  nameWithType: BaseSqlBuilder.FormatConstValue(Object)
+- uid: XData.Database.Dialect.BaseSqlBuilder.FormatConstValue*
+  name: FormatConstValue
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_FormatConstValue_
+  commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.FormatConstValue
+  isSpec: "True"
+  fullName: XData.Database.Dialect.BaseSqlBuilder.FormatConstValue
+  nameWithType: BaseSqlBuilder.FormatConstValue
 - uid: XData.Database.Dialect.BaseSqlBuilder.FormatFieldName(System.String,System.String)
   name: FormatFieldName(String, String)
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_FormatFieldName_System_String_System_String_
@@ -3197,6 +3231,19 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.GetExpressionText
   nameWithType: BaseSqlBuilder.GetExpressionText
+- uid: XData.Database.Dialect.BaseSqlBuilder.GetExprSize(XData.DataSource.Structure.IField)
+  name: GetExprSize(IField)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetExprSize_XData_DataSource_Structure_IField_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetExprSize(XData.DataSource.Structure.IField)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.GetExprSize(XData.DataSource.Structure.IField)
+  nameWithType: BaseSqlBuilder.GetExprSize(IField)
+- uid: XData.Database.Dialect.BaseSqlBuilder.GetExprSize*
+  name: GetExprSize
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetExprSize_
+  commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.GetExprSize
+  isSpec: "True"
+  fullName: XData.Database.Dialect.BaseSqlBuilder.GetExprSize
+  nameWithType: BaseSqlBuilder.GetExprSize
 - uid: XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String)
   name: GetInsertQuery(IDataStructure, IDataObject, String)
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetInsertQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_
@@ -3436,6 +3483,22 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.ParseConnectionString
   nameWithType: BaseSqlBuilder.ParseConnectionString
+- uid: XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables(XData.DataSource.Structure.IDataStructure,System.Text.StringBuilder@,XData.Database.Adapter.Query,System.Collections.Generic.ICollection{System.String},System.Boolean,System.Boolean)
+  name: PrepareTempTables(IDataStructure, ref StringBuilder, Query, ICollection<String>, Boolean, Boolean)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_PrepareTempTables_XData_DataSource_Structure_IDataStructure_System_Text_StringBuilder__XData_Database_Adapter_Query_System_Collections_Generic_ICollection_System_String__System_Boolean_System_Boolean_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables(XData.DataSource.Structure.IDataStructure,System.Text.StringBuilder@,XData.Database.Adapter.Query,System.Collections.Generic.ICollection{System.String},System.Boolean,System.Boolean)
+  name.vb: PrepareTempTables(IDataStructure, ByRef StringBuilder, Query, ICollection(Of String), Boolean, Boolean)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables(XData.DataSource.Structure.IDataStructure, ref System.Text.StringBuilder, XData.Database.Adapter.Query, System.Collections.Generic.ICollection<System.String>, System.Boolean, System.Boolean)
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables(XData.DataSource.Structure.IDataStructure, ByRef System.Text.StringBuilder, XData.Database.Adapter.Query, System.Collections.Generic.ICollection(Of System.String), System.Boolean, System.Boolean)
+  nameWithType: BaseSqlBuilder.PrepareTempTables(IDataStructure, ref StringBuilder, Query, ICollection<String>, Boolean, Boolean)
+  nameWithType.vb: BaseSqlBuilder.PrepareTempTables(IDataStructure, ByRef StringBuilder, Query, ICollection(Of String), Boolean, Boolean)
+- uid: XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables*
+  name: PrepareTempTables
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_PrepareTempTables_
+  commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables
+  isSpec: "True"
+  fullName: XData.Database.Dialect.BaseSqlBuilder.PrepareTempTables
+  nameWithType: BaseSqlBuilder.PrepareTempTables
 - uid: XData.Database.Dialect.BaseSqlBuilder.Queries
   name: Queries
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_Queries
@@ -3938,6 +4001,12 @@ references:
   commentId: F:XData.Database.Dialect.SqlStringType.GroupField
   fullName: XData.Database.Dialect.SqlStringType.GroupField
   nameWithType: SqlStringType.GroupField
+- uid: XData.Database.Dialect.SqlStringType.GroupXmlField
+  name: GroupXmlField
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_GroupXmlField
+  commentId: F:XData.Database.Dialect.SqlStringType.GroupXmlField
+  fullName: XData.Database.Dialect.SqlStringType.GroupXmlField
+  nameWithType: SqlStringType.GroupXmlField
 - uid: XData.Database.Dialect.SqlStringType.Hour
   name: Hour
   href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_Hour
@@ -4184,6 +4253,12 @@ references:
   commentId: F:XData.Database.Dialect.SqlStringType.SelectHintBefore
   fullName: XData.Database.Dialect.SqlStringType.SelectHintBefore
   nameWithType: SqlStringType.SelectHintBefore
+- uid: XData.Database.Dialect.SqlStringType.SelectXmlField
+  name: SelectXmlField
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SelectXmlField
+  commentId: F:XData.Database.Dialect.SqlStringType.SelectXmlField
+  fullName: XData.Database.Dialect.SqlStringType.SelectXmlField
+  nameWithType: SqlStringType.SelectXmlField
 - uid: XData.Database.Dialect.SqlStringType.SequenceNextVal
   name: SequenceNextVal
   href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SequenceNextVal
@@ -4232,6 +4307,18 @@ references:
   commentId: F:XData.Database.Dialect.SqlStringType.TableName
   fullName: XData.Database.Dialect.SqlStringType.TableName
   nameWithType: SqlStringType.TableName
+- uid: XData.Database.Dialect.SqlStringType.TempTableCreate
+  name: TempTableCreate
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_TempTableCreate
+  commentId: F:XData.Database.Dialect.SqlStringType.TempTableCreate
+  fullName: XData.Database.Dialect.SqlStringType.TempTableCreate
+  nameWithType: SqlStringType.TempTableCreate
+- uid: XData.Database.Dialect.SqlStringType.TempTableDrop
+  name: TempTableDrop
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_TempTableDrop
+  commentId: F:XData.Database.Dialect.SqlStringType.TempTableDrop
+  fullName: XData.Database.Dialect.SqlStringType.TempTableDrop
+  nameWithType: SqlStringType.TempTableDrop
 - uid: XData.Database.Dialect.SqlStringType.TimeOfDay
   name: TimeOfDay
   href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_TimeOfDay
@@ -4358,6 +4445,12 @@ references:
   commentId: F:XData.Database.Dialect.SqlStringType.XmlAsString
   fullName: XData.Database.Dialect.SqlStringType.XmlAsString
   nameWithType: SqlStringType.XmlAsString
+- uid: XData.Database.Dialect.SqlStringType.XmlSourceName
+  name: XmlSourceName
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_XmlSourceName
+  commentId: F:XData.Database.Dialect.SqlStringType.XmlSourceName
+  fullName: XData.Database.Dialect.SqlStringType.XmlSourceName
+  nameWithType: SqlStringType.XmlSourceName
 - uid: XData.Database.Dialect.SqlStringType.Year
   name: Year
   href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_Year
@@ -6137,6 +6230,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.Field.UdtTypeName
   nameWithType: Field.UdtTypeName
+- uid: XData.DataSource.Structure.Field.XPath
+  name: XPath
+  href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_XPath
+  commentId: P:XData.DataSource.Structure.Field.XPath
+  fullName: XData.DataSource.Structure.Field.XPath
+  nameWithType: Field.XPath
+- uid: XData.DataSource.Structure.Field.XPath*
+  name: XPath
+  href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_XPath_
+  commentId: Overload:XData.DataSource.Structure.Field.XPath
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.Field.XPath
+  nameWithType: Field.XPath
 - uid: XData.DataSource.Structure.FilterCombinationState
   name: FilterCombinationState
   href: api/XData.DataSource.Structure.FilterCombinationState.html
@@ -7754,6 +7860,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.IField.SqlType
   nameWithType: IField.SqlType
+- uid: XData.DataSource.Structure.IField.XPath
+  name: XPath
+  href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_XPath
+  commentId: P:XData.DataSource.Structure.IField.XPath
+  fullName: XData.DataSource.Structure.IField.XPath
+  nameWithType: IField.XPath
+- uid: XData.DataSource.Structure.IField.XPath*
+  name: XPath
+  href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_XPath_
+  commentId: Overload:XData.DataSource.Structure.IField.XPath
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.IField.XPath
+  nameWithType: IField.XPath
 - uid: XData.DataSource.Structure.IFilter
   name: IFilter
   href: api/XData.DataSource.Structure.IFilter.html
@@ -8193,6 +8312,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.ISqlPart.Dynamic
   nameWithType: ISqlPart.Dynamic
+- uid: XData.DataSource.Structure.ISqlPart.FindTempTables
+  name: FindTempTables()
+  href: api/XData.DataSource.Structure.ISqlPart.html#XData_DataSource_Structure_ISqlPart_FindTempTables
+  commentId: M:XData.DataSource.Structure.ISqlPart.FindTempTables
+  fullName: XData.DataSource.Structure.ISqlPart.FindTempTables()
+  nameWithType: ISqlPart.FindTempTables()
+- uid: XData.DataSource.Structure.ISqlPart.FindTempTables*
+  name: FindTempTables
+  href: api/XData.DataSource.Structure.ISqlPart.html#XData_DataSource_Structure_ISqlPart_FindTempTables_
+  commentId: Overload:XData.DataSource.Structure.ISqlPart.FindTempTables
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.ISqlPart.FindTempTables
+  nameWithType: ISqlPart.FindTempTables
 - uid: XData.DataSource.Structure.ISqlPart.ObjectType
   name: ObjectType
   href: api/XData.DataSource.Structure.ISqlPart.html#XData_DataSource_Structure_ISqlPart_ObjectType
@@ -8263,19 +8395,6 @@ references:
   commentId: T:XData.DataSource.Structure.ITable
   fullName: XData.DataSource.Structure.ITable
   nameWithType: ITable
-- uid: XData.DataSource.Structure.ITable.Fields
-  name: Fields
-  href: api/XData.DataSource.Structure.ITable.html#XData_DataSource_Structure_ITable_Fields
-  commentId: P:XData.DataSource.Structure.ITable.Fields
-  fullName: XData.DataSource.Structure.ITable.Fields
-  nameWithType: ITable.Fields
-- uid: XData.DataSource.Structure.ITable.Fields*
-  name: Fields
-  href: api/XData.DataSource.Structure.ITable.html#XData_DataSource_Structure_ITable_Fields_
-  commentId: Overload:XData.DataSource.Structure.ITable.Fields
-  isSpec: "True"
-  fullName: XData.DataSource.Structure.ITable.Fields
-  nameWithType: ITable.Fields
 - uid: XData.DataSource.Structure.ITable.Hierarchies
   name: Hierarchies
   href: api/XData.DataSource.Structure.ITable.html#XData_DataSource_Structure_ITable_Hierarchies
@@ -8302,19 +8421,6 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.ITable.Hint
   nameWithType: ITable.Hint
-- uid: XData.DataSource.Structure.ITable.Name
-  name: Name
-  href: api/XData.DataSource.Structure.ITable.html#XData_DataSource_Structure_ITable_Name
-  commentId: P:XData.DataSource.Structure.ITable.Name
-  fullName: XData.DataSource.Structure.ITable.Name
-  nameWithType: ITable.Name
-- uid: XData.DataSource.Structure.ITable.Name*
-  name: Name
-  href: api/XData.DataSource.Structure.ITable.html#XData_DataSource_Structure_ITable_Name_
-  commentId: Overload:XData.DataSource.Structure.ITable.Name
-  isSpec: "True"
-  fullName: XData.DataSource.Structure.ITable.Name
-  nameWithType: ITable.Name
 - uid: XData.DataSource.Structure.ITable.ParentAlias
   name: ParentAlias
   href: api/XData.DataSource.Structure.ITable.html#XData_DataSource_Structure_ITable_ParentAlias
@@ -8328,6 +8434,63 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.ITable.ParentAlias
   nameWithType: ITable.ParentAlias
+- uid: XData.DataSource.Structure.ITableLike
+  name: ITableLike
+  href: api/XData.DataSource.Structure.ITableLike.html
+  commentId: T:XData.DataSource.Structure.ITableLike
+  fullName: XData.DataSource.Structure.ITableLike
+  nameWithType: ITableLike
+- uid: XData.DataSource.Structure.ITableLike.Fields
+  name: Fields
+  href: api/XData.DataSource.Structure.ITableLike.html#XData_DataSource_Structure_ITableLike_Fields
+  commentId: P:XData.DataSource.Structure.ITableLike.Fields
+  fullName: XData.DataSource.Structure.ITableLike.Fields
+  nameWithType: ITableLike.Fields
+- uid: XData.DataSource.Structure.ITableLike.Fields*
+  name: Fields
+  href: api/XData.DataSource.Structure.ITableLike.html#XData_DataSource_Structure_ITableLike_Fields_
+  commentId: Overload:XData.DataSource.Structure.ITableLike.Fields
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.ITableLike.Fields
+  nameWithType: ITableLike.Fields
+- uid: XData.DataSource.Structure.ITableLike.Name
+  name: Name
+  href: api/XData.DataSource.Structure.ITableLike.html#XData_DataSource_Structure_ITableLike_Name
+  commentId: P:XData.DataSource.Structure.ITableLike.Name
+  fullName: XData.DataSource.Structure.ITableLike.Name
+  nameWithType: ITableLike.Name
+- uid: XData.DataSource.Structure.ITableLike.Name*
+  name: Name
+  href: api/XData.DataSource.Structure.ITableLike.html#XData_DataSource_Structure_ITableLike_Name_
+  commentId: Overload:XData.DataSource.Structure.ITableLike.Name
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.ITableLike.Name
+  nameWithType: ITableLike.Name
+- uid: XData.DataSource.Structure.ITempTable
+  name: ITempTable
+  href: api/XData.DataSource.Structure.ITempTable.html
+  commentId: T:XData.DataSource.Structure.ITempTable
+  fullName: XData.DataSource.Structure.ITempTable
+  nameWithType: ITempTable
+- uid: XData.DataSource.Structure.IXmlSource
+  name: IXmlSource
+  href: api/XData.DataSource.Structure.IXmlSource.html
+  commentId: T:XData.DataSource.Structure.IXmlSource
+  fullName: XData.DataSource.Structure.IXmlSource
+  nameWithType: IXmlSource
+- uid: XData.DataSource.Structure.IXmlSource.RootXPath
+  name: RootXPath
+  href: api/XData.DataSource.Structure.IXmlSource.html#XData_DataSource_Structure_IXmlSource_RootXPath
+  commentId: P:XData.DataSource.Structure.IXmlSource.RootXPath
+  fullName: XData.DataSource.Structure.IXmlSource.RootXPath
+  nameWithType: IXmlSource.RootXPath
+- uid: XData.DataSource.Structure.IXmlSource.RootXPath*
+  name: RootXPath
+  href: api/XData.DataSource.Structure.IXmlSource.html#XData_DataSource_Structure_IXmlSource_RootXPath_
+  commentId: Overload:XData.DataSource.Structure.IXmlSource.RootXPath
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.IXmlSource.RootXPath
+  nameWithType: IXmlSource.RootXPath
 - uid: XData.DataSource.Structure.Order
   name: Order
   href: api/XData.DataSource.Structure.Order.html
@@ -8726,12 +8889,24 @@ references:
   commentId: F:XData.DataSourceType.Table
   fullName: XData.DataSourceType.Table
   nameWithType: DataSourceType.Table
+- uid: XData.DataSourceType.TempTable
+  name: TempTable
+  href: api/XData.DataSourceType.html#XData_DataSourceType_TempTable
+  commentId: F:XData.DataSourceType.TempTable
+  fullName: XData.DataSourceType.TempTable
+  nameWithType: DataSourceType.TempTable
 - uid: XData.DataSourceType.WithSubquery
   name: WithSubquery
   href: api/XData.DataSourceType.html#XData_DataSourceType_WithSubquery
   commentId: F:XData.DataSourceType.WithSubquery
   fullName: XData.DataSourceType.WithSubquery
   nameWithType: DataSourceType.WithSubquery
+- uid: XData.DataSourceType.XmlSource
+  name: XmlSource
+  href: api/XData.DataSourceType.html#XData_DataSourceType_XmlSource
+  commentId: F:XData.DataSourceType.XmlSource
+  fullName: XData.DataSourceType.XmlSource
+  nameWithType: DataSourceType.XmlSource
 - uid: XData.DataStructureFlag
   name: DataStructureFlag
   href: api/XData.DataStructureFlag.html
@@ -9068,6 +9243,12 @@ references:
   commentId: F:XData.DialectOptions.TableParametersSupported
   fullName: XData.DialectOptions.TableParametersSupported
   nameWithType: DialectOptions.TableParametersSupported
+- uid: XData.DialectOptions.TempTableNotSupported
+  name: TempTableNotSupported
+  href: api/XData.DialectOptions.html#XData_DialectOptions_TempTableNotSupported
+  commentId: F:XData.DialectOptions.TempTableNotSupported
+  fullName: XData.DialectOptions.TempTableNotSupported
+  nameWithType: DialectOptions.TempTableNotSupported
 - uid: XData.DialectOptions.UdtAsReturnValueSupported
   name: UdtAsReturnValueSupported
   href: api/XData.DialectOptions.html#XData_DialectOptions_UdtAsReturnValueSupported
@@ -9092,6 +9273,12 @@ references:
   commentId: F:XData.DialectOptions.WithUnionNotSupported
   fullName: XData.DialectOptions.WithUnionNotSupported
   nameWithType: DialectOptions.WithUnionNotSupported
+- uid: XData.DialectOptions.XmlSourceSupported
+  name: XmlSourceSupported
+  href: api/XData.DialectOptions.html#XData_DialectOptions_XmlSourceSupported
+  commentId: F:XData.DialectOptions.XmlSourceSupported
+  fullName: XData.DialectOptions.XmlSourceSupported
+  nameWithType: DialectOptions.XmlSourceSupported
 - uid: XData.Exceptions
   name: XData.Exceptions
   href: api/XData.Exceptions.html
@@ -11442,12 +11629,12 @@ references:
   isSpec: "True"
   fullName: XData.IDataEngine.Configuration
   nameWithType: IDataEngine.Configuration
-- uid: XData.IDataEngine.GetDataScope(System.Guid,System.String,System.Boolean)
-  name: GetDataScope(Guid, String, Boolean)
-  href: api/XData.IDataEngine.html#XData_IDataEngine_GetDataScope_System_Guid_System_String_System_Boolean_
-  commentId: M:XData.IDataEngine.GetDataScope(System.Guid,System.String,System.Boolean)
-  fullName: XData.IDataEngine.GetDataScope(System.Guid, System.String, System.Boolean)
-  nameWithType: IDataEngine.GetDataScope(Guid, String, Boolean)
+- uid: XData.IDataEngine.GetDataScope(System.Guid,System.String,XData.Interfaces.ISecuritySession,System.Boolean)
+  name: GetDataScope(Guid, String, ISecuritySession, Boolean)
+  href: api/XData.IDataEngine.html#XData_IDataEngine_GetDataScope_System_Guid_System_String_XData_Interfaces_ISecuritySession_System_Boolean_
+  commentId: M:XData.IDataEngine.GetDataScope(System.Guid,System.String,XData.Interfaces.ISecuritySession,System.Boolean)
+  fullName: XData.IDataEngine.GetDataScope(System.Guid, System.String, XData.Interfaces.ISecuritySession, System.Boolean)
+  nameWithType: IDataEngine.GetDataScope(Guid, String, ISecuritySession, Boolean)
 - uid: XData.IDataEngine.GetDataScope*
   name: GetDataScope
   href: api/XData.IDataEngine.html#XData_IDataEngine_GetDataScope_
@@ -11455,12 +11642,12 @@ references:
   isSpec: "True"
   fullName: XData.IDataEngine.GetDataScope
   nameWithType: IDataEngine.GetDataScope
-- uid: XData.IDataEngine.NewDataScope(System.String)
-  name: NewDataScope(String)
-  href: api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_System_String_
-  commentId: M:XData.IDataEngine.NewDataScope(System.String)
-  fullName: XData.IDataEngine.NewDataScope(System.String)
-  nameWithType: IDataEngine.NewDataScope(String)
+- uid: XData.IDataEngine.NewDataScope(System.String,XData.Interfaces.ISecuritySession)
+  name: NewDataScope(String, ISecuritySession)
+  href: api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_System_String_XData_Interfaces_ISecuritySession_
+  commentId: M:XData.IDataEngine.NewDataScope(System.String,XData.Interfaces.ISecuritySession)
+  fullName: XData.IDataEngine.NewDataScope(System.String, XData.Interfaces.ISecuritySession)
+  nameWithType: IDataEngine.NewDataScope(String, ISecuritySession)
 - uid: XData.IDataEngine.NewDataScope*
   name: NewDataScope
   href: api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_
@@ -11788,6 +11975,19 @@ references:
   isSpec: "True"
   fullName: XData.IDataScope.DefaultContext
   nameWithType: IDataScope.DefaultContext
+- uid: XData.IDataScope.GetContext(System.String)
+  name: GetContext(String)
+  href: api/XData.IDataScope.html#XData_IDataScope_GetContext_System_String_
+  commentId: M:XData.IDataScope.GetContext(System.String)
+  fullName: XData.IDataScope.GetContext(System.String)
+  nameWithType: IDataScope.GetContext(String)
+- uid: XData.IDataScope.GetContext*
+  name: GetContext
+  href: api/XData.IDataScope.html#XData_IDataScope_GetContext_
+  commentId: Overload:XData.IDataScope.GetContext
+  isSpec: "True"
+  fullName: XData.IDataScope.GetContext
+  nameWithType: IDataScope.GetContext
 - uid: XData.IDataScope.GetDictionaryValue*
   name: GetDictionaryValue
   href: api/XData.IDataScope.html#XData_IDataScope_GetDictionaryValue_
@@ -11871,6 +12071,19 @@ references:
   isSpec: "True"
   fullName: XData.IDataScope.Reset
   nameWithType: IDataScope.Reset
+- uid: XData.IDataScope.Security
+  name: Security
+  href: api/XData.IDataScope.html#XData_IDataScope_Security
+  commentId: P:XData.IDataScope.Security
+  fullName: XData.IDataScope.Security
+  nameWithType: IDataScope.Security
+- uid: XData.IDataScope.Security*
+  name: Security
+  href: api/XData.IDataScope.html#XData_IDataScope_Security_
+  commentId: Overload:XData.IDataScope.Security
+  isSpec: "True"
+  fullName: XData.IDataScope.Security
+  nameWithType: IDataScope.Security
 - uid: XData.InitObject`1
   name: InitObject<T>
   href: api/XData.InitObject-1.html
@@ -13914,12 +14127,12 @@ references:
   commentId: T:XData.Mapping.ColumnDefaultAttribute
   fullName: XData.Mapping.ColumnDefaultAttribute
   nameWithType: ColumnDefaultAttribute
-- uid: XData.Mapping.ColumnDefaultAttribute.#ctor(System.String,XData.DefaultType,System.String)
-  name: ColumnDefaultAttribute(String, DefaultType, String)
-  href: api/XData.Mapping.ColumnDefaultAttribute.html#XData_Mapping_ColumnDefaultAttribute__ctor_System_String_XData_DefaultType_System_String_
-  commentId: M:XData.Mapping.ColumnDefaultAttribute.#ctor(System.String,XData.DefaultType,System.String)
-  fullName: XData.Mapping.ColumnDefaultAttribute.ColumnDefaultAttribute(System.String, XData.DefaultType, System.String)
-  nameWithType: ColumnDefaultAttribute.ColumnDefaultAttribute(String, DefaultType, String)
+- uid: XData.Mapping.ColumnDefaultAttribute.#ctor(System.String,XData.DefaultType,System.Object)
+  name: ColumnDefaultAttribute(String, DefaultType, Object)
+  href: api/XData.Mapping.ColumnDefaultAttribute.html#XData_Mapping_ColumnDefaultAttribute__ctor_System_String_XData_DefaultType_System_Object_
+  commentId: M:XData.Mapping.ColumnDefaultAttribute.#ctor(System.String,XData.DefaultType,System.Object)
+  fullName: XData.Mapping.ColumnDefaultAttribute.ColumnDefaultAttribute(System.String, XData.DefaultType, System.Object)
+  nameWithType: ColumnDefaultAttribute.ColumnDefaultAttribute(String, DefaultType, Object)
 - uid: XData.Mapping.ColumnDefaultAttribute.#ctor*
   name: ColumnDefaultAttribute
   href: api/XData.Mapping.ColumnDefaultAttribute.html#XData_Mapping_ColumnDefaultAttribute__ctor_
@@ -15232,24 +15445,24 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Array
   nameWithType: IProcedureParameterAdapter.Array
-- uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(System.String)
-  name: Default(String)
-  href: api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html#XData_Mapping_Dynamic_IProcedureParameterAdapter_Default_System_String_
-  commentId: M:XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(System.String)
-  fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(System.String)
-  nameWithType: IProcedureParameterAdapter.Default(String)
+- uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(System.Object)
+  name: Default(Object)
+  href: api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html#XData_Mapping_Dynamic_IProcedureParameterAdapter_Default_System_Object_
+  commentId: M:XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(System.Object)
+  fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(System.Object)
+  nameWithType: IProcedureParameterAdapter.Default(Object)
 - uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType)
   name: Default(DefaultType)
   href: api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html#XData_Mapping_Dynamic_IProcedureParameterAdapter_Default_XData_DefaultType_
   commentId: M:XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType)
   fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType)
   nameWithType: IProcedureParameterAdapter.Default(DefaultType)
-- uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType,System.String)
-  name: Default(DefaultType, String)
-  href: api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html#XData_Mapping_Dynamic_IProcedureParameterAdapter_Default_XData_DefaultType_System_String_
-  commentId: M:XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType,System.String)
-  fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType, System.String)
-  nameWithType: IProcedureParameterAdapter.Default(DefaultType, String)
+- uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType,System.Object)
+  name: Default(DefaultType, Object)
+  href: api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html#XData_Mapping_Dynamic_IProcedureParameterAdapter_Default_XData_DefaultType_System_Object_
+  commentId: M:XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType,System.Object)
+  fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default(XData.DefaultType, System.Object)
+  nameWithType: IProcedureParameterAdapter.Default(DefaultType, Object)
 - uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default*
   name: Default
   href: api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html#XData_Mapping_Dynamic_IProcedureParameterAdapter_Default_
@@ -15686,6 +15899,22 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IQueryStructure.Subquery(Of TDobj)(System.String, XData.Mapping.Dynamic.IQueryDescription(Of TDobj), System.String, XData.DataGrouping, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryFilterAdapter(Of TDobj), XData.Mapping.Dynamic.IFilterDescription))())
   nameWithType: IQueryStructure.Subquery<TDobj>(String, IQueryDescription<TDobj>, String, DataGrouping, Expression<Func<ISubqueryFilterAdapter<TDobj>, IFilterDescription>>[])
   nameWithType.vb: IQueryStructure.Subquery(Of TDobj)(String, IQueryDescription(Of TDobj), String, DataGrouping, Expression(Of Func(Of ISubqueryFilterAdapter(Of TDobj), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IQueryStructure.TempTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: TempTable(String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_TempTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructure.TempTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: TempTable(String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IQueryStructure.TempTable(System.String, System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructure.TempTable(System.String, System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IQueryStructure.TempTable(String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  nameWithType.vb: IQueryStructure.TempTable(String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IQueryStructure.TempTable*
+  name: TempTable
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_TempTable_
+  commentId: Overload:XData.Mapping.Dynamic.IQueryStructure.TempTable
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IQueryStructure.TempTable
+  nameWithType: IQueryStructure.TempTable
 - uid: XData.Mapping.Dynamic.IQueryStructure.With*
   name: With
   href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_With_
@@ -15702,6 +15931,22 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IQueryStructure.With(Of TRoot)(System.String, XData.Mapping.Dynamic.IQueryDescription(Of TRoot), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryWithAdapter(Of TRoot), XData.Mapping.Dynamic.IQueryWithFlag))())
   nameWithType: IQueryStructure.With<TRoot>(String, IQueryDescription<TRoot>, Expression<Func<IQueryWithAdapter<TRoot>, IQueryWithFlag>>[])
   nameWithType.vb: IQueryStructure.With(Of TRoot)(String, IQueryDescription(Of TRoot), Expression(Of Func(Of IQueryWithAdapter(Of TRoot), IQueryWithFlag))())
+- uid: XData.Mapping.Dynamic.IQueryStructure.XmlSource(System.String,System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: XmlSource(String, String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_XmlSource_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructure.XmlSource(System.String,System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: XmlSource(String, String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IQueryStructure.XmlSource(System.String, System.String, System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructure.XmlSource(System.String, System.String, System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IQueryStructure.XmlSource(String, String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  nameWithType.vb: IQueryStructure.XmlSource(String, String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IQueryStructure.XmlSource*
+  name: XmlSource
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_XmlSource_
+  commentId: Overload:XData.Mapping.Dynamic.IQueryStructure.XmlSource
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IQueryStructure.XmlSource
+  nameWithType: IQueryStructure.XmlSource
 - uid: XData.Mapping.Dynamic.IQueryStructureAdapter
   name: IQueryStructureAdapter
   href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html
@@ -15765,6 +16010,15 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Field(Of TValue)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IPropertyMappingAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IQueryStructureAdapter.Field<TValue>(Expression<Func<IPropertyMappingAdapter, IStructureFlag>>[])
   nameWithType.vb: IQueryStructureAdapter.Field(Of TValue)(Expression(Of Func(Of IPropertyMappingAdapter, IStructureFlag))())
+- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Field``1(System.String,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  name: Field<TValue>(String, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
+  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_Field__1_System_String_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.Field``1(System.String,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  name.vb: Field(Of TValue)(String, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
+  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.Field<TValue>(System.String, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Field(Of TValue)(System.String, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
+  nameWithType: IQueryStructureAdapter.Field<TValue>(String, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
+  nameWithType.vb: IQueryStructureAdapter.Field(Of TValue)(String, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
 - uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Field``1(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IPropertyMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name: Field<TValue>(String, String, Expression<Func<IPropertyMappingAdapter, IStructureFlag>>[])
   href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_Field__1_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____
@@ -15799,6 +16053,22 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Ref(Of TValue, TDobj)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of TDobj, System.Object)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IPropertyMappingAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IQueryStructureAdapter.Ref<TValue, TDobj>(String, Expression<Func<TDobj, Object>>, Expression<Func<IPropertyMappingAdapter, IStructureFlag>>[])
   nameWithType.vb: IQueryStructureAdapter.Ref(Of TValue, TDobj)(String, Expression(Of Func(Of TDobj, Object)), Expression(Of Func(Of IPropertyMappingAdapter, IStructureFlag))())
+- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField*
+  name: XmlField
+  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_XmlField_
+  commentId: Overload:XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField
+  nameWithType: IQueryStructureAdapter.XmlField
+- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField``1(System.String,System.String,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  name: XmlField<TValue>(String, String, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
+  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_XmlField__1_System_String_System_String_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField``1(System.String,System.String,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  name.vb: XmlField(Of TValue)(String, String, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
+  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField<TValue>(System.String, System.String, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField(Of TValue)(System.String, System.String, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
+  nameWithType: IQueryStructureAdapter.XmlField<TValue>(String, String, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
+  nameWithType.vb: IQueryStructureAdapter.XmlField(Of TValue)(String, String, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
 - uid: XData.Mapping.Dynamic.IQueryWithAdapter`1
   name: IQueryWithAdapter<TRoot>
   href: api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html
@@ -15981,18 +16251,18 @@ references:
   commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.Boolean)
   fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType, System.Boolean)
   nameWithType: IRepositoryPropertyMappingAdapter.Default(DefaultType, Boolean)
-- uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.String)
-  name: Default(DefaultType, String)
-  href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_System_String_
-  commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.String)
-  fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType, System.String)
-  nameWithType: IRepositoryPropertyMappingAdapter.Default(DefaultType, String)
-- uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.String,System.Boolean)
-  name: Default(DefaultType, String, Boolean)
-  href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_System_String_System_Boolean_
-  commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.String,System.Boolean)
-  fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType, System.String, System.Boolean)
-  nameWithType: IRepositoryPropertyMappingAdapter.Default(DefaultType, String, Boolean)
+- uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.Object)
+  name: Default(DefaultType, Object)
+  href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_System_Object_
+  commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.Object)
+  fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType, System.Object)
+  nameWithType: IRepositoryPropertyMappingAdapter.Default(DefaultType, Object)
+- uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.Object,System.Boolean)
+  name: Default(DefaultType, Object, Boolean)
+  href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_System_Object_System_Boolean_
+  commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.Object,System.Boolean)
+  fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType, System.Object, System.Boolean)
+  nameWithType: IRepositoryPropertyMappingAdapter.Default(DefaultType, Object, Boolean)
 - uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default*
   name: Default
   href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_
@@ -18626,12 +18896,12 @@ references:
   commentId: T:XData.Mapping.PropertyDefaultAttribute
   fullName: XData.Mapping.PropertyDefaultAttribute
   nameWithType: PropertyDefaultAttribute
-- uid: XData.Mapping.PropertyDefaultAttribute.#ctor(XData.DefaultType,System.String)
-  name: PropertyDefaultAttribute(DefaultType, String)
-  href: api/XData.Mapping.PropertyDefaultAttribute.html#XData_Mapping_PropertyDefaultAttribute__ctor_XData_DefaultType_System_String_
-  commentId: M:XData.Mapping.PropertyDefaultAttribute.#ctor(XData.DefaultType,System.String)
-  fullName: XData.Mapping.PropertyDefaultAttribute.PropertyDefaultAttribute(XData.DefaultType, System.String)
-  nameWithType: PropertyDefaultAttribute.PropertyDefaultAttribute(DefaultType, String)
+- uid: XData.Mapping.PropertyDefaultAttribute.#ctor(XData.DefaultType,System.Object)
+  name: PropertyDefaultAttribute(DefaultType, Object)
+  href: api/XData.Mapping.PropertyDefaultAttribute.html#XData_Mapping_PropertyDefaultAttribute__ctor_XData_DefaultType_System_Object_
+  commentId: M:XData.Mapping.PropertyDefaultAttribute.#ctor(XData.DefaultType,System.Object)
+  fullName: XData.Mapping.PropertyDefaultAttribute.PropertyDefaultAttribute(XData.DefaultType, System.Object)
+  nameWithType: PropertyDefaultAttribute.PropertyDefaultAttribute(DefaultType, Object)
 - uid: XData.Mapping.PropertyDefaultAttribute.#ctor*
   name: PropertyDefaultAttribute
   href: api/XData.Mapping.PropertyDefaultAttribute.html#XData_Mapping_PropertyDefaultAttribute__ctor_
@@ -20412,6 +20682,19 @@ references:
   isSpec: "True"
   fullName: XData.Resources.DataMappingError
   nameWithType: Resources.DataMappingError
+- uid: XData.Resources.DataNotProvided
+  name: DataNotProvided
+  href: api/XData.Resources.html#XData_Resources_DataNotProvided
+  commentId: P:XData.Resources.DataNotProvided
+  fullName: XData.Resources.DataNotProvided
+  nameWithType: Resources.DataNotProvided
+- uid: XData.Resources.DataNotProvided*
+  name: DataNotProvided
+  href: api/XData.Resources.html#XData_Resources_DataNotProvided_
+  commentId: Overload:XData.Resources.DataNotProvided
+  isSpec: "True"
+  fullName: XData.Resources.DataNotProvided
+  nameWithType: Resources.DataNotProvided
 - uid: XData.Resources.DefaultContextNotFoundError
   name: DefaultContextNotFoundError
   href: api/XData.Resources.html#XData_Resources_DefaultContextNotFoundError
@@ -21595,6 +21878,19 @@ references:
   isSpec: "True"
   fullName: XData.Resources.TableValuedFunction
   nameWithType: Resources.TableValuedFunction
+- uid: XData.Resources.TempTableNotSupported
+  name: TempTableNotSupported
+  href: api/XData.Resources.html#XData_Resources_TempTableNotSupported
+  commentId: P:XData.Resources.TempTableNotSupported
+  fullName: XData.Resources.TempTableNotSupported
+  nameWithType: Resources.TempTableNotSupported
+- uid: XData.Resources.TempTableNotSupported*
+  name: TempTableNotSupported
+  href: api/XData.Resources.html#XData_Resources_TempTableNotSupported_
+  commentId: Overload:XData.Resources.TempTableNotSupported
+  isSpec: "True"
+  fullName: XData.Resources.TempTableNotSupported
+  nameWithType: Resources.TempTableNotSupported
 - uid: XData.Resources.TypeLoadingError
   name: TypeLoadingError
   href: api/XData.Resources.html#XData_Resources_TypeLoadingError
@@ -21959,6 +22255,19 @@ references:
   isSpec: "True"
   fullName: XData.Resources.XDataSqlExceptionWithAddInfo
   nameWithType: Resources.XDataSqlExceptionWithAddInfo
+- uid: XData.Resources.XmlSource
+  name: XmlSource
+  href: api/XData.Resources.html#XData_Resources_XmlSource
+  commentId: P:XData.Resources.XmlSource
+  fullName: XData.Resources.XmlSource
+  nameWithType: Resources.XmlSource
+- uid: XData.Resources.XmlSource*
+  name: XmlSource
+  href: api/XData.Resources.html#XData_Resources_XmlSource_
+  commentId: Overload:XData.Resources.XmlSource
+  isSpec: "True"
+  fullName: XData.Resources.XmlSource
+  nameWithType: Resources.XmlSource
 - uid: XData.ResultSetIndexer
   name: ResultSetIndexer
   href: api/XData.ResultSetIndexer.html
@@ -23117,19 +23426,6 @@ references:
   isSpec: "True"
   fullName: XData.XDataManager.GetConcurrencyErrorId
   nameWithType: XDataManager.GetConcurrencyErrorId
-- uid: XData.XDataManager.GetContext(System.String)
-  name: GetContext(String)
-  href: api/XData.XDataManager.html#XData_XDataManager_GetContext_System_String_
-  commentId: M:XData.XDataManager.GetContext(System.String)
-  fullName: XData.XDataManager.GetContext(System.String)
-  nameWithType: XDataManager.GetContext(String)
-- uid: XData.XDataManager.GetContext*
-  name: GetContext
-  href: api/XData.XDataManager.html#XData_XDataManager_GetContext_
-  commentId: Overload:XData.XDataManager.GetContext
-  isSpec: "True"
-  fullName: XData.XDataManager.GetContext
-  nameWithType: XDataManager.GetContext
 - uid: XData.XDataManager.Resources
   name: Resources
   href: api/XData.XDataManager.html#XData_XDataManager_Resources

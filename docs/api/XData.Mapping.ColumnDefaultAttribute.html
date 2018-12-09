@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ColumnDefaultAttribute
    | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -89,7 +89,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">System.Attribute</span></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a></div>
     <div class="level2"><span class="xref">ColumnDefaultAttribute</span></div>
   </div>
   <div class="inheritedMembers">
@@ -232,13 +232,13 @@ public sealed class ColumnDefaultAttribute : Attribute</code></pre>
   
   
   <a id="XData_Mapping_ColumnDefaultAttribute__ctor_" data-uid="XData.Mapping.ColumnDefaultAttribute.#ctor*"></a>
-  <h4 id="XData_Mapping_ColumnDefaultAttribute__ctor_System_String_XData_DefaultType_System_String_" data-uid="XData.Mapping.ColumnDefaultAttribute.#ctor(System.String,XData.DefaultType,System.String)">ColumnDefaultAttribute(String, DefaultType, String)</h4>
+  <h4 id="XData_Mapping_ColumnDefaultAttribute__ctor_System_String_XData_DefaultType_System_Object_" data-uid="XData.Mapping.ColumnDefaultAttribute.#ctor(System.String,XData.DefaultType,System.Object)">ColumnDefaultAttribute(String, DefaultType, Object)</h4>
   <div class="markdown level1 summary"><p>Column default value attribute</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ColumnDefaultAttribute(string propertyName, DefaultType source, string val = &quot;&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public ColumnDefaultAttribute(string propertyName, DefaultType source, object val = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,7 +263,7 @@ public sealed class ColumnDefaultAttribute : Attribute</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">val</span></td>
         <td><p>Default value</p>
 </td>
@@ -349,7 +349,7 @@ public sealed class ColumnDefaultAttribute : Attribute</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string DefaultValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public object DefaultValue { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,7 +361,7 @@ public sealed class ColumnDefaultAttribute : Attribute</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -400,7 +400,7 @@ public sealed class ColumnDefaultAttribute : Attribute</code></pre>
   
   <a id="XData_Mapping_ColumnDefaultAttribute_TypeId_" data-uid="XData.Mapping.ColumnDefaultAttribute.TypeId*"></a>
   <h4 id="XData_Mapping_ColumnDefaultAttribute_TypeId" data-uid="XData.Mapping.ColumnDefaultAttribute.TypeId">TypeId</h4>
-  <div class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <span class="xref">System.Attribute</span>.</p>
+  <div class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dynamic query external data sources | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Dynamic query external data sources | XData website ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="tips_external.md">
+<h2 id="dynamic-query-external-data-sources">Dynamic query external data sources</h2>
+
+<p>XData <a href="../tutorial/query.html">dynamic query</a> can use external data sources to operate with runtime tabular or xml data together with data stored inside database.</p>
+<div class="WARNING"><h5>Warning</h5><p>This feature is not supported by all of databases! XML data sources can be used with Ms SQL Server and PostgreSQL only. Local temporary tables is not supported by Oracle database.
+As You can see, Oracle not supported both of features. Use PL/SQL functions, packages or predefined global temporary tables instead.</p>
+</div>
+<h3 id="xml-data-source">XML data source</h3>
+<pre><code class="lang-csharp">// prepare XML document
+var doc = new XDocument(new XElement(&quot;root&quot;, 
+    new XElement(&quot;test&quot;, new XAttribute(&quot;doc_state_id&quot;, 1), new XAttribute(&quot;test&quot;, &quot;one&quot;)),
+    new XElement(&quot;test&quot;, new XAttribute(&quot;doc_state_id&quot;, 2), new XAttribute(&quot;test&quot;, &quot;two&quot;))
+    )).ToString();
+var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
+    .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;)
+    // use XmlSource definition providing XPath expression for data source
+    .XmlSource(&quot;Test&quot;, &quot;T&quot;, &quot;root/test&quot;, x =&gt; x.Link(&quot;S&quot;, &quot;doc_state_id&quot;))
+    .Select(x =&gt; new {
+        // use XmlField definition with XPath expression as a field source
+        DocStateId = x.XmlField&lt;int&gt;(&quot;T&quot;, string.Empty, &quot;@doc_state_id&quot;, DbType.Int32, z =&gt; z.Key()),
+        Code = x.Field&lt;string&gt;(&quot;S&quot;, string.Empty),
+        // note, string and number (decimal) xml fields need size defined, like an expression fields
+        Test = x.XmlField&lt;string&gt;(&quot;T&quot;, string.Empty, &quot;@test&quot;, DbType.String, z =&gt; z.Size(20))
+    // set XML string to variable with the same name as XmlSource
+    }).AsQuery(dataScope.Layer, &quot;Test&quot;.SetVar(doc));
+</code></pre><h3 id="temporary-table">Temporary table</h3>
+<pre><code class="lang-csharp">// prepare tabular data
+var table = new DataTable();
+table.Columns.AddRange(new [] { new DataColumn(&quot;doc_state_id&quot;, typeof(long)),
+    new DataColumn(&quot;test&quot;, typeof(string)) });
+table.Rows.Add(1, &quot;one&quot;);
+table.Rows.Add(2, &quot;two&quot;);
+table.AcceptChanges();
+
+var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
+    .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;)
+    // use temporary table definition
+    .TempTable(&quot;Test&quot;, &quot;T&quot;, x =&gt; x.Link(&quot;S&quot;, &quot;doc_state_id&quot;))
+    .Select(x =&gt; new {
+        // use Field method overload with dbType parameter to define temporary table field
+        DocStateId = x.Field&lt;long&gt;(&quot;T&quot;, string.Empty, DbType.Int64, z =&gt; z.Key()),
+        Code = x.Field&lt;string&gt;(&quot;S&quot;, string.Empty),
+        // note, string and number (decimal) xml fields need size defined, like an expression fields
+        Test = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty, DbType.String, z =&gt; z.Size(20))
+    // set DataTable to variable with the same name as TempTable
+    }).AsQuery(dataScope.Layer, &quot;Test&quot;.SetVar(table));
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

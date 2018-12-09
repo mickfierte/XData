@@ -8,7 +8,7 @@
     <title>Call custom SQL code | XData website </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Call custom SQL code | XData website ">
-    <meta name="generator" content="docfx 2.37.2.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,7 +81,7 @@
 
 <p>XData can help the programmer to obtain data and process it with many ways. But also we hold in mind XData is just a common tool with limited quantity of features, and some very specific (but handy and powerfull) SQL dialect constructions may be out of XData possibilities. </p>
 <p>To call dialect specific SQL statements used raw <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html">database adapter interface</a> with methods: <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_XData_Database_Adapter_Query_System_Data_CommandBehavior_">FillTable</a>, <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_XData_Database_Adapter_Query_">ExecuteScalar</a> and <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_XData_Database_Adapter_Query_">ExecuteNonQuery</a>. </p>
-<p>To access <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html">database adapter interface</a> used <a href="../tutorial/glossary.html#context">context</a> descriptor through <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_GetContext_System_String_">XDataManager.GetContext</a> method:</p>
+<p>To access <a class="xref" href="../api/XData.Database.Adapter.IDatabaseAdapter.html">database adapter interface</a> used <a href="../tutorial/glossary.html#context">context</a> descriptor through <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetContext_System_String_">IDataScope.GetContext</a> method:</p>
 <pre><code class="lang-csharp">const string getCoordComResourceStateChangesForCaseCommand = @&quot;
 select x.ResourceCode, x.ReportedDateTime, x.UserName, x.MissionStatusCode, 
 x.ResourceStatusCode
@@ -133,7 +133,7 @@ where x.UserName is not null&quot;;
 
 using (var dataScope = DataEngine.Value.NewDataScope(CoordComDb))
 {
-    return XDataManager.GetContext(CoordComDb).DatabaseAdapter.FillTable(dataScope.Layer,
+    return dataScope.GetContext(CoordComDb).DatabaseAdapter.FillTable(dataScope.Layer,
         new Query(getCoordComResourceStateChangesForCaseCommand, CommandType.Text,
             new QueryParam(&quot;@CaseFolderId&quot;, caseIdentity.CaseFolderId, DbType.Int32),
             new QueryParam(&quot;@CallCenterId&quot;, caseIdentity.CallCenterId, DbType.Int32),
