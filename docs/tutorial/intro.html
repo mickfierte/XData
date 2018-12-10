@@ -97,7 +97,7 @@
 <li>Full IQuariable and LINQ support.</li>
 <li>XData alowed to use SQL expressions as field data source.</li>
 <li>Calculated properties can be evaluated on .Net side.</li>
-<li><a href="">Active record</a> model of data access is supported.</li>
+<li><a href="https://en.wikipedia.org/wiki/Active_record_pattern">Active record</a> model of data access is supported.</li>
 <li>Fully declarative using of optimistic locking of data is provided.</li>
 <li>Pessimistic locking is allowed when it supported by RDBMS functionality.</li>
 <li>Your application over XData can be deployed in three-tier mode with data aware logic can be took out to the application server layer (only in full .Net Framework 4.0 or above for now).</li>
@@ -108,7 +108,7 @@
 <li>Usability<ul>
 <li>Human readable mapping structure with unambiguous correlation with resulting SQL query. Programmer can get query text to check query execution plan for optimization.</li>
 <li>Feature rich security subsystem over business object level can be simply implemented using separate NuGet package.</li>
-<li>Declarative realization of <a href="">Unit of Work</a> over business object level available when using separate NuGet package.</li>
+<li>Declarative realization of <a href="https://martinfowler.com/eaaCatalog/unitOfWork.html">Unit of Work</a> over business object level available when using separate NuGet package.</li>
 <li>Lazy loading of large objects (XML, BLOB...) is available from the box.</li>
 <li>Two modes of mapping (using attributes and LINQ style expressions) or their mixing can be used.</li>
 <li>Dynamic inplace read only queries it&#39;s a powerful tool to access data in complicated cases.</li>
@@ -128,9 +128,9 @@
 </ul>
 <h3 id="is-any-restrictions-of-using-xdata-exists">Is any restrictions of using XData exists?</h3>
 <ul>
-<li>XData not supported <a href="">Code First</a> approach: Programmer or database administrator can write SQL script. This code is prodused by human, real (not artifical) intellect of professional... But still XData has ability to run this script over database using Custom SQL executing festure.</li>
+<li>XData not supported <a href="https://social.technet.microsoft.com/wiki/contents/articles/35028.code-first-migrations-in-entity-framework.aspx">Code First</a> approach: Programmer or database administrator can write SQL script. This code is prodused by human, real (not artifical) intellect of professional... But still XData has ability to run this script over database using Custom SQL executing festure.</li>
 <li>XData not supported DDL: By the same logic as above, and with the same receipt of using.</li>
-<li>XData not supported <a href="">Database First</a> approach: Now I&#39;ve no idea to provide the same independence level as announced above using this approach (may be in the future...).</li>
+<li>XData not supported <a href="https://social.technet.microsoft.com/wiki/contents/articles/48889.getting-started-with-entity-framework-core-database-first-development.aspx">Database First</a> approach: Now I&#39;ve no idea to provide the same independence level as announced above using this approach (may be in the future...).</li>
 <li>Powerfull, but complicated: Try it, simple things still are simple, more complecated is not as scary as they appear at first sight. But the power is never be useless.</li>
 <li>RDBMS SQL specific stataments: So many RDBMS specific statements. So many features realized in one only database system, or restricted by version... May be some of them will be implemented, may be not...</li>
 <li>(planned to support in next versions) SQL blocks: One of planned features is supporting unnamed SQL code blocks. But not supported now.</li>
