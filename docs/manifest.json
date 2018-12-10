@@ -3538,7 +3538,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "wVDVg1eEze1CNohsvwfTkQ=="
+          "hash": "OSbe+qFSVatkfAFvvlJrpw=="
         }
       },
       "is_incremental": false,
@@ -3587,6 +3587,18 @@
         ".html": {
           "relative_path": "tutorial/glossary.html",
           "hash": "SOQxsJIOuj+DvVm13wqSkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/intro.html",
+          "hash": "Q/xZNt7a2l1/JDntN50xvw=="
         }
       },
       "is_incremental": false,
@@ -3665,6 +3677,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorial/mapping/dynamic/dynamic.md",
       "output": {
@@ -4169,6 +4184,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorial/mapping/mapping.md",
       "output": {
@@ -4673,6 +4691,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorial/mapping/static/static.md",
       "output": {
@@ -4810,7 +4831,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/toc.html",
-          "hash": "+IDSOTxpfoIW8luWfDI5dw=="
+          "hash": "FyNHywghcPgAhDfXRctu8Q=="
         }
       },
       "is_incremental": false,
@@ -4856,26 +4877,27 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
-        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

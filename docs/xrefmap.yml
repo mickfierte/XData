@@ -16,6 +16,9 @@ references:
 - uid: index.md
   name: XData
   href: index.html
+- uid: intro.md
+  name: Introduction
+  href: tutorial/intro.html
 - uid: linq.md
   name: Linq support
   href: tutorial/linq.html
