@@ -117,7 +117,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_IRepository_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IRepository : IDataQuery, IOrderedQueryable, IQueryable, IEnumerable, IDisposable</code></pre>
@@ -382,6 +382,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void DetachChild&lt;TChild&gt;(string alias = null)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -426,6 +427,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool FindParent&lt;TParent&gt;(out IRepository&lt;TParent&gt; parent, string alias = null)
+
     where TParent : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -494,6 +496,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;TChild&gt; GetChild&lt;TChild&gt;(string alias = null, ISecuritySession security = null, params Variable[] variables)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

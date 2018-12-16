@@ -87,10 +87,11 @@
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.Dynamic.html">XData.Mapping.Dynamic</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IRepositoryStructure&lt;T&gt;
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -389,6 +390,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; InnerView&lt;TDobj&gt;(string alias, params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
+
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -463,6 +465,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; InnerView&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
+
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -594,7 +597,7 @@
   
   
   <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter``1(System.String,System.Int32,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])">Parameter&lt;TResult&gt;(String, Int32, String, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter``1(System.String,System.Int32,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])">Parameter&lt;TResult&gt;(String, Int32, String, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic repository procedure parameter mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -631,7 +634,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td><span class="xref">DbType</span></td>
         <td><span class="parametername">type</span></td>
         <td><p>Parameter SQL data type</p>
 </td>
@@ -822,6 +825,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Return&lt;TResult&gt;(string alias, string name, int order, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; mapper = null)
+
     where TResult : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -977,6 +981,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Subquery&lt;TDobj&gt;(string alias, Expression&lt;Func&lt;TDobj, object&gt;&gt; property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
+
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1063,6 +1068,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Subquery&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
+
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1156,6 +1162,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; With&lt;TRoot&gt;(string alias, IQueryDescription&lt;TRoot&gt; sub, params Expression&lt;Func&lt;IQueryWithAdapter&lt;TRoot&gt;, IQueryWithFlag&gt;&gt;[] attributes)
+
     where TRoot : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

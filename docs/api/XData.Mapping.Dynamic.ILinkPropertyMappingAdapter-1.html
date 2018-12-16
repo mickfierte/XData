@@ -120,7 +120,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.Dynamic.html">XData.Mapping.Dynamic</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface ILinkPropertyMappingAdapter&lt;T&gt; : IRepositoryPropertyMappingAdapter, IPropertyMappingAdapter where T : class, IDataObject, new()</code></pre>
@@ -180,6 +180,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IStructureFlag LinkProperty&lt;TSource&gt;(Expression&lt;Func&lt;TSource, object&gt;&gt; source)
+
     where TSource : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -242,6 +243,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IStructureFlag LinkProperty&lt;TSource&gt;(Expression&lt;Func&lt;TSource, object&gt;&gt; source, Expression&lt;Func&lt;T, object&gt;&gt; property)
+
     where TSource : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

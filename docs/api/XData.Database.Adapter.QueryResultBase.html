@@ -123,7 +123,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Database.Adapter.html">XData.Database.Adapter</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Database_Adapter_QueryResultBase_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class QueryResultBase : IEnumerable&lt;QueryParam&gt;, IEnumerable</code></pre>
@@ -352,7 +352,42 @@
   
   
   <a id="XData_Database_Adapter_QueryResultBase_Init_" data-uid="XData.Database.Adapter.QueryResultBase.Init*"></a>
-  <h4 id="XData_Database_Adapter_QueryResultBase_Init_System_Int32_System_Collections_Generic_IEnumerable_System_Data_IDataParameter__" data-uid="XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Collections.Generic.IEnumerable{System.Data.IDataParameter})">Init(Int32, IEnumerable&lt;IDataParameter&gt;)</h4>
+  <h4 id="XData_Database_Adapter_QueryResultBase_Init_System_Int32_IDataParameterCollection_" data-uid="XData.Database.Adapter.QueryResultBase.Init(System.Int32,IDataParameterCollection)">Init(Int32, IDataParameterCollection)</h4>
+  <div class="markdown level1 summary"><p>Query result initialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Init(int affectedRows, IDataParameterCollection queryParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">affectedRows</span></td>
+        <td><p>Affected rows count</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDataParameterCollection</span></td>
+        <td><span class="parametername">queryParams</span></td>
+        <td><p>Output parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_Database_Adapter_QueryResultBase_Init_" data-uid="XData.Database.Adapter.QueryResultBase.Init*"></a>
+  <h4 id="XData_Database_Adapter_QueryResultBase_Init_System_Int32_System_Collections_Generic_IEnumerable_IDataParameter__" data-uid="XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Collections.Generic.IEnumerable{IDataParameter})">Init(Int32, IEnumerable&lt;IDataParameter&gt;)</h4>
   <div class="markdown level1 summary"><p>Query result initialization</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -377,7 +412,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idataparameter">IDataParameter</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">IDataParameter</span>&gt;</td>
         <td><span class="parametername">queryParams</span></td>
         <td><p>Output parameters</p>
 </td>
@@ -421,43 +456,8 @@
   </table>
   
   
-  <a id="XData_Database_Adapter_QueryResultBase_Init_" data-uid="XData.Database.Adapter.QueryResultBase.Init*"></a>
-  <h4 id="XData_Database_Adapter_QueryResultBase_Init_System_Int32_System_Data_IDataParameterCollection_" data-uid="XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Data.IDataParameterCollection)">Init(Int32, IDataParameterCollection)</h4>
-  <div class="markdown level1 summary"><p>Query result initialization</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void Init(int affectedRows, IDataParameterCollection queryParams)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">affectedRows</span></td>
-        <td><p>Affected rows count</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idataparametercollection">IDataParameterCollection</a></td>
-        <td><span class="parametername">queryParams</span></td>
-        <td><p>Output parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="XData_Database_Adapter_QueryResultBase_ParamInit_" data-uid="XData.Database.Adapter.QueryResultBase.ParamInit*"></a>
-  <h4 id="XData_Database_Adapter_QueryResultBase_ParamInit_System_Data_IDataParameter_" data-uid="XData.Database.Adapter.QueryResultBase.ParamInit(System.Data.IDataParameter)">ParamInit(IDataParameter)</h4>
+  <h4 id="XData_Database_Adapter_QueryResultBase_ParamInit_IDataParameter_" data-uid="XData.Database.Adapter.QueryResultBase.ParamInit(IDataParameter)">ParamInit(IDataParameter)</h4>
   <div class="markdown level1 summary"><p>Output parameter initialization</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -476,7 +476,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.idataparameter">IDataParameter</a></td>
+        <td><span class="xref">IDataParameter</span></td>
         <td><span class="parametername">parameter</span></td>
         <td><p>Output parameter</p>
 </td>

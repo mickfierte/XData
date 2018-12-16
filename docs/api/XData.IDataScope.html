@@ -93,7 +93,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_IDataScope_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IDataScope : IDisposable</code></pre>
@@ -183,13 +183,13 @@
   
   
   <a id="XData_IDataScope_BeginTransaction_" data-uid="XData.IDataScope.BeginTransaction*"></a>
-  <h4 id="XData_IDataScope_BeginTransaction_System_String_System_Boolean_System_Data_IsolationLevel_" data-uid="XData.IDataScope.BeginTransaction(System.String,System.Boolean,System.Data.IsolationLevel)">BeginTransaction(String, Boolean, IsolationLevel)</h4>
+  <h4 id="XData_IDataScope_BeginTransaction_System_String_System_Boolean_IsolationLevel_" data-uid="XData.IDataScope.BeginTransaction(System.String,System.Boolean,IsolationLevel)">BeginTransaction(String, Boolean, IsolationLevel)</h4>
   <div class="markdown level1 summary"><p>Begins single context transaction</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ITransaction BeginTransaction(string context = null, bool read = false, IsolationLevel isolation = IsolationLevel.ReadCommitted)</code></pre>
+    <pre><code class="lang-csharp hljs">ITransaction BeginTransaction(string context = null, bool read = false, IsolationLevel isolation = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,7 +214,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.isolationlevel">IsolationLevel</a></td>
+        <td><span class="xref">IsolationLevel</span></td>
         <td><span class="parametername">isolation</span></td>
         <td><p>Transaction isolation level</p>
 </td>
@@ -263,10 +263,9 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_IDataScope_BeginTransaction_System_String_System_Boolean_System_Data_IsolationLevel__seealso">See Also</h5>
+  <h5 id="XData_IDataScope_BeginTransaction_System_String_System_Boolean_IsolationLevel__seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Database.ITransaction.html">ITransaction</a></div>
-      <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.isolationlevel">IsolationLevel</a></div>
   </div>
   
   
@@ -344,6 +343,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">T GetDictionaryValue&lt;T&gt;(Expression&lt;Func&lt;T, bool&gt;&gt; findExpression, string alias = null, string context = null, ISecuritySession security = null, params Variable[] variables)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -455,6 +455,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IDataQuery&lt;T&gt; GetQuery&lt;T&gt;(TextReader reader, string alias = null, ISecuritySession security = null)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -560,6 +561,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(TextReader reader)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -653,6 +655,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(string alias = null, string context = null, ISecuritySession security = null, params Variable[] variables)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

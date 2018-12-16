@@ -909,12 +909,12 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter)
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.AddSavePoint(System.Guid,System.Data.IDbTransaction,System.String)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.AddSavePoint(System.Guid,IDbTransaction,System.String)
   name: AddSavePoint(Guid, IDbTransaction, String)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_AddSavePoint_System_Guid_System_Data_IDbTransaction_System_String_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.AddSavePoint(System.Guid,System.Data.IDbTransaction,System.String)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.AddSavePoint(System.Guid, System.Data.IDbTransaction, System.String)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).AddSavePoint(System.Guid, System.Data.IDbTransaction, System.String)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_AddSavePoint_System_Guid_IDbTransaction_System_String_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.AddSavePoint(System.Guid,IDbTransaction,System.String)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.AddSavePoint(System.Guid, IDbTransaction, System.String)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).AddSavePoint(System.Guid, IDbTransaction, System.String)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.AddSavePoint(Guid, IDbTransaction, String)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).AddSavePoint(Guid, IDbTransaction, String)
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.AddSavePoint*
@@ -926,12 +926,12 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).AddSavePoint
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.AddSavePoint
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).AddSavePoint
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.BeginTransaction(System.Guid,System.Boolean,System.Data.IsolationLevel)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.BeginTransaction(System.Guid,System.Boolean,IsolationLevel)
   name: BeginTransaction(Guid, Boolean, IsolationLevel)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_BeginTransaction_System_Guid_System_Boolean_System_Data_IsolationLevel_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.BeginTransaction(System.Guid,System.Boolean,System.Data.IsolationLevel)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.BeginTransaction(System.Guid, System.Boolean, System.Data.IsolationLevel)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).BeginTransaction(System.Guid, System.Boolean, System.Data.IsolationLevel)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_BeginTransaction_System_Guid_System_Boolean_IsolationLevel_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.BeginTransaction(System.Guid,System.Boolean,IsolationLevel)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.BeginTransaction(System.Guid, System.Boolean, IsolationLevel)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).BeginTransaction(System.Guid, System.Boolean, IsolationLevel)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.BeginTransaction(Guid, Boolean, IsolationLevel)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).BeginTransaction(Guid, Boolean, IsolationLevel)
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.BeginTransaction*
@@ -1182,13 +1182,13 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).ExecuteScalar
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.ExecuteScalar
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).ExecuteScalar
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,System.Enum,System.Data.CommandBehavior,System.Object[])
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,System.Enum,CommandBehavior,System.Object[])
   name: FillTable(Guid, Enum, CommandBehavior, Object[])
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_FillTable_System_Guid_System_Enum_System_Data_CommandBehavior_System_Object___
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,System.Enum,System.Data.CommandBehavior,System.Object[])
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_FillTable_System_Guid_System_Enum_CommandBehavior_System_Object___
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,System.Enum,CommandBehavior,System.Object[])
   name.vb: FillTable(Guid, Enum, CommandBehavior, Object())
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.FillTable(System.Guid, System.Enum, System.Data.CommandBehavior, System.Object[])
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).FillTable(System.Guid, System.Enum, System.Data.CommandBehavior, System.Object())
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.FillTable(System.Guid, System.Enum, CommandBehavior, System.Object[])
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).FillTable(System.Guid, System.Enum, CommandBehavior, System.Object())
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.FillTable(Guid, Enum, CommandBehavior, Object[])
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).FillTable(Guid, Enum, CommandBehavior, Object())
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,System.Enum,System.Object[])
@@ -1200,12 +1200,12 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).FillTable(System.Guid, System.Enum, System.Object())
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.FillTable(Guid, Enum, Object[])
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).FillTable(Guid, Enum, Object())
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,XData.Database.Adapter.Query,System.Data.CommandBehavior)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,XData.Database.Adapter.Query,CommandBehavior)
   name: FillTable(Guid, Query, CommandBehavior)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_FillTable_System_Guid_XData_Database_Adapter_Query_System_Data_CommandBehavior_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,XData.Database.Adapter.Query,System.Data.CommandBehavior)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.FillTable(System.Guid, XData.Database.Adapter.Query, System.Data.CommandBehavior)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).FillTable(System.Guid, XData.Database.Adapter.Query, System.Data.CommandBehavior)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_FillTable_System_Guid_XData_Database_Adapter_Query_CommandBehavior_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable(System.Guid,XData.Database.Adapter.Query,CommandBehavior)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.FillTable(System.Guid, XData.Database.Adapter.Query, CommandBehavior)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).FillTable(System.Guid, XData.Database.Adapter.Query, CommandBehavior)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.FillTable(Guid, Query, CommandBehavior)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).FillTable(Guid, Query, CommandBehavior)
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.FillTable*
@@ -1234,12 +1234,12 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetConnection
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetConnection
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetConnection
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetNativeType(System.Data.DbType)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetNativeType(DbType)
   name: GetNativeType(DbType)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetNativeType_System_Data_DbType_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.GetNativeType(System.Data.DbType)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetNativeType(System.Data.DbType)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetNativeType(System.Data.DbType)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetNativeType_DbType_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.GetNativeType(DbType)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetNativeType(DbType)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetNativeType(DbType)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetNativeType(DbType)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetNativeType(DbType)
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetNativeType*
@@ -1277,13 +1277,13 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetParameterValue(Of T)(XData.Database.Adapter.QueryParam)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetParameterValue<T>(QueryParam)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetParameterValue(Of T)(QueryParam)
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall(System.Data.IDbCommand@,XData.Database.Adapter.StoredProcedure,System.String,System.Boolean)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall(IDbCommand@,XData.Database.Adapter.StoredProcedure,System.String,System.Boolean)
   name: GetProcedureCall(ref IDbCommand, StoredProcedure, String, Boolean)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetProcedureCall_System_Data_IDbCommand__XData_Database_Adapter_StoredProcedure_System_String_System_Boolean_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall(System.Data.IDbCommand@,XData.Database.Adapter.StoredProcedure,System.String,System.Boolean)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetProcedureCall_IDbCommand__XData_Database_Adapter_StoredProcedure_System_String_System_Boolean_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall(IDbCommand@,XData.Database.Adapter.StoredProcedure,System.String,System.Boolean)
   name.vb: GetProcedureCall(ByRef IDbCommand, StoredProcedure, String, Boolean)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetProcedureCall(ref System.Data.IDbCommand, XData.Database.Adapter.StoredProcedure, System.String, System.Boolean)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall(ByRef System.Data.IDbCommand, XData.Database.Adapter.StoredProcedure, System.String, System.Boolean)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetProcedureCall(ref IDbCommand, XData.Database.Adapter.StoredProcedure, System.String, System.Boolean)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall(ByRef IDbCommand, XData.Database.Adapter.StoredProcedure, System.String, System.Boolean)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetProcedureCall(ref IDbCommand, StoredProcedure, String, Boolean)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall(ByRef IDbCommand, StoredProcedure, String, Boolean)
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetProcedureCall*
@@ -1388,12 +1388,12 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).Init
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.Init
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).Init
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.InitConnection(System.Data.Common.DbConnection)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.InitConnection(DbConnection)
   name: InitConnection(DbConnection)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_InitConnection_System_Data_Common_DbConnection_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.InitConnection(System.Data.Common.DbConnection)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.InitConnection(System.Data.Common.DbConnection)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).InitConnection(System.Data.Common.DbConnection)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_InitConnection_DbConnection_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.InitConnection(DbConnection)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.InitConnection(DbConnection)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).InitConnection(DbConnection)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.InitConnection(DbConnection)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).InitConnection(DbConnection)
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.InitConnection*
@@ -1561,12 +1561,12 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).Rollback
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.Rollback
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).Rollback
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.RollbackToSavePoint(System.Guid,System.Data.IDbTransaction,System.String)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.RollbackToSavePoint(System.Guid,IDbTransaction,System.String)
   name: RollbackToSavePoint(Guid, IDbTransaction, String)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_RollbackToSavePoint_System_Guid_System_Data_IDbTransaction_System_String_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.RollbackToSavePoint(System.Guid,System.Data.IDbTransaction,System.String)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.RollbackToSavePoint(System.Guid, System.Data.IDbTransaction, System.String)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).RollbackToSavePoint(System.Guid, System.Data.IDbTransaction, System.String)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_RollbackToSavePoint_System_Guid_IDbTransaction_System_String_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.RollbackToSavePoint(System.Guid,IDbTransaction,System.String)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.RollbackToSavePoint(System.Guid, IDbTransaction, System.String)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).RollbackToSavePoint(System.Guid, IDbTransaction, System.String)
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.RollbackToSavePoint(Guid, IDbTransaction, String)
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).RollbackToSavePoint(Guid, IDbTransaction, String)
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.RollbackToSavePoint*
@@ -1673,33 +1673,33 @@ references:
   commentId: T:XData.Database.Adapter.CallResult
   fullName: XData.Database.Adapter.CallResult
   nameWithType: CallResult
-- uid: XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Collections.Generic.IEnumerable{System.Data.IDataParameter},System.Collections.Generic.IList{System.Data.DataTable})
-  name: CallResult(StoredProcedure, IEnumerable<IDataParameter>, IList<DataTable>)
-  href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult__ctor_XData_Database_Adapter_StoredProcedure_System_Collections_Generic_IEnumerable_System_Data_IDataParameter__System_Collections_Generic_IList_System_Data_DataTable__
-  commentId: M:XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Collections.Generic.IEnumerable{System.Data.IDataParameter},System.Collections.Generic.IList{System.Data.DataTable})
-  name.vb: CallResult(StoredProcedure, IEnumerable(Of IDataParameter), IList(Of DataTable))
-  fullName: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Collections.Generic.IEnumerable<System.Data.IDataParameter>, System.Collections.Generic.IList<System.Data.DataTable>)
-  fullName.vb: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Collections.Generic.IEnumerable(Of System.Data.IDataParameter), System.Collections.Generic.IList(Of System.Data.DataTable))
-  nameWithType: CallResult.CallResult(StoredProcedure, IEnumerable<IDataParameter>, IList<DataTable>)
-  nameWithType.vb: CallResult.CallResult(StoredProcedure, IEnumerable(Of IDataParameter), IList(Of DataTable))
-- uid: XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Collections.Generic.IEnumerable{XData.Database.Adapter.QueryParam},System.Collections.Generic.IList{System.Data.DataTable})
-  name: CallResult(StoredProcedure, IEnumerable<QueryParam>, IList<DataTable>)
-  href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult__ctor_XData_Database_Adapter_StoredProcedure_System_Collections_Generic_IEnumerable_XData_Database_Adapter_QueryParam__System_Collections_Generic_IList_System_Data_DataTable__
-  commentId: M:XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Collections.Generic.IEnumerable{XData.Database.Adapter.QueryParam},System.Collections.Generic.IList{System.Data.DataTable})
-  name.vb: CallResult(StoredProcedure, IEnumerable(Of QueryParam), IList(Of DataTable))
-  fullName: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Collections.Generic.IEnumerable<XData.Database.Adapter.QueryParam>, System.Collections.Generic.IList<System.Data.DataTable>)
-  fullName.vb: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Collections.Generic.IEnumerable(Of XData.Database.Adapter.QueryParam), System.Collections.Generic.IList(Of System.Data.DataTable))
-  nameWithType: CallResult.CallResult(StoredProcedure, IEnumerable<QueryParam>, IList<DataTable>)
-  nameWithType.vb: CallResult.CallResult(StoredProcedure, IEnumerable(Of QueryParam), IList(Of DataTable))
-- uid: XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Data.IDataParameterCollection,System.Collections.Generic.IList{System.Data.DataTable})
+- uid: XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,IDataParameterCollection,System.Collections.Generic.IList{DataTable})
   name: CallResult(StoredProcedure, IDataParameterCollection, IList<DataTable>)
-  href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult__ctor_XData_Database_Adapter_StoredProcedure_System_Data_IDataParameterCollection_System_Collections_Generic_IList_System_Data_DataTable__
-  commentId: M:XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Data.IDataParameterCollection,System.Collections.Generic.IList{System.Data.DataTable})
+  href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult__ctor_XData_Database_Adapter_StoredProcedure_IDataParameterCollection_System_Collections_Generic_IList_DataTable__
+  commentId: M:XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,IDataParameterCollection,System.Collections.Generic.IList{DataTable})
   name.vb: CallResult(StoredProcedure, IDataParameterCollection, IList(Of DataTable))
-  fullName: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Data.IDataParameterCollection, System.Collections.Generic.IList<System.Data.DataTable>)
-  fullName.vb: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Data.IDataParameterCollection, System.Collections.Generic.IList(Of System.Data.DataTable))
+  fullName: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, IDataParameterCollection, System.Collections.Generic.IList<DataTable>)
+  fullName.vb: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, IDataParameterCollection, System.Collections.Generic.IList(Of DataTable))
   nameWithType: CallResult.CallResult(StoredProcedure, IDataParameterCollection, IList<DataTable>)
   nameWithType.vb: CallResult.CallResult(StoredProcedure, IDataParameterCollection, IList(Of DataTable))
+- uid: XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Collections.Generic.IEnumerable{IDataParameter},System.Collections.Generic.IList{DataTable})
+  name: CallResult(StoredProcedure, IEnumerable<IDataParameter>, IList<DataTable>)
+  href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult__ctor_XData_Database_Adapter_StoredProcedure_System_Collections_Generic_IEnumerable_IDataParameter__System_Collections_Generic_IList_DataTable__
+  commentId: M:XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Collections.Generic.IEnumerable{IDataParameter},System.Collections.Generic.IList{DataTable})
+  name.vb: CallResult(StoredProcedure, IEnumerable(Of IDataParameter), IList(Of DataTable))
+  fullName: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Collections.Generic.IEnumerable<IDataParameter>, System.Collections.Generic.IList<DataTable>)
+  fullName.vb: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Collections.Generic.IEnumerable(Of IDataParameter), System.Collections.Generic.IList(Of DataTable))
+  nameWithType: CallResult.CallResult(StoredProcedure, IEnumerable<IDataParameter>, IList<DataTable>)
+  nameWithType.vb: CallResult.CallResult(StoredProcedure, IEnumerable(Of IDataParameter), IList(Of DataTable))
+- uid: XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Collections.Generic.IEnumerable{XData.Database.Adapter.QueryParam},System.Collections.Generic.IList{DataTable})
+  name: CallResult(StoredProcedure, IEnumerable<QueryParam>, IList<DataTable>)
+  href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult__ctor_XData_Database_Adapter_StoredProcedure_System_Collections_Generic_IEnumerable_XData_Database_Adapter_QueryParam__System_Collections_Generic_IList_DataTable__
+  commentId: M:XData.Database.Adapter.CallResult.#ctor(XData.Database.Adapter.StoredProcedure,System.Collections.Generic.IEnumerable{XData.Database.Adapter.QueryParam},System.Collections.Generic.IList{DataTable})
+  name.vb: CallResult(StoredProcedure, IEnumerable(Of QueryParam), IList(Of DataTable))
+  fullName: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Collections.Generic.IEnumerable<XData.Database.Adapter.QueryParam>, System.Collections.Generic.IList<DataTable>)
+  fullName.vb: XData.Database.Adapter.CallResult.CallResult(XData.Database.Adapter.StoredProcedure, System.Collections.Generic.IEnumerable(Of XData.Database.Adapter.QueryParam), System.Collections.Generic.IList(Of DataTable))
+  nameWithType: CallResult.CallResult(StoredProcedure, IEnumerable<QueryParam>, IList<DataTable>)
+  nameWithType.vb: CallResult.CallResult(StoredProcedure, IEnumerable(Of QueryParam), IList(Of DataTable))
 - uid: XData.Database.Adapter.CallResult.#ctor*
   name: CallResult
   href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult__ctor_
@@ -1707,11 +1707,11 @@ references:
   isSpec: "True"
   fullName: XData.Database.Adapter.CallResult.CallResult
   nameWithType: CallResult.CallResult
-- uid: XData.Database.Adapter.CallResult.ParamInit(System.Data.IDataParameter)
+- uid: XData.Database.Adapter.CallResult.ParamInit(IDataParameter)
   name: ParamInit(IDataParameter)
-  href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult_ParamInit_System_Data_IDataParameter_
-  commentId: M:XData.Database.Adapter.CallResult.ParamInit(System.Data.IDataParameter)
-  fullName: XData.Database.Adapter.CallResult.ParamInit(System.Data.IDataParameter)
+  href: api/XData.Database.Adapter.CallResult.html#XData_Database_Adapter_CallResult_ParamInit_IDataParameter_
+  commentId: M:XData.Database.Adapter.CallResult.ParamInit(IDataParameter)
+  fullName: XData.Database.Adapter.CallResult.ParamInit(IDataParameter)
   nameWithType: CallResult.ParamInit(IDataParameter)
 - uid: XData.Database.Adapter.CallResult.ParamInit*
   name: ParamInit
@@ -1771,11 +1771,11 @@ references:
   commentId: T:XData.Database.Adapter.IDatabaseAdapter
   fullName: XData.Database.Adapter.IDatabaseAdapter
   nameWithType: IDatabaseAdapter
-- uid: XData.Database.Adapter.IDatabaseAdapter.BeginTransaction(System.Guid,System.Boolean,System.Data.IsolationLevel)
+- uid: XData.Database.Adapter.IDatabaseAdapter.BeginTransaction(System.Guid,System.Boolean,IsolationLevel)
   name: BeginTransaction(Guid, Boolean, IsolationLevel)
-  href: api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_BeginTransaction_System_Guid_System_Boolean_System_Data_IsolationLevel_
-  commentId: M:XData.Database.Adapter.IDatabaseAdapter.BeginTransaction(System.Guid,System.Boolean,System.Data.IsolationLevel)
-  fullName: XData.Database.Adapter.IDatabaseAdapter.BeginTransaction(System.Guid, System.Boolean, System.Data.IsolationLevel)
+  href: api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_BeginTransaction_System_Guid_System_Boolean_IsolationLevel_
+  commentId: M:XData.Database.Adapter.IDatabaseAdapter.BeginTransaction(System.Guid,System.Boolean,IsolationLevel)
+  fullName: XData.Database.Adapter.IDatabaseAdapter.BeginTransaction(System.Guid, System.Boolean, IsolationLevel)
   nameWithType: IDatabaseAdapter.BeginTransaction(Guid, Boolean, IsolationLevel)
 - uid: XData.Database.Adapter.IDatabaseAdapter.BeginTransaction*
   name: BeginTransaction
@@ -1880,13 +1880,13 @@ references:
   isSpec: "True"
   fullName: XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar
   nameWithType: IDatabaseAdapter.ExecuteScalar
-- uid: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,System.Data.CommandBehavior,System.Object[])
+- uid: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,CommandBehavior,System.Object[])
   name: FillTable(Guid, Enum, CommandBehavior, Object[])
-  href: api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_System_Enum_System_Data_CommandBehavior_System_Object___
-  commentId: M:XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,System.Data.CommandBehavior,System.Object[])
+  href: api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_System_Enum_CommandBehavior_System_Object___
+  commentId: M:XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,CommandBehavior,System.Object[])
   name.vb: FillTable(Guid, Enum, CommandBehavior, Object())
-  fullName: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid, System.Enum, System.Data.CommandBehavior, System.Object[])
-  fullName.vb: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid, System.Enum, System.Data.CommandBehavior, System.Object())
+  fullName: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid, System.Enum, CommandBehavior, System.Object[])
+  fullName.vb: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid, System.Enum, CommandBehavior, System.Object())
   nameWithType: IDatabaseAdapter.FillTable(Guid, Enum, CommandBehavior, Object[])
   nameWithType.vb: IDatabaseAdapter.FillTable(Guid, Enum, CommandBehavior, Object())
 - uid: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,System.Object[])
@@ -1898,11 +1898,11 @@ references:
   fullName.vb: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid, System.Enum, System.Object())
   nameWithType: IDatabaseAdapter.FillTable(Guid, Enum, Object[])
   nameWithType.vb: IDatabaseAdapter.FillTable(Guid, Enum, Object())
-- uid: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,XData.Database.Adapter.Query,System.Data.CommandBehavior)
+- uid: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,XData.Database.Adapter.Query,CommandBehavior)
   name: FillTable(Guid, Query, CommandBehavior)
-  href: api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_XData_Database_Adapter_Query_System_Data_CommandBehavior_
-  commentId: M:XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,XData.Database.Adapter.Query,System.Data.CommandBehavior)
-  fullName: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid, XData.Database.Adapter.Query, System.Data.CommandBehavior)
+  href: api/XData.Database.Adapter.IDatabaseAdapter.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_XData_Database_Adapter_Query_CommandBehavior_
+  commentId: M:XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,XData.Database.Adapter.Query,CommandBehavior)
+  fullName: XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid, XData.Database.Adapter.Query, CommandBehavior)
   nameWithType: IDatabaseAdapter.FillTable(Guid, Query, CommandBehavior)
 - uid: XData.Database.Adapter.IDatabaseAdapter.FillTable*
   name: FillTable
@@ -2094,13 +2094,13 @@ references:
   commentId: T:XData.Database.Adapter.Query
   fullName: XData.Database.Adapter.Query
   nameWithType: Query
-- uid: XData.Database.Adapter.Query.#ctor(System.String,System.Data.CommandType,XData.Database.Adapter.QueryParam[])
+- uid: XData.Database.Adapter.Query.#ctor(System.String,CommandType,XData.Database.Adapter.QueryParam[])
   name: Query(String, CommandType, QueryParam[])
-  href: api/XData.Database.Adapter.Query.html#XData_Database_Adapter_Query__ctor_System_String_System_Data_CommandType_XData_Database_Adapter_QueryParam___
-  commentId: M:XData.Database.Adapter.Query.#ctor(System.String,System.Data.CommandType,XData.Database.Adapter.QueryParam[])
+  href: api/XData.Database.Adapter.Query.html#XData_Database_Adapter_Query__ctor_System_String_CommandType_XData_Database_Adapter_QueryParam___
+  commentId: M:XData.Database.Adapter.Query.#ctor(System.String,CommandType,XData.Database.Adapter.QueryParam[])
   name.vb: Query(String, CommandType, QueryParam())
-  fullName: XData.Database.Adapter.Query.Query(System.String, System.Data.CommandType, XData.Database.Adapter.QueryParam[])
-  fullName.vb: XData.Database.Adapter.Query.Query(System.String, System.Data.CommandType, XData.Database.Adapter.QueryParam())
+  fullName: XData.Database.Adapter.Query.Query(System.String, CommandType, XData.Database.Adapter.QueryParam[])
+  fullName.vb: XData.Database.Adapter.Query.Query(System.String, CommandType, XData.Database.Adapter.QueryParam())
   nameWithType: Query.Query(String, CommandType, QueryParam[])
   nameWithType.vb: Query.Query(String, CommandType, QueryParam())
 - uid: XData.Database.Adapter.Query.#ctor*
@@ -2229,11 +2229,11 @@ references:
   commentId: T:XData.Database.Adapter.QueryParam
   fullName: XData.Database.Adapter.QueryParam
   nameWithType: QueryParam
-- uid: XData.Database.Adapter.QueryParam.#ctor(System.String,System.Object,System.Data.DbType,System.Int32)
+- uid: XData.Database.Adapter.QueryParam.#ctor(System.String,System.Object,DbType,System.Int32)
   name: QueryParam(String, Object, DbType, Int32)
-  href: api/XData.Database.Adapter.QueryParam.html#XData_Database_Adapter_QueryParam__ctor_System_String_System_Object_System_Data_DbType_System_Int32_
-  commentId: M:XData.Database.Adapter.QueryParam.#ctor(System.String,System.Object,System.Data.DbType,System.Int32)
-  fullName: XData.Database.Adapter.QueryParam.QueryParam(System.String, System.Object, System.Data.DbType, System.Int32)
+  href: api/XData.Database.Adapter.QueryParam.html#XData_Database_Adapter_QueryParam__ctor_System_String_System_Object_DbType_System_Int32_
+  commentId: M:XData.Database.Adapter.QueryParam.#ctor(System.String,System.Object,DbType,System.Int32)
+  fullName: XData.Database.Adapter.QueryParam.QueryParam(System.String, System.Object, DbType, System.Int32)
   nameWithType: QueryParam.QueryParam(String, Object, DbType, Int32)
 - uid: XData.Database.Adapter.QueryParam.#ctor(XData.Database.Adapter.QueryParam,System.Object)
   name: QueryParam(QueryParam, Object)
@@ -2410,6 +2410,12 @@ references:
   commentId: T:XData.Database.Adapter.QueryResult
   fullName: XData.Database.Adapter.QueryResult
   nameWithType: QueryResult
+- uid: XData.Database.Adapter.QueryResult.#ctor(XData.Database.Adapter.Query,System.Int32,IDataParameterCollection)
+  name: QueryResult(Query, Int32, IDataParameterCollection)
+  href: api/XData.Database.Adapter.QueryResult.html#XData_Database_Adapter_QueryResult__ctor_XData_Database_Adapter_Query_System_Int32_IDataParameterCollection_
+  commentId: M:XData.Database.Adapter.QueryResult.#ctor(XData.Database.Adapter.Query,System.Int32,IDataParameterCollection)
+  fullName: XData.Database.Adapter.QueryResult.QueryResult(XData.Database.Adapter.Query, System.Int32, IDataParameterCollection)
+  nameWithType: QueryResult.QueryResult(Query, Int32, IDataParameterCollection)
 - uid: XData.Database.Adapter.QueryResult.#ctor(XData.Database.Adapter.Query,System.Int32,System.Collections.Generic.IEnumerable{XData.Database.Adapter.QueryParam})
   name: QueryResult(Query, Int32, IEnumerable<QueryParam>)
   href: api/XData.Database.Adapter.QueryResult.html#XData_Database_Adapter_QueryResult__ctor_XData_Database_Adapter_Query_System_Int32_System_Collections_Generic_IEnumerable_XData_Database_Adapter_QueryParam__
@@ -2419,12 +2425,6 @@ references:
   fullName.vb: XData.Database.Adapter.QueryResult.QueryResult(XData.Database.Adapter.Query, System.Int32, System.Collections.Generic.IEnumerable(Of XData.Database.Adapter.QueryParam))
   nameWithType: QueryResult.QueryResult(Query, Int32, IEnumerable<QueryParam>)
   nameWithType.vb: QueryResult.QueryResult(Query, Int32, IEnumerable(Of QueryParam))
-- uid: XData.Database.Adapter.QueryResult.#ctor(XData.Database.Adapter.Query,System.Int32,System.Data.IDataParameterCollection)
-  name: QueryResult(Query, Int32, IDataParameterCollection)
-  href: api/XData.Database.Adapter.QueryResult.html#XData_Database_Adapter_QueryResult__ctor_XData_Database_Adapter_Query_System_Int32_System_Data_IDataParameterCollection_
-  commentId: M:XData.Database.Adapter.QueryResult.#ctor(XData.Database.Adapter.Query,System.Int32,System.Data.IDataParameterCollection)
-  fullName: XData.Database.Adapter.QueryResult.QueryResult(XData.Database.Adapter.Query, System.Int32, System.Data.IDataParameterCollection)
-  nameWithType: QueryResult.QueryResult(Query, Int32, IDataParameterCollection)
 - uid: XData.Database.Adapter.QueryResult.#ctor*
   name: QueryResult
   href: api/XData.Database.Adapter.QueryResult.html#XData_Database_Adapter_QueryResult__ctor_
@@ -2432,11 +2432,11 @@ references:
   isSpec: "True"
   fullName: XData.Database.Adapter.QueryResult.QueryResult
   nameWithType: QueryResult.QueryResult
-- uid: XData.Database.Adapter.QueryResult.ParamInit(System.Data.IDataParameter)
+- uid: XData.Database.Adapter.QueryResult.ParamInit(IDataParameter)
   name: ParamInit(IDataParameter)
-  href: api/XData.Database.Adapter.QueryResult.html#XData_Database_Adapter_QueryResult_ParamInit_System_Data_IDataParameter_
-  commentId: M:XData.Database.Adapter.QueryResult.ParamInit(System.Data.IDataParameter)
-  fullName: XData.Database.Adapter.QueryResult.ParamInit(System.Data.IDataParameter)
+  href: api/XData.Database.Adapter.QueryResult.html#XData_Database_Adapter_QueryResult_ParamInit_IDataParameter_
+  commentId: M:XData.Database.Adapter.QueryResult.ParamInit(IDataParameter)
+  fullName: XData.Database.Adapter.QueryResult.ParamInit(IDataParameter)
   nameWithType: QueryResult.ParamInit(IDataParameter)
 - uid: XData.Database.Adapter.QueryResult.ParamInit*
   name: ParamInit
@@ -2499,13 +2499,19 @@ references:
   isSpec: "True"
   fullName: XData.Database.Adapter.QueryResultBase.GetEnumerator
   nameWithType: QueryResultBase.GetEnumerator
-- uid: XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Collections.Generic.IEnumerable{System.Data.IDataParameter})
+- uid: XData.Database.Adapter.QueryResultBase.Init(System.Int32,IDataParameterCollection)
+  name: Init(Int32, IDataParameterCollection)
+  href: api/XData.Database.Adapter.QueryResultBase.html#XData_Database_Adapter_QueryResultBase_Init_System_Int32_IDataParameterCollection_
+  commentId: M:XData.Database.Adapter.QueryResultBase.Init(System.Int32,IDataParameterCollection)
+  fullName: XData.Database.Adapter.QueryResultBase.Init(System.Int32, IDataParameterCollection)
+  nameWithType: QueryResultBase.Init(Int32, IDataParameterCollection)
+- uid: XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Collections.Generic.IEnumerable{IDataParameter})
   name: Init(Int32, IEnumerable<IDataParameter>)
-  href: api/XData.Database.Adapter.QueryResultBase.html#XData_Database_Adapter_QueryResultBase_Init_System_Int32_System_Collections_Generic_IEnumerable_System_Data_IDataParameter__
-  commentId: M:XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Collections.Generic.IEnumerable{System.Data.IDataParameter})
+  href: api/XData.Database.Adapter.QueryResultBase.html#XData_Database_Adapter_QueryResultBase_Init_System_Int32_System_Collections_Generic_IEnumerable_IDataParameter__
+  commentId: M:XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Collections.Generic.IEnumerable{IDataParameter})
   name.vb: Init(Int32, IEnumerable(Of IDataParameter))
-  fullName: XData.Database.Adapter.QueryResultBase.Init(System.Int32, System.Collections.Generic.IEnumerable<System.Data.IDataParameter>)
-  fullName.vb: XData.Database.Adapter.QueryResultBase.Init(System.Int32, System.Collections.Generic.IEnumerable(Of System.Data.IDataParameter))
+  fullName: XData.Database.Adapter.QueryResultBase.Init(System.Int32, System.Collections.Generic.IEnumerable<IDataParameter>)
+  fullName.vb: XData.Database.Adapter.QueryResultBase.Init(System.Int32, System.Collections.Generic.IEnumerable(Of IDataParameter))
   nameWithType: QueryResultBase.Init(Int32, IEnumerable<IDataParameter>)
   nameWithType.vb: QueryResultBase.Init(Int32, IEnumerable(Of IDataParameter))
 - uid: XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Collections.Generic.IEnumerable{XData.Database.Adapter.QueryParam})
@@ -2517,12 +2523,6 @@ references:
   fullName.vb: XData.Database.Adapter.QueryResultBase.Init(System.Int32, System.Collections.Generic.IEnumerable(Of XData.Database.Adapter.QueryParam))
   nameWithType: QueryResultBase.Init(Int32, IEnumerable<QueryParam>)
   nameWithType.vb: QueryResultBase.Init(Int32, IEnumerable(Of QueryParam))
-- uid: XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Data.IDataParameterCollection)
-  name: Init(Int32, IDataParameterCollection)
-  href: api/XData.Database.Adapter.QueryResultBase.html#XData_Database_Adapter_QueryResultBase_Init_System_Int32_System_Data_IDataParameterCollection_
-  commentId: M:XData.Database.Adapter.QueryResultBase.Init(System.Int32,System.Data.IDataParameterCollection)
-  fullName: XData.Database.Adapter.QueryResultBase.Init(System.Int32, System.Data.IDataParameterCollection)
-  nameWithType: QueryResultBase.Init(Int32, IDataParameterCollection)
 - uid: XData.Database.Adapter.QueryResultBase.Init*
   name: Init
   href: api/XData.Database.Adapter.QueryResultBase.html#XData_Database_Adapter_QueryResultBase_Init_
@@ -2555,11 +2555,11 @@ references:
   isSpec: "True"
   fullName: XData.Database.Adapter.QueryResultBase.Item
   nameWithType: QueryResultBase.Item
-- uid: XData.Database.Adapter.QueryResultBase.ParamInit(System.Data.IDataParameter)
+- uid: XData.Database.Adapter.QueryResultBase.ParamInit(IDataParameter)
   name: ParamInit(IDataParameter)
-  href: api/XData.Database.Adapter.QueryResultBase.html#XData_Database_Adapter_QueryResultBase_ParamInit_System_Data_IDataParameter_
-  commentId: M:XData.Database.Adapter.QueryResultBase.ParamInit(System.Data.IDataParameter)
-  fullName: XData.Database.Adapter.QueryResultBase.ParamInit(System.Data.IDataParameter)
+  href: api/XData.Database.Adapter.QueryResultBase.html#XData_Database_Adapter_QueryResultBase_ParamInit_IDataParameter_
+  commentId: M:XData.Database.Adapter.QueryResultBase.ParamInit(IDataParameter)
+  fullName: XData.Database.Adapter.QueryResultBase.ParamInit(IDataParameter)
   nameWithType: QueryResultBase.ParamInit(IDataParameter)
 - uid: XData.Database.Adapter.QueryResultBase.ParamInit*
   name: ParamInit
@@ -3386,11 +3386,11 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.GetSequenceName
   nameWithType: BaseSqlBuilder.GetSequenceName
-- uid: XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName(System.Data.DbType)
+- uid: XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName(DbType)
   name: GetSqlTypeName(DbType)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetSqlTypeName_System_Data_DbType_
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName(System.Data.DbType)
-  fullName: XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName(System.Data.DbType)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetSqlTypeName_DbType_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName(DbType)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName(DbType)
   nameWithType: BaseSqlBuilder.GetSqlTypeName(DbType)
 - uid: XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName*
   name: GetSqlTypeName
@@ -10485,13 +10485,13 @@ references:
   isSpec: "True"
   fullName: XData.Extensions.CollectionsExtensions.RemoveAll
   nameWithType: CollectionsExtensions.RemoveAll
-- uid: XData.Extensions.CollectionsExtensions.RemoveAll``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{``0,System.Boolean})
+- uid: XData.Extensions.CollectionsExtensions.RemoveAll``2(ConcurrentDictionary{``0,``1},System.Func{``0,System.Boolean})
   name: RemoveAll<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<TKey, Boolean>)
-  href: api/XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_RemoveAll__2_System_Collections_Concurrent_ConcurrentDictionary___0___1__System_Func___0_System_Boolean__
-  commentId: M:XData.Extensions.CollectionsExtensions.RemoveAll``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{``0,System.Boolean})
+  href: api/XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_RemoveAll__2_ConcurrentDictionary___0___1__System_Func___0_System_Boolean__
+  commentId: M:XData.Extensions.CollectionsExtensions.RemoveAll``2(ConcurrentDictionary{``0,``1},System.Func{``0,System.Boolean})
   name.vb: RemoveAll(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of TKey, Boolean))
-  fullName: XData.Extensions.CollectionsExtensions.RemoveAll<TKey, TValue>(System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>, System.Func<TKey, System.Boolean>)
-  fullName.vb: XData.Extensions.CollectionsExtensions.RemoveAll(Of TKey, TValue)(System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue), System.Func(Of TKey, System.Boolean))
+  fullName: XData.Extensions.CollectionsExtensions.RemoveAll<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, System.Func<TKey, System.Boolean>)
+  fullName.vb: XData.Extensions.CollectionsExtensions.RemoveAll(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), System.Func(Of TKey, System.Boolean))
   nameWithType: CollectionsExtensions.RemoveAll<TKey, TValue>(ConcurrentDictionary<TKey, TValue>, Func<TKey, Boolean>)
   nameWithType.vb: CollectionsExtensions.RemoveAll(Of TKey, TValue)(ConcurrentDictionary(Of TKey, TValue), Func(Of TKey, Boolean))
 - uid: XData.Extensions.CollectionsExtensions.SetValue*
@@ -11952,11 +11952,11 @@ references:
   commentId: T:XData.IDataScope
   fullName: XData.IDataScope
   nameWithType: IDataScope
-- uid: XData.IDataScope.BeginTransaction(System.String,System.Boolean,System.Data.IsolationLevel)
+- uid: XData.IDataScope.BeginTransaction(System.String,System.Boolean,IsolationLevel)
   name: BeginTransaction(String, Boolean, IsolationLevel)
-  href: api/XData.IDataScope.html#XData_IDataScope_BeginTransaction_System_String_System_Boolean_System_Data_IsolationLevel_
-  commentId: M:XData.IDataScope.BeginTransaction(System.String,System.Boolean,System.Data.IsolationLevel)
-  fullName: XData.IDataScope.BeginTransaction(System.String, System.Boolean, System.Data.IsolationLevel)
+  href: api/XData.IDataScope.html#XData_IDataScope_BeginTransaction_System_String_System_Boolean_IsolationLevel_
+  commentId: M:XData.IDataScope.BeginTransaction(System.String,System.Boolean,IsolationLevel)
+  fullName: XData.IDataScope.BeginTransaction(System.String, System.Boolean, IsolationLevel)
   nameWithType: IDataScope.BeginTransaction(String, Boolean, IsolationLevel)
 - uid: XData.IDataScope.BeginTransaction*
   name: BeginTransaction
@@ -13635,11 +13635,11 @@ references:
   isSpec: "True"
   fullName: XData.IWorkSet.Name
   nameWithType: IWorkSet.Name
-- uid: XData.IWorkSet.Submit(XData.IDataScope)
+- uid: XData.IWorkSet.Submit(IDataScope)
   name: Submit(IDataScope)
-  href: api/XData.IWorkSet.html#XData_IWorkSet_Submit_XData_IDataScope_
-  commentId: M:XData.IWorkSet.Submit(XData.IDataScope)
-  fullName: XData.IWorkSet.Submit(XData.IDataScope)
+  href: api/XData.IWorkSet.html#XData_IWorkSet_Submit_IDataScope_
+  commentId: M:XData.IWorkSet.Submit(IDataScope)
+  fullName: XData.IWorkSet.Submit(IDataScope)
   nameWithType: IWorkSet.Submit(IDataScope)
 - uid: XData.IWorkSet.Submit*
   name: Submit
@@ -13792,22 +13792,22 @@ references:
   fullName.vb: XData.IWorkSet(Of T).Get(Of TKey)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey), XData.WorkState)
   nameWithType: IWorkSet<T>.Get<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, WorkState)
   nameWithType.vb: IWorkSet(Of T).Get(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), WorkState)
-- uid: XData.IWorkSet`1.Lock(XData.IDataScope,System.Func{`0,System.Boolean})
+- uid: XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Boolean})
   name: Lock(IDataScope, Func<T, Boolean>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_XData_IDataScope_System_Func__0_System_Boolean__
-  commentId: M:XData.IWorkSet`1.Lock(XData.IDataScope,System.Func{`0,System.Boolean})
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Boolean__
+  commentId: M:XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Boolean})
   name.vb: Lock(IDataScope, Func(Of T, Boolean))
-  fullName: XData.IWorkSet<T>.Lock(XData.IDataScope, System.Func<T, System.Boolean>)
-  fullName.vb: XData.IWorkSet(Of T).Lock(XData.IDataScope, System.Func(Of T, System.Boolean))
+  fullName: XData.IWorkSet<T>.Lock(IDataScope, System.Func<T, System.Boolean>)
+  fullName.vb: XData.IWorkSet(Of T).Lock(IDataScope, System.Func(Of T, System.Boolean))
   nameWithType: IWorkSet<T>.Lock(IDataScope, Func<T, Boolean>)
   nameWithType.vb: IWorkSet(Of T).Lock(IDataScope, Func(Of T, Boolean))
-- uid: XData.IWorkSet`1.Lock(XData.IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
+- uid: XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
   name: Lock(IDataScope, Func<T, Int32, Boolean>, Func<T, IComparable>[])
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_XData_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____
-  commentId: M:XData.IWorkSet`1.Lock(XData.IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____
+  commentId: M:XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
   name.vb: Lock(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, IComparable)())
-  fullName: XData.IWorkSet<T>.Lock(XData.IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[])
-  fullName.vb: XData.IWorkSet(Of T).Lock(XData.IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)())
+  fullName: XData.IWorkSet<T>.Lock(IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[])
+  fullName.vb: XData.IWorkSet(Of T).Lock(IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)())
   nameWithType: IWorkSet<T>.Lock(IDataScope, Func<T, Int32, Boolean>, Func<T, IComparable>[])
   nameWithType.vb: IWorkSet(Of T).Lock(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, IComparable)())
 - uid: XData.IWorkSet`1.Lock*
@@ -13819,13 +13819,13 @@ references:
   fullName.vb: XData.IWorkSet(Of T).Lock
   nameWithType: IWorkSet<T>.Lock
   nameWithType.vb: IWorkSet(Of T).Lock
-- uid: XData.IWorkSet`1.Lock``1(XData.IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
+- uid: XData.IWorkSet`1.Lock``1(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
   name: Lock<TKey>(IDataScope, Func<T, Int32, Boolean>, Func<T, TKey>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock__1_XData_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__
-  commentId: M:XData.IWorkSet`1.Lock``1(XData.IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock__1_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__
+  commentId: M:XData.IWorkSet`1.Lock``1(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
   name.vb: Lock(Of TKey)(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, TKey))
-  fullName: XData.IWorkSet<T>.Lock<TKey>(XData.IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>)
-  fullName.vb: XData.IWorkSet(Of T).Lock(Of TKey)(XData.IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey))
+  fullName: XData.IWorkSet<T>.Lock<TKey>(IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>)
+  fullName.vb: XData.IWorkSet(Of T).Lock(Of TKey)(IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey))
   nameWithType: IWorkSet<T>.Lock<TKey>(IDataScope, Func<T, Int32, Boolean>, Func<T, TKey>)
   nameWithType.vb: IWorkSet(Of T).Lock(Of TKey)(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, TKey))
 - uid: XData.IWorkSet`1.Select(XData.WorkState)
@@ -14214,11 +14214,11 @@ references:
   commentId: T:XData.Mapping.ColumnExpressionAttribute
   fullName: XData.Mapping.ColumnExpressionAttribute
   nameWithType: ColumnExpressionAttribute
-- uid: XData.Mapping.ColumnExpressionAttribute.#ctor(System.String,System.String,XData.DataExpressionType,System.Data.DbType)
+- uid: XData.Mapping.ColumnExpressionAttribute.#ctor(System.String,System.String,XData.DataExpressionType,DbType)
   name: ColumnExpressionAttribute(String, String, DataExpressionType, DbType)
-  href: api/XData.Mapping.ColumnExpressionAttribute.html#XData_Mapping_ColumnExpressionAttribute__ctor_System_String_System_String_XData_DataExpressionType_System_Data_DbType_
-  commentId: M:XData.Mapping.ColumnExpressionAttribute.#ctor(System.String,System.String,XData.DataExpressionType,System.Data.DbType)
-  fullName: XData.Mapping.ColumnExpressionAttribute.ColumnExpressionAttribute(System.String, System.String, XData.DataExpressionType, System.Data.DbType)
+  href: api/XData.Mapping.ColumnExpressionAttribute.html#XData_Mapping_ColumnExpressionAttribute__ctor_System_String_System_String_XData_DataExpressionType_DbType_
+  commentId: M:XData.Mapping.ColumnExpressionAttribute.#ctor(System.String,System.String,XData.DataExpressionType,DbType)
+  fullName: XData.Mapping.ColumnExpressionAttribute.ColumnExpressionAttribute(System.String, System.String, XData.DataExpressionType, DbType)
   nameWithType: ColumnExpressionAttribute.ColumnExpressionAttribute(String, String, DataExpressionType, DbType)
 - uid: XData.Mapping.ColumnExpressionAttribute.#ctor*
   name: ColumnExpressionAttribute
@@ -15473,11 +15473,11 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Default
   nameWithType: IProcedureParameterAdapter.Default
-- uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Direction(System.Data.ParameterDirection)
+- uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Direction(ParameterDirection)
   name: Direction(ParameterDirection)
-  href: api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html#XData_Mapping_Dynamic_IProcedureParameterAdapter_Direction_System_Data_ParameterDirection_
-  commentId: M:XData.Mapping.Dynamic.IProcedureParameterAdapter.Direction(System.Data.ParameterDirection)
-  fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Direction(System.Data.ParameterDirection)
+  href: api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html#XData_Mapping_Dynamic_IProcedureParameterAdapter_Direction_ParameterDirection_
+  commentId: M:XData.Mapping.Dynamic.IProcedureParameterAdapter.Direction(ParameterDirection)
+  fullName: XData.Mapping.Dynamic.IProcedureParameterAdapter.Direction(ParameterDirection)
   nameWithType: IProcedureParameterAdapter.Direction(ParameterDirection)
 - uid: XData.Mapping.Dynamic.IProcedureParameterAdapter.Direction*
   name: Direction
@@ -15802,13 +15802,13 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.IQueryStructure.Parameter
   nameWithType: IQueryStructure.Parameter
-- uid: XData.Mapping.Dynamic.IQueryStructure.Parameter``1(System.String,System.Int32,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
+- uid: XData.Mapping.Dynamic.IQueryStructure.Parameter``1(System.String,System.Int32,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
   name: Parameter<T>(String, Int32, String, DbType, Expression<Func<IProcedureParameterAdapter, IProcedureParameterFlag>>[])
-  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Parameter__1_System_String_System_Int32_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____
-  commentId: M:XData.Mapping.Dynamic.IQueryStructure.Parameter``1(System.String,System.Int32,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Parameter__1_System_String_System_Int32_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructure.Parameter``1(System.String,System.Int32,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
   name.vb: Parameter(Of T)(String, Int32, String, DbType, Expression(Of Func(Of IProcedureParameterAdapter, IProcedureParameterFlag))())
-  fullName: XData.Mapping.Dynamic.IQueryStructure.Parameter<T>(System.String, System.Int32, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IQueryStructure.Parameter(Of T)(System.String, System.Int32, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag))())
+  fullName: XData.Mapping.Dynamic.IQueryStructure.Parameter<T>(System.String, System.Int32, System.String, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructure.Parameter(Of T)(System.String, System.Int32, System.String, DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag))())
   nameWithType: IQueryStructure.Parameter<T>(String, Int32, String, DbType, Expression<Func<IProcedureParameterAdapter, IProcedureParameterFlag>>[])
   nameWithType.vb: IQueryStructure.Parameter(Of T)(String, Int32, String, DbType, Expression(Of Func(Of IProcedureParameterAdapter, IProcedureParameterFlag))())
 - uid: XData.Mapping.Dynamic.IQueryStructure.Procedure(System.String,System.String,XData.ProcedureType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
@@ -15979,22 +15979,22 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr
   nameWithType: IQueryStructureAdapter.Expr
-- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}},System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}},DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name: Expr<TValue>(String, Expression<Func<IQueryStructureAdapter, TValue>>, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
-  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
-  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.Expr``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}},System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.Expr``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}},DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name.vb: Expr(Of TValue)(String, Expression(Of Func(Of IQueryStructureAdapter, TValue)), DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
-  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr<TValue>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructureAdapter, TValue>>, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr(Of TValue)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, TValue)), System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
+  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr<TValue>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructureAdapter, TValue>>, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr(Of TValue)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, TValue)), DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IQueryStructureAdapter.Expr<TValue>(String, Expression<Func<IQueryStructureAdapter, TValue>>, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
   nameWithType.vb: IQueryStructureAdapter.Expr(Of TValue)(String, Expression(Of Func(Of IQueryStructureAdapter, TValue)), DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
-- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr``1(System.String,XData.DataExpressionType,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr``1(System.String,XData.DataExpressionType,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name: Expr<TValue>(String, DataExpressionType, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
-  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
-  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.Expr``1(System.String,XData.DataExpressionType,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.Expr``1(System.String,XData.DataExpressionType,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name.vb: Expr(Of TValue)(String, DataExpressionType, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
-  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr<TValue>(System.String, XData.DataExpressionType, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr(Of TValue)(System.String, XData.DataExpressionType, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
+  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr<TValue>(System.String, XData.DataExpressionType, System.String, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Expr(Of TValue)(System.String, XData.DataExpressionType, System.String, DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IQueryStructureAdapter.Expr<TValue>(String, DataExpressionType, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
   nameWithType.vb: IQueryStructureAdapter.Expr(Of TValue)(String, DataExpressionType, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
 - uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Field*
@@ -16013,13 +16013,13 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Field(Of TValue)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IPropertyMappingAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IQueryStructureAdapter.Field<TValue>(Expression<Func<IPropertyMappingAdapter, IStructureFlag>>[])
   nameWithType.vb: IQueryStructureAdapter.Field(Of TValue)(Expression(Of Func(Of IPropertyMappingAdapter, IStructureFlag))())
-- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Field``1(System.String,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Field``1(System.String,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name: Field<TValue>(String, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
-  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_Field__1_System_String_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
-  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.Field``1(System.String,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_Field__1_System_String_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.Field``1(System.String,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name.vb: Field(Of TValue)(String, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
-  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.Field<TValue>(System.String, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Field(Of TValue)(System.String, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
+  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.Field<TValue>(System.String, System.String, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.Field(Of TValue)(System.String, System.String, DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IQueryStructureAdapter.Field<TValue>(String, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
   nameWithType.vb: IQueryStructureAdapter.Field(Of TValue)(String, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
 - uid: XData.Mapping.Dynamic.IQueryStructureAdapter.Field``1(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IPropertyMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
@@ -16063,13 +16063,13 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField
   nameWithType: IQueryStructureAdapter.XmlField
-- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField``1(System.String,System.String,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+- uid: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField``1(System.String,System.String,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name: XmlField<TValue>(String, String, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
-  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_XmlField__1_System_String_System_String_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
-  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField``1(System.String,System.String,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  href: api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_XmlField__1_System_String_System_String_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExpressionPropertyAdapter_XData_Mapping_Dynamic_IStructureFlag_____
+  commentId: M:XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField``1(System.String,System.String,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExpressionPropertyAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name.vb: XmlField(Of TValue)(String, String, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
-  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField<TValue>(System.String, System.String, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField(Of TValue)(System.String, System.String, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
+  fullName: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField<TValue>(System.String, System.String, System.String, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField(Of TValue)(System.String, System.String, System.String, DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExpressionPropertyAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IQueryStructureAdapter.XmlField<TValue>(String, String, String, DbType, Expression<Func<IExpressionPropertyAdapter, IStructureFlag>>[])
   nameWithType.vb: IQueryStructureAdapter.XmlField(Of TValue)(String, String, String, DbType, Expression(Of Func(Of IExpressionPropertyAdapter, IStructureFlag))())
 - uid: XData.Mapping.Dynamic.IQueryWithAdapter`1
@@ -16403,13 +16403,13 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Parameter
   nameWithType: IRepositoryStructure<T>.Parameter
   nameWithType.vb: IRepositoryStructure(Of T).Parameter
-- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter``1(System.String,System.Int32,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter``1(System.String,System.Int32,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
   name: Parameter<TResult>(String, Int32, String, DbType, Expression<Func<IProcedureParameterAdapter, IProcedureParameterFlag>>[])
-  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____
-  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter``1(System.String,System.Int32,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter``1(System.String,System.Int32,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
   name.vb: Parameter(Of TResult)(String, Int32, String, DbType, Expression(Of Func(Of IProcedureParameterAdapter, IProcedureParameterFlag))())
-  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Parameter<TResult>(System.String, System.Int32, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Parameter(Of TResult)(System.String, System.Int32, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag))())
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Parameter<TResult>(System.String, System.Int32, System.String, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Parameter(Of TResult)(System.String, System.Int32, System.String, DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag))())
   nameWithType: IRepositoryStructure<T>.Parameter<TResult>(String, Int32, String, DbType, Expression<Func<IProcedureParameterAdapter, IProcedureParameterFlag>>[])
   nameWithType.vb: IRepositoryStructure(Of T).Parameter(Of TResult)(String, Int32, String, DbType, Expression(Of Func(Of IProcedureParameterAdapter, IProcedureParameterFlag))())
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Procedure(System.String,System.String,XData.ProcedureType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
@@ -16533,22 +16533,22 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr
   nameWithType: IRepositoryStructureAdapter.Expr
-- uid: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}},System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+- uid: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}},DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name: Expr<TValue>(String, Expression<Func<IQueryStructureAdapter, TValue>>, DbType, Expression<Func<IRepositoryExpressionMappingAdapter, IStructureFlag>>[])
-  href: api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____
-  commentId: M:XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}},System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  href: api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}},DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name.vb: Expr(Of TValue)(String, Expression(Of Func(Of IQueryStructureAdapter, TValue)), DbType, Expression(Of Func(Of IRepositoryExpressionMappingAdapter, IStructureFlag))())
-  fullName: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr<TValue>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructureAdapter, TValue>>, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr(Of TValue)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, TValue)), System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter, XData.Mapping.Dynamic.IStructureFlag))())
+  fullName: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr<TValue>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructureAdapter, TValue>>, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr(Of TValue)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, TValue)), DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IRepositoryStructureAdapter.Expr<TValue>(String, Expression<Func<IQueryStructureAdapter, TValue>>, DbType, Expression<Func<IRepositoryExpressionMappingAdapter, IStructureFlag>>[])
   nameWithType.vb: IRepositoryStructureAdapter.Expr(Of TValue)(String, Expression(Of Func(Of IQueryStructureAdapter, TValue)), DbType, Expression(Of Func(Of IRepositoryExpressionMappingAdapter, IStructureFlag))())
-- uid: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr``1(System.String,XData.DataExpressionType,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+- uid: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr``1(System.String,XData.DataExpressionType,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name: Expr<TValue>(String, DataExpressionType, String, DbType, Expression<Func<IRepositoryExpressionMappingAdapter, IStructureFlag>>[])
-  href: api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____
-  commentId: M:XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr``1(System.String,XData.DataExpressionType,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
+  href: api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr``1(System.String,XData.DataExpressionType,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])
   name.vb: Expr(Of TValue)(String, DataExpressionType, String, DbType, Expression(Of Func(Of IRepositoryExpressionMappingAdapter, IStructureFlag))())
-  fullName: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr<TValue>(System.String, XData.DataExpressionType, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr(Of TValue)(System.String, XData.DataExpressionType, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter, XData.Mapping.Dynamic.IStructureFlag))())
+  fullName: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr<TValue>(System.String, XData.DataExpressionType, System.String, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter, XData.Mapping.Dynamic.IStructureFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr(Of TValue)(System.String, XData.DataExpressionType, System.String, DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter, XData.Mapping.Dynamic.IStructureFlag))())
   nameWithType: IRepositoryStructureAdapter.Expr<TValue>(String, DataExpressionType, String, DbType, Expression<Func<IRepositoryExpressionMappingAdapter, IStructureFlag>>[])
   nameWithType.vb: IRepositoryStructureAdapter.Expr(Of TValue)(String, DataExpressionType, String, DbType, Expression(Of Func(Of IRepositoryExpressionMappingAdapter, IStructureFlag))())
 - uid: XData.Mapping.Dynamic.IRepositoryStructureAdapter.Field*
@@ -17328,13 +17328,13 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam
   nameWithType: QueryDescriptionExtensions.SqlParam
-- uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
+- uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
   name: SqlParam<TResult>(IQueryStructureAdapter, String, DbType, Expression<Func<IProcedureParameterAdapter, IProcedureParameterFlag>>[])
-  href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlParam__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____
-  commentId: M:XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
+  href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlParam__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____
+  commentId: M:XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
   name.vb: SqlParam(Of TResult)(IQueryStructureAdapter, String, DbType, Expression(Of Func(Of IProcedureParameterAdapter, IProcedureParameterFlag))())
-  fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam<TResult>(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam(Of TResult)(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag))())
+  fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam<TResult>(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String, DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam(Of TResult)(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String, DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag))())
   nameWithType: QueryDescriptionExtensions.SqlParam<TResult>(IQueryStructureAdapter, String, DbType, Expression<Func<IProcedureParameterAdapter, IProcedureParameterFlag>>[])
   nameWithType.vb: QueryDescriptionExtensions.SqlParam(Of TResult)(IQueryStructureAdapter, String, DbType, Expression(Of Func(Of IProcedureParameterAdapter, IProcedureParameterFlag))())
 - uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.ToDataSet*
@@ -18563,11 +18563,11 @@ references:
   commentId: T:XData.Mapping.ParameterAttribute
   fullName: XData.Mapping.ParameterAttribute
   nameWithType: ParameterAttribute
-- uid: XData.Mapping.ParameterAttribute.#ctor(System.String,System.Int32,System.String,System.Type,System.Data.DbType)
+- uid: XData.Mapping.ParameterAttribute.#ctor(System.String,System.Int32,System.String,System.Type,DbType)
   name: ParameterAttribute(String, Int32, String, Type, DbType)
-  href: api/XData.Mapping.ParameterAttribute.html#XData_Mapping_ParameterAttribute__ctor_System_String_System_Int32_System_String_System_Type_System_Data_DbType_
-  commentId: M:XData.Mapping.ParameterAttribute.#ctor(System.String,System.Int32,System.String,System.Type,System.Data.DbType)
-  fullName: XData.Mapping.ParameterAttribute.ParameterAttribute(System.String, System.Int32, System.String, System.Type, System.Data.DbType)
+  href: api/XData.Mapping.ParameterAttribute.html#XData_Mapping_ParameterAttribute__ctor_System_String_System_Int32_System_String_System_Type_DbType_
+  commentId: M:XData.Mapping.ParameterAttribute.#ctor(System.String,System.Int32,System.String,System.Type,DbType)
+  fullName: XData.Mapping.ParameterAttribute.ParameterAttribute(System.String, System.Int32, System.String, System.Type, DbType)
   nameWithType: ParameterAttribute.ParameterAttribute(String, Int32, String, Type, DbType)
 - uid: XData.Mapping.ParameterAttribute.#ctor*
   name: ParameterAttribute
@@ -18957,11 +18957,11 @@ references:
   commentId: T:XData.Mapping.PropertyExpressionAttribute
   fullName: XData.Mapping.PropertyExpressionAttribute
   nameWithType: PropertyExpressionAttribute
-- uid: XData.Mapping.PropertyExpressionAttribute.#ctor(System.String,XData.DataExpressionType,System.Data.DbType)
+- uid: XData.Mapping.PropertyExpressionAttribute.#ctor(System.String,XData.DataExpressionType,DbType)
   name: PropertyExpressionAttribute(String, DataExpressionType, DbType)
-  href: api/XData.Mapping.PropertyExpressionAttribute.html#XData_Mapping_PropertyExpressionAttribute__ctor_System_String_XData_DataExpressionType_System_Data_DbType_
-  commentId: M:XData.Mapping.PropertyExpressionAttribute.#ctor(System.String,XData.DataExpressionType,System.Data.DbType)
-  fullName: XData.Mapping.PropertyExpressionAttribute.PropertyExpressionAttribute(System.String, XData.DataExpressionType, System.Data.DbType)
+  href: api/XData.Mapping.PropertyExpressionAttribute.html#XData_Mapping_PropertyExpressionAttribute__ctor_System_String_XData_DataExpressionType_DbType_
+  commentId: M:XData.Mapping.PropertyExpressionAttribute.#ctor(System.String,XData.DataExpressionType,DbType)
+  fullName: XData.Mapping.PropertyExpressionAttribute.PropertyExpressionAttribute(System.String, XData.DataExpressionType, DbType)
   nameWithType: PropertyExpressionAttribute.PropertyExpressionAttribute(String, DataExpressionType, DbType)
 - uid: XData.Mapping.PropertyExpressionAttribute.#ctor*
   name: PropertyExpressionAttribute
@@ -22415,13 +22415,13 @@ references:
   isSpec: "True"
   fullName: XData.Security.SecuritySession.Action
   nameWithType: SecuritySession.Action
-- uid: XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{XData.CustomLogic{``0}}})
+- uid: XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{CustomLogic{``0}}})
   name: Action<T>(Expression<Func<CustomLogic<T>>>)
-  href: api/XData.Security.SecuritySession.html#XData_Security_SecuritySession_Action__1_System_Linq_Expressions_Expression_System_Func_XData_CustomLogic___0____
-  commentId: M:XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{XData.CustomLogic{``0}}})
+  href: api/XData.Security.SecuritySession.html#XData_Security_SecuritySession_Action__1_System_Linq_Expressions_Expression_System_Func_CustomLogic___0____
+  commentId: M:XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{CustomLogic{``0}}})
   name.vb: Action(Of T)(Expression(Of Func(Of CustomLogic(Of T))))
-  fullName: XData.Security.SecuritySession.Action<T>(System.Linq.Expressions.Expression<System.Func<XData.CustomLogic<T>>>)
-  fullName.vb: XData.Security.SecuritySession.Action(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.CustomLogic(Of T))))
+  fullName: XData.Security.SecuritySession.Action<T>(System.Linq.Expressions.Expression<System.Func<CustomLogic<T>>>)
+  fullName.vb: XData.Security.SecuritySession.Action(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of CustomLogic(Of T))))
   nameWithType: SecuritySession.Action<T>(Expression<Func<CustomLogic<T>>>)
   nameWithType.vb: SecuritySession.Action(Of T)(Expression(Of Func(Of CustomLogic(Of T))))
 - uid: XData.Security.SecuritySession.FilterGrantedObjects*
@@ -23328,12 +23328,12 @@ references:
   fullName.vb: XData.XDataLogic(Of T)
   nameWithType: XDataLogic<T>
   nameWithType.vb: XDataLogic(Of T)
-- uid: XData.XDataLogic`1.BeginTransaction(System.Guid,System.String,System.Boolean,System.Data.IsolationLevel)
+- uid: XData.XDataLogic`1.BeginTransaction(System.Guid,System.String,System.Boolean,IsolationLevel)
   name: BeginTransaction(Guid, String, Boolean, IsolationLevel)
-  href: api/XData.XDataLogic-1.html#XData_XDataLogic_1_BeginTransaction_System_Guid_System_String_System_Boolean_System_Data_IsolationLevel_
-  commentId: M:XData.XDataLogic`1.BeginTransaction(System.Guid,System.String,System.Boolean,System.Data.IsolationLevel)
-  fullName: XData.XDataLogic<T>.BeginTransaction(System.Guid, System.String, System.Boolean, System.Data.IsolationLevel)
-  fullName.vb: XData.XDataLogic(Of T).BeginTransaction(System.Guid, System.String, System.Boolean, System.Data.IsolationLevel)
+  href: api/XData.XDataLogic-1.html#XData_XDataLogic_1_BeginTransaction_System_Guid_System_String_System_Boolean_IsolationLevel_
+  commentId: M:XData.XDataLogic`1.BeginTransaction(System.Guid,System.String,System.Boolean,IsolationLevel)
+  fullName: XData.XDataLogic<T>.BeginTransaction(System.Guid, System.String, System.Boolean, IsolationLevel)
+  fullName.vb: XData.XDataLogic(Of T).BeginTransaction(System.Guid, System.String, System.Boolean, IsolationLevel)
   nameWithType: XDataLogic<T>.BeginTransaction(Guid, String, Boolean, IsolationLevel)
   nameWithType.vb: XDataLogic(Of T).BeginTransaction(Guid, String, Boolean, IsolationLevel)
 - uid: XData.XDataLogic`1.BeginTransaction*

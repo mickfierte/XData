@@ -115,7 +115,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.Dynamic.html">XData.Mapping.Dynamic</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Mapping_Dynamic_XDataMapping_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class XDataMapping</code></pre>
@@ -132,6 +132,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IRepositoryStructure&lt;T&gt; CustomMapping&lt;T&gt;()
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -265,6 +266,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IQueryStructure GetStructure&lt;T&gt;(string context = null)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

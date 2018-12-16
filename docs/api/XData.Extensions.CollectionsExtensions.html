@@ -116,7 +116,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Extensions.html">XData.Extensions</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Extensions_CollectionsExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class CollectionsExtensions</code></pre>
@@ -384,6 +384,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool HasSameValuesAs&lt;TKey, TValue&gt;(this ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; source, ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; other)
+
     where TValue : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -456,6 +457,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool HasSameValuesAs&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; source, IDictionary&lt;TKey, TValue&gt; other)
+
     where TValue : IEquatable&lt;TValue&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -566,7 +568,7 @@
   
   
   <a id="XData_Extensions_CollectionsExtensions_RemoveAll_" data-uid="XData.Extensions.CollectionsExtensions.RemoveAll*"></a>
-  <h4 id="XData_Extensions_CollectionsExtensions_RemoveAll__2_System_Collections_Concurrent_ConcurrentDictionary___0___1__System_Func___0_System_Boolean__" data-uid="XData.Extensions.CollectionsExtensions.RemoveAll``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},System.Func{``0,System.Boolean})">RemoveAll&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Func&lt;TKey, Boolean&gt;)</h4>
+  <h4 id="XData_Extensions_CollectionsExtensions_RemoveAll__2_ConcurrentDictionary___0___1__System_Func___0_System_Boolean__" data-uid="XData.Extensions.CollectionsExtensions.RemoveAll``2(ConcurrentDictionary{``0,``1},System.Func{``0,System.Boolean})">RemoveAll&lt;TKey, TValue&gt;(ConcurrentDictionary&lt;TKey, TValue&gt;, Func&lt;TKey, Boolean&gt;)</h4>
   <div class="markdown level1 summary"><p>Remove all elements matched predicate</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -585,7 +587,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.concurrent.concurrentdictionary-2">ConcurrentDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><span class="xref">ConcurrentDictionary</span>&lt;TKey, TValue&gt;</td>
         <td><span class="parametername">collection</span></td>
         <td><p>Concurrent dictionary</p>
 </td>
@@ -833,6 +835,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SortedList&lt;TKey, TValue&gt; ToSortedList&lt;TKey, TValue&gt;(this IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; pairs)
+
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -900,6 +903,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SortedList&lt;TKey, List&lt;TValue&gt;&gt; ToSortedList&lt;TKey, TValue&gt;(this IEnumerable&lt;IGrouping&lt;TKey, TValue&gt;&gt; groupings)
+
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1037,6 +1041,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static object TryGetValue&lt;TKey, TValue&gt;(this IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; source, TKey key)
+
     where TKey : IEquatable&lt;TKey&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

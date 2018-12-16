@@ -87,10 +87,11 @@
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.Dynamic.html">XData.Mapping.Dynamic</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IExternalLinkDefinitionAdapter&lt;T&gt;
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -121,6 +122,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IExternalLinkDefinition ExternalLink&lt;TChild&gt;(params Expression&lt;Func&lt;IExternalLinkAdapter&lt;T, TChild&gt;, IExternalLinkFlag&gt;&gt;[] linkFlags)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -183,6 +185,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IExternalLinkDefinition ExternalLink&lt;TChild&gt;(Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;TChild&gt;, object&gt;&gt; property, params Expression&lt;Func&lt;IExternalLinkAdapter&lt;T, TChild&gt;, IExternalLinkFlag&gt;&gt;[] linkFlags)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -251,6 +254,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IExternalLinkDefinition ExternalLink&lt;TChild&gt;(string property, params Expression&lt;Func&lt;IExternalLinkAdapter&lt;T, TChild&gt;, IExternalLinkFlag&gt;&gt;[] linkFlags)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

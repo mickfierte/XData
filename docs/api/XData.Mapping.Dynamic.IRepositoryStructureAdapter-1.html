@@ -98,10 +98,10 @@
       <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Field__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">IRepositoryStructureAdapter.Field&lt;TValue&gt;(Expression&lt;Func&lt;IRepositoryPropertyMappingAdapter, IStructureFlag&gt;&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">IRepositoryStructureAdapter.Expr&lt;TValue&gt;(String, DataExpressionType, String, DbType, Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[])</a>
+      <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">IRepositoryStructureAdapter.Expr&lt;TValue&gt;(String, DataExpressionType, String, DbType, Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[])</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">IRepositoryStructureAdapter.Expr&lt;TValue&gt;(String, Expression&lt;Func&lt;IQueryStructureAdapter, TValue&gt;&gt;, DbType, Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[])</a>
+      <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">IRepositoryStructureAdapter.Expr&lt;TValue&gt;(String, Expression&lt;Func&lt;IQueryStructureAdapter, TValue&gt;&gt;, DbType, Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[])</a>
     </div>
     <div>
       <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Ref__1_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">IRepositoryStructureAdapter.Ref&lt;TValue&gt;(String, String, Expression&lt;Func&lt;IRepositoryPropertyMappingAdapter, IStructureFlag&gt;&gt;[])</a>
@@ -111,7 +111,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.Dynamic.html">XData.Mapping.Dynamic</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IRepositoryStructureAdapter&lt;T&gt; : IRepositoryStructureAdapter where T : class, IDataObject, new()</code></pre>
@@ -143,6 +143,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Link&lt;TValue, TSource&gt; Link&lt;TValue, TSource&gt;(string sourceAlias, params Expression&lt;Func&lt;ILinkPropertyMappingAdapter&lt;T&gt;, IStructureFlag&gt;&gt;[] attributes)
+
     where TValue : IComparable&lt;TValue&gt; where TSource : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -216,6 +217,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Link&lt;TValue, TSource&gt; Link&lt;TValue, TSource&gt;(string sourceAlias, string fieldName, params Expression&lt;Func&lt;ILinkPropertyMappingAdapter&lt;T&gt;, IStructureFlag&gt;&gt;[] attributes)
+
     where TValue : IComparable&lt;TValue&gt; where TSource : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
