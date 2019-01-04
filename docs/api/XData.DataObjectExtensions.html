@@ -160,7 +160,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void AssignProperty&lt;T, TValue&gt;(this T obj, string prop, TValue value)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -240,7 +239,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string AsString&lt;T&gt;(this IQueryable&lt;T&gt; queryable)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -306,7 +304,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Callback&lt;T&gt;(this T obj, string message, ref byte[] data)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -380,7 +377,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool CheckState&lt;T&gt;(this T obj, DataObjectState state)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -470,7 +466,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Execute&lt;T&gt;(this T obj, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt; routine, IDictionary&lt;string, Action&lt;byte[]&gt;&gt; post = null, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; callback = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -578,7 +573,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Execute&lt;T&gt;(this T obj, string key, IDictionary&lt;string, Action&lt;byte[]&gt;&gt; post = null, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; callback = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -681,7 +675,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Execute&lt;T&gt;(this ICollection&lt;T&gt; objects, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt; routine, IDictionary&lt;string, Action&lt;byte[]&gt;&gt; post = null, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; callback = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -789,7 +782,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Execute&lt;T&gt;(this ICollection&lt;T&gt; objects, string key, IDictionary&lt;string, Action&lt;byte[]&gt;&gt; post = null, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; callback = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1164,7 +1156,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetParameter&lt;T, TRet&gt;(this T obj, Expression&lt;Func&lt;T, TRet&gt;&gt; param)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1254,7 +1245,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetParameter&lt;T, TRet&gt;(this T obj, string param)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1348,7 +1338,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetParameter&lt;T, TRet&gt;(this IDataQuery&lt;T&gt; query, Expression&lt;Func&lt;T, TRet&gt;&gt; param)
-
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1438,7 +1427,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; GetProperties&lt;T&gt;(this T obj, IEnumerable&lt;string&gt; props, DataVersion version = DataVersion.Actual)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1533,7 +1521,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; GetProperties&lt;T&gt;(this T obj, params string[] props)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1605,7 +1592,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; GetProperties&lt;T&gt;(this T obj, DataVersion version = DataVersion.Actual, params string[] props)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1770,7 +1756,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetProperty&lt;T, TRet&gt;(this T obj, Expression&lt;Func&lt;T, TRet&gt;&gt; prop)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1860,7 +1845,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetProperty&lt;T, TRet&gt;(this T obj, Expression&lt;Func&lt;T, TRet&gt;&gt; prop, DataVersion version)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1956,7 +1940,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IRepository&lt;T&gt; GetRepository&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2095,7 +2078,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;TRes&gt;(this IDataQuery query, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt; resultSetName)
-
     where TRes : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2184,7 +2166,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;TRes&gt;(this IDataQuery query, string resultSetName)
-
     where TRes : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2273,9 +2254,7 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;T, TRes&gt;(this T obj, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt; resultSetName)
-
     where T : class, IDataObject, new()
-
     where TRes : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2365,9 +2344,7 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;T, TRes&gt;(this IRepository&lt;T&gt; repository, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt; resultSetName)
-
     where T : class, IDataObject, new()
-
     where TRes : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2461,7 +2438,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static DataObjectState GetState&lt;T&gt;(this T obj)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2612,7 +2588,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsChanged&lt;T&gt;(this T obj, params Expression&lt;Func&lt;T, object&gt;&gt;[] prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2697,7 +2672,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsChanged&lt;T&gt;(this T obj, string prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2782,7 +2756,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsCleared&lt;T&gt;(this T obj, string prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2867,7 +2840,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsEmpty&lt;T&gt;(this T obj, Expression&lt;Func&lt;T, object&gt;&gt; prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2952,7 +2924,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsEmpty&lt;T&gt;(this T obj, string prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3037,7 +3008,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Lock&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3250,7 +3220,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Modify&lt;T&gt;(this T obj, params Action&lt;T&gt;[] actions)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3319,7 +3288,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void PostData&lt;T&gt;(this T obj, string message, Func&lt;byte[]&gt; data)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3378,7 +3346,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Refresh&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3441,7 +3408,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IRepository&lt;T&gt; Refresh&lt;T&gt;(this IRepository&lt;T&gt; source)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3504,7 +3470,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void SetAttachedHandlers&lt;T&gt;(this T obj, params AttachedHandler&lt;T&gt;[] handlers)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3557,7 +3522,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void SetCurrent&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3608,7 +3572,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T SetDeleted&lt;T&gt;(this T obj, bool setState)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3698,7 +3661,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static ICollection&lt;T&gt; SetDeleted&lt;T&gt;(this ICollection&lt;T&gt; collection, bool setState)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3788,7 +3750,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IRepository&lt;T&gt; SetFilterValue&lt;T, TRes&gt;(this IRepository&lt;T&gt; repository, Expression&lt;Func&lt;T, TRes&gt;&gt; propertyExpression, TRes filterValue)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3935,7 +3896,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Submit&lt;T&gt;(this T obj, DataSubmitFlag flag = DataSubmitFlag.None)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4008,7 +3968,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T[] ToArray&lt;T&gt;(this IRepository&lt;T&gt; repository, Expression&lt;Func&lt;T, bool&gt;&gt; predicate = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

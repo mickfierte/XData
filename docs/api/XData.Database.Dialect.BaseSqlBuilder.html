@@ -507,13 +507,13 @@ WARNING!  Mast to be filled in constructor!</p>
   
   
   <a id="XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command*"></a>
-  <h4 id="XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_System_Text_StringBuilder__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}},System.Boolean)">AddReturning2Command(ref StringBuilder, SortedList&lt;String, Tuple&lt;String, Boolean&gt;&gt;, Boolean)</h4>
+  <h4 id="XData_Database_Dialect_BaseSqlBuilder_AddReturning2Command_System_Text_StringBuilder__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___System_Boolean_System_Boolean_" data-uid="XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command(System.Text.StringBuilder@,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}},System.Boolean,System.Boolean)">AddReturning2Command(ref StringBuilder, SortedList&lt;String, Tuple&lt;String, Boolean&gt;&gt;, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"><p>Add returning auto increment identity column values statement in query</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void AddReturning2Command(ref StringBuilder sb, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt; identity, bool defaultValues = false)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void AddReturning2Command(ref StringBuilder sb, SortedList&lt;string, Tuple&lt;string, bool&gt;&gt; identity, bool defaultValues = false, bool close = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -540,7 +540,13 @@ WARNING!  Mast to be filled in constructor!</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">defaultValues</span></td>
-        <td><p>Insert default values</p>
+        <td><p>Insert default values flag</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">close</span></td>
+        <td><p>Close values parenthesis flag</p>
 </td>
       </tr>
     </tbody>

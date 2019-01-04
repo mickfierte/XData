@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_filter_subquery_links.md">
 
 <h4 id="subquery-links">Subquery links</h4>
-<p>Links with subqueries is used to link not table fields but properties of base class and subquery mapped class including <a href="../../mapping.html#hidden-properties">hidden properties</a>. To link with subquery or inner view used one of <em>SubqueryLink</em> method overload of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter.html">ISubqueryFilterAdapter</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html">ISubqueryFilterAdapter&lt;TDObj&gt;</a> or <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryFilterAdapter-2.html">ISubqueryFilterAdapter&lt;T,TDObj&gt;</a> depending by outer method signature and subquery declaration specific.</p>
+<p>Links with subqueries is used to link not table fields but properties of base class and subquery mapped class including <a href="../../mapping.html#hidden-properties">hidden properties</a>. To link with subquery or inner view used one of <em>SubqueryLink</em> method overload of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter.html">ISubqueryLinkAdapter</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter&lt;TDObj&gt;</a> or <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter-2.html">ISubqueryLinkAdapter&lt;T,TDObj&gt;</a> depending by outer method signature and subquery declaration specific.</p>
 <pre><code class="lang-csharp">...
 .InnerView&lt;DocBySpecType&gt;(&quot;ST&quot;, x =&gt; x.SubqueryLink(&quot;DocId&quot;))
 ...
