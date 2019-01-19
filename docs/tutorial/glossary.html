@@ -136,7 +136,17 @@
 <li><strong>NewGuid</strong> - new GUID value is generated</li>
 <li><strong>UserName</strong> - current user name. <a href="security.html">Security provider subsystem</a> using is required to fill this type of default value.</li>
 </ul>
-<h3 id="aggregation-type">Aggregation type</h3>
+<h3 id="default-value-features">Default value features</h3>
+<p><a class="xref" href="../api/XData.DefaultFeature.html">DefaultFeature</a> enumeration contains extension features used with default values of properties is assigned:</p>
+<ul>
+<li><strong>UseOnInsert</strong> - use default value on insert (by default, always applied)</li>
+<li><strong>UseOnUpdate</strong> - use default value on update</li>
+<li><strong>SkipWhenAssigned</strong> - skip insert into table when PK value assigned explicitly (see <a href="../tips/tips.html#default-value-features">here</a> for details)</li>
+<li><strong>UpdateWhenAssigned</strong> - change insert operation over table to update when PK value assigned explicitly (see <a href="../tips/tips.html#default-value-features">here</a> for details)
+Default features can be combined. For example: </li>
+</ul>
+<pre><code class="lang-csharp">DefaultFeature.UseOnUpdate | DefaultFeature.SkipWhenAssigned
+</code></pre><h3 id="aggregation-type">Aggregation type</h3>
 <p><a class="xref" href="../api/XData.DataGrouping.html">DataGrouping</a> enumeration contains data aggregation functions used inside grouped data source:</p>
 <ul>
 <li><strong>None</strong> - mapped field or SQL expression is one of data source grouped by.</li>

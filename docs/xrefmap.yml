@@ -328,6 +328,9 @@ references:
 - uid: tips_custom_sql.md
   name: Call custom SQL code
   href: tips/custom_sql.html
+- uid: tips_default_features.md
+  name: Default value features
+  href: tips/default_features.html
 - uid: tips_dictionary.md
   name: Using dictionaries
   href: tips/dictionary.html
@@ -3250,12 +3253,12 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.GetExprSize
   nameWithType: BaseSqlBuilder.GetExprSize
-- uid: XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String)
-  name: GetInsertQuery(IDataStructure, IDataObject, String)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetInsertQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String)
-  fullName: XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure, XData.IDataObject, System.String)
-  nameWithType: BaseSqlBuilder.GetInsertQuery(IDataStructure, IDataObject, String)
+- uid: XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String,System.Boolean)
+  name: GetInsertQuery(IDataStructure, IDataObject, String, Boolean)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetInsertQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_System_Boolean_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String,System.Boolean)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure, XData.IDataObject, System.String, System.Boolean)
+  nameWithType: BaseSqlBuilder.GetInsertQuery(IDataStructure, IDataObject, String, Boolean)
 - uid: XData.Database.Dialect.BaseSqlBuilder.GetInsertQuery*
   name: GetInsertQuery
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetInsertQuery_
@@ -5963,19 +5966,6 @@ references:
   commentId: T:XData.DataSource.Structure.Field
   fullName: XData.DataSource.Structure.Field
   nameWithType: Field
-- uid: XData.DataSource.Structure.Field.AlwaysUseDefault
-  name: AlwaysUseDefault
-  href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_AlwaysUseDefault
-  commentId: P:XData.DataSource.Structure.Field.AlwaysUseDefault
-  fullName: XData.DataSource.Structure.Field.AlwaysUseDefault
-  nameWithType: Field.AlwaysUseDefault
-- uid: XData.DataSource.Structure.Field.AlwaysUseDefault*
-  name: AlwaysUseDefault
-  href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_AlwaysUseDefault_
-  commentId: Overload:XData.DataSource.Structure.Field.AlwaysUseDefault
-  isSpec: "True"
-  fullName: XData.DataSource.Structure.Field.AlwaysUseDefault
-  nameWithType: Field.AlwaysUseDefault
 - uid: XData.DataSource.Structure.Field.Clone
   name: Clone()
   href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_Clone
@@ -5989,6 +5979,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.Field.Clone
   nameWithType: Field.Clone
+- uid: XData.DataSource.Structure.Field.DefaultFeature
+  name: DefaultFeature
+  href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_DefaultFeature
+  commentId: P:XData.DataSource.Structure.Field.DefaultFeature
+  fullName: XData.DataSource.Structure.Field.DefaultFeature
+  nameWithType: Field.DefaultFeature
+- uid: XData.DataSource.Structure.Field.DefaultFeature*
+  name: DefaultFeature
+  href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_DefaultFeature_
+  commentId: Overload:XData.DataSource.Structure.Field.DefaultFeature
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.Field.DefaultFeature
+  nameWithType: Field.DefaultFeature
 - uid: XData.DataSource.Structure.Field.DefaultType
   name: DefaultType
   href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_DefaultType
@@ -7684,19 +7687,19 @@ references:
   commentId: T:XData.DataSource.Structure.IField
   fullName: XData.DataSource.Structure.IField
   nameWithType: IField
-- uid: XData.DataSource.Structure.IField.AlwaysUseDefault
-  name: AlwaysUseDefault
-  href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_AlwaysUseDefault
-  commentId: P:XData.DataSource.Structure.IField.AlwaysUseDefault
-  fullName: XData.DataSource.Structure.IField.AlwaysUseDefault
-  nameWithType: IField.AlwaysUseDefault
-- uid: XData.DataSource.Structure.IField.AlwaysUseDefault*
-  name: AlwaysUseDefault
-  href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_AlwaysUseDefault_
-  commentId: Overload:XData.DataSource.Structure.IField.AlwaysUseDefault
+- uid: XData.DataSource.Structure.IField.DefaultFeature
+  name: DefaultFeature
+  href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_DefaultFeature
+  commentId: P:XData.DataSource.Structure.IField.DefaultFeature
+  fullName: XData.DataSource.Structure.IField.DefaultFeature
+  nameWithType: IField.DefaultFeature
+- uid: XData.DataSource.Structure.IField.DefaultFeature*
+  name: DefaultFeature
+  href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_DefaultFeature_
+  commentId: Overload:XData.DataSource.Structure.IField.DefaultFeature
   isSpec: "True"
-  fullName: XData.DataSource.Structure.IField.AlwaysUseDefault
-  nameWithType: IField.AlwaysUseDefault
+  fullName: XData.DataSource.Structure.IField.DefaultFeature
+  nameWithType: IField.DefaultFeature
 - uid: XData.DataSource.Structure.IField.DefaultType
   name: DefaultType
   href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_DefaultType
@@ -9115,6 +9118,36 @@ references:
   commentId: F:XData.DateDiffKind.Years
   fullName: XData.DateDiffKind.Years
   nameWithType: DateDiffKind.Years
+- uid: XData.DefaultFeature
+  name: DefaultFeature
+  href: api/XData.DefaultFeature.html
+  commentId: T:XData.DefaultFeature
+  fullName: XData.DefaultFeature
+  nameWithType: DefaultFeature
+- uid: XData.DefaultFeature.SkipWhenAssigned
+  name: SkipWhenAssigned
+  href: api/XData.DefaultFeature.html#XData_DefaultFeature_SkipWhenAssigned
+  commentId: F:XData.DefaultFeature.SkipWhenAssigned
+  fullName: XData.DefaultFeature.SkipWhenAssigned
+  nameWithType: DefaultFeature.SkipWhenAssigned
+- uid: XData.DefaultFeature.UpdateWhenAssigned
+  name: UpdateWhenAssigned
+  href: api/XData.DefaultFeature.html#XData_DefaultFeature_UpdateWhenAssigned
+  commentId: F:XData.DefaultFeature.UpdateWhenAssigned
+  fullName: XData.DefaultFeature.UpdateWhenAssigned
+  nameWithType: DefaultFeature.UpdateWhenAssigned
+- uid: XData.DefaultFeature.UseOnInsert
+  name: UseOnInsert
+  href: api/XData.DefaultFeature.html#XData_DefaultFeature_UseOnInsert
+  commentId: F:XData.DefaultFeature.UseOnInsert
+  fullName: XData.DefaultFeature.UseOnInsert
+  nameWithType: DefaultFeature.UseOnInsert
+- uid: XData.DefaultFeature.UseOnUpdate
+  name: UseOnUpdate
+  href: api/XData.DefaultFeature.html#XData_DefaultFeature_UseOnUpdate
+  commentId: F:XData.DefaultFeature.UseOnUpdate
+  fullName: XData.DefaultFeature.UseOnUpdate
+  nameWithType: DefaultFeature.UseOnUpdate
 - uid: XData.DefaultType
   name: DefaultType
   href: api/XData.DefaultType.html
@@ -12863,12 +12896,12 @@ references:
   isSpec: "True"
   fullName: XData.Interfaces.ISqlBuilder.GetDeleteQuery
   nameWithType: ISqlBuilder.GetDeleteQuery
-- uid: XData.Interfaces.ISqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String)
-  name: GetInsertQuery(IDataStructure, IDataObject, String)
-  href: api/XData.Interfaces.ISqlBuilder.html#XData_Interfaces_ISqlBuilder_GetInsertQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_
-  commentId: M:XData.Interfaces.ISqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String)
-  fullName: XData.Interfaces.ISqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure, XData.IDataObject, System.String)
-  nameWithType: ISqlBuilder.GetInsertQuery(IDataStructure, IDataObject, String)
+- uid: XData.Interfaces.ISqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String,System.Boolean)
+  name: GetInsertQuery(IDataStructure, IDataObject, String, Boolean)
+  href: api/XData.Interfaces.ISqlBuilder.html#XData_Interfaces_ISqlBuilder_GetInsertQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_System_Boolean_
+  commentId: M:XData.Interfaces.ISqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String,System.Boolean)
+  fullName: XData.Interfaces.ISqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure, XData.IDataObject, System.String, System.Boolean)
+  nameWithType: ISqlBuilder.GetInsertQuery(IDataStructure, IDataObject, String, Boolean)
 - uid: XData.Interfaces.ISqlBuilder.GetInsertQuery*
   name: GetInsertQuery
   href: api/XData.Interfaces.ISqlBuilder.html#XData_Interfaces_ISqlBuilder_GetInsertQuery_
@@ -13419,24 +13452,24 @@ references:
   fullName.vb: XData.IRepository(Of T).Current
   nameWithType: IRepository<T>.Current
   nameWithType.vb: IRepository(Of T).Current
-- uid: XData.IRepository`1.Dettach(System.Predicate{`0})
-  name: Dettach(Predicate<T>)
-  href: api/XData.IRepository-1.html#XData_IRepository_1_Dettach_System_Predicate__0__
-  commentId: M:XData.IRepository`1.Dettach(System.Predicate{`0})
-  name.vb: Dettach(Predicate(Of T))
-  fullName: XData.IRepository<T>.Dettach(System.Predicate<T>)
-  fullName.vb: XData.IRepository(Of T).Dettach(System.Predicate(Of T))
-  nameWithType: IRepository<T>.Dettach(Predicate<T>)
-  nameWithType.vb: IRepository(Of T).Dettach(Predicate(Of T))
-- uid: XData.IRepository`1.Dettach*
-  name: Dettach
-  href: api/XData.IRepository-1.html#XData_IRepository_1_Dettach_
-  commentId: Overload:XData.IRepository`1.Dettach
+- uid: XData.IRepository`1.Detach(System.Predicate{`0})
+  name: Detach(Predicate<T>)
+  href: api/XData.IRepository-1.html#XData_IRepository_1_Detach_System_Predicate__0__
+  commentId: M:XData.IRepository`1.Detach(System.Predicate{`0})
+  name.vb: Detach(Predicate(Of T))
+  fullName: XData.IRepository<T>.Detach(System.Predicate<T>)
+  fullName.vb: XData.IRepository(Of T).Detach(System.Predicate(Of T))
+  nameWithType: IRepository<T>.Detach(Predicate<T>)
+  nameWithType.vb: IRepository(Of T).Detach(Predicate(Of T))
+- uid: XData.IRepository`1.Detach*
+  name: Detach
+  href: api/XData.IRepository-1.html#XData_IRepository_1_Detach_
+  commentId: Overload:XData.IRepository`1.Detach
   isSpec: "True"
-  fullName: XData.IRepository<T>.Dettach
-  fullName.vb: XData.IRepository(Of T).Dettach
-  nameWithType: IRepository<T>.Dettach
-  nameWithType.vb: IRepository(Of T).Dettach
+  fullName: XData.IRepository<T>.Detach
+  fullName.vb: XData.IRepository(Of T).Detach
+  nameWithType: IRepository<T>.Detach
+  nameWithType.vb: IRepository(Of T).Detach
 - uid: XData.IRepository`1.Execute(System.String,System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IDictionary{System.String,System.Action{System.Byte[]}},System.Collections.Generic.IDictionary{System.String,System.Func{System.Byte[],System.Byte[]}})
   name: Execute(String, IEnumerable<T>, IDictionary<String, Action<Byte[]>>, IDictionary<String, Func<Byte[], Byte[]>>)
   href: api/XData.IRepository-1.html#XData_IRepository_1_Execute_System_String_System_Collections_Generic_IEnumerable__0__System_Collections_Generic_IDictionary_System_String_System_Action_System_Byte_____System_Collections_Generic_IDictionary_System_String_System_Func_System_Byte___System_Byte_____
@@ -14198,19 +14231,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.ColumnDefaultAttribute.ColumnDefaultAttribute
   nameWithType: ColumnDefaultAttribute.ColumnDefaultAttribute
-- uid: XData.Mapping.ColumnDefaultAttribute.AlwaysUseDefault
-  name: AlwaysUseDefault
-  href: api/XData.Mapping.ColumnDefaultAttribute.html#XData_Mapping_ColumnDefaultAttribute_AlwaysUseDefault
-  commentId: P:XData.Mapping.ColumnDefaultAttribute.AlwaysUseDefault
-  fullName: XData.Mapping.ColumnDefaultAttribute.AlwaysUseDefault
-  nameWithType: ColumnDefaultAttribute.AlwaysUseDefault
-- uid: XData.Mapping.ColumnDefaultAttribute.AlwaysUseDefault*
-  name: AlwaysUseDefault
-  href: api/XData.Mapping.ColumnDefaultAttribute.html#XData_Mapping_ColumnDefaultAttribute_AlwaysUseDefault_
-  commentId: Overload:XData.Mapping.ColumnDefaultAttribute.AlwaysUseDefault
+- uid: XData.Mapping.ColumnDefaultAttribute.DefaultFeature
+  name: DefaultFeature
+  href: api/XData.Mapping.ColumnDefaultAttribute.html#XData_Mapping_ColumnDefaultAttribute_DefaultFeature
+  commentId: P:XData.Mapping.ColumnDefaultAttribute.DefaultFeature
+  fullName: XData.Mapping.ColumnDefaultAttribute.DefaultFeature
+  nameWithType: ColumnDefaultAttribute.DefaultFeature
+- uid: XData.Mapping.ColumnDefaultAttribute.DefaultFeature*
+  name: DefaultFeature
+  href: api/XData.Mapping.ColumnDefaultAttribute.html#XData_Mapping_ColumnDefaultAttribute_DefaultFeature_
+  commentId: Overload:XData.Mapping.ColumnDefaultAttribute.DefaultFeature
   isSpec: "True"
-  fullName: XData.Mapping.ColumnDefaultAttribute.AlwaysUseDefault
-  nameWithType: ColumnDefaultAttribute.AlwaysUseDefault
+  fullName: XData.Mapping.ColumnDefaultAttribute.DefaultFeature
+  nameWithType: ColumnDefaultAttribute.DefaultFeature
 - uid: XData.Mapping.ColumnDefaultAttribute.DefaultSource
   name: DefaultSource
   href: api/XData.Mapping.ColumnDefaultAttribute.html#XData_Mapping_ColumnDefaultAttribute_DefaultSource
@@ -16374,22 +16407,22 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter(Of T, TValue).Default(XData.DefaultType, TValue)
   nameWithType: IRepositoryPropertyMappingAdapter<T, TValue>.Default(DefaultType, TValue)
   nameWithType.vb: IRepositoryPropertyMappingAdapter(Of T, TValue).Default(DefaultType, TValue)
-- uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default(XData.DefaultType,`1,System.Boolean)
-  name: Default(DefaultType, TValue, Boolean)
-  href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_System_Boolean_
-  commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default(XData.DefaultType,`1,System.Boolean)
-  fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter<T, TValue>.Default(XData.DefaultType, TValue, System.Boolean)
-  fullName.vb: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter(Of T, TValue).Default(XData.DefaultType, TValue, System.Boolean)
-  nameWithType: IRepositoryPropertyMappingAdapter<T, TValue>.Default(DefaultType, TValue, Boolean)
-  nameWithType.vb: IRepositoryPropertyMappingAdapter(Of T, TValue).Default(DefaultType, TValue, Boolean)
-- uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default(XData.DefaultType,System.Boolean)
-  name: Default(DefaultType, Boolean)
-  href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_System_Boolean_
-  commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default(XData.DefaultType,System.Boolean)
-  fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter<T, TValue>.Default(XData.DefaultType, System.Boolean)
-  fullName.vb: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter(Of T, TValue).Default(XData.DefaultType, System.Boolean)
-  nameWithType: IRepositoryPropertyMappingAdapter<T, TValue>.Default(DefaultType, Boolean)
-  nameWithType.vb: IRepositoryPropertyMappingAdapter(Of T, TValue).Default(DefaultType, Boolean)
+- uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default(XData.DefaultType,`1,XData.DefaultFeature)
+  name: Default(DefaultType, TValue, DefaultFeature)
+  href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_XData_DefaultFeature_
+  commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default(XData.DefaultType,`1,XData.DefaultFeature)
+  fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter<T, TValue>.Default(XData.DefaultType, TValue, XData.DefaultFeature)
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter(Of T, TValue).Default(XData.DefaultType, TValue, XData.DefaultFeature)
+  nameWithType: IRepositoryPropertyMappingAdapter<T, TValue>.Default(DefaultType, TValue, DefaultFeature)
+  nameWithType.vb: IRepositoryPropertyMappingAdapter(Of T, TValue).Default(DefaultType, TValue, DefaultFeature)
+- uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default(XData.DefaultType,XData.DefaultFeature)
+  name: Default(DefaultType, DefaultFeature)
+  href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_XData_DefaultFeature_
+  commentId: M:XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default(XData.DefaultType,XData.DefaultFeature)
+  fullName: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter<T, TValue>.Default(XData.DefaultType, XData.DefaultFeature)
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter(Of T, TValue).Default(XData.DefaultType, XData.DefaultFeature)
+  nameWithType: IRepositoryPropertyMappingAdapter<T, TValue>.Default(DefaultType, DefaultFeature)
+  nameWithType.vb: IRepositoryPropertyMappingAdapter(Of T, TValue).Default(DefaultType, DefaultFeature)
 - uid: XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter`2.Default*
   name: Default
   href: api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_
@@ -19112,19 +19145,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.PropertyDefaultAttribute.PropertyDefaultAttribute
   nameWithType: PropertyDefaultAttribute.PropertyDefaultAttribute
-- uid: XData.Mapping.PropertyDefaultAttribute.AlwaysUseDefault
-  name: AlwaysUseDefault
-  href: api/XData.Mapping.PropertyDefaultAttribute.html#XData_Mapping_PropertyDefaultAttribute_AlwaysUseDefault
-  commentId: P:XData.Mapping.PropertyDefaultAttribute.AlwaysUseDefault
-  fullName: XData.Mapping.PropertyDefaultAttribute.AlwaysUseDefault
-  nameWithType: PropertyDefaultAttribute.AlwaysUseDefault
-- uid: XData.Mapping.PropertyDefaultAttribute.AlwaysUseDefault*
-  name: AlwaysUseDefault
-  href: api/XData.Mapping.PropertyDefaultAttribute.html#XData_Mapping_PropertyDefaultAttribute_AlwaysUseDefault_
-  commentId: Overload:XData.Mapping.PropertyDefaultAttribute.AlwaysUseDefault
+- uid: XData.Mapping.PropertyDefaultAttribute.DefaultFeature
+  name: DefaultFeature
+  href: api/XData.Mapping.PropertyDefaultAttribute.html#XData_Mapping_PropertyDefaultAttribute_DefaultFeature
+  commentId: P:XData.Mapping.PropertyDefaultAttribute.DefaultFeature
+  fullName: XData.Mapping.PropertyDefaultAttribute.DefaultFeature
+  nameWithType: PropertyDefaultAttribute.DefaultFeature
+- uid: XData.Mapping.PropertyDefaultAttribute.DefaultFeature*
+  name: DefaultFeature
+  href: api/XData.Mapping.PropertyDefaultAttribute.html#XData_Mapping_PropertyDefaultAttribute_DefaultFeature_
+  commentId: Overload:XData.Mapping.PropertyDefaultAttribute.DefaultFeature
   isSpec: "True"
-  fullName: XData.Mapping.PropertyDefaultAttribute.AlwaysUseDefault
-  nameWithType: PropertyDefaultAttribute.AlwaysUseDefault
+  fullName: XData.Mapping.PropertyDefaultAttribute.DefaultFeature
+  nameWithType: PropertyDefaultAttribute.DefaultFeature
 - uid: XData.Mapping.PropertyDefaultAttribute.DefaultSource
   name: DefaultSource
   href: api/XData.Mapping.PropertyDefaultAttribute.html#XData_Mapping_PropertyDefaultAttribute_DefaultSource

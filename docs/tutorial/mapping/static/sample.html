@@ -140,10 +140,10 @@
             PropertyDefault(DefaultType.AutoIncrement)]
         public long Generation { get { return this.GetProperty(x =&gt; x.Generation); } }
         [Property(&quot;D&quot;),
-            PropertyDefault(DefaultType.CurrentDateTime, AlwaysUseDefault = true)]
+            PropertyDefault(DefaultType.CurrentDateTime, DefaultFeature = DefaultFeature.UseOnUpdate)]
         public DateTime Changed { get { return this.GetProperty(x =&gt; x.Changed); } }
         [Property(&quot;D&quot;),
-            PropertyDefault(DefaultType.UserName, AlwaysUseDefault = true)]
+            PropertyDefault(DefaultType.UserName, DefaultFeature = DefaultFeature.UseOnUpdate)]
         public string Author { get { return this.GetProperty(x =&gt; x.Author); } }
         [Property,
             PropertyExpression(&quot;A&quot;, DataExpressionType.SubQuery, DbType.Decimal, 

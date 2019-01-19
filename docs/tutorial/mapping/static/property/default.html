@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_property_default.md">
 
 <h4 id="property-default-value">Property default value</h4>
-<p>To set default value of property with static mapping, use <a class="xref" href="../../../../api/XData.Mapping.PropertyDefaultAttribute.html">PropertyDefaultAttribute</a> with parameters: <em>DefaultSource</em> - <a href="../../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultSource</em>, <em>AlwaysUseDefault</em> - optional, default is <strong>false</strong>, default value will be applyed when record inserted, and when record is updated too.</p>
+<p>To set default value of property with static mapping, use <a class="xref" href="../../../../api/XData.Mapping.PropertyDefaultAttribute.html">PropertyDefaultAttribute</a> with parameters: <em>DefaultSource</em> - <a href="../../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultSource</em>, <em>DefaultFeature</em> - optional, default is <strong>DefaultFeature.UseOnInsert</strong>, default value assignment will be applied with some extended <a href="../../../glossary.html#default-value-features">features</a>.</p>
 <pre><code class="lang-csharp">[PropertyDefault(DefaultType.UserName, AlwaysUseDefault = true)]
 </code></pre></article>
           </div>

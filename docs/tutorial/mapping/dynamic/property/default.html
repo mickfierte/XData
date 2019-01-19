@@ -82,16 +82,14 @@
 <p>To set default value of property with dynamic mapping, use one of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html">IRepositoryPropertyMappingAdapter&lt;T, TValue&gt;</a> interface <em>Default</em> method overload:</p>
 <ul>
 <li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_">Default(DefaultType source)</a> - use with <em>DefaultType.AutoIncrement</em>, <em>DefaultType.CurrentDate</em>, <em>DefaultType.CurrentDateTime</em>, <em>DefaultType.CurrentDateTimeUtc</em>, <em>DefaultType.NewGuid</em>, <em>DefaultType.UserName</em> where default value asssigned data row on insert only</li>
-<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_System_Boolean_">Default(DefaultType source, bool alwaysUseDefault)</a> - use with <em>DefaultType.AutoIncrement</em>, <em>DefaultType.CurrentDate</em>, <em>DefaultType.CurrentDateTime</em>, <em>DefaultType.CurrentDateTimeUtc</em>, <em>DefaultType.NewGuid</em>, <em>DefaultType.UserName</em> where default value asssigned data row on insert or update</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_XData_DefaultFeature_">Default(DefaultType source, DefaultFeature features)</a> - use with <em>DefaultType.AutoIncrement</em>, <em>DefaultType.CurrentDate</em>, <em>DefaultType.CurrentDateTime</em>, <em>DefaultType.CurrentDateTimeUtc</em>, <em>DefaultType.NewGuid</em>, <em>DefaultType.UserName</em> where default value asssigned data row on insert or update</li>
 <li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_">Default(DefaultType source, TValue value)</a> - use with <em>DefaultType.Const</em> or <em>DefaultType.Variable</em> where default value asssigned data row on insert only</li>
-<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_System_Boolean_">Default(DefaultType source, TValue value, bool alwaysUseDefault)</a> - use with <em>DefaultType.Const</em> or <em>DefaultType.Variable</em> where default value asssigned data row on insert or update</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_XData_DefaultFeature_">Default(DefaultType source, TValue value, DefaultFeature features)</a> - use with <em>DefaultType.Const</em> or <em>DefaultType.Variable</em> where default value asssigned data row on insert or update</li>
 </ul>
-<div class="WARNING"><h5>Warning</h5><p>When default value type is boolean use third overload of function only! </p>
-</div>
 <pre><code class="lang-csharp">...
 .ReadOnlyProperty(x =&gt; x.Changed, 
     x =&gt; x.Field&lt;DateTime&gt;(&quot;D&quot;, string.Empty, 
-        z =&gt; z.Default(DefaultType.CurrentDateTime, true)))
+        z =&gt; z.Default(DefaultType.CurrentDateTime, DefaultFeature.UseOnUpdate)))
 ...                 
 </code></pre></article>
           </div>
