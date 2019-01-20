@@ -4274,6 +4274,12 @@ references:
   commentId: F:XData.Database.Dialect.SqlStringType.SequenceNextVal
   fullName: XData.Database.Dialect.SqlStringType.SequenceNextVal
   nameWithType: SqlStringType.SequenceNextVal
+- uid: XData.Database.Dialect.SqlStringType.SkipInsert
+  name: SkipInsert
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SkipInsert
+  commentId: F:XData.Database.Dialect.SqlStringType.SkipInsert
+  fullName: XData.Database.Dialect.SqlStringType.SkipInsert
+  nameWithType: SqlStringType.SkipInsert
 - uid: XData.Database.Dialect.SqlStringType.SqlParameter
   name: SqlParameter
   href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlParameter
@@ -5546,15 +5552,15 @@ references:
   isSpec: "True"
   fullName: XData.DataObjectExtensions.Submit
   nameWithType: DataObjectExtensions.Submit
-- uid: XData.DataObjectExtensions.Submit``1(``0,XData.DataSubmitFlag)
-  name: Submit<T>(T, DataSubmitFlag)
-  href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0_XData_DataSubmitFlag_
-  commentId: M:XData.DataObjectExtensions.Submit``1(``0,XData.DataSubmitFlag)
-  name.vb: Submit(Of T)(T, DataSubmitFlag)
-  fullName: XData.DataObjectExtensions.Submit<T>(T, XData.DataSubmitFlag)
-  fullName.vb: XData.DataObjectExtensions.Submit(Of T)(T, XData.DataSubmitFlag)
-  nameWithType: DataObjectExtensions.Submit<T>(T, DataSubmitFlag)
-  nameWithType.vb: DataObjectExtensions.Submit(Of T)(T, DataSubmitFlag)
+- uid: XData.DataObjectExtensions.Submit``1(``0,``0@,XData.DataSubmitFlag)
+  name: Submit<T>(T, out T, DataSubmitFlag)
+  href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0___0__XData_DataSubmitFlag_
+  commentId: M:XData.DataObjectExtensions.Submit``1(``0,``0@,XData.DataSubmitFlag)
+  name.vb: Submit(Of T)(T, ByRef T, DataSubmitFlag)
+  fullName: XData.DataObjectExtensions.Submit<T>(T, out T, XData.DataSubmitFlag)
+  fullName.vb: XData.DataObjectExtensions.Submit(Of T)(T, ByRef T, XData.DataSubmitFlag)
+  nameWithType: DataObjectExtensions.Submit<T>(T, out T, DataSubmitFlag)
+  nameWithType.vb: DataObjectExtensions.Submit(Of T)(T, ByRef T, DataSubmitFlag)
 - uid: XData.DataObjectExtensions.SubquerySources
   name: SubquerySources
   href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SubquerySources

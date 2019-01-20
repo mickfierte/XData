@@ -158,7 +158,7 @@ newInvoice.Submit();
     //property Source - is a large binary object (Lob) and assignment using += operator
     //is the same as Scan.Value = ...
     z =&gt; z.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString
-).Submit();
+).Submit(out _);
 </code></pre><p>Or <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Modify_XData_Mapping_Lob_System_Action_System_Byte____">Modify</a> method extension to change object data:</p>
 <pre><code class="lang-csharp">var invoice = dataScope.GetRepository&lt;Invoice&gt;()
     .SingleOrDefault(x =&gt; x.DocNumb.Like($&quot;%0{number}&quot;) &amp;&amp; x.DocStateCode == oldStateCode);
@@ -166,7 +166,7 @@ if (invoice == null) return true;
 return invoice.Modify(
         z =&gt; z.DocState += dataScope.GetDictionaryValue&lt;DocState&gt;(x =&gt; x.Code == newStateCode),
         z =&gt; z.Source.Modify(doc =&gt; doc.Element(&quot;invoice&quot;).Attribute(&quot;state&quot;).Value = newStateCode))
-    .Submit();
+    .Submit(out _);
 </code></pre><h3 id="delete">Delete</h3>
 <p>XData has ability to mark data object as deleted. Before submit changes this flag can be undone. Marking and rejecting the mark can be done with extension method of interface <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetDeleted__1___0_System_Boolean_">IDataObject.SetDeleted</a></p>
 <pre><code class="lang-csharp">invoice.SetDeleted(true); // mark data object for delete
@@ -175,12 +175,13 @@ invoice.SetDeleted(false); // undone delete mark
 ...
 //... and little more complex example:
 // set the delete flag and submit changes with submit success flag returning
-return invoice.SetDeleted(true).Submit(); 
+return invoice.SetDeleted(true).Submit(out _); 
 </code></pre><div class="TIP"><h5>Tip</h5><p>To delete a number of objects at once, it&#39;s a handy to use <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetDeleted__1_System_Collections_Generic_ICollection___0__System_Boolean_">ICollection&lt;T&gt;.SetDeleted</a> extension method.</p>
 </div>
 <h3 id="submit-changes">Submit changes</h3>
-<p>To submit changes can be used extension method of interface <em>IDataObject</em> <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0_XData_DataSubmitFlag_">Submit</a></p>
-<pre><code class="lang-csharp">newInvoice.Submit();
+<p>To submit changes can be used extension method of interface <em>IDataObject</em> <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0___0__XData_DataSubmitFlag_">Submit</a></p>
+<pre><code class="lang-csharp">newInvoice.Submit(out var invoice);
+var docTypeCode = invoice.DocTypeCode;
 </code></pre><p>To submit changes apllied to multiple data objects of the same type can be used <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Submit__0__XData_DataSubmitFlag_">IRepository&lt;T&gt;.Submit</a> method accepted (<em>IEnumerable&lt;T&gt;</em>) as one of parameters. When object is not changed this method will skip it while updating database.</p>
 </article>
           </div>
