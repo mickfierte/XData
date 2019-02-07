@@ -132,7 +132,7 @@ where x.UserName is not null&quot;;
 
 using (var dataScope = DataEngine.Value.NewDataScope(CoordComDb))
 {
-    return dataScope.FillTable(dataScope.Layer,
+    return dataScope.FillTable(
         new Query(getCoordComResourceStateChangesForCaseCommand, CommandType.Text,
             new QueryParam(&quot;@CaseFolderId&quot;, caseIdentity.CaseFolderId, DbType.Int32),
             new QueryParam(&quot;@CallCenterId&quot;, caseIdentity.CallCenterId, DbType.Int32),
