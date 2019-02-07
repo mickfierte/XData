@@ -91,36 +91,8 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">SecuritySession</span></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="XData.Interfaces.ISecuritySession.html">ISecuritySession</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Security.html">XData.Security</a></h6>
-  <h6><strong>Assembly</strong>: XData.Security.dll</h6>
+  <h6><strong>Assembly</strong>: XData.Security.docfx.dll</h6>
   <h5 id="XData_Security_SecuritySession_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class SecuritySession : ISecuritySession</code></pre>
@@ -253,7 +225,7 @@
   
   
   <a id="XData_Security_SecuritySession_Action_" data-uid="XData.Security.SecuritySession.Action*"></a>
-  <h4 id="XData_Security_SecuritySession_Action__1_System_Linq_Expressions_Expression_System_Func_XData_CustomLogic___0____" data-uid="XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{XData.CustomLogic{``0}}})">Action&lt;T&gt;(Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt;)</h4>
+  <h4 id="XData_Security_SecuritySession_Action__1_System_Linq_Expressions_Expression_System_Func_CustomLogic___0____" data-uid="XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{CustomLogic{``0}}})">Action&lt;T&gt;(Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Custom action name access helper</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -273,7 +245,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="XData.CustomLogic-1.html">CustomLogic</a>&lt;T&gt;&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<span class="xref">CustomLogic</span>&lt;T&gt;&gt;&gt;</td>
         <td><span class="parametername">expr</span></td>
         <td><p>Custom logic expression</p>
 </td>
@@ -309,21 +281,6 @@
         <td><span class="parametername">T</span></td>
         <td><p>Data object type</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -598,21 +555,6 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="XData_Security_SecuritySession_RegisterGrantedActions_" data-uid="XData.Security.SecuritySession.RegisterGrantedActions*"></a>
@@ -736,10 +678,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="XData.Interfaces.ISecuritySession.html">ISecuritySession</a>
-  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>

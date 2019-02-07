@@ -117,7 +117,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_IRepository_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IRepository : IDataQuery, IOrderedQueryable, IQueryable, IEnumerable, IDisposable</code></pre>
@@ -203,7 +203,7 @@
     </tbody>
   </table>
   <h5 id="XData_IRepository_FixedQuery_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Used to cache recordset once (at first call) and have an access to cached data multiple times</p>
+  <div class="markdown level1 remarks"><p>Used to cache record set once (at first call) and have an access to cached data multiple times</p>
 <p>Hint: Useful when needed to read the same data multiple times according dynamic rules and all records count approximately equal or less then requests count</p></div>
   <h5 id="XData_IRepository_FixedQuery_examples">Examples</h5>
   <pre><code class="cs"><p>var q = dataScope.GetRepository&lt;Some>().Where(x => x.SomeField == 1);</p>
@@ -266,12 +266,12 @@
 <p>Hint: Use manual repositories to build logic filled repositories</p>
 <p>Hint: Use manual repositories as mock repositories for testing</p>
 <p>Hint: Object attaching (see <a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0____">Attach(T, DataObjectState, IEnumerable&lt;KeyValuePair&lt;String, Object&gt;&gt;, AttachedHandler&lt;T&gt;[])</a>) set Manual property to True automatically</p>
-<p>WARNING!  Dettach objects (see <a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Dettach_System_Predicate__0__">Dettach(Predicate&lt;T&gt;)</a>) NOT set Manual property to False automatically!</p>
+<p>WARNING!  Detach objects (see <a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Detach_System_Predicate__0__">Detach(Predicate&lt;T&gt;)</a>) NOT set Manual property to False automatically!</p>
 </div>
   <h5 id="XData_IRepository_Manual_seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0____">Attach(T, DataObjectState, IEnumerable&lt;KeyValuePair&lt;String, Object&gt;&gt;, AttachedHandler&lt;T&gt;[])</a></div>
-      <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Dettach_System_Predicate__0__">Dettach(Predicate&lt;T&gt;)</a></div>
+      <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Detach_System_Predicate__0__">Detach(Predicate&lt;T&gt;)</a></div>
       <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_SetAttachedHandlers__0__XData_AttachedHandler__0____">SetAttachedHandlers(ref T, AttachedHandler&lt;T&gt;[])</a></div>
       <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_SetAttachedHandlers_XData_RepositoryAttachedHandler__0____">SetAttachedHandlers(RepositoryAttachedHandler&lt;T&gt;[])</a></div>
   </div>

@@ -86,14 +86,8 @@
   <div class="markdown level0 summary"><p>Field interface</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable.clone#System_ICloneable_Clone">ICloneable.Clone()</a>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.DataSource.Structure.html">XData.DataSource.Structure</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_DataSource_Structure_IField_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IField : ICloneable</code></pre>
@@ -102,14 +96,14 @@
   </h3>
   
   
-  <a id="XData_DataSource_Structure_IField_AlwaysUseDefault_" data-uid="XData.DataSource.Structure.IField.AlwaysUseDefault*"></a>
-  <h4 id="XData_DataSource_Structure_IField_AlwaysUseDefault" data-uid="XData.DataSource.Structure.IField.AlwaysUseDefault">AlwaysUseDefault</h4>
-  <div class="markdown level1 summary"><p>Always use the default value (also when updating)</p>
+  <a id="XData_DataSource_Structure_IField_DefaultFeature_" data-uid="XData.DataSource.Structure.IField.DefaultFeature*"></a>
+  <h4 id="XData_DataSource_Structure_IField_DefaultFeature" data-uid="XData.DataSource.Structure.IField.DefaultFeature">DefaultFeature</h4>
+  <div class="markdown level1 summary"><p>Default extended features</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool AlwaysUseDefault { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">DefaultFeature DefaultFeature { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +115,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="XData.DefaultFeature.html">DefaultFeature</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -515,7 +509,59 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td><span class="xref">DbType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_DataSource_Structure_IField_UpdateWithExprText_" data-uid="XData.DataSource.Structure.IField.UpdateWithExprText*"></a>
+  <h4 id="XData_DataSource_Structure_IField_UpdateWithExprText" data-uid="XData.DataSource.Structure.IField.UpdateWithExprText">UpdateWithExprText</h4>
+  <div class="markdown level1 summary"><p>Update source expression text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string UpdateWithExprText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_DataSource_Structure_IField_UpdateWithExprType_" data-uid="XData.DataSource.Structure.IField.UpdateWithExprType*"></a>
+  <h4 id="XData_DataSource_Structure_IField_UpdateWithExprType" data-uid="XData.DataSource.Structure.IField.UpdateWithExprType">UpdateWithExprType</h4>
+  <div class="markdown level1 summary"><p>Update source expression type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DataExpressionType UpdateWithExprType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataExpressionType.html">DataExpressionType</a></td>
         <td></td>
       </tr>
     </tbody>

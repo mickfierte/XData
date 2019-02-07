@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IRepositoryPropertyMappingAdapter
+    <title>Class ColumnUpdateWithAttribute
    | XData website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IRepositoryPropertyMappingAdapter
+    <meta name="title" content="Class ColumnUpdateWithAttribute
    | XData website ">
     <meta name="generator" content="docfx 2.40.4.0">
     
@@ -78,49 +78,132 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter">
+            <article class="content wrap" id="_content" data-uid="XData.Mapping.ColumnUpdateWithAttribute">
   
   
-  <h1 id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter" class="text-break">Interface IRepositoryPropertyMappingAdapter
+  <h1 id="XData_Mapping_ColumnUpdateWithAttribute" data-uid="XData.Mapping.ColumnUpdateWithAttribute" class="text-break">Class ColumnUpdateWithAttribute
   </h1>
-  <div class="markdown level0 summary"><p>Repository property mapping adapter</p>
+  <div class="markdown level0 summary"><p>Column update source expression attribute</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a></div>
+    <div class="level2"><span class="xref">ColumnUpdateWithAttribute</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_Key">IPropertyMappingAdapter.Key()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.equals#System_Attribute_Equals_System_Object_">Attribute.Equals(Object)</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_Group_XData_DataGrouping_">IPropertyMappingAdapter.Group(DataGrouping)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.gethashcode#System_Attribute_GetHashCode">Attribute.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_Group_System_Int32_">IPropertyMappingAdapter.Group(Int32)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_Hidden">IPropertyMappingAdapter.Hidden()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.Dynamic.html">XData.Mapping.Dynamic</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.html">XData.Mapping</a></h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
+  <h5 id="XData_Mapping_ColumnUpdateWithAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IRepositoryPropertyMappingAdapter : IPropertyMappingAdapter</code></pre>
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+public sealed class ColumnUpdateWithAttribute : Attribute</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h5 id="XData_Mapping_ColumnUpdateWithAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Used when <a class="xref" href="XData.Mapping.ColumnAttribute.html">ColumnAttribute</a> value must to be updated with expression (<a class="xref" href="XData.DataExpressionType.html#XData_DataExpressionType_PlainSql">PlainSql</a> or <a class="xref" href="XData.DataExpressionType.html#XData_DataExpressionType_SubQuery">SubQuery</a>) result according <a class="xref" href="XData.Mapping.ColumnUpdateWithAttribute.html#XData_Mapping_ColumnUpdateWithAttribute_ExprType">ExprType</a></p>
+</div>
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_ConcurrencyToken_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.ConcurrencyToken*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_ConcurrencyToken" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.ConcurrencyToken">ConcurrencyToken()</h4>
-  <div class="markdown level1 summary"><p>Property is concurrency token flag attribute</p>
+  <a id="XData_Mapping_ColumnUpdateWithAttribute__ctor_" data-uid="XData.Mapping.ColumnUpdateWithAttribute.#ctor*"></a>
+  <h4 id="XData_Mapping_ColumnUpdateWithAttribute__ctor_System_String_System_String_XData_DataExpressionType_" data-uid="XData.Mapping.ColumnUpdateWithAttribute.#ctor(System.String,System.String,XData.DataExpressionType)">ColumnUpdateWithAttribute(String, String, DataExpressionType)</h4>
+  <div class="markdown level1 summary"><p>Column update source expression attribute</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IStructureFlag ConcurrencyToken()</code></pre>
+    <pre><code class="lang-csharp hljs">public ColumnUpdateWithAttribute(string propertyName, string exprText, DataExpressionType exprType = DataExpressionType.PlainSql)</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">exprText</span></td>
+        <td><p>Expression text</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.DataExpressionType.html">DataExpressionType</a></td>
+        <td><span class="parametername">exprType</span></td>
+        <td><p>Expression type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Property name cannot be null or empty string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Expression text cannot be null or empty string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="XData_Mapping_ColumnUpdateWithAttribute_ExprText_" data-uid="XData.Mapping.ColumnUpdateWithAttribute.ExprText*"></a>
+  <h4 id="XData_Mapping_ColumnUpdateWithAttribute_ExprText" data-uid="XData.Mapping.ColumnUpdateWithAttribute.ExprText">ExprText</h4>
+  <div class="markdown level1 summary"><p>Expression text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExprText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -130,41 +213,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IStructureFlag.html">IStructureFlag</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="XData_Mapping_ColumnUpdateWithAttribute_ExprText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><a class="xref" href="XData.DataExpressionType.html#XData_DataExpressionType_PlainSql">PlainSql</a> expression text is Sql expression or <a class="xref" href="XData.Mapping.SqlExpressionAttribute.html">SqlExpressionAttribute</a> name</p>
+<p><a class="xref" href="XData.DataExpressionType.html#XData_DataExpressionType_SubQuery">SubQuery</a> expression text is <a class="xref" href="XData.Mapping.SubqueryAttribute.html#XData_Mapping_SubqueryAttribute_Alias">Alias</a></p>
+<p>WARNING!  Plain Sql expressions (see <a class="xref" href="XData.Mapping.ColumnUpdateWithAttribute.html#XData_Mapping_ColumnUpdateWithAttribute_ExprType">ExprType</a>) can use specific Sql dialect features! Data mapping may be not compatible with other database engines! Use <a class="xref" href="XData.Mapping.SqlExpressionAttribute.html">SqlExpressionAttribute</a> instead.</p></div>
   
   
-  <a id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType)">Default(DefaultType)</h4>
-  <div class="markdown level1 summary"><p>Default value mode attribute</p>
+  <a id="XData_Mapping_ColumnUpdateWithAttribute_ExprType_" data-uid="XData.Mapping.ColumnUpdateWithAttribute.ExprType*"></a>
+  <h4 id="XData_Mapping_ColumnUpdateWithAttribute_ExprType" data-uid="XData.Mapping.ColumnUpdateWithAttribute.ExprType">ExprType</h4>
+  <div class="markdown level1 summary"><p>Expression type</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IStructureFlag Default(DefaultType source)</code></pre>
+    <pre><code class="lang-csharp hljs">public DataExpressionType ExprType { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DefaultType.html">DefaultType</a></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Default value algorithm</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -174,194 +243,71 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IStructureFlag.html">IStructureFlag</a></td>
-        <td><p>Property description attribute</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_System_Boolean_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.Boolean)">Default(DefaultType, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Default value mode attribute</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IStructureFlag Default(DefaultType source, bool alwaysUseDefault)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DefaultType.html">DefaultType</a></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Default value algorithm</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">alwaysUseDefault</span></td>
-        <td><p>Use default value on update</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IStructureFlag.html">IStructureFlag</a></td>
-        <td><p>Property description attribute</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_System_Object_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.Object)">Default(DefaultType, Object)</h4>
-  <div class="markdown level1 summary"><p>Default value mode attribute</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IStructureFlag Default(DefaultType source, object value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DefaultType.html">DefaultType</a></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Default value algorithm</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>Default value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IStructureFlag.html">IStructureFlag</a></td>
-        <td><p>Property description attribute</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_Default_XData_DefaultType_System_Object_System_Boolean_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.Default(XData.DefaultType,System.Object,System.Boolean)">Default(DefaultType, Object, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Default value mode attribute</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IStructureFlag Default(DefaultType source, object value, bool alwaysUseDefault)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DefaultType.html">DefaultType</a></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Default value algorithm</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>Default value</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">alwaysUseDefault</span></td>
-        <td><p>Use default value on update</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IStructureFlag.html">IStructureFlag</a></td>
-        <td><p>Property description attribute</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_OuterFlag_" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.OuterFlag*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_OuterFlag" data-uid="XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter.OuterFlag">OuterFlag()</h4>
-  <div class="markdown level1 summary"><p>Property is outer join flag attribute</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IStructureFlag OuterFlag()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IStructureFlag.html">IStructureFlag</a></td>
+        <td><a class="xref" href="XData.DataExpressionType.html">DataExpressionType</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ColumnUpdateWithAttribute_ExprType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>WARNING!  Plain Sql expressions can use specific Sql dialect features! Data mapping may be not compatible with other database engines!</p></div>
+  <h5 id="XData_Mapping_ColumnUpdateWithAttribute_ExprType_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataExpressionType.html">DataExpressionType</a></div>
+  </div>
+  
+  
+  <a id="XData_Mapping_ColumnUpdateWithAttribute_PropertyName_" data-uid="XData.Mapping.ColumnUpdateWithAttribute.PropertyName*"></a>
+  <h4 id="XData_Mapping_ColumnUpdateWithAttribute_PropertyName" data-uid="XData.Mapping.ColumnUpdateWithAttribute.PropertyName">PropertyName</h4>
+  <div class="markdown level1 summary"><p>Property name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PropertyName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ColumnUpdateWithAttribute_PropertyName_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Mapping.ColumnAttribute.html">ColumnAttribute</a></div>
+  </div>
+  
+  
+  <a id="XData_Mapping_ColumnUpdateWithAttribute_TypeId_" data-uid="XData.Mapping.ColumnUpdateWithAttribute.TypeId*"></a>
+  <h4 id="XData_Mapping_ColumnUpdateWithAttribute_TypeId" data-uid="XData.Mapping.ColumnUpdateWithAttribute.TypeId">TypeId</h4>
+  <div class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object TypeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a> that is a unique identifier for the attribute.</p>
+</td>
       </tr>
     </tbody>
   </table>

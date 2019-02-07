@@ -156,7 +156,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_IRepository_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IRepository&lt;T&gt; : IDataQuery&lt;T&gt;, IOrderedQueryable&lt;T&gt;, IQueryable&lt;T&gt;, IEnumerable&lt;T&gt;, IRepository, IDataQuery, IOrderedQueryable, IQueryable, IEnumerable, IDisposable where T : class, IDataObject</code></pre>
@@ -419,7 +419,7 @@
   <h5 id="XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0_____seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">SetValue&lt;TKey, T&gt;</a>(TKey, T)</div>
-      <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Dettach_System_Predicate__0__">Dettach(Predicate&lt;T&gt;)</a></div>
+      <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Detach_System_Predicate__0__">Detach(Predicate&lt;T&gt;)</a></div>
   </div>
   
   
@@ -504,7 +504,7 @@
   <h5 id="XData_IRepository_1_AttachNewObjects_System_Collections_Generic_IEnumerable__0__XData_AttachedHandler__0_____seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">SetValue&lt;TKey, T&gt;</a>(TKey, T)</div>
-      <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Dettach_System_Predicate__0__">Dettach(Predicate&lt;T&gt;)</a></div>
+      <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Detach_System_Predicate__0__">Detach(Predicate&lt;T&gt;)</a></div>
   </div>
   
   
@@ -632,14 +632,14 @@
   </table>
   
   
-  <a id="XData_IRepository_1_Dettach_" data-uid="XData.IRepository`1.Dettach*"></a>
-  <h4 id="XData_IRepository_1_Dettach_System_Predicate__0__" data-uid="XData.IRepository`1.Dettach(System.Predicate{`0})">Dettach(Predicate&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Dettach virtual objects from repository</p>
+  <a id="XData_IRepository_1_Detach_" data-uid="XData.IRepository`1.Detach*"></a>
+  <h4 id="XData_IRepository_1_Detach_System_Predicate__0__" data-uid="XData.IRepository`1.Detach(System.Predicate{`0})">Detach(Predicate&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Detach virtual objects from repository</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; Dettach(Predicate&lt;T&gt; predicate)</code></pre>
+    <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; Detach(Predicate&lt;T&gt; predicate)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -696,10 +696,10 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_IRepository_1_Dettach_System_Predicate__0___seealso">See Also</h5>
+  <h5 id="XData_IRepository_1_Detach_System_Predicate__0___seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0____">Attach(T, DataObjectState, IEnumerable&lt;KeyValuePair&lt;String, Object&gt;&gt;, AttachedHandler&lt;T&gt;[])</a></div>
-      <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Dettach_System_Predicate__0__">Dettach(Predicate&lt;T&gt;)</a></div>
+      <div><a class="xref" href="XData.IRepository-1.html#XData_IRepository_1_Detach_System_Predicate__0__">Detach(Predicate&lt;T&gt;)</a></div>
   </div>
   
   
@@ -1365,7 +1365,7 @@
   </table>
   <h5 id="XData_IRepository_1_Submit__0__XData_DataSubmitFlag__seealso">See Also</h5>
   <div class="seealso">
-      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0_XData_DataSubmitFlag_">Submit&lt;T&gt;(T, DataSubmitFlag)</a></div>
+      <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0___0__XData_DataSubmitFlag_">Submit&lt;T&gt;(T, out T, DataSubmitFlag)</a></div>
   </div>
   
   
@@ -1758,7 +1758,7 @@
       <div><a class="xref" href="XData.IDataObject.html">IDataObject</a></div>
       <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_AsString__1_System_Linq_IQueryable___0__">AsString&lt;T&gt;</a>(<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;T&gt;)</div>
       <div><a class="xref" href="XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetRepository__1___0_">GetRepository&lt;T&gt;(T)</a></div>
-      <div><a class="xref" href="XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetRepository&lt;T&gt;(String, String, ISecuritySession, Variable[])</a></div>
+      <div><a class="xref" href="XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetRepository&lt;T&gt;(String, ISecuritySession, Variable[])</a></div>
   </div>
 </article>
           </div>

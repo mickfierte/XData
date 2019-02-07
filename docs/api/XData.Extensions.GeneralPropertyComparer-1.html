@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ISubqueryFilterAdapter&lt;T, TDObj&gt;
+    <title>Class GeneralPropertyComparer&lt;T&gt;
    | XData website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ISubqueryFilterAdapter&lt;T, TDObj&gt;
+    <meta name="title" content="Class GeneralPropertyComparer&lt;T&gt;
    | XData website ">
     <meta name="generator" content="docfx 2.40.4.0">
     
@@ -78,40 +78,51 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="XData.Mapping.Dynamic.ISubqueryFilterAdapter`2">
+            <article class="content wrap" id="_content" data-uid="XData.Extensions.GeneralPropertyComparer`1">
   
   
-  <h1 id="XData_Mapping_Dynamic_ISubqueryFilterAdapter_2" data-uid="XData.Mapping.Dynamic.ISubqueryFilterAdapter`2" class="text-break">Interface ISubqueryFilterAdapter&lt;T, TDObj&gt;
+  <h1 id="XData_Extensions_GeneralPropertyComparer_1" data-uid="XData.Extensions.GeneralPropertyComparer`1" class="text-break">Class GeneralPropertyComparer&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Subquery link filter description adapter</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">GeneralPropertyComparer&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;T&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html#XData_Mapping_Dynamic_ISubqueryFilterAdapter_1_SubqueryLink_System_Linq_Expressions_Expression_System_Func__0_System_Object___">ISubqueryFilterAdapter&lt;T&gt;.SubqueryLink(Expression&lt;Func&lt;T, Object&gt;&gt;)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html#XData_Mapping_Dynamic_ISubqueryFilterAdapter_1_SubqueryLink_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_String_">ISubqueryFilterAdapter&lt;T&gt;.SubqueryLink(Expression&lt;Func&lt;T, Object&gt;&gt;, String)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter.html#XData_Mapping_Dynamic_ISubqueryFilterAdapter_SubqueryLink_System_String_">ISubqueryFilterAdapter.SubqueryLink(String)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter.html#XData_Mapping_Dynamic_ISubqueryFilterAdapter_SubqueryLink_System_String_System_String_">ISubqueryFilterAdapter.SubqueryLink(String, String)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.IFilterAdapter.html#XData_Mapping_Dynamic_IFilterAdapter_Combination_System_String_XData_Combination_System_String_">IFilterAdapter.Combination(String, Combination, String)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.Dynamic.IFilterAdapter.html#XData_Mapping_Dynamic_IFilterAdapter_Combination_System_String_XData_Combination_">IFilterAdapter.Combination(String, Combination)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.Dynamic.html">XData.Mapping.Dynamic</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
-  <h5 id="XData_Mapping_Dynamic_ISubqueryFilterAdapter_2_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="XData.Extensions.html">XData.Extensions</a></h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
+  <h5 id="XData_Extensions_GeneralPropertyComparer_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISubqueryFilterAdapter&lt;T, TDObj&gt; : ISubqueryFilterAdapter&lt;T&gt;, ISubqueryFilterAdapter, IFilterAdapter where T : class where TDObj : class</code></pre>
+    <pre><code class="lang-csharp hljs">public class GeneralPropertyComparer&lt;T&gt; : IEqualityComparer&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,13 +135,36 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>Repository data object type</p>
-</td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="XData_Extensions_GeneralPropertyComparer_1__ctor_" data-uid="XData.Extensions.GeneralPropertyComparer`1.#ctor*"></a>
+  <h4 id="XData_Extensions_GeneralPropertyComparer_1__ctor_System_Func__0_System_Object____" data-uid="XData.Extensions.GeneralPropertyComparer`1.#ctor(System.Func{`0,System.Object}[])">GeneralPropertyComparer(Func&lt;T, Object&gt;[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GeneralPropertyComparer(Func&lt;T, object&gt;[] expr)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="parametername">TDObj</span></td>
-        <td><p>Subquery mapped type</p>
-</td>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;[]</td>
+        <td><span class="parametername">expr</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -138,14 +172,13 @@
   </h3>
   
   
-  <a id="XData_Mapping_Dynamic_ISubqueryFilterAdapter_2_SubqueryLink_" data-uid="XData.Mapping.Dynamic.ISubqueryFilterAdapter`2.SubqueryLink*"></a>
-  <h4 id="XData_Mapping_Dynamic_ISubqueryFilterAdapter_2_SubqueryLink_System_Linq_Expressions_Expression_System_Func__1_System_Object___" data-uid="XData.Mapping.Dynamic.ISubqueryFilterAdapter`2.SubqueryLink(System.Linq.Expressions.Expression{System.Func{`1,System.Object}})">SubqueryLink(Expression&lt;Func&lt;TDObj, Object&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Subquery link filter description</p>
-</div>
+  <a id="XData_Extensions_GeneralPropertyComparer_1_Equals_" data-uid="XData.Extensions.GeneralPropertyComparer`1.Equals*"></a>
+  <h4 id="XData_Extensions_GeneralPropertyComparer_1_Equals__0__0_" data-uid="XData.Extensions.GeneralPropertyComparer`1.Equals(`0,`0)">Equals(T, T)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IFilterDescription SubqueryLink(Expression&lt;Func&lt;TDObj, object&gt;&gt; subqueryProperty)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(T left, T right)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,10 +191,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TDObj, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
-        <td><span class="parametername">subqueryProperty</span></td>
-        <td><p>Subquery property name expression to link with</p>
-</td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -175,22 +212,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></td>
-        <td><p>Filter description</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="XData_Mapping_Dynamic_ISubqueryFilterAdapter_2_SubqueryLink_" data-uid="XData.Mapping.Dynamic.ISubqueryFilterAdapter`2.SubqueryLink*"></a>
-  <h4 id="XData_Mapping_Dynamic_ISubqueryFilterAdapter_2_SubqueryLink_System_Linq_Expressions_Expression_System_Func__1_System_Object___System_Linq_Expressions_Expression_System_Func__0_System_Object___" data-uid="XData.Mapping.Dynamic.ISubqueryFilterAdapter`2.SubqueryLink(System.Linq.Expressions.Expression{System.Func{`1,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">SubqueryLink(Expression&lt;Func&lt;TDObj, Object&gt;&gt;, Expression&lt;Func&lt;T, Object&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Subquery link filter description</p>
-</div>
+  <a id="XData_Extensions_GeneralPropertyComparer_1_GetHashCode_" data-uid="XData.Extensions.GeneralPropertyComparer`1.GetHashCode*"></a>
+  <h4 id="XData_Extensions_GeneralPropertyComparer_1_GetHashCode__0_" data-uid="XData.Extensions.GeneralPropertyComparer`1.GetHashCode(`0)">GetHashCode(T)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IFilterDescription SubqueryLink(Expression&lt;Func&lt;TDObj, object&gt;&gt; subqueryProperty, Expression&lt;Func&lt;T, object&gt;&gt; property)</code></pre>
+    <pre><code class="lang-csharp hljs">public int GetHashCode(T obj)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,16 +238,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TDObj, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
-        <td><span class="parametername">subqueryProperty</span></td>
-        <td><p>Subquery property name expression to link with</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
-        <td><span class="parametername">property</span></td>
-        <td><p>Base query property name expression to link with</p>
-</td>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -226,63 +254,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></td>
-        <td><p>Filter description</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="XData_Mapping_Dynamic_ISubqueryFilterAdapter_2_SubqueryLink_" data-uid="XData.Mapping.Dynamic.ISubqueryFilterAdapter`2.SubqueryLink*"></a>
-  <h4 id="XData_Mapping_Dynamic_ISubqueryFilterAdapter_2_SubqueryLink_System_Linq_Expressions_Expression_System_Func__1_System_Object___System_String_" data-uid="XData.Mapping.Dynamic.ISubqueryFilterAdapter`2.SubqueryLink(System.Linq.Expressions.Expression{System.Func{`1,System.Object}},System.String)">SubqueryLink(Expression&lt;Func&lt;TDObj, Object&gt;&gt;, String)</h4>
-  <div class="markdown level1 summary"><p>Subquery link filter description</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IFilterDescription SubqueryLink(Expression&lt;Func&lt;TDObj, object&gt;&gt; subqueryProperty, string property)</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">System.Collections.Generic.IEqualityComparer&lt;T&gt;</a>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TDObj, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
-        <td><span class="parametername">subqueryProperty</span></td>
-        <td><p>Subquery property name expression to link with</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">property</span></td>
-        <td><p>Base query property name to link with</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></td>
-        <td><p>Filter description</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>

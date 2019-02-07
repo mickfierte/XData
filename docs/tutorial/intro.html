@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Introduction | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Introduction | XData website ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="intro.md">
+<h2 id="introduction">Introduction</h2>
+
+<h3 id="why-and-when-you-need-xdata">Why and when You need XData?</h3>
+<ul>
+<li>Independence:<ul>
+<li>Business object hierarchy of Your application not depend XData object hierarchy.</li>
+<li>Database structure not dictate program object structure and vice versa.</li>
+<li>Database specific terms (primary key, foreign key, surrogate key value, concurrency token and so on) can be hidden from program object model due object mapping.</li>
+<li>XData base mapping concept based on one business object mapping with any number of data sources (tables, xml sources, subqueries, recursive trees and procedures) with not restricted recursion deep.</li>
+<li>Each of mapped business object can operate with hierarchically organized &quot;updatable tree&quot; of tables so business object changes can be stored in multiple linked tables at once. Complicated business objects can be created, updated and deleted with no aditional code more then mapping.</li>
+<li>Same mapping can be used over multiple RDBMS (with some restrictions).</li>
+<li>SQL dialect modules can be developed independedly from adapter modules developed over various ADO.Net providers used to access the same RDBMS.</li>
+<li>With ability to use XML data sources, temporary tables and procedure support, system can work using proprietary application database schemas where schema changes are not allowed.</li>
+<li>All technologically required tools (for example DI) can be integrated with XData, but You can choose Your favorite one independently without any dictate or double using it inside XData.</li>
+</ul>
+</li>
+<li>Functionality:<ul>
+<li>Full IQuariable and LINQ support.</li>
+<li>XData alowed to use SQL expressions as field data source.</li>
+<li>Calculated properties can be evaluated on .Net side.</li>
+<li><a href="https://en.wikipedia.org/wiki/Active_record_pattern">Active record</a> model of data access is supported.</li>
+<li>Fully declarative using of optimistic locking of data is provided.</li>
+<li>Pessimistic locking is allowed when it supported by RDBMS functionality.</li>
+<li>Your application over XData can be deployed in three-tier mode with data aware logic can be took out to the application server layer (only in full .Net Framework 4.0 or above for now).</li>
+<li>XData introduce data aware business object actions which can be used as in two-tier mode as in three-tier mode.</li>
+<li>.Net trigger like logic can be programmed over mapped business objects (not over single table!). This feature also can be deployed on application server layer in three-tier mode.</li>
+</ul>
+</li>
+<li>Usability<ul>
+<li>Human readable mapping structure with unambiguous correlation with resulting SQL query. Programmer can get query text to check query execution plan for optimization.</li>
+<li>Feature rich security subsystem over business object level can be simply implemented using separate NuGet package.</li>
+<li>Declarative realization of <a href="https://martinfowler.com/eaaCatalog/unitOfWork.html">Unit of Work</a> over business object level available when using separate NuGet package.</li>
+<li>Lazy loading of large objects (XML, BLOB...) is available from the box.</li>
+<li>Two modes of mapping (using attributes and LINQ style expressions) or their mixing can be used.</li>
+<li>Dynamic inplace read only queries it&#39;s a powerful tool to access data in complicated cases.</li>
+<li>Virtual data support. You can use database mocking ability for testing.</li>
+<li>You can debug three-tier XData application in two-tier mode.</li>
+<li>Attachable localization based on satellite assemblies ability can be used to localize XData internal messages to any languages You interested (only in full .Net Framework 4.0 or above for now).</li>
+</ul>
+</li>
+<li>Speed:<ul>
+<li>SQL optimization granted by human controlled mapping results.</li>
+<li>Code of XData is extremely optimized to speed with using profiler until no one internal code block is still marked &quot;hot&quot; over business logic and database access.</li>
+<li>Mapping structure caching. Cache can be reset by programmer.</li>
+<li>Data caching. Cache can be reset by programmer.</li>
+<li>SQL hints are supported to improve productivity in most complicated cases.</li>
+</ul>
+</li>
+</ul>
+<h3 id="is-any-restrictions-of-using-xdata-exists">Is any restrictions of using XData exists?</h3>
+<ul>
+<li>XData not supported <a href="https://social.technet.microsoft.com/wiki/contents/articles/35028.code-first-migrations-in-entity-framework.aspx">Code First</a> approach: Programmer or database administrator can write SQL script. This code is prodused by human, real (not artifical) intellect of professional... But still XData has ability to run this script over database using Custom SQL executing festure.</li>
+<li>XData not supported DDL: By the same logic as above, and with the same receipt of using.</li>
+<li>XData not supported <a href="https://social.technet.microsoft.com/wiki/contents/articles/48889.getting-started-with-entity-framework-core-database-first-development.aspx">Database First</a> approach: Now I&#39;ve no idea to provide the same independence level as announced above using this approach (may be in the future...).</li>
+<li>Powerfull, but complicated: Try it, simple things still are simple, more complecated is not as scary as they appear at first sight. But the power is never be useless.</li>
+<li>RDBMS SQL specific stataments: So many RDBMS specific statements. So many features realized in one only database system, or restricted by version... May be some of them will be implemented, may be not...</li>
+<li>(planned to support in next versions) SQL blocks: One of planned features is supporting unnamed SQL code blocks. But not supported now.</li>
+<li>(planned to support in next versions) More dialects and adapters: Now supported MS SQL Server, Oracle, PostgreSQL, MySql and SQLite. It&#39;s a most used RBDMS, but Your favirite database can be out of the list. There are two ways - write me a letter and wait for my code realization, or develop it by Youself. It&#39;s not a &quot;pice of cake&quot;, but also not a huge amount megabytes of highly complecated code.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

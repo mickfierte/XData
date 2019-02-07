@@ -93,7 +93,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_IDataScope_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IDataScope : IDisposable</code></pre>
@@ -183,13 +183,13 @@
   
   
   <a id="XData_IDataScope_BeginTransaction_" data-uid="XData.IDataScope.BeginTransaction*"></a>
-  <h4 id="XData_IDataScope_BeginTransaction_System_String_System_Boolean_System_Data_IsolationLevel_" data-uid="XData.IDataScope.BeginTransaction(System.String,System.Boolean,System.Data.IsolationLevel)">BeginTransaction(String, Boolean, IsolationLevel)</h4>
+  <h4 id="XData_IDataScope_BeginTransaction_System_Boolean_IsolationLevel_" data-uid="XData.IDataScope.BeginTransaction(System.Boolean,IsolationLevel)">BeginTransaction(Boolean, IsolationLevel)</h4>
   <div class="markdown level1 summary"><p>Begins single context transaction</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ITransaction BeginTransaction(string context = null, bool read = false, IsolationLevel isolation = IsolationLevel.ReadCommitted)</code></pre>
+    <pre><code class="lang-csharp hljs">ITransaction BeginTransaction(bool read = false, IsolationLevel isolation = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,19 +202,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>Context</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">read</span></td>
         <td><p>Read only transaction</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.isolationlevel">IsolationLevel</a></td>
+        <td><span class="xref">IsolationLevel</span></td>
         <td><span class="parametername">isolation</span></td>
         <td><p>Transaction isolation level</p>
 </td>
@@ -263,21 +257,20 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_IDataScope_BeginTransaction_System_String_System_Boolean_System_Data_IsolationLevel__seealso">See Also</h5>
+  <h5 id="XData_IDataScope_BeginTransaction_System_Boolean_IsolationLevel__seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Database.ITransaction.html">ITransaction</a></div>
-      <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.isolationlevel">IsolationLevel</a></div>
   </div>
   
   
-  <a id="XData_IDataScope_GetContext_" data-uid="XData.IDataScope.GetContext*"></a>
-  <h4 id="XData_IDataScope_GetContext_System_String_" data-uid="XData.IDataScope.GetContext(System.String)">GetContext(String)</h4>
-  <div class="markdown level1 summary"><p>Returns context by name</p>
+  <a id="XData_IDataScope_ExecuteNonQuery_" data-uid="XData.IDataScope.ExecuteNonQuery*"></a>
+  <h4 id="XData_IDataScope_ExecuteNonQuery_XData_Database_Adapter_Query_" data-uid="XData.IDataScope.ExecuteNonQuery(XData.Database.Adapter.Query)">ExecuteNonQuery(Query)</h4>
+  <div class="markdown level1 summary"><p>Execute SQL expression custom query with no result set</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">XDataContext GetContext(string context = null)</code></pre>
+    <pre><code class="lang-csharp hljs">QueryResult ExecuteNonQuery(Query query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -290,13 +283,152 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>Context name</p>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Custom query</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.QueryResult.html">QueryResult</a></td>
+        <td><p>Custom query affected rows and out parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_IDataScope_ExecuteScalar_" data-uid="XData.IDataScope.ExecuteScalar*"></a>
+  <h4 id="XData_IDataScope_ExecuteScalar__1_XData_Database_Adapter_Query_" data-uid="XData.IDataScope.ExecuteScalar``1(XData.Database.Adapter.Query)">ExecuteScalar&lt;TResult&gt;(Query)</h4>
+  <div class="markdown level1 summary"><p>Execute SQL single value result custom query</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TResult ExecuteScalar&lt;TResult&gt;(Query query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Custom query</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><p>Custom query single value result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Result value type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_IDataScope_FillTable_" data-uid="XData.IDataScope.FillTable*"></a>
+  <h4 id="XData_IDataScope_FillTable_XData_Database_Adapter_Query_CommandBehavior_" data-uid="XData.IDataScope.FillTable(XData.Database.Adapter.Query,CommandBehavior)">FillTable(Query, CommandBehavior)</h4>
+  <div class="markdown level1 summary"><p>Fill DataTable with custom query results</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DataTable FillTable(Query query, CommandBehavior behavior = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Custom query</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>Query command behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DataTable</span></td>
+        <td><p>DataTable</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_IDataScope_GetContext_" data-uid="XData.IDataScope.GetContext*"></a>
+  <h4 id="XData_IDataScope_GetContext" data-uid="XData.IDataScope.GetContext">GetContext()</h4>
+  <div class="markdown level1 summary"><p>Returns context by name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">XDataContext GetContext()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -337,13 +469,13 @@
   
   
   <a id="XData_IDataScope_GetDictionaryValue_" data-uid="XData.IDataScope.GetDictionaryValue*"></a>
-  <h4 id="XData_IDataScope_GetDictionaryValue__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___" data-uid="XData.IDataScope.GetDictionaryValue``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String,System.String,XData.Interfaces.ISecuritySession,XData.Variable[])">GetDictionaryValue&lt;T&gt;(Expression&lt;Func&lt;T, Boolean&gt;&gt;, String, String, ISecuritySession, Variable[])</h4>
+  <h4 id="XData_IDataScope_GetDictionaryValue__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_String_XData_Interfaces_ISecuritySession_XData_Variable___" data-uid="XData.IDataScope.GetDictionaryValue``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String,XData.Interfaces.ISecuritySession,XData.Variable[])">GetDictionaryValue&lt;T&gt;(Expression&lt;Func&lt;T, Boolean&gt;&gt;, String, ISecuritySession, Variable[])</h4>
   <div class="markdown level1 summary"><p>Returns dictionary value by find expression and cache result</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T GetDictionaryValue&lt;T&gt;(Expression&lt;Func&lt;T, bool&gt;&gt; findExpression, string alias = null, string context = null, ISecuritySession security = null, params Variable[] variables)
+    <pre><code class="lang-csharp hljs">T GetDictionaryValue&lt;T&gt;(Expression&lt;Func&lt;T, bool&gt;&gt; findExpression, string alias = null, ISecuritySession security = null, params Variable[] variables)
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -366,12 +498,6 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">alias</span></td>
         <td><p>Repository alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>Repository context</p>
 </td>
       </tr>
       <tr>
@@ -646,13 +772,13 @@
   
   
   <a id="XData_IDataScope_GetRepository_" data-uid="XData.IDataScope.GetRepository*"></a>
-  <h4 id="XData_IDataScope_GetRepository__1_System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___" data-uid="XData.IDataScope.GetRepository``1(System.String,System.String,XData.Interfaces.ISecuritySession,XData.Variable[])">GetRepository&lt;T&gt;(String, String, ISecuritySession, Variable[])</h4>
+  <h4 id="XData_IDataScope_GetRepository__1_System_String_XData_Interfaces_ISecuritySession_XData_Variable___" data-uid="XData.IDataScope.GetRepository``1(System.String,XData.Interfaces.ISecuritySession,XData.Variable[])">GetRepository&lt;T&gt;(String, ISecuritySession, Variable[])</h4>
   <div class="markdown level1 summary"><p>Get repository</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(string alias = null, string context = null, ISecuritySession security = null, params Variable[] variables)
+    <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(string alias = null, ISecuritySession security = null, params Variable[] variables)
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -672,17 +798,302 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>Data context</p>
+        <td><a class="xref" href="XData.Interfaces.ISecuritySession.html">ISecuritySession</a></td>
+        <td><span class="parametername">security</span></td>
+        <td><p>Security session</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="XData.Variable.html">Variable</a>[]</td>
+        <td><span class="parametername">variables</span></td>
+        <td><p>Data object variables</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IRepository-1.html">IRepository</a>&lt;T&gt;</td>
+        <td><p>Repository</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>no mapping found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataConfigurationException.html">XDataConfigurationException</a></td>
+        <td><p>XData configuration errors. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td><p>XData adapter errors. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td><p>Custom logic error. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_IDataScope_GetRepository_" data-uid="XData.IDataScope.GetRepository*"></a>
+  <h4 id="XData_IDataScope_GetRepository__1_System_String_XData_Variable___" data-uid="XData.IDataScope.GetRepository``1(System.String,XData.Variable[])">GetRepository&lt;T&gt;(String, Variable[])</h4>
+  <div class="markdown level1 summary"><p>Get repository</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(string alias = null, params Variable[] variables)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>Data object alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Variable.html">Variable</a>[]</td>
+        <td><span class="parametername">variables</span></td>
+        <td><p>Data object variables</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IRepository-1.html">IRepository</a>&lt;T&gt;</td>
+        <td><p>Repository</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>no mapping found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataConfigurationException.html">XDataConfigurationException</a></td>
+        <td><p>XData configuration errors. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td><p>XData adapter errors. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td><p>Custom logic error. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_IDataScope_GetRepository_" data-uid="XData.IDataScope.GetRepository*"></a>
+  <h4 id="XData_IDataScope_GetRepository__1_XData_Interfaces_ISecuritySession_XData_Variable___" data-uid="XData.IDataScope.GetRepository``1(XData.Interfaces.ISecuritySession,XData.Variable[])">GetRepository&lt;T&gt;(ISecuritySession, Variable[])</h4>
+  <div class="markdown level1 summary"><p>Get repository</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(ISecuritySession security = null, params Variable[] variables)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><a class="xref" href="XData.Interfaces.ISecuritySession.html">ISecuritySession</a></td>
         <td><span class="parametername">security</span></td>
         <td><p>Security session</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="XData.Variable.html">Variable</a>[]</td>
+        <td><span class="parametername">variables</span></td>
+        <td><p>Data object variables</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IRepository-1.html">IRepository</a>&lt;T&gt;</td>
+        <td><p>Repository</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>no mapping found.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataConfigurationException.html">XDataConfigurationException</a></td>
+        <td><p>XData configuration errors. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td><p>XData adapter errors. </p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataAdapterException.html">XDataAdapterException</a></td>
+        <td><p>Custom logic error. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="XData_IDataScope_GetRepository_" data-uid="XData.IDataScope.GetRepository*"></a>
+  <h4 id="XData_IDataScope_GetRepository__1_XData_Variable___" data-uid="XData.IDataScope.GetRepository``1(XData.Variable[])">GetRepository&lt;T&gt;(Variable[])</h4>
+  <div class="markdown level1 summary"><p>Get repository</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(params Variable[] variables)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><a class="xref" href="XData.Variable.html">Variable</a>[]</td>
         <td><span class="parametername">variables</span></td>
@@ -768,6 +1179,21 @@
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_FillTableAsync_XData_IDataScope_XData_Database_Adapter_Query_CommandBehavior_">AsyncExtensions.FillTableAsync(IDataScope, Query, CommandBehavior)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ExecuteScalarAsync__1_XData_IDataScope_XData_Database_Adapter_Query_">AsyncExtensions.ExecuteScalarAsync&lt;TResult&gt;(IDataScope, Query)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ExecuteNonQueryAsync_XData_IDataScope_XData_Database_Adapter_Query_">AsyncExtensions.ExecuteNonQueryAsync(IDataScope, Query)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ExecuteSqlBlockAsync_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, Expression&lt;Func&lt;ISqlBlockAdapter, ISqlBlock&gt;&gt;, Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[])</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter___0__XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">AsyncExtensions.GetSqlBlockDataAsync&lt;T&gt;(IDataScope, Expression&lt;Func&lt;ISqlBlockAdapter&lt;T&gt;, ISqlBlock&gt;&gt;, Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[])</a>
   </div>
   <div>
       <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>

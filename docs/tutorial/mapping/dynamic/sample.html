@@ -129,10 +129,10 @@
                     z =&gt; z.ConcurrencyToken(), z =&gt; z.Default(DefaultType.AutoIncrement)))
             .ReadOnlyProperty(x =&gt; x.Changed, 
                 x =&gt; x.Field&lt;DateTime&gt;(&quot;D&quot;, string.Empty, 
-                    z =&gt; z.Default(DefaultType.CurrentDateTime, true)))
+                    z =&gt; z.Default(DefaultType.CurrentDateTime, DefaultFeature.UseOnUpdate)))
             .ReadOnlyProperty(x =&gt; x.Author, 
                 x =&gt; x.Field&lt;string&gt;(&quot;D&quot;, string.Empty, 
-                    z =&gt; z.Default(DefaultType.UserName, true)))
+                    z =&gt; z.Default(DefaultType.UserName, DefaultFeature.UseOnUpdate)))
             .ReadOnlyProperty(x =&gt; x.DocAmount, 
                 x =&gt; x.Expr&lt;decimal?&gt;(null, DataExpressionType.SubQuery, 
                     &quot;A&quot;, DbType.Decimal, z =&gt; z.Size(17, 5)))

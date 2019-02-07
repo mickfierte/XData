@@ -87,7 +87,7 @@
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Interfaces.html">XData.Interfaces</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Interfaces_ISqlBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface ISqlBuilder</code></pre>
@@ -214,7 +214,7 @@ WARNING!  Mast to be filled in constructor!</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a>[]</td>
+        <td><span class="xref">DbType</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -844,13 +844,13 @@ Hint: Used in XData LINQ expressions</p>
   
   
   <a id="XData_Interfaces_ISqlBuilder_GetInsertQuery_" data-uid="XData.Interfaces.ISqlBuilder.GetInsertQuery*"></a>
-  <h4 id="XData_Interfaces_ISqlBuilder_GetInsertQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_" data-uid="XData.Interfaces.ISqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String)">GetInsertQuery(IDataStructure, IDataObject, String)</h4>
+  <h4 id="XData_Interfaces_ISqlBuilder_GetInsertQuery_XData_DataSource_Structure_IDataStructure_XData_IDataObject_System_String_System_Boolean_" data-uid="XData.Interfaces.ISqlBuilder.GetInsertQuery(XData.DataSource.Structure.IDataStructure,XData.IDataObject,System.String,System.Boolean)">GetInsertQuery(IDataStructure, IDataObject, String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Returns query to insert data object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Query GetInsertQuery(IDataStructure structure, IDataObject data, string userName)</code></pre>
+    <pre><code class="lang-csharp hljs">Query GetInsertQuery(IDataStructure structure, IDataObject data, string userName, bool ignoreConcurrency = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -878,6 +878,12 @@ Hint: Used in XData LINQ expressions</p>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">userName</span></td>
         <td><p>User name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">ignoreConcurrency</span></td>
+        <td><p>Ignore concurrency flag</p>
 </td>
       </tr>
     </tbody>

@@ -87,7 +87,7 @@
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Mapping.Dynamic.html">XData.Mapping.Dynamic</a></h6>
-  <h6><strong>Assembly</strong>: XData.dll</h6>
+  <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Mapping_Dynamic_IQueryStructure_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IQueryStructure</code></pre>
@@ -492,13 +492,13 @@
   
   
   <a id="XData_Mapping_Dynamic_IQueryStructure_InnerView_" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryStructure_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView(String, Type, Expression&lt;Func&lt;ISubqueryFilterAdapter, IFilterDescription&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView(String, Type, Expression&lt;Func&lt;ISubqueryLinkAdapter, IFilterDescription&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic query inner view mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IQueryStructure InnerView(string alias, Type dobjType, params Expression&lt;Func&lt;ISubqueryFilterAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
+    <pre><code class="lang-csharp hljs">IQueryStructure InnerView(string alias, Type dobjType, params Expression&lt;Func&lt;ISubqueryLinkAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -523,7 +523,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter.html">ISubqueryFilterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter.html">ISubqueryLinkAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
         <td><span class="parametername">filters</span></td>
         <td><p>Filters and links applied to inner view</p>
 </td>
@@ -546,7 +546,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Mapping_Dynamic_IQueryStructure_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
       <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
@@ -555,13 +555,13 @@
   
   
   <a id="XData_Mapping_Dynamic_IQueryStructure_InnerView_" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryStructure_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryFilterAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView&lt;TDobj&gt;(String, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView&lt;TDobj&gt;(String, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic query inner view mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IQueryStructure InnerView&lt;TDobj&gt;(string alias, params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
+    <pre><code class="lang-csharp hljs">IQueryStructure InnerView&lt;TDobj&gt;(string alias, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -581,7 +581,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html">ISubqueryFilterAdapter</a>&lt;TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter</a>&lt;TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
         <td><span class="parametername">filters</span></td>
         <td><p>Filters and links applied to inner view</p>
 </td>
@@ -620,7 +620,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Mapping_Dynamic_IQueryStructure_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
       <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
@@ -629,13 +629,13 @@
   
   
   <a id="XData_Mapping_Dynamic_IQueryStructure_InnerView_" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryStructure_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryFilterAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView&lt;TDobj&gt;(String, IQueryDescription&lt;TDobj&gt;, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.InnerView``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView&lt;TDobj&gt;(String, IQueryDescription&lt;TDobj&gt;, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic query inner view mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IQueryStructure InnerView&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
+    <pre><code class="lang-csharp hljs">IQueryStructure InnerView&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -661,7 +661,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html">ISubqueryFilterAdapter</a>&lt;TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter</a>&lt;TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
         <td><span class="parametername">filters</span></td>
         <td><p>Filters and links applied to inner view</p>
 </td>
@@ -699,7 +699,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Mapping_Dynamic_IQueryStructure_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
       <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
@@ -784,7 +784,7 @@
   
   
   <a id="XData_Mapping_Dynamic_IQueryStructure_Parameter_" data-uid="XData.Mapping.Dynamic.IQueryStructure.Parameter*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryStructure_Parameter__1_System_String_System_Int32_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.Parameter``1(System.String,System.Int32,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])">Parameter&lt;T&gt;(String, Int32, String, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_Parameter__1_System_String_System_Int32_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.Parameter``1(System.String,System.Int32,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])">Parameter&lt;T&gt;(String, Int32, String, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic query procedure parameter mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -821,7 +821,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td><span class="xref">DbType</span></td>
         <td><span class="parametername">type</span></td>
         <td><p>Parameter SQL data type</p>
 </td>
@@ -1138,13 +1138,13 @@
   
   
   <a id="XData_Mapping_Dynamic_IQueryStructure_Subquery_" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryStructure_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery(String, Type, String, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter, IFilterDescription&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery(String, Type, String, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter, IFilterDescription&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic query subquery mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IQueryStructure Subquery(string alias, Type dobjType, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryFilterAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
+    <pre><code class="lang-csharp hljs">IQueryStructure Subquery(string alias, Type dobjType, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1181,7 +1181,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter.html">ISubqueryFilterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter.html">ISubqueryLinkAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
         <td><span class="parametername">filters</span></td>
         <td><p>Filters and links applied to subquery</p>
 </td>
@@ -1204,7 +1204,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Mapping_Dynamic_IQueryStructure_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
       <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
@@ -1213,13 +1213,13 @@
   
   
   <a id="XData_Mapping_Dynamic_IQueryStructure_Subquery_" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryStructure_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryFilterAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery&lt;TDobj&gt;(String, Expression&lt;Func&lt;TDobj, Object&gt;&gt;, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery&lt;TDobj&gt;(String, Expression&lt;Func&lt;TDobj, Object&gt;&gt;, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic query subquery mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IQueryStructure Subquery&lt;TDobj&gt;(string alias, Expression&lt;Func&lt;TDobj, object&gt;&gt; property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
+    <pre><code class="lang-csharp hljs">IQueryStructure Subquery&lt;TDobj&gt;(string alias, Expression&lt;Func&lt;TDobj, object&gt;&gt; property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1251,7 +1251,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html">ISubqueryFilterAdapter</a>&lt;TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter</a>&lt;TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
         <td><span class="parametername">filters</span></td>
         <td><p>Filters and links applied to subquery</p>
 </td>
@@ -1290,7 +1290,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Mapping_Dynamic_IQueryStructure_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
       <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
@@ -1299,13 +1299,13 @@
   
   
   <a id="XData_Mapping_Dynamic_IQueryStructure_Subquery_" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryStructure_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryFilterAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery&lt;TDobj&gt;(String, IQueryDescription&lt;TDobj&gt;, String, DataGrouping, Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructure_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IQueryStructure.Subquery``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery&lt;TDobj&gt;(String, IQueryDescription&lt;TDobj&gt;, String, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Dynamic query subquery mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IQueryStructure Subquery&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryFilterAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
+    <pre><code class="lang-csharp hljs">IQueryStructure Subquery&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1343,7 +1343,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryFilterAdapter-1.html">ISubqueryFilterAdapter</a>&lt;TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter</a>&lt;TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
         <td><span class="parametername">filters</span></td>
         <td><p>Filters and links applied to subquery</p>
 </td>
@@ -1381,7 +1381,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Mapping_Dynamic_IQueryStructure_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryFilterAdapter___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
+  <h5 id="XData_Mapping_Dynamic_IQueryStructure_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
       <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
@@ -1448,7 +1448,7 @@
   </table>
   <h5 id="XData_Mapping_Dynamic_IQueryStructure_TempTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Data passed to query as variable with name equals name of temporary table data source</p>
-<p>Variable value must to be <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></p></div>
+<p>Variable value must to be <see cref="!:System.Data.DataTable"></see></p></div>
   <h5 id="XData_Mapping_Dynamic_IQueryStructure_TempTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
