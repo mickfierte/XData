@@ -40,6 +40,9 @@ references:
 - uid: mapping_common_type.md
   name: Common types properties
   href: tutorial/mapping/common_type.html
+- uid: mapping_db_diagram.md
+  name: Sample database structure
+  href: tutorial/mapping/db_diagram.html
 - uid: mapping_dynamic.md
   name: Dynamic mapping
   href: tutorial/mapping/dynamic/dynamic.html
