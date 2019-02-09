@@ -97,16 +97,16 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="XData.Mapping.FilterAttribute.html#XData_Mapping_FilterAttribute_Source">FilterAttribute.Source</a>
+      <a class="xref" href="XData.Mapping.FilterAttribute.Source.html#XData_Mapping_FilterAttribute_Source">FilterAttribute.Source</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.FilterAttribute.html#XData_Mapping_FilterAttribute_FieldName">FilterAttribute.FieldName</a>
+      <a class="xref" href="XData.Mapping.FilterAttribute.FieldName.html#XData_Mapping_FilterAttribute_FieldName">FilterAttribute.FieldName</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.FilterAttribute.html#XData_Mapping_FilterAttribute_Operation">FilterAttribute.Operation</a>
+      <a class="xref" href="XData.Mapping.FilterAttribute.Operation.html#XData_Mapping_FilterAttribute_Operation">FilterAttribute.Operation</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.FilterAttribute.html#XData_Mapping_FilterAttribute_Combination">FilterAttribute.Combination</a>
+      <a class="xref" href="XData.Mapping.FilterAttribute.Combination.html#XData_Mapping_FilterAttribute_Combination">FilterAttribute.Combination</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.equals#System_Attribute_Equals_System_Object_">Attribute.Equals(Object)</a>
@@ -145,319 +145,117 @@ public sealed class DictionaryFilterAttribute : FilterAttribute</code></pre>
   <pre><code class="cs">    DictionaryFilter(&quot;T_DOC_TYPE&quot;, &quot;doc_type_id&quot;, &quot;code&quot;, &quot;INVOICE&quot;, &quot;D&quot;)</code></pre>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
-  <a id="XData_Mapping_DictionaryFilterAttribute__ctor_" data-uid="XData.Mapping.DictionaryFilterAttribute.#ctor*"></a>
-  <h4 id="XData_Mapping_DictionaryFilterAttribute__ctor_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="XData.Mapping.DictionaryFilterAttribute.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">DictionaryFilterAttribute(String, String, String, String, String, String)</h4>
-  <div class="markdown level1 summary"><p>Dictionary filter attribute</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DictionaryFilterAttribute(string dictionaryTable, string dictionaryIdField, string dictionaryCodeField, string dictionaryValue, string source, string fieldName = &quot;&quot;)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">dictionaryTable</span></td>
-        <td><p>Dictionary table name</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">dictionaryIdField</span></td>
-        <td><p>Dictionary id field</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">dictionaryCodeField</span></td>
-        <td><p>Dictionary code field</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">dictionaryValue</span></td>
-        <td><p>Dictionary code value</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Filter source alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">fieldName</span></td>
-        <td><p>Filter field name</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td><p>Dictionary table name cannot be null or empty string</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td><p>Dictionary id field cannot be null or empty string</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td><p>Dictionary code field cannot be null or empty string</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td><p>Dictionary code value cannot be null or empty string</p>
+        <td id="XData_Mapping_DictionaryFilterAttribute__ctor_System_String_System_String_System_String_System_String_System_String_System_String_" data-uid="XData.Mapping.DictionaryFilterAttribute.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+          <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.-ctor.html#XData_Mapping_DictionaryFilterAttribute__ctor_System_String_System_String_System_String_System_String_System_String_System_String_">DictionaryFilterAttribute(String, String, String, String, String, String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dictionary filter attribute</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="XData_Mapping_DictionaryFilterAttribute_DictionaryCode_" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryCode*"></a>
-  <h4 id="XData_Mapping_DictionaryFilterAttribute_DictionaryCode" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryCode">DictionaryCode</h4>
-  <div class="markdown level1 summary"><p>Dictionary code field</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string DictionaryCode { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td id="XData_Mapping_DictionaryFilterAttribute_DictionaryCode" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryCode">
+          <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.DictionaryCode.html#XData_Mapping_DictionaryFilterAttribute_DictionaryCode">DictionaryCode</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dictionary code field</p>
+</td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_DictionaryFilterAttribute_DictionaryId_" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryId*"></a>
-  <h4 id="XData_Mapping_DictionaryFilterAttribute_DictionaryId" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryId">DictionaryId</h4>
-  <div class="markdown level1 summary"><p>Dictionary id field</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string DictionaryId { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
+        <td id="XData_Mapping_DictionaryFilterAttribute_DictionaryId" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryId">
+          <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.DictionaryId.html#XData_Mapping_DictionaryFilterAttribute_DictionaryId">DictionaryId</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dictionary id field</p>
+</td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td id="XData_Mapping_DictionaryFilterAttribute_DictionaryTable" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryTable">
+          <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.DictionaryTable.html#XData_Mapping_DictionaryFilterAttribute_DictionaryTable">DictionaryTable</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dictionary table name</p>
+</td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_DictionaryFilterAttribute_DictionaryTable_" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryTable*"></a>
-  <h4 id="XData_Mapping_DictionaryFilterAttribute_DictionaryTable" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryTable">DictionaryTable</h4>
-  <div class="markdown level1 summary"><p>Dictionary table name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string DictionaryTable { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
+        <td id="XData_Mapping_DictionaryFilterAttribute_DictionaryValue" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryValue">
+          <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.DictionaryValue.html#XData_Mapping_DictionaryFilterAttribute_DictionaryValue">DictionaryValue</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dictionary code value</p>
+</td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td id="XData_Mapping_DictionaryFilterAttribute_FilterType" data-uid="XData.Mapping.DictionaryFilterAttribute.FilterType">
+          <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.FilterType.html#XData_Mapping_DictionaryFilterAttribute_FilterType">FilterType</a>
+        </td>
+        <td class="markdown level1 summary"><p>Filter type</p>
+</td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_DictionaryFilterAttribute_DictionaryValue_" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryValue*"></a>
-  <h4 id="XData_Mapping_DictionaryFilterAttribute_DictionaryValue" data-uid="XData.Mapping.DictionaryFilterAttribute.DictionaryValue">DictionaryValue</h4>
-  <div class="markdown level1 summary"><p>Dictionary code value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string DictionaryValue { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
+        <td id="XData_Mapping_DictionaryFilterAttribute_IsVariableValue" data-uid="XData.Mapping.DictionaryFilterAttribute.IsVariableValue">
+          <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.IsVariableValue.html#XData_Mapping_DictionaryFilterAttribute_IsVariableValue">IsVariableValue</a>
+        </td>
+        <td class="markdown level1 summary"><p>Variable name as filter value</p>
+</td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_DictionaryFilterAttribute_FilterType_" data-uid="XData.Mapping.DictionaryFilterAttribute.FilterType*"></a>
-  <h4 id="XData_Mapping_DictionaryFilterAttribute_FilterType" data-uid="XData.Mapping.DictionaryFilterAttribute.FilterType">FilterType</h4>
-  <div class="markdown level1 summary"><p>Filter type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override FilterType FilterType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.FilterType.html">FilterType</a></td>
-        <td><a class="xref" href="XData.FilterType.html#XData_FilterType_Dictionary">Dictionary</a></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="XData.Mapping.FilterBaseAttribute.html#XData_Mapping_FilterBaseAttribute_FilterType">FilterBaseAttribute.FilterType</a></div>
-  
-  
-  <a id="XData_Mapping_DictionaryFilterAttribute_IsVariableValue_" data-uid="XData.Mapping.DictionaryFilterAttribute.IsVariableValue*"></a>
-  <h4 id="XData_Mapping_DictionaryFilterAttribute_IsVariableValue" data-uid="XData.Mapping.DictionaryFilterAttribute.IsVariableValue">IsVariableValue</h4>
-  <div class="markdown level1 summary"><p>Variable name as filter value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsVariableValue { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_DictionaryFilterAttribute_IsVariableValue_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If true <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.html#XData_Mapping_DictionaryFilterAttribute_DictionaryValue">DictionaryValue</a> contains data object variable name which value will be compared with Dictionary code</p>
-</div>
-  
-  
-  <a id="XData_Mapping_DictionaryFilterAttribute_TypeId_" data-uid="XData.Mapping.DictionaryFilterAttribute.TypeId*"></a>
-  <h4 id="XData_Mapping_DictionaryFilterAttribute_TypeId" data-uid="XData.Mapping.DictionaryFilterAttribute.TypeId">TypeId</h4>
-  <div class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override object TypeId { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a> that is a unique identifier for the attribute.</p>
+        <td id="XData_Mapping_DictionaryFilterAttribute_TypeId" data-uid="XData.Mapping.DictionaryFilterAttribute.TypeId">
+          <a class="xref" href="XData.Mapping.DictionaryFilterAttribute.TypeId.html#XData_Mapping_DictionaryFilterAttribute_TypeId">TypeId</a>
+        </td>
+        <td class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">

@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Method Attach
+   | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Method Attach
+   | XData website ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="XData.IRepository`1.Attach*">
+
+<h1 id="XData_IRepository_1_Attach_" data-uid="XData.IRepository`1.Attach*">Method Attach
+</h1>
+<div class="markdown level0 summary"></div>
+<div class="markdown level0 conceptual"></div>
+
+
+
+<a id="XData_IRepository_1_Attach_" data-uid="XData.IRepository`1.Attach*"></a>
+<h4 id="XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0____" data-uid="XData.IRepository`1.Attach(`0,XData.DataObjectState,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},XData.AttachedHandler{`0}[])">Attach(T, DataObjectState, IEnumerable&lt;KeyValuePair&lt;String, Object&gt;&gt;, AttachedHandler&lt;T&gt;[])</h4>
+<div class="markdown level1 summary"><p>Attach object to repository</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="decalaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; Attach(T obj, DataObjectState state = DataObjectState.Original, IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; originalValues = null, params AttachedHandler&lt;T&gt;[] handlers)</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="xref">T</span></td>
+      <td><span class="parametername">obj</span></td>
+      <td><p>Object instance</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="XData.DataObjectState.html">DataObjectState</a></td>
+      <td><span class="parametername">state</span></td>
+      <td><p>Object state</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
+      <td><span class="parametername">originalValues</span></td>
+      <td><p>Original property values</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler</a>&lt;T&gt;[]</td>
+      <td><span class="parametername">handlers</span></td>
+      <td><p>Attached handlers</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="XData.IRepository-1.html">IRepository</a>&lt;T&gt;</td>
+      <td><p>Repository</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0_____remarks">Remarks</h5>
+<div class="markdown level1 remarks"><p>Hint: Object attaching set <a class="xref" href="XData.IRepository.Manual.html#XData_IRepository_Manual">Manual</a> property to True automatically</p>
+<p>Hint: The originalValues parameter can contain only necessary not null valued properties</p>
+<p>Hint: Use <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">SetValue&lt;TKey, T&gt;(TKey, T)</a> to fill originalValues parameter </p>
+<p>Hint: Use <a class="xref" href="XData.AttachedHandler-1.html">AttachedHandler&lt;T&gt;</a> convert operators to attach object specific handlers</p>
+<pre><code><p>(SubmitObjectAttachedHandler&lt;Invoice>)((ref Invoice i, DataSubmitFlag f) => true)</p></code></pre>
+<p>WARNING!  Use repository <a class="xref" href="XData.IRepository-1.SetAttachedHandlers.html#XData_IRepository_1_SetAttachedHandlers_XData_RepositoryAttachedHandler__0____">SetAttachedHandlers(RepositoryAttachedHandler&lt;T&gt;[])</a> method to apply same handler for all objects!</p>
+</div>
+<h5 id="XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0_____seealso">See Also</h5>
+<div class="seealso">
+    <div><a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">SetValue&lt;TKey, T&gt;</a>(TKey, T)</div>
+    <div><a class="xref" href="XData.IRepository-1.Detach.html#XData_IRepository_1_Detach_System_Predicate__0__">Detach(Predicate&lt;T&gt;)</a></div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

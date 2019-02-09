@@ -127,196 +127,96 @@ public sealed class DataObjectAttribute : Attribute</code></pre>
   <div class="markdown level0 remarks"><p>WARNING!  Required attribute!</p></div>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
-  <a id="XData_Mapping_DataObjectAttribute__ctor_" data-uid="XData.Mapping.DataObjectAttribute.#ctor*"></a>
-  <h4 id="XData_Mapping_DataObjectAttribute__ctor_System_String_" data-uid="XData.Mapping.DataObjectAttribute.#ctor(System.String)">DataObjectAttribute(String)</h4>
-  <div class="markdown level1 summary"><p>Data object metadata attribute</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DataObjectAttribute(string baseSource = &quot;&quot;)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">baseSource</span></td>
-        <td><p>Base table alias</p>
+        <td id="XData_Mapping_DataObjectAttribute__ctor_System_String_" data-uid="XData.Mapping.DataObjectAttribute.#ctor(System.String)">
+          <a class="xref" href="XData.Mapping.DataObjectAttribute.-ctor.html#XData_Mapping_DataObjectAttribute__ctor_System_String_">DataObjectAttribute(String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Data object metadata attribute</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Mapping_DataObjectAttribute__ctor_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If Base table is empty - data object has no base table.</p>
-<p>WARNING!  None based data objects are read only and can not contain any table!</p></div>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="XData_Mapping_DataObjectAttribute_BaseSource_" data-uid="XData.Mapping.DataObjectAttribute.BaseSource*"></a>
-  <h4 id="XData_Mapping_DataObjectAttribute_BaseSource" data-uid="XData.Mapping.DataObjectAttribute.BaseSource">BaseSource</h4>
-  <div class="markdown level1 summary"><p>Base table alias</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string BaseSource { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td id="XData_Mapping_DataObjectAttribute_BaseSource" data-uid="XData.Mapping.DataObjectAttribute.BaseSource">
+          <a class="xref" href="XData.Mapping.DataObjectAttribute.BaseSource.html#XData_Mapping_DataObjectAttribute_BaseSource">BaseSource</a>
+        </td>
+        <td class="markdown level1 summary"><p>Base table alias</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Mapping_DataObjectAttribute_Context" data-uid="XData.Mapping.DataObjectAttribute.Context">
+          <a class="xref" href="XData.Mapping.DataObjectAttribute.Context.html#XData_Mapping_DataObjectAttribute_Context">Context</a>
+        </td>
+        <td class="markdown level1 summary"><p>Context alias</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Mapping_DataObjectAttribute_Flags" data-uid="XData.Mapping.DataObjectAttribute.Flags">
+          <a class="xref" href="XData.Mapping.DataObjectAttribute.Flags.html#XData_Mapping_DataObjectAttribute_Flags">Flags</a>
+        </td>
+        <td class="markdown level1 summary"><p>Combination of DataObjectFlag values</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Mapping_DataObjectAttribute_LogicAssemblyName" data-uid="XData.Mapping.DataObjectAttribute.LogicAssemblyName">
+          <a class="xref" href="XData.Mapping.DataObjectAttribute.LogicAssemblyName.html#XData_Mapping_DataObjectAttribute_LogicAssemblyName">LogicAssemblyName</a>
+        </td>
+        <td class="markdown level1 summary"><p>Data logic assembly name</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Mapping_DataObjectAttribute_BaseSource_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Base table is modification allowed data source subtree root of data object</p></div>
-  <h5 id="XData_Mapping_DataObjectAttribute_BaseSource_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.DataTableAttribute.html#XData_Mapping_DataTableAttribute_Alias">Alias</a></div>
-      <div><a class="xref" href="XData.Mapping.DataTableAttribute.html#XData_Mapping_DataTableAttribute_Parent">Parent</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_DataObjectAttribute_Context_" data-uid="XData.Mapping.DataObjectAttribute.Context*"></a>
-  <h4 id="XData_Mapping_DataObjectAttribute_Context" data-uid="XData.Mapping.DataObjectAttribute.Context">Context</h4>
-  <div class="markdown level1 summary"><p>Context alias</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Context { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_DataObjectAttribute_Context_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.IDataQuery.html#XData_IDataQuery_Context">Context</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_DataObjectAttribute_Flags_" data-uid="XData.Mapping.DataObjectAttribute.Flags*"></a>
-  <h4 id="XData_Mapping_DataObjectAttribute_Flags" data-uid="XData.Mapping.DataObjectAttribute.Flags">Flags</h4>
-  <div class="markdown level1 summary"><p>Combination of DataObjectFlag values</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DataStructureFlag Flags { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_DataObjectAttribute_Flags_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_DataObjectAttribute_LogicAssemblyName_" data-uid="XData.Mapping.DataObjectAttribute.LogicAssemblyName*"></a>
-  <h4 id="XData_Mapping_DataObjectAttribute_LogicAssemblyName" data-uid="XData.Mapping.DataObjectAttribute.LogicAssemblyName">LogicAssemblyName</h4>
-  <div class="markdown level1 summary"><p>Data logic assembly name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string LogicAssemblyName { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_DataObjectAttribute_LogicAssemblyName_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.IDataLogic-1.html">IDataLogic</a>&lt;T&gt;</div>
-  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>

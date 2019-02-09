@@ -125,386 +125,181 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
-  <a id="XData_Database_Adapter_Query__ctor_" data-uid="XData.Database.Adapter.Query.#ctor*"></a>
-  <h4 id="XData_Database_Adapter_Query__ctor_System_String_CommandType_XData_Database_Adapter_QueryParam___" data-uid="XData.Database.Adapter.Query.#ctor(System.String,CommandType,XData.Database.Adapter.QueryParam[])">Query(String, CommandType, QueryParam[])</h4>
-  <div class="markdown level1 summary"><p>Query constructor</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Query(string sql, CommandType type = null, params QueryParam[] par)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">sql</span></td>
-        <td><p>Sql expression</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CommandType</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Command type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.QueryParam.html">QueryParam</a>[]</td>
-        <td><span class="parametername">par</span></td>
-        <td><p>Parameters</p>
+        <td id="XData_Database_Adapter_Query__ctor_System_String_CommandType_XData_Database_Adapter_QueryParam___" data-uid="XData.Database.Adapter.Query.#ctor(System.String,CommandType,XData.Database.Adapter.QueryParam[])">
+          <a class="xref" href="XData.Database.Adapter.Query.-ctor.html#XData_Database_Adapter_Query__ctor_System_String_CommandType_XData_Database_Adapter_QueryParam___">Query(String, CommandType, QueryParam[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Query constructor</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="XData_Database_Adapter_Query_Item_" data-uid="XData.Database.Adapter.Query.Item*"></a>
-  <h4 id="XData_Database_Adapter_Query_Item_System_Int32_" data-uid="XData.Database.Adapter.Query.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"><p>Query parameters by index</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QueryParam this[int i] { get; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">i</span></td>
-        <td><p>Parameter index</p>
+        <td id="XData_Database_Adapter_Query_Item_System_Int32_" data-uid="XData.Database.Adapter.Query.Item(System.Int32)">
+          <a class="xref" href="XData.Database.Adapter.Query.Item.html#XData_Database_Adapter_Query_Item_System_Int32_">Item[Int32]</a>
+        </td>
+        <td class="markdown level1 summary"><p>Query parameters by index</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.QueryParam.html">QueryParam</a></td>
-        <td><p>Query parameter</p>
+        <td id="XData_Database_Adapter_Query_Item_System_String_" data-uid="XData.Database.Adapter.Query.Item(System.String)">
+          <a class="xref" href="XData.Database.Adapter.Query.Item.html#XData_Database_Adapter_Query_Item_System_String_">Item[String]</a>
+        </td>
+        <td class="markdown level1 summary"><p>Query parameters by name</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_Query_Item_" data-uid="XData.Database.Adapter.Query.Item*"></a>
-  <h4 id="XData_Database_Adapter_Query_Item_System_String_" data-uid="XData.Database.Adapter.Query.Item(System.String)">Item[String]</h4>
-  <div class="markdown level1 summary"><p>Query parameters by name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QueryParam this[string name] { get; set; }</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Parameter name</p>
+        <td id="XData_Database_Adapter_Query_Sql" data-uid="XData.Database.Adapter.Query.Sql">
+          <a class="xref" href="XData.Database.Adapter.Query.Sql.html#XData_Database_Adapter_Query_Sql">Sql</a>
+        </td>
+        <td class="markdown level1 summary"><p>Query SQL expression</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.QueryParam.html">QueryParam</a></td>
-        <td><p>Query parameter</p>
+        <td id="XData_Database_Adapter_Query_Type" data-uid="XData.Database.Adapter.Query.Type">
+          <a class="xref" href="XData.Database.Adapter.Query.Type.html#XData_Database_Adapter_Query_Type">Type</a>
+        </td>
+        <td class="markdown level1 summary"><p>Query command type</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_Query_Sql_" data-uid="XData.Database.Adapter.Query.Sql*"></a>
-  <h4 id="XData_Database_Adapter_Query_Sql" data-uid="XData.Database.Adapter.Query.Sql">Sql</h4>
-  <div class="markdown level1 summary"><p>Query SQL expression</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Sql { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_Query_Type_" data-uid="XData.Database.Adapter.Query.Type*"></a>
-  <h4 id="XData_Database_Adapter_Query_Type" data-uid="XData.Database.Adapter.Query.Type">Type</h4>
-  <div class="markdown level1 summary"><p>Query command type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CommandType Type { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CommandType</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="XData_Database_Adapter_Query_GetEnumerator_" data-uid="XData.Database.Adapter.Query.GetEnumerator*"></a>
-  <h4 id="XData_Database_Adapter_Query_GetEnumerator" data-uid="XData.Database.Adapter.Query.GetEnumerator">GetEnumerator()</h4>
-  <div class="markdown level1 summary"><p>Query parameters enumeration</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator&lt;QueryParam&gt; GetEnumerator()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="XData.Database.Adapter.QueryParam.html">QueryParam</a>&gt;</td>
-        <td><p>Query parameters enumeration</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_Query_ToString_" data-uid="XData.Database.Adapter.Query.ToString*"></a>
-  <h4 id="XData_Database_Adapter_Query_ToString" data-uid="XData.Database.Adapter.Query.ToString">ToString()</h4>
-  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> that represents the current <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> that represents the current <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
-  <h3 id="operators">Operators
-  </h3>
-  
-  
-  <a id="XData_Database_Adapter_Query_op_Implicit_" data-uid="XData.Database.Adapter.Query.op_Implicit*"></a>
-  <h4 id="XData_Database_Adapter_Query_op_Implicit_System_String__XData_Database_Adapter_Query" data-uid="XData.Database.Adapter.Query.op_Implicit(System.String)~XData.Database.Adapter.Query">Implicit(String to Query)</h4>
-  <div class="markdown level1 summary"><p>Query SQL expression</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Query(string s)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">s</span></td>
-        <td><p>Sql expression</p>
+        <td id="XData_Database_Adapter_Query_GetEnumerator" data-uid="XData.Database.Adapter.Query.GetEnumerator">
+          <a class="xref" href="XData.Database.Adapter.Query.GetEnumerator.html#XData_Database_Adapter_Query_GetEnumerator">GetEnumerator()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Query parameters enumeration</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_Query_ToString" data-uid="XData.Database.Adapter.Query.ToString">
+          <a class="xref" href="XData.Database.Adapter.Query.ToString.html#XData_Database_Adapter_Query_ToString">ToString()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Returns a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> that represents the current <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <h3 id="operators">Operators
+  </h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
-        <td><p>Query</p>
+        <td id="XData_Database_Adapter_Query_op_Implicit_System_String__XData_Database_Adapter_Query" data-uid="XData.Database.Adapter.Query.op_Implicit(System.String)~XData.Database.Adapter.Query">
+          <a class="xref" href="XData.Database.Adapter.Query.op_Implicit.html#XData_Database_Adapter_Query_op_Implicit_System_String__XData_Database_Adapter_Query">Implicit(String to Query)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Query SQL expression</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
-  
-  
-  <a id="XData_Database_Adapter_Query_System_Collections_IEnumerable_GetEnumerator_" data-uid="XData.Database.Adapter.Query.System#Collections#IEnumerable#GetEnumerator*"></a>
-  <h4 id="XData_Database_Adapter_Query_System_Collections_IEnumerable_GetEnumerator" data-uid="XData.Database.Adapter.Query.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
-  <div class="markdown level1 summary"><p>Query parameters enumeration</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
-        <td><p>Query parameters enumeration</p>
+        <td id="XData_Database_Adapter_Query_System_Collections_IEnumerable_GetEnumerator" data-uid="XData.Database.Adapter.Query.System#Collections#IEnumerable#GetEnumerator">
+          <a class="xref" href="XData.Database.Adapter.Query.System-Collections-IEnumerable-GetEnumerator.html#XData_Database_Adapter_Query_System_Collections_IEnumerable_GetEnumerator">IEnumerable.GetEnumerator()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Query parameters enumeration</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">System.Collections.IEnumerable</a>
-  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_ToSortedSet__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__">CollectionsExtensions.ToSortedSet&lt;T&gt;(IEnumerable&lt;T&gt;, IComparer&lt;T&gt;)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.ToSortedSet.html#XData_Extensions_CollectionsExtensions_ToSortedSet__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__">CollectionsExtensions.ToSortedSet&lt;T&gt;(IEnumerable&lt;T&gt;, IComparer&lt;T&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_Inner__1_System_Collections_Generic_IEnumerable___0__">JoinedEnumerable.Inner&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</a>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.Inner.html#XData_Extensions_JoinedEnumerable_Inner__1_System_Collections_Generic_IEnumerable___0__">JoinedEnumerable.Inner&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_Outer__1_System_Collections_Generic_IEnumerable___0__">JoinedEnumerable.Outer&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</a>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.Outer.html#XData_Extensions_JoinedEnumerable_Outer__1_System_Collections_Generic_IEnumerable___0__">JoinedEnumerable.Outer&lt;TElement&gt;(IEnumerable&lt;TElement&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_LeftOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.LeftOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.LeftOuterJoin.html#XData_Extensions_JoinedEnumerable_LeftOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.LeftOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_RightOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.RightOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.RightOuterJoin.html#XData_Extensions_JoinedEnumerable_RightOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.RightOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_FullOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.FullOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
+      <a class="xref" href="XData.Extensions.JoinedEnumerable.FullOuterJoin.html#XData_Extensions_JoinedEnumerable_FullOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">JoinedEnumerable.FullOuterJoin&lt;TOuter, TInner, TKey, TResult&gt;(IEnumerable&lt;TOuter&gt;, IEnumerable&lt;TInner&gt;, Func&lt;TOuter, TKey&gt;, Func&lt;TInner, TKey&gt;, Func&lt;TOuter, TInner, TResult&gt;, IEqualityComparer&lt;TKey&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_ToDataSet__1_System_Collections_Generic_IEnumerable___0__System_String_XData_Interfaces_ISqlBuilder_">QueryDescriptionExtensions.ToDataSet&lt;T&gt;(IEnumerable&lt;T&gt;, String, ISqlBuilder)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.ToDataSet.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_ToDataSet__1_System_Collections_Generic_IEnumerable___0__System_String_XData_Interfaces_ISqlBuilder_">QueryDescriptionExtensions.ToDataSet&lt;T&gt;(IEnumerable&lt;T&gt;, String, ISqlBuilder)</a>
   </div>
 </article>
           </div>

@@ -128,549 +128,187 @@ public sealed class DataStructureState : IEquatable&lt;DataStructureState&gt;</c
   </div>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Alias_" data-uid="XData.DataSource.Structure.DataStructureState.Alias*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Alias" data-uid="XData.DataSource.Structure.DataStructureState.Alias">Alias</h4>
-  <div class="markdown level1 summary"><p>Subquery alias</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public string Alias { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Context_" data-uid="XData.DataSource.Structure.DataStructureState.Context*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Context" data-uid="XData.DataSource.Structure.DataStructureState.Context">Context</h4>
-  <div class="markdown level1 summary"><p>Structure context</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public string Context { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Distinct_" data-uid="XData.DataSource.Structure.DataStructureState.Distinct*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Distinct" data-uid="XData.DataSource.Structure.DataStructureState.Distinct">Distinct</h4>
-  <div class="markdown level1 summary"><p>Distinct flag</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public bool Distinct { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Filters_" data-uid="XData.DataSource.Structure.DataStructureState.Filters*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Filters" data-uid="XData.DataSource.Structure.DataStructureState.Filters">Filters</h4>
-  <div class="markdown level1 summary"><p>Filter combinations</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public FilterCombinationState Filters { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataSource.Structure.FilterCombinationState.html">FilterCombinationState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_FilterValues_" data-uid="XData.DataSource.Structure.DataStructureState.FilterValues*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_FilterValues" data-uid="XData.DataSource.Structure.DataStructureState.FilterValues">FilterValues</h4>
-  <div class="markdown level1 summary"><p>Filter values</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public TaggedValue[] FilterValues { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataSource.Structure.TaggedValue.html">TaggedValue</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Grouping_" data-uid="XData.DataSource.Structure.DataStructureState.Grouping*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Grouping" data-uid="XData.DataSource.Structure.DataStructureState.Grouping">Grouping</h4>
-  <div class="markdown level1 summary"><p>Grouping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public Grouping[] Grouping { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataSource.Structure.Grouping.html">Grouping</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_IsReadOnly_" data-uid="XData.DataSource.Structure.DataStructureState.IsReadOnly*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_IsReadOnly" data-uid="XData.DataSource.Structure.DataStructureState.IsReadOnly">IsReadOnly</h4>
-  <div class="markdown level1 summary"><p>Read only flag</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public bool IsReadOnly { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Limit_" data-uid="XData.DataSource.Structure.DataStructureState.Limit*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Limit" data-uid="XData.DataSource.Structure.DataStructureState.Limit">Limit</h4>
-  <div class="markdown level1 summary"><p>Limit count</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public int Limit { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Name_" data-uid="XData.DataSource.Structure.DataStructureState.Name*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Name" data-uid="XData.DataSource.Structure.DataStructureState.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Table name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public string Name { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_OrderBy_" data-uid="XData.DataSource.Structure.DataStructureState.OrderBy*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_OrderBy" data-uid="XData.DataSource.Structure.DataStructureState.OrderBy">OrderBy</h4>
-  <div class="markdown level1 summary"><p>Order</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public Order[] OrderBy { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataSource.Structure.Order.html">Order</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Reverse_" data-uid="XData.DataSource.Structure.DataStructureState.Reverse*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Reverse" data-uid="XData.DataSource.Structure.DataStructureState.Reverse">Reverse</h4>
-  <div class="markdown level1 summary"><p>Reverse order flag</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public bool Reverse { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Skip_" data-uid="XData.DataSource.Structure.DataStructureState.Skip*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Skip" data-uid="XData.DataSource.Structure.DataStructureState.Skip">Skip</h4>
-  <div class="markdown level1 summary"><p>Skip count</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public int Skip { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Sources_" data-uid="XData.DataSource.Structure.DataStructureState.Sources*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Sources" data-uid="XData.DataSource.Structure.DataStructureState.Sources">Sources</h4>
-  <div class="markdown level1 summary"><p>Dynamic sources states</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public DataStructureState[] Sources { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataSource.Structure.DataStructureState.html">DataStructureState</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_SourceTypeType_" data-uid="XData.DataSource.Structure.DataStructureState.SourceTypeType*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_SourceTypeType" data-uid="XData.DataSource.Structure.DataStructureState.SourceTypeType">SourceTypeType</h4>
-  <div class="markdown level1 summary"><p>Source type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public DataSourceType SourceTypeType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataSourceType.html">DataSourceType</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_StructureType_" data-uid="XData.DataSource.Structure.DataStructureState.StructureType*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_StructureType" data-uid="XData.DataSource.Structure.DataStructureState.StructureType">StructureType</h4>
-  <div class="markdown level1 summary"><p>Structure type name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public string StructureType { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Union_" data-uid="XData.DataSource.Structure.DataStructureState.Union*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Union" data-uid="XData.DataSource.Structure.DataStructureState.Union">Union</h4>
-  <div class="markdown level1 summary"><p>Union combination</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public DataCombination Union { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataCombination.html">DataCombination</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Variables_" data-uid="XData.DataSource.Structure.DataStructureState.Variables*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Variables" data-uid="XData.DataSource.Structure.DataStructureState.Variables">Variables</h4>
-  <div class="markdown level1 summary"><p>Variables</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataMember]
-public TaggedValue[] Variables { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DataSource.Structure.TaggedValue.html">TaggedValue</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="XData_DataSource_Structure_DataStructureState_Equals_" data-uid="XData.DataSource.Structure.DataStructureState.Equals*"></a>
-  <h4 id="XData_DataSource_Structure_DataStructureState_Equals_XData_DataSource_Structure_DataStructureState_" data-uid="XData.DataSource.Structure.DataStructureState.Equals(XData.DataSource.Structure.DataStructureState)">Equals(DataStructureState)</h4>
-  <div class="markdown level1 summary"><p>DataStructureState equality check</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(DataStructureState other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="XData.DataSource.Structure.DataStructureState.html">DataStructureState</a></td>
-        <td><span class="parametername">other</span></td>
-        <td><p>DataStructureState instance to compare</p>
+        <td id="XData_DataSource_Structure_DataStructureState_Alias" data-uid="XData.DataSource.Structure.DataStructureState.Alias">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Alias.html#XData_DataSource_Structure_DataStructureState_Alias">Alias</a>
+        </td>
+        <td class="markdown level1 summary"><p>Subquery alias</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Context" data-uid="XData.DataSource.Structure.DataStructureState.Context">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Context.html#XData_DataSource_Structure_DataStructureState_Context">Context</a>
+        </td>
+        <td class="markdown level1 summary"><p>Structure context</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Distinct" data-uid="XData.DataSource.Structure.DataStructureState.Distinct">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Distinct.html#XData_DataSource_Structure_DataStructureState_Distinct">Distinct</a>
+        </td>
+        <td class="markdown level1 summary"><p>Distinct flag</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Filters" data-uid="XData.DataSource.Structure.DataStructureState.Filters">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Filters.html#XData_DataSource_Structure_DataStructureState_Filters">Filters</a>
+        </td>
+        <td class="markdown level1 summary"><p>Filter combinations</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_FilterValues" data-uid="XData.DataSource.Structure.DataStructureState.FilterValues">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.FilterValues.html#XData_DataSource_Structure_DataStructureState_FilterValues">FilterValues</a>
+        </td>
+        <td class="markdown level1 summary"><p>Filter values</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Grouping" data-uid="XData.DataSource.Structure.DataStructureState.Grouping">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Grouping.html#XData_DataSource_Structure_DataStructureState_Grouping">Grouping</a>
+        </td>
+        <td class="markdown level1 summary"><p>Grouping</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_IsReadOnly" data-uid="XData.DataSource.Structure.DataStructureState.IsReadOnly">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.IsReadOnly.html#XData_DataSource_Structure_DataStructureState_IsReadOnly">IsReadOnly</a>
+        </td>
+        <td class="markdown level1 summary"><p>Read only flag</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Limit" data-uid="XData.DataSource.Structure.DataStructureState.Limit">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Limit.html#XData_DataSource_Structure_DataStructureState_Limit">Limit</a>
+        </td>
+        <td class="markdown level1 summary"><p>Limit count</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Name" data-uid="XData.DataSource.Structure.DataStructureState.Name">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Name.html#XData_DataSource_Structure_DataStructureState_Name">Name</a>
+        </td>
+        <td class="markdown level1 summary"><p>Table name</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_OrderBy" data-uid="XData.DataSource.Structure.DataStructureState.OrderBy">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.OrderBy.html#XData_DataSource_Structure_DataStructureState_OrderBy">OrderBy</a>
+        </td>
+        <td class="markdown level1 summary"><p>Order</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Reverse" data-uid="XData.DataSource.Structure.DataStructureState.Reverse">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Reverse.html#XData_DataSource_Structure_DataStructureState_Reverse">Reverse</a>
+        </td>
+        <td class="markdown level1 summary"><p>Reverse order flag</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Skip" data-uid="XData.DataSource.Structure.DataStructureState.Skip">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Skip.html#XData_DataSource_Structure_DataStructureState_Skip">Skip</a>
+        </td>
+        <td class="markdown level1 summary"><p>Skip count</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Sources" data-uid="XData.DataSource.Structure.DataStructureState.Sources">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Sources.html#XData_DataSource_Structure_DataStructureState_Sources">Sources</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic sources states</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_SourceTypeType" data-uid="XData.DataSource.Structure.DataStructureState.SourceTypeType">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.SourceTypeType.html#XData_DataSource_Structure_DataStructureState_SourceTypeType">SourceTypeType</a>
+        </td>
+        <td class="markdown level1 summary"><p>Source type</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_StructureType" data-uid="XData.DataSource.Structure.DataStructureState.StructureType">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.StructureType.html#XData_DataSource_Structure_DataStructureState_StructureType">StructureType</a>
+        </td>
+        <td class="markdown level1 summary"><p>Structure type name</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Union" data-uid="XData.DataSource.Structure.DataStructureState.Union">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Union.html#XData_DataSource_Structure_DataStructureState_Union">Union</a>
+        </td>
+        <td class="markdown level1 summary"><p>Union combination</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DataSource_Structure_DataStructureState_Variables" data-uid="XData.DataSource.Structure.DataStructureState.Variables">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Variables.html#XData_DataSource_Structure_DataStructureState_Variables">Variables</a>
+        </td>
+        <td class="markdown level1 summary"><p>Variables</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <h3 id="methods">Methods
+  </h3>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Instances are contains the same data</p>
+        <td id="XData_DataSource_Structure_DataStructureState_Equals_XData_DataSource_Structure_DataStructureState_" data-uid="XData.DataSource.Structure.DataStructureState.Equals(XData.DataSource.Structure.DataStructureState)">
+          <a class="xref" href="XData.DataSource.Structure.DataStructureState.Equals.html#XData_DataSource_Structure_DataStructureState_Equals_XData_DataSource_Structure_DataStructureState_">Equals(DataStructureState)</a>
+        </td>
+        <td class="markdown level1 summary"><p>DataStructureState equality check</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
-  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>

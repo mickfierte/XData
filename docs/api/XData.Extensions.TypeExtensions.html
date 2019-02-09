@@ -123,52 +123,6 @@
   </div>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_ConvertTo_" data-uid="XData.Extensions.TypeExtensions.ConvertTo*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_ConvertTo__1_System_Enum_" data-uid="XData.Extensions.TypeExtensions.ConvertTo``1(System.Enum)">ConvertTo&lt;T&gt;(Enum)</h4>
-  <div class="markdown level1 summary"><p>Convert enumeration value to another enumeration by hash code</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertTo&lt;T&gt;(this Enum source)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.enum">Enum</a></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source enumeration value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>Target enumeration value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -178,1447 +132,184 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Target enumeration type</p>
+        <td id="XData_Extensions_TypeExtensions_ConvertTo__1_System_Enum_" data-uid="XData.Extensions.TypeExtensions.ConvertTo``1(System.Enum)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.ConvertTo.html#XData_Extensions_TypeExtensions_ConvertTo__1_System_Enum_">ConvertTo&lt;T&gt;(Enum)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Convert enumeration value to another enumeration by hash code</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_EqualValue_" data-uid="XData.Extensions.TypeExtensions.EqualValue*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_EqualValue_System_Enum_System_Enum_" data-uid="XData.Extensions.TypeExtensions.EqualValue(System.Enum,System.Enum)">EqualValue(Enum, Enum)</h4>
-  <div class="markdown level1 summary"><p>Compare Enumeration values by hash codes</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool EqualValue(this Enum source, Enum other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.enum">Enum</a></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source enumeration value</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.enum">Enum</a></td>
-        <td><span class="parametername">other</span></td>
-        <td><p>Other enumeration value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Values are equal</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_GetDefault_" data-uid="XData.Extensions.TypeExtensions.GetDefault*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_GetDefault__1" data-uid="XData.Extensions.TypeExtensions.GetDefault``1">GetDefault&lt;TType&gt;()</h4>
-  <div class="markdown level1 summary"><p>Get type default value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static object GetDefault&lt;TType&gt;()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>Default value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TType</span></td>
-        <td><p>Type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_GetEnumKeyValuePairs_" data-uid="XData.Extensions.TypeExtensions.GetEnumKeyValuePairs*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_GetEnumKeyValuePairs_System_Type_" data-uid="XData.Extensions.TypeExtensions.GetEnumKeyValuePairs(System.Type)">GetEnumKeyValuePairs(Type)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;long, string&gt;&gt; GetEnumKeyValuePairs(this Type enumType)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">enumType</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_GetEnumValue_" data-uid="XData.Extensions.TypeExtensions.GetEnumValue*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_GetEnumValue_System_Type_System_Int64_" data-uid="XData.Extensions.TypeExtensions.GetEnumValue(System.Type,System.Int64)">GetEnumValue(Type, Int64)</h4>
-  <div class="markdown level1 summary"><p>Returns enum id and value pair for specified id</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KeyValuePair&lt;long, string&gt;? GetEnumValue(this Type enumType, long id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">enumType</span></td>
-        <td><p>Enum type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Enum key</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td><p>Enum id and value pair</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_GetGenericMethod_" data-uid="XData.Extensions.TypeExtensions.GetGenericMethod*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_GetGenericMethod_System_Type_System_String_System_Collections_Generic_IEnumerable_System_Type__" data-uid="XData.Extensions.TypeExtensions.GetGenericMethod(System.Type,System.String,System.Collections.Generic.IEnumerable{System.Type})">GetGenericMethod(Type, String, IEnumerable&lt;Type&gt;)</h4>
-  <div class="markdown level1 summary"><p>Returns generic method with typed arguments</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MethodInfo GetGenericMethod(this Type type, string name, IEnumerable&lt;Type&gt; parameterTypes)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Method type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Method name</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>&gt;</td>
-        <td><span class="parametername">parameterTypes</span></td>
-        <td><p>Parameter types</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.methodinfo">MethodInfo</a></td>
-        <td><p>Reflection method info</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td><p>Method name can not be null or empty</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td><p>Method parameter types can not be null</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_GetLocalizedEnumKeyValuePairs_" data-uid="XData.Extensions.TypeExtensions.GetLocalizedEnumKeyValuePairs*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_GetLocalizedEnumKeyValuePairs_System_Type_" data-uid="XData.Extensions.TypeExtensions.GetLocalizedEnumKeyValuePairs(System.Type)">GetLocalizedEnumKeyValuePairs(Type)</h4>
-  <div class="markdown level1 summary"><p>Returns id and name pairs for all enum values</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;long, string&gt;&gt; GetLocalizedEnumKeyValuePairs(this Type enumType)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">enumType</span></td>
-        <td><p>Enum type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td><p>Sequence of id and name pairs for all enum values</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_GetLocalizedEnumValue_" data-uid="XData.Extensions.TypeExtensions.GetLocalizedEnumValue*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_GetLocalizedEnumValue_System_Type_System_Int64_" data-uid="XData.Extensions.TypeExtensions.GetLocalizedEnumValue(System.Type,System.Int64)">GetLocalizedEnumValue(Type, Int64)</h4>
-  <div class="markdown level1 summary"><p>Returns enum id and localized value pair for specified id</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static KeyValuePair&lt;long, string&gt;? GetLocalizedEnumValue(this Type enumType, long id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">enumType</span></td>
-        <td><p>Enum type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>Enum key</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td><p>Enum id and localized value pair</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_GetRealType_" data-uid="XData.Extensions.TypeExtensions.GetRealType*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_GetRealType_System_Type_" data-uid="XData.Extensions.TypeExtensions.GetRealType(System.Type)">GetRealType(Type)</h4>
-  <div class="markdown level1 summary"><p>Get Generic base type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Type GetRealType(this Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><p>Base type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_Implements_" data-uid="XData.Extensions.TypeExtensions.Implements*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_Implements__1_System_Type___0_" data-uid="XData.Extensions.TypeExtensions.Implements``1(System.Type,``0)">Implements&lt;T&gt;(Type, T)</h4>
-  <div class="markdown level1 summary"><p>Test type implements an interface</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Implements&lt;T&gt;(this Type type, T interfaceType)
-    where T : Type</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">interfaceType</span></td>
-        <td><p>Interface</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Type is implements an interface</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Interface type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_InvokeMethod_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod(System.Object,System.Linq.Expressions.Expression{System.Action},System.Reflection.BindingFlags)">InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</h4>
-  <div class="markdown level1 summary"><p>Invoke method with replacing base object type wrapper</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void InvokeMethod(this object obj, Expression&lt;Action&gt; expr, BindingFlags bindingFlags = BindingFlags.Default)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>Object to invoke method with</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a>&gt;</td>
-        <td><span class="parametername">expr</span></td>
-        <td><p>Call expression</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></td>
-        <td><span class="parametername">bindingFlags</span></td>
-        <td><p>Binding flags</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_InvokeMethod_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod(System.Object,System.Type[],System.Linq.Expressions.Expression{System.Action},System.Reflection.BindingFlags)">InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</h4>
-  <div class="markdown level1 summary"><p>Invoke generic method wrapper</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void InvokeMethod(this object obj, Type[] types, Expression&lt;Action&gt; expr, BindingFlags bindingFlags = BindingFlags.Default)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>Object to invoke method (set null to call static method)</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>[]</td>
-        <td><span class="parametername">types</span></td>
-        <td><p>Generic arguments types array</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a>&gt;</td>
-        <td><span class="parametername">expr</span></td>
-        <td><p>Call expression (set generic arguments to any valid types)</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></td>
-        <td><span class="parametername">bindingFlags</span></td>
-        <td><p>Binding flags</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_InvokeMethod_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod``1(System.Object,System.Linq.Expressions.Expression{System.Func{``0}},System.Reflection.BindingFlags)">InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</h4>
-  <div class="markdown level1 summary"><p>Invoke method with replacing base object type wrapper</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TRet InvokeMethod&lt;TRet&gt;(this object obj, Expression&lt;Func&lt;TRet&gt;&gt; expr, BindingFlags bindingFlags = BindingFlags.Default)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>Object to invoke method with</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TRet&gt;&gt;</td>
-        <td><span class="parametername">expr</span></td>
-        <td><p>Call expression</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></td>
-        <td><span class="parametername">bindingFlags</span></td>
-        <td><p>Binding flags</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TRet</span></td>
-        <td><p>Call return value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TRet</span></td>
-        <td><p>Return value type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_InvokeMethod_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod``1(System.Object,System.Type[],System.Linq.Expressions.Expression{System.Func{``0}},System.Reflection.BindingFlags)">InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</h4>
-  <div class="markdown level1 summary"><p>Invoke generic method wrapper</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TRet InvokeMethod&lt;TRet&gt;(this object obj, Type[] types, Expression&lt;Func&lt;TRet&gt;&gt; expr, BindingFlags bindingFlags = BindingFlags.Default)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">obj</span></td>
-        <td><p>Object to invoke method (set null to call static method)</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a>[]</td>
-        <td><span class="parametername">types</span></td>
-        <td><p>Generic arguments types array</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TRet&gt;&gt;</td>
-        <td><span class="parametername">expr</span></td>
-        <td><p>Call expression (set generic arguments to any valid types)</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.bindingflags">BindingFlags</a></td>
-        <td><span class="parametername">bindingFlags</span></td>
-        <td><p>Binding flags</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TRet</span></td>
-        <td><p>Call return value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TRet</span></td>
-        <td><p>Return value type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_IsBasedOn_" data-uid="XData.Extensions.TypeExtensions.IsBasedOn*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_IsBasedOn__1_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsBasedOn``1(System.Type)">IsBasedOn&lt;TType&gt;(Type)</h4>
-  <div class="markdown level1 summary"><p>Check generic base type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsBasedOn&lt;TType&gt;(this Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Generic type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Generic type is based on TType</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TType</span></td>
-        <td><p>Base type to check</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_IsBinary_" data-uid="XData.Extensions.TypeExtensions.IsBinary*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_IsBinary_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsBinary(System.Type)">IsBinary(Type)</h4>
-  <div class="markdown level1 summary"><p>Check Lob type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsBinary(this Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Type to check</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Type is binary</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_IsEnum_" data-uid="XData.Extensions.TypeExtensions.IsEnum*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_IsEnum_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsEnum(System.Type)">IsEnum(Type)</h4>
-  <div class="markdown level1 summary"><p>Check Enum type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsEnum(this Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Type to check</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Type is binary</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_IsNullable_" data-uid="XData.Extensions.TypeExtensions.IsNullable*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_IsNullable_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsNullable(System.Type)">IsNullable(Type)</h4>
-  <div class="markdown level1 summary"><p>Check nullable type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsNullable(this Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Type to check</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Type is nullable</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_IsXml_" data-uid="XData.Extensions.TypeExtensions.IsXml*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_IsXml_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsXml(System.Type)">IsXml(Type)</h4>
-  <div class="markdown level1 summary"><p>Check Xml type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsXml(this Type type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Type to check</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Type is binary</p>
+        <td id="XData_Extensions_TypeExtensions_EqualValue_System_Enum_System_Enum_" data-uid="XData.Extensions.TypeExtensions.EqualValue(System.Enum,System.Enum)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.EqualValue.html#XData_Extensions_TypeExtensions_EqualValue_System_Enum_System_Enum_">EqualValue(Enum, Enum)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Compare Enumeration values by hash codes</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_NullWrap_" data-uid="XData.Extensions.TypeExtensions.NullWrap*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_NullWrap__1___0_" data-uid="XData.Extensions.TypeExtensions.NullWrap``1(``0)">NullWrap&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"><p>Null value wrapper</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T NullWrap&lt;T&gt;(T source)
-    where T : class, new()</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source</p>
+        <td id="XData_Extensions_TypeExtensions_GetDefault__1" data-uid="XData.Extensions.TypeExtensions.GetDefault``1">
+          <a class="xref" href="XData.Extensions.TypeExtensions.GetDefault.html#XData_Extensions_TypeExtensions_GetDefault__1">GetDefault&lt;TType&gt;()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Get type default value</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
+        <td id="XData_Extensions_TypeExtensions_GetEnumKeyValuePairs_System_Type_" data-uid="XData.Extensions.TypeExtensions.GetEnumKeyValuePairs(System.Type)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.GetEnumKeyValuePairs.html#XData_Extensions_TypeExtensions_GetEnumKeyValuePairs_System_Type_">GetEnumKeyValuePairs(Type)</a>
+        </td>
+        <td class="markdown level1 summary"></td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>Source or empty object of source type</p>
+        <td id="XData_Extensions_TypeExtensions_GetEnumValue_System_Type_System_Int64_" data-uid="XData.Extensions.TypeExtensions.GetEnumValue(System.Type,System.Int64)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.GetEnumValue.html#XData_Extensions_TypeExtensions_GetEnumValue_System_Type_System_Int64_">GetEnumValue(Type, Int64)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Returns enum id and value pair for specified id</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Source type</p>
+        <td id="XData_Extensions_TypeExtensions_GetGenericMethod_System_Type_System_String_System_Collections_Generic_IEnumerable_System_Type__" data-uid="XData.Extensions.TypeExtensions.GetGenericMethod(System.Type,System.String,System.Collections.Generic.IEnumerable{System.Type})">
+          <a class="xref" href="XData.Extensions.TypeExtensions.GetGenericMethod.html#XData_Extensions_TypeExtensions_GetGenericMethod_System_Type_System_String_System_Collections_Generic_IEnumerable_System_Type__">GetGenericMethod(Type, String, IEnumerable&lt;Type&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Returns generic method with typed arguments</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_NullWrap_" data-uid="XData.Extensions.TypeExtensions.NullWrap*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_NullWrap__1___0___" data-uid="XData.Extensions.TypeExtensions.NullWrap``1(``0[])">NullWrap&lt;T&gt;(T[])</h4>
-  <div class="markdown level1 summary"><p>Null value wrapper</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T[] NullWrap&lt;T&gt;(T[] source)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td>T[]</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source array</p>
+        <td id="XData_Extensions_TypeExtensions_GetLocalizedEnumKeyValuePairs_System_Type_" data-uid="XData.Extensions.TypeExtensions.GetLocalizedEnumKeyValuePairs(System.Type)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.GetLocalizedEnumKeyValuePairs.html#XData_Extensions_TypeExtensions_GetLocalizedEnumKeyValuePairs_System_Type_">GetLocalizedEnumKeyValuePairs(Type)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Returns id and name pairs for all enum values</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td>T[]</td>
-        <td><p>Source or empty array</p>
+        <td id="XData_Extensions_TypeExtensions_GetLocalizedEnumValue_System_Type_System_Int64_" data-uid="XData.Extensions.TypeExtensions.GetLocalizedEnumValue(System.Type,System.Int64)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.GetLocalizedEnumValue.html#XData_Extensions_TypeExtensions_GetLocalizedEnumValue_System_Type_System_Int64_">GetLocalizedEnumValue(Type, Int64)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Returns enum id and localized value pair for specified id</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Array element type</p>
+        <td id="XData_Extensions_TypeExtensions_GetRealType_System_Type_" data-uid="XData.Extensions.TypeExtensions.GetRealType(System.Type)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.GetRealType.html#XData_Extensions_TypeExtensions_GetRealType_System_Type_">GetRealType(Type)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Get Generic base type</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_ParseEnum_" data-uid="XData.Extensions.TypeExtensions.ParseEnum*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_ParseEnum_System_Type_System_String_" data-uid="XData.Extensions.TypeExtensions.ParseEnum(System.Type,System.String)">ParseEnum(Type, String)</h4>
-  <div class="markdown level1 summary"><p>Returns id for specified enum type and string value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long? ParseEnum(this Type enumType, string value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">enumType</span></td>
-        <td><p>Enum type</p>
+        <td id="XData_Extensions_TypeExtensions_Implements__1_System_Type___0_" data-uid="XData.Extensions.TypeExtensions.Implements``1(System.Type,``0)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.Implements.html#XData_Extensions_TypeExtensions_Implements__1_System_Type___0_">Implements&lt;T&gt;(Type, T)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Test type implements an interface</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>String value of enum</p>
+        <td id="XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod(System.Object,System.Linq.Expressions.Expression{System.Action},System.Reflection.BindingFlags)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Invoke method with replacing base object type wrapper</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
-        <td><p>Enum id</p>
+        <td id="XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod(System.Object,System.Type[],System.Linq.Expressions.Expression{System.Action},System.Reflection.BindingFlags)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Invoke generic method wrapper</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_ParseEnumRange_" data-uid="XData.Extensions.TypeExtensions.ParseEnumRange*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_ParseEnumRange_System_Type_System_Collections_Generic_ICollection_System_Object__" data-uid="XData.Extensions.TypeExtensions.ParseEnumRange(System.Type,System.Collections.Generic.ICollection{System.Object})">ParseEnumRange(Type, ICollection&lt;Object&gt;)</h4>
-  <div class="markdown level1 summary"><p>Parse enum values range</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static object[] ParseEnumRange(this Type enumType, ICollection&lt;object&gt; values)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">enumType</span></td>
-        <td><p>Enum type</p>
+        <td id="XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod``1(System.Object,System.Linq.Expressions.Expression{System.Func{``0}},System.Reflection.BindingFlags)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Invoke method with replacing base object type wrapper</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
-        <td><span class="parametername">values</span></td>
-        <td><p>Enum values range</p>
+        <td id="XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_" data-uid="XData.Extensions.TypeExtensions.InvokeMethod``1(System.Object,System.Type[],System.Linq.Expressions.Expression{System.Func{``0}},System.Reflection.BindingFlags)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Invoke generic method wrapper</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
-        <td><p>Enum id array</p>
+        <td id="XData_Extensions_TypeExtensions_IsBasedOn__1_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsBasedOn``1(System.Type)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.IsBasedOn.html#XData_Extensions_TypeExtensions_IsBasedOn__1_System_Type_">IsBasedOn&lt;TType&gt;(Type)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Check generic base type</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Extensions_TypeExtensions_ParseEnumRange_System_Type_System_Collections_Generic_ICollection_System_Object___seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_ParseEnum_System_Type_System_String_">ParseEnum(Type, String)</a></div>
-  </div>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_ParseType_" data-uid="XData.Extensions.TypeExtensions.ParseType*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_ParseType_System_String_" data-uid="XData.Extensions.TypeExtensions.ParseType(System.String)">ParseType(String)</h4>
-  <div class="markdown level1 summary"><p>Parse type full name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Type ParseType(this string typeFullName)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">typeFullName</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_TryConvert_" data-uid="XData.Extensions.TypeExtensions.TryConvert*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__" data-uid="XData.Extensions.TypeExtensions.TryConvert``2(``0,System.Func{``0,``1})">TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</h4>
-  <div class="markdown level1 summary"><p>Try to convert value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TResult TryConvert&lt;T, TResult&gt;(this T source, Func&lt;T, TResult&gt; convert)
-    where T : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source value</p>
+        <td id="XData_Extensions_TypeExtensions_IsBinary_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsBinary(System.Type)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.IsBinary.html#XData_Extensions_TypeExtensions_IsBinary_System_Type_">IsBinary(Type)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Check Lob type</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;</td>
-        <td><span class="parametername">convert</span></td>
-        <td><p>Conversion logic</p>
+        <td id="XData_Extensions_TypeExtensions_IsEnum_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsEnum(System.Type)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.IsEnum.html#XData_Extensions_TypeExtensions_IsEnum_System_Type_">IsEnum(Type)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Check Enum type</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TResult</span></td>
-        <td><p>Converted value or default of TResult</p>
+        <td id="XData_Extensions_TypeExtensions_IsNullable_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsNullable(System.Type)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.IsNullable.html#XData_Extensions_TypeExtensions_IsNullable_System_Type_">IsNullable(Type)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Check nullable type</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Source type</p>
+        <td id="XData_Extensions_TypeExtensions_IsXml_System_Type_" data-uid="XData.Extensions.TypeExtensions.IsXml(System.Type)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.IsXml.html#XData_Extensions_TypeExtensions_IsXml_System_Type_">IsXml(Type)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Check Xml type</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">TResult</span></td>
-        <td><p>Result type</p>
+        <td id="XData_Extensions_TypeExtensions_NullWrap__1___0_" data-uid="XData.Extensions.TypeExtensions.NullWrap``1(``0)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.NullWrap.html#XData_Extensions_TypeExtensions_NullWrap__1___0_">NullWrap&lt;T&gt;(T)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Null value wrapper</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Extensions_TypeExtensions_TryConvert_" data-uid="XData.Extensions.TypeExtensions.TryConvert*"></a>
-  <h4 id="XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_" data-uid="XData.Extensions.TypeExtensions.TryConvert``2(``0,System.Func{``0,``1},``1)">TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</h4>
-  <div class="markdown level1 summary"><p>Try to convert value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TResult TryConvert&lt;T, TResult&gt;(this T source, Func&lt;T, TResult&gt; convert, TResult defaultValue)
-    where T : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source value</p>
+        <td id="XData_Extensions_TypeExtensions_NullWrap__1___0___" data-uid="XData.Extensions.TypeExtensions.NullWrap``1(``0[])">
+          <a class="xref" href="XData.Extensions.TypeExtensions.NullWrap.html#XData_Extensions_TypeExtensions_NullWrap__1___0___">NullWrap&lt;T&gt;(T[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Null value wrapper</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;</td>
-        <td><span class="parametername">convert</span></td>
-        <td><p>Conversion logic</p>
+        <td id="XData_Extensions_TypeExtensions_ParseEnum_System_Type_System_String_" data-uid="XData.Extensions.TypeExtensions.ParseEnum(System.Type,System.String)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.ParseEnum.html#XData_Extensions_TypeExtensions_ParseEnum_System_Type_System_String_">ParseEnum(Type, String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Returns id for specified enum type and string value</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">TResult</span></td>
-        <td><span class="parametername">defaultValue</span></td>
-        <td><p>Default result value</p>
+        <td id="XData_Extensions_TypeExtensions_ParseEnumRange_System_Type_System_Collections_Generic_ICollection_System_Object__" data-uid="XData.Extensions.TypeExtensions.ParseEnumRange(System.Type,System.Collections.Generic.ICollection{System.Object})">
+          <a class="xref" href="XData.Extensions.TypeExtensions.ParseEnumRange.html#XData_Extensions_TypeExtensions_ParseEnumRange_System_Type_System_Collections_Generic_ICollection_System_Object__">ParseEnumRange(Type, ICollection&lt;Object&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Parse enum values range</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="xref">TResult</span></td>
-        <td><p>Converted value or default of TResult</p>
+        <td id="XData_Extensions_TypeExtensions_ParseType_System_String_" data-uid="XData.Extensions.TypeExtensions.ParseType(System.String)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.ParseType.html#XData_Extensions_TypeExtensions_ParseType_System_String_">ParseType(String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Parse type full name</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Source type</p>
+        <td id="XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__" data-uid="XData.Extensions.TypeExtensions.TryConvert``2(``0,System.Func{``0,``1})">
+          <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Try to convert value</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">TResult</span></td>
-        <td><p>Result type</p>
+        <td id="XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_" data-uid="XData.Extensions.TypeExtensions.TryConvert``2(``0,System.Func{``0,``1},``1)">
+          <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Try to convert value</p>
 </td>
       </tr>
     </tbody>

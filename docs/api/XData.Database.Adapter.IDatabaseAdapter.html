@@ -100,892 +100,32 @@
   </div>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_ConnectType_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ConnectType*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_ConnectType" data-uid="XData.Database.Adapter.IDatabaseAdapter.ConnectType">ConnectType</h4>
-  <div class="markdown level1 summary"><p>Database connection type</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string ConnectType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_ConnectType" data-uid="XData.Database.Adapter.IDatabaseAdapter.ConnectType">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.ConnectType.html#XData_Database_Adapter_IDatabaseAdapter_ConnectType">ConnectType</a>
+        </td>
+        <td class="markdown level1 summary"><p>Database connection type</p>
+</td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_NotSupported_" data-uid="XData.Database.Adapter.IDatabaseAdapter.NotSupported*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_NotSupported" data-uid="XData.Database.Adapter.IDatabaseAdapter.NotSupported">NotSupported</h4>
-  <div class="markdown level1 summary"><p>Dialect options not supported by adapter</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DialectOptions NotSupported { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.DialectOptions.html">DialectOptions</a></td>
-        <td></td>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_NotSupported" data-uid="XData.Database.Adapter.IDatabaseAdapter.NotSupported">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.NotSupported.html#XData_Database_Adapter_IDatabaseAdapter_NotSupported">NotSupported</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dialect options not supported by adapter</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_BeginTransaction_" data-uid="XData.Database.Adapter.IDatabaseAdapter.BeginTransaction*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_BeginTransaction_System_Guid_System_Boolean_IsolationLevel_" data-uid="XData.Database.Adapter.IDatabaseAdapter.BeginTransaction(System.Guid,System.Boolean,IsolationLevel)">BeginTransaction(Guid, Boolean, IsolationLevel)</h4>
-  <div class="markdown level1 summary"><p>Begin transaction</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string BeginTransaction(Guid layer, bool read = false, IsolationLevel isolation = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">read</span></td>
-        <td><p>Read only transaction flag</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">IsolationLevel</span></td>
-        <td><span class="parametername">isolation</span></td>
-        <td><p>Transaction isolation level</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>Success flag</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>SQL exceptions while beginning transaction. </p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_Call_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Call*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_Call_System_Guid_XData_Database_Adapter_StoredProcedure_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Call(System.Guid,XData.Database.Adapter.StoredProcedure)">Call(Guid, StoredProcedure)</h4>
-  <div class="markdown level1 summary"><p>Execute SQL stored procedure</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">CallResult Call(Guid layer, StoredProcedure procedure)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.StoredProcedure.html">StoredProcedure</a></td>
-        <td><span class="parametername">procedure</span></td>
-        <td><p>Procedure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.CallResult.html">CallResult</a></td>
-        <td><p>Call result</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>wrong SQL stored procedure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_Close_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Close*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_Close_System_Guid_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Close(System.Guid)">Close(Guid)</h4>
-  <div class="markdown level1 summary"><p>Close database adapter</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Close(Guid layer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>SQL exceptions while closing connection</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_Commit_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Commit*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_Commit_System_Guid_System_String_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Commit(System.Guid,System.String)">Commit(Guid, String)</h4>
-  <div class="markdown level1 summary"><p>Commit transaction</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool Commit(Guid layer, string transactionId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">transactionId</span></td>
-        <td><p>Transaction id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Success flag</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteNonQuery*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_System_Enum_System_Object___" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteNonQuery(System.Guid,System.Enum,System.Object[])">ExecuteNonQuery(Guid, Enum, Object[])</h4>
-  <div class="markdown level1 summary"><p>Execute SQL statement</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult ExecuteNonQuery(Guid layer, Enum queryIndex, params object[] paramValues)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.enum">Enum</a></td>
-        <td><span class="parametername">queryIndex</span></td>
-        <td><p>Predefined query index</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
-        <td><span class="parametername">paramValues</span></td>
-        <td><p>Query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.QueryResult.html">QueryResult</a></td>
-        <td><p>Query result</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>wrong SQL query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteNonQuery*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_XData_Database_Adapter_Query_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteNonQuery(System.Guid,XData.Database.Adapter.Query)">ExecuteNonQuery(Guid, Query)</h4>
-  <div class="markdown level1 summary"><p>Execute SQL statement</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult ExecuteNonQuery(Guid layer, Query query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
-        <td><span class="parametername">query</span></td>
-        <td><p>Query</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.QueryResult.html">QueryResult</a></td>
-        <td><p>Query result</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>wrong SQL query</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_System_Enum_System_Object___" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar(System.Guid,System.Enum,System.Object[])">ExecuteScalar(Guid, Enum, Object[])</h4>
-  <div class="markdown level1 summary"><p>Retrieve scalar value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">object ExecuteScalar(Guid layer, Enum queryIndex, params object[] paramValues)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.enum">Enum</a></td>
-        <td><span class="parametername">queryIndex</span></td>
-        <td><p>Predefined query index</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
-        <td><span class="parametername">paramValues</span></td>
-        <td><p>Query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>Object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>wrong SQL query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_XData_Database_Adapter_Query_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar(System.Guid,XData.Database.Adapter.Query)">ExecuteScalar(Guid, Query)</h4>
-  <div class="markdown level1 summary"><p>Retrieve scalar value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">object ExecuteScalar(Guid layer, Query query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
-        <td><span class="parametername">query</span></td>
-        <td><p>Query</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>Object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>wrong SQL query</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_FillTable_" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_System_Enum_CommandBehavior_System_Object___" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,CommandBehavior,System.Object[])">FillTable(Guid, Enum, CommandBehavior, Object[])</h4>
-  <div class="markdown level1 summary"><p>Fill data table</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DataTable FillTable(Guid layer, Enum queryIndex, CommandBehavior behavior, params object[] paramValues)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.enum">Enum</a></td>
-        <td><span class="parametername">queryIndex</span></td>
-        <td><p>Predefined query index</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CommandBehavior</span></td>
-        <td><span class="parametername">behavior</span></td>
-        <td><p>Command behavior</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
-        <td><span class="parametername">paramValues</span></td>
-        <td><p>Query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DataTable</span></td>
-        <td><p>Data table</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>wrong SQL query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_FillTable_" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_System_Enum_System_Object___" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,System.Object[])">FillTable(Guid, Enum, Object[])</h4>
-  <div class="markdown level1 summary"><p>Fill data table</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DataTable FillTable(Guid layer, Enum queryIndex, params object[] paramValues)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.enum">Enum</a></td>
-        <td><span class="parametername">queryIndex</span></td>
-        <td><p>Predefined query index</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
-        <td><span class="parametername">paramValues</span></td>
-        <td><p>Query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DataTable</span></td>
-        <td><p>Data table</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>wrong SQL query parameters</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_FillTable_" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_XData_Database_Adapter_Query_CommandBehavior_" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,XData.Database.Adapter.Query,CommandBehavior)">FillTable(Guid, Query, CommandBehavior)</h4>
-  <div class="markdown level1 summary"><p>Fill data table</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DataTable FillTable(Guid layer, Query query, CommandBehavior behavior = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
-        <td><span class="parametername">query</span></td>
-        <td><p>Query</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CommandBehavior</span></td>
-        <td><span class="parametername">behavior</span></td>
-        <td><p>Command behavior</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">DataTable</span></td>
-        <td><p>Data table</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.XDataSqlException.html">XDataSqlException</a></td>
-        <td><p>wrong SQL query</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_GetParameterValue_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetParameterValue*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_GetParameterValue_XData_Database_Adapter_QueryParam_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetParameterValue(XData.Database.Adapter.QueryParam)">GetParameterValue(QueryParam)</h4>
-  <div class="markdown level1 summary"><p>Read parameter value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">object GetParameterValue(QueryParam parameter)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.QueryParam.html">QueryParam</a></td>
-        <td><span class="parametername">parameter</span></td>
-        <td><p>Parameter</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><p>Parameter value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_GetParameterValue_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetParameterValue*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_GetParameterValue__1_XData_Database_Adapter_QueryParam_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetParameterValue``1(XData.Database.Adapter.QueryParam)">GetParameterValue&lt;T&gt;(QueryParam)</h4>
-  <div class="markdown level1 summary"><p>Read parameter value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T GetParameterValue&lt;T&gt;(QueryParam parameter)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.QueryParam.html">QueryParam</a></td>
-        <td><span class="parametername">parameter</span></td>
-        <td><p>Parameter</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>Parameter value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -995,482 +135,194 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_GetTableFieldInfo_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetTableFieldInfo*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_GetTableFieldInfo_System_Guid_System_String_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetTableFieldInfo(System.Guid,System.String)">GetTableFieldInfo(Guid, String)</h4>
-  <div class="markdown level1 summary"><p>Returns table structure</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ReadOnlyCollection&lt;FieldInfo&gt; GetTableFieldInfo(Guid layer, string table)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_BeginTransaction_System_Guid_System_Boolean_IsolationLevel_" data-uid="XData.Database.Adapter.IDatabaseAdapter.BeginTransaction(System.Guid,System.Boolean,IsolationLevel)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.BeginTransaction.html#XData_Database_Adapter_IDatabaseAdapter_BeginTransaction_System_Guid_System_Boolean_IsolationLevel_">BeginTransaction(Guid, Boolean, IsolationLevel)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Begin transaction</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">table</span></td>
-        <td><p>Table name</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="XData.Database.FieldInfo.html">FieldInfo</a>&gt;</td>
-        <td><p>List of fields</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_GetTablesInfo_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetTablesInfo*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_GetTablesInfo_System_Guid_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetTablesInfo(System.Guid)">GetTablesInfo(Guid)</h4>
-  <div class="markdown level1 summary"><p>Returns table list</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ReadOnlyCollection&lt;TableInfo&gt; GetTablesInfo(Guid layer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1">ReadOnlyCollection</a>&lt;<a class="xref" href="XData.Database.TableInfo.html">TableInfo</a>&gt;</td>
-        <td><p>List of table</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_Init_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Init*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_Init_XData_Interfaces_ISqlBuilder_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Init(XData.Interfaces.ISqlBuilder,System.String,System.String,Microsoft.Extensions.Configuration.IConfiguration)">Init(ISqlBuilder, String, String, IConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Initialization routine</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Init(ISqlBuilder dialectAdapter, string context, string connectionString, IConfiguration config)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Interfaces.ISqlBuilder.html">ISqlBuilder</a></td>
-        <td><span class="parametername">dialectAdapter</span></td>
-        <td><p>SQL dialect adapter</p>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_Call_System_Guid_XData_Database_Adapter_StoredProcedure_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Call(System.Guid,XData.Database.Adapter.StoredProcedure)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.Call.html#XData_Database_Adapter_IDatabaseAdapter_Call_System_Guid_XData_Database_Adapter_StoredProcedure_">Call(Guid, StoredProcedure)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Execute SQL stored procedure</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">context</span></td>
-        <td><p>Context name</p>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_Close_System_Guid_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Close(System.Guid)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.Close.html#XData_Database_Adapter_IDatabaseAdapter_Close_System_Guid_">Close(Guid)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Close database adapter</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">connectionString</span></td>
-        <td><p>Connection string</p>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_Commit_System_Guid_System_String_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Commit(System.Guid,System.String)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.Commit.html#XData_Database_Adapter_IDatabaseAdapter_Commit_System_Guid_System_String_">Commit(Guid, String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Commit transaction</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
-        <td><span class="parametername">config</span></td>
-        <td><p>Adapter configuration</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_InTransaction_" data-uid="XData.Database.Adapter.IDatabaseAdapter.InTransaction*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_InTransaction_System_Guid_" data-uid="XData.Database.Adapter.IDatabaseAdapter.InTransaction(System.Guid)">InTransaction(Guid)</h4>
-  <div class="markdown level1 summary"><p>Transaction context flag</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool InTransaction(Guid layer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_IsOpen_" data-uid="XData.Database.Adapter.IDatabaseAdapter.IsOpen*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_IsOpen_System_Guid_" data-uid="XData.Database.Adapter.IDatabaseAdapter.IsOpen(System.Guid)">IsOpen(Guid)</h4>
-  <div class="markdown level1 summary"><p>Check adapter connection is open</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsOpen(Guid layer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_Rollback_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Rollback*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_Rollback_System_Guid_System_String_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Rollback(System.Guid,System.String)">Rollback(Guid, String)</h4>
-  <div class="markdown level1 summary"><p>Rollback transaction</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool Rollback(Guid layer, string transactionId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_System_Enum_System_Object___" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteNonQuery(System.Guid,System.Enum,System.Object[])">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.ExecuteNonQuery.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_System_Enum_System_Object___">ExecuteNonQuery(Guid, Enum, Object[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Execute SQL statement</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">transactionId</span></td>
-        <td><p>Transaction id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Success flag</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_SafeConvert_" data-uid="XData.Database.Adapter.IDatabaseAdapter.SafeConvert*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_SafeConvert__1_System_Object_" data-uid="XData.Database.Adapter.IDatabaseAdapter.SafeConvert``1(System.Object)">SafeConvert&lt;T&gt;(Object)</h4>
-  <div class="markdown level1 summary"><p>Safe convert data</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T SafeConvert&lt;T&gt;(object data)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">data</span></td>
-        <td><p>Data to convert</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>Converted data</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Result type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_SelectParameterValue_" data-uid="XData.Database.Adapter.IDatabaseAdapter.SelectParameterValue*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_SelectParameterValue__1_XData_Database_Adapter_QueryParam_" data-uid="XData.Database.Adapter.IDatabaseAdapter.SelectParameterValue``1(XData.Database.Adapter.QueryParam)">SelectParameterValue&lt;T&gt;(QueryParam)</h4>
-  <div class="markdown level1 summary"><p>Iterate user data type (UDT) valued table/array parameter value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;T&gt; SelectParameterValue&lt;T&gt;(QueryParam parameter)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Database.Adapter.QueryParam.html">QueryParam</a></td>
-        <td><span class="parametername">parameter</span></td>
-        <td><p>Parameter</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
-        <td><p>Parameter value</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Database_Adapter_IDatabaseAdapter_Test_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Test*"></a>
-  <h4 id="XData_Database_Adapter_IDatabaseAdapter_Test_System_Guid_XData_Database_Adapter_Query_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Test(System.Guid,XData.Database.Adapter.Query)">Test(Guid, Query)</h4>
-  <div class="markdown level1 summary"><p>Test query</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Test(Guid layer, Query query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_XData_Database_Adapter_Query_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteNonQuery(System.Guid,XData.Database.Adapter.Query)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.ExecuteNonQuery.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteNonQuery_System_Guid_XData_Database_Adapter_Query_">ExecuteNonQuery(Guid, Query)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Execute SQL statement</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="XData.Database.Adapter.Query.html">Query</a></td>
-        <td><span class="parametername">query</span></td>
-        <td><p>Query</p>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_System_Enum_System_Object___" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar(System.Guid,System.Enum,System.Object[])">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_System_Enum_System_Object___">ExecuteScalar(Guid, Enum, Object[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Retrieve scalar value</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_XData_Database_Adapter_Query_" data-uid="XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar(System.Guid,XData.Database.Adapter.Query)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.ExecuteScalar.html#XData_Database_Adapter_IDatabaseAdapter_ExecuteScalar_System_Guid_XData_Database_Adapter_Query_">ExecuteScalar(Guid, Query)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Retrieve scalar value</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_System_Enum_CommandBehavior_System_Object___" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,CommandBehavior,System.Object[])">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.FillTable.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_System_Enum_CommandBehavior_System_Object___">FillTable(Guid, Enum, CommandBehavior, Object[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Fill data table</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_System_Enum_System_Object___" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,System.Enum,System.Object[])">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.FillTable.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_System_Enum_System_Object___">FillTable(Guid, Enum, Object[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Fill data table</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_XData_Database_Adapter_Query_CommandBehavior_" data-uid="XData.Database.Adapter.IDatabaseAdapter.FillTable(System.Guid,XData.Database.Adapter.Query,CommandBehavior)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.FillTable.html#XData_Database_Adapter_IDatabaseAdapter_FillTable_System_Guid_XData_Database_Adapter_Query_CommandBehavior_">FillTable(Guid, Query, CommandBehavior)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Fill data table</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_GetParameterValue_XData_Database_Adapter_QueryParam_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetParameterValue(XData.Database.Adapter.QueryParam)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.GetParameterValue.html#XData_Database_Adapter_IDatabaseAdapter_GetParameterValue_XData_Database_Adapter_QueryParam_">GetParameterValue(QueryParam)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Read parameter value</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_GetParameterValue__1_XData_Database_Adapter_QueryParam_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetParameterValue``1(XData.Database.Adapter.QueryParam)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.GetParameterValue.html#XData_Database_Adapter_IDatabaseAdapter_GetParameterValue__1_XData_Database_Adapter_QueryParam_">GetParameterValue&lt;T&gt;(QueryParam)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Read parameter value</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_GetTableFieldInfo_System_Guid_System_String_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetTableFieldInfo(System.Guid,System.String)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.GetTableFieldInfo.html#XData_Database_Adapter_IDatabaseAdapter_GetTableFieldInfo_System_Guid_System_String_">GetTableFieldInfo(Guid, String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Returns table structure</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_GetTablesInfo_System_Guid_" data-uid="XData.Database.Adapter.IDatabaseAdapter.GetTablesInfo(System.Guid)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.GetTablesInfo.html#XData_Database_Adapter_IDatabaseAdapter_GetTablesInfo_System_Guid_">GetTablesInfo(Guid)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Returns table list</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_Init_XData_Interfaces_ISqlBuilder_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Init(XData.Interfaces.ISqlBuilder,System.String,System.String,Microsoft.Extensions.Configuration.IConfiguration)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.Init.html#XData_Database_Adapter_IDatabaseAdapter_Init_XData_Interfaces_ISqlBuilder_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_">Init(ISqlBuilder, String, String, IConfiguration)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Initialization routine</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_InTransaction_System_Guid_" data-uid="XData.Database.Adapter.IDatabaseAdapter.InTransaction(System.Guid)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.InTransaction.html#XData_Database_Adapter_IDatabaseAdapter_InTransaction_System_Guid_">InTransaction(Guid)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Transaction context flag</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_IsOpen_System_Guid_" data-uid="XData.Database.Adapter.IDatabaseAdapter.IsOpen(System.Guid)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.IsOpen.html#XData_Database_Adapter_IDatabaseAdapter_IsOpen_System_Guid_">IsOpen(Guid)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Check adapter connection is open</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_Rollback_System_Guid_System_String_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Rollback(System.Guid,System.String)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.Rollback.html#XData_Database_Adapter_IDatabaseAdapter_Rollback_System_Guid_System_String_">Rollback(Guid, String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Rollback transaction</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_SafeConvert__1_System_Object_" data-uid="XData.Database.Adapter.IDatabaseAdapter.SafeConvert``1(System.Object)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.SafeConvert.html#XData_Database_Adapter_IDatabaseAdapter_SafeConvert__1_System_Object_">SafeConvert&lt;T&gt;(Object)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Safe convert data</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_SelectParameterValue__1_XData_Database_Adapter_QueryParam_" data-uid="XData.Database.Adapter.IDatabaseAdapter.SelectParameterValue``1(XData.Database.Adapter.QueryParam)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.SelectParameterValue.html#XData_Database_Adapter_IDatabaseAdapter_SelectParameterValue__1_XData_Database_Adapter_QueryParam_">SelectParameterValue&lt;T&gt;(QueryParam)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Iterate user data type (UDT) valued table/array parameter value</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_Adapter_IDatabaseAdapter_Test_System_Guid_XData_Database_Adapter_Query_" data-uid="XData.Database.Adapter.IDatabaseAdapter.Test(System.Guid,XData.Database.Adapter.Query)">
+          <a class="xref" href="XData.Database.Adapter.IDatabaseAdapter.Test.html#XData_Database_Adapter_IDatabaseAdapter_Test_System_Guid_XData_Database_Adapter_Query_">Test(Guid, Query)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Test query</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>

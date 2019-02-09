@@ -111,58 +111,6 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Column_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Column*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Column__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Column``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},``0}})">Column&lt;TResult&gt;(String, Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, TResult&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository hidden property mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Column&lt;TResult&gt;(string name, Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, TResult&gt;&gt; mapper)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Hidden property name</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html">IRepositoryStructureAdapter</a>&lt;T&gt;, TResult&gt;&gt;</td>
-        <td><span class="parametername">mapper</span></td>
-        <td><p>Property mapping expression</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -172,1087 +120,145 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TResult</span></td>
-        <td><p>Hidden property type</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_Column__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Column``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},``0}})">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.Column.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Column__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___">Column&lt;TResult&gt;(String, Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, TResult&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository hidden property mapping</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Column__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0____seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructureAdapter.html">IQueryStructureAdapter</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.DataTable*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.DataTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">DataTable(String, String, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository table mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; DataTable(string name, string alias, params Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Table name</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Table alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to table</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Query structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.DataTable*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.DataTable(System.String,System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">DataTable(String, String, String, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository table mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; DataTable(string name, string alias, string parent = null, params Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Table name</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Table alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">parent</span></td>
-        <td><p>Parent table alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to table</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView(String, Type, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T&gt;, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository inner view mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; InnerView(string alias, Type dobjType, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T&gt;, IFilterDescription&gt;&gt;[] filters)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Inner view alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">dobjType</span></td>
-        <td><p>Inner view statically mapped type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter</a>&lt;T&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to inner view</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView&lt;TDobj&gt;(String, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository inner view mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; InnerView&lt;TDobj&gt;(string alias, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-    where TDobj : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Inner view alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-2.html">ISubqueryLinkAdapter</a>&lt;T, TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to inner view</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Query structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TDobj</span></td>
-        <td><p>Inner view statically mapped type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])">InnerView&lt;TDobj&gt;(String, IQueryDescription&lt;TDobj&gt;, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository inner view mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; InnerView&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-    where TDobj : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Inner view alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IQueryDescription-1.html">IQueryDescription</a>&lt;TDobj&gt;</td>
-        <td><span class="parametername">sub</span></td>
-        <td><p>Inner view query structure</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-2.html">ISubqueryLinkAdapter</a>&lt;T, TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to inner view</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TDobj</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryDescription.html">IQueryDescription</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Map_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Map*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},`0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])">Map(Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, T&gt;&gt;, Expression&lt;Func&lt;IExternalLinkDefinitionAdapter&lt;T&gt;, IExternalLinkDefinition&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository properties mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryDescription&lt;T&gt; Map(Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, T&gt;&gt; mapper, params Expression&lt;Func&lt;IExternalLinkDefinitionAdapter&lt;T&gt;, IExternalLinkDefinition&gt;&gt;[] externalLinks)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html">IRepositoryStructureAdapter</a>&lt;T&gt;, T&gt;&gt;</td>
-        <td><span class="parametername">mapper</span></td>
-        <td><p>Mapping expression</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html">IExternalLinkDefinitionAdapter</a>&lt;T&gt;, <a class="xref" href="XData.Mapping.Dynamic.IExternalLinkDefinition.html">IExternalLinkDefinition</a>&gt;&gt;[]</td>
-        <td><span class="parametername">externalLinks</span></td>
-        <td><p>External link descriptions</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryDescription-1.html">IRepositoryDescription</a>&lt;T&gt;</td>
-        <td><p>Dynamic repository description</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryDescription-1.html">IQueryDescription</a>&lt;T&gt;</div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructureAdapter.html">IQueryStructureAdapter</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter``1(System.String,System.Int32,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])">Parameter&lt;TResult&gt;(String, Int32, String, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository procedure parameter mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Parameter&lt;TResult&gt;(string alias, int order, string binding, DbType type, params Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[] attributes)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Procedure alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">order</span></td>
-        <td><p>Parameter order</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">binding</span></td>
-        <td><p>Parameter value binding</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">DbType</span></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Parameter SQL data type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IProcedureParameterAdapter.html">IProcedureParameterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IProcedureParameterFlag.html">IProcedureParameterFlag</a>&gt;&gt;[]</td>
-        <td><span class="parametername">attributes</span></td>
-        <td><p>Parameter attributes</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TResult</span></td>
-        <td><p>Parameter data type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Procedure*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Procedure(System.String,System.String,XData.ProcedureType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">Procedure(String, String, ProcedureType, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository procedure mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Procedure(string alias, string name, ProcedureType type, params Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[] filters)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Procedure alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Procedure name</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.ProcedureType.html">ProcedureType</a></td>
-        <td><span class="parametername">type</span></td>
-        <td><p>Procedure type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to table</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_ReadOnlyProperty_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.ReadOnlyProperty*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_ReadOnlyProperty__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.ReadOnlyProperty``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},``0}})">ReadOnlyProperty&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;, Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, TResult&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository read only properties mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; ReadOnlyProperty&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; property, Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, TResult&gt;&gt; mapper)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
-        <td><span class="parametername">property</span></td>
-        <td><p>Property name expression</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html">IRepositoryStructureAdapter</a>&lt;T&gt;, TResult&gt;&gt;</td>
-        <td><span class="parametername">mapper</span></td>
-        <td><p>Property mapping</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TResult</span></td>
-        <td><p>Property type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Return_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Return*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Return``1(System.String,System.String,System.Int32,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,`0}})">Return&lt;TResult&gt;(String, String, Int32, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository procedure result set mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Return&lt;TResult&gt;(string alias, string name, int order, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; mapper = null)
-    where TResult : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Procedure alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>Result set name</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">order</span></td>
-        <td><p>Result set order</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IQueryStructureAdapter.html">IQueryStructureAdapter</a>, T&gt;&gt;</td>
-        <td><span class="parametername">mapper</span></td>
-        <td><p>Result set mapper</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TResult</span></td>
-        <td><p>Result set data type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery(String, Type, String, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T&gt;, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository subquery mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Subquery(string alias, Type dobjType, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T&gt;, IFilterDescription&gt;&gt;[] filters)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Subquery alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">dobjType</span></td>
-        <td><p>Subquery statically mapped type</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">property</span></td>
-        <td><p>Subquery selected property</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.DataGrouping.html">DataGrouping</a></td>
-        <td><span class="parametername">grouping</span></td>
-        <td><p>Subquery selected property aggregate function</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter</a>&lt;T&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to subquery</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery&lt;TDobj&gt;(String, Expression&lt;Func&lt;TDobj, Object&gt;&gt;, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository subquery mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Subquery&lt;TDobj&gt;(string alias, Expression&lt;Func&lt;TDobj, object&gt;&gt; property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-    where TDobj : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Subquery alias</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TDobj, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
-        <td><span class="parametername">property</span></td>
-        <td><p>Subquery selected property expression</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.DataTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.DataTable.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable(String, String, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository table mapping</p>
 </td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.DataGrouping.html">DataGrouping</a></td>
-        <td><span class="parametername">grouping</span></td>
-        <td><p>Subquery selected property aggregate function</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-2.html">ISubqueryLinkAdapter</a>&lt;T, TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to subquery</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.DataTable(System.String,System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.DataTable.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable(String, String, String, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository table mapping</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TDobj</span></td>
-        <td><p>Subquery statically mapped type</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.InnerView.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView(String, Type, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T&gt;, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository inner view mapping</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])">Subquery&lt;TDobj&gt;(String, IQueryDescription&lt;TDobj&gt;, String, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository subquery mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Subquery&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-    where TDobj : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Subquery alias</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.InnerView.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView&lt;TDobj&gt;(String, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository inner view mapping</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IQueryDescription-1.html">IQueryDescription</a>&lt;TDobj&gt;</td>
-        <td><span class="parametername">sub</span></td>
-        <td><p>Subquery query structure</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.InnerView.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView&lt;TDobj&gt;(String, IQueryDescription&lt;TDobj&gt;, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository inner view mapping</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">property</span></td>
-        <td><p>Subquery selected property</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},`0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.Map.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____">Map(Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, T&gt;&gt;, Expression&lt;Func&lt;IExternalLinkDefinitionAdapter&lt;T&gt;, IExternalLinkDefinition&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository properties mapping</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="XData.DataGrouping.html">DataGrouping</a></td>
-        <td><span class="parametername">grouping</span></td>
-        <td><p>Subquery selected property aggregate function</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Parameter``1(System.String,System.Int32,System.String,DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.Parameter.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____">Parameter&lt;TResult&gt;(String, Int32, String, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository procedure parameter mapping</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.ISubqueryLinkAdapter-2.html">ISubqueryLinkAdapter</a>&lt;T, TDobj&gt;, <a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a>&gt;&gt;[]</td>
-        <td><span class="parametername">filters</span></td>
-        <td><p>Filters and links applied to subquery</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Procedure(System.String,System.String,XData.ProcedureType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.Procedure.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure(String, String, ProcedureType, Expression&lt;Func&lt;IInnerFilterAdapter, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository procedure mapping</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_ReadOnlyProperty__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.ReadOnlyProperty``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},``0}})">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.ReadOnlyProperty.html#XData_Mapping_Dynamic_IRepositoryStructure_1_ReadOnlyProperty__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___">ReadOnlyProperty&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;, Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;T&gt;, TResult&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository read only properties mapping</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="parametername">TDobj</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryDescription.html">IQueryDescription</a></div>
-      <div><a class="xref" href="XData.DataGrouping.html">DataGrouping</a></div>
-      <div><a class="xref" href="XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a></div>
-  </div>
-  
-  
-  <a id="XData_Mapping_Dynamic_IRepositoryStructure_1_With_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.With*"></a>
-  <h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_With__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryWithAdapter___0__XData_Mapping_Dynamic_IQueryWithFlag_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.With``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryWithAdapter{``0},XData.Mapping.Dynamic.IQueryWithFlag}}[])">With&lt;TRoot&gt;(String, IQueryDescription&lt;TRoot&gt;, Expression&lt;Func&lt;IQueryWithAdapter&lt;TRoot&gt;, IQueryWithFlag&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Dynamic repository Common-Table-Expression (WITH) subquery mapping</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; With&lt;TRoot&gt;(string alias, IQueryDescription&lt;TRoot&gt; sub, params Expression&lt;Func&lt;IQueryWithAdapter&lt;TRoot&gt;, IQueryWithFlag&gt;&gt;[] attributes)
-    where TRoot : class</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">alias</span></td>
-        <td><p>Common-Table-Expression (WITH) subquery alias</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Return``1(System.String,System.String,System.Int32,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,`0}})">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.Return.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___">Return&lt;TResult&gt;(String, String, Int32, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt;)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository procedure result set mapping</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IQueryDescription-1.html">IQueryDescription</a>&lt;TRoot&gt;</td>
-        <td><span class="parametername">sub</span></td>
-        <td><p>Common-Table-Expression (WITH) initial subquery description</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.Subquery.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery(String, Type, String, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T&gt;, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository subquery mapping</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IQueryWithAdapter-1.html">IQueryWithAdapter</a>&lt;TRoot&gt;, <a class="xref" href="XData.Mapping.Dynamic.IQueryWithFlag.html">IQueryWithFlag</a>&gt;&gt;[]</td>
-        <td><span class="parametername">attributes</span></td>
-        <td><p>Common-Table-Expression (WITH) attributes</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.Subquery.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery&lt;TDobj&gt;(String, Expression&lt;Func&lt;TDobj, Object&gt;&gt;, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository subquery mapping</p>
 </td>
       </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
-        <td><p>Repository structure</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.Subquery.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery&lt;TDobj&gt;(String, IQueryDescription&lt;TDobj&gt;, String, DataGrouping, Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository subquery mapping</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><span class="parametername">TRoot</span></td>
-        <td><p>Common-Table-Expression (WITH) initial subquery mapped type</p>
+        <td id="XData_Mapping_Dynamic_IRepositoryStructure_1_With__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryWithAdapter___0__XData_Mapping_Dynamic_IQueryWithFlag_____" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.With``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryWithAdapter{``0},XData.Mapping.Dynamic.IQueryWithFlag}}[])">
+          <a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.With.html#XData_Mapping_Dynamic_IRepositoryStructure_1_With__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryWithAdapter___0__XData_Mapping_Dynamic_IQueryWithFlag_____">With&lt;TRoot&gt;(String, IQueryDescription&lt;TRoot&gt;, Expression&lt;Func&lt;IQueryWithAdapter&lt;TRoot&gt;, IQueryWithFlag&gt;&gt;[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Dynamic repository Common-Table-Expression (WITH) subquery mapping</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>
