@@ -143,6 +143,71 @@ var conf = new ConfigurationBuilder().Add(source).Build();
 <p>XData can be effecively used with any DI containers You prefer. </p>
 <p>Net 4.0 version not used DI containers inside, but <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a>, <a class="xref" href="../api/XData.IDataScope.html">IDataScope</a> and <a class="xref" href="../api/XData.IRepository.html">IRepository&lt;T&gt;</a> interfaces can be obtained from container. IDataEngine must to be registered as singleton with <em>XDataManager.InitXData</em> method call. IDataScope can be registered as lifetime service over data logic module (for example: Controller module in MVC pattern) using fabric method with obtaining IDataEngine service and creating (<a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_NewDataScope_System_String_XData_Interfaces_ISecuritySession_">IDataEngine.NewDataScope</a>) or request from internal XData cache (<a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_GetDataScope_System_Guid_System_String_XData_Interfaces_ISecuritySession_System_Boolean_">IDataEngine.GetDataScope</a>) IDataScope instance when Layer is provided. IRepository&lt;T&gt; can be registered as transistent service using fabric method with obtaining IDataScope service and call <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_XData_Variable___">IDataScope.GetRepository&lt;T&gt;</a> method. Using container to obtain IRepository&lt;T&gt; service seems to be a kind of a joke, but sometimes it&#39;s usefull.</p>
 <p>Net Standard 2.0 version used Net Core Dependency Abstraction inside and this asbtraction can be implemented by any You like DI container. In this version <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> is registered by calling <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a> method. Other interfaces can be registered manually (if required) with described above or any You like logic.</p>
+<h2 id="large-object-loading">Large object loading</h2>
+<p>Large objects specific properties <a class="xref" href="../api/XData.Mapping.Lob.html">Lob</a> and <a class="xref" href="../api/XData.Mapping.Xml.html">Xml</a> specialy used to lazy access to potetialy big sized data stored in database.</p>
+<p>When <a href="../tutorial/glossary.html#data-object">data object</a> accessed using XData, large objects data not queried, but replaced with null values to create full structure of object. </p>
+<p>To get or set value of <em>Lob</em> or <em>Xml</em> <a class="xref" href="../api/XData.Mapping.Lob.html#XData_Mapping_Lob_Value">Lob.Value</a> and <a class="xref" href="../api/XData.Mapping.Xml.html#XData_Mapping_Xml_Document">Xml.Document</a> properties are used. Size of <em>Lob</em> can be checked using <a class="xref" href="../api/XData.Mapping.Lob.html#XData_Mapping_Lob_GetSize">GetSize</a> method.</p>
+<p>To simplify value assigning overrided operation <a class="xref" href="../api/XData.Mapping.Lob.html#XData_Mapping_Lob_op_Addition_XData_Mapping_Lob_System_Byte___">+=</a> can be used as described in example below:</p>
+<pre><code class="lang-csharp">obj.Source += new XDocument(new XElement(&quot;invoice&quot;, new XAttribute(&quot;number&quot;, number), new XAttribute(&quot;state&quot;, z.DocStateCode)));
+obj.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString());
+</code></pre><p>To modify value of large objects in <em>LINQ styled sequence of command</em> helper methods <a href="">Modify(Xml, Action&lt;XDocument&gt;)</a> and <a href="">Modify(Lob, Action&lt;Byte[]&gt;)</a> can be used like in example below:</p>
+<pre><code class="lang-csharp">invoice.Modify(
+        z =&gt; z.DocState += dataScope.GetDictionaryValue&lt;DocState&gt;(x =&gt; x.Code == newStateCode),
+        z =&gt; z.Source.Modify(doc =&gt; doc.Element(&quot;invoice&quot;).Attribute(&quot;state&quot;).Value = newStateCode))
+    .Submit();
+</code></pre><div class="WARNING"><h5>Warning</h5><p>When object is <a href="tips.html#json-serialization">serialized</a> large objects properties are serialized with null values by default! When actual value of large object is required it must to be requested separatly. To fill object large properties before serialization can be used one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> or <a href="">LoadLobAsync</a> helper method overloads.</p>
+</div>
+<h2 id="json-serialization">JSON serialization</h2>
+<p>When used <a href="https://www.newtonsoft.com/json">Json.NET</a> XData <a href="">data objects</a> are serialized and deserialized automaticaly. </p>
+<p>There are some serialization specifics of data objects:</p>
+<ul>
+<li>By default <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> are serialized and deserialized as well as writable properties, but have a some restrictions when copyed to object to apply into database (see <em>Apply</em> method description below).</li>
+<li><a href="tips.html#large-object-loading">Large objects</a> are serialized to null value by default. They are designed for lazy data loading. To serialize data with actual values one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> helper method overloads can be used.</li>
+<li>By default <a href="../tutorial/mapping/mapping.html#link-properties">Links</a> are serialized as limited representation of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Source">link source</a> object. Only properties listed as <a href="../tutorial/mapping/dynamic/dynamic.html#links">LinkProperties</a> are included in serialized object. Additinaly an <em>&quot;linkPropertyName.Value&quot;</em> JSON property is serialized with the value of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Value">Link.Value</a> property.</li>
+</ul>
+<p>Default serialization rules can be overrided with <em>ICollection&lt;T&gt;</em> and <em>T</em> <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_WithJsonSettings__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___">WithJsonSettings</a> extension methods.</p>
+<p><a class="xref" href="../api/XData.Json.JsonSettings-1.html">JsonSettings&lt;T&gt;</a> has followed methods to specify serializing options:</p>
+<ul>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_Hide">Hide</a> - alow to specify properties to skip on serialization</li>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadLob">LoadLob</a> - alow to specify large object properties to load data before serialize (<em>LoadLob</em> method alternative)</li>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LinkMode_XData_Json_LinkMode_">LinkMode</a> - alow to specify serialization rules for multiple (or all) link properties:<ul>
+<li>Default - default rules will be applied (see above)</li>
+<li>Value - only value will be serialized</li>
+<li>Source - only source will be serialized</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().ToArray()
+.WithJsonSettings(s =&gt; s.Hide(JsonHideFlags.Columns) //hide all columns
+    .Hide(x =&gt; x.SomeReadOnlyProperty) //hide SomeReadOnlyProperty
+    .LoadLob() //load all large data properties
+    .LinkMode(LinkMode.Deafult, 
+        x =&gt; SomeLinkProperty, x =&gt; AnotherLinkProperty) //set default rules to 2 properties
+    .LinkMode(LinkMode.Value)); //set other link properties serialize Value property only
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Deserialized objects are detached from repository and had limited ways of using!</p>
+</div>
+<ul>
+<li>Deserialized object can be used as a filter to find data object in database (for example to delete) with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Find__1_XData_IRepository___0____0_System_Boolean_">Find</a> method:</li>
+</ul>
+<pre><code class="lang-csharp">var found = dataScope.GetRepository&lt;Some&gt;().Find(detachedObj);
+if(found == null) throw DbConcurrencyException();
+return found.SetDeleted(true).Submit();
+</code></pre><ul>
+<li>Deserialized object can be used as a source to copy some data to new object with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_ApplyFlag_System_String___">Copy</a> method:</li>
+</ul>
+<pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().New().Copy(detachedObj).Submit();
+</code></pre><ul>
+<li>Deserialized object can be used as to apply changes to database with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Apply__1_XData_IRepository___0____0_XData_ApplyFlag_System_String___">Apply</a> method:</li>
+</ul>
+<pre><code class="lang-csharp">dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
+</code></pre><p><em>Apply</em> is a combination of <em>Find</em> and <em>Copy</em> methods with followed algorithm:</p>
+<p>1) if <em>detached object</em> has all keys assigned, corresponded object will be searched in database using keys and correlation token (if described in mapping) values (*)</p>
+<p>2) if no data found XDataConcurrencyException will be throwed (**)</p>
+<p>3) when some key properties are not assigned new entity has been created </p>
+<p>4) <em>detached object&#39;s</em> data will be copyed to found (or new) object (***)</p>
+<p>(*) Using of correlation token value with <em>Find</em> method can be escaped with optional <em>ignoreConcurrency</em> parameter. Same result can be reached with <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.IgnoreConcurrency</a> flag has been passed in <em>Apply</em> method call.</p>
+<p>(**) <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.AddWhenNotFound</a> flag can be passed in <em>Apply</em> method call to add new entity when not found in database.</p>
+<p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify wich property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
 <h2 id="asynchronious-wrapped-operations">Asynchronious wrapped operations</h2>
 <p>To access data with XData inside async methods it&#39;s handy to use asynchronous wrappers declared inside <a class="xref" href="../api/XData.Async.AsyncExtensions.html">XData.Async etxtension methods</a> as illustrated in followed example:</p>
 <pre><code class="lang-csharp">internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine)
@@ -503,7 +568,7 @@ using(var tr = dataScope.BeginTransaction())
 <li><em>OnSubmitQuery</em> - (<a class="xref" href="../api/XData.SubmitQueryAttachedHandler-1.html">SubmitQueryAttachedHandler&lt;T&gt;</a>) handler called instead of submitting query generation</li>
 </ul>
 <h2 id="transactions">Transactions</h2>
-<p>XData use automatic transactions handling by default. But allows to manage transacions manually using IDataScope interface method <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_BeginTransaction_System_Boolean_IsolationLevel_">BeginTransaction</a> returned transaction state interface <a class="xref" href="../api/XData.Database.ITransaction.html">ITransaction</a>. Transaction state is a IDisposable object. Transaction is commited when method <a class="xref" href="../api/XData.Database.ITransaction.html#XData_Database_ITransaction_Commit">Commit</a> is called. When transaction state is disposed without call Commit method, transaction is rolled back. Transaction can be started as readonly or read/write. This depends on parameter <em>read</em> of BeginTransaction method. XData can symulationaly wrap transactions one over another. First non read only transaction is related to real database tranaction, and all wrapped transactions is related to transaction labels. When wrapped transaction is rolled back real transaction is rolled back to label only. Only rolling back the &quot;main&quot; transaction calls ROLLBACK statement over database.</p>
+<p>XData use automatic transactions handling by default. But allows to manage transacions manually using IDataScope interface method <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_BeginTransaction_System_Boolean_System_Data_IsolationLevel_">BeginTransaction</a> returned transaction state interface <a class="xref" href="../api/XData.Database.ITransaction.html">ITransaction</a>. Transaction state is a IDisposable object. Transaction is commited when method <a class="xref" href="../api/XData.Database.ITransaction.html#XData_Database_ITransaction_Commit">Commit</a> is called. When transaction state is disposed without call Commit method, transaction is rolled back. Transaction can be started as readonly or read/write. This depends on parameter <em>read</em> of BeginTransaction method. XData can symulationaly wrap transactions one over another. First non read only transaction is related to real database tranaction, and all wrapped transactions is related to transaction labels. When wrapped transaction is rolled back real transaction is rolled back to label only. Only rolling back the &quot;main&quot; transaction calls ROLLBACK statement over database.</p>
 <h2 id="sql-hints">SQL hints</h2>
 <div class="WARNING"><h5>Warning</h5><p>Before using SQL hints, be sure to use all other query optimization features. This is a &quot;double-edged weapon.&quot; You need to understand very well why you are using what hints and how it will affect performance, and also make all the necessary tests confirming the effectiveness of the changes you made!</p>
 </div>
@@ -588,7 +653,7 @@ XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
     .AsQuery(DataScope.Layer, &quot;p_tab&quot;.SetVar(param));
 </code></pre><h2 id="call-custom-sql-code">Call custom SQL code</h2>
 <p>XData can help the programmer to obtain data and process it with many ways. But also we hold in mind XData is just a common tool with limited quantity of features, and some very specific (but handy and powerfull) SQL dialect constructions may be out of XData possibilities. </p>
-<p>To call dialect specific SQL statements used <a class="xref" href="../api/XData.IDataScope.html">IDataScope interface</a> with methods: <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_FillTable_XData_Database_Adapter_Query_CommandBehavior_">FillTable</a>, <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteScalar__1_XData_Database_Adapter_Query_">ExecuteScalar</a> and <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteNonQuery_XData_Database_Adapter_Query_">ExecuteNonQuery</a>. </p>
+<p>To call dialect specific SQL statements used <a class="xref" href="../api/XData.IDataScope.html">IDataScope interface</a> with methods: <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_FillTable_XData_Database_Adapter_Query_System_Data_CommandBehavior_">FillTable</a>, <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteScalar__1_XData_Database_Adapter_Query_">ExecuteScalar</a> and <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteNonQuery_XData_Database_Adapter_Query_">ExecuteNonQuery</a>. </p>
 <pre><code class="lang-csharp">const string getCoordComResourceStateChangesForCaseCommand = @&quot;
 select x.ResourceCode, x.ReportedDateTime, x.UserName, x.MissionStatusCode, 
 x.ResourceStatusCode

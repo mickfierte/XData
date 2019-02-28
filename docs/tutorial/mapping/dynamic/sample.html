@@ -247,7 +247,7 @@ entity t_doc_spec_amount
 t_doc_spec_amount }o-left- t_doc_spec : doc_spec_id
 @enduml
 
-PlantUML version 1.2019.01beta8(Unknown compile time)
+PlantUML version 1.2019.01(Sat Feb 09 15:32:04 UTC 2019)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM
@@ -299,6 +299,9 @@ Country: US
             .InnerView&lt;DocBySpecType&gt;(&quot;ST&quot;, x =&gt; x.SubqueryLink(&quot;DocId&quot;))
             .Column(&quot;DocId&quot;, x =&gt; x.Field&lt;long?&gt;(&quot;D&quot;, string.Empty, 
                 z =&gt; z.Key(), z =&gt; z.Default(DefaultType.AutoIncrement)))
+            .Column(&quot;DocStateId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;S&quot;, string.Empty))
+            .Column(&quot;FromCustomerId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;F&quot;, &quot;customer_id&quot;))
+            .Column(&quot;ToCustomerId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;T&quot;, &quot;customer_id&quot;))
             .Column(&quot;CatalogueId&quot;, x =&gt; x.Field&lt;long?&gt;(&quot;U&quot;, string.Empty))
             .ReadOnlyProperty(x =&gt; x.DocStateCode, x =&gt; x.Field&lt;string&gt;(&quot;S&quot;, &quot;code&quot;))
             .ReadOnlyProperty(x =&gt; x.Generation, 
@@ -317,18 +320,24 @@ Country: US
             .Map(x =&gt; new Invoice {
                 DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
                     z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Name),
-                    z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Code, y =&gt; y.DocStateCode)),
+                    z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Code, y =&gt; y.DocStateCode),
+                    z =&gt; z.LinkProperty&lt;DocState&gt;((Invoice y) =&gt; y.GetProperty&lt;long&gt;(&quot;DocStateId&quot;))),
                 DocCatalog = x.Link&lt;string, Catalogue&gt;(&quot;U&quot;, &quot;name&quot;, 
-                    z =&gt; z.LinkProperty&lt;Catalogue&gt;(y =&gt; y.Name)),
+                    z =&gt; z.LinkProperty&lt;Catalogue&gt;(y =&gt; y.Name),
+                    z =&gt; z.LinkProperty&lt;Catalogue&gt;((Invoice y) =&gt; y.GetProperty&lt;long&gt;(&quot;CatalogueId&quot;))),
                 DocNumb = x.Field&lt;string&gt;(&quot;N&quot;, &quot;numb&quot;),
                 DocDate = x.Field&lt;DateTime?&gt;(&quot;D&quot;, string.Empty, 
                     z =&gt; z.Default(DefaultType.CurrentDate)),
                 Scan = x.Lob(&quot;SC&quot;, z =&gt; z.OuterFlag()),
                 Source = x.Xml(&quot;SR&quot;, z =&gt; z.OuterFlag()),
                 CustomerFrom = x.Link&lt;string, Customer&gt;(&quot;F&quot;, &quot;name&quot;, 
-                    z =&gt; z.LinkProperty&lt;Customer&gt;(y =&gt; y.Name)),
+                    z =&gt; z.LinkProperty&lt;Customer&gt;(y =&gt; y.Name),
+                    z =&gt; z.LinkProperty&lt;Customer&gt;(y =&gt; y.GetProperty&lt;long&gt;(&quot;CustomerId&quot;), 
+                        y =&gt; y.GetProperty&lt;long&gt;(&quot;FromCustomerId&quot;))),
                 CustomerTo = x.Link&lt;string, Customer&gt;(&quot;T&quot;, &quot;name&quot;, 
-                    z =&gt; z.LinkProperty&lt;Customer&gt;(y =&gt; y.Name)),
+                    z =&gt; z.LinkProperty&lt;Customer&gt;(y =&gt; y.Name),
+                    z =&gt; z.LinkProperty&lt;Customer&gt;(y =&gt; y.GetProperty&lt;long&gt;(&quot;CustomerId&quot;), 
+                        y =&gt; y.GetProperty&lt;long&gt;(&quot;ToCustomerId&quot;))),
                 DeliveryType = x.Field&lt;DeliveryTypeEnum&gt;(&quot;DD&quot;, string.Empty),
                 DeliveryDate = x.Field&lt;DateTime?&gt;(&quot;DD&quot;, string.Empty, 
                     z =&gt; z.Default(DefaultType.CurrentDate))
@@ -337,7 +346,7 @@ Country: US
     );
 }
 ...    
-public partial class Invoice: IDataObject
+public partial class Invoice
 {
     public string DocStateCode { get 
         { return this.GetProperty(x =&gt; x.DocStateCode); } 

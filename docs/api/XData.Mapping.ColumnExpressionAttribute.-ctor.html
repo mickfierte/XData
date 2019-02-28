@@ -88,13 +88,13 @@
 
 
 <a id="XData_Mapping_ColumnExpressionAttribute__ctor_" data-uid="XData.Mapping.ColumnExpressionAttribute.#ctor*"></a>
-<h4 id="XData_Mapping_ColumnExpressionAttribute__ctor_System_String_System_String_XData_DataExpressionType_DbType_" data-uid="XData.Mapping.ColumnExpressionAttribute.#ctor(System.String,System.String,XData.DataExpressionType,DbType)">ColumnExpressionAttribute(String, String, DataExpressionType, DbType)</h4>
+<h4 id="XData_Mapping_ColumnExpressionAttribute__ctor_System_String_System_String_XData_DataExpressionType_System_Data_DbType_" data-uid="XData.Mapping.ColumnExpressionAttribute.#ctor(System.String,System.String,XData.DataExpressionType,System.Data.DbType)">ColumnExpressionAttribute(String, String, DataExpressionType, DbType)</h4>
 <div class="markdown level1 summary"><p>Column expression attribute</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public ColumnExpressionAttribute(string propertyName, string exprText, DataExpressionType exprType = DataExpressionType.PlainSql, DbType type = null)</code></pre>
+  <pre><code class="lang-csharp hljs">public ColumnExpressionAttribute(string propertyName, string exprText, DataExpressionType exprType = DataExpressionType.PlainSql, DbType type = DbType.String)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -125,7 +125,7 @@
 </td>
     </tr>
     <tr>
-      <td><span class="xref">DbType</span></td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
       <td><span class="parametername">type</span></td>
       <td><p>Expression DbType</p>
 </td>

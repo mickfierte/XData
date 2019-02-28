@@ -94,7 +94,7 @@
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static void AssignProperty&lt;T, TValue&gt;(this T obj, string prop, TValue value)
+  <pre><code class="lang-csharp hljs">public static bool AssignProperty&lt;T, TValue&gt;(this T obj, string prop, TValue value)
     where T : class, IDataObject, new()</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
@@ -123,6 +123,22 @@
       <td><span class="xref">TValue</span></td>
       <td><span class="parametername">value</span></td>
       <td><p>Property value</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+      <td><p>Property value changed</p>
 </td>
     </tr>
   </tbody>

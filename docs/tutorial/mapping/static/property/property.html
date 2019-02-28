@@ -144,6 +144,7 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 </ul>
 <pre><code class="lang-csharp">[Property(&quot;S&quot;, &quot;name&quot;),
     LinkProperty(&quot;Name&quot;) /* DocState.Name -&gt; this.DocState */,
+    LinkProperty(Property = &quot;DocStateId&quot;) /* column DocState.DocStateId -&gt; column this.DocStateId */,
     LinkProperty(&quot;Code&quot;, &quot;DocStateCode&quot;)  /* DocState.Code -&gt; this.DocStateCode */]
 public Link&lt;string, DocState&gt; DocState { get; set; }
 </code></pre></article>

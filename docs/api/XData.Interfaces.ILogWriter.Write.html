@@ -88,13 +88,13 @@
 
 
 <a id="XData_Interfaces_ILogWriter_Write_" data-uid="XData.Interfaces.ILogWriter.Write*"></a>
-<h4 id="XData_Interfaces_ILogWriter_Write_System_Exception_" data-uid="XData.Interfaces.ILogWriter.Write(System.Exception)">Write(Exception)</h4>
+<h4 id="XData_Interfaces_ILogWriter_Write_System_Exception_XData_Exceptions_AdditionalInfo___" data-uid="XData.Interfaces.ILogWriter.Write(System.Exception,XData.Exceptions.AdditionalInfo[])">Write(Exception, AdditionalInfo[])</h4>
 <div class="markdown level1 summary"><p>Write exception to log</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">void Write(Exception error)</code></pre>
+  <pre><code class="lang-csharp hljs">void Write(Exception error, params AdditionalInfo[] info)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -109,7 +109,14 @@
     <tr>
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
       <td><span class="parametername">error</span></td>
-      <td></td>
+      <td><p>Error</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="XData.Exceptions.AdditionalInfo.html">AdditionalInfo</a>[]</td>
+      <td><span class="parametername">info</span></td>
+      <td><p>Message additional information</p>
+</td>
     </tr>
   </tbody>
 </table>

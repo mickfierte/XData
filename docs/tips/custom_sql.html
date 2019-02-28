@@ -80,7 +80,7 @@
 <h2 id="call-custom-sql-code">Call custom SQL code</h2>
 
 <p>XData can help the programmer to obtain data and process it with many ways. But also we hold in mind XData is just a common tool with limited quantity of features, and some very specific (but handy and powerfull) SQL dialect constructions may be out of XData possibilities. </p>
-<p>To call dialect specific SQL statements used <a class="xref" href="../api/XData.IDataScope.html">IDataScope interface</a> with methods: <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_FillTable_XData_Database_Adapter_Query_CommandBehavior_">FillTable</a>, <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteScalar__1_XData_Database_Adapter_Query_">ExecuteScalar</a> and <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteNonQuery_XData_Database_Adapter_Query_">ExecuteNonQuery</a>. </p>
+<p>To call dialect specific SQL statements used <a class="xref" href="../api/XData.IDataScope.html">IDataScope interface</a> with methods: <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_FillTable_XData_Database_Adapter_Query_System_Data_CommandBehavior_">FillTable</a>, <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteScalar__1_XData_Database_Adapter_Query_">ExecuteScalar</a> and <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteNonQuery_XData_Database_Adapter_Query_">ExecuteNonQuery</a>. </p>
 <pre><code class="lang-csharp">const string getCoordComResourceStateChangesForCaseCommand = @&quot;
 select x.ResourceCode, x.ReportedDateTime, x.UserName, x.MissionStatusCode, 
 x.ResourceStatusCode

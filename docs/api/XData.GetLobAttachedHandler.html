@@ -90,7 +90,7 @@
   <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_GetLobAttachedHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate bool GetLobAttachedHandler(string property, IComparable[] primaryKeyValue, out byte[] body);</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate bool GetLobAttachedHandler(string property, IDataObject obj, out byte[] body);</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -109,9 +109,9 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>[]</td>
-        <td><span class="parametername">primaryKeyValue</span></td>
-        <td><p>Lob table primary key values</p>
+        <td><a class="xref" href="XData.IDataObject.html">IDataObject</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Data object</p>
 </td>
       </tr>
       <tr>

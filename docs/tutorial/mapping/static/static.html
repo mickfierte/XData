@@ -255,7 +255,7 @@ entity t_doc_spec_amount
 t_doc_spec_amount }o-left- t_doc_spec : doc_spec_id
 @enduml
 
-PlantUML version 1.2019.01beta8(Unknown compile time)
+PlantUML version 1.2019.01(Sat Feb 09 15:32:04 UTC 2019)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM
@@ -304,6 +304,10 @@ Country: US
         Subquery(&quot;UT&quot;, typeof(CatalogueTree), &quot;CatalogueId&quot;),
         SubqueryFilter(&quot;UT&quot;, &quot;DC&quot;, &quot;catalogue_id&quot;, Operation = FilterOperation.In),
         Column(&quot;DocId&quot;, typeof(long?), &quot;D&quot;, Flags = DataPropertyFlag.Id),
+        Column(&quot;DocStateId&quot;, typeof(long), &quot;S&quot;),
+        Column(&quot;FromCustomerId&quot;, typeof(long), &quot;F&quot;),
+        Column(&quot;ToCustomerId&quot;, typeof(long), &quot;T&quot;),
+        Column(&quot;CatalogueId&quot;, typeof(long), &quot;U&quot;),
         ColumnDefault(&quot;DocId&quot;, DefaultType.AutoIncrement)]
     public class Invoice: IDataObject
     {
@@ -311,9 +315,11 @@ Country: US
         public string DocStateCode { get { return this.GetProperty(x =&gt; x.DocStateCode); } }
         [Property(&quot;S&quot;, &quot;name&quot;),
             LinkProperty(&quot;Name&quot;),
+            LinkProperty(Property = &quot;DocStateId&quot;),
             LinkProperty(&quot;Code&quot;, &quot;DocStateCode&quot;)]
         public Link&lt;string, DocState&gt; DocState { get; set; }
         [Property(&quot;U&quot;, &quot;name&quot;),
+            LinkProperty(Property = &quot;CatalogueId&quot;),
             LinkProperty(&quot;Name&quot;)]
         public Link&lt;string, Catalogue&gt; DocCatalog { get; set; }
         [Property(&quot;N&quot;, &quot;numb&quot;)]
@@ -343,9 +349,11 @@ Country: US
         [Property(&quot;SR&quot;, Flags = DataPropertyFlag.OuterFlag)]
         public Xml Source { get; set; }
         [Property(&quot;F&quot;, &quot;name&quot;),
+            LinkProperty(&quot;CustomerId&quot;, &quot;FromCustomerId&quot;),
             LinkProperty(&quot;Name&quot;)]
         public Link&lt;string, Customer&gt; CustomerFrom { get; set; }
         [Property(&quot;T&quot;, &quot;name&quot;),
+            LinkProperty(&quot;CustomerId&quot;, &quot;ToCustomerId&quot;),
             LinkProperty(&quot;Name&quot;)]
         public Link&lt;string, Customer&gt; CustomerTo { get; set; }
         [Property(&quot;DD&quot;)]
@@ -565,6 +573,7 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 </ul>
 <pre><code class="lang-csharp">[Property(&quot;S&quot;, &quot;name&quot;),
     LinkProperty(&quot;Name&quot;) /* DocState.Name -&gt; this.DocState */,
+    LinkProperty(Property = &quot;DocStateId&quot;) /* column DocState.DocStateId -&gt; column this.DocStateId */,
     LinkProperty(&quot;Code&quot;, &quot;DocStateCode&quot;)  /* DocState.Code -&gt; this.DocStateCode */]
 public Link&lt;string, DocState&gt; DocState { get; set; }
 </code></pre><h3 id="tree">Tree</h3>

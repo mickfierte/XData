@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>JSON serialization | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="JSON serialization | XData website ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="tips_json.md">
+<h2 id="json-serialization">JSON serialization</h2>
+
+<p>When used <a href="https://www.newtonsoft.com/json">Json.NET</a> XData <a href="">data objects</a> are serialized and deserialized automaticaly. </p>
+<p>There are some serialization specifics of data objects:</p>
+<ul>
+<li>By default <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> are serialized and deserialized as well as writable properties, but have a some restrictions when copyed to object to apply into database (see <em>Apply</em> method description below).</li>
+<li><a href="tips.html#large-object-loading">Large objects</a> are serialized to null value by default. They are designed for lazy data loading. To serialize data with actual values one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> helper method overloads can be used.</li>
+<li>By default <a href="../tutorial/mapping/mapping.html#link-properties">Links</a> are serialized as limited representation of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Source">link source</a> object. Only properties listed as <a href="../tutorial/mapping/dynamic/dynamic.html#links">LinkProperties</a> are included in serialized object. Additinaly an <em>&quot;linkPropertyName.Value&quot;</em> JSON property is serialized with the value of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Value">Link.Value</a> property.</li>
+</ul>
+<p>Default serialization rules can be overrided with <em>ICollection&lt;T&gt;</em> and <em>T</em> <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_WithJsonSettings__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___">WithJsonSettings</a> extension methods.</p>
+<p><a class="xref" href="../api/XData.Json.JsonSettings-1.html">JsonSettings&lt;T&gt;</a> has followed methods to specify serializing options:</p>
+<ul>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_Hide">Hide</a> - alow to specify properties to skip on serialization</li>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadLob">LoadLob</a> - alow to specify large object properties to load data before serialize (<em>LoadLob</em> method alternative)</li>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LinkMode_XData_Json_LinkMode_">LinkMode</a> - alow to specify serialization rules for multiple (or all) link properties:<ul>
+<li>Default - default rules will be applied (see above)</li>
+<li>Value - only value will be serialized</li>
+<li>Source - only source will be serialized</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().ToArray()
+.WithJsonSettings(s =&gt; s.Hide(JsonHideFlags.Columns) //hide all columns
+    .Hide(x =&gt; x.SomeReadOnlyProperty) //hide SomeReadOnlyProperty
+    .LoadLob() //load all large data properties
+    .LinkMode(LinkMode.Deafult, 
+        x =&gt; SomeLinkProperty, x =&gt; AnotherLinkProperty) //set default rules to 2 properties
+    .LinkMode(LinkMode.Value)); //set other link properties serialize Value property only
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Deserialized objects are detached from repository and had limited ways of using!</p>
+</div>
+<ul>
+<li>Deserialized object can be used as a filter to find data object in database (for example to delete) with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Find__1_XData_IRepository___0____0_System_Boolean_">Find</a> method:</li>
+</ul>
+<pre><code class="lang-csharp">var found = dataScope.GetRepository&lt;Some&gt;().Find(detachedObj);
+if(found == null) throw DbConcurrencyException();
+return found.SetDeleted(true).Submit();
+</code></pre><ul>
+<li>Deserialized object can be used as a source to copy some data to new object with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_ApplyFlag_System_String___">Copy</a> method:</li>
+</ul>
+<pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().New().Copy(detachedObj).Submit();
+</code></pre><ul>
+<li>Deserialized object can be used as to apply changes to database with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Apply__1_XData_IRepository___0____0_XData_ApplyFlag_System_String___">Apply</a> method:</li>
+</ul>
+<pre><code class="lang-csharp">dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
+</code></pre><p><em>Apply</em> is a combination of <em>Find</em> and <em>Copy</em> methods with followed algorithm:</p>
+<p>1) if <em>detached object</em> has all keys assigned, corresponded object will be searched in database using keys and correlation token (if described in mapping) values (*)</p>
+<p>2) if no data found XDataConcurrencyException will be throwed (**)</p>
+<p>3) when some key properties are not assigned new entity has been created </p>
+<p>4) <em>detached object&#39;s</em> data will be copyed to found (or new) object (***)</p>
+<p>(*) Using of correlation token value with <em>Find</em> method can be escaped with optional <em>ignoreConcurrency</em> parameter. Same result can be reached with <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.IgnoreConcurrency</a> flag has been passed in <em>Apply</em> method call.</p>
+<p>(**) <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.AddWhenNotFound</a> flag can be passed in <em>Apply</em> method call to add new entity when not found in database.</p>
+<p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify wich property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

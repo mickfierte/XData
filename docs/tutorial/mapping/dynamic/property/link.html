@@ -93,7 +93,9 @@
 <pre><code class="lang-csharp">...
 DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
     z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Name),
-    z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Code, y =&gt; y.DocStateCode)),
+    z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Code, y =&gt; y.DocStateCode)
+    z =&gt; z.LinkProperty&lt;DocState&gt;(
+        (Invoice y) =&gt; y.GetProperty&lt;long&gt;(&quot;DocStateId&quot;))),
 ...
 </code></pre></article>
           </div>
