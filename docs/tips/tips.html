@@ -193,7 +193,7 @@ obj.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString());
 if(found == null) throw DbConcurrencyException();
 return found.SetDeleted(true).Submit();
 </code></pre><ul>
-<li>Deserialized object can be used as a source to copy some data to new object with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_ApplyFlag_System_String___">Copy</a> method:</li>
+<li>Deserialized object can be used as a source to copy some data to new object with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_CopyFlag_System_String___">Copy</a> method:</li>
 </ul>
 <pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().New().Copy(detachedObj).Submit();
 </code></pre><ul>
@@ -207,7 +207,7 @@ return found.SetDeleted(true).Submit();
 <p>4) <em>detached object&#39;s</em> data will be copyed to found (or new) object (***)</p>
 <p>(*) Using of correlation token value with <em>Find</em> method can be escaped with optional <em>ignoreConcurrency</em> parameter. Same result can be reached with <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.IgnoreConcurrency</a> flag has been passed in <em>Apply</em> method call.</p>
 <p>(**) <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.AddWhenNotFound</a> flag can be passed in <em>Apply</em> method call to add new entity when not found in database.</p>
-<p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify wich property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
+<p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify wich property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> or <a class="xref" href="../api/XData.CopyFlag.html">CopyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> or <a class="xref" href="../api/XData.CopyFlag.html">CopyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
 <h2 id="asynchronious-wrapped-operations">Asynchronious wrapped operations</h2>
 <p>To access data with XData inside async methods it&#39;s handy to use asynchronous wrappers declared inside <a class="xref" href="../api/XData.Async.AsyncExtensions.html">XData.Async etxtension methods</a> as illustrated in followed example:</p>
 <pre><code class="lang-csharp">internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine)

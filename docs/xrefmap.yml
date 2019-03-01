@@ -1900,6 +1900,30 @@ references:
   commentId: F:XData.Combination.Or
   fullName: XData.Combination.Or
   nameWithType: Combination.Or
+- uid: XData.CopyFlag
+  name: CopyFlag
+  href: api/XData.CopyFlag.html
+  commentId: T:XData.CopyFlag
+  fullName: XData.CopyFlag
+  nameWithType: CopyFlag
+- uid: XData.CopyFlag.CopyReadOnlyProperties
+  name: CopyReadOnlyProperties
+  href: api/XData.CopyFlag.html#XData_CopyFlag_CopyReadOnlyProperties
+  commentId: F:XData.CopyFlag.CopyReadOnlyProperties
+  fullName: XData.CopyFlag.CopyReadOnlyProperties
+  nameWithType: CopyFlag.CopyReadOnlyProperties
+- uid: XData.CopyFlag.Default
+  name: Default
+  href: api/XData.CopyFlag.html#XData_CopyFlag_Default
+  commentId: F:XData.CopyFlag.Default
+  fullName: XData.CopyFlag.Default
+  nameWithType: CopyFlag.Default
+- uid: XData.CopyFlag.ExceptProperties
+  name: ExceptProperties
+  href: api/XData.CopyFlag.html#XData_CopyFlag_ExceptProperties
+  commentId: F:XData.CopyFlag.ExceptProperties
+  fullName: XData.CopyFlag.ExceptProperties
+  nameWithType: CopyFlag.ExceptProperties
 - uid: XData.CurrentObjectChanged`1
   name: CurrentObjectChanged<T>
   href: api/XData.CurrentObjectChanged-1.html
@@ -5972,15 +5996,24 @@ references:
   commentId: Overload:XData.DataObjectExtensions.Copy
   fullName: XData.DataObjectExtensions.Copy
   nameWithType: DataObjectExtensions.Copy
-- uid: XData.DataObjectExtensions.Copy``1(``0,``0,XData.ApplyFlag,System.String[])
-  name: Copy<T>(T, T, ApplyFlag, String[])
-  href: api/XData.DataObjectExtensions.Copy.html#XData_DataObjectExtensions_Copy__1___0___0_XData_ApplyFlag_System_String___
-  commentId: M:XData.DataObjectExtensions.Copy``1(``0,``0,XData.ApplyFlag,System.String[])
-  name.vb: Copy(Of T)(T, T, ApplyFlag, String())
-  fullName: XData.DataObjectExtensions.Copy<T>(T, T, XData.ApplyFlag, System.String[])
-  fullName.vb: XData.DataObjectExtensions.Copy(Of T)(T, T, XData.ApplyFlag, System.String())
-  nameWithType: DataObjectExtensions.Copy<T>(T, T, ApplyFlag, String[])
-  nameWithType.vb: DataObjectExtensions.Copy(Of T)(T, T, ApplyFlag, String())
+- uid: XData.DataObjectExtensions.Copy``1(``0,``0,System.String[])
+  name: Copy<T>(T, T, String[])
+  href: api/XData.DataObjectExtensions.Copy.html#XData_DataObjectExtensions_Copy__1___0___0_System_String___
+  commentId: M:XData.DataObjectExtensions.Copy``1(``0,``0,System.String[])
+  name.vb: Copy(Of T)(T, T, String())
+  fullName: XData.DataObjectExtensions.Copy<T>(T, T, System.String[])
+  fullName.vb: XData.DataObjectExtensions.Copy(Of T)(T, T, System.String())
+  nameWithType: DataObjectExtensions.Copy<T>(T, T, String[])
+  nameWithType.vb: DataObjectExtensions.Copy(Of T)(T, T, String())
+- uid: XData.DataObjectExtensions.Copy``1(``0,``0,XData.CopyFlag,System.String[])
+  name: Copy<T>(T, T, CopyFlag, String[])
+  href: api/XData.DataObjectExtensions.Copy.html#XData_DataObjectExtensions_Copy__1___0___0_XData_CopyFlag_System_String___
+  commentId: M:XData.DataObjectExtensions.Copy``1(``0,``0,XData.CopyFlag,System.String[])
+  name.vb: Copy(Of T)(T, T, CopyFlag, String())
+  fullName: XData.DataObjectExtensions.Copy<T>(T, T, XData.CopyFlag, System.String[])
+  fullName.vb: XData.DataObjectExtensions.Copy(Of T)(T, T, XData.CopyFlag, System.String())
+  nameWithType: DataObjectExtensions.Copy<T>(T, T, CopyFlag, String[])
+  nameWithType.vb: DataObjectExtensions.Copy(Of T)(T, T, CopyFlag, String())
 - uid: XData.DataObjectExtensions.Execute*
   name: Execute
   href: api/XData.DataObjectExtensions.Execute.html
