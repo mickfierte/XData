@@ -156,13 +156,13 @@
 
 
 <a id="XData_Async_AsyncExtensions_ForEachAsync_" data-uid="XData.Async.AsyncExtensions.ForEachAsync*"></a>
-<h4 id="XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Func___0_System_Threading_Tasks_Task__System_Threading_CancellationToken_" data-uid="XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Func{``0,System.Threading.Tasks.Task},System.Threading.CancellationToken)">ForEachAsync&lt;T&gt;(IQueryable&lt;T&gt;, Func&lt;T, Task&gt;, CancellationToken)</h4>
+<h4 id="XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Func___0_System_Threading_Tasks_Task__" data-uid="XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Func{``0,System.Threading.Tasks.Task})">ForEachAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken, Func&lt;T, Task&gt;)</h4>
 <div class="markdown level1 summary"><p>Asynchronous wrapper over query result iteration</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static Task ForEachAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Func&lt;T, Task&gt; body, CancellationToken token)
+  <pre><code class="lang-csharp hljs">public static Task ForEachAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Func&lt;T, Task&gt; body)
     where T : class, new()</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
@@ -182,15 +182,15 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</td>
-      <td><span class="parametername">body</span></td>
-      <td><p>Iteration logic</p>
-</td>
-    </tr>
-    <tr>
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
       <td><span class="parametername">token</span></td>
       <td><p>Cancellation token</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</td>
+      <td><span class="parametername">body</span></td>
+      <td><p>Iteration logic</p>
 </td>
     </tr>
   </tbody>
@@ -298,13 +298,13 @@
 
 
 <a id="XData_Async_AsyncExtensions_ForEachAsync_" data-uid="XData.Async.AsyncExtensions.ForEachAsync*"></a>
-<h4 id="XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Action___0__System_Threading_CancellationToken_" data-uid="XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Action{``0},System.Threading.CancellationToken)">ForEachAsync&lt;T&gt;(IQueryable&lt;T&gt;, Action&lt;T&gt;, CancellationToken)</h4>
+<h4 id="XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Action___0__" data-uid="XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Action{``0})">ForEachAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken, Action&lt;T&gt;)</h4>
 <div class="markdown level1 summary"><p>Asynchronous wrapper over query result iteration</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static Task ForEachAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Action&lt;T&gt; body, CancellationToken token)
+  <pre><code class="lang-csharp hljs">public static Task ForEachAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Action&lt;T&gt; body)
     where T : class, new()</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
@@ -324,15 +324,15 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
-      <td><span class="parametername">body</span></td>
-      <td><p>Iteration logic</p>
-</td>
-    </tr>
-    <tr>
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
       <td><span class="parametername">token</span></td>
       <td><p>Cancellation token</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+      <td><span class="parametername">body</span></td>
+      <td><p>Iteration logic</p>
 </td>
     </tr>
   </tbody>

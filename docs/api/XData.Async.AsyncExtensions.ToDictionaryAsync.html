@@ -172,13 +172,13 @@
 
 
 <a id="XData_Async_AsyncExtensions_ToDictionaryAsync_" data-uid="XData.Async.AsyncExtensions.ToDictionaryAsync*"></a>
-<h4 id="XData_Async_AsyncExtensions_ToDictionaryAsync__3_System_Linq_IQueryable___0__System_Func___0___1__System_Func___0___2__System_Threading_CancellationToken_" data-uid="XData.Async.AsyncExtensions.ToDictionaryAsync``3(System.Linq.IQueryable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Threading.CancellationToken)">ToDictionaryAsync&lt;T, TKey, TValue&gt;(IQueryable&lt;T&gt;, Func&lt;T, TKey&gt;, Func&lt;T, TValue&gt;, CancellationToken)</h4>
+<h4 id="XData_Async_AsyncExtensions_ToDictionaryAsync__3_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Func___0___1__System_Func___0___2__" data-uid="XData.Async.AsyncExtensions.ToDictionaryAsync``3(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Func{``0,``1},System.Func{``0,``2})">ToDictionaryAsync&lt;T, TKey, TValue&gt;(IQueryable&lt;T&gt;, CancellationToken, Func&lt;T, TKey&gt;, Func&lt;T, TValue&gt;)</h4>
 <div class="markdown level1 summary"><p>Asynchronous wrapper over ToDictionary() LINQ function</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static Task&lt;Dictionary&lt;TKey, TValue&gt;&gt; ToDictionaryAsync&lt;T, TKey, TValue&gt;(this IQueryable&lt;T&gt; source, Func&lt;T, TKey&gt; keySelector, Func&lt;T, TValue&gt; elementSelector, CancellationToken token)
+  <pre><code class="lang-csharp hljs">public static Task&lt;Dictionary&lt;TKey, TValue&gt;&gt; ToDictionaryAsync&lt;T, TKey, TValue&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Func&lt;T, TKey&gt; keySelector, Func&lt;T, TValue&gt; elementSelector)
     where T : class, new()</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
@@ -198,6 +198,12 @@
 </td>
     </tr>
     <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+      <td><span class="parametername">token</span></td>
+      <td><p>Cancellation token</p>
+</td>
+    </tr>
+    <tr>
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TKey&gt;</td>
       <td><span class="parametername">keySelector</span></td>
       <td><p>Function to extract key from each element</p>
@@ -207,12 +213,6 @@
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TValue&gt;</td>
       <td><span class="parametername">elementSelector</span></td>
       <td><p>Function to extract value from each element</p>
-</td>
-    </tr>
-    <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-      <td><span class="parametername">token</span></td>
-      <td><p>Cancellation token</p>
 </td>
     </tr>
   </tbody>

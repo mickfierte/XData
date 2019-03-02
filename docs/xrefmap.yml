@@ -502,15 +502,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AllAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
   nameWithType: AsyncExtensions.AllAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   nameWithType.vb: AsyncExtensions.AllAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)))
-- uid: XData.Async.AsyncExtensions.AllAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: AllAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AllAsync.html#XData_Async_AsyncExtensions_AllAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AllAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: AllAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AllAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AllAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AllAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AllAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: XData.Async.AsyncExtensions.AllAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: AllAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  href: api/XData.Async.AsyncExtensions.AllAsync.html#XData_Async_AsyncExtensions_AllAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Async.AsyncExtensions.AllAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: AllAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+  fullName: XData.Async.AsyncExtensions.AllAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
+  fullName.vb: XData.Async.AsyncExtensions.AllAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
+  nameWithType: AsyncExtensions.AllAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  nameWithType.vb: AsyncExtensions.AllAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
 - uid: XData.Async.AsyncExtensions.AnyAsync*
   name: AnyAsync
   href: api/XData.Async.AsyncExtensions.AnyAsync.html
@@ -535,15 +535,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AnyAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
   nameWithType: AsyncExtensions.AnyAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   nameWithType.vb: AsyncExtensions.AnyAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)))
-- uid: XData.Async.AsyncExtensions.AnyAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: AnyAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AnyAsync.html#XData_Async_AsyncExtensions_AnyAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AnyAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: AnyAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AnyAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AnyAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AnyAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AnyAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: XData.Async.AsyncExtensions.AnyAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: AnyAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  href: api/XData.Async.AsyncExtensions.AnyAsync.html#XData_Async_AsyncExtensions_AnyAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Async.AsyncExtensions.AnyAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: AnyAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+  fullName: XData.Async.AsyncExtensions.AnyAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
+  fullName.vb: XData.Async.AsyncExtensions.AnyAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
+  nameWithType: AsyncExtensions.AnyAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  nameWithType.vb: AsyncExtensions.AnyAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
 - uid: XData.Async.AsyncExtensions.AverageAsync*
   name: AverageAsync
   href: api/XData.Async.AsyncExtensions.AverageAsync.html
@@ -559,15 +559,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Decimal)))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Decimal>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Decimal)))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Decimal>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Decimal___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Decimal)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Decimal>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Decimal)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Decimal>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Decimal)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Double}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Double>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Double___
@@ -577,15 +568,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Double)))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Double>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Double)))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Double}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Double>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Double___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Double}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Double)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Double>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Double)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Double>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Double)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Int32>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int32___
@@ -595,15 +577,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int32)))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Int32>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int32)))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Int32>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int32___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int32)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Int32>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int32)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Int32>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int32)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int64}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Int64>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int64___
@@ -613,15 +586,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int64)))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Int64>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int64)))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int64}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Int64>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int64___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int64}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int64)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Int64>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int64)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Int64>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int64)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Decimal>>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____
@@ -631,15 +595,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Decimal))))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Decimal>>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Decimal))))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Decimal>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Decimal))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Decimal>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Decimal))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Decimal>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Decimal))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Double>>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____
@@ -649,15 +604,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Double))))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Double>>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Double))))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Double>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Double))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Double>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Double))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Double>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Double))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int32>>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____
@@ -667,15 +613,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int32))))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int32>>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int32))))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int32>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int32))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Int32>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int32))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int32>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int32))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int64>>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____
@@ -685,15 +622,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int64))))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int64>>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int64))))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int64>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int64))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Int64>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int64))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int64>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int64))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Single>>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____
@@ -703,15 +631,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Single))))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Single>>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Single))))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Single>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Single))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Single>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Single))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Single>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Single))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Single}})
   name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Single>>)
   href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Single___
@@ -721,15 +640,96 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Single)))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Single>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Single)))
-- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Single}},System.Threading.CancellationToken)
-  name: AverageAsync<T>(IQueryable<T>, Expression<Func<T, Single>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Single___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Single}},System.Threading.CancellationToken)
-  name.vb: AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Single)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Single>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Single)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, Expression<Func<T, Single>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Single)), CancellationToken)
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Decimal>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Decimal___
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Decimal)))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Decimal>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Decimal)))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Decimal>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Decimal)))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Double}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Double>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Double___
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Double}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Double)))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Double>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Double)))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Double>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Double)))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Int32}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Int32>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Int32___
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Int32}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Int32)))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Int32>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int32)))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Int32>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Int32)))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Int64}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Int64>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Int64___
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Int64}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Int64)))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Int64>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int64)))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Int64>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Int64)))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Decimal>>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Decimal))))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Decimal>>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Decimal))))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Decimal>>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Decimal))))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Double>>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Double))))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Double>>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Double))))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Double>>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Double))))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Int32>>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Int32))))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Int32>>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int32))))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Int32>>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Int32))))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Int64>>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Int64))))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Int64>>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int64))))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Int64>>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Int64))))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Single>>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Single))))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Single>>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Single))))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Single>>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Single))))
+- uid: XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Single}})
+  name: AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Single>>)
+  href: api/XData.Async.AsyncExtensions.AverageAsync.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Single___
+  commentId: M:XData.Async.AsyncExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Single}})
+  name.vb: AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Single)))
+  fullName: XData.Async.AsyncExtensions.AverageAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Single>>)
+  fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Single)))
+  nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Single>>)
+  nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Single)))
 - uid: XData.Async.AsyncExtensions.ContainsAsync*
   name: ContainsAsync
   href: api/XData.Async.AsyncExtensions.ContainsAsync.html
@@ -754,15 +754,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ContainsAsync(Of T)(System.Linq.IQueryable(Of T), T, System.Collections.Generic.IEqualityComparer(Of T))
   nameWithType: AsyncExtensions.ContainsAsync<T>(IQueryable<T>, T, IEqualityComparer<T>)
   nameWithType.vb: AsyncExtensions.ContainsAsync(Of T)(IQueryable(Of T), T, IEqualityComparer(Of T))
-- uid: XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},``0,System.Collections.Generic.IEqualityComparer{``0},System.Threading.CancellationToken)
-  name: ContainsAsync<T>(IQueryable<T>, T, IEqualityComparer<T>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.ContainsAsync.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_System_Collections_Generic_IEqualityComparer___0__System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},``0,System.Collections.Generic.IEqualityComparer{``0},System.Threading.CancellationToken)
-  name.vb: ContainsAsync(Of T)(IQueryable(Of T), T, IEqualityComparer(Of T), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.ContainsAsync<T>(System.Linq.IQueryable<T>, T, System.Collections.Generic.IEqualityComparer<T>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.ContainsAsync(Of T)(System.Linq.IQueryable(Of T), T, System.Collections.Generic.IEqualityComparer(Of T), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.ContainsAsync<T>(IQueryable<T>, T, IEqualityComparer<T>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.ContainsAsync(Of T)(IQueryable(Of T), T, IEqualityComparer(Of T), CancellationToken)
 - uid: XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},``0,System.Func{``0,System.Object}[])
   name: ContainsAsync<T>(IQueryable<T>, T, Func<T, Object>[])
   href: api/XData.Async.AsyncExtensions.ContainsAsync.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_System_Func___0_System_Object____
@@ -772,15 +763,24 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ContainsAsync(Of T)(System.Linq.IQueryable(Of T), T, System.Func(Of T, System.Object)())
   nameWithType: AsyncExtensions.ContainsAsync<T>(IQueryable<T>, T, Func<T, Object>[])
   nameWithType.vb: AsyncExtensions.ContainsAsync(Of T)(IQueryable(Of T), T, Func(Of T, Object)())
-- uid: XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},``0,System.Threading.CancellationToken)
-  name: ContainsAsync<T>(IQueryable<T>, T, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.ContainsAsync.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},``0,System.Threading.CancellationToken)
-  name.vb: ContainsAsync(Of T)(IQueryable(Of T), T, CancellationToken)
-  fullName: XData.Async.AsyncExtensions.ContainsAsync<T>(System.Linq.IQueryable<T>, T, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.ContainsAsync(Of T)(System.Linq.IQueryable(Of T), T, System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.ContainsAsync<T>(IQueryable<T>, T, CancellationToken)
-  nameWithType.vb: AsyncExtensions.ContainsAsync(Of T)(IQueryable(Of T), T, CancellationToken)
+- uid: XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,``0)
+  name: ContainsAsync<T>(IQueryable<T>, CancellationToken, T)
+  href: api/XData.Async.AsyncExtensions.ContainsAsync.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken___0_
+  commentId: M:XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,``0)
+  name.vb: ContainsAsync(Of T)(IQueryable(Of T), CancellationToken, T)
+  fullName: XData.Async.AsyncExtensions.ContainsAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, T)
+  fullName.vb: XData.Async.AsyncExtensions.ContainsAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, T)
+  nameWithType: AsyncExtensions.ContainsAsync<T>(IQueryable<T>, CancellationToken, T)
+  nameWithType.vb: AsyncExtensions.ContainsAsync(Of T)(IQueryable(Of T), CancellationToken, T)
+- uid: XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,``0,System.Collections.Generic.IEqualityComparer{``0})
+  name: ContainsAsync<T>(IQueryable<T>, CancellationToken, T, IEqualityComparer<T>)
+  href: api/XData.Async.AsyncExtensions.ContainsAsync.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken___0_System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,``0,System.Collections.Generic.IEqualityComparer{``0})
+  name.vb: ContainsAsync(Of T)(IQueryable(Of T), CancellationToken, T, IEqualityComparer(Of T))
+  fullName: XData.Async.AsyncExtensions.ContainsAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, T, System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: XData.Async.AsyncExtensions.ContainsAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, T, System.Collections.Generic.IEqualityComparer(Of T))
+  nameWithType: AsyncExtensions.ContainsAsync<T>(IQueryable<T>, CancellationToken, T, IEqualityComparer<T>)
+  nameWithType.vb: AsyncExtensions.ContainsAsync(Of T)(IQueryable(Of T), CancellationToken, T, IEqualityComparer(Of T))
 - uid: XData.Async.AsyncExtensions.CountAsync*
   name: CountAsync
   href: api/XData.Async.AsyncExtensions.CountAsync.html
@@ -805,15 +805,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.CountAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
   nameWithType: AsyncExtensions.CountAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   nameWithType.vb: AsyncExtensions.CountAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)))
-- uid: XData.Async.AsyncExtensions.CountAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: CountAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.CountAsync.html#XData_Async_AsyncExtensions_CountAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.CountAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: CountAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.CountAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.CountAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.CountAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.CountAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.CountAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken)
   name: CountAsync<T>(IQueryable<T>, CancellationToken)
   href: api/XData.Async.AsyncExtensions.CountAsync.html#XData_Async_AsyncExtensions_CountAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_
@@ -823,18 +814,27 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.CountAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken)
   nameWithType: AsyncExtensions.CountAsync<T>(IQueryable<T>, CancellationToken)
   nameWithType.vb: AsyncExtensions.CountAsync(Of T)(IQueryable(Of T), CancellationToken)
+- uid: XData.Async.AsyncExtensions.CountAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: CountAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  href: api/XData.Async.AsyncExtensions.CountAsync.html#XData_Async_AsyncExtensions_CountAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Async.AsyncExtensions.CountAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: CountAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+  fullName: XData.Async.AsyncExtensions.CountAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
+  fullName.vb: XData.Async.AsyncExtensions.CountAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
+  nameWithType: AsyncExtensions.CountAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  nameWithType.vb: AsyncExtensions.CountAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+- uid: XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope,System.Threading.CancellationToken,XData.Database.Adapter.Query)
+  name: ExecuteNonQueryAsync(IDataScope, CancellationToken, Query)
+  href: api/XData.Async.AsyncExtensions.ExecuteNonQueryAsync.html#XData_Async_AsyncExtensions_ExecuteNonQueryAsync_XData_IDataScope_System_Threading_CancellationToken_XData_Database_Adapter_Query_
+  commentId: M:XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope,System.Threading.CancellationToken,XData.Database.Adapter.Query)
+  fullName: XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope, System.Threading.CancellationToken, XData.Database.Adapter.Query)
+  nameWithType: AsyncExtensions.ExecuteNonQueryAsync(IDataScope, CancellationToken, Query)
 - uid: XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope,XData.Database.Adapter.Query)
   name: ExecuteNonQueryAsync(IDataScope, Query)
   href: api/XData.Async.AsyncExtensions.ExecuteNonQueryAsync.html#XData_Async_AsyncExtensions_ExecuteNonQueryAsync_XData_IDataScope_XData_Database_Adapter_Query_
   commentId: M:XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope,XData.Database.Adapter.Query)
   fullName: XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope, XData.Database.Adapter.Query)
   nameWithType: AsyncExtensions.ExecuteNonQueryAsync(IDataScope, Query)
-- uid: XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope,XData.Database.Adapter.Query,System.Threading.CancellationToken)
-  name: ExecuteNonQueryAsync(IDataScope, Query, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.ExecuteNonQueryAsync.html#XData_Async_AsyncExtensions_ExecuteNonQueryAsync_XData_IDataScope_XData_Database_Adapter_Query_System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope,XData.Database.Adapter.Query,System.Threading.CancellationToken)
-  fullName: XData.Async.AsyncExtensions.ExecuteNonQueryAsync(XData.IDataScope, XData.Database.Adapter.Query, System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.ExecuteNonQueryAsync(IDataScope, Query, CancellationToken)
 - uid: XData.Async.AsyncExtensions.ExecuteNonQueryAsync*
   name: ExecuteNonQueryAsync
   href: api/XData.Async.AsyncExtensions.ExecuteNonQueryAsync.html
@@ -847,6 +847,15 @@ references:
   commentId: Overload:XData.Async.AsyncExtensions.ExecuteScalarAsync
   fullName: XData.Async.AsyncExtensions.ExecuteScalarAsync
   nameWithType: AsyncExtensions.ExecuteScalarAsync
+- uid: XData.Async.AsyncExtensions.ExecuteScalarAsync``1(XData.IDataScope,System.Threading.CancellationToken,XData.Database.Adapter.Query)
+  name: ExecuteScalarAsync<TResult>(IDataScope, CancellationToken, Query)
+  href: api/XData.Async.AsyncExtensions.ExecuteScalarAsync.html#XData_Async_AsyncExtensions_ExecuteScalarAsync__1_XData_IDataScope_System_Threading_CancellationToken_XData_Database_Adapter_Query_
+  commentId: M:XData.Async.AsyncExtensions.ExecuteScalarAsync``1(XData.IDataScope,System.Threading.CancellationToken,XData.Database.Adapter.Query)
+  name.vb: ExecuteScalarAsync(Of TResult)(IDataScope, CancellationToken, Query)
+  fullName: XData.Async.AsyncExtensions.ExecuteScalarAsync<TResult>(XData.IDataScope, System.Threading.CancellationToken, XData.Database.Adapter.Query)
+  fullName.vb: XData.Async.AsyncExtensions.ExecuteScalarAsync(Of TResult)(XData.IDataScope, System.Threading.CancellationToken, XData.Database.Adapter.Query)
+  nameWithType: AsyncExtensions.ExecuteScalarAsync<TResult>(IDataScope, CancellationToken, Query)
+  nameWithType.vb: AsyncExtensions.ExecuteScalarAsync(Of TResult)(IDataScope, CancellationToken, Query)
 - uid: XData.Async.AsyncExtensions.ExecuteScalarAsync``1(XData.IDataScope,XData.Database.Adapter.Query)
   name: ExecuteScalarAsync<TResult>(IDataScope, Query)
   href: api/XData.Async.AsyncExtensions.ExecuteScalarAsync.html#XData_Async_AsyncExtensions_ExecuteScalarAsync__1_XData_IDataScope_XData_Database_Adapter_Query_
@@ -856,15 +865,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ExecuteScalarAsync(Of TResult)(XData.IDataScope, XData.Database.Adapter.Query)
   nameWithType: AsyncExtensions.ExecuteScalarAsync<TResult>(IDataScope, Query)
   nameWithType.vb: AsyncExtensions.ExecuteScalarAsync(Of TResult)(IDataScope, Query)
-- uid: XData.Async.AsyncExtensions.ExecuteScalarAsync``1(XData.IDataScope,XData.Database.Adapter.Query,System.Threading.CancellationToken)
-  name: ExecuteScalarAsync<TResult>(IDataScope, Query, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.ExecuteScalarAsync.html#XData_Async_AsyncExtensions_ExecuteScalarAsync__1_XData_IDataScope_XData_Database_Adapter_Query_System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.ExecuteScalarAsync``1(XData.IDataScope,XData.Database.Adapter.Query,System.Threading.CancellationToken)
-  name.vb: ExecuteScalarAsync(Of TResult)(IDataScope, Query, CancellationToken)
-  fullName: XData.Async.AsyncExtensions.ExecuteScalarAsync<TResult>(XData.IDataScope, XData.Database.Adapter.Query, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.ExecuteScalarAsync(Of TResult)(XData.IDataScope, XData.Database.Adapter.Query, System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.ExecuteScalarAsync<TResult>(IDataScope, Query, CancellationToken)
-  nameWithType.vb: AsyncExtensions.ExecuteScalarAsync(Of TResult)(IDataScope, Query, CancellationToken)
 - uid: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
   name: ExecuteSqlBlockAsync(IDataScope, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
   href: api/XData.Async.AsyncExtensions.ExecuteSqlBlockAsync.html#XData_Async_AsyncExtensions_ExecuteSqlBlockAsync_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
@@ -889,18 +889,18 @@ references:
   commentId: Overload:XData.Async.AsyncExtensions.ExecuteSqlBlockAsync
   fullName: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync
   nameWithType: AsyncExtensions.ExecuteSqlBlockAsync
+- uid: XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope,System.Threading.CancellationToken,XData.Database.Adapter.Query,System.Data.CommandBehavior)
+  name: FillTableAsync(IDataScope, CancellationToken, Query, CommandBehavior)
+  href: api/XData.Async.AsyncExtensions.FillTableAsync.html#XData_Async_AsyncExtensions_FillTableAsync_XData_IDataScope_System_Threading_CancellationToken_XData_Database_Adapter_Query_System_Data_CommandBehavior_
+  commentId: M:XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope,System.Threading.CancellationToken,XData.Database.Adapter.Query,System.Data.CommandBehavior)
+  fullName: XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope, System.Threading.CancellationToken, XData.Database.Adapter.Query, System.Data.CommandBehavior)
+  nameWithType: AsyncExtensions.FillTableAsync(IDataScope, CancellationToken, Query, CommandBehavior)
 - uid: XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope,XData.Database.Adapter.Query,System.Data.CommandBehavior)
   name: FillTableAsync(IDataScope, Query, CommandBehavior)
   href: api/XData.Async.AsyncExtensions.FillTableAsync.html#XData_Async_AsyncExtensions_FillTableAsync_XData_IDataScope_XData_Database_Adapter_Query_System_Data_CommandBehavior_
   commentId: M:XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope,XData.Database.Adapter.Query,System.Data.CommandBehavior)
   fullName: XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope, XData.Database.Adapter.Query, System.Data.CommandBehavior)
   nameWithType: AsyncExtensions.FillTableAsync(IDataScope, Query, CommandBehavior)
-- uid: XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope,XData.Database.Adapter.Query,System.Threading.CancellationToken,System.Data.CommandBehavior)
-  name: FillTableAsync(IDataScope, Query, CancellationToken, CommandBehavior)
-  href: api/XData.Async.AsyncExtensions.FillTableAsync.html#XData_Async_AsyncExtensions_FillTableAsync_XData_IDataScope_XData_Database_Adapter_Query_System_Threading_CancellationToken_System_Data_CommandBehavior_
-  commentId: M:XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope,XData.Database.Adapter.Query,System.Threading.CancellationToken,System.Data.CommandBehavior)
-  fullName: XData.Async.AsyncExtensions.FillTableAsync(XData.IDataScope, XData.Database.Adapter.Query, System.Threading.CancellationToken, System.Data.CommandBehavior)
-  nameWithType: AsyncExtensions.FillTableAsync(IDataScope, Query, CancellationToken, CommandBehavior)
 - uid: XData.Async.AsyncExtensions.FillTableAsync*
   name: FillTableAsync
   href: api/XData.Async.AsyncExtensions.FillTableAsync.html
@@ -922,6 +922,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.FirstAsync(Of T)(System.Linq.IQueryable(Of T))
   nameWithType: AsyncExtensions.FirstAsync<T>(IQueryable<T>)
   nameWithType.vb: AsyncExtensions.FirstAsync(Of T)(IQueryable(Of T))
+- uid: XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: FirstAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.FirstAsync.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: FirstAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.FirstAsync<T>(System.Linq.IQueryable<T>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.FirstAsync(Of T)(System.Linq.IQueryable(Of T), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.FirstAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.FirstAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
   name: FirstAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   href: api/XData.Async.AsyncExtensions.FirstAsync.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
@@ -931,15 +940,33 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.FirstAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
   nameWithType: AsyncExtensions.FirstAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   nameWithType.vb: AsyncExtensions.FirstAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)))
-- uid: XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: FirstAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.FirstAsync.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: FirstAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.FirstAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.FirstAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.FirstAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.FirstAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: FirstAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.FirstAsync.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: FirstAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.FirstAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.FirstAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.FirstAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.FirstAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+- uid: XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: FirstAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  href: api/XData.Async.AsyncExtensions.FirstAsync.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: FirstAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+  fullName: XData.Async.AsyncExtensions.FirstAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
+  fullName.vb: XData.Async.AsyncExtensions.FirstAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
+  nameWithType: AsyncExtensions.FirstAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  nameWithType.vb: AsyncExtensions.FirstAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+- uid: XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: FirstAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.FirstAsync.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.FirstAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: FirstAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.FirstAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.FirstAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.FirstAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.FirstAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.FirstOrDefaultAsync*
   name: FirstOrDefaultAsync
   href: api/XData.Async.AsyncExtensions.FirstOrDefaultAsync.html
@@ -955,6 +982,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.FirstOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T))
   nameWithType: AsyncExtensions.FirstOrDefaultAsync<T>(IQueryable<T>)
   nameWithType.vb: AsyncExtensions.FirstOrDefaultAsync(Of T)(IQueryable(Of T))
+- uid: XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: FirstOrDefaultAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.FirstOrDefaultAsync.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: FirstOrDefaultAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.FirstOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.FirstOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.FirstOrDefaultAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.FirstOrDefaultAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
   name: FirstOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   href: api/XData.Async.AsyncExtensions.FirstOrDefaultAsync.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
@@ -964,15 +1000,33 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.FirstOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
   nameWithType: AsyncExtensions.FirstOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   nameWithType.vb: AsyncExtensions.FirstOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)))
-- uid: XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: FirstOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.FirstOrDefaultAsync.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: FirstOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.FirstOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.FirstOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.FirstOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.FirstOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: FirstOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.FirstOrDefaultAsync.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: FirstOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.FirstOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.FirstOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.FirstOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.FirstOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+- uid: XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: FirstOrDefaultAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  href: api/XData.Async.AsyncExtensions.FirstOrDefaultAsync.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: FirstOrDefaultAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+  fullName: XData.Async.AsyncExtensions.FirstOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
+  fullName.vb: XData.Async.AsyncExtensions.FirstOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
+  nameWithType: AsyncExtensions.FirstOrDefaultAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  nameWithType.vb: AsyncExtensions.FirstOrDefaultAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+- uid: XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: FirstOrDefaultAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.FirstOrDefaultAsync.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.FirstOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: FirstOrDefaultAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.FirstOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.FirstOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.FirstOrDefaultAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.FirstOrDefaultAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.ForEachAsync*
   name: ForEachAsync
   href: api/XData.Async.AsyncExtensions.ForEachAsync.html
@@ -988,15 +1042,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ForEachAsync(Of T)(System.Linq.IQueryable(Of T), System.Action(Of T))
   nameWithType: AsyncExtensions.ForEachAsync<T>(IQueryable<T>, Action<T>)
   nameWithType.vb: AsyncExtensions.ForEachAsync(Of T)(IQueryable(Of T), Action(Of T))
-- uid: XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Action{``0},System.Threading.CancellationToken)
-  name: ForEachAsync<T>(IQueryable<T>, Action<T>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.ForEachAsync.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Action___0__System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Action{``0},System.Threading.CancellationToken)
-  name.vb: ForEachAsync(Of T)(IQueryable(Of T), Action(Of T), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.ForEachAsync<T>(System.Linq.IQueryable<T>, System.Action<T>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.ForEachAsync(Of T)(System.Linq.IQueryable(Of T), System.Action(Of T), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.ForEachAsync<T>(IQueryable<T>, Action<T>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.ForEachAsync(Of T)(IQueryable(Of T), Action(Of T), CancellationToken)
 - uid: XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Func{``0,System.Threading.Tasks.Task})
   name: ForEachAsync<T>(IQueryable<T>, Func<T, Task>)
   href: api/XData.Async.AsyncExtensions.ForEachAsync.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Func___0_System_Threading_Tasks_Task__
@@ -1006,15 +1051,24 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ForEachAsync(Of T)(System.Linq.IQueryable(Of T), System.Func(Of T, System.Threading.Tasks.Task))
   nameWithType: AsyncExtensions.ForEachAsync<T>(IQueryable<T>, Func<T, Task>)
   nameWithType.vb: AsyncExtensions.ForEachAsync(Of T)(IQueryable(Of T), Func(Of T, Task))
-- uid: XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Func{``0,System.Threading.Tasks.Task},System.Threading.CancellationToken)
-  name: ForEachAsync<T>(IQueryable<T>, Func<T, Task>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.ForEachAsync.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Func___0_System_Threading_Tasks_Task__System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Func{``0,System.Threading.Tasks.Task},System.Threading.CancellationToken)
-  name.vb: ForEachAsync(Of T)(IQueryable(Of T), Func(Of T, Task), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.ForEachAsync<T>(System.Linq.IQueryable<T>, System.Func<T, System.Threading.Tasks.Task>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.ForEachAsync(Of T)(System.Linq.IQueryable(Of T), System.Func(Of T, System.Threading.Tasks.Task), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.ForEachAsync<T>(IQueryable<T>, Func<T, Task>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.ForEachAsync(Of T)(IQueryable(Of T), Func(Of T, Task), CancellationToken)
+- uid: XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Action{``0})
+  name: ForEachAsync<T>(IQueryable<T>, CancellationToken, Action<T>)
+  href: api/XData.Async.AsyncExtensions.ForEachAsync.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Action___0__
+  commentId: M:XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Action{``0})
+  name.vb: ForEachAsync(Of T)(IQueryable(Of T), CancellationToken, Action(Of T))
+  fullName: XData.Async.AsyncExtensions.ForEachAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Action<T>)
+  fullName.vb: XData.Async.AsyncExtensions.ForEachAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Action(Of T))
+  nameWithType: AsyncExtensions.ForEachAsync<T>(IQueryable<T>, CancellationToken, Action<T>)
+  nameWithType.vb: AsyncExtensions.ForEachAsync(Of T)(IQueryable(Of T), CancellationToken, Action(Of T))
+- uid: XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Func{``0,System.Threading.Tasks.Task})
+  name: ForEachAsync<T>(IQueryable<T>, CancellationToken, Func<T, Task>)
+  href: api/XData.Async.AsyncExtensions.ForEachAsync.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Func___0_System_Threading_Tasks_Task__
+  commentId: M:XData.Async.AsyncExtensions.ForEachAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Func{``0,System.Threading.Tasks.Task})
+  name.vb: ForEachAsync(Of T)(IQueryable(Of T), CancellationToken, Func(Of T, Task))
+  fullName: XData.Async.AsyncExtensions.ForEachAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Func<T, System.Threading.Tasks.Task>)
+  fullName.vb: XData.Async.AsyncExtensions.ForEachAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Func(Of T, System.Threading.Tasks.Task))
+  nameWithType: AsyncExtensions.ForEachAsync<T>(IQueryable<T>, CancellationToken, Func<T, Task>)
+  nameWithType.vb: AsyncExtensions.ForEachAsync(Of T)(IQueryable(Of T), CancellationToken, Func(Of T, Task))
 - uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync*
   name: GetSqlBlockDataAsync
   href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html
@@ -1114,15 +1168,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.LongCountAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
   nameWithType: AsyncExtensions.LongCountAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   nameWithType.vb: AsyncExtensions.LongCountAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)))
-- uid: XData.Async.AsyncExtensions.LongCountAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: LongCountAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.LongCountAsync.html#XData_Async_AsyncExtensions_LongCountAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.LongCountAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: LongCountAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.LongCountAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.LongCountAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.LongCountAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.LongCountAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.LongCountAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken)
   name: LongCountAsync<T>(IQueryable<T>, CancellationToken)
   href: api/XData.Async.AsyncExtensions.LongCountAsync.html#XData_Async_AsyncExtensions_LongCountAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_
@@ -1132,6 +1177,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.LongCountAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken)
   nameWithType: AsyncExtensions.LongCountAsync<T>(IQueryable<T>, CancellationToken)
   nameWithType.vb: AsyncExtensions.LongCountAsync(Of T)(IQueryable(Of T), CancellationToken)
+- uid: XData.Async.AsyncExtensions.LongCountAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: LongCountAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  href: api/XData.Async.AsyncExtensions.LongCountAsync.html#XData_Async_AsyncExtensions_LongCountAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Async.AsyncExtensions.LongCountAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: LongCountAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+  fullName: XData.Async.AsyncExtensions.LongCountAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
+  fullName.vb: XData.Async.AsyncExtensions.LongCountAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
+  nameWithType: AsyncExtensions.LongCountAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  nameWithType.vb: AsyncExtensions.LongCountAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
 - uid: XData.Async.AsyncExtensions.MaxAsync*
   name: MaxAsync
   href: api/XData.Async.AsyncExtensions.MaxAsync.html
@@ -1195,6 +1249,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SingleAsync(Of T)(System.Linq.IQueryable(Of T))
   nameWithType: AsyncExtensions.SingleAsync<T>(IQueryable<T>)
   nameWithType.vb: AsyncExtensions.SingleAsync(Of T)(IQueryable(Of T))
+- uid: XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: SingleAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.SingleAsync.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: SingleAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.SingleAsync<T>(System.Linq.IQueryable<T>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.SingleAsync(Of T)(System.Linq.IQueryable(Of T), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.SingleAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.SingleAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
   name: SingleAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   href: api/XData.Async.AsyncExtensions.SingleAsync.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
@@ -1204,15 +1267,33 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SingleAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
   nameWithType: AsyncExtensions.SingleAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   nameWithType.vb: AsyncExtensions.SingleAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)))
-- uid: XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: SingleAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SingleAsync.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: SingleAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SingleAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SingleAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SingleAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SingleAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: SingleAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.SingleAsync.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: SingleAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.SingleAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.SingleAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.SingleAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.SingleAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+- uid: XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: SingleAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  href: api/XData.Async.AsyncExtensions.SingleAsync.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: SingleAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+  fullName: XData.Async.AsyncExtensions.SingleAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
+  fullName.vb: XData.Async.AsyncExtensions.SingleAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
+  nameWithType: AsyncExtensions.SingleAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  nameWithType.vb: AsyncExtensions.SingleAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+- uid: XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: SingleAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.SingleAsync.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.SingleAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: SingleAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.SingleAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.SingleAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.SingleAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.SingleAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.SingleOrDefaultAsync*
   name: SingleOrDefaultAsync
   href: api/XData.Async.AsyncExtensions.SingleOrDefaultAsync.html
@@ -1228,6 +1309,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SingleOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T))
   nameWithType: AsyncExtensions.SingleOrDefaultAsync<T>(IQueryable<T>)
   nameWithType.vb: AsyncExtensions.SingleOrDefaultAsync(Of T)(IQueryable(Of T))
+- uid: XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: SingleOrDefaultAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.SingleOrDefaultAsync.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: SingleOrDefaultAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.SingleOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.SingleOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.SingleOrDefaultAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.SingleOrDefaultAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
   name: SingleOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   href: api/XData.Async.AsyncExtensions.SingleOrDefaultAsync.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
@@ -1237,21 +1327,57 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SingleOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
   nameWithType: AsyncExtensions.SingleOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>)
   nameWithType.vb: AsyncExtensions.SingleOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)))
-- uid: XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name: SingleOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SingleOrDefaultAsync.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Threading.CancellationToken)
-  name.vb: SingleOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SingleOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SingleOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SingleOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SingleOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), CancellationToken)
+- uid: XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: SingleOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.SingleOrDefaultAsync.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: SingleOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.SingleOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.SingleOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.SingleOrDefaultAsync<T>(IQueryable<T>, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.SingleOrDefaultAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+- uid: XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: SingleOrDefaultAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  href: api/XData.Async.AsyncExtensions.SingleOrDefaultAsync.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: SingleOrDefaultAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+  fullName: XData.Async.AsyncExtensions.SingleOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
+  fullName.vb: XData.Async.AsyncExtensions.SingleOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
+  nameWithType: AsyncExtensions.SingleOrDefaultAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>)
+  nameWithType.vb: AsyncExtensions.SingleOrDefaultAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)))
+- uid: XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: SingleOrDefaultAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.SingleOrDefaultAsync.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.SingleOrDefaultAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: SingleOrDefaultAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.SingleOrDefaultAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.SingleOrDefaultAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.SingleOrDefaultAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Boolean>>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.SingleOrDefaultAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Boolean)), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.SubmitAndReturnAsync*
   name: SubmitAndReturnAsync
   href: api/XData.Async.AsyncExtensions.SubmitAndReturnAsync.html
   commentId: Overload:XData.Async.AsyncExtensions.SubmitAndReturnAsync
   fullName: XData.Async.AsyncExtensions.SubmitAndReturnAsync
   nameWithType: AsyncExtensions.SubmitAndReturnAsync
+- uid: XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},XData.DataSubmitFlag)
+  name: SubmitAndReturnAsync<T>(T, Func<JsonSettings<T>, JsonSettings<T>>, DataSubmitFlag)
+  href: api/XData.Async.AsyncExtensions.SubmitAndReturnAsync.html#XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___XData_DataSubmitFlag_
+  commentId: M:XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},XData.DataSubmitFlag)
+  name.vb: SubmitAndReturnAsync(Of T)(T, Func(Of JsonSettings(Of T), JsonSettings(Of T)), DataSubmitFlag)
+  fullName: XData.Async.AsyncExtensions.SubmitAndReturnAsync<T>(T, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>, XData.DataSubmitFlag)
+  fullName.vb: XData.Async.AsyncExtensions.SubmitAndReturnAsync(Of T)(T, System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)), XData.DataSubmitFlag)
+  nameWithType: AsyncExtensions.SubmitAndReturnAsync<T>(T, Func<JsonSettings<T>, JsonSettings<T>>, DataSubmitFlag)
+  nameWithType.vb: AsyncExtensions.SubmitAndReturnAsync(Of T)(T, Func(Of JsonSettings(Of T), JsonSettings(Of T)), DataSubmitFlag)
+- uid: XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},XData.DataSubmitFlag)
+  name: SubmitAndReturnAsync<T>(T, CancellationToken, Func<JsonSettings<T>, JsonSettings<T>>, DataSubmitFlag)
+  href: api/XData.Async.AsyncExtensions.SubmitAndReturnAsync.html#XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Threading_CancellationToken_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___XData_DataSubmitFlag_
+  commentId: M:XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},XData.DataSubmitFlag)
+  name.vb: SubmitAndReturnAsync(Of T)(T, CancellationToken, Func(Of JsonSettings(Of T), JsonSettings(Of T)), DataSubmitFlag)
+  fullName: XData.Async.AsyncExtensions.SubmitAndReturnAsync<T>(T, System.Threading.CancellationToken, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>, XData.DataSubmitFlag)
+  fullName.vb: XData.Async.AsyncExtensions.SubmitAndReturnAsync(Of T)(T, System.Threading.CancellationToken, System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)), XData.DataSubmitFlag)
+  nameWithType: AsyncExtensions.SubmitAndReturnAsync<T>(T, CancellationToken, Func<JsonSettings<T>, JsonSettings<T>>, DataSubmitFlag)
+  nameWithType.vb: AsyncExtensions.SubmitAndReturnAsync(Of T)(T, CancellationToken, Func(Of JsonSettings(Of T), JsonSettings(Of T)), DataSubmitFlag)
 - uid: XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,System.Threading.CancellationToken,XData.DataSubmitFlag)
   name: SubmitAndReturnAsync<T>(T, CancellationToken, DataSubmitFlag)
   href: api/XData.Async.AsyncExtensions.SubmitAndReturnAsync.html#XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Threading_CancellationToken_XData_DataSubmitFlag_
@@ -1309,15 +1435,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Decimal)))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Decimal>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Decimal)))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Decimal>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Decimal___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Decimal)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Decimal>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Decimal)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Decimal>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Decimal)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Double}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Double>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Double___
@@ -1327,15 +1444,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Double)))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Double>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Double)))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Double}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Double>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Double___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Double}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Double)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Double>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Double)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Double>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Double)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Int32>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int32___
@@ -1345,15 +1453,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int32)))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Int32>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int32)))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Int32>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int32___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int32)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Int32>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int32)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Int32>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int32)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int64}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Int64>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int64___
@@ -1363,15 +1462,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int64)))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Int64>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int64)))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int64}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Int64>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int64___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int64}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int64)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Int64>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int64)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Int64>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Int64)), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Decimal>>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____
@@ -1381,15 +1471,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Decimal))))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Decimal>>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Decimal))))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Decimal>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Decimal))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Decimal>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Decimal))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Decimal>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Decimal))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Double>>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____
@@ -1399,15 +1480,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Double))))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Double>>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Double))))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Double>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Double))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Double>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Double))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Double>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Double))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int32>>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____
@@ -1417,15 +1489,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int32))))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int32>>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int32))))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int32>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int32))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Int32>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int32))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int32>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int32))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int64>>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____
@@ -1435,15 +1498,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int64))))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int64>>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int64))))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int64>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int64))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Int64>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int64))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Int64>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Int64))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Single>>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____
@@ -1453,15 +1507,6 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Single))))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Single>>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Single))))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Single>>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Single))), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Single>>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Single))), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Nullable<Single>>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Nullable(Of Single))), CancellationToken)
 - uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Single}})
   name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Single>>)
   href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Single___
@@ -1471,15 +1516,96 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Single)))
   nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Single>>)
   nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Single)))
-- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Single}},System.Threading.CancellationToken)
-  name: SumAsync<T>(IQueryable<T>, Expression<Func<T, Single>>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Single___System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Single}},System.Threading.CancellationToken)
-  name.vb: SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Single)), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Linq.Expressions.Expression<System.Func<T, System.Single>>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Single)), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, Expression<Func<T, Single>>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), Expression(Of Func(Of T, Single)), CancellationToken)
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Decimal>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Decimal___
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Decimal)))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Decimal>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Decimal)))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Decimal>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Decimal)))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Double}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Double>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Double___
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Double}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Double)))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Double>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Double)))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Double>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Double)))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Int32}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Int32>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Int32___
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Int32}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Int32)))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Int32>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int32)))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Int32>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Int32)))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Int64}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Int64>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Int64___
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Int64}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Int64)))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Int64>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Int64)))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Int64>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Int64)))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Decimal>>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Decimal))))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Decimal>>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Decimal))))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Decimal>>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Decimal))))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Double>>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Double))))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Double>>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Double))))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Double>>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Double))))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Int32>>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Int32))))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Int32>>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int32))))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Int32>>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Int32))))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Int64>>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Int64))))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Int64>>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Int64))))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Int64>>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Int64))))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Single>>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Single))))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Nullable<System.Single>>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Nullable(Of System.Single))))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Nullable<Single>>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Nullable(Of Single))))
+- uid: XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Single}})
+  name: SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Single>>)
+  href: api/XData.Async.AsyncExtensions.SumAsync.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Single___
+  commentId: M:XData.Async.AsyncExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Single}})
+  name.vb: SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Single)))
+  fullName: XData.Async.AsyncExtensions.SumAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<T, System.Single>>)
+  fullName.vb: XData.Async.AsyncExtensions.SumAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Single)))
+  nameWithType: AsyncExtensions.SumAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Single>>)
+  nameWithType.vb: AsyncExtensions.SumAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Single)))
 - uid: XData.Async.AsyncExtensions.ToArrayAsync*
   name: ToArrayAsync
   href: api/XData.Async.AsyncExtensions.ToArrayAsync.html
@@ -1495,6 +1621,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ToArrayAsync(Of T)(System.Linq.IQueryable(Of T))
   nameWithType: AsyncExtensions.ToArrayAsync<T>(IQueryable<T>)
   nameWithType.vb: AsyncExtensions.ToArrayAsync(Of T)(IQueryable(Of T))
+- uid: XData.Async.AsyncExtensions.ToArrayAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: ToArrayAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.ToArrayAsync.html#XData_Async_AsyncExtensions_ToArrayAsync__1_System_Linq_IQueryable___0__System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.ToArrayAsync``1(System.Linq.IQueryable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: ToArrayAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.ToArrayAsync<T>(System.Linq.IQueryable<T>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.ToArrayAsync(Of T)(System.Linq.IQueryable(Of T), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.ToArrayAsync<T>(IQueryable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.ToArrayAsync(Of T)(IQueryable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.ToArrayAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken)
   name: ToArrayAsync<T>(IQueryable<T>, CancellationToken)
   href: api/XData.Async.AsyncExtensions.ToArrayAsync.html#XData_Async_AsyncExtensions_ToArrayAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_
@@ -1504,6 +1639,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ToArrayAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken)
   nameWithType: AsyncExtensions.ToArrayAsync<T>(IQueryable<T>, CancellationToken)
   nameWithType.vb: AsyncExtensions.ToArrayAsync(Of T)(IQueryable(Of T), CancellationToken)
+- uid: XData.Async.AsyncExtensions.ToArrayAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: ToArrayAsync<T>(IQueryable<T>, CancellationToken, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.Async.AsyncExtensions.ToArrayAsync.html#XData_Async_AsyncExtensions_ToArrayAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.Async.AsyncExtensions.ToArrayAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: ToArrayAsync(Of T)(IQueryable(Of T), CancellationToken, Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.Async.AsyncExtensions.ToArrayAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.Async.AsyncExtensions.ToArrayAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: AsyncExtensions.ToArrayAsync<T>(IQueryable<T>, CancellationToken, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: AsyncExtensions.ToArrayAsync(Of T)(IQueryable(Of T), CancellationToken, Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.Async.AsyncExtensions.ToDictionaryAsync*
   name: ToDictionaryAsync
   href: api/XData.Async.AsyncExtensions.ToDictionaryAsync.html
@@ -1519,15 +1663,15 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ToDictionaryAsync(Of T, TKey, TValue)(System.Linq.IQueryable(Of T), System.Func(Of T, TKey), System.Func(Of T, TValue))
   nameWithType: AsyncExtensions.ToDictionaryAsync<T, TKey, TValue>(IQueryable<T>, Func<T, TKey>, Func<T, TValue>)
   nameWithType.vb: AsyncExtensions.ToDictionaryAsync(Of T, TKey, TValue)(IQueryable(Of T), Func(Of T, TKey), Func(Of T, TValue))
-- uid: XData.Async.AsyncExtensions.ToDictionaryAsync``3(System.Linq.IQueryable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Threading.CancellationToken)
-  name: ToDictionaryAsync<T, TKey, TValue>(IQueryable<T>, Func<T, TKey>, Func<T, TValue>, CancellationToken)
-  href: api/XData.Async.AsyncExtensions.ToDictionaryAsync.html#XData_Async_AsyncExtensions_ToDictionaryAsync__3_System_Linq_IQueryable___0__System_Func___0___1__System_Func___0___2__System_Threading_CancellationToken_
-  commentId: M:XData.Async.AsyncExtensions.ToDictionaryAsync``3(System.Linq.IQueryable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Threading.CancellationToken)
-  name.vb: ToDictionaryAsync(Of T, TKey, TValue)(IQueryable(Of T), Func(Of T, TKey), Func(Of T, TValue), CancellationToken)
-  fullName: XData.Async.AsyncExtensions.ToDictionaryAsync<T, TKey, TValue>(System.Linq.IQueryable<T>, System.Func<T, TKey>, System.Func<T, TValue>, System.Threading.CancellationToken)
-  fullName.vb: XData.Async.AsyncExtensions.ToDictionaryAsync(Of T, TKey, TValue)(System.Linq.IQueryable(Of T), System.Func(Of T, TKey), System.Func(Of T, TValue), System.Threading.CancellationToken)
-  nameWithType: AsyncExtensions.ToDictionaryAsync<T, TKey, TValue>(IQueryable<T>, Func<T, TKey>, Func<T, TValue>, CancellationToken)
-  nameWithType.vb: AsyncExtensions.ToDictionaryAsync(Of T, TKey, TValue)(IQueryable(Of T), Func(Of T, TKey), Func(Of T, TValue), CancellationToken)
+- uid: XData.Async.AsyncExtensions.ToDictionaryAsync``3(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Func{``0,``1},System.Func{``0,``2})
+  name: ToDictionaryAsync<T, TKey, TValue>(IQueryable<T>, CancellationToken, Func<T, TKey>, Func<T, TValue>)
+  href: api/XData.Async.AsyncExtensions.ToDictionaryAsync.html#XData_Async_AsyncExtensions_ToDictionaryAsync__3_System_Linq_IQueryable___0__System_Threading_CancellationToken_System_Func___0___1__System_Func___0___2__
+  commentId: M:XData.Async.AsyncExtensions.ToDictionaryAsync``3(System.Linq.IQueryable{``0},System.Threading.CancellationToken,System.Func{``0,``1},System.Func{``0,``2})
+  name.vb: ToDictionaryAsync(Of T, TKey, TValue)(IQueryable(Of T), CancellationToken, Func(Of T, TKey), Func(Of T, TValue))
+  fullName: XData.Async.AsyncExtensions.ToDictionaryAsync<T, TKey, TValue>(System.Linq.IQueryable<T>, System.Threading.CancellationToken, System.Func<T, TKey>, System.Func<T, TValue>)
+  fullName.vb: XData.Async.AsyncExtensions.ToDictionaryAsync(Of T, TKey, TValue)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Func(Of T, TKey), System.Func(Of T, TValue))
+  nameWithType: AsyncExtensions.ToDictionaryAsync<T, TKey, TValue>(IQueryable<T>, CancellationToken, Func<T, TKey>, Func<T, TValue>)
+  nameWithType.vb: AsyncExtensions.ToDictionaryAsync(Of T, TKey, TValue)(IQueryable(Of T), CancellationToken, Func(Of T, TKey), Func(Of T, TValue))
 - uid: XData.Async.AsyncExtensions.ToListAsync*
   name: ToListAsync
   href: api/XData.Async.AsyncExtensions.ToListAsync.html
@@ -6593,6 +6737,15 @@ references:
   fullName.vb: XData.DataObjectExtensions.Submit(Of T)(T, ByRef T, XData.DataSubmitFlag)
   nameWithType: DataObjectExtensions.Submit<T>(T, out T, DataSubmitFlag)
   nameWithType.vb: DataObjectExtensions.Submit(Of T)(T, ByRef T, DataSubmitFlag)
+- uid: XData.DataObjectExtensions.Submit``1(``0,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},``0@,XData.DataSubmitFlag)
+  name: Submit<T>(T, Func<JsonSettings<T>, JsonSettings<T>>, out T, DataSubmitFlag)
+  href: api/XData.DataObjectExtensions.Submit.html#XData_DataObjectExtensions_Submit__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0_____0__XData_DataSubmitFlag_
+  commentId: M:XData.DataObjectExtensions.Submit``1(``0,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},``0@,XData.DataSubmitFlag)
+  name.vb: Submit(Of T)(T, Func(Of JsonSettings(Of T), JsonSettings(Of T)), ByRef T, DataSubmitFlag)
+  fullName: XData.DataObjectExtensions.Submit<T>(T, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>, out T, XData.DataSubmitFlag)
+  fullName.vb: XData.DataObjectExtensions.Submit(Of T)(T, System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)), ByRef T, XData.DataSubmitFlag)
+  nameWithType: DataObjectExtensions.Submit<T>(T, Func<JsonSettings<T>, JsonSettings<T>>, out T, DataSubmitFlag)
+  nameWithType.vb: DataObjectExtensions.Submit(Of T)(T, Func(Of JsonSettings(Of T), JsonSettings(Of T)), ByRef T, DataSubmitFlag)
 - uid: XData.DataObjectExtensions.Submit``1(``0,XData.DataSubmitFlag)
   name: Submit<T>(T, DataSubmitFlag)
   href: api/XData.DataObjectExtensions.Submit.html#XData_DataObjectExtensions_Submit__1___0_XData_DataSubmitFlag_
@@ -6614,15 +6767,15 @@ references:
   commentId: Overload:XData.DataObjectExtensions.ToArray
   fullName: XData.DataObjectExtensions.ToArray
   nameWithType: DataObjectExtensions.ToArray
-- uid: XData.DataObjectExtensions.ToArray``1(XData.IRepository{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
-  name: ToArray<T>(IRepository<T>, Expression<Func<T, Boolean>>)
-  href: api/XData.DataObjectExtensions.ToArray.html#XData_DataObjectExtensions_ToArray__1_XData_IRepository___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
-  commentId: M:XData.DataObjectExtensions.ToArray``1(XData.IRepository{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
-  name.vb: ToArray(Of T)(IRepository(Of T), Expression(Of Func(Of T, Boolean)))
-  fullName: XData.DataObjectExtensions.ToArray<T>(XData.IRepository<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>)
-  fullName.vb: XData.DataObjectExtensions.ToArray(Of T)(XData.IRepository(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)))
-  nameWithType: DataObjectExtensions.ToArray<T>(IRepository<T>, Expression<Func<T, Boolean>>)
-  nameWithType.vb: DataObjectExtensions.ToArray(Of T)(IRepository(Of T), Expression(Of Func(Of T, Boolean)))
+- uid: XData.DataObjectExtensions.ToArray``1(System.Collections.Generic.IEnumerable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name: ToArray<T>(IEnumerable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  href: api/XData.DataObjectExtensions.ToArray.html#XData_DataObjectExtensions_ToArray__1_System_Collections_Generic_IEnumerable___0__System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___
+  commentId: M:XData.DataObjectExtensions.ToArray``1(System.Collections.Generic.IEnumerable{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})
+  name.vb: ToArray(Of T)(IEnumerable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
+  fullName: XData.DataObjectExtensions.ToArray<T>(System.Collections.Generic.IEnumerable<T>, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>)
+  fullName.vb: XData.DataObjectExtensions.ToArray(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)))
+  nameWithType: DataObjectExtensions.ToArray<T>(IEnumerable<T>, Func<JsonSettings<T>, JsonSettings<T>>)
+  nameWithType.vb: DataObjectExtensions.ToArray(Of T)(IEnumerable(Of T), Func(Of JsonSettings(Of T), JsonSettings(Of T)))
 - uid: XData.DataObjectExtensions.WithJsonSettings*
   name: WithJsonSettings
   href: api/XData.DataObjectExtensions.WithJsonSettings.html

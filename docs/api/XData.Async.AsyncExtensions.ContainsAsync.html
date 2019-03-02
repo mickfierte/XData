@@ -236,13 +236,13 @@
 
 
 <a id="XData_Async_AsyncExtensions_ContainsAsync_" data-uid="XData.Async.AsyncExtensions.ContainsAsync*"></a>
-<h4 id="XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_System_Collections_Generic_IEqualityComparer___0__System_Threading_CancellationToken_" data-uid="XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},``0,System.Collections.Generic.IEqualityComparer{``0},System.Threading.CancellationToken)">ContainsAsync&lt;T&gt;(IQueryable&lt;T&gt;, T, IEqualityComparer&lt;T&gt;, CancellationToken)</h4>
+<h4 id="XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken___0_System_Collections_Generic_IEqualityComparer___0__" data-uid="XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,``0,System.Collections.Generic.IEqualityComparer{``0})">ContainsAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken, T, IEqualityComparer&lt;T&gt;)</h4>
 <div class="markdown level1 summary"><p>Asynchronous wrapper over Contains() LINQ function</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, T item, IEqualityComparer&lt;T&gt; comparer, CancellationToken token)
+  <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, T item, IEqualityComparer&lt;T&gt; comparer)
     where T : class, new()</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
@@ -262,6 +262,12 @@
 </td>
     </tr>
     <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+      <td><span class="parametername">token</span></td>
+      <td><p>Cancellation token</p>
+</td>
+    </tr>
+    <tr>
       <td><span class="xref">T</span></td>
       <td><span class="parametername">item</span></td>
       <td><p>The object to locate in the sequence.</p>
@@ -271,12 +277,6 @@
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer</a>&lt;T&gt;</td>
       <td><span class="parametername">comparer</span></td>
       <td><p>Object comparer</p>
-</td>
-    </tr>
-    <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-      <td><span class="parametername">token</span></td>
-      <td><p>Cancellation token</p>
 </td>
     </tr>
   </tbody>
@@ -384,13 +384,13 @@
 
 
 <a id="XData_Async_AsyncExtensions_ContainsAsync_" data-uid="XData.Async.AsyncExtensions.ContainsAsync*"></a>
-<h4 id="XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_System_Threading_CancellationToken_" data-uid="XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},``0,System.Threading.CancellationToken)">ContainsAsync&lt;T&gt;(IQueryable&lt;T&gt;, T, CancellationToken)</h4>
+<h4 id="XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken___0_" data-uid="XData.Async.AsyncExtensions.ContainsAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken,``0)">ContainsAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken, T)</h4>
 <div class="markdown level1 summary"><p>Asynchronous wrapper over Contains() LINQ function</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, T item, CancellationToken token)
+  <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, T item)
     where T : class, IComparable&lt;T&gt;, new()</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
@@ -410,15 +410,15 @@
 </td>
     </tr>
     <tr>
-      <td><span class="xref">T</span></td>
-      <td><span class="parametername">item</span></td>
-      <td><p>The object to locate in the sequence.</p>
-</td>
-    </tr>
-    <tr>
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
       <td><span class="parametername">token</span></td>
       <td><p>Cancellation token</p>
+</td>
+    </tr>
+    <tr>
+      <td><span class="xref">T</span></td>
+      <td><span class="parametername">item</span></td>
+      <td><p>The object to locate in the sequence.</p>
 </td>
     </tr>
   </tbody>
