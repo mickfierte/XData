@@ -77,7 +77,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="tips_custom_logic.md">
-<h2 id="execute-custom-business-logic">Execute custom business logic</h2>
+<h3 id="execute-custom-business-logic">Execute custom business logic</h3>
 
 <p>XData has many features targeting this technology as not only ORM, but a full featured Data Access Layer. This is one of this features.</p>
 <p>Custom logic defined as public property of <a class="xref" href="../api/XData.XDataLogic-1.html">XDataLogic&lt;T&gt;</a> class descendant with type of <a class="xref" href="../api/XData.CustomLogic-1.html">CustomLogic&lt;T&gt;</a>.</p>
@@ -116,7 +116,7 @@
     return random.NextDouble() &gt;= 0.5 ? null : Encoding.UTF8.GetBytes(
         $&quot;reply for \&quot;{(data == null ? null : Encoding.UTF8.GetString(data))}\&quot;&quot;);
                 })).AsEnum().ToDictionary());
-</code></pre><p>Programmer can develope data centric logic over some of mapped objects with ability to execute this logic in the middleware layer of three-tier architecture on a dedicated server (or cluster). And this code can be simple and representable debuged in two-tier environment. Architecture can be switched by configuration! No code modification, no side effects... This feature is linked with <a href="tips.html#trigger-business-logic">Trigger logic</a> and reached by <a class="xref" href="tips.html#using-business-logic-callbacks">Callbacks</a>.</p>
+</code></pre><p>Programmer can develope data centric logic over some of mapped objects with ability to execute this logic in the middleware layer of three-tier architecture on a dedicated server (or cluster). And this code can be simple and representable debuged in two-tier environment. Architecture can be switched by configuration! No code modification, no side effects... This feature is linked with <a href="trigger_logic.html">Trigger logic</a> and reached by <a href="callback.html">Callbacks</a>.</p>
 <p>When code is organized using data mapping modules, data logic modules and client (or Web site) it can help programmer to keep module relations clean and get ready to changes, with no matter of middleware layer existance. And this rules are not dictated, You can use it or not. You can write this logic anywhere You architect to do. Nothing will be breakes, exept of ability to use XData three-tier architecture. But if You realy don&#39;t need it, what is wrong?</p>
 </article>
           </div>

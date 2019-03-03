@@ -77,7 +77,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="tips_fixed.md">
-<h2 id="caching-repository-data">Caching repository data</h2>
+<h3 id="caching-repository-data">Caching repository data</h3>
 
 <p>Some data is changed often, some is rarely, but some data will never changed untill application has upgraded. To reduse requery of this static data, XData has mechanism to cache requested data (not a mapped objects) in XData. Repository property <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_FixedQuery">FixedQuery</a> can be assigned to true when caching is required. All LINQ queries will be translated to this cache without requery data from database. When this property resets to false, the cache will erased and repository returns to common algorithms of database requests. Similar feature is used to access rarely changed <a href="dictionary.html">dictionary</a> data over multiple related operative data canges.</p>
 </article>

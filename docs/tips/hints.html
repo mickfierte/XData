@@ -77,20 +77,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="tips_hints.md">
-<h2 id="sql-hints">SQL hints</h2>
+<h3 id="sql-hints">SQL hints</h3>
 
 <div class="WARNING"><h5>Warning</h5><p>Before using SQL hints, be sure to use all other query optimization features. This is a &quot;double-edged weapon.&quot; You need to understand very well why you are using what hints and how it will affect performance, and also make all the necessary tests confirming the effectiveness of the changes you made!</p>
 </div>
 <p>XData supports using SQL hints to improve SQL query productivity. All databases supports this feature using vaious mechanics and can change various parameters of SQL execution...</p>
 <p>Types of hints supported by XData for RDBMS...</p>
-<h3 id="ms-sql-server">MS SQL Server</h3>
+<h4 id="ms-sql-server">MS SQL Server</h4>
 <p><a href="https://docs.microsoft.com/en-gb/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-2017">Query hints</a>
 <a href="https://docs.microsoft.com/en-gb/sql/t-sql/queries/hints-transact-sql-table?view=sql-server-2017">Table hints</a></p>
-<h3 id="oracle">Oracle</h3>
+<h4 id="oracle">Oracle</h4>
 <p><a href="https://docs.oracle.com/cd/B10500_01/server.920/a96533/hintsref.htm">Query hints</a></p>
-<h3 id="mysql">MySql</h3>
+<h4 id="mysql">MySql</h4>
 <p><a href="https://dev.mysql.com/doc/refman/5.7/en/optimizer-hints.html">Query hints</a></p>
-<h3 id="postgresql">PostgreSQL</h3>
+<h4 id="postgresql">PostgreSQL</h4>
 <p>PostgreSQL does not support hints for queries, but <a href="https://wiki.postgresql.org/wiki/Return_more_than_one_row_of_data_from_PL/pgSQL_functions">procedures that returns <em>setof record</em></a> required declare columns definition on call (see example below). Of coase, this is not a SQL hint actually, but...</p>
 <pre><code class="lang-sql">create or replace function GetRows(text) returns setof record as
 $
@@ -106,9 +106,9 @@ $
 language &#39;plpgsql&#39;;
 
 select * from GetRows(&#39;Department&#39;) as dept(deptid int, deptname text);
-</code></pre><h3 id="sqlite">SQLite</h3>
+</code></pre><h4 id="sqlite">SQLite</h4>
 <p>SQLite does not support hints.</p>
-<h3 id="using-hints-in-static-mapping">Using hints in static mapping</h3>
+<h4 id="using-hints-in-static-mapping">Using hints in static mapping</h4>
 <p>Query hints:</p>
 <pre><code class="lang-csharp">// hint for epmty string alias is applied to query
 // possible to apply different hints on 
@@ -138,7 +138,7 @@ public class PostgreSqlTestFunction9 : IDataObject
     [Property(&quot;T&quot;, &quot;Name&quot;)]
     public string Name { get; set; }
 }
-</code></pre><h3 id="using-hints-in-dynamic-mapping-and-dynamic-queries">Using hints in dynamic mapping and dynamic queries</h3>
+</code></pre><h4 id="using-hints-in-dynamic-mapping-and-dynamic-queries">Using hints in dynamic mapping and dynamic queries</h4>
 <p>Query hints:</p>
 <pre><code class="lang-csharp">// hint for epmty string alias is applied to query
 // possible to apply different hints on 

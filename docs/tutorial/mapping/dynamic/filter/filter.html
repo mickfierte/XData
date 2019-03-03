@@ -189,7 +189,7 @@
 <pre><code class="lang-csharp">...
 , x =&gt; x.Link(&quot;DS&quot;, &quot;doc_state_id&quot;)
 ...
-</code></pre><div class="TIP"><h5>Tip</h5><p>Inner links can be used to define <a href="../../../../tips/tips.html#optional-filters">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Inner links can be used to define <a href="../../../../tips/optional.html">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
 </div>
 <h4 id="subquery-filters">Subquery filters</h4>
 <p>To define filters checks field value is correspond subquery results used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_SubqueryFilter_System_String_System_String_">SubqueryFilter</a> method of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a>.</p>
@@ -199,14 +199,14 @@
     .SetOperation(FilterOperation.In))
 .Subquery&lt;CatalogueTree&gt;(&quot;UT&quot;, x =&gt; x.CatalogueId, DataGrouping.None)                   
 ... 
-</code></pre><div class="TIP"><h5>Tip</h5><p>Subquery filters can be used to define <a href="../../../../tips/tips.html#optional-filters">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Subquery filters can be used to define <a href="../../../../tips/optional.html">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
 </div>
 <h4 id="subquery-links">Subquery links</h4>
 <p>Links with subqueries is used to link not table fields but properties of base class and subquery mapped class including <a href="../../mapping.html#hidden-properties">hidden properties</a>. To link with subquery or inner view used one of <em>SubqueryLink</em> method overload of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter.html">ISubqueryLinkAdapter</a>, <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter&lt;TDObj&gt;</a> or <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter-2.html">ISubqueryLinkAdapter&lt;T,TDObj&gt;</a> depending by outer method signature and subquery declaration specific.</p>
 <pre><code class="lang-csharp">...
 .InnerView&lt;DocBySpecType&gt;(&quot;ST&quot;, x =&gt; x.SubqueryLink(&quot;DocId&quot;))
 ...
-</code></pre><div class="TIP"><h5>Tip</h5><p>Subquery links can be used to define <a href="../../../../tips/tips.html#optional-filters">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Subquery links can be used to define <a href="../../../../tips/optional.html">optional filters</a>. To specify role in optional filter chain need to call extension method <a class="xref" href="../../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> as continuation of <em>Link</em> method call.</p>
 </div>
 </article>
           </div>

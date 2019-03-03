@@ -94,7 +94,7 @@
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static Task&lt;QueryResult&gt; ExecuteSqlBlockAsync(this IDataScope dataScope, Expression&lt;Func&lt;ISqlBlockAdapter, ISqlBlock&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)</code></pre>
+  <pre><code class="lang-csharp hljs">public static Task ExecuteSqlBlockAsync(this IDataScope dataScope, Expression&lt;Func&lt;ISqlBlockAdapter, ISqlBlock&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -113,13 +113,13 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<span class="xref">XData.Database.SqlBlock.ISqlBlockAdapter</span>, <span class="xref">XData.Database.SqlBlock.ISqlBlock</span>&gt;&gt;</td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlBlockAdapter.html">ISqlBlockAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlBlock.html">ISqlBlock</a>&gt;&gt;</td>
       <td><span class="parametername">block</span></td>
       <td><p>Sql block structure</p>
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<span class="xref">XData.Database.SqlBlock.ISqlParamAdapter</span>, <span class="xref">XData.Database.SqlBlock.ISqlParam</span>&gt;&gt;[]</td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[]</td>
       <td><span class="parametername">parameters</span></td>
       <td><p>Sql block parameters</p>
 </td>
@@ -136,7 +136,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="XData.Database.Adapter.QueryResult.html">QueryResult</a>&gt;</td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
       <td><p>Asynchronous wrapper over SQL block execution</p>
 </td>
     </tr>
@@ -151,7 +151,7 @@
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public static Task&lt;QueryResult&gt; ExecuteSqlBlockAsync(this IDataScope dataScope, CancellationToken token, Expression&lt;Func&lt;ISqlBlockAdapter, ISqlBlock&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)</code></pre>
+  <pre><code class="lang-csharp hljs">public static Task ExecuteSqlBlockAsync(this IDataScope dataScope, CancellationToken token, Expression&lt;Func&lt;ISqlBlockAdapter, ISqlBlock&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -176,13 +176,13 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<span class="xref">XData.Database.SqlBlock.ISqlBlockAdapter</span>, <span class="xref">XData.Database.SqlBlock.ISqlBlock</span>&gt;&gt;</td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlBlockAdapter.html">ISqlBlockAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlBlock.html">ISqlBlock</a>&gt;&gt;</td>
       <td><span class="parametername">block</span></td>
       <td><p>Sql block structure</p>
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<span class="xref">XData.Database.SqlBlock.ISqlParamAdapter</span>, <span class="xref">XData.Database.SqlBlock.ISqlParam</span>&gt;&gt;[]</td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[]</td>
       <td><span class="parametername">parameters</span></td>
       <td><p>Sql block parameters</p>
 </td>
@@ -199,7 +199,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="XData.Database.Adapter.QueryResult.html">QueryResult</a>&gt;</td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
       <td><p>Asynchronous wrapper over SQL block execution</p>
 </td>
     </tr>

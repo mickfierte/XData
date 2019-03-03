@@ -141,8 +141,8 @@
 <ul>
 <li><strong>UseOnInsert</strong> - use default value on insert (by default, always applied)</li>
 <li><strong>UseOnUpdate</strong> - use default value on update</li>
-<li><strong>SkipWhenAssigned</strong> - skip insert into table when PK value assigned explicitly (see <a href="../tips/tips.html#default-value-features">here</a> for details)</li>
-<li><strong>UpdateWhenAssigned</strong> - change insert operation over table to update when PK value assigned explicitly (see <a href="../tips/tips.html#default-value-features">here</a> for details)
+<li><strong>SkipWhenAssigned</strong> - skip insert into table when PK value assigned explicitly (see <a href="../tips/default_features.html">here</a> for details)</li>
+<li><strong>UpdateWhenAssigned</strong> - change insert operation over table to update when PK value assigned explicitly (see <a href="../tips/default_features.html">here</a> for details)
 Default features can be combined. For example: </li>
 </ul>
 <pre><code class="lang-csharp">DefaultFeature.UseOnUpdate | DefaultFeature.SkipWhenAssigned
@@ -155,7 +155,7 @@ Default features can be combined. For example: </li>
 <h3 id="property-data-source">Property data source</h3>
 <p>Table field, view field, SQL procedure (or function) parameter or SQL expression mapped to <a href="#data-object">data object</a> property value.</p>
 <h3 id="virtual-table">Virtual table</h3>
-<p>Various RDBMS has mechanics to select the data without specifying real source (&quot;dual&quot; table in ORACLE, omit &quot;from&quot; section in MsSqlServer and so on). Virtual data table is recommended for use as source of <a href="../tips/tips.html#business-logic-calculated-fields">calclated fields</a>, <a href="mapping/static/property/property.html#sql-expression-property">SQL expressions</a>, when <a href="../tips/tips.html#virtual-data-and-attached-handlers">virtual data</a> processing is required. Virtual table is not described in mapping. To set virtual data source as source of property set data source alias as empty string.</p>
+<p>Various RDBMS has mechanics to select the data without specifying real source (&quot;dual&quot; table in ORACLE, omit &quot;from&quot; section in MsSqlServer and so on). Virtual data table is recommended for use as source of <a href="../tips/calculated.html">calclated fields</a>, <a href="mapping/static/property/property.html#sql-expression-property">SQL expressions</a>, when <a href="../tips/attached.html">virtual data</a> processing is required. Virtual table is not described in mapping. To set virtual data source as source of property set data source alias as empty string.</p>
 <h3 id="filter-group">Filter group</h3>
 <p>Named group of filters (or submittal filter groups) linked with the same logical operator (<strong>AND</strong> or <strong>OR</strong>). Root filter group named as empty string and have an <strong>AND</strong> logical operator. Root filter group can be omited in mapping description. All filters without explicit group specification is assigned to root filter group. Filter group names must to be unique named within dataobject mapping description.</p>
 <h3 id="filter-null-processing-behaviour">Filter null processing behaviour</h3>

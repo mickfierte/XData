@@ -77,7 +77,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="tips_optional.md">
-<h2 id="optional-filters">Optional filters</h2>
+<h3 id="optional-filters">Optional filters</h3>
 
 <p>Optional filters is the mechanic to simplify query structure when some filters are not set. For example, we can map data structure to some class and to alow filter objects over some property of dictionary linked to main data structure. When filter applied this link to dictionary table is used, but when not we ineffectively rize query complexity.</p>
 <p>To avoid unplanned query complexity XData has <em>optional filter</em> feature. Some filters marked as <em>primary</em> - when this filter has value, query has full form. When filter value has cleared or set to null, data source of filtered field (table or view) will be skiped when SQL query composed. When data source has been skipped then links between already skipped and other data sources are analized. And when found link marked as <em>primary</em> linked data source will also skipped. When <a href="../tutorial/glossary.html#base-table">base table</a> of subquery has been skipped - all subquery will be skipped and subquery links analizis for <em>primary</em> links will be provided over outer query. Until no <em>primary</em> filters found.</p>

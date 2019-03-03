@@ -88,7 +88,7 @@
 <ul>
 <li>extract mapped classes in separated assembly (or assemblies) called &quot;data modules&quot;</li>
 <li>extract server data logic in separated assembly (or assemblies) called &quot;server modules&quot;</li>
-<li>in server modules create logic classes for some <a href="glossary.html#data-object">data objects</a> extend abstract class <a class="xref" href="../api/XData.XDataLogic-1.html">XDataLogic&lt;T&gt;</a>, where T - data object class type that uses server logic including <a href="../tips/tips.html#trigger-business-logic">trigger logic</a> and call server logic from client code. </li>
+<li>in server modules create logic classes for some <a href="glossary.html#data-object">data objects</a> extend abstract class <a class="xref" href="../api/XData.XDataLogic-1.html">XDataLogic&lt;T&gt;</a>, where T - data object class type that uses server logic including <a href="../tips/trigger_logic.html">trigger logic</a> and call server logic from client code. </li>
 </ul>
 <pre><code class="lang-csharp">public abstract class InvoiceLogic : XDataLogic&lt;Invoice&gt;
 {
@@ -157,7 +157,7 @@
 </ul>
 <pre><code class="lang-csharp">public static CustomLogic&lt;Invoice&gt; TestCustomLogic;
 </code></pre><ul>
-<li>write <a href="../tips/tips.html#execute-custom-business-logic">custom logic</a> calls from client modules</li>
+<li>write <a href="../tips/custom_logic.html">custom logic</a> calls from client modules</li>
 </ul>
 <pre><code class="lang-csharp">var random = new Random();
 return dataScope.GetRepository&lt;Invoice&gt;().ToArray().Execute(

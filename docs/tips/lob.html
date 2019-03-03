@@ -77,7 +77,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="tips_lob.md">
-<h2 id="large-object-loading">Large object loading</h2>
+<h3 id="large-object-loading">Large object loading</h3>
 
 <p>Large objects specific properties <a class="xref" href="../api/XData.Mapping.Lob.html">Lob</a> and <a class="xref" href="../api/XData.Mapping.Xml.html">Xml</a> specialy used to lazy access to potetialy big sized data stored in database.</p>
 <p>When <a href="../tutorial/glossary.html#data-object">data object</a> accessed using XData, large objects data not queried, but replaced with null values to create full structure of object. </p>
@@ -90,7 +90,7 @@ obj.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString());
         z =&gt; z.DocState += dataScope.GetDictionaryValue&lt;DocState&gt;(x =&gt; x.Code == newStateCode),
         z =&gt; z.Source.Modify(doc =&gt; doc.Element(&quot;invoice&quot;).Attribute(&quot;state&quot;).Value = newStateCode))
     .Submit();
-</code></pre><div class="WARNING"><h5>Warning</h5><p>When object is <a href="tips.html#json-serialization">serialized</a> large objects properties are serialized with null values by default! When actual value of large object is required it must to be requested separatly. To fill object large properties before serialization can be used one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> or <a href="">LoadLobAsync</a> helper method overloads.</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>When object is <a href="json.html">serialized</a> large objects properties are serialized with null values by default! When actual value of large object is required it must to be requested separatly. To fill object large properties before serialization can be used one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> or <a href="">LoadLobAsync</a> helper method overloads.</p>
 </div>
 </article>
           </div>

@@ -77,13 +77,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="tips_json.md">
-<h2 id="json-serialization">JSON serialization</h2>
+<h3 id="json-serialization">JSON serialization</h3>
 
 <p>When used <a href="https://www.newtonsoft.com/json">Json.NET</a> XData <a href="">data objects</a> are serialized and deserialized automaticaly. </p>
 <p>There are some serialization specifics of data objects:</p>
 <ul>
 <li>By default <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> are serialized and deserialized as well as writable properties, but have a some restrictions when copyed to object to apply into database (see <em>Apply</em> method description below).</li>
-<li><a href="tips.html#large-object-loading">Large objects</a> are serialized to null value by default. They are designed for lazy data loading. To serialize data with actual values one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> helper method overloads can be used.</li>
+<li><a href="lob.html">Large objects</a>) are serialized to null value by default. They are designed for lazy data loading. To serialize data with actual values one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> helper method overloads can be used.</li>
 <li>By default <a href="../tutorial/mapping/mapping.html#link-properties">Links</a> are serialized as limited representation of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Source">link source</a> object. Only properties listed as <a href="../tutorial/mapping/dynamic/dynamic.html#links">LinkProperties</a> are included in serialized object. Additinaly an <em>&quot;linkPropertyName.Value&quot;</em> JSON property is serialized with the value of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Value">Link.Value</a> property.</li>
 </ul>
 <p>Default serialization rules can be overrided with <em>ICollection&lt;T&gt;</em> and <em>T</em> <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_WithJsonSettings__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___">WithJsonSettings</a> extension methods.</p>
