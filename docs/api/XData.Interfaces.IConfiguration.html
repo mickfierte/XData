@@ -113,8 +113,8 @@
       &lt;connectionStrings>
         &lt;add name=&quot;TEST&quot; connectionString=&quot;Data Source=(local);Initial Catalog=XDataTest;User Id=test;Password=test&quot; />
       &lt;/connectionStrings>
-      &lt;!-- *** xdata section (see XDataConfiguration.DefaultContext, XDataConfiguration.AssemblyPath, XDataConfiguration.WriteDebugInfo, XDataConfiguration.LogWriter documentation) -->
-      &lt;xdata default=&quot;TEST&quot; assemblyPath=&quot;.\&quot; debug=&quot;false&quot; log=&quot;XData.Logging.Trace.TraceWriter, XData.Logging.Trace&quot;>
+      &lt;!-- *** xdata section (see XDataConfiguration.DefaultContext, XDataConfiguration.LogWriter documentation) -->
+      &lt;xdata default=&quot;TEST&quot; log=&quot;XData.Logging.Trace.TraceWriter, XData.Logging.Trace&quot;>
         &lt;!-- *** Specific SQL data access adapter required using direct database access  (see XDataConfiguration.Adapters documentation) -->
         &lt;adapter name=&quot;MSSQL&quot; file=&quot;C:\Projects\Net40\XData\_Debug\XMsSqlAdapter.dll&quot;/>
         &lt;!-- *** Specific SQL dialect adapter  (see XDataConfiguration.Dialects documentation) -->
@@ -201,13 +201,6 @@
         <td class="markdown level1 summary"><p>Security context name</p>
 </td>
       </tr>
-      <tr>
-        <td id="XData_Interfaces_IConfiguration_WriteDebugInfo" data-uid="XData.Interfaces.IConfiguration.WriteDebugInfo">
-          <a class="xref" href="XData.Interfaces.IConfiguration.WriteDebugInfo.html#XData_Interfaces_IConfiguration_WriteDebugInfo">WriteDebugInfo</a>
-        </td>
-        <td class="markdown level1 summary"><p>Write debug info</p>
-</td>
-      </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
@@ -254,7 +247,6 @@
       <div><a class="xref" href="XData.Interfaces.IConfiguration.Contexts.html#XData_Interfaces_IConfiguration_Contexts">Contexts</a></div>
       <div><a class="xref" href="XData.Interfaces.IConfiguration.ProxyList.html#XData_Interfaces_IConfiguration_ProxyList">ProxyList</a></div>
       <div><a class="xref" href="XData.Interfaces.IConfiguration.DefaultContext.html#XData_Interfaces_IConfiguration_DefaultContext">DefaultContext</a></div>
-      <div><a class="xref" href="XData.Interfaces.IConfiguration.WriteDebugInfo.html#XData_Interfaces_IConfiguration_WriteDebugInfo">WriteDebugInfo</a></div>
       <div><a class="xref" href="XData.Interfaces.IConfiguration.LogWriter.html#XData_Interfaces_IConfiguration_LogWriter">LogWriter</a></div>
   </div>
 </article>

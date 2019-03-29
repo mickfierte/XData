@@ -114,9 +114,9 @@ using(var serviceProvider = new ServiceCollection()
     .AddXData()
     .BuildServiceProvider())
 {
-    //Configure logging
+    //Configure logging (logger messages minimal allowed levels can be set using config file)
     serviceProvider.GetRequiredService&lt;ILoggerFactory&gt;()
-        .AddConsole(LogLevel.Warning).AddDebug();
+        .AddConsole(LogLevel.Warning).AddDebug(LogLevel.Debug);
 
     var dataEngine = serviceProvider.GetRequiredService&lt;IDataEngine&gt;();
 

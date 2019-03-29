@@ -88,13 +88,13 @@
 
 
 <a id="XData_Database_Adapter_Query__ctor_" data-uid="XData.Database.Adapter.Query.#ctor*"></a>
-<h4 id="XData_Database_Adapter_Query__ctor_System_String_System_Data_CommandType_XData_Database_Adapter_QueryParam___" data-uid="XData.Database.Adapter.Query.#ctor(System.String,System.Data.CommandType,XData.Database.Adapter.QueryParam[])">Query(String, CommandType, QueryParam[])</h4>
+<h4 id="XData_Database_Adapter_Query__ctor_System_String_CommandType_XData_Database_Adapter_QueryParam___" data-uid="XData.Database.Adapter.Query.#ctor(System.String,CommandType,XData.Database.Adapter.QueryParam[])">Query(String, CommandType, QueryParam[])</h4>
 <div class="markdown level1 summary"><p>Query constructor</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">public Query(string sql, CommandType type = CommandType.Text, params QueryParam[] par)</code></pre>
+  <pre><code class="lang-csharp hljs">public Query(string sql, CommandType type = null, params QueryParam[] par)</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -113,7 +113,7 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.commandtype">CommandType</a></td>
+      <td><span class="xref">CommandType</span></td>
       <td><span class="parametername">type</span></td>
       <td><p>Command type</p>
 </td>

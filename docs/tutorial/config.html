@@ -89,8 +89,7 @@
 <p>.Net Standard 2.0:</p>
 <p>XData can be dynamically configured when defining XData service (see <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a>) in ServiceCollection using optional parameter <em>options</em> in LINQ style.</p>
 <pre><code class="lang-csharp">    .AddSingleton(typeof(IConfigurationRoot), x =&gt; null)
-    .AddXData(x =&gt; x.SetWriteDebugInfo(true)
-        .AddDialect(&quot;postgresql&quot;, XDataAdapter.PostgreSql.Dialect)
+    .AddXData(x =&gt; x.AddDialect(&quot;postgresql&quot;, XDataAdapter.PostgreSql.Dialect)
         .AddAdapter(&quot;postgresql&quot;, XDataAdapter.PostgreSql.Adapter)
         .AddContext(&quot;test&quot;, &quot;postgresql&quot;, &quot;postgresql&quot;, 
 &quot;Server=localhost;Database=XDataTest;User Id=postgres;Password=123456&quot;, true))
@@ -101,10 +100,10 @@
 <p>XData can be dynamically configured when acquiring XData engine <em>XDataManager.InitXData</em> using optional parameter <em>options</em> in LINQ style.</p>
 <div class="WARNING"><h5>Warning</h5><p>Signature of XDataManager.InitXData method is slightly different for .Net 4.0 version! See <a href="versions.html">versions comparision</a> for details.</p>
 </div>
-<pre><code class="lang-csharp">    var dataEngine = XDataManager.InitXData(x =&gt; x.SetWriteDebugInfo(true)
-        .AddDialect(&quot;postgresql&quot;, XData.PostgreSql.Dialect)
-        .AddAdapter(&quot;postgresql&quot;, XData.PostgreSql.Adapters)
-        .AddContext(&quot;test&quot;, &quot;postgresql&quot;, &quot;postgresql&quot;, 
+<pre><code class="lang-csharp">    var dataEngine = XDataManager.InitXData(x =&gt; 
+        x.AddDialect(&quot;postgresql&quot;, XData.PostgreSql.Dialect)
+            .AddAdapter(&quot;postgresql&quot;, XData.PostgreSql.Adapters)
+            .AddContext(&quot;test&quot;, &quot;postgresql&quot;, &quot;postgresql&quot;, 
 &quot;Server=localhost;Database=XDataTest;User Id=postgres;Password=123456&quot;, true));
     //or using configuration file
     var dataEngine = XDataManager.InitXData(x =&gt; x.UseConfiguration(
@@ -139,7 +138,7 @@
   &lt;dialect name=&quot;ORACLE&quot; assembly=&quot;XOracleDialect&quot;/&gt;
   &lt;context name=&quot;TEST_ORACLE_ODP&quot; adapter=&quot;ORACLE_ODP&quot; dialect=&quot;ORACLE&quot; sequence=&quot;XDataObjectTest.MySequenceRule, XDataObjectTest&quot; concurrencyError=&quot;-20001&quot;/&gt;
 &lt;/xdata&gt;  
-</code></pre><p>The <em>xdata</em> section required to contain attribute <em>default</em> with <a href="glossary.html#context">context</a> name used by default. Attribure <em>debug</em> is optional, by default debug mode switched off (debug = <em>false</em>). Attribute <em>log</em> optional, used for .Net 4.0 version only (.Net Standard 2.0 version used <a href="https://www.nuget.org/packages/Microsoft.Extensions.Logging.Abstractions/">Microsoft.Extensions.Logging</a> service). Log attribute value is assembly qualified type name for <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> realization (see <a href="../index.html#plugins">available</a> log plugins or implement any You want log system adapter).</p>
+</code></pre><p>The <em>xdata</em> section required to contain attribute <em>default</em> with <a href="glossary.html#context">context</a> name used by default. Attribute <em>log</em> optional, used for .Net 4.0 version only (.Net Standard 2.0 version used <a href="https://www.nuget.org/packages/Microsoft.Extensions.Logging.Abstractions/">Microsoft.Extensions.Logging</a> service). Log attribute value is assembly qualified type name for <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> realization (see <a href="../index.html#plugins">available</a> log plugins or implement any You want log system adapter). Log messages minimal severity level filters can be configured using native tools and abilities provided with chosen log subsystem.</p>
 <p>Inside xdata section for each of <a href="glossary.html#context">context</a> required elements:</p>
 <ul>
 <li><strong>dialect</strong> (required always, can be shared between multiple contexts) - register an unique alias to specific RDBMS SQL dialect support. Attribute <em>name</em> contains an alias of dialect. Attribute <em>assembly</em> - assembly name of specific dialect plugin. When plugin implementation support additional configuration settings, element <em>dialect</em> may have an specifically organized internal structure described in plugin readme file.</li>

@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Projects/XData/doc",
+  "source_base_path": "C:/GitHub/private/doc",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -418,7 +418,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Async.AsyncExtensions.FillTableAsync.html",
-          "hash": "o22Tk1uPJ7s5EIwKTGOQ7A=="
+          "hash": "uAFpXCVvD5b5QHoPeiZGrQ=="
         }
       },
       "is_incremental": false,
@@ -514,7 +514,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Async.AsyncExtensions.html",
-          "hash": "tDL9/Wu03o3zvlIPcdz1yg=="
+          "hash": "LjNeUhQ2AK2LOwqYITVk0g=="
         }
       },
       "is_incremental": false,
@@ -765,6 +765,210 @@
       "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
       "output": {
         ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.Apply.html",
+          "hash": "JycwRN4rbK+uYrFb+M3ctw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.Copy.html",
+          "hash": "do783FlwqRy8ycA0Q7LEuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.Find.html",
+          "hash": "g6+Fpa4kGy2I4uDl2cbU3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.LoadLob.html",
+          "hash": "JQb2xPc3F2aPaWKEGVYwXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.WithJsonSettings.html",
+          "hash": "1T3mtBUuFoa+e0Xa+Jp8fA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.GetParameter.html",
+          "hash": "iT4nWi/tNOPc5idHb69jWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.GetResultSet.html",
+          "hash": "Y8c8fBo/6SQTU6VaWHKxnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.SetFilterValue.html",
+          "hash": "pd13TB+vBo0tsQ55p7F88w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.FindMemberExpression.html",
+          "hash": "kE2eHDh9hJ8LS4bsSD0ryw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.GetRepository.html",
+          "hash": "OnFVJzqZq5w0+uamFtMeaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.SetVar.html",
+          "hash": "Uvv1dje7J4Nqx7ugDwQsaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.SetAttachedHandlers.html",
+          "hash": "JfvlIDDKAN4k1WEZhIDEvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.IsAttached.html",
+          "hash": "QlPj8fCIquhCR8zZKS0Lpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.GetState.html",
+          "hash": "dPZXhnklICFinO2WZc6brg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.CheckState.html",
+          "hash": "SdIcZNcmZho2g/zLT5zTgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.SetDeleted.html",
+          "hash": "ZTf7xnMSiVROEg67Wmzyhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataObjectExtensions.html",
+          "hash": "zUWBH+eplOpYsP78QZIKFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/XData.DataObjectExtensions.Refresh.html",
           "hash": "N+YGK1FtCrcAJk8xa8HX3w=="
         }
@@ -1002,210 +1206,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.Apply.html",
-          "hash": "JycwRN4rbK+uYrFb+M3ctw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.Copy.html",
-          "hash": "do783FlwqRy8ycA0Q7LEuw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.Find.html",
-          "hash": "g6+Fpa4kGy2I4uDl2cbU3g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.LoadLob.html",
-          "hash": "JQb2xPc3F2aPaWKEGVYwXA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.WithJsonSettings.html",
-          "hash": "1T3mtBUuFoa+e0Xa+Jp8fA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.GetParameter.html",
-          "hash": "iT4nWi/tNOPc5idHb69jWg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.GetResultSet.html",
-          "hash": "Y8c8fBo/6SQTU6VaWHKxnA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.SetFilterValue.html",
-          "hash": "pd13TB+vBo0tsQ55p7F88w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.FindMemberExpression.html",
-          "hash": "kE2eHDh9hJ8LS4bsSD0ryw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.GetRepository.html",
-          "hash": "OnFVJzqZq5w0+uamFtMeaA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.SetVar.html",
-          "hash": "Uvv1dje7J4Nqx7ugDwQsaQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.SetAttachedHandlers.html",
-          "hash": "JfvlIDDKAN4k1WEZhIDEvg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.IsAttached.html",
-          "hash": "QlPj8fCIquhCR8zZKS0Lpg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.GetState.html",
-          "hash": "dPZXhnklICFinO2WZc6brg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.CheckState.html",
-          "hash": "SdIcZNcmZho2g/zLT5zTgQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.SetDeleted.html",
-          "hash": "ZTf7xnMSiVROEg67Wmzyhg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataObjectExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataObjectExtensions.html",
-          "hash": "zUWBH+eplOpYsP78QZIKFQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/XData.DataObjectState.yml",
       "output": {
         ".html": {
@@ -1294,7 +1294,43 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.DataQueryState.html",
-          "hash": "kEBYoQmZuPHyjq/KCSDpFA=="
+          "hash": "y1cDny2+Vn3n1s/LF+0raw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.DataStructureState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.DataStructureState.IsReadOnly.html",
+          "hash": "BwOtDn4QYMRICId0JrK2rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.DataStructureState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.DataStructureState.Equals.html",
+          "hash": "iQOLPjdEjcwoyyAtTKzIZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.DataStructureState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.DataStructureState.html",
+          "hash": "A3C35CTD3eB+WLs59AVq9g=="
         }
       },
       "is_incremental": false,
@@ -1494,42 +1530,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataSource.Structure.DataStructureState.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataSource.Structure.DataStructureState.IsReadOnly.html",
-          "hash": "BwOtDn4QYMRICId0JrK2rA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataSource.Structure.DataStructureState.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataSource.Structure.DataStructureState.Equals.html",
-          "hash": "iQOLPjdEjcwoyyAtTKzIZA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataSource.Structure.DataStructureState.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataSource.Structure.DataStructureState.html",
-          "hash": "d7bvIQnqd7ciK0RX8+d/gA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/XData.DataSource.Structure.Field.yml",
       "output": {
         ".html": {
@@ -1582,7 +1582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.Field.SqlType.html",
-          "hash": "p5OAx0lfi2r6VBfTGjWzUQ=="
+          "hash": "GBeLoxs0PDBc2sPol3xNNw=="
         }
       },
       "is_incremental": false,
@@ -1810,7 +1810,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.Field.Clone.html",
-          "hash": "FdqCKlGPRaqp+rJ6yNQOoQ=="
+          "hash": "XgGtijji/iyE4dpmZDoKTg=="
         }
       },
       "is_incremental": false,
@@ -1822,7 +1822,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.Field.html",
-          "hash": "ODeBmbm6IhjAMQaLErIgkg=="
+          "hash": "YIg6znslqwQk9lRe/2kAqQ=="
         }
       },
       "is_incremental": false,
@@ -1882,7 +1882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.FilterCombinationState.html",
-          "hash": "rY9ZZenRbc1uMtxss3tGlg=="
+          "hash": "Oq/ekaCN5FZ6MCJzYX2Nug=="
         }
       },
       "is_incremental": false,
@@ -1930,7 +1930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.FilterState.Clone.html",
-          "hash": "kXRJ8uNICfycbNpwpCSSVA=="
+          "hash": "LNSEsTypL1WFohEUv2KEdQ=="
         }
       },
       "is_incremental": false,
@@ -2266,7 +2266,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.FilterState.html",
-          "hash": "2HIxqHPhdFUqCul6nfvPAw=="
+          "hash": "r6HRBc4uTWNHixoRRtnNsg=="
         }
       },
       "is_incremental": false,
@@ -2350,7 +2350,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.Grouping.html",
-          "hash": "zZEGmIWDif5iaPQWlQkdXQ=="
+          "hash": "RRqMVJlMXhwBmtZAClrvtQ=="
         }
       },
       "is_incremental": false,
@@ -2470,7 +2470,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IConstantFilter.html",
-          "hash": "mOxJlng15Di+78W/qqa9Ew=="
+          "hash": "KqEbGvK7KV6t3Rmxu3jP9A=="
         }
       },
       "is_incremental": false,
@@ -2542,7 +2542,55 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IDataSource.html",
-          "hash": "RXAuqfdNXUM4bRQSJPsEiQ=="
+          "hash": "SpZcw7vPpJoYxWVzfuWeEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IDataStructure.IsOuterJoined.html",
+          "hash": "CortI4/hsRwk0b0Af6cakg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IDataStructure.GetParent.html",
+          "hash": "uWn4ObGjqMwU8cwOGdf8NA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IDataStructure.Hint.html",
+          "hash": "j94WZvRKjpMR+cx242dp7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IDataStructure.html",
+          "hash": "y/RBGpzxuJR+KKoSsSWnBA=="
         }
       },
       "is_incremental": false,
@@ -2862,54 +2910,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataSource.Structure.IDataStructure.IsOuterJoined.html",
-          "hash": "CortI4/hsRwk0b0Af6cakg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataSource.Structure.IDataStructure.GetParent.html",
-          "hash": "uWn4ObGjqMwU8cwOGdf8NA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataSource.Structure.IDataStructure.Hint.html",
-          "hash": "j94WZvRKjpMR+cx242dp7A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataSource.Structure.IDataStructure.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataSource.Structure.IDataStructure.html",
-          "hash": "y/RBGpzxuJR+KKoSsSWnBA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/XData.DataSource.Structure.IDictionaryFilter.yml",
       "output": {
         ".html": {
@@ -2974,7 +2974,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IDictionaryFilter.html",
-          "hash": "h8d/ENcn1bp2e/CMkuExUA=="
+          "hash": "amV3Y1DNOQlBLua9qDh48g=="
         }
       },
       "is_incremental": false,
@@ -3010,7 +3010,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IExpressionFilter.html",
-          "hash": "qplTOq9rjv0FQiAG0t8EkA=="
+          "hash": "qbPZyGsOWmzwvB306szcbA=="
         }
       },
       "is_incremental": false,
@@ -3166,7 +3166,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IExternalLink.html",
-          "hash": "jGa9OLxOZzxiKiikMWIJ3w=="
+          "hash": "ZlKFu06MPFt6xu658Jztgw=="
         }
       },
       "is_incremental": false,
@@ -3226,7 +3226,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IField.SqlType.html",
-          "hash": "akLFvhYdy2j0lj/aLyCrUg=="
+          "hash": "Aud+w9t7qj/yLTFxPcHPZQ=="
         }
       },
       "is_incremental": false,
@@ -3406,7 +3406,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IField.html",
-          "hash": "1S4Xwoh9k1zKx4/REbyxhw=="
+          "hash": "4u1gJpwuKgSMhopIFfS1tw=="
         }
       },
       "is_incremental": false,
@@ -3466,19 +3466,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IFilter.html",
-          "hash": "Xv2NpmJTvEU7qA7QJYgzgg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.DataSource.Structure.IFilterCombination.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.DataSource.Structure.IFilterCombination.Name.html",
-          "hash": "KxkOivCxAYDYc056wd/xAw=="
+          "hash": "HtnPNZEMzlRMEn7OxdFdJA=="
         }
       },
       "is_incremental": false,
@@ -3562,7 +3550,19 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IFilterCombination.html",
-          "hash": "U6WMSLPo6jRDDc4CoyHu3Q=="
+          "hash": "K28BpO14NRLiTK/Yu+puKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.DataSource.Structure.IFilterCombination.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.DataSource.Structure.IFilterCombination.Name.html",
+          "hash": "KxkOivCxAYDYc056wd/xAw=="
         }
       },
       "is_incremental": false,
@@ -3622,7 +3622,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IInnerLink.html",
-          "hash": "QhtDF3Fo6InlA2gwaIDp4Q=="
+          "hash": "vI+3r3i9GMFs2DfuY7ssyQ=="
         }
       },
       "is_incremental": false,
@@ -3646,7 +3646,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IInnerViewLink.html",
-          "hash": "ReCNc3TIZ+y9LMNZYtAHZA=="
+          "hash": "GXIWKEpHwUemr7ytA6ctmA=="
         }
       },
       "is_incremental": false,
@@ -3670,7 +3670,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.INamedFilter.html",
-          "hash": "bgqsff/J/duViy2s27Deow=="
+          "hash": "YGS9cVQOOL7g6GkOEruWfA=="
         }
       },
       "is_incremental": false,
@@ -3694,7 +3694,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IOptionalFilter.html",
-          "hash": "P7PR1UZVF69YmyJGE9lp9w=="
+          "hash": "VFANBws1wpgqV+Xo/KjHJQ=="
         }
       },
       "is_incremental": false,
@@ -3778,7 +3778,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IProcedure.html",
-          "hash": "llrGlnG4t//hHfMGNnTpuA=="
+          "hash": "g+37TsjPzfBq/X/G5LnBSQ=="
         }
       },
       "is_incremental": false,
@@ -3802,7 +3802,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IRangeFilter.html",
-          "hash": "4NEl/bS7ZuVbzpyjMmJxRA=="
+          "hash": "2QWu8mHWPLNX7CmG2JmJVQ=="
         }
       },
       "is_incremental": false,
@@ -3838,7 +3838,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IRuntimeFilter.html",
-          "hash": "kb+YDlceo0oIpQbd7QZeuw=="
+          "hash": "ZYUrDFVhowkPm81Q/xhRpQ=="
         }
       },
       "is_incremental": false,
@@ -3898,7 +3898,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.ISqlPart.html",
-          "hash": "iFDTQfZnMv5gl+8M23UbCw=="
+          "hash": "Yf2ilj6UBX7wkddO0zsJkA=="
         }
       },
       "is_incremental": false,
@@ -3922,7 +3922,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.ISubqueryFilter.html",
-          "hash": "zlb/IKGRBRp4B6O1HLGL/w=="
+          "hash": "ua9BKj4U2pAvcETKKefPWw=="
         }
       },
       "is_incremental": false,
@@ -3946,7 +3946,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.ISubqueryLink.html",
-          "hash": "uNk/zodKHZLzPrJVzVoeEw=="
+          "hash": "lssmM/TC5I/Ypye0PYiYug=="
         }
       },
       "is_incremental": false,
@@ -3994,7 +3994,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.ITable.html",
-          "hash": "2lFWXrrJJXJiNoczh6KU1w=="
+          "hash": "qno6bN8Y0SGCmZHwBvX3NA=="
         }
       },
       "is_incremental": false,
@@ -4030,7 +4030,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.ITableLike.html",
-          "hash": "V7Ej9pTrajspmP7D1PGU5A=="
+          "hash": "7o1UCSojrryA6cax5pjMZw=="
         }
       },
       "is_incremental": false,
@@ -4042,7 +4042,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.ITempTable.html",
-          "hash": "prI1r1sSN7dsAb3J7+Vayw=="
+          "hash": "3ZLlX2CoWQLk5wzg+hFvog=="
         }
       },
       "is_incremental": false,
@@ -4066,7 +4066,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.IXmlSource.html",
-          "hash": "/G85pmGzVMUPJykrU0RKEg=="
+          "hash": "rddgbfLI1kfvX/ax4u77xw=="
         }
       },
       "is_incremental": false,
@@ -4138,7 +4138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.Order.html",
-          "hash": "LTDlqjbvJ1ZxRnkbQYRRNQ=="
+          "hash": "7eCKuUL3ziLXW9dtFASlUQ=="
         }
       },
       "is_incremental": false,
@@ -4234,7 +4234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.RepositoryState.html",
-          "hash": "x2HqCcEBzpiu5995Nj5Iyw=="
+          "hash": "9wqIc4CUt9V9KgTYx7Elcw=="
         }
       },
       "is_incremental": false,
@@ -4450,7 +4450,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.DataSource.Structure.TaggedValue.html",
-          "hash": "E4LLkqYfxUy3qq0cELByOQ=="
+          "hash": "hvic98poXbR74pnjpfmdJg=="
         }
       },
       "is_incremental": false,
@@ -4533,6 +4533,18 @@
       "source_relative_path": "obj/api/XData.Database.Adapter.BaseDatabaseAdapter-2.yml",
       "output": {
         ".html": {
+          "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.Initialized.html",
+          "hash": "bUmh3FHSe/l1UZTw8aY0RA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.BaseDatabaseAdapter-2.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.DialectAdapter.html",
           "hash": "rmiVkSZyzqlTpcLBYBKv0A=="
         }
@@ -4570,7 +4582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.GetConnection.html",
-          "hash": "lzLR4vXzTfUP28I67fZizg=="
+          "hash": "nJ3uYLLMptCM5GAkz23Dig=="
         }
       },
       "is_incremental": false,
@@ -4582,7 +4594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.InitConnection.html",
-          "hash": "UWmlso3CWANWa4s8dYN7Sg=="
+          "hash": "SYzNaHXXre2sy9SDsaQO6w=="
         }
       },
       "is_incremental": false,
@@ -4594,7 +4606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.CreateCommand.html",
-          "hash": "FANDgz4TkHK6SzZ5xiPhbQ=="
+          "hash": "rCUxRq1iZjrU/4nNJtW+oQ=="
         }
       },
       "is_incremental": false,
@@ -4606,7 +4618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.GetProcedureCall.html",
-          "hash": "mxVpCxs+K0y5gPUXroSPjw=="
+          "hash": "q/qlqZ+VlCUmiGAwIqTsiQ=="
         }
       },
       "is_incremental": false,
@@ -4714,7 +4726,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.FillTable.html",
-          "hash": "SHm1IUBswe48kJTT4QrOOw=="
+          "hash": "F2DjP6zqQVLLCgfTHs70Ug=="
         }
       },
       "is_incremental": false,
@@ -4822,7 +4834,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.GetUtdParameter.html",
-          "hash": "1AyHUC0tJusmzJDH/ljPbg=="
+          "hash": "9HIYR7zpl2++/lF4O9ahmg=="
         }
       },
       "is_incremental": false,
@@ -4882,7 +4894,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.RegisterResultSet.html",
-          "hash": "j+XpkKLNOxhuELLiWhLgQw=="
+          "hash": "6Hf1FLpoQiiQrdJed8rmmg=="
         }
       },
       "is_incremental": false,
@@ -4894,7 +4906,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.AddSavePoint.html",
-          "hash": "NWsWJZBsIJSJFNL/Ks5HSA=="
+          "hash": "JWhr0wCbG5mxPMvVhDjMRw=="
         }
       },
       "is_incremental": false,
@@ -4906,7 +4918,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.RollbackToSavePoint.html",
-          "hash": "ELCXqh6t1WPIRiCRCmBPew=="
+          "hash": "YnFO2qua8QMx9aK+6LEI0Q=="
         }
       },
       "is_incremental": false,
@@ -4918,7 +4930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.BeginTransaction.html",
-          "hash": "Zm+csGI6eP6vCdPyKJYXsw=="
+          "hash": "9MdK/0EK+5E1pyZ6KmQq7w=="
         }
       },
       "is_incremental": false,
@@ -4990,7 +5002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.GetSqlType.html",
-          "hash": "D1SYuVMcZB67Iu5A8ST8pA=="
+          "hash": "V9MQeQLPQ3Dr0bP/O0lnTQ=="
         }
       },
       "is_incremental": false,
@@ -5002,7 +5014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.GetNativeType.html",
-          "hash": "3CZDriQoMFaKpOH8GMrJag=="
+          "hash": "9DrccZW0V6vyaw1W8583wg=="
         }
       },
       "is_incremental": false,
@@ -5026,7 +5038,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.html",
-          "hash": "mhrQhNjGKhyLoY5ZFR8AjA=="
+          "hash": "6qZIUWl9ubpKzIBPkhswZg=="
         }
       },
       "is_incremental": false,
@@ -5038,7 +5050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.CallResult.ResultSets.html",
-          "hash": "XesaWgqMIqBJKu86JFSUcg=="
+          "hash": "rrFvGD2itFiQ51hzfDOiCg=="
         }
       },
       "is_incremental": false,
@@ -5050,7 +5062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.CallResult.-ctor.html",
-          "hash": "9XqJtXWOPtPDeWknd0AoUA=="
+          "hash": "ciqSiaVObjfhJ4YirFpISQ=="
         }
       },
       "is_incremental": false,
@@ -5062,7 +5074,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.CallResult.ParamInit.html",
-          "hash": "Z4GAqgBha8LUEdVNfCrEOQ=="
+          "hash": "7yuA4A0Kf1d4+P5mCSRCXw=="
         }
       },
       "is_incremental": false,
@@ -5074,7 +5086,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.CallResult.html",
-          "hash": "jCss5I3525TU+0Xi2IXfPQ=="
+          "hash": "wqJXMBCu0TsIXAE9R2najQ=="
         }
       },
       "is_incremental": false,
@@ -5110,7 +5122,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.DatabaseAdapterAttribute.html",
-          "hash": "OJ7SqXQ3W7cnMxLuYIhFxw=="
+          "hash": "sTJw16H4nWWiyiToJeyxxA=="
         }
       },
       "is_incremental": false,
@@ -5134,7 +5146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.IDatabaseAdapter.FillTable.html",
-          "hash": "VRJJvheRrTaC3B/bizyFDw=="
+          "hash": "HBWwdXb/U5kzifAoVFhATA=="
         }
       },
       "is_incremental": false,
@@ -5254,7 +5266,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.IDatabaseAdapter.BeginTransaction.html",
-          "hash": "q07uwn2NGlNaymyvyD9UbA=="
+          "hash": "NE2v4TOPT1h/1vtcAdKfSA=="
         }
       },
       "is_incremental": false,
@@ -5267,6 +5279,30 @@
         ".html": {
           "relative_path": "api/XData.Database.Adapter.IDatabaseAdapter.Commit.html",
           "hash": "PXrW7qb5sZ1LO59jYZFARA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.IDatabaseAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.IDatabaseAdapter.GetTablesInfo.html",
+          "hash": "0De94t86MmGPyMVOVwkPUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Database.Adapter.IDatabaseAdapter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Database.Adapter.IDatabaseAdapter.html",
+          "hash": "8fhGV+VAw4PSj26bJezaNA=="
         }
       },
       "is_incremental": false,
@@ -5334,30 +5370,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Database.Adapter.IDatabaseAdapter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Database.Adapter.IDatabaseAdapter.GetTablesInfo.html",
-          "hash": "0De94t86MmGPyMVOVwkPUQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Database.Adapter.IDatabaseAdapter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Database.Adapter.IDatabaseAdapter.html",
-          "hash": "jn+Dvw8oHkSv+LjXuX/8NA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/XData.Database.Adapter.IDatabaseAdapterMetadata.yml",
       "output": {
         ".html": {
@@ -5398,7 +5410,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.Query.Type.html",
-          "hash": "aQG2lJbvxfiTkRbOIVFXjA=="
+          "hash": "e7Lmj3TwgS8A2Ukt4AQNDg=="
         }
       },
       "is_incremental": false,
@@ -5422,7 +5434,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.Query.-ctor.html",
-          "hash": "ln/bIwHzpJzQmWaVgMX9sA=="
+          "hash": "4EOT08yvTFIBJNcOiRVepA=="
         }
       },
       "is_incremental": false,
@@ -5482,7 +5494,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.Query.html",
-          "hash": "DKd/QWgS4XOg6hklICfupA=="
+          "hash": "9oOz3o6tyLOr3Y1s3Zw4Mw=="
         }
       },
       "is_incremental": false,
@@ -5506,7 +5518,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryParam.Type.html",
-          "hash": "4TXhxgUe/FfCO/BIIVzlEw=="
+          "hash": "1tgbrL4U5OuQHYQbLSQaAQ=="
         }
       },
       "is_incremental": false,
@@ -5518,7 +5530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryParam.Direction.html",
-          "hash": "beHo364sUa3A66pUNhQHow=="
+          "hash": "VVNTyNZXx0JiIjyVd0kIyA=="
         }
       },
       "is_incremental": false,
@@ -5626,7 +5638,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryParam.-ctor.html",
-          "hash": "GnKQ4V3RBjjCR5VtsS7u1w=="
+          "hash": "Zgyry52JSVDgSc9TAUNplA=="
         }
       },
       "is_incremental": false,
@@ -5650,7 +5662,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryParam.html",
-          "hash": "9BGQwZzDKHwyDZ4JpndbvQ=="
+          "hash": "qB0y8ZRCRaWK+3tkpcYQ+Q=="
         }
       },
       "is_incremental": false,
@@ -5662,7 +5674,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryResult.-ctor.html",
-          "hash": "Ug7K1aBMsihz4R4Szv6gAw=="
+          "hash": "PbLLph6gHG6bu8rLoMeyGA=="
         }
       },
       "is_incremental": false,
@@ -5674,7 +5686,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryResult.ParamInit.html",
-          "hash": "Da+iWsgqPebUmBbCKAIm3w=="
+          "hash": "8fmP9Tqbww39JQiCpTf9Kw=="
         }
       },
       "is_incremental": false,
@@ -5686,7 +5698,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryResult.html",
-          "hash": "K9L8mcESJFMZm0a3yUm12w=="
+          "hash": "Q3o0RN4dSPO1HJYKPqHDmw=="
         }
       },
       "is_incremental": false,
@@ -5746,7 +5758,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryResultBase.Init.html",
-          "hash": "6r2ASupvyCqpSJDmQCVt5w=="
+          "hash": "JZXg55tHWYOP9Sb5LQiT3A=="
         }
       },
       "is_incremental": false,
@@ -5758,7 +5770,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryResultBase.ParamInit.html",
-          "hash": "cZhK/RKvtzVj9M+aCAb+Vg=="
+          "hash": "EeHNDLtAbv4FwlYpdWDQ4Q=="
         }
       },
       "is_incremental": false,
@@ -5794,7 +5806,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.QueryResultBase.html",
-          "hash": "iVIZ7yliXdoyH9uDn6XPEw=="
+          "hash": "ABB3zhGgd8x5PzBsO8881A=="
         }
       },
       "is_incremental": false,
@@ -6034,7 +6046,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Dialect.BaseSqlBuilder.SqlTypes.html",
-          "hash": "0UuXFII9rH+xD+pljImZnA=="
+          "hash": "VeEgNmQP1kfXNiy31ijYfA=="
         }
       },
       "is_incremental": false,
@@ -6430,7 +6442,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Dialect.BaseSqlBuilder.GetExpressionText.html",
-          "hash": "hru8eGY+aI6TfcMM/ej88w=="
+          "hash": "smOSlNwSJciSB7jvVlXrLw=="
         }
       },
       "is_incremental": false,
@@ -6490,7 +6502,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Dialect.BaseSqlBuilder.FormatConstValue.html",
-          "hash": "2m+ler2UHd1PRw9AuFhoUw=="
+          "hash": "Zo31HLvxUHi7+p78mTxMtw=="
         }
       },
       "is_incremental": false,
@@ -6598,7 +6610,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Dialect.BaseSqlBuilder.GetSqlTypeName.html",
-          "hash": "ZQ7rdo4WqoZx++bg2WLQmA=="
+          "hash": "0iBBf0oSNcePKI3Haq6Hcg=="
         }
       },
       "is_incremental": false,
@@ -6718,7 +6730,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Dialect.BaseSqlBuilder.html",
-          "hash": "JUUIV3rlz0ENWpBMYGIscQ=="
+          "hash": "Q61cp+4s2JNpjRRr2jyXPg=="
         }
       },
       "is_incremental": false,
@@ -6766,7 +6778,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Dialect.SqlStringType.html",
-          "hash": "VyYJq9dfjXLeLvBJ2gBwhA=="
+          "hash": "6SlwtmDdwfFkvIcfoV2DoQ=="
         }
       },
       "is_incremental": false,
@@ -6874,7 +6886,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.FieldInfo.Type.html",
-          "hash": "NoqiwrKRV5L1kOE28i1kYw=="
+          "hash": "qq2utVnUXD5qjcVTZBzIOA=="
         }
       },
       "is_incremental": false,
@@ -6922,7 +6934,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.FieldInfo.html",
-          "hash": "DrRoRhgWvD80+TKkX8CpBA=="
+          "hash": "B4ZDMpvJ5R0pfyEDwk3TFA=="
         }
       },
       "is_incremental": false,
@@ -6970,7 +6982,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.IBlockQueryAdapter.Expr.html",
-          "hash": "ZT55SsBcvASwygZaQ/uhOA=="
+          "hash": "mVtaBeZ5cdUP6qyTOG9dbg=="
         }
       },
       "is_incremental": false,
@@ -7018,7 +7030,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.IBlockQueryAdapter.html",
-          "hash": "dAruv37Qc3x/NIH7eJcIVA=="
+          "hash": "NCTCPGuATDLWKJQF9y0bbw=="
         }
       },
       "is_incremental": false,
@@ -7246,7 +7258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.ISqlBlockAdapter-1.html",
-          "hash": "kSzzSp2xk8WBvLqOBBCyyg=="
+          "hash": "K+1cGvVYVFHj+HMeL8e2Wg=="
         }
       },
       "is_incremental": false,
@@ -7306,7 +7318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.ISqlBlockAdapter.Insert.html",
-          "hash": "1S0SVjqc+6F1ev3zjnE/8g=="
+          "hash": "bgKeKegCCFAvwZ0LT2p2nw=="
         }
       },
       "is_incremental": false,
@@ -7390,7 +7402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.ISqlBlockAdapter.html",
-          "hash": "BHXA+8D+BIOxne/Y7gyi+A=="
+          "hash": "ldnkcVSxWF96XPfbnemLug=="
         }
       },
       "is_incremental": false,
@@ -7486,7 +7498,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.ISqlParamAdapter.Param.html",
-          "hash": "Cnnh3q4tu+6HmEOad3G6Tw=="
+          "hash": "ToS68FJI4LVmHTRQJBcnBg=="
         }
       },
       "is_incremental": false,
@@ -7498,7 +7510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.ISqlParamAdapter.html",
-          "hash": "i7poh2rRSDapIFHqjwl8Dg=="
+          "hash": "U1g8NWNVZssZBlK70++6Dg=="
         }
       },
       "is_incremental": false,
@@ -7606,7 +7618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.ISqlValueAdapter.Var.html",
-          "hash": "ot0HjFRC/wZApHbamQdWQQ=="
+          "hash": "y3N1ZpXB2Zr9e8m9Wp3i8g=="
         }
       },
       "is_incremental": false,
@@ -7678,7 +7690,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.ISqlValueAdapter.html",
-          "hash": "rpcEARrQ3DGJgtKJK9bG2Q=="
+          "hash": "KhT4Sgv9DPJDQWgJMLUibg=="
         }
       },
       "is_incremental": false,
@@ -7786,7 +7798,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.SqlBlockExtensions.SqlParam.html",
-          "hash": "y4A6o5QkQe7/VqaSd5vJKQ=="
+          "hash": "h6T2UtbXI9ByUePrIBUV3g=="
         }
       },
       "is_incremental": false,
@@ -7810,7 +7822,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.SqlBlockExtensions.html",
-          "hash": "ilCfcpKP57jjj04peMCPSg=="
+          "hash": "eFfTCbP91IQKpjGyiaXfsg=="
         }
       },
       "is_incremental": false,
@@ -7822,7 +7834,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.SqlType.DbType.html",
-          "hash": "hGF5NLB37oL0Ten9ouZD1g=="
+          "hash": "tuzD7ANSFb5yYGPWXMcbfw=="
         }
       },
       "is_incremental": false,
@@ -7942,7 +7954,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.TableInfo.Clone.html",
-          "hash": "mFoszSsN9a9rcGDGU06pzw=="
+          "hash": "J+ZGMBoecDDF+jFHIiyNQg=="
         }
       },
       "is_incremental": false,
@@ -7966,7 +7978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.TableInfo.html",
-          "hash": "ymIvZDCsaqOWtNu8lpujOg=="
+          "hash": "PyZ79wZeIDSd3KmL6MkD7g=="
         }
       },
       "is_incremental": false,
@@ -8182,7 +8194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.AdditionalInfo.html",
-          "hash": "a80jz0lZH6QPC9aMceDsiQ=="
+          "hash": "Un8GB1FlrPmOo0bhI3KQgw=="
         }
       },
       "is_incremental": false,
@@ -8254,7 +8266,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataAdapterException.html",
-          "hash": "vguxG/skrYxF42R8YDskVw=="
+          "hash": "PzlqeZX31yQIBGo4Xn9v+w=="
         }
       },
       "is_incremental": false,
@@ -8302,7 +8314,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataConcurrencyException.html",
-          "hash": "QQTcRVYkFWjUM3xQRMcqRw=="
+          "hash": "3YOlBIocWtGOoZnV1AnQNw=="
         }
       },
       "is_incremental": false,
@@ -8350,7 +8362,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataConfigurationException.html",
-          "hash": "7XbaX62k6zm+V1hO1b7jLA=="
+          "hash": "7Qo3JRpcI8mL8wbCMWAwaA=="
         }
       },
       "is_incremental": false,
@@ -8373,8 +8385,8 @@
       "source_relative_path": "obj/api/XData.Exceptions.XDataException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/XData.Exceptions.XDataException.html",
-          "hash": "MNWqdtoxZnwZ8vDA2bMFyA=="
+          "relative_path": "api/XData.Exceptions.XDataException.-ctor.html",
+          "hash": "oxV7RRgkToarBegFjUQlxg=="
         }
       },
       "is_incremental": false,
@@ -8385,8 +8397,8 @@
       "source_relative_path": "obj/api/XData.Exceptions.XDataException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/XData.Exceptions.XDataException.-ctor.html",
-          "hash": "oxV7RRgkToarBegFjUQlxg=="
+          "relative_path": "api/XData.Exceptions.XDataException.html",
+          "hash": "km0hNvoWtzQ1/PJvA1/dSQ=="
         }
       },
       "is_incremental": false,
@@ -8398,7 +8410,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataExceptionAttribute.html",
-          "hash": "KGY+ZJumkZMh17ysuRD9/A=="
+          "hash": "OkbHqPMysSZ13P0JxXidPA=="
         }
       },
       "is_incremental": false,
@@ -8458,7 +8470,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataQueryStructureException.html",
-          "hash": "/s1Sa4W/UD0pDAgl/Fe8xg=="
+          "hash": "o9YmGXjI9z5GR0Q19DQy9g=="
         }
       },
       "is_incremental": false,
@@ -8530,7 +8542,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataRuntimeException.html",
-          "hash": "Ixy/bfTcwy33tTOuxCjHkw=="
+          "hash": "IosUMkAWG0WRTM22rYNf4g=="
         }
       },
       "is_incremental": false,
@@ -8590,7 +8602,19 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataSecurityException.html",
-          "hash": "ZfAIFuvOjIHq3KWF+7rAMA=="
+          "hash": "CJwQLFkVlg9vF5bNyOSr3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Exceptions.XDataSqlException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Exceptions.XDataSqlException.html",
+          "hash": "6qU8GiG0w3WSPMxCutCafQ=="
         }
       },
       "is_incremental": false,
@@ -8622,18 +8646,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Exceptions.XDataSqlException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Exceptions.XDataSqlException.html",
-          "hash": "l44m8vwgVJBJwhU8sqPKhw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/XData.Exceptions.yml",
       "output": {
         ".html": {
@@ -8651,18 +8663,6 @@
         ".html": {
           "relative_path": "api/XData.ExecuteAttachedHandler-1.html",
           "hash": "jav+BJKYpGDPUQwtbs33Yw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Extensions.CollectionsExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Extensions.CollectionsExtensions.html",
-          "hash": "r9ej7kZ5S09g+arpDfsU9g=="
         }
       },
       "is_incremental": false,
@@ -8698,7 +8698,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Extensions.CollectionsExtensions.RemoveAll.html",
-          "hash": "8R7tocc6pjtktQ4+AY4/Sw=="
+          "hash": "/UbwtPx6QMHuhvWfc4474A=="
         }
       },
       "is_incremental": false,
@@ -8795,6 +8795,18 @@
         ".html": {
           "relative_path": "api/XData.Extensions.CollectionsExtensions.AsEnum.html",
           "hash": "IYR6JhQJ4ShbRWCLLzGUFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Extensions.CollectionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Extensions.CollectionsExtensions.html",
+          "hash": "u3KHg2Grgpx3JMM0CSHTSg=="
         }
       },
       "is_incremental": false,
@@ -8938,7 +8950,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Extensions.IndexAttribute.html",
-          "hash": "MgJ22V5weJDlWVd390VFOw=="
+          "hash": "VSsWx9VAF6WcofQtRWZKOQ=="
         }
       },
       "is_incremental": false,
@@ -9681,44 +9693,8 @@
       "source_relative_path": "obj/api/XData.IDataOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/XData.IDataOptions.UseCredentials.html",
-          "hash": "d8geqVA5H5F79zcXYBbGGw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.IDataOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.IDataOptions.SetSecurityContext.html",
-          "hash": "xCY4WDAPQn7KELf+vwMCXw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.IDataOptions.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/XData.IDataOptions.SetMonitoringContext.html",
           "hash": "MoH3JZ9CwwHBQ98SdAdQBA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.IDataOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.IDataOptions.SetWriteDebugInfo.html",
-          "hash": "vY7fbyrZk2M9j2dtY4yStA=="
         }
       },
       "is_incremental": false,
@@ -9790,7 +9766,31 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.IDataOptions.html",
-          "hash": "SxFKhQ0whbYYhHA1UQqjyw=="
+          "hash": "Dghbl5GMPoyv2vCiwLgTRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataOptions.UseCredentials.html",
+          "hash": "d8geqVA5H5F79zcXYBbGGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.IDataOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.IDataOptions.SetSecurityContext.html",
+          "hash": "xCY4WDAPQn7KELf+vwMCXw=="
         }
       },
       "is_incremental": false,
@@ -9958,7 +9958,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.IDataScope.BeginTransaction.html",
-          "hash": "Ds/Xm8AwsOkjCUqtT0npMw=="
+          "hash": "7R1YGu12/zp/mtjXILGVJA=="
         }
       },
       "is_incremental": false,
@@ -10030,7 +10030,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.IDataScope.FillTable.html",
-          "hash": "nw3AJmivz159Byf+xYzdUg=="
+          "hash": "L5uDt1ditW4rNE+Nj5Y/0w=="
         }
       },
       "is_incremental": false,
@@ -10066,7 +10066,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.IDataScope.html",
-          "hash": "RqIkEfi4VqI2j6tZK5ioEA=="
+          "hash": "u/vlyFd2QIEdDUQwGWQ2CQ=="
         }
       },
       "is_incremental": false,
@@ -10917,18 +10917,6 @@
       "source_relative_path": "obj/api/XData.Interfaces.IConfiguration.yml",
       "output": {
         ".html": {
-          "relative_path": "api/XData.Interfaces.IConfiguration.WriteDebugInfo.html",
-          "hash": "jJi/KQIBDOkJ/pKZMRH2Lw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Interfaces.IConfiguration.yml",
-      "output": {
-        ".html": {
           "relative_path": "api/XData.Interfaces.IConfiguration.Adapters.html",
           "hash": "CqNEFXp5zY2O76hlFnvVPA=="
         }
@@ -10990,7 +10978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Interfaces.IConfiguration.html",
-          "hash": "tv+l+//LM/QsljlL6Kl8mg=="
+          "hash": "k8cELFYU83tPANlER0jvoQ=="
         }
       },
       "is_incremental": false,
@@ -11002,7 +10990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Interfaces.ILogWriter.Write.html",
-          "hash": "nIRP6hwuQq0tLqKSGgzRiQ=="
+          "hash": "p7qZ6Z8sTi8gzfD9XD/D/Q=="
         }
       },
       "is_incremental": false,
@@ -11014,7 +11002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Interfaces.ILogWriter.html",
-          "hash": "JjhE1Cxeex0OrYpLCvQ/BQ=="
+          "hash": "HNzkWtT8463KW9CsnJ3HWg=="
         }
       },
       "is_incremental": false,
@@ -11446,7 +11434,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Interfaces.ISqlBuilder.SqlTypes.html",
-          "hash": "ZoTixmj0bu8ayzsyHxNdLQ=="
+          "hash": "3GzSWBipKZ+GPn6AusWnWA=="
         }
       },
       "is_incremental": false,
@@ -11770,7 +11758,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Log.Write.html",
-          "hash": "2Ib17t49jpVzDpdpG41Gag=="
+          "hash": "R5g0bO9D7k2oEo6b7TrGAQ=="
         }
       },
       "is_incremental": false,
@@ -11806,7 +11794,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ActionAttribute.TypeId.html",
-          "hash": "xkezCdws5E7YTL8opxmvqA=="
+          "hash": "XaTaW2wRM+XrwgM5g4iuJA=="
         }
       },
       "is_incremental": false,
@@ -11854,7 +11842,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ActionAttribute.html",
-          "hash": "u8xVV7P4SesDQ0JIJRi3sQ=="
+          "hash": "hTgUNnEil5TLi9Ace70QcA=="
         }
       },
       "is_incremental": false,
@@ -11866,7 +11854,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnAttribute.TypeId.html",
-          "hash": "u9xDRVQhlmkUyp2gyqz+UQ=="
+          "hash": "30fZY54ZXllbiDAdXIL7Rg=="
         }
       },
       "is_incremental": false,
@@ -12022,7 +12010,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnAttribute.html",
-          "hash": "M6ge++UatNA6tukblf+0zQ=="
+          "hash": "6+6RRTcEQGTNRA20LRLaOA=="
         }
       },
       "is_incremental": false,
@@ -12034,7 +12022,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnDefaultAttribute.TypeId.html",
-          "hash": "VcQYm7VlpSXwdQzPhC0agQ=="
+          "hash": "SCLuEK6rpMwxqi44IBxpow=="
         }
       },
       "is_incremental": false,
@@ -12106,7 +12094,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnDefaultAttribute.html",
-          "hash": "SW3M+4dl5ds64mJwLd2VBw=="
+          "hash": "1HjKr3KgwJcv0iOacEO4aw=="
         }
       },
       "is_incremental": false,
@@ -12118,7 +12106,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnExpressionAttribute.TypeId.html",
-          "hash": "dglqgp8VyCbV/DHyyJtGCg=="
+          "hash": "InWIxIS5EUFyIo2fZkAWDA=="
         }
       },
       "is_incremental": false,
@@ -12190,7 +12178,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnExpressionAttribute.DbType.html",
-          "hash": "Hcnmd2CZt8svpJJg+jsZTA=="
+          "hash": "uJlbPvzbS8ZlUTSGkANT1A=="
         }
       },
       "is_incremental": false,
@@ -12202,7 +12190,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnExpressionAttribute.-ctor.html",
-          "hash": "8dmQt4kk5l5QfzApjv2pTQ=="
+          "hash": "1QLA4X8jSedVnp5x8A/LXg=="
         }
       },
       "is_incremental": false,
@@ -12214,7 +12202,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnExpressionAttribute.html",
-          "hash": "5v7VGi3+HIgDvqaENQnkFg=="
+          "hash": "IuG7YhxCFyoCVG/qiUPing=="
         }
       },
       "is_incremental": false,
@@ -12226,7 +12214,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnUpdateWithAttribute.TypeId.html",
-          "hash": "y82TZnF0eXxkqe47BnuQlA=="
+          "hash": "klsr0UZYyLk6NTbdcPKIBg=="
         }
       },
       "is_incremental": false,
@@ -12286,7 +12274,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnUpdateWithAttribute.html",
-          "hash": "HArTJsE2J+4Rs/rlau0Kag=="
+          "hash": "0dI/gZ3bgfBUvyWdi8hNVQ=="
         }
       },
       "is_incremental": false,
@@ -12298,7 +12286,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ConstantFilterAttribute.TypeId.html",
-          "hash": "J+yVkfQQnd0nToW/a56Wfg=="
+          "hash": "iBx6p1OD2y+rp7fkf5meLQ=="
         }
       },
       "is_incremental": false,
@@ -12382,7 +12370,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ConstantFilterAttribute.html",
-          "hash": "DwONbUwnsQafGpbvxQBLkA=="
+          "hash": "D5IqOrKqVxg0mceQVClHVQ=="
         }
       },
       "is_incremental": false,
@@ -12454,7 +12442,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.DataObjectAttribute.html",
-          "hash": "Wng3NEs4qpmnD68DBK/lNg=="
+          "hash": "pYoHb7Hn75W8J0jt3thjeg=="
         }
       },
       "is_incremental": false,
@@ -12490,7 +12478,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.DataSourceAttribute.html",
-          "hash": "MogRZjHcAeT+eWe2dtaLjg=="
+          "hash": "5QZB/ADjUxqx3aQNqM4MFA=="
         }
       },
       "is_incremental": false,
@@ -12502,7 +12490,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.DataTableAttribute.TypeId.html",
-          "hash": "V0tpc8jjIw4KA/a4iRyZgg=="
+          "hash": "ys8jivktQTFaF+sLI9H8hw=="
         }
       },
       "is_incremental": false,
@@ -12574,7 +12562,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.DataTableAttribute.html",
-          "hash": "j8O/05imjoxmjYIMhrioAA=="
+          "hash": "vRYg/qaNtwJUkRkB19wVBQ=="
         }
       },
       "is_incremental": false,
@@ -12586,7 +12574,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.DictionaryFilterAttribute.TypeId.html",
-          "hash": "iolEPAU7wDCV05lSdwGpbg=="
+          "hash": "DVG9zYgjr6xmt8c4cYWi2A=="
         }
       },
       "is_incremental": false,
@@ -12682,7 +12670,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.DictionaryFilterAttribute.html",
-          "hash": "HekSYTs8bKw8GhF1AuHZ9g=="
+          "hash": "gkh0p3W1PzEdxrIFZF4m7g=="
         }
       },
       "is_incremental": false,
@@ -13102,7 +13090,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IParameterDescription.DbType.html",
-          "hash": "qUNnyNBgkwf3gtMraiivIQ=="
+          "hash": "kC5wF006CyvoHTXliZLauw=="
         }
       },
       "is_incremental": false,
@@ -13138,7 +13126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IParameterDescription.Direction.html",
-          "hash": "kRx3jOi7MXw88WUbT8abbA=="
+          "hash": "mHNyhQS62DiTNkn9xiRTsg=="
         }
       },
       "is_incremental": false,
@@ -13257,6 +13245,18 @@
       "source_relative_path": "obj/api/XData.Mapping.Dynamic.IProcedureParameterAdapter.yml",
       "output": {
         ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html",
+          "hash": "cawTJuRDZX9jb5HmNgsZEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IProcedureParameterAdapter.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterAdapter.Size.html",
           "hash": "D3uSBwcJrKqzA0Lharw5kA=="
         }
@@ -13294,7 +13294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterAdapter.Direction.html",
-          "hash": "JpeEiIGF3BeXsw0xyk8/yg=="
+          "hash": "69ju2Z7YqXEPISJzzOBG1Q=="
         }
       },
       "is_incremental": false,
@@ -13331,18 +13331,6 @@
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterAdapter.Default.html",
           "hash": "oCKHMH5kmBGXGIpRWrcaKw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IProcedureParameterAdapter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html",
-          "hash": "FxKOEjmRGpcnCzu56BpPsg=="
         }
       },
       "is_incremental": false,
@@ -13522,7 +13510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructure.TempTable.html",
-          "hash": "E/gInk2CCzwhmyeVmN7TPA=="
+          "hash": "aAbwW13f7J2oIgIFwv3Vdg=="
         }
       },
       "is_incremental": false,
@@ -13594,7 +13582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructure.Parameter.html",
-          "hash": "/Km5zffSTiVN4G3Gvt5MzQ=="
+          "hash": "mn9WWvX+4B5efRP+UrjyFw=="
         }
       },
       "is_incremental": false,
@@ -13642,7 +13630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructure.html",
-          "hash": "M3nZPS8gjNeRRWmAIjDpsg=="
+          "hash": "Yr8MGTl2ZzRt9fth9ceV7Q=="
         }
       },
       "is_incremental": false,
@@ -13654,7 +13642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructureAdapter.Field.html",
-          "hash": "XNtAmrsRUoeVTkPcYTEvbg=="
+          "hash": "q5wrVobmgR9V3SErjNIttg=="
         }
       },
       "is_incremental": false,
@@ -13666,7 +13654,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructureAdapter.Expr.html",
-          "hash": "7kamViMIApmD9CgKTaGQEw=="
+          "hash": "gGxlVUs3P3MPjE5dSMgwJQ=="
         }
       },
       "is_incremental": false,
@@ -13690,7 +13678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructureAdapter.XmlField.html",
-          "hash": "2+ZvHrsknupnlclE26zN1w=="
+          "hash": "5HNkSvvpAVQyEe8SHIitjg=="
         }
       },
       "is_incremental": false,
@@ -13714,7 +13702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructureAdapter.html",
-          "hash": "vWwsHVS36qs0Nkmz/7f/ZQ=="
+          "hash": "wLSMP3ZZLcGQpaSca2zZ9g=="
         }
       },
       "is_incremental": false,
@@ -13929,6 +13917,18 @@
       "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryStructure-1.yml",
       "output": {
         ".html": {
+          "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructure-1.html",
+          "hash": "7Mzlo8ZxOlnGkL6fsPXlqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryStructure-1.yml",
+      "output": {
+        ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructure-1.Column.html",
           "hash": "Qmkf5Y93LXCy4/zeQEIDfw=="
         }
@@ -14002,7 +14002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructure-1.Parameter.html",
-          "hash": "1KVOVWYEWukkRiaqvZL/3A=="
+          "hash": "FibQsmJShnfp3zg9QaGhPw=="
         }
       },
       "is_incremental": false,
@@ -14039,18 +14039,6 @@
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructure-1.With.html",
           "hash": "LqD4bgmroj3RKZtLIgHU5A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Mapping.Dynamic.IRepositoryStructure-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructure-1.html",
-          "hash": "n9EJ0Ka7adCGWtLlst0YAw=="
         }
       },
       "is_incremental": false,
@@ -14110,7 +14098,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html",
-          "hash": "IbO6nZ0Ksaa7g5dWQZAHfg=="
+          "hash": "Us7DpY/S8YGjEbk/KO6xiA=="
         }
       },
       "is_incremental": false,
@@ -14122,7 +14110,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.Expr.html",
-          "hash": "AwoC9GYTy3nhM0fkYBLwSg=="
+          "hash": "EexmWYraC9A3hTJGOOtBkA=="
         }
       },
       "is_incremental": false,
@@ -14146,7 +14134,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html",
-          "hash": "LtfyVhm9Wm/2VC9R9vF3Gw=="
+          "hash": "hjSoGM3bZiXrZ17X+eSyGQ=="
         }
       },
       "is_incremental": false,
@@ -14410,7 +14398,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.ParameterDescription.DbType.html",
-          "hash": "1Ylc5eZXqGrsmDZHmTkd3A=="
+          "hash": "4M9aVIOhLtjcMlqypjz9IQ=="
         }
       },
       "is_incremental": false,
@@ -14422,7 +14410,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.ParameterDescription.Direction.html",
-          "hash": "ocVLYvHkSMeTow/QnWS2Pg=="
+          "hash": "XWWCX9z54UIg9PnIu1YaFA=="
         }
       },
       "is_incremental": false,
@@ -14686,7 +14674,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlParam.html",
-          "hash": "QUrZHnAxbBHWwyaMSGMiGg=="
+          "hash": "gzCNMqessYzFFIV//Fi6BA=="
         }
       },
       "is_incremental": false,
@@ -14722,7 +14710,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html",
-          "hash": "4dFolpZsduI2O4Q8qYTYOw=="
+          "hash": "B4Rw9BLegD+tOARluOc6Iw=="
         }
       },
       "is_incremental": false,
@@ -14842,7 +14830,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ExpressionFilterAttribute.TypeId.html",
-          "hash": "pi2nLUYTPxP9ipALpJq0aQ=="
+          "hash": "wVGihlXRwDrw6XibNRjixw=="
         }
       },
       "is_incremental": false,
@@ -14890,7 +14878,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ExpressionFilterAttribute.html",
-          "hash": "uFUN0oDbUrGAQSpQ414Y4Q=="
+          "hash": "79Mm2uL/KnEPWVDOlglfXQ=="
         }
       },
       "is_incremental": false,
@@ -14902,7 +14890,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ExternalLinkAttribute.TypeId.html",
-          "hash": "kpIFEgzI7ottGheB6TfQpQ=="
+          "hash": "dEusSaAF5B5YJeuiAKslpw=="
         }
       },
       "is_incremental": false,
@@ -15058,7 +15046,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ExternalLinkAttribute.html",
-          "hash": "1kqybYA7ZjbuBkfmtxd2vg=="
+          "hash": "TDiq6SNMihDa/puXqU+/Yg=="
         }
       },
       "is_incremental": false,
@@ -15130,7 +15118,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.FilterAttribute.html",
-          "hash": "qJzpYEts+YwxyhscNQneWg=="
+          "hash": "OcEmE6fopwKj2At5BTvgqg=="
         }
       },
       "is_incremental": false,
@@ -15154,7 +15142,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.FilterBaseAttribute.html",
-          "hash": "/9pIFUvOVWsZNoN9sAuXBQ=="
+          "hash": "RkdE1wptSbvz+ycL8XF3Dg=="
         }
       },
       "is_incremental": false,
@@ -15166,7 +15154,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.FilterCombinationAttribute.TypeId.html",
-          "hash": "uv/Z+h9QW2MJLcSXqsNaMw=="
+          "hash": "9+UpSe9vcYPu8I6sBRpNGA=="
         }
       },
       "is_incremental": false,
@@ -15226,7 +15214,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.FilterCombinationAttribute.html",
-          "hash": "ckxMyxL9XmPRq2rtrUlHgA=="
+          "hash": "zKt23nTQng3bpbXhzzvKTQ=="
         }
       },
       "is_incremental": false,
@@ -15238,7 +15226,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.HierarchyAttribute.TypeId.html",
-          "hash": "+kCqWwoMcMwkJQomLAv5Pw=="
+          "hash": "KpkaexjJkQcuCGWqMQmB5w=="
         }
       },
       "is_incremental": false,
@@ -15322,7 +15310,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.HierarchyAttribute.html",
-          "hash": "ORGImjq8HNPMbqAv3pB3oQ=="
+          "hash": "qmvWFjT64lpo3PrMMubkUQ=="
         }
       },
       "is_incremental": false,
@@ -15334,7 +15322,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.HintAttribute.TypeId.html",
-          "hash": "KBzYizINuPbPl5HcOPKHqg=="
+          "hash": "qcc0ZkEP21bmy7/qoZY9rQ=="
         }
       },
       "is_incremental": false,
@@ -15382,7 +15370,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.HintAttribute.html",
-          "hash": "88V0IgXx3o4V6E/Vbgca1Q=="
+          "hash": "wUzoU3s8NTuBqJpHKX94dw=="
         }
       },
       "is_incremental": false,
@@ -15442,7 +15430,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.InnerViewAttribute.TypeId.html",
-          "hash": "LxDfg+q42aMyOgNzAvhkpw=="
+          "hash": "mEdAXJ5zIvGmxD+sbny64Q=="
         }
       },
       "is_incremental": false,
@@ -15502,7 +15490,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.InnerViewAttribute.html",
-          "hash": "k7bnAGf/CWXuKTREigtE5g=="
+          "hash": "6HHsZojwueQnbcCsX61TVA=="
         }
       },
       "is_incremental": false,
@@ -15598,7 +15586,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.LinkAttribute.TypeId.html",
-          "hash": "sCpUwBNlK1fI9SkqR5LFCA=="
+          "hash": "c4qbKDvYaHPUqH9iF7nUNg=="
         }
       },
       "is_incremental": false,
@@ -15658,7 +15646,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.LinkAttribute.html",
-          "hash": "NoV3FIZQNsHejLqHhedHQw=="
+          "hash": "2+v300M2f3RNdDSDPFS8og=="
         }
       },
       "is_incremental": false,
@@ -15670,7 +15658,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.LinkPropertyAttribute.TypeId.html",
-          "hash": "5CiUlguYduna95wxWtDu/g=="
+          "hash": "SViCdU8IucDDUzGVsWqchA=="
         }
       },
       "is_incremental": false,
@@ -15718,7 +15706,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.LinkPropertyAttribute.html",
-          "hash": "VrhdykY/ClScF7AGvzLc/g=="
+          "hash": "otrUppacdsYI4zz7MQxs2A=="
         }
       },
       "is_incremental": false,
@@ -15850,7 +15838,31 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.OptionalFilterAttribute.html",
-          "hash": "6j8nH/Ne69sost7XEw83AA=="
+          "hash": "oPbZJfiA2WtMxQPugfHhgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ParameterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ParameterAttribute.TypeId.html",
+          "hash": "PIEkivUZ+JXR8MpzYcMxcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ParameterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ParameterAttribute.Direction.html",
+          "hash": "niI6fb+ovDoHEykmGk0snA=="
         }
       },
       "is_incremental": false,
@@ -15970,7 +15982,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ParameterAttribute.-ctor.html",
-          "hash": "2eGiwlbsEQl45Pb1eC9nzA=="
+          "hash": "AIwsENjz6R+Yyo+UQGQIXg=="
         }
       },
       "is_incremental": false,
@@ -15982,31 +15994,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ParameterAttribute.html",
-          "hash": "/TXOn9cvnkRoawwwcpgwbQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Mapping.ParameterAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Mapping.ParameterAttribute.TypeId.html",
-          "hash": "i1+1ToFKduDH3lMW2Az5kg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Mapping.ParameterAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Mapping.ParameterAttribute.Direction.html",
-          "hash": "61vW74HjydyYjpKRQtCAxw=="
+          "hash": "ivTJOGNnHJQ389tDM6fa8Q=="
         }
       },
       "is_incremental": false,
@@ -16078,7 +16066,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ProcedureAttribute.html",
-          "hash": "49Rk7CF6vOR0IAYVN1/RFg=="
+          "hash": "6BmsgG8uNtf4ZAsKwKZuJg=="
         }
       },
       "is_incremental": false,
@@ -16126,7 +16114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyAttribute.html",
-          "hash": "JTyTScTomkjs23XupL1W7Q=="
+          "hash": "lzsJ0yxBjOvPxNXC1xojig=="
         }
       },
       "is_incremental": false,
@@ -16186,7 +16174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyBaseAttribute.html",
-          "hash": "dhMj1mHkzt6Nr0j4LGmTAA=="
+          "hash": "1qLUvTT+R9GckLRXD2wYPQ=="
         }
       },
       "is_incremental": false,
@@ -16246,7 +16234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyDefaultAttribute.html",
-          "hash": "xa6/JgbrvYxzuTK6l3Uo5Q=="
+          "hash": "V9bwD9Xifgwr3SklPRT7Nw=="
         }
       },
       "is_incremental": false,
@@ -16306,7 +16294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyExpressionAttribute.DbType.html",
-          "hash": "b8V/dr/cXMMJF2GF45pi3w=="
+          "hash": "c5hgDOLe8GPfVydHCX8HWA=="
         }
       },
       "is_incremental": false,
@@ -16318,7 +16306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyExpressionAttribute.-ctor.html",
-          "hash": "FQpxtjkoy4GFvfbLbDIGHg=="
+          "hash": "cRn/Cg0d1rkbEeDtL+qRuQ=="
         }
       },
       "is_incremental": false,
@@ -16330,7 +16318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyExpressionAttribute.html",
-          "hash": "W5GDZMqpq6pjrI9/XOP7xQ=="
+          "hash": "mRrAGvmLAfolkZy2Uyc/pQ=="
         }
       },
       "is_incremental": false,
@@ -16378,7 +16366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyGroupingAttribute.html",
-          "hash": "Welmyv3m/jlWVg57OL42AA=="
+          "hash": "OgReA0ttF03rd7epw/uTsQ=="
         }
       },
       "is_incremental": false,
@@ -16426,7 +16414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyUpdateWithAttribute.html",
-          "hash": "iwxUwH6IPEC1LxdiYFQX4Q=="
+          "hash": "V2Y7+DPcjWpyb+hQtrVVAQ=="
         }
       },
       "is_incremental": false,
@@ -16438,7 +16426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.RangeFilterAttribute.TypeId.html",
-          "hash": "371hXctPIoBEI019mP1HUA=="
+          "hash": "gCmzR7eXmTXK568MAP177A=="
         }
       },
       "is_incremental": false,
@@ -16486,7 +16474,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.RangeFilterAttribute.html",
-          "hash": "Y+tZk4PxxMnJwMli/fv2xw=="
+          "hash": "PNgXn5gg+S1/NQ8juAdbcw=="
         }
       },
       "is_incremental": false,
@@ -16534,43 +16522,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ReferenceAttribute.html",
-          "hash": "fiW3JIykQfZoCHnZb+6MqA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Mapping.ResultSetAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Mapping.ResultSetAttribute.TypeId.html",
-          "hash": "pxPtQpEtc2ta/I9Pb9CVdg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Mapping.ResultSetAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Mapping.ResultSetAttribute.Order.html",
-          "hash": "7VutrKCOHiFWnz1B2RBjcg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Mapping.ResultSetAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Mapping.ResultSetAttribute.ResultType.html",
-          "hash": "IsOs7BawyhNBLts5RLuBkw=="
+          "hash": "ed4SQwQHCs5FzUI93XafYg=="
         }
       },
       "is_incremental": false,
@@ -16606,7 +16558,43 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ResultSetAttribute.html",
-          "hash": "95a+w0F6rWCx7GzjpiquDg=="
+          "hash": "Wts8h8a5mTRerXqII7OoLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ResultSetAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ResultSetAttribute.TypeId.html",
+          "hash": "4sNZjiFqh5xHIWcDPLMysw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ResultSetAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ResultSetAttribute.Order.html",
+          "hash": "7VutrKCOHiFWnz1B2RBjcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Mapping.ResultSetAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Mapping.ResultSetAttribute.ResultType.html",
+          "hash": "IsOs7BawyhNBLts5RLuBkw=="
         }
       },
       "is_incremental": false,
@@ -16618,7 +16606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.SqlExpressionAttribute.html",
-          "hash": "+ZdQPnMupTz6+NK9m6LGjg=="
+          "hash": "LI2IejlDtAgMiCJcW8P2hA=="
         }
       },
       "is_incremental": false,
@@ -16630,7 +16618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.SubqueryAttribute.TypeId.html",
-          "hash": "W5TPPBJ1AoR1bt0tAWnBow=="
+          "hash": "Us9P6xB56dCB24wHIlPPcQ=="
         }
       },
       "is_incremental": false,
@@ -16714,7 +16702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.SubqueryAttribute.html",
-          "hash": "aHGDmPHTQAkCWLl3SucSLQ=="
+          "hash": "GhSYp8Z9j2OEkEzqB1IkaA=="
         }
       },
       "is_incremental": false,
@@ -16726,7 +16714,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.SubqueryFilterAttribute.TypeId.html",
-          "hash": "6F3e/XngTOIgsJvyEM27gg=="
+          "hash": "QAdhjEky/6DNHWDoQ0wV/A=="
         }
       },
       "is_incremental": false,
@@ -16774,7 +16762,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.SubqueryFilterAttribute.html",
-          "hash": "upNxSMcL5ZRtR0I7jIx5gA=="
+          "hash": "FMm0SsRonE1rUKbZcluLYw=="
         }
       },
       "is_incremental": false,
@@ -16786,7 +16774,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.SubqueryLinkAttribute.TypeId.html",
-          "hash": "VEOdnl6IGdd9ewq5qWgRgQ=="
+          "hash": "MhvXGYW+mSxYYklcamjEeQ=="
         }
       },
       "is_incremental": false,
@@ -16894,7 +16882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.SubqueryLinkAttribute.html",
-          "hash": "E03q+6/LDSv9M8zCyTUZEQ=="
+          "hash": "FuP6wZkkDOINC+AYAOAd/w=="
         }
       },
       "is_incremental": false,
@@ -16906,7 +16894,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.WithAttribute.TypeId.html",
-          "hash": "IWKvTsQaTObKyflGeGvrVg=="
+          "hash": "fDVczaYc2rS3nux2pTJAwA=="
         }
       },
       "is_incremental": false,
@@ -16990,7 +16978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.WithAttribute.html",
-          "hash": "+SnO4NQGoaFdpAXrtmMPgQ=="
+          "hash": "ZPj2F7rXpZ7+k4rbml+7lw=="
         }
       },
       "is_incremental": false,
@@ -17002,7 +16990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.WithRecursiveAttribute.TypeId.html",
-          "hash": "O7/5j6eDY9bmY1j76eoF4Q=="
+          "hash": "mLYxGr38vC+1nx0IDs65UA=="
         }
       },
       "is_incremental": false,
@@ -17062,7 +17050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.WithRecursiveAttribute.html",
-          "hash": "iNeK/htOFV/O3Qfyclg05w=="
+          "hash": "EOGsxVkH5fH/nnYZeSIvqQ=="
         }
       },
       "is_incremental": false,
@@ -17422,7 +17410,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.ResultSetIndexer.Item.html",
-          "hash": "c+OuBz5+vJ5vVWEEXnvpHw=="
+          "hash": "JlJUN+F7aaHkuz5JQZeoqQ=="
         }
       },
       "is_incremental": false,
@@ -17519,6 +17507,54 @@
         ".html": {
           "relative_path": "api/XData.RuntimeAssemblyLoader.html",
           "hash": "TQajnLIrROfTUfRggmzOhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Security.SecuritySession.GetGrantedActions.html",
+          "hash": "LUN1HEpDLWzWn8siBjzSmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Security.SecuritySession.Action.html",
+          "hash": "BwGwhrBO5i7eEksqg/i4Iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Security.SecuritySession.Property.html",
+          "hash": "dVWeqlOlJmD4kAq83ZJEYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/XData.Security.SecuritySession.html",
+          "hash": "jfpwvVPXLXl0+WZcIgUbDA=="
         }
       },
       "is_incremental": false,
@@ -17639,54 +17675,6 @@
         ".html": {
           "relative_path": "api/XData.Security.SecuritySession.FilterGrantedObjects.html",
           "hash": "lnMv1OkLJxX6a+IxQgZqAg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Security.SecuritySession.GetGrantedActions.html",
-          "hash": "LUN1HEpDLWzWn8siBjzSmg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Security.SecuritySession.Action.html",
-          "hash": "BwGwhrBO5i7eEksqg/i4Iw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Security.SecuritySession.Property.html",
-          "hash": "dVWeqlOlJmD4kAq83ZJEYQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/XData.Security.SecuritySession.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/XData.Security.SecuritySession.html",
-          "hash": "jfpwvVPXLXl0+WZcIgUbDA=="
         }
       },
       "is_incremental": false,
@@ -17878,7 +17866,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.SerializedData.html",
-          "hash": "fr/u16nDD0yWPnpO+8wnHw=="
+          "hash": "nIsOvGiXEY9pzPpOIx9tUw=="
         }
       },
       "is_incremental": false,
@@ -18022,7 +18010,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.SerializedValue.html",
-          "hash": "zRMuUXIVNMLpr4PFDF402g=="
+          "hash": "zwrs7IubTNY8hvDyXoqanw=="
         }
       },
       "is_incremental": false,
@@ -18334,7 +18322,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.XDataLogic-1.BeginTransaction.html",
-          "hash": "f0zDdVaH+DPzHyldk64MWw=="
+          "hash": "p+8+BY2EaxmjIjv6kP1s4A=="
         }
       },
       "is_incremental": false,
@@ -18370,7 +18358,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.XDataLogic-1.html",
-          "hash": "c05acCd+0qZ4W7DXPJ6IEA=="
+          "hash": "1c+J2ZWYlJqC+rrDdz7F6Q=="
         }
       },
       "is_incremental": false,
@@ -18442,7 +18430,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.XDataPureLinqMethodAttribute.html",
-          "hash": "Neii6DGEOBtlomzj/a7hYw=="
+          "hash": "S2D1golkBjc/sG68iK7nLw=="
         }
       },
       "is_incremental": false,
@@ -18466,7 +18454,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Qe/q23fRJVbcGtuCJKi+DQ=="
+          "hash": "bWfjMNShspUgobs2MP4fAw=="
         }
       },
       "is_incremental": false,
@@ -18598,7 +18586,7 @@
       "output": {
         ".html": {
           "relative_path": "tips/custom_sql.html",
-          "hash": "MPbdrhLNw0G4eaPudDJIUA=="
+          "hash": "Bbcu5/sd76C2q6AXAOt8UA=="
         }
       },
       "is_incremental": false,
@@ -18742,7 +18730,7 @@
       "output": {
         ".html": {
           "relative_path": "tips/tips.html",
-          "hash": "Ca6WtqQs3qsHz3XNkUrgmQ=="
+          "hash": "f/mNJdIBiGzt9cKNUzWxzQ=="
         }
       },
       "is_incremental": false,
@@ -18766,7 +18754,7 @@
       "output": {
         ".html": {
           "relative_path": "tips/transactions.html",
-          "hash": "btw7ApJehASdaFYylsV8ng=="
+          "hash": "s/lc3VLHoloTi3YhtGdMaA=="
         }
       },
       "is_incremental": false,
@@ -18886,7 +18874,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/config.html",
-          "hash": "LEFxWAjkcG1YvvMTyhHAPw=="
+          "hash": "yfZR2EbnQ9eJ1KDnUCggqw=="
         }
       },
       "is_incremental": false,
@@ -18994,7 +18982,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/db_diagram.html",
-          "hash": "z5xNXNW6jXTB2E8CQSqyiQ=="
+          "hash": "G1cgEcc96KgUR61AtJol6A=="
         }
       },
       "is_incremental": false,
@@ -19009,7 +18997,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/dynamic.html",
-          "hash": "j2pyTquc3d3R1gFabDYVMQ=="
+          "hash": "vCb0a1qc1Y3Ps4WzjOsYNQ=="
         }
       },
       "is_incremental": false,
@@ -19165,7 +19153,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/parameter.html",
-          "hash": "djOd9LAx5bewowCNLSuGAw=="
+          "hash": "tV2qo5QkQ25guZ1zUsZCvQ=="
         }
       },
       "is_incremental": false,
@@ -19177,7 +19165,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/procedure.html",
-          "hash": "sQKqXhjNLwavZJgnY2LO9Q=="
+          "hash": "/hr2+HKt/9H4MMzs5g86+A=="
         }
       },
       "is_incremental": false,
@@ -19357,7 +19345,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/property/column.html",
-          "hash": "NhRNBDHoX5XzPf94LkP3dQ=="
+          "hash": "gVefhTeR/WN2GpX+Zqp1GA=="
         }
       },
       "is_incremental": false,
@@ -19405,7 +19393,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/property/property.html",
-          "hash": "+M+WnlUdyfbTKa1WVy6d8A=="
+          "hash": "ila48Ww0csMM1rT9qhtlhw=="
         }
       },
       "is_incremental": false,
@@ -19429,7 +19417,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/property/sql_expr.html",
-          "hash": "6+MW7zkfFs+2eNczQrPMoA=="
+          "hash": "8Z5VgTT+l+guEiQeDm9GQQ=="
         }
       },
       "is_incremental": false,
@@ -19453,7 +19441,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/sample.html",
-          "hash": "kqNEhtnKP1w0GKo+akOhWQ=="
+          "hash": "xBD4hbHukxzwXJUEkNi3iw=="
         }
       },
       "is_incremental": false,
@@ -20008,7 +19996,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/sample.html",
-          "hash": "NJAq0DF2qx8woYUTaPoiLg=="
+          "hash": "g2dFa5086fx5ZeUAfDK04g=="
         }
       },
       "is_incremental": false,
@@ -20023,7 +20011,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/static.html",
-          "hash": "kOdw+32AxqGwC+DbqN9SEw=="
+          "hash": "WAwq00LaUnmjVT4ULlTBsQ=="
         }
       },
       "is_incremental": false,
@@ -20179,7 +20167,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/using.html",
-          "hash": "XWtFF60dZw9uX+4UeKXkvA=="
+          "hash": "Urdfa720v3nTyZBnMz3B0Q=="
         }
       },
       "is_incremental": false,
@@ -20206,12 +20194,9 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ResourceDocumentProcessor": {
@@ -20219,9 +20204,12 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }
