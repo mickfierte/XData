@@ -81,8 +81,29 @@
 
 <p>During process of developing and debuging Your application the XData can provide You information to find error or understand context of any data processing activity. XData does not enforce developer with using some logging system. Instead of that XData (version .Net 4.0) provide simple interface <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> to implement. Implementation of this interface (if not implemented yet) alowes to integrate XData log output into any You choose logging subsystem of Your application. As example You can use any log writer plugin from XData sources. Configuration of log writer plugin is described <a href="config.html">configuration file section <em>xdata</em></a> using attribute <em>log</em> providing value with assembly qualified type name, where type is implements <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> interface.</p>
 <p>XData (version .Net Standard 2.0) use <a href="https://www.nuget.org/packages/Microsoft.Extensions.Logging">Microsoft.Extensions.Logging</a> subsystem.</p>
-<p>When basic information of XData data processing logging is few (errors, critical information, warnings), it&#39;s possible to switch on the debug mode in <a href="config.html">configuration file section <em>xdata</em></a> using attribute <em>debug</em> = <strong>true</strong>. All debug information will be writed to log (SQL queries and calls, transaction using, custom data aware business logic calls and other usefull to debug information).</p>
-<div class="IMPORTANT"><h5>Important</h5><p>Switching on the debug mode can reduse application productivity. It&#39;s recomended to switch off debug mode when not required.
+<p>In the case when the default level (usually the logging level “Information”) is not sufficient to diagnose the problem, it can be lowered by means of the basic logging technology (including by setting the logging parameters in the configuration file). The configuration rules of the basic logging subsystem can be found on their websites: <a href="https://www.nuget.org/packages/Microsoft.Extensions.Logging">Microsoft.Extensions.Logging</a>, <a href="https://msdn.microsoft.com/en-en/windows/desktop/system.diagnostics.trace">System.Diagnostics.Trace</a>, <a href="https://logging.apache.org/log4net">log4net</a>.</p>
+<p>* (version .Net Standard 2.0)
+<em>Microsoft.Extensions.Logging</em> cathegory name of XData loger is &quot;XData&quot;. Sample loging configuration for debug:</p>
+<pre><code class="lang-json">{
+  &quot;Logging&quot;: {
+    &quot;LogLevel&quot;: {
+      &quot;Default&quot;: &quot;Debug&quot;,
+      &quot;XData&quot;: &quot;Debug&quot;,
+      &quot;System&quot;: &quot;Information&quot;,
+      &quot;Microsoft&quot;: &quot;Information&quot;
+    },
+    &quot;Debug&quot;: {
+      &quot;LogLevel&quot;: { &quot;Default&quot;: &quot;Debug&quot; }
+    },
+    &quot;Console&quot;: {
+      &quot;LogLevel&quot;: { &quot;Default&quot;: &quot;Information&quot; }
+    } 
+  }
+}
+</code></pre><p>* (version .Net 4.0)
+<em>System.Diagnostics.Trace</em> switch name for XData log messages is &quot;logLevelSwitch&quot;. See System.Diagnostics.Trace <a href="https://msdn.microsoft.com/en-en/windows/desktop/system.diagnostics.traceswitch">documentation</a> for details.</p>
+<p><em>log4net</em> requires no specific constants to configure log messages severity level. See log4net <a href="https://logging.apache.org/log4net/release/config-examples.html">documentation</a> to obtain configuration details.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>Configuration of logging subsystem to debug mode can reduse application productivity. It&#39;s recomended to switch off debug mode when not required.
 But it&#39;s a very powerfull tool to help developer with repository mapping correctness check. I&#39;ts a highly recommended to use it on debug stage!
 SQL query logging can be also used as source for checking query plan effectiveness. Always check query plans - it&#39;s help You to develop high quality products.</p>
 </div>
@@ -93,6 +114,9 @@ SQL query logging can be also used as source for checking query plan effectivene
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mickfierte/private/blob/main/doc/tutorial/logging.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
