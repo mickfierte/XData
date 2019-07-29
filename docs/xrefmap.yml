@@ -865,24 +865,24 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.ExecuteScalarAsync(Of TResult)(XData.IDataScope, XData.Database.Adapter.Query)
   nameWithType: AsyncExtensions.ExecuteScalarAsync<TResult>(IDataScope, Query)
   nameWithType.vb: AsyncExtensions.ExecuteScalarAsync(Of TResult)(IDataScope, Query)
-- uid: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name: ExecuteSqlBlockAsync(IDataScope, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  href: api/XData.Async.AsyncExtensions.ExecuteSqlBlockAsync.html#XData_Async_AsyncExtensions_ExecuteSqlBlockAsync_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
-  commentId: M:XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name.vb: ExecuteSqlBlockAsync(IDataScope, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-  fullName: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
-  fullName.vb: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
-  nameWithType: AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  nameWithType.vb: AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-- uid: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name: ExecuteSqlBlockAsync(IDataScope, CancellationToken, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  href: api/XData.Async.AsyncExtensions.ExecuteSqlBlockAsync.html#XData_Async_AsyncExtensions_ExecuteSqlBlockAsync_XData_IDataScope_System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
-  commentId: M:XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name.vb: ExecuteSqlBlockAsync(IDataScope, CancellationToken, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-  fullName: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
-  fullName.vb: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope, System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
-  nameWithType: AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, CancellationToken, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  nameWithType.vb: AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, CancellationToken, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+- uid: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: ExecuteSqlBlockAsync(IDataScope, Expression<SqlBlockDefinition>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Async.AsyncExtensions.ExecuteSqlBlockAsync.html#XData_Async_AsyncExtensions_ExecuteSqlBlockAsync_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: ExecuteSqlBlockAsync(IDataScope, Expression(Of SqlBlockDefinition), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope, System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope, System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, Expression<SqlBlockDefinition>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, Expression(Of SqlBlockDefinition), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+- uid: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Threading.CancellationToken,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: ExecuteSqlBlockAsync(IDataScope, CancellationToken, Expression<SqlBlockDefinition>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Async.AsyncExtensions.ExecuteSqlBlockAsync.html#XData_Async_AsyncExtensions_ExecuteSqlBlockAsync_XData_IDataScope_System_Threading_CancellationToken_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope,System.Threading.CancellationToken,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: ExecuteSqlBlockAsync(IDataScope, CancellationToken, Expression(Of SqlBlockDefinition), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope, System.Threading.CancellationToken, System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync(XData.IDataScope, System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, CancellationToken, Expression<SqlBlockDefinition>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: AsyncExtensions.ExecuteSqlBlockAsync(IDataScope, CancellationToken, Expression(Of SqlBlockDefinition), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
 - uid: XData.Async.AsyncExtensions.ExecuteSqlBlockAsync*
   name: ExecuteSqlBlockAsync
   href: api/XData.Async.AsyncExtensions.ExecuteSqlBlockAsync.html
@@ -1075,42 +1075,42 @@ references:
   commentId: Overload:XData.Async.AsyncExtensions.GetSqlBlockDataAsync
   fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync
   nameWithType: AsyncExtensions.GetSqlBlockDataAsync
-- uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name: GetSqlBlockDataAsync<T>(IDataScope, Func<JsonSettings<T>, JsonSettings<T>>, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter___0__XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
-  commentId: M:XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name.vb: GetSqlBlockDataAsync(Of T)(IDataScope, Func(Of JsonSettings(Of T), JsonSettings(Of T)), Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-  fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync<T>(XData.IDataScope, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter<T>, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
-  fullName.vb: XData.Async.AsyncExtensions.GetSqlBlockDataAsync(Of T)(XData.IDataScope, System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter(Of T), XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
-  nameWithType: AsyncExtensions.GetSqlBlockDataAsync<T>(IDataScope, Func<JsonSettings<T>, JsonSettings<T>>, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  nameWithType.vb: AsyncExtensions.GetSqlBlockDataAsync(Of T)(IDataScope, Func(Of JsonSettings(Of T), JsonSettings(Of T)), Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-- uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name: GetSqlBlockDataAsync<T>(IDataScope, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter___0__XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
-  commentId: M:XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name.vb: GetSqlBlockDataAsync(Of T)(IDataScope, Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-  fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync<T>(XData.IDataScope, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter<T>, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
-  fullName.vb: XData.Async.AsyncExtensions.GetSqlBlockDataAsync(Of T)(XData.IDataScope, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter(Of T), XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
-  nameWithType: AsyncExtensions.GetSqlBlockDataAsync<T>(IDataScope, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  nameWithType.vb: AsyncExtensions.GetSqlBlockDataAsync(Of T)(IDataScope, Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-- uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name: GetSqlBlockDataAsync<T>(IDataScope, CancellationToken, Func<JsonSettings<T>, JsonSettings<T>>, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Threading_CancellationToken_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter___0__XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
-  commentId: M:XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name.vb: GetSqlBlockDataAsync(Of T)(IDataScope, CancellationToken, Func(Of JsonSettings(Of T), JsonSettings(Of T)), Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-  fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync<T>(XData.IDataScope, System.Threading.CancellationToken, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter<T>, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
-  fullName.vb: XData.Async.AsyncExtensions.GetSqlBlockDataAsync(Of T)(XData.IDataScope, System.Threading.CancellationToken, System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter(Of T), XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
-  nameWithType: AsyncExtensions.GetSqlBlockDataAsync<T>(IDataScope, CancellationToken, Func<JsonSettings<T>, JsonSettings<T>>, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  nameWithType.vb: AsyncExtensions.GetSqlBlockDataAsync(Of T)(IDataScope, CancellationToken, Func(Of JsonSettings(Of T), JsonSettings(Of T)), Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-- uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name: GetSqlBlockDataAsync<T>(IDataScope, CancellationToken, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter___0__XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
-  commentId: M:XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name.vb: GetSqlBlockDataAsync(Of T)(IDataScope, CancellationToken, Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-  fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync<T>(XData.IDataScope, System.Threading.CancellationToken, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter<T>, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
-  fullName.vb: XData.Async.AsyncExtensions.GetSqlBlockDataAsync(Of T)(XData.IDataScope, System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter(Of T), XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
-  nameWithType: AsyncExtensions.GetSqlBlockDataAsync<T>(IDataScope, CancellationToken, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  nameWithType.vb: AsyncExtensions.GetSqlBlockDataAsync(Of T)(IDataScope, CancellationToken, Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+- uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: GetSqlBlockDataAsync<T>(IDataScope, Func<JsonSettings<T>, JsonSettings<T>>, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: GetSqlBlockDataAsync(Of T)(IDataScope, Func(Of JsonSettings(Of T), JsonSettings(Of T)), Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync<T>(XData.IDataScope, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>, System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition<T>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Async.AsyncExtensions.GetSqlBlockDataAsync(Of T)(XData.IDataScope, System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)), System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition(Of T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: AsyncExtensions.GetSqlBlockDataAsync<T>(IDataScope, Func<JsonSettings<T>, JsonSettings<T>>, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: AsyncExtensions.GetSqlBlockDataAsync(Of T)(IDataScope, Func(Of JsonSettings(Of T), JsonSettings(Of T)), Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+- uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: GetSqlBlockDataAsync<T>(IDataScope, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: GetSqlBlockDataAsync(Of T)(IDataScope, Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync<T>(XData.IDataScope, System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition<T>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Async.AsyncExtensions.GetSqlBlockDataAsync(Of T)(XData.IDataScope, System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition(Of T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: AsyncExtensions.GetSqlBlockDataAsync<T>(IDataScope, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: AsyncExtensions.GetSqlBlockDataAsync(Of T)(IDataScope, Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+- uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: GetSqlBlockDataAsync<T>(IDataScope, CancellationToken, Func<JsonSettings<T>, JsonSettings<T>>, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Threading_CancellationToken_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: GetSqlBlockDataAsync(Of T)(IDataScope, CancellationToken, Func(Of JsonSettings(Of T), JsonSettings(Of T)), Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync<T>(XData.IDataScope, System.Threading.CancellationToken, System.Func<XData.Json.JsonSettings<T>, XData.Json.JsonSettings<T>>, System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition<T>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Async.AsyncExtensions.GetSqlBlockDataAsync(Of T)(XData.IDataScope, System.Threading.CancellationToken, System.Func(Of XData.Json.JsonSettings(Of T), XData.Json.JsonSettings(Of T)), System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition(Of T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: AsyncExtensions.GetSqlBlockDataAsync<T>(IDataScope, CancellationToken, Func<JsonSettings<T>, JsonSettings<T>>, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: AsyncExtensions.GetSqlBlockDataAsync(Of T)(IDataScope, CancellationToken, Func(Of JsonSettings(Of T), JsonSettings(Of T)), Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+- uid: XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Threading.CancellationToken,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: GetSqlBlockDataAsync<T>(IDataScope, CancellationToken, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Async.AsyncExtensions.GetSqlBlockDataAsync.html#XData_Async_AsyncExtensions_GetSqlBlockDataAsync__1_XData_IDataScope_System_Threading_CancellationToken_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Async.AsyncExtensions.GetSqlBlockDataAsync``1(XData.IDataScope,System.Threading.CancellationToken,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: GetSqlBlockDataAsync(Of T)(IDataScope, CancellationToken, Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Async.AsyncExtensions.GetSqlBlockDataAsync<T>(XData.IDataScope, System.Threading.CancellationToken, System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition<T>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Async.AsyncExtensions.GetSqlBlockDataAsync(Of T)(XData.IDataScope, System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition(Of T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: AsyncExtensions.GetSqlBlockDataAsync<T>(IDataScope, CancellationToken, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: AsyncExtensions.GetSqlBlockDataAsync(Of T)(IDataScope, CancellationToken, Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
 - uid: XData.Async.AsyncExtensions.LoadLobAsync*
   name: LoadLobAsync
   href: api/XData.Async.AsyncExtensions.LoadLobAsync.html
@@ -4130,21 +4130,30 @@ references:
   commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.BeautifyRtf
   fullName: XData.Database.Dialect.BaseSqlBuilder.BeautifyRtf
   nameWithType: BaseSqlBuilder.BeautifyRtf
+- uid: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock(System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: BuildSqlBlock(Expression<SqlBlockDefinition>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock.html#XData_Database_Dialect_BaseSqlBuilder_BuildSqlBlock_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock(System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: BuildSqlBlock(Expression(Of SqlBlockDefinition), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock(System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock(System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: BaseSqlBuilder.BuildSqlBlock(Expression<SqlBlockDefinition>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: BaseSqlBuilder.BuildSqlBlock(Expression(Of SqlBlockDefinition), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
 - uid: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock*
   name: BuildSqlBlock
   href: api/XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock.html
   commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock
   fullName: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock
   nameWithType: BaseSqlBuilder.BuildSqlBlock
-- uid: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock``1(XData.Database.SqlBlock.ISqlBlockStructure{``0})
-  name: BuildSqlBlock<T>(ISqlBlockStructure<T>)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock.html#XData_Database_Dialect_BaseSqlBuilder_BuildSqlBlock__1_XData_Database_SqlBlock_ISqlBlockStructure___0__
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock``1(XData.Database.SqlBlock.ISqlBlockStructure{``0})
-  name.vb: BuildSqlBlock(Of T)(ISqlBlockStructure(Of T))
-  fullName: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock<T>(XData.Database.SqlBlock.ISqlBlockStructure<T>)
-  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock(Of T)(XData.Database.SqlBlock.ISqlBlockStructure(Of T))
-  nameWithType: BaseSqlBuilder.BuildSqlBlock<T>(ISqlBlockStructure<T>)
-  nameWithType.vb: BaseSqlBuilder.BuildSqlBlock(Of T)(ISqlBlockStructure(Of T))
+- uid: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock``1(System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[],System.Func{DataRow,``0}@)
+  name: BuildSqlBlock<T>(Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[], out Func<DataRow, T>)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock.html#XData_Database_Dialect_BaseSqlBuilder_BuildSqlBlock__1_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____System_Func_DataRow___0___
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock``1(System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[],System.Func{DataRow,``0}@)
+  name.vb: BuildSqlBlock(Of T)(Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))(), ByRef Func(Of DataRow, T))
+  fullName: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock<T>(System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition<T>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[], out System.Func<DataRow, T>)
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.BuildSqlBlock(Of T)(System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition(Of T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))(), ByRef System.Func(Of DataRow, T))
+  nameWithType: BaseSqlBuilder.BuildSqlBlock<T>(Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[], out Func<DataRow, T>)
+  nameWithType.vb: BaseSqlBuilder.BuildSqlBlock(Of T)(Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))(), ByRef Func(Of DataRow, T))
 - uid: XData.Database.Dialect.BaseSqlBuilder.CompleteInsert(System.String,System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.Boolean}},System.Type)
   name: CompleteInsert(String, SortedList<String, Tuple<String, Boolean>>, Type)
   href: api/XData.Database.Dialect.BaseSqlBuilder.CompleteInsert.html#XData_Database_Dialect_BaseSqlBuilder_CompleteInsert_System_String_System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_Boolean___System_Type_
@@ -4772,6 +4781,18 @@ references:
   commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.SetQueryParameterValues
   fullName: XData.Database.Dialect.BaseSqlBuilder.SetQueryParameterValues
   nameWithType: BaseSqlBuilder.SetQueryParameterValues
+- uid: XData.Database.Dialect.BaseSqlBuilder.SqlBlockVariablePrefix
+  name: SqlBlockVariablePrefix
+  href: api/XData.Database.Dialect.BaseSqlBuilder.SqlBlockVariablePrefix.html#XData_Database_Dialect_BaseSqlBuilder_SqlBlockVariablePrefix
+  commentId: P:XData.Database.Dialect.BaseSqlBuilder.SqlBlockVariablePrefix
+  fullName: XData.Database.Dialect.BaseSqlBuilder.SqlBlockVariablePrefix
+  nameWithType: BaseSqlBuilder.SqlBlockVariablePrefix
+- uid: XData.Database.Dialect.BaseSqlBuilder.SqlBlockVariablePrefix*
+  name: SqlBlockVariablePrefix
+  href: api/XData.Database.Dialect.BaseSqlBuilder.SqlBlockVariablePrefix.html
+  commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.SqlBlockVariablePrefix
+  fullName: XData.Database.Dialect.BaseSqlBuilder.SqlBlockVariablePrefix
+  nameWithType: BaseSqlBuilder.SqlBlockVariablePrefix
 - uid: XData.Database.Dialect.BaseSqlBuilder.SqlStrings
   name: SqlStrings
   href: api/XData.Database.Dialect.BaseSqlBuilder.SqlStrings.html
@@ -5469,6 +5490,48 @@ references:
   commentId: F:XData.Database.Dialect.SqlStringType.SkipInsert
   fullName: XData.Database.Dialect.SqlStringType.SkipInsert
   nameWithType: SqlStringType.SkipInsert
+- uid: XData.Database.Dialect.SqlStringType.SqlBlockDelete
+  name: SqlBlockDelete
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlBlockDelete
+  commentId: F:XData.Database.Dialect.SqlStringType.SqlBlockDelete
+  fullName: XData.Database.Dialect.SqlStringType.SqlBlockDelete
+  nameWithType: SqlStringType.SqlBlockDelete
+- uid: XData.Database.Dialect.SqlStringType.SqlBlockIf
+  name: SqlBlockIf
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlBlockIf
+  commentId: F:XData.Database.Dialect.SqlStringType.SqlBlockIf
+  fullName: XData.Database.Dialect.SqlStringType.SqlBlockIf
+  nameWithType: SqlStringType.SqlBlockIf
+- uid: XData.Database.Dialect.SqlStringType.SqlBlockIfExists
+  name: SqlBlockIfExists
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlBlockIfExists
+  commentId: F:XData.Database.Dialect.SqlStringType.SqlBlockIfExists
+  fullName: XData.Database.Dialect.SqlStringType.SqlBlockIfExists
+  nameWithType: SqlStringType.SqlBlockIfExists
+- uid: XData.Database.Dialect.SqlStringType.SqlBlockInsert
+  name: SqlBlockInsert
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlBlockInsert
+  commentId: F:XData.Database.Dialect.SqlStringType.SqlBlockInsert
+  fullName: XData.Database.Dialect.SqlStringType.SqlBlockInsert
+  nameWithType: SqlStringType.SqlBlockInsert
+- uid: XData.Database.Dialect.SqlStringType.SqlBlockQuote
+  name: SqlBlockQuote
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlBlockQuote
+  commentId: F:XData.Database.Dialect.SqlStringType.SqlBlockQuote
+  fullName: XData.Database.Dialect.SqlStringType.SqlBlockQuote
+  nameWithType: SqlStringType.SqlBlockQuote
+- uid: XData.Database.Dialect.SqlStringType.SqlBlockReturn
+  name: SqlBlockReturn
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlBlockReturn
+  commentId: F:XData.Database.Dialect.SqlStringType.SqlBlockReturn
+  fullName: XData.Database.Dialect.SqlStringType.SqlBlockReturn
+  nameWithType: SqlStringType.SqlBlockReturn
+- uid: XData.Database.Dialect.SqlStringType.SqlBlockUpdate
+  name: SqlBlockUpdate
+  href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlBlockUpdate
+  commentId: F:XData.Database.Dialect.SqlStringType.SqlBlockUpdate
+  fullName: XData.Database.Dialect.SqlStringType.SqlBlockUpdate
+  nameWithType: SqlStringType.SqlBlockUpdate
 - uid: XData.Database.Dialect.SqlStringType.SqlParameter
   name: SqlParameter
   href: api/XData.Database.Dialect.SqlStringType.html#XData_Database_Dialect_SqlStringType_SqlParameter
@@ -5931,18 +5994,6 @@ references:
   commentId: T:XData.Database.SqlBlock.IBlockQueryDescription
   fullName: XData.Database.SqlBlock.IBlockQueryDescription
   nameWithType: IBlockQueryDescription
-- uid: XData.Database.SqlBlock.IBlockQueryDescription.Type
-  name: Type
-  href: api/XData.Database.SqlBlock.IBlockQueryDescription.Type.html#XData_Database_SqlBlock_IBlockQueryDescription_Type
-  commentId: P:XData.Database.SqlBlock.IBlockQueryDescription.Type
-  fullName: XData.Database.SqlBlock.IBlockQueryDescription.Type
-  nameWithType: IBlockQueryDescription.Type
-- uid: XData.Database.SqlBlock.IBlockQueryDescription.Type*
-  name: Type
-  href: api/XData.Database.SqlBlock.IBlockQueryDescription.Type.html
-  commentId: Overload:XData.Database.SqlBlock.IBlockQueryDescription.Type
-  fullName: XData.Database.SqlBlock.IBlockQueryDescription.Type
-  nameWithType: IBlockQueryDescription.Type
 - uid: XData.Database.SqlBlock.IBlockQueryDescription`1
   name: IBlockQueryDescription<T>
   href: api/XData.Database.SqlBlock.IBlockQueryDescription-1.html
@@ -5958,54 +6009,30 @@ references:
   commentId: T:XData.Database.SqlBlock.IBlockQueryStructure
   fullName: XData.Database.SqlBlock.IBlockQueryStructure
   nameWithType: IBlockQueryStructure
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.DataTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
-  name: DataTable(String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.DataTable.html#XData_Database_SqlBlock_IBlockQueryStructure_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____
-  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.DataTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
-  name.vb: DataTable(String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.DataTable(System.String, System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
-  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.DataTable(System.String, System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription))())
-  nameWithType: IBlockQueryStructure.DataTable(String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
-  nameWithType.vb: IBlockQueryStructure.DataTable(String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.DataTable*
-  name: DataTable
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.DataTable.html
-  commentId: Overload:XData.Database.SqlBlock.IBlockQueryStructure.DataTable
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.DataTable
-  nameWithType: IBlockQueryStructure.DataTable
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
-  name: InnerView(String, Type, Expression<Func<ISubqueryLinkAdapter, IFilterDescription>>[])
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.InnerView.html#XData_Database_SqlBlock_IBlockQueryStructure_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter_XData_Mapping_Dynamic_IFilterDescription_____
-  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
-  name.vb: InnerView(String, Type, Expression(Of Func(Of ISubqueryLinkAdapter, IFilterDescription))())
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.InnerView(System.String, System.Type, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
-  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.InnerView(System.String, System.Type, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter, XData.Mapping.Dynamic.IFilterDescription))())
-  nameWithType: IBlockQueryStructure.InnerView(String, Type, Expression<Func<ISubqueryLinkAdapter, IFilterDescription>>[])
-  nameWithType.vb: IBlockQueryStructure.InnerView(String, Type, Expression(Of Func(Of ISubqueryLinkAdapter, IFilterDescription))())
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.InnerView*
-  name: InnerView
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.InnerView.html
-  commentId: Overload:XData.Database.SqlBlock.IBlockQueryStructure.InnerView
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.InnerView
-  nameWithType: IBlockQueryStructure.InnerView
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name: InnerView<TDobj>(String, Expression<Func<ISubqueryLinkAdapter<TDobj>, IFilterDescription>>[])
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.InnerView.html#XData_Database_SqlBlock_IBlockQueryStructure_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____
-  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name.vb: InnerView(Of TDobj)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of TDobj), IFilterDescription))())
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.InnerView<TDobj>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<TDobj>, XData.Mapping.Dynamic.IFilterDescription>>[])
-  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.InnerView(Of TDobj)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of TDobj), XData.Mapping.Dynamic.IFilterDescription))())
-  nameWithType: IBlockQueryStructure.InnerView<TDobj>(String, Expression<Func<ISubqueryLinkAdapter<TDobj>, IFilterDescription>>[])
-  nameWithType.vb: IBlockQueryStructure.InnerView(Of TDobj)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of TDobj), IFilterDescription))())
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.InnerView``1(System.String,XData.Database.SqlBlock.IBlockQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name: InnerView<TDobj>(String, IBlockQueryDescription<TDobj>, Expression<Func<ISubqueryLinkAdapter<TDobj>, IFilterDescription>>[])
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.InnerView.html#XData_Database_SqlBlock_IBlockQueryStructure_InnerView__1_System_String_XData_Database_SqlBlock_IBlockQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____
-  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.InnerView``1(System.String,XData.Database.SqlBlock.IBlockQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name.vb: InnerView(Of TDobj)(String, IBlockQueryDescription(Of TDobj), Expression(Of Func(Of ISubqueryLinkAdapter(Of TDobj), IFilterDescription))())
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.InnerView<TDobj>(System.String, XData.Database.SqlBlock.IBlockQueryDescription<TDobj>, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<TDobj>, XData.Mapping.Dynamic.IFilterDescription>>[])
-  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.InnerView(Of TDobj)(System.String, XData.Database.SqlBlock.IBlockQueryDescription(Of TDobj), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of TDobj), XData.Mapping.Dynamic.IFilterDescription))())
-  nameWithType: IBlockQueryStructure.InnerView<TDobj>(String, IBlockQueryDescription<TDobj>, Expression<Func<ISubqueryLinkAdapter<TDobj>, IFilterDescription>>[])
-  nameWithType.vb: IBlockQueryStructure.InnerView(Of TDobj)(String, IBlockQueryDescription(Of TDobj), Expression(Of Func(Of ISubqueryLinkAdapter(Of TDobj), IFilterDescription))())
+- uid: XData.Database.SqlBlock.IBlockQueryStructure.GetStructure(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}})
+  name: GetStructure(String, Expression<Func<IQueryStructure, IQueryStructure>>)
+  href: api/XData.Database.SqlBlock.IBlockQueryStructure.GetStructure.html#XData_Database_SqlBlock_IBlockQueryStructure_GetStructure_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructure_XData_Mapping_Dynamic_IQueryStructure___
+  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.GetStructure(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}})
+  name.vb: GetStructure(String, Expression(Of Func(Of IQueryStructure, IQueryStructure)))
+  fullName: XData.Database.SqlBlock.IBlockQueryStructure.GetStructure(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure>>)
+  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.GetStructure(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure)))
+  nameWithType: IBlockQueryStructure.GetStructure(String, Expression<Func<IQueryStructure, IQueryStructure>>)
+  nameWithType.vb: IBlockQueryStructure.GetStructure(String, Expression(Of Func(Of IQueryStructure, IQueryStructure)))
+- uid: XData.Database.SqlBlock.IBlockQueryStructure.GetStructure*
+  name: GetStructure
+  href: api/XData.Database.SqlBlock.IBlockQueryStructure.GetStructure.html
+  commentId: Overload:XData.Database.SqlBlock.IBlockQueryStructure.GetStructure
+  fullName: XData.Database.SqlBlock.IBlockQueryStructure.GetStructure
+  nameWithType: IBlockQueryStructure.GetStructure
+- uid: XData.Database.SqlBlock.IBlockQueryStructure.GetStructure``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}})
+  name: GetStructure<T>(String, Expression<Func<IQueryStructure, IQueryStructure>>)
+  href: api/XData.Database.SqlBlock.IBlockQueryStructure.GetStructure.html#XData_Database_SqlBlock_IBlockQueryStructure_GetStructure__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructure_XData_Mapping_Dynamic_IQueryStructure___
+  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.GetStructure``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}})
+  name.vb: GetStructure(Of T)(String, Expression(Of Func(Of IQueryStructure, IQueryStructure)))
+  fullName: XData.Database.SqlBlock.IBlockQueryStructure.GetStructure<T>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure>>)
+  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.GetStructure(Of T)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure)))
+  nameWithType: IBlockQueryStructure.GetStructure<T>(String, Expression<Func<IQueryStructure, IQueryStructure>>)
+  nameWithType.vb: IBlockQueryStructure.GetStructure(Of T)(String, Expression(Of Func(Of IQueryStructure, IQueryStructure)))
 - uid: XData.Database.SqlBlock.IBlockQueryStructure.Select*
   name: Select
   href: api/XData.Database.SqlBlock.IBlockQueryStructure.Select.html
@@ -6021,39 +6048,18 @@ references:
   fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.Select(Of TResult)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryAdapter, TResult)))
   nameWithType: IBlockQueryStructure.Select<TResult>(Expression<Func<IBlockQueryAdapter, TResult>>)
   nameWithType.vb: IBlockQueryStructure.Select(Of TResult)(Expression(Of Func(Of IBlockQueryAdapter, TResult)))
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
-  name: Subquery(String, Type, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter, IFilterDescription>>[])
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.Subquery.html#XData_Database_SqlBlock_IBlockQueryStructure_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter_XData_Mapping_Dynamic_IFilterDescription_____
-  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
-  name.vb: Subquery(String, Type, String, DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter, IFilterDescription))())
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.Subquery(System.String, System.Type, System.String, XData.DataGrouping, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
-  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.Subquery(System.String, System.Type, System.String, XData.DataGrouping, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter, XData.Mapping.Dynamic.IFilterDescription))())
-  nameWithType: IBlockQueryStructure.Subquery(String, Type, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter, IFilterDescription>>[])
-  nameWithType.vb: IBlockQueryStructure.Subquery(String, Type, String, DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter, IFilterDescription))())
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.Subquery*
-  name: Subquery
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.Subquery.html
-  commentId: Overload:XData.Database.SqlBlock.IBlockQueryStructure.Subquery
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.Subquery
-  nameWithType: IBlockQueryStructure.Subquery
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name: Subquery<TDobj>(String, Expression<Func<TDobj, Object>>, DataGrouping, Expression<Func<ISubqueryLinkAdapter<TDobj>, IFilterDescription>>[])
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.Subquery.html#XData_Database_SqlBlock_IBlockQueryStructure_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____
-  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name.vb: Subquery(Of TDobj)(String, Expression(Of Func(Of TDobj, Object)), DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of TDobj), IFilterDescription))())
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.Subquery<TDobj>(System.String, System.Linq.Expressions.Expression<System.Func<TDobj, System.Object>>, XData.DataGrouping, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<TDobj>, XData.Mapping.Dynamic.IFilterDescription>>[])
-  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.Subquery(Of TDobj)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of TDobj, System.Object)), XData.DataGrouping, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of TDobj), XData.Mapping.Dynamic.IFilterDescription))())
-  nameWithType: IBlockQueryStructure.Subquery<TDobj>(String, Expression<Func<TDobj, Object>>, DataGrouping, Expression<Func<ISubqueryLinkAdapter<TDobj>, IFilterDescription>>[])
-  nameWithType.vb: IBlockQueryStructure.Subquery(Of TDobj)(String, Expression(Of Func(Of TDobj, Object)), DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of TDobj), IFilterDescription))())
-- uid: XData.Database.SqlBlock.IBlockQueryStructure.Subquery``1(System.String,XData.Database.SqlBlock.IBlockQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name: Subquery<TDobj>(String, IBlockQueryDescription<TDobj>, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter<TDobj>, IFilterDescription>>[])
-  href: api/XData.Database.SqlBlock.IBlockQueryStructure.Subquery.html#XData_Database_SqlBlock_IBlockQueryStructure_Subquery__1_System_String_XData_Database_SqlBlock_IBlockQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter___0__XData_Mapping_Dynamic_IFilterDescription_____
-  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.Subquery``1(System.String,XData.Database.SqlBlock.IBlockQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name.vb: Subquery(Of TDobj)(String, IBlockQueryDescription(Of TDobj), String, DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of TDobj), IFilterDescription))())
-  fullName: XData.Database.SqlBlock.IBlockQueryStructure.Subquery<TDobj>(System.String, XData.Database.SqlBlock.IBlockQueryDescription<TDobj>, System.String, XData.DataGrouping, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<TDobj>, XData.Mapping.Dynamic.IFilterDescription>>[])
-  fullName.vb: XData.Database.SqlBlock.IBlockQueryStructure.Subquery(Of TDobj)(System.String, XData.Database.SqlBlock.IBlockQueryDescription(Of TDobj), System.String, XData.DataGrouping, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of TDobj), XData.Mapping.Dynamic.IFilterDescription))())
-  nameWithType: IBlockQueryStructure.Subquery<TDobj>(String, IBlockQueryDescription<TDobj>, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter<TDobj>, IFilterDescription>>[])
-  nameWithType.vb: IBlockQueryStructure.Subquery(Of TDobj)(String, IBlockQueryDescription(Of TDobj), String, DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of TDobj), IFilterDescription))())
+- uid: XData.Database.SqlBlock.IBlockQueryStructure.VarName(System.String)
+  name: VarName(String)
+  href: api/XData.Database.SqlBlock.IBlockQueryStructure.VarName.html#XData_Database_SqlBlock_IBlockQueryStructure_VarName_System_String_
+  commentId: M:XData.Database.SqlBlock.IBlockQueryStructure.VarName(System.String)
+  fullName: XData.Database.SqlBlock.IBlockQueryStructure.VarName(System.String)
+  nameWithType: IBlockQueryStructure.VarName(String)
+- uid: XData.Database.SqlBlock.IBlockQueryStructure.VarName*
+  name: VarName
+  href: api/XData.Database.SqlBlock.IBlockQueryStructure.VarName.html
+  commentId: Overload:XData.Database.SqlBlock.IBlockQueryStructure.VarName
+  fullName: XData.Database.SqlBlock.IBlockQueryStructure.VarName
+  nameWithType: IBlockQueryStructure.VarName
 - uid: XData.Database.SqlBlock.IExpressionMergeAdapter
   name: IExpressionMergeAdapter
   href: api/XData.Database.SqlBlock.IExpressionMergeAdapter.html
@@ -6209,12 +6215,15 @@ references:
   commentId: Overload:XData.Database.SqlBlock.ISqlBlockAdapter.Declare
   fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Declare
   nameWithType: ISqlBlockAdapter.Declare
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.Delete(XData.Database.SqlBlock.IBlockQueryStructure,System.String)
-  name: Delete(IBlockQueryStructure, String)
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Delete.html#XData_Database_SqlBlock_ISqlBlockAdapter_Delete_XData_Database_SqlBlock_IBlockQueryStructure_System_String_
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.Delete(XData.Database.SqlBlock.IBlockQueryStructure,System.String)
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Delete(XData.Database.SqlBlock.IBlockQueryStructure, System.String)
-  nameWithType: ISqlBlockAdapter.Delete(IBlockQueryStructure, String)
+- uid: XData.Database.SqlBlock.ISqlBlockAdapter.Delete(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}})
+  name: Delete(String, Expression<Func<IQueryStructure, IQueryStructure>>)
+  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Delete.html#XData_Database_SqlBlock_ISqlBlockAdapter_Delete_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructure_XData_Mapping_Dynamic_IQueryStructure___
+  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.Delete(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}})
+  name.vb: Delete(String, Expression(Of Func(Of IQueryStructure, IQueryStructure)))
+  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Delete(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure>>)
+  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.Delete(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure)))
+  nameWithType: ISqlBlockAdapter.Delete(String, Expression<Func<IQueryStructure, IQueryStructure>>)
+  nameWithType.vb: ISqlBlockAdapter.Delete(String, Expression(Of Func(Of IQueryStructure, IQueryStructure)))
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter.Delete*
   name: Delete
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Delete.html
@@ -6227,27 +6236,15 @@ references:
   commentId: Overload:XData.Database.SqlBlock.ISqlBlockAdapter.ForEach
   fullName: XData.Database.SqlBlock.ISqlBlockAdapter.ForEach
   nameWithType: ISqlBlockAdapter.ForEach
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.ForEach``1(XData.Database.SqlBlock.IBlockQueryDescription{``0},System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Action{XData.Database.SqlBlock.ILoopVariableAdapter{``0}}}[])
-  name: ForEach<T>(IBlockQueryDescription<T>, String, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Action<ILoopVariableAdapter<T>>>[])
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.ForEach.html#XData_Database_SqlBlock_ISqlBlockAdapter_ForEach__1_XData_Database_SqlBlock_IBlockQueryDescription___0__System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Action_XData_Database_SqlBlock_ILoopVariableAdapter___0______
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.ForEach``1(XData.Database.SqlBlock.IBlockQueryDescription{``0},System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Action{XData.Database.SqlBlock.ILoopVariableAdapter{``0}}}[])
-  name.vb: ForEach(Of T)(IBlockQueryDescription(Of T), String, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Action(Of ILoopVariableAdapter(Of T)))())
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.ForEach<T>(XData.Database.SqlBlock.IBlockQueryDescription<T>, System.String, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Action<XData.Database.SqlBlock.ILoopVariableAdapter<T>>>[])
-  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.ForEach(Of T)(XData.Database.SqlBlock.IBlockQueryDescription(Of T), System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Action(Of XData.Database.SqlBlock.ILoopVariableAdapter(Of T)))())
-  nameWithType: ISqlBlockAdapter.ForEach<T>(IBlockQueryDescription<T>, String, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Action<ILoopVariableAdapter<T>>>[])
-  nameWithType.vb: ISqlBlockAdapter.ForEach(Of T)(IBlockQueryDescription(Of T), String, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Action(Of ILoopVariableAdapter(Of T)))())
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.GetStructure
-  name: GetStructure()
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.GetStructure.html#XData_Database_SqlBlock_ISqlBlockAdapter_GetStructure
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.GetStructure
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.GetStructure()
-  nameWithType: ISqlBlockAdapter.GetStructure()
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.GetStructure*
-  name: GetStructure
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.GetStructure.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlBlockAdapter.GetStructure
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.GetStructure
-  nameWithType: ISqlBlockAdapter.GetStructure
+- uid: XData.Database.SqlBlock.ISqlBlockAdapter.ForEach``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Action{XData.Database.SqlBlock.ILoopVariableAdapter{``0}}}[])
+  name: ForEach<T>(Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>, String, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Action<ILoopVariableAdapter<T>>>[])
+  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.ForEach.html#XData_Database_SqlBlock_ISqlBlockAdapter_ForEach__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Action_XData_Database_SqlBlock_ILoopVariableAdapter___0______
+  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.ForEach``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Action{XData.Database.SqlBlock.ILoopVariableAdapter{``0}}}[])
+  name.vb: ForEach(Of T)(Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))), String, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Action(Of ILoopVariableAdapter(Of T)))())
+  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.ForEach<T>(System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription<T>>>, System.String, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Action<XData.Database.SqlBlock.ILoopVariableAdapter<T>>>[])
+  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.ForEach(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription(Of T))), System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Action(Of XData.Database.SqlBlock.ILoopVariableAdapter(Of T)))())
+  nameWithType: ISqlBlockAdapter.ForEach<T>(Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>, String, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Action<ILoopVariableAdapter<T>>>[])
+  nameWithType.vb: ISqlBlockAdapter.ForEach(Of T)(Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))), String, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Action(Of ILoopVariableAdapter(Of T)))())
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter.If(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}},XData.FilterOperation,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}}[])
   name: If(Expression<Func<ISqlValueAdapter, ISqlValue>>, Expression<Func<ISqlValueAdapter, ISqlValue>>, FilterOperation, Expression<Func<ISqlBlockAdapter, ISqlBlock>>[])
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter.If.html#XData_Database_SqlBlock_ISqlBlockAdapter_If_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue___XData_FilterOperation_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock_____
@@ -6257,15 +6254,15 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.If(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue)), XData.FilterOperation, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock))())
   nameWithType: ISqlBlockAdapter.If(Expression<Func<ISqlValueAdapter, ISqlValue>>, Expression<Func<ISqlValueAdapter, ISqlValue>>, FilterOperation, Expression<Func<ISqlBlockAdapter, ISqlBlock>>[])
   nameWithType.vb: ISqlBlockAdapter.If(Expression(Of Func(Of ISqlValueAdapter, ISqlValue)), Expression(Of Func(Of ISqlValueAdapter, ISqlValue)), FilterOperation, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock))())
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.If(XData.Database.SqlBlock.IBlockQueryStructure,XData.FilterOperation,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}}[])
-  name: If(IBlockQueryStructure, FilterOperation, Expression<Func<ISqlBlockAdapter, ISqlBlock>>[])
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.If.html#XData_Database_SqlBlock_ISqlBlockAdapter_If_XData_Database_SqlBlock_IBlockQueryStructure_XData_FilterOperation_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock_____
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.If(XData.Database.SqlBlock.IBlockQueryStructure,XData.FilterOperation,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}}[])
-  name.vb: If(IBlockQueryStructure, FilterOperation, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock))())
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.If(XData.Database.SqlBlock.IBlockQueryStructure, XData.FilterOperation, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock>>[])
-  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.If(XData.Database.SqlBlock.IBlockQueryStructure, XData.FilterOperation, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock))())
-  nameWithType: ISqlBlockAdapter.If(IBlockQueryStructure, FilterOperation, Expression<Func<ISqlBlockAdapter, ISqlBlock>>[])
-  nameWithType.vb: ISqlBlockAdapter.If(IBlockQueryStructure, FilterOperation, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock))())
+- uid: XData.Database.SqlBlock.ISqlBlockAdapter.If(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}},XData.FilterOperation,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}}[])
+  name: If(Expression<Func<IQueryStructure, IQueryStructure>>, FilterOperation, Expression<Func<ISqlBlockAdapter, ISqlBlock>>[])
+  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.If.html#XData_Database_SqlBlock_ISqlBlockAdapter_If_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructure_XData_Mapping_Dynamic_IQueryStructure___XData_FilterOperation_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock_____
+  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.If(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}},XData.FilterOperation,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}}[])
+  name.vb: If(Expression(Of Func(Of IQueryStructure, IQueryStructure)), FilterOperation, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock))())
+  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.If(System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure>>, XData.FilterOperation, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock>>[])
+  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.If(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure)), XData.FilterOperation, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock))())
+  nameWithType: ISqlBlockAdapter.If(Expression<Func<IQueryStructure, IQueryStructure>>, FilterOperation, Expression<Func<ISqlBlockAdapter, ISqlBlock>>[])
+  nameWithType.vb: ISqlBlockAdapter.If(Expression(Of Func(Of IQueryStructure, IQueryStructure)), FilterOperation, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock))())
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter.If*
   name: If
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter.If.html
@@ -6290,36 +6287,36 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String, System.Collections.Generic.ICollection(Of System.String), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue))())
   nameWithType: ISqlBlockAdapter.Insert(String, ICollection<String>, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
   nameWithType.vb: ISqlBlockAdapter.Insert(String, ICollection(Of String), Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String,System.Collections.Generic.ICollection{System.String},XData.Database.SqlBlock.IBlockQueryDescription)
-  name: Insert(String, ICollection<String>, IBlockQueryDescription)
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Insert.html#XData_Database_SqlBlock_ISqlBlockAdapter_Insert_System_String_System_Collections_Generic_ICollection_System_String__XData_Database_SqlBlock_IBlockQueryDescription_
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String,System.Collections.Generic.ICollection{System.String},XData.Database.SqlBlock.IBlockQueryDescription)
-  name.vb: Insert(String, ICollection(Of String), IBlockQueryDescription)
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String, System.Collections.Generic.ICollection<System.String>, XData.Database.SqlBlock.IBlockQueryDescription)
-  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String, System.Collections.Generic.ICollection(Of System.String), XData.Database.SqlBlock.IBlockQueryDescription)
-  nameWithType: ISqlBlockAdapter.Insert(String, ICollection<String>, IBlockQueryDescription)
-  nameWithType.vb: ISqlBlockAdapter.Insert(String, ICollection(Of String), IBlockQueryDescription)
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter.Insert*
   name: Insert
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Insert.html
   commentId: Overload:XData.Database.SqlBlock.ISqlBlockAdapter.Insert
   fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Insert
   nameWithType: ISqlBlockAdapter.Insert
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.Merge(System.String,System.Collections.Generic.ICollection{System.String},System.String,XData.Database.SqlBlock.IBlockQueryDescription,System.String)
-  name: Merge(String, ICollection<String>, String, IBlockQueryDescription, String)
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Merge.html#XData_Database_SqlBlock_ISqlBlockAdapter_Merge_System_String_System_Collections_Generic_ICollection_System_String__System_String_XData_Database_SqlBlock_IBlockQueryDescription_System_String_
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.Merge(System.String,System.Collections.Generic.ICollection{System.String},System.String,XData.Database.SqlBlock.IBlockQueryDescription,System.String)
-  name.vb: Merge(String, ICollection(Of String), String, IBlockQueryDescription, String)
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Merge(System.String, System.Collections.Generic.ICollection<System.String>, System.String, XData.Database.SqlBlock.IBlockQueryDescription, System.String)
-  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.Merge(System.String, System.Collections.Generic.ICollection(Of System.String), System.String, XData.Database.SqlBlock.IBlockQueryDescription, System.String)
-  nameWithType: ISqlBlockAdapter.Merge(String, ICollection<String>, String, IBlockQueryDescription, String)
-  nameWithType.vb: ISqlBlockAdapter.Merge(String, ICollection(Of String), String, IBlockQueryDescription, String)
+- uid: XData.Database.SqlBlock.ISqlBlockAdapter.Insert``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}})
+  name: Insert<T>(String, Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>)
+  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Insert.html#XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____
+  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.Insert``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}})
+  name.vb: Insert(Of T)(String, Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))))
+  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Insert<T>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription<T>>>)
+  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.Insert(Of T)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription(Of T))))
+  nameWithType: ISqlBlockAdapter.Insert<T>(String, Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>)
+  nameWithType.vb: ISqlBlockAdapter.Insert(Of T)(String, Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))))
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter.Merge*
   name: Merge
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Merge.html
   commentId: Overload:XData.Database.SqlBlock.ISqlBlockAdapter.Merge
   fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Merge
   nameWithType: ISqlBlockAdapter.Merge
+- uid: XData.Database.SqlBlock.ISqlBlockAdapter.Merge``1(System.String,System.Collections.Generic.ICollection{System.String},System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.String)
+  name: Merge<T>(String, ICollection<String>, String, Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>, String)
+  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Merge.html#XData_Database_SqlBlock_ISqlBlockAdapter_Merge__1_System_String_System_Collections_Generic_ICollection_System_String__System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_String_
+  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.Merge``1(System.String,System.Collections.Generic.ICollection{System.String},System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.String)
+  name.vb: Merge(Of T)(String, ICollection(Of String), String, Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))), String)
+  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Merge<T>(System.String, System.Collections.Generic.ICollection<System.String>, System.String, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription<T>>>, System.String)
+  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.Merge(Of T)(System.String, System.Collections.Generic.ICollection(Of System.String), System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription(Of T))), System.String)
+  nameWithType: ISqlBlockAdapter.Merge<T>(String, ICollection<String>, String, Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>, String)
+  nameWithType.vb: ISqlBlockAdapter.Merge(Of T)(String, ICollection(Of String), String, Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))), String)
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
   name: SetVar(Expression<Func<ISqlValueAdapter, ISqlValue>>[])
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter.SetVar.html#XData_Database_SqlBlock_ISqlBlockAdapter_SetVar_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____
@@ -6329,48 +6326,36 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue))())
   nameWithType: ISqlBlockAdapter.SetVar(Expression<Func<ISqlValueAdapter, ISqlValue>>[])
   nameWithType.vb: ISqlBlockAdapter.SetVar(Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar(XData.Database.SqlBlock.IBlockQueryDescription,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
-  name: SetVar(IBlockQueryDescription, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.SetVar.html#XData_Database_SqlBlock_ISqlBlockAdapter_SetVar_XData_Database_SqlBlock_IBlockQueryDescription_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.SetVar(XData.Database.SqlBlock.IBlockQueryDescription,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
-  name.vb: SetVar(IBlockQueryDescription, Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar(XData.Database.SqlBlock.IBlockQueryDescription, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue>>[])
-  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar(XData.Database.SqlBlock.IBlockQueryDescription, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue))())
-  nameWithType: ISqlBlockAdapter.SetVar(IBlockQueryDescription, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
-  nameWithType.vb: ISqlBlockAdapter.SetVar(IBlockQueryDescription, Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar*
   name: SetVar
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter.SetVar.html
   commentId: Overload:XData.Database.SqlBlock.ISqlBlockAdapter.SetVar
   fullName: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar
   nameWithType: ISqlBlockAdapter.SetVar
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.Update(XData.Database.SqlBlock.IBlockQueryDescription,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
-  name: Update(IBlockQueryDescription, String, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Update.html#XData_Database_SqlBlock_ISqlBlockAdapter_Update_XData_Database_SqlBlock_IBlockQueryDescription_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.Update(XData.Database.SqlBlock.IBlockQueryDescription,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
-  name.vb: Update(IBlockQueryDescription, String, Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Update(XData.Database.SqlBlock.IBlockQueryDescription, System.String, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue>>[])
-  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.Update(XData.Database.SqlBlock.IBlockQueryDescription, System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue))())
-  nameWithType: ISqlBlockAdapter.Update(IBlockQueryDescription, String, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
-  nameWithType.vb: ISqlBlockAdapter.Update(IBlockQueryDescription, String, Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
+- uid: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
+  name: SetVar<T>(Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
+  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.SetVar.html#XData_Database_SqlBlock_ISqlBlockAdapter_SetVar__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____
+  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.SetVar``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
+  name.vb: SetVar(Of T)(Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))), Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
+  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar<T>(System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription<T>>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue>>[])
+  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.SetVar(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription(Of T))), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue))())
+  nameWithType: ISqlBlockAdapter.SetVar<T>(Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
+  nameWithType.vb: ISqlBlockAdapter.SetVar(Of T)(Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))), Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter.Update*
   name: Update
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Update.html
   commentId: Overload:XData.Database.SqlBlock.ISqlBlockAdapter.Update
   fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Update
   nameWithType: ISqlBlockAdapter.Update
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.VarName(System.String)
-  name: VarName(String)
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.VarName.html#XData_Database_SqlBlock_ISqlBlockAdapter_VarName_System_String_
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.VarName(System.String)
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.VarName(System.String)
-  nameWithType: ISqlBlockAdapter.VarName(String)
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter.VarName*
-  name: VarName
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.VarName.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlBlockAdapter.VarName
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.VarName
-  nameWithType: ISqlBlockAdapter.VarName
+- uid: XData.Database.SqlBlock.ISqlBlockAdapter.Update``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
+  name: Update<T>(String, Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
+  href: api/XData.Database.SqlBlock.ISqlBlockAdapter.Update.html#XData_Database_SqlBlock_ISqlBlockAdapter_Update__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____
+  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter.Update``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])
+  name.vb: Update(Of T)(String, Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))), Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
+  fullName: XData.Database.SqlBlock.ISqlBlockAdapter.Update<T>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription<T>>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue>>[])
+  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter.Update(Of T)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription(Of T))), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, XData.Database.SqlBlock.ISqlValue))())
+  nameWithType: ISqlBlockAdapter.Update<T>(String, Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>, Expression<Func<ISqlValueAdapter, ISqlValue>>[])
+  nameWithType.vb: ISqlBlockAdapter.Update(Of T)(String, Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))), Expression(Of Func(Of ISqlValueAdapter, ISqlValue))())
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter`1
   name: ISqlBlockAdapter<T>
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter-1.html
@@ -6380,15 +6365,15 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter(Of T)
   nameWithType: ISqlBlockAdapter<T>
   nameWithType.vb: ISqlBlockAdapter(Of T)
-- uid: XData.Database.SqlBlock.ISqlBlockAdapter`1.Return(XData.Database.SqlBlock.IBlockQueryDescription{`0})
-  name: Return(IBlockQueryDescription<T>)
-  href: api/XData.Database.SqlBlock.ISqlBlockAdapter-1.Return.html#XData_Database_SqlBlock_ISqlBlockAdapter_1_Return_XData_Database_SqlBlock_IBlockQueryDescription__0__
-  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter`1.Return(XData.Database.SqlBlock.IBlockQueryDescription{`0})
-  name.vb: Return(IBlockQueryDescription(Of T))
-  fullName: XData.Database.SqlBlock.ISqlBlockAdapter<T>.Return(XData.Database.SqlBlock.IBlockQueryDescription<T>)
-  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter(Of T).Return(XData.Database.SqlBlock.IBlockQueryDescription(Of T))
-  nameWithType: ISqlBlockAdapter<T>.Return(IBlockQueryDescription<T>)
-  nameWithType.vb: ISqlBlockAdapter(Of T).Return(IBlockQueryDescription(Of T))
+- uid: XData.Database.SqlBlock.ISqlBlockAdapter`1.Return(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{`0}}})
+  name: Return(Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>)
+  href: api/XData.Database.SqlBlock.ISqlBlockAdapter-1.Return.html#XData_Database_SqlBlock_ISqlBlockAdapter_1_Return_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription__0____
+  commentId: M:XData.Database.SqlBlock.ISqlBlockAdapter`1.Return(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{`0}}})
+  name.vb: Return(Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))))
+  fullName: XData.Database.SqlBlock.ISqlBlockAdapter<T>.Return(System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription<T>>>)
+  fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter(Of T).Return(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryStructure, XData.Database.SqlBlock.IBlockQueryDescription(Of T))))
+  nameWithType: ISqlBlockAdapter<T>.Return(Expression<Func<IBlockQueryStructure, IBlockQueryDescription<T>>>)
+  nameWithType.vb: ISqlBlockAdapter(Of T).Return(Expression(Of Func(Of IBlockQueryStructure, IBlockQueryDescription(Of T))))
 - uid: XData.Database.SqlBlock.ISqlBlockAdapter`1.Return*
   name: Return
   href: api/XData.Database.SqlBlock.ISqlBlockAdapter-1.Return.html
@@ -6397,33 +6382,12 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlBlockAdapter(Of T).Return
   nameWithType: ISqlBlockAdapter<T>.Return
   nameWithType.vb: ISqlBlockAdapter(Of T).Return
-- uid: XData.Database.SqlBlock.ISqlBlockStructure`1
-  name: ISqlBlockStructure<T>
-  href: api/XData.Database.SqlBlock.ISqlBlockStructure-1.html
-  commentId: T:XData.Database.SqlBlock.ISqlBlockStructure`1
-  name.vb: ISqlBlockStructure(Of T)
-  fullName: XData.Database.SqlBlock.ISqlBlockStructure<T>
-  fullName.vb: XData.Database.SqlBlock.ISqlBlockStructure(Of T)
-  nameWithType: ISqlBlockStructure<T>
-  nameWithType.vb: ISqlBlockStructure(Of T)
 - uid: XData.Database.SqlBlock.ISqlParam
   name: ISqlParam
   href: api/XData.Database.SqlBlock.ISqlParam.html
   commentId: T:XData.Database.SqlBlock.ISqlParam
   fullName: XData.Database.SqlBlock.ISqlParam
   nameWithType: ISqlParam
-- uid: XData.Database.SqlBlock.ISqlParam.Name
-  name: Name
-  href: api/XData.Database.SqlBlock.ISqlParam.Name.html#XData_Database_SqlBlock_ISqlParam_Name
-  commentId: P:XData.Database.SqlBlock.ISqlParam.Name
-  fullName: XData.Database.SqlBlock.ISqlParam.Name
-  nameWithType: ISqlParam.Name
-- uid: XData.Database.SqlBlock.ISqlParam.Name*
-  name: Name
-  href: api/XData.Database.SqlBlock.ISqlParam.Name.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlParam.Name
-  fullName: XData.Database.SqlBlock.ISqlParam.Name
-  nameWithType: ISqlParam.Name
 - uid: XData.Database.SqlBlock.ISqlParam.Set*
   name: Set
   href: api/XData.Database.SqlBlock.ISqlParam.Set.html
@@ -6439,42 +6403,6 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlParam.Set(Of T)(T)
   nameWithType: ISqlParam.Set<T>(T)
   nameWithType.vb: ISqlParam.Set(Of T)(T)
-- uid: XData.Database.SqlBlock.ISqlParam.SqlType
-  name: SqlType
-  href: api/XData.Database.SqlBlock.ISqlParam.SqlType.html#XData_Database_SqlBlock_ISqlParam_SqlType
-  commentId: P:XData.Database.SqlBlock.ISqlParam.SqlType
-  fullName: XData.Database.SqlBlock.ISqlParam.SqlType
-  nameWithType: ISqlParam.SqlType
-- uid: XData.Database.SqlBlock.ISqlParam.SqlType*
-  name: SqlType
-  href: api/XData.Database.SqlBlock.ISqlParam.SqlType.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlParam.SqlType
-  fullName: XData.Database.SqlBlock.ISqlParam.SqlType
-  nameWithType: ISqlParam.SqlType
-- uid: XData.Database.SqlBlock.ISqlParam.Value
-  name: Value
-  href: api/XData.Database.SqlBlock.ISqlParam.Value.html#XData_Database_SqlBlock_ISqlParam_Value
-  commentId: P:XData.Database.SqlBlock.ISqlParam.Value
-  fullName: XData.Database.SqlBlock.ISqlParam.Value
-  nameWithType: ISqlParam.Value
-- uid: XData.Database.SqlBlock.ISqlParam.Value*
-  name: Value
-  href: api/XData.Database.SqlBlock.ISqlParam.Value.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlParam.Value
-  fullName: XData.Database.SqlBlock.ISqlParam.Value
-  nameWithType: ISqlParam.Value
-- uid: XData.Database.SqlBlock.ISqlParam.ValueType
-  name: ValueType
-  href: api/XData.Database.SqlBlock.ISqlParam.ValueType.html#XData_Database_SqlBlock_ISqlParam_ValueType
-  commentId: P:XData.Database.SqlBlock.ISqlParam.ValueType
-  fullName: XData.Database.SqlBlock.ISqlParam.ValueType
-  nameWithType: ISqlParam.ValueType
-- uid: XData.Database.SqlBlock.ISqlParam.ValueType*
-  name: ValueType
-  href: api/XData.Database.SqlBlock.ISqlParam.ValueType.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlParam.ValueType
-  fullName: XData.Database.SqlBlock.ISqlParam.ValueType
-  nameWithType: ISqlParam.ValueType
 - uid: XData.Database.SqlBlock.ISqlParamAdapter
   name: ISqlParamAdapter
   href: api/XData.Database.SqlBlock.ISqlParamAdapter.html
@@ -6505,15 +6433,6 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlParamAdapter.Param(Of T)(System.String, DbType, System.Int32)
   nameWithType: ISqlParamAdapter.Param<T>(String, DbType, Int32)
   nameWithType.vb: ISqlParamAdapter.Param(Of T)(String, DbType, Int32)
-- uid: XData.Database.SqlBlock.ISqlParamAdapter.Param``1(System.String,DbType,System.Int32,System.Int32)
-  name: Param<T>(String, DbType, Int32, Int32)
-  href: api/XData.Database.SqlBlock.ISqlParamAdapter.Param.html#XData_Database_SqlBlock_ISqlParamAdapter_Param__1_System_String_DbType_System_Int32_System_Int32_
-  commentId: M:XData.Database.SqlBlock.ISqlParamAdapter.Param``1(System.String,DbType,System.Int32,System.Int32)
-  name.vb: Param(Of T)(String, DbType, Int32, Int32)
-  fullName: XData.Database.SqlBlock.ISqlParamAdapter.Param<T>(System.String, DbType, System.Int32, System.Int32)
-  fullName.vb: XData.Database.SqlBlock.ISqlParamAdapter.Param(Of T)(System.String, DbType, System.Int32, System.Int32)
-  nameWithType: ISqlParamAdapter.Param<T>(String, DbType, Int32, Int32)
-  nameWithType.vb: ISqlParamAdapter.Param(Of T)(String, DbType, Int32, Int32)
 - uid: XData.Database.SqlBlock.ISqlParamAdapter.Param``1(System.String,DbType,System.String)
   name: Param<T>(String, DbType, String)
   href: api/XData.Database.SqlBlock.ISqlParamAdapter.Param.html#XData_Database_SqlBlock_ISqlParamAdapter_Param__1_System_String_DbType_System_String_
@@ -6532,24 +6451,6 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlParamAdapter.Param(Of T)(System.String, DbType, System.String, System.Int32)
   nameWithType: ISqlParamAdapter.Param<T>(String, DbType, String, Int32)
   nameWithType.vb: ISqlParamAdapter.Param(Of T)(String, DbType, String, Int32)
-- uid: XData.Database.SqlBlock.ISqlParamAdapter.Param``1(System.String,DbType,System.String,System.Int32,System.Int32)
-  name: Param<T>(String, DbType, String, Int32, Int32)
-  href: api/XData.Database.SqlBlock.ISqlParamAdapter.Param.html#XData_Database_SqlBlock_ISqlParamAdapter_Param__1_System_String_DbType_System_String_System_Int32_System_Int32_
-  commentId: M:XData.Database.SqlBlock.ISqlParamAdapter.Param``1(System.String,DbType,System.String,System.Int32,System.Int32)
-  name.vb: Param(Of T)(String, DbType, String, Int32, Int32)
-  fullName: XData.Database.SqlBlock.ISqlParamAdapter.Param<T>(System.String, DbType, System.String, System.Int32, System.Int32)
-  fullName.vb: XData.Database.SqlBlock.ISqlParamAdapter.Param(Of T)(System.String, DbType, System.String, System.Int32, System.Int32)
-  nameWithType: ISqlParamAdapter.Param<T>(String, DbType, String, Int32, Int32)
-  nameWithType.vb: ISqlParamAdapter.Param(Of T)(String, DbType, String, Int32, Int32)
-- uid: XData.Database.SqlBlock.ISqlParamAdapter.Param``1(System.String,DbType,System.String,XData.Database.SqlBlock.SqlType[])
-  name: Param<T>(String, DbType, String, SqlType[])
-  href: api/XData.Database.SqlBlock.ISqlParamAdapter.Param.html#XData_Database_SqlBlock_ISqlParamAdapter_Param__1_System_String_DbType_System_String_XData_Database_SqlBlock_SqlType___
-  commentId: M:XData.Database.SqlBlock.ISqlParamAdapter.Param``1(System.String,DbType,System.String,XData.Database.SqlBlock.SqlType[])
-  name.vb: Param(Of T)(String, DbType, String, SqlType())
-  fullName: XData.Database.SqlBlock.ISqlParamAdapter.Param<T>(System.String, DbType, System.String, XData.Database.SqlBlock.SqlType[])
-  fullName.vb: XData.Database.SqlBlock.ISqlParamAdapter.Param(Of T)(System.String, DbType, System.String, XData.Database.SqlBlock.SqlType())
-  nameWithType: ISqlParamAdapter.Param<T>(String, DbType, String, SqlType[])
-  nameWithType.vb: ISqlParamAdapter.Param(Of T)(String, DbType, String, SqlType())
 - uid: XData.Database.SqlBlock.ISqlParamAdapter.Param``1(System.String,XData.Database.SqlBlock.SqlType)
   name: Param<T>(String, SqlType)
   href: api/XData.Database.SqlBlock.ISqlParamAdapter.Param.html#XData_Database_SqlBlock_ISqlParamAdapter_Param__1_System_String_XData_Database_SqlBlock_SqlType_
@@ -6565,6 +6466,30 @@ references:
   commentId: T:XData.Database.SqlBlock.ISqlTableAdapter
   fullName: XData.Database.SqlBlock.ISqlTableAdapter
   nameWithType: ISqlTableAdapter
+- uid: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,DbType)
+  name: Field(String, DbType)
+  href: api/XData.Database.SqlBlock.ISqlTableAdapter.Field.html#XData_Database_SqlBlock_ISqlTableAdapter_Field_System_String_DbType_
+  commentId: M:XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,DbType)
+  fullName: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String, DbType)
+  nameWithType: ISqlTableAdapter.Field(String, DbType)
+- uid: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,DbType,System.Int32)
+  name: Field(String, DbType, Int32)
+  href: api/XData.Database.SqlBlock.ISqlTableAdapter.Field.html#XData_Database_SqlBlock_ISqlTableAdapter_Field_System_String_DbType_System_Int32_
+  commentId: M:XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,DbType,System.Int32)
+  fullName: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String, DbType, System.Int32)
+  nameWithType: ISqlTableAdapter.Field(String, DbType, Int32)
+- uid: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,DbType,System.String)
+  name: Field(String, DbType, String)
+  href: api/XData.Database.SqlBlock.ISqlTableAdapter.Field.html#XData_Database_SqlBlock_ISqlTableAdapter_Field_System_String_DbType_System_String_
+  commentId: M:XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,DbType,System.String)
+  fullName: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String, DbType, System.String)
+  nameWithType: ISqlTableAdapter.Field(String, DbType, String)
+- uid: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,DbType,System.String,System.Int32)
+  name: Field(String, DbType, String, Int32)
+  href: api/XData.Database.SqlBlock.ISqlTableAdapter.Field.html#XData_Database_SqlBlock_ISqlTableAdapter_Field_System_String_DbType_System_String_System_Int32_
+  commentId: M:XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,DbType,System.String,System.Int32)
+  fullName: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String, DbType, System.String, System.Int32)
+  nameWithType: ISqlTableAdapter.Field(String, DbType, String, Int32)
 - uid: XData.Database.SqlBlock.ISqlTableAdapter.Field(System.String,XData.Database.SqlBlock.SqlType)
   name: Field(String, SqlType)
   href: api/XData.Database.SqlBlock.ISqlTableAdapter.Field.html#XData_Database_SqlBlock_ISqlTableAdapter_Field_System_String_XData_Database_SqlBlock_SqlType_
@@ -6583,69 +6508,36 @@ references:
   commentId: T:XData.Database.SqlBlock.ISqlValue
   fullName: XData.Database.SqlBlock.ISqlValue
   nameWithType: ISqlValue
-- uid: XData.Database.SqlBlock.ISqlValue.Name
-  name: Name
-  href: api/XData.Database.SqlBlock.ISqlValue.Name.html#XData_Database_SqlBlock_ISqlValue_Name
-  commentId: P:XData.Database.SqlBlock.ISqlValue.Name
-  fullName: XData.Database.SqlBlock.ISqlValue.Name
-  nameWithType: ISqlValue.Name
-- uid: XData.Database.SqlBlock.ISqlValue.Name*
-  name: Name
-  href: api/XData.Database.SqlBlock.ISqlValue.Name.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlValue.Name
-  fullName: XData.Database.SqlBlock.ISqlValue.Name
-  nameWithType: ISqlValue.Name
 - uid: XData.Database.SqlBlock.ISqlValue.Set*
   name: Set
   href: api/XData.Database.SqlBlock.ISqlValue.Set.html
   commentId: Overload:XData.Database.SqlBlock.ISqlValue.Set
   fullName: XData.Database.SqlBlock.ISqlValue.Set
   nameWithType: ISqlValue.Set
-- uid: XData.Database.SqlBlock.ISqlValue.Set``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})
-  name: Set<T>(Expression<Func<IBlockQueryAdapter, T>>)
-  href: api/XData.Database.SqlBlock.ISqlValue.Set.html#XData_Database_SqlBlock_ISqlValue_Set__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___
-  commentId: M:XData.Database.SqlBlock.ISqlValue.Set``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})
-  name.vb: Set(Of T)(Expression(Of Func(Of IBlockQueryAdapter, T)))
-  fullName: XData.Database.SqlBlock.ISqlValue.Set<T>(System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryAdapter, T>>)
-  fullName.vb: XData.Database.SqlBlock.ISqlValue.Set(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryAdapter, T)))
-  nameWithType: ISqlValue.Set<T>(Expression<Func<IBlockQueryAdapter, T>>)
-  nameWithType.vb: ISqlValue.Set(Of T)(Expression(Of Func(Of IBlockQueryAdapter, T)))
-- uid: XData.Database.SqlBlock.ISqlValue.SqlType
-  name: SqlType
-  href: api/XData.Database.SqlBlock.ISqlValue.SqlType.html#XData_Database_SqlBlock_ISqlValue_SqlType
-  commentId: P:XData.Database.SqlBlock.ISqlValue.SqlType
-  fullName: XData.Database.SqlBlock.ISqlValue.SqlType
-  nameWithType: ISqlValue.SqlType
-- uid: XData.Database.SqlBlock.ISqlValue.SqlType*
-  name: SqlType
-  href: api/XData.Database.SqlBlock.ISqlValue.SqlType.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlValue.SqlType
-  fullName: XData.Database.SqlBlock.ISqlValue.SqlType
-  nameWithType: ISqlValue.SqlType
-- uid: XData.Database.SqlBlock.ISqlValue.Value
-  name: Value
-  href: api/XData.Database.SqlBlock.ISqlValue.Value.html#XData_Database_SqlBlock_ISqlValue_Value
-  commentId: P:XData.Database.SqlBlock.ISqlValue.Value
-  fullName: XData.Database.SqlBlock.ISqlValue.Value
-  nameWithType: ISqlValue.Value
-- uid: XData.Database.SqlBlock.ISqlValue.Value*
-  name: Value
-  href: api/XData.Database.SqlBlock.ISqlValue.Value.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlValue.Value
-  fullName: XData.Database.SqlBlock.ISqlValue.Value
-  nameWithType: ISqlValue.Value
-- uid: XData.Database.SqlBlock.ISqlValue.ValueType
-  name: ValueType
-  href: api/XData.Database.SqlBlock.ISqlValue.ValueType.html#XData_Database_SqlBlock_ISqlValue_ValueType
-  commentId: P:XData.Database.SqlBlock.ISqlValue.ValueType
-  fullName: XData.Database.SqlBlock.ISqlValue.ValueType
-  nameWithType: ISqlValue.ValueType
-- uid: XData.Database.SqlBlock.ISqlValue.ValueType*
-  name: ValueType
-  href: api/XData.Database.SqlBlock.ISqlValue.ValueType.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlValue.ValueType
-  fullName: XData.Database.SqlBlock.ISqlValue.ValueType
-  nameWithType: ISqlValue.ValueType
+- uid: XData.Database.SqlBlock.ISqlValue.Set``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,``0}})
+  name: Set<T>(Expression<Func<ISqlValueAdapter, T>>)
+  href: api/XData.Database.SqlBlock.ISqlValue.Set.html#XData_Database_SqlBlock_ISqlValue_Set__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter___0___
+  commentId: M:XData.Database.SqlBlock.ISqlValue.Set``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,``0}})
+  name.vb: Set(Of T)(Expression(Of Func(Of ISqlValueAdapter, T)))
+  fullName: XData.Database.SqlBlock.ISqlValue.Set<T>(System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlValueAdapter, T>>)
+  fullName.vb: XData.Database.SqlBlock.ISqlValue.Set(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlValueAdapter, T)))
+  nameWithType: ISqlValue.Set<T>(Expression<Func<ISqlValueAdapter, T>>)
+  nameWithType.vb: ISqlValue.Set(Of T)(Expression(Of Func(Of ISqlValueAdapter, T)))
+- uid: XData.Database.SqlBlock.ISqlValue.SetTable*
+  name: SetTable
+  href: api/XData.Database.SqlBlock.ISqlValue.SetTable.html
+  commentId: Overload:XData.Database.SqlBlock.ISqlValue.SetTable
+  fullName: XData.Database.SqlBlock.ISqlValue.SetTable
+  nameWithType: ISqlValue.SetTable
+- uid: XData.Database.SqlBlock.ISqlValue.SetTable``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,``0}})
+  name: SetTable<T>(Expression<Func<IBlockQueryStructure, T>>)
+  href: api/XData.Database.SqlBlock.ISqlValue.SetTable.html#XData_Database_SqlBlock_ISqlValue_SetTable__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure___0___
+  commentId: M:XData.Database.SqlBlock.ISqlValue.SetTable``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,``0}})
+  name.vb: SetTable(Of T)(Expression(Of Func(Of IBlockQueryStructure, T)))
+  fullName: XData.Database.SqlBlock.ISqlValue.SetTable<T>(System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryStructure, T>>)
+  fullName.vb: XData.Database.SqlBlock.ISqlValue.SetTable(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryStructure, T)))
+  nameWithType: ISqlValue.SetTable<T>(Expression<Func<IBlockQueryStructure, T>>)
+  nameWithType.vb: ISqlValue.SetTable(Of T)(Expression(Of Func(Of IBlockQueryStructure, T)))
 - uid: XData.Database.SqlBlock.ISqlValueAdapter
   name: ISqlValueAdapter
   href: api/XData.Database.SqlBlock.ISqlValueAdapter.html
@@ -6658,15 +6550,15 @@ references:
   commentId: Overload:XData.Database.SqlBlock.ISqlValueAdapter.Const
   fullName: XData.Database.SqlBlock.ISqlValueAdapter.Const
   nameWithType: ISqlValueAdapter.Const
-- uid: XData.Database.SqlBlock.ISqlValueAdapter.Const``1(``0)
-  name: Const<T>(T)
-  href: api/XData.Database.SqlBlock.ISqlValueAdapter.Const.html#XData_Database_SqlBlock_ISqlValueAdapter_Const__1___0_
-  commentId: M:XData.Database.SqlBlock.ISqlValueAdapter.Const``1(``0)
-  name.vb: Const(Of T)(T)
-  fullName: XData.Database.SqlBlock.ISqlValueAdapter.Const<T>(T)
-  fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.Const(Of T)(T)
-  nameWithType: ISqlValueAdapter.Const<T>(T)
-  nameWithType.vb: ISqlValueAdapter.Const(Of T)(T)
+- uid: XData.Database.SqlBlock.ISqlValueAdapter.Const``1(``0,DbType)
+  name: Const<T>(T, DbType)
+  href: api/XData.Database.SqlBlock.ISqlValueAdapter.Const.html#XData_Database_SqlBlock_ISqlValueAdapter_Const__1___0_DbType_
+  commentId: M:XData.Database.SqlBlock.ISqlValueAdapter.Const``1(``0,DbType)
+  name.vb: Const(Of T)(T, DbType)
+  fullName: XData.Database.SqlBlock.ISqlValueAdapter.Const<T>(T, DbType)
+  fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.Const(Of T)(T, DbType)
+  nameWithType: ISqlValueAdapter.Const<T>(T, DbType)
+  nameWithType.vb: ISqlValueAdapter.Const(Of T)(T, DbType)
 - uid: XData.Database.SqlBlock.ISqlValueAdapter.Data*
   name: Data
   href: api/XData.Database.SqlBlock.ISqlValueAdapter.Data.html
@@ -6688,45 +6580,45 @@ references:
   commentId: Overload:XData.Database.SqlBlock.ISqlValueAdapter.Param
   fullName: XData.Database.SqlBlock.ISqlValueAdapter.Param
   nameWithType: ISqlValueAdapter.Param
-- uid: XData.Database.SqlBlock.ISqlValueAdapter.Param``1(System.String)
-  name: Param<T>(String)
-  href: api/XData.Database.SqlBlock.ISqlValueAdapter.Param.html#XData_Database_SqlBlock_ISqlValueAdapter_Param__1_System_String_
-  commentId: M:XData.Database.SqlBlock.ISqlValueAdapter.Param``1(System.String)
-  name.vb: Param(Of T)(String)
-  fullName: XData.Database.SqlBlock.ISqlValueAdapter.Param<T>(System.String)
-  fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.Param(Of T)(System.String)
-  nameWithType: ISqlValueAdapter.Param<T>(String)
-  nameWithType.vb: ISqlValueAdapter.Param(Of T)(String)
-- uid: XData.Database.SqlBlock.ISqlValueAdapter.Select*
-  name: Select
-  href: api/XData.Database.SqlBlock.ISqlValueAdapter.Select.html
-  commentId: Overload:XData.Database.SqlBlock.ISqlValueAdapter.Select
-  fullName: XData.Database.SqlBlock.ISqlValueAdapter.Select
-  nameWithType: ISqlValueAdapter.Select
-- uid: XData.Database.SqlBlock.ISqlValueAdapter.Select``1(XData.Database.SqlBlock.IBlockQueryStructure,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})
-  name: Select<T>(IBlockQueryStructure, Expression<Func<IBlockQueryAdapter, T>>)
-  href: api/XData.Database.SqlBlock.ISqlValueAdapter.Select.html#XData_Database_SqlBlock_ISqlValueAdapter_Select__1_XData_Database_SqlBlock_IBlockQueryStructure_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___
-  commentId: M:XData.Database.SqlBlock.ISqlValueAdapter.Select``1(XData.Database.SqlBlock.IBlockQueryStructure,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})
-  name.vb: Select(Of T)(IBlockQueryStructure, Expression(Of Func(Of IBlockQueryAdapter, T)))
-  fullName: XData.Database.SqlBlock.ISqlValueAdapter.Select<T>(XData.Database.SqlBlock.IBlockQueryStructure, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryAdapter, T>>)
-  fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.Select(Of T)(XData.Database.SqlBlock.IBlockQueryStructure, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryAdapter, T)))
-  nameWithType: ISqlValueAdapter.Select<T>(IBlockQueryStructure, Expression<Func<IBlockQueryAdapter, T>>)
-  nameWithType.vb: ISqlValueAdapter.Select(Of T)(IBlockQueryStructure, Expression(Of Func(Of IBlockQueryAdapter, T)))
+- uid: XData.Database.SqlBlock.ISqlValueAdapter.Param``1(System.String,DbType)
+  name: Param<T>(String, DbType)
+  href: api/XData.Database.SqlBlock.ISqlValueAdapter.Param.html#XData_Database_SqlBlock_ISqlValueAdapter_Param__1_System_String_DbType_
+  commentId: M:XData.Database.SqlBlock.ISqlValueAdapter.Param``1(System.String,DbType)
+  name.vb: Param(Of T)(String, DbType)
+  fullName: XData.Database.SqlBlock.ISqlValueAdapter.Param<T>(System.String, DbType)
+  fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.Param(Of T)(System.String, DbType)
+  nameWithType: ISqlValueAdapter.Param<T>(String, DbType)
+  nameWithType.vb: ISqlValueAdapter.Param(Of T)(String, DbType)
 - uid: XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr*
   name: SqlExpr
   href: api/XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr.html
   commentId: Overload:XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr
   fullName: XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr
   nameWithType: ISqlValueAdapter.SqlExpr
-- uid: XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})
-  name: SqlExpr<T>(Expression<Func<IBlockQueryAdapter, T>>)
-  href: api/XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr.html#XData_Database_SqlBlock_ISqlValueAdapter_SqlExpr__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___
-  commentId: M:XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})
-  name.vb: SqlExpr(Of T)(Expression(Of Func(Of IBlockQueryAdapter, T)))
-  fullName: XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr<T>(System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryAdapter, T>>)
-  fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryAdapter, T)))
-  nameWithType: ISqlValueAdapter.SqlExpr<T>(Expression<Func<IBlockQueryAdapter, T>>)
-  nameWithType.vb: ISqlValueAdapter.SqlExpr(Of T)(Expression(Of Func(Of IBlockQueryAdapter, T)))
+- uid: XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},DbType)
+  name: SqlExpr<T>(Expression<Func<IBlockQueryAdapter, T>>, DbType)
+  href: api/XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr.html#XData_Database_SqlBlock_ISqlValueAdapter_SqlExpr__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___DbType_
+  commentId: M:XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},DbType)
+  name.vb: SqlExpr(Of T)(Expression(Of Func(Of IBlockQueryAdapter, T)), DbType)
+  fullName: XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr<T>(System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryAdapter, T>>, DbType)
+  fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryAdapter, T)), DbType)
+  nameWithType: ISqlValueAdapter.SqlExpr<T>(Expression<Func<IBlockQueryAdapter, T>>, DbType)
+  nameWithType.vb: ISqlValueAdapter.SqlExpr(Of T)(Expression(Of Func(Of IBlockQueryAdapter, T)), DbType)
+- uid: XData.Database.SqlBlock.ISqlValueAdapter.Subquery*
+  name: Subquery
+  href: api/XData.Database.SqlBlock.ISqlValueAdapter.Subquery.html
+  commentId: Overload:XData.Database.SqlBlock.ISqlValueAdapter.Subquery
+  fullName: XData.Database.SqlBlock.ISqlValueAdapter.Subquery
+  nameWithType: ISqlValueAdapter.Subquery
+- uid: XData.Database.SqlBlock.ISqlValueAdapter.Subquery``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}},DbType,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})
+  name: Subquery<T>(Expression<Func<IQueryStructure, IQueryStructure>>, DbType, Expression<Func<IBlockQueryAdapter, T>>)
+  href: api/XData.Database.SqlBlock.ISqlValueAdapter.Subquery.html#XData_Database_SqlBlock_ISqlValueAdapter_Subquery__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructure_XData_Mapping_Dynamic_IQueryStructure___DbType_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___
+  commentId: M:XData.Database.SqlBlock.ISqlValueAdapter.Subquery``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}},DbType,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})
+  name.vb: Subquery(Of T)(Expression(Of Func(Of IQueryStructure, IQueryStructure)), DbType, Expression(Of Func(Of IBlockQueryAdapter, T)))
+  fullName: XData.Database.SqlBlock.ISqlValueAdapter.Subquery<T>(System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure>>, DbType, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.IBlockQueryAdapter, T>>)
+  fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.Subquery(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructure, XData.Mapping.Dynamic.IQueryStructure)), DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryAdapter, T)))
+  nameWithType: ISqlValueAdapter.Subquery<T>(Expression<Func<IQueryStructure, IQueryStructure>>, DbType, Expression<Func<IBlockQueryAdapter, T>>)
+  nameWithType.vb: ISqlValueAdapter.Subquery(Of T)(Expression(Of Func(Of IQueryStructure, IQueryStructure)), DbType, Expression(Of Func(Of IBlockQueryAdapter, T)))
 - uid: XData.Database.SqlBlock.ISqlValueAdapter.Var*
   name: Var
   href: api/XData.Database.SqlBlock.ISqlValueAdapter.Var.html
@@ -6805,6 +6697,21 @@ references:
   fullName.vb: XData.Database.SqlBlock.ISqlValueAdapter.Var(Of T)(System.String, XData.Database.SqlBlock.SqlType, System.Linq.Expressions.Expression(Of System.Action(Of XData.Database.SqlBlock.ISqlTableAdapter))())
   nameWithType: ISqlValueAdapter.Var<T>(String, SqlType, Expression<Action<ISqlTableAdapter>>[])
   nameWithType.vb: ISqlValueAdapter.Var(Of T)(String, SqlType, Expression(Of Action(Of ISqlTableAdapter))())
+- uid: XData.Database.SqlBlock.SqlBlockDefinition
+  name: SqlBlockDefinition
+  href: api/XData.Database.SqlBlock.SqlBlockDefinition.html
+  commentId: T:XData.Database.SqlBlock.SqlBlockDefinition
+  fullName: XData.Database.SqlBlock.SqlBlockDefinition
+  nameWithType: SqlBlockDefinition
+- uid: XData.Database.SqlBlock.SqlBlockDefinition`1
+  name: SqlBlockDefinition<T>
+  href: api/XData.Database.SqlBlock.SqlBlockDefinition-1.html
+  commentId: T:XData.Database.SqlBlock.SqlBlockDefinition`1
+  name.vb: SqlBlockDefinition(Of T)
+  fullName: XData.Database.SqlBlock.SqlBlockDefinition<T>
+  fullName.vb: XData.Database.SqlBlock.SqlBlockDefinition(Of T)
+  nameWithType: SqlBlockDefinition<T>
+  nameWithType.vb: SqlBlockDefinition(Of T)
 - uid: XData.Database.SqlBlock.SqlBlockExtensions
   name: SqlBlockExtensions
   href: api/XData.Database.SqlBlock.SqlBlockExtensions.html
@@ -6841,15 +6748,15 @@ references:
   fullName.vb: XData.Database.SqlBlock.SqlBlockExtensions.DateDiff(Of T)(XData.Database.SqlBlock.IBlockQueryAdapter, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryAdapter, System.DateTime)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.IBlockQueryAdapter, System.DateTime)), XData.DateDiffKind)
   nameWithType: SqlBlockExtensions.DateDiff<T>(IBlockQueryAdapter, Expression<Func<IBlockQueryAdapter, DateTime>>, Expression<Func<IBlockQueryAdapter, DateTime>>, DateDiffKind)
   nameWithType.vb: SqlBlockExtensions.DateDiff(Of T)(IBlockQueryAdapter, Expression(Of Func(Of IBlockQueryAdapter, DateTime)), Expression(Of Func(Of IBlockQueryAdapter, DateTime)), DateDiffKind)
-- uid: XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name: ExecuteSqlBlock(IDataScope, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  href: api/XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
-  commentId: M:XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter,XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name.vb: ExecuteSqlBlock(IDataScope, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-  fullName: XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
-  fullName.vb: XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter, XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
-  nameWithType: SqlBlockExtensions.ExecuteSqlBlock(IDataScope, Expression<Func<ISqlBlockAdapter, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  nameWithType.vb: SqlBlockExtensions.ExecuteSqlBlock(IDataScope, Expression(Of Func(Of ISqlBlockAdapter, ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+- uid: XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: ExecuteSqlBlock(IDataScope, Expression<SqlBlockDefinition>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: ExecuteSqlBlock(IDataScope, Expression(Of SqlBlockDefinition), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope, System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope, System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: SqlBlockExtensions.ExecuteSqlBlock(IDataScope, Expression<SqlBlockDefinition>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: SqlBlockExtensions.ExecuteSqlBlock(IDataScope, Expression(Of SqlBlockDefinition), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
 - uid: XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock*
   name: ExecuteSqlBlock
   href: api/XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html
@@ -6874,15 +6781,15 @@ references:
   commentId: Overload:XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData
   fullName: XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData
   nameWithType: SqlBlockExtensions.GetSqlBlockData
-- uid: XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData``1(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name: GetSqlBlockData<T>(IDataScope, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  href: api/XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter___0__XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
-  commentId: M:XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData``1(XData.IDataScope,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlBlockAdapter{``0},XData.Database.SqlBlock.ISqlBlock}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
-  name.vb: GetSqlBlockData(Of T)(IDataScope, Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
-  fullName: XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData<T>(XData.IDataScope, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlBlockAdapter<T>, XData.Database.SqlBlock.ISqlBlock>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
-  fullName.vb: XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData(Of T)(XData.IDataScope, System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlBlockAdapter(Of T), XData.Database.SqlBlock.ISqlBlock)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
-  nameWithType: SqlBlockExtensions.GetSqlBlockData<T>(IDataScope, Expression<Func<ISqlBlockAdapter<T>, ISqlBlock>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
-  nameWithType.vb: SqlBlockExtensions.GetSqlBlockData(Of T)(IDataScope, Expression(Of Func(Of ISqlBlockAdapter(Of T), ISqlBlock)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+- uid: XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData``1(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name: GetSqlBlockData<T>(IDataScope, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  href: api/XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____
+  commentId: M:XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData``1(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])
+  name.vb: GetSqlBlockData(Of T)(IDataScope, Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
+  fullName: XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData<T>(XData.IDataScope, System.Linq.Expressions.Expression<XData.Database.SqlBlock.SqlBlockDefinition<T>>, System.Linq.Expressions.Expression<System.Func<XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam>>[])
+  fullName.vb: XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData(Of T)(XData.IDataScope, System.Linq.Expressions.Expression(Of XData.Database.SqlBlock.SqlBlockDefinition(Of T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Database.SqlBlock.ISqlParamAdapter, XData.Database.SqlBlock.ISqlParam))())
+  nameWithType: SqlBlockExtensions.GetSqlBlockData<T>(IDataScope, Expression<SqlBlockDefinition<T>>, Expression<Func<ISqlParamAdapter, ISqlParam>>[])
+  nameWithType.vb: SqlBlockExtensions.GetSqlBlockData(Of T)(IDataScope, Expression(Of SqlBlockDefinition(Of T)), Expression(Of Func(Of ISqlParamAdapter, ISqlParam))())
 - uid: XData.Database.SqlBlock.SqlBlockExtensions.HasFlag*
   name: HasFlag
   href: api/XData.Database.SqlBlock.SqlBlockExtensions.HasFlag.html
@@ -8890,6 +8797,18 @@ references:
   commentId: Overload:XData.DataSource.Structure.FilterState.DictionaryValue
   fullName: XData.DataSource.Structure.FilterState.DictionaryValue
   nameWithType: FilterState.DictionaryValue
+- uid: XData.DataSource.Structure.FilterState.Dynamic
+  name: Dynamic
+  href: api/XData.DataSource.Structure.FilterState.Dynamic.html#XData_DataSource_Structure_FilterState_Dynamic
+  commentId: P:XData.DataSource.Structure.FilterState.Dynamic
+  fullName: XData.DataSource.Structure.FilterState.Dynamic
+  nameWithType: FilterState.Dynamic
+- uid: XData.DataSource.Structure.FilterState.Dynamic*
+  name: Dynamic
+  href: api/XData.DataSource.Structure.FilterState.Dynamic.html
+  commentId: Overload:XData.DataSource.Structure.FilterState.Dynamic
+  fullName: XData.DataSource.Structure.FilterState.Dynamic
+  nameWithType: FilterState.Dynamic
 - uid: XData.DataSource.Structure.FilterState.Equals(XData.DataSource.Structure.FilterState)
   name: Equals(FilterState)
   href: api/XData.DataSource.Structure.FilterState.Equals.html#XData_DataSource_Structure_FilterState_Equals_XData_DataSource_Structure_FilterState_
@@ -11791,6 +11710,12 @@ references:
   commentId: F:XData.Exceptions.XDataAdapterExceptionType.GetSqlSyntaxTemplateError
   fullName: XData.Exceptions.XDataAdapterExceptionType.GetSqlSyntaxTemplateError
   nameWithType: XDataAdapterExceptionType.GetSqlSyntaxTemplateError
+- uid: XData.Exceptions.XDataAdapterExceptionType.SqlBlockProceduralSyntaxNotSupportedError
+  name: SqlBlockProceduralSyntaxNotSupportedError
+  href: api/XData.Exceptions.XDataAdapterExceptionType.html#XData_Exceptions_XDataAdapterExceptionType_SqlBlockProceduralSyntaxNotSupportedError
+  commentId: F:XData.Exceptions.XDataAdapterExceptionType.SqlBlockProceduralSyntaxNotSupportedError
+  fullName: XData.Exceptions.XDataAdapterExceptionType.SqlBlockProceduralSyntaxNotSupportedError
+  nameWithType: XDataAdapterExceptionType.SqlBlockProceduralSyntaxNotSupportedError
 - uid: XData.Exceptions.XDataAdapterExceptionType.SqlBuilderClassNotFoundError
   name: SqlBuilderClassNotFoundError
   href: api/XData.Exceptions.XDataAdapterExceptionType.html#XData_Exceptions_XDataAdapterExceptionType_SqlBuilderClassNotFoundError
@@ -11950,6 +11875,12 @@ references:
   commentId: F:XData.Exceptions.XDataConfigurationExceptionType.ConfigurationXmlReadError
   fullName: XData.Exceptions.XDataConfigurationExceptionType.ConfigurationXmlReadError
   nameWithType: XDataConfigurationExceptionType.ConfigurationXmlReadError
+- uid: XData.Exceptions.XDataConfigurationExceptionType.ConnectionStringHasWrongFormatError
+  name: ConnectionStringHasWrongFormatError
+  href: api/XData.Exceptions.XDataConfigurationExceptionType.html#XData_Exceptions_XDataConfigurationExceptionType_ConnectionStringHasWrongFormatError
+  commentId: F:XData.Exceptions.XDataConfigurationExceptionType.ConnectionStringHasWrongFormatError
+  fullName: XData.Exceptions.XDataConfigurationExceptionType.ConnectionStringHasWrongFormatError
+  nameWithType: XDataConfigurationExceptionType.ConnectionStringHasWrongFormatError
 - uid: XData.Exceptions.XDataConfigurationExceptionType.ContextNotConfiguredError
   name: ContextNotConfiguredError
   href: api/XData.Exceptions.XDataConfigurationExceptionType.html#XData_Exceptions_XDataConfigurationExceptionType_ContextNotConfiguredError
@@ -13367,6 +13298,18 @@ references:
   commentId: T:XData.Extensions.TypeExtensions
   fullName: XData.Extensions.TypeExtensions
   nameWithType: TypeExtensions
+- uid: XData.Extensions.TypeExtensions.ArrayCast(System.Type,System.Collections.ICollection)
+  name: ArrayCast(Type, ICollection)
+  href: api/XData.Extensions.TypeExtensions.ArrayCast.html#XData_Extensions_TypeExtensions_ArrayCast_System_Type_System_Collections_ICollection_
+  commentId: M:XData.Extensions.TypeExtensions.ArrayCast(System.Type,System.Collections.ICollection)
+  fullName: XData.Extensions.TypeExtensions.ArrayCast(System.Type, System.Collections.ICollection)
+  nameWithType: TypeExtensions.ArrayCast(Type, ICollection)
+- uid: XData.Extensions.TypeExtensions.ArrayCast*
+  name: ArrayCast
+  href: api/XData.Extensions.TypeExtensions.ArrayCast.html
+  commentId: Overload:XData.Extensions.TypeExtensions.ArrayCast
+  fullName: XData.Extensions.TypeExtensions.ArrayCast
+  nameWithType: TypeExtensions.ArrayCast
 - uid: XData.Extensions.TypeExtensions.ConvertTo*
   name: ConvertTo
   href: api/XData.Extensions.TypeExtensions.ConvertTo.html

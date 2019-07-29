@@ -85,16 +85,22 @@
 <div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
-
-
+<span class="small pull-right mobile-hide">
+  <span class="divider">|</span>
+  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Update__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Update%60%601(System.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryStructure%2CXData.Database.SqlBlock.IBlockQueryDescription%7B%60%600%7D%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.ISqlValueAdapter%2CXData.Database.SqlBlock.ISqlValue%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+</span>
+<span class="small pull-right mobile-hide">
+  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L561">View Source</a>
+</span>
 <a id="XData_Database_SqlBlock_ISqlBlockAdapter_Update_" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Update*"></a>
-<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Update_XData_Database_SqlBlock_IBlockQueryDescription_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Update(XData.Database.SqlBlock.IBlockQueryDescription,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])">Update(IBlockQueryDescription, String, Expression&lt;Func&lt;ISqlValueAdapter, ISqlValue&gt;&gt;[])</h4>
+<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Update__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Update``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])">Update&lt;T&gt;(String, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;T&gt;&gt;&gt;, Expression&lt;Func&lt;ISqlValueAdapter, ISqlValue&gt;&gt;[])</h4>
 <div class="markdown level1 summary"><p>UPDATE SQL block</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">ISqlBlock Update(IBlockQueryDescription updateQuery, string alias, params Expression&lt;Func&lt;ISqlValueAdapter, ISqlValue&gt;&gt;[] expressions)</code></pre>
+  <pre><code class="lang-csharp hljs">ISqlBlock Update&lt;T&gt;(string alias, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;T&gt;&gt;&gt; updateQuery, params Expression&lt;Func&lt;ISqlValueAdapter, ISqlValue&gt;&gt;[] expressions)
+    where T : class</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -107,22 +113,21 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="XData.Database.SqlBlock.IBlockQueryDescription.html">IBlockQueryDescription</a></td>
-      <td><span class="parametername">updateQuery</span></td>
-      <td><p>SQL block query description</p>
-</td>
-    </tr>
-    <tr>
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
       <td><span class="parametername">alias</span></td>
       <td><p>Data table alias used to update data</p>
 </td>
     </tr>
     <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryStructure.html">IBlockQueryStructure</a>, <a class="xref" href="XData.Database.SqlBlock.IBlockQueryDescription-1.html">IBlockQueryDescription</a>&lt;T&gt;&gt;&gt;</td>
+      <td><span class="parametername">updateQuery</span></td>
+      <td><p>SQL block query description</p>
+</td>
+    </tr>
+    <tr>
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.html">ISqlValueAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlValue.html">ISqlValue</a>&gt;&gt;[]</td>
       <td><span class="parametername">expressions</span></td>
-      <td><p>Values to update description
-<br>Use same order of values as fields selected from <code>updateQuery</code> parameter</p>
+      <td><p>Values update description</p>
 </td>
     </tr>
   </tbody>
@@ -143,10 +148,25 @@
     </tr>
   </tbody>
 </table>
-<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Update_XData_Database_SqlBlock_IBlockQueryDescription_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue______seealso">See Also</h5>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">T</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Update__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue______seealso">See Also</h5>
 <div class="seealso">
-    <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter_XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlBlockAdapter.html">ISqlBlockAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlBlock.html">ISqlBlock</a>&gt;&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
-    <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlBlockAdapter___0__XData_Database_SqlBlock_ISqlBlock___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">GetSqlBlockData&lt;T&gt;</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlBlockAdapter-1.html">ISqlBlockAdapter</a>&lt;T&gt;, <a class="xref" href="XData.Database.SqlBlock.ISqlBlock.html">ISqlBlock</a>&gt;&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
+    <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition.html">SqlBlockDefinition</a>&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
+    <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">GetSqlBlockData&lt;T&gt;</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition-1.html">SqlBlockDefinition</a>&lt;T&gt;&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
 </div>
 </article>
           </div>
@@ -155,6 +175,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Update_.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Update*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L561" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
