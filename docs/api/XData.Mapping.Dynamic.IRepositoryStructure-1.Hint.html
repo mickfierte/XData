@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Method Array
+    <title>Method Hint
    | XData website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Method Array
+    <meta name="title" content="Method Hint
    | XData website ">
     <meta name="generator" content="docfx 2.40.4.0">
     
@@ -78,29 +78,59 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="XData.Mapping.Dynamic.IProcedureParameterAdapter.Array*">
+            <article class="content wrap" id="_content" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Hint*">
 
-<h1 id="XData_Mapping_Dynamic_IProcedureParameterAdapter_Array_" data-uid="XData.Mapping.Dynamic.IProcedureParameterAdapter.Array*">Method Array
+<h1 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Hint_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Hint*">Method Hint
 </h1>
 <div class="markdown level0 summary"></div>
 <div class="markdown level0 conceptual"></div>
 
 <span class="small pull-right mobile-hide">
   <span class="divider">|</span>
-  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_IProcedureParameterAdapter_Array.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.IProcedureParameterAdapter.Array%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_IRepositoryStructure_1_Hint_System_String_System_String_XData_Mapping_HintType_.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.IRepositoryStructure%601.Hint(System.String%2CSystem.String%2CXData.Mapping.HintType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/Interfaces.cs/#L1244">View Source</a>
+  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/Interfaces.cs/#L1115">View Source</a>
 </span>
-<a id="XData_Mapping_Dynamic_IProcedureParameterAdapter_Array_" data-uid="XData.Mapping.Dynamic.IProcedureParameterAdapter.Array*"></a>
-<h4 id="XData_Mapping_Dynamic_IProcedureParameterAdapter_Array" data-uid="XData.Mapping.Dynamic.IProcedureParameterAdapter.Array">Array()</h4>
-<div class="markdown level1 summary"><p>Parameter is simple type array flag</p>
+<a id="XData_Mapping_Dynamic_IRepositoryStructure_1_Hint_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Hint*"></a>
+<h4 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Hint_System_String_System_String_XData_Mapping_HintType_" data-uid="XData.Mapping.Dynamic.IRepositoryStructure`1.Hint(System.String,System.String,XData.Mapping.HintType)">Hint(String, String, HintType)</h4>
+<div class="markdown level1 summary"><p>Dynamic repository data source hint</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">IProcedureParameterFlag Array()</code></pre>
+  <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Hint(string alias, string hint, HintType hintType = HintType.Select)</code></pre>
 </div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+      <td><span class="parametername">alias</span></td>
+      <td><p>Data source alias</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+      <td><span class="parametername">hint</span></td>
+      <td><p>Hint</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="XData.Mapping.HintType.html">HintType</a></td>
+      <td><span class="parametername">hintType</span></td>
+      <td><p>Hint type</p>
+</td>
+    </tr>
+  </tbody>
+</table>
 <h5 class="returns">Returns</h5>
 <table class="table table-bordered table-striped table-condensed">
   <thead>
@@ -111,12 +141,16 @@
   </thead>
   <tbody>
     <tr>
-      <td><a class="xref" href="XData.Mapping.Dynamic.IProcedureParameterFlag.html">IProcedureParameterFlag</a></td>
-      <td><p>Procedure parameter mapping flag</p>
+      <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure</a>&lt;T&gt;</td>
+      <td><p>Repository structure</p>
 </td>
     </tr>
   </tbody>
 </table>
+<h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_Hint_System_String_System_String_XData_Mapping_HintType__seealso">See Also</h5>
+<div class="seealso">
+    <div><a class="xref" href="XData.Mapping.Dynamic.XDataMapping.GetStructure.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___">GetStructure(String, String, DataStructureFlag, Variable[])</a></div>
+</div>
 </article>
           </div>
           
@@ -125,10 +159,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_IProcedureParameterAdapter_Array_.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.IProcedureParameterAdapter.Array*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_IRepositoryStructure_1_Hint_.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.IRepositoryStructure%601.Hint*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/Interfaces.cs/#L1244" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/Interfaces.cs/#L1115" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

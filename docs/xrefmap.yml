@@ -18813,6 +18813,22 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).DataTable
   nameWithType: IRepositoryStructure<T>.DataTable
   nameWithType.vb: IRepositoryStructure(Of T).DataTable
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Hint(System.String,System.String,XData.Mapping.HintType)
+  name: Hint(String, String, HintType)
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.Hint.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Hint_System_String_System_String_XData_Mapping_HintType_
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Hint(System.String,System.String,XData.Mapping.HintType)
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Hint(System.String, System.String, XData.Mapping.HintType)
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Hint(System.String, System.String, XData.Mapping.HintType)
+  nameWithType: IRepositoryStructure<T>.Hint(String, String, HintType)
+  nameWithType.vb: IRepositoryStructure(Of T).Hint(String, String, HintType)
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Hint*
+  name: Hint
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.Hint.html
+  commentId: Overload:XData.Mapping.Dynamic.IRepositoryStructure`1.Hint
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Hint
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Hint
+  nameWithType: IRepositoryStructure<T>.Hint
+  nameWithType.vb: IRepositoryStructure(Of T).Hint
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])
   name: InnerView(String, Type, Expression<Func<ISubqueryLinkAdapter<T>, IFilterDescription>>[])
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.InnerView.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____
