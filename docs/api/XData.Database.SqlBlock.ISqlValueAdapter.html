@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface ISqlValueAdapter
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,11 +86,17 @@
   <div class="markdown level0 summary"><p>SQL value description adapter</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="XData.Database.SqlBlock.ISqlVarAdapter.Var.html#XData_Database_SqlBlock_ISqlVarAdapter_Var__1_System_String_">ISqlVarAdapter.Var&lt;T&gt;(String)</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.Database.SqlBlock.html">XData.Database.SqlBlock</a></h6>
   <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Database_SqlBlock_ISqlValueAdapter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISqlValueAdapter</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISqlValueAdapter : ISqlVarAdapter</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -103,8 +109,8 @@
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Const__1___0_DbType_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Const``1(``0,DbType)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Const.html#XData_Database_SqlBlock_ISqlValueAdapter_Const__1___0_DbType_">Const&lt;T&gt;(T, DbType)</a>
+        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Const__1___0_System_Data_DbType_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Const``1(``0,System.Data.DbType)">
+          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Const.html#XData_Database_SqlBlock_ISqlValueAdapter_Const__1___0_System_Data_DbType_">Const&lt;T&gt;(T, DbType)</a>
         </td>
         <td class="markdown level1 summary"><p>SQL constant value</p>
 </td>
@@ -117,80 +123,52 @@
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Param__1_System_String_DbType_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Param``1(System.String,DbType)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Param.html#XData_Database_SqlBlock_ISqlValueAdapter_Param__1_System_String_DbType_">Param&lt;T&gt;(String, DbType)</a>
+        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Default__1_XData_DefaultType_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Default``1(XData.DefaultType)">
+          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Default.html#XData_Database_SqlBlock_ISqlValueAdapter_Default__1_XData_DefaultType_">Default&lt;T&gt;(DefaultType)</a>
         </td>
-        <td class="markdown level1 summary"><p>Parameter value</p>
+        <td class="markdown level1 summary"><p>Default value mapping</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_SqlExpr__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___DbType_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},DbType)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.SqlExpr.html#XData_Database_SqlBlock_ISqlValueAdapter_SqlExpr__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___DbType_">SqlExpr&lt;T&gt;(Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, DbType)</a>
+        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Default__1_XData_DefaultType_System_Object_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Default``1(XData.DefaultType,System.Object)">
+          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Default.html#XData_Database_SqlBlock_ISqlValueAdapter_Default__1_XData_DefaultType_System_Object_">Default&lt;T&gt;(DefaultType, Object)</a>
         </td>
-        <td class="markdown level1 summary"><p>Sql expression value</p>
+        <td class="markdown level1 summary"><p>Default value mapping</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Subquery__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructure_XData_Mapping_Dynamic_IQueryStructure___DbType_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Subquery``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructure,XData.Mapping.Dynamic.IQueryStructure}},DbType,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Subquery.html#XData_Database_SqlBlock_ISqlValueAdapter_Subquery__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructure_XData_Mapping_Dynamic_IQueryStructure___DbType_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___">Subquery&lt;T&gt;(Expression&lt;Func&lt;IQueryStructure, IQueryStructure&gt;&gt;, DbType, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;)</a>
+        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Expr__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Data_DbType_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Expr``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Data.DbType)">
+          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Expr.html#XData_Database_SqlBlock_ISqlValueAdapter_Expr__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Data_DbType_">Expr&lt;T&gt;(Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, DbType)</a>
+        </td>
+        <td class="markdown level1 summary"><p>SQL expression mapping</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Expr__1_System_String_System_Data_DbType_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Expr``1(System.String,System.Data.DbType)">
+          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Expr.html#XData_Database_SqlBlock_ISqlValueAdapter_Expr__1_System_String_System_Data_DbType_">Expr&lt;T&gt;(String, DbType)</a>
+        </td>
+        <td class="markdown level1 summary"><p>SQL expression mapping</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Field__1_System_String_System_String_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Field``1(System.String,System.String)">
+          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Field.html#XData_Database_SqlBlock_ISqlValueAdapter_Field__1_System_String_System_String_">Field&lt;T&gt;(String, String)</a>
+        </td>
+        <td class="markdown level1 summary"><p>SQL field mapping</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Subquery__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryStructure___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Subquery``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryStructure}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})">
+          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Subquery.html#XData_Database_SqlBlock_ISqlValueAdapter_Subquery__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryStructure___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___">Subquery&lt;T&gt;(Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryStructure&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;)</a>
         </td>
         <td class="markdown level1 summary"><p>Single column subquery as value</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Var``1(System.String,DbType)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Var.html#XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_">Var&lt;T&gt;(String, DbType)</a>
+        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Subquery__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryStructure___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___XData_DataStructureFlag_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Subquery``1(System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryStructure}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},XData.DataStructureFlag)">
+          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Subquery.html#XData_Database_SqlBlock_ISqlValueAdapter_Subquery__1_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryStructure___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___XData_DataStructureFlag_">Subquery&lt;T&gt;(Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryStructure&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, DataStructureFlag)</a>
         </td>
-        <td class="markdown level1 summary"><p>SQL variable value</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_Int32_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Var``1(System.String,DbType,System.Int32)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Var.html#XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_Int32_">Var&lt;T&gt;(String, DbType, Int32)</a>
-        </td>
-        <td class="markdown level1 summary"><p>SQL variable value</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_Int32_System_Int32_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Var``1(System.String,DbType,System.Int32,System.Int32)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Var.html#XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_Int32_System_Int32_">Var&lt;T&gt;(String, DbType, Int32, Int32)</a>
-        </td>
-        <td class="markdown level1 summary"><p>SQL variable value</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_String_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Var``1(System.String,DbType,System.String)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Var.html#XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_String_">Var&lt;T&gt;(String, DbType, String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Sql variable value</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_String_System_Int32_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Var``1(System.String,DbType,System.String,System.Int32)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Var.html#XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_String_System_Int32_">Var&lt;T&gt;(String, DbType, String, Int32)</a>
-        </td>
-        <td class="markdown level1 summary"><p>SQL variable value</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_String_System_Int32_System_Int32_" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Var``1(System.String,DbType,System.String,System.Int32,System.Int32)">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Var.html#XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_String_System_Int32_System_Int32_">Var&lt;T&gt;(String, DbType, String, Int32, Int32)</a>
-        </td>
-        <td class="markdown level1 summary"><p>SQL variable value</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_String_XData_Database_SqlBlock_SqlType___" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Var``1(System.String,DbType,System.String,XData.Database.SqlBlock.SqlType[])">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Var.html#XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_DbType_System_String_XData_Database_SqlBlock_SqlType___">Var&lt;T&gt;(String, DbType, String, SqlType[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>SQL variable value</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_XData_Database_SqlBlock_SqlType_System_Linq_Expressions_Expression_System_Action_XData_Database_SqlBlock_ISqlTableAdapter_____" data-uid="XData.Database.SqlBlock.ISqlValueAdapter.Var``1(System.String,XData.Database.SqlBlock.SqlType,System.Linq.Expressions.Expression{System.Action{XData.Database.SqlBlock.ISqlTableAdapter}}[])">
-          <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Var.html#XData_Database_SqlBlock_ISqlValueAdapter_Var__1_System_String_XData_Database_SqlBlock_SqlType_System_Linq_Expressions_Expression_System_Action_XData_Database_SqlBlock_ISqlTableAdapter_____">Var&lt;T&gt;(String, SqlType, Expression&lt;Action&lt;ISqlTableAdapter&gt;&gt;[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>SQL variable value</p>
+        <td class="markdown level1 summary"><p>Single column subquery as value</p>
 </td>
       </tr>
     </tbody>
@@ -243,7 +221,7 @@
                     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlValueAdapter.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlValueAdapter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L83" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L172" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

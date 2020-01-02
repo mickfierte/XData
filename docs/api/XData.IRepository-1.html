@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IRepository&lt;T&gt;
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -181,7 +181,7 @@
   </table>
   <h5 id="XData_IRepository_1_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p><p>Hint: Its possible to use any DI container with XData:</p></p>
-<pre><code class="cs"><p>// example with Autofac syntax</p>
+<pre><code class="lang-cs"><p>// example with Autofac syntax</p>
 <p>// register</p>
 <p>Container.Register(() => dataScope.GetRepository&lt;Invoice>()).As&lt;IRepository&lt;Invoice>>();</p>
 <p>Container.Register(() => dataScope.GetRepository&lt;Invoice>().GetChild&lt;InvoiceSpec>()).As&lt;IRepository&lt;InvoiceSpec>>();</p>

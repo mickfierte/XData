@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Method Insert
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,19 +87,20 @@
 
 <span class="small pull-right mobile-hide">
   <span class="divider">|</span>
-  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Insert_System_String_System_Collections_Generic_ICollection_System_String__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String%2CSystem.Collections.Generic.ICollection%7BSystem.String%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.ISqlValueAdapter%2CXData.Database.SqlBlock.ISqlValue%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISetBlockAdapter___0___.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Insert%60%601(System.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.ISetBlockAdapter%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L574">View Source</a>
+  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L681">View Source</a>
 </span>
 <a id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert_" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Insert*"></a>
-<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert_System_String_System_Collections_Generic_ICollection_System_String__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String,System.Collections.Generic.ICollection{System.String},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])">Insert(String, ICollection&lt;String&gt;, Expression&lt;Func&lt;ISqlValueAdapter, ISqlValue&gt;&gt;[])</h4>
+<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISetBlockAdapter___0___" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Insert``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISetBlockAdapter,``0}})">Insert&lt;TResult&gt;(String, Expression&lt;Func&lt;ISetBlockAdapter, TResult&gt;&gt;)</h4>
 <div class="markdown level1 summary"><p>Single INSERT INTO...VALUES SQL block</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">ISqlBlock Insert(string tableName, ICollection&lt;string&gt; fields, params Expression&lt;Func&lt;ISqlValueAdapter, ISqlValue&gt;&gt;[] expressions)</code></pre>
+  <pre><code class="lang-csharp hljs">ISqlBlock Insert&lt;TResult&gt;(string tableName, Expression&lt;Func&lt;ISetBlockAdapter, TResult&gt;&gt; mapper)
+    where TResult : class</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -118,16 +119,9 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-      <td><span class="parametername">fields</span></td>
-      <td><p>Fields to insert</p>
-</td>
-    </tr>
-    <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.html">ISqlValueAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlValue.html">ISqlValue</a>&gt;&gt;[]</td>
-      <td><span class="parametername">expressions</span></td>
-      <td><p>Values to insert description
-<br>Use same order of values as specified by <code>fields</code> parameter</p>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISetBlockAdapter.html">ISetBlockAdapter</a>, TResult&gt;&gt;</td>
+      <td><span class="parametername">mapper</span></td>
+      <td><p>Fields to insert values mapper</p>
 </td>
     </tr>
   </tbody>
@@ -148,26 +142,42 @@
     </tr>
   </tbody>
 </table>
-<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert_System_String_System_Collections_Generic_ICollection_System_String__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue______seealso">See Also</h5>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TResult</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISetBlockAdapter___0____seealso">See Also</h5>
 <div class="seealso">
     <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition.html">SqlBlockDefinition</a>&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
     <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">GetSqlBlockData&lt;T&gt;</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition-1.html">SqlBlockDefinition</a>&lt;T&gt;&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
 </div>
 <span class="small pull-right mobile-hide">
   <span class="divider">|</span>
-  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Insert_System_String_System_Collections_Generic_ICollection_System_String__DataTable_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String%2CSystem.Collections.Generic.ICollection%7BSystem.String%7D%2CDataTable%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.ISqlValueAdapter%2CXData.Database.SqlBlock.ISqlValue%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Data_DataTable_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISetBlockAdapter___0___.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Insert%60%601(System.String%2CSystem.Data.DataTable%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.ISetBlockAdapter%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L590">View Source</a>
+  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L694">View Source</a>
 </span>
 <a id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert_" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Insert*"></a>
-<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert_System_String_System_Collections_Generic_ICollection_System_String__DataTable_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue_____" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Insert(System.String,System.Collections.Generic.ICollection{System.String},DataTable,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlValueAdapter,XData.Database.SqlBlock.ISqlValue}}[])">Insert(String, ICollection&lt;String&gt;, DataTable, Expression&lt;Func&lt;ISqlValueAdapter, ISqlValue&gt;&gt;[])</h4>
+<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Data_DataTable_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISetBlockAdapter___0___" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Insert``1(System.String,System.Data.DataTable,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISetBlockAdapter,``0}})">Insert&lt;TResult&gt;(String, DataTable, Expression&lt;Func&lt;ISetBlockAdapter, TResult&gt;&gt;)</h4>
 <div class="markdown level1 summary"><p>INSERT INTO...VALUES(...),VALUES(...)... SQL block</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">ISqlBlock Insert(string tableName, ICollection&lt;string&gt; fields, DataTable data, params Expression&lt;Func&lt;ISqlValueAdapter, ISqlValue&gt;&gt;[] expressions)</code></pre>
+  <pre><code class="lang-csharp hljs">ISqlBlock Insert&lt;TResult&gt;(string tableName, DataTable data, Expression&lt;Func&lt;ISetBlockAdapter, TResult&gt;&gt; mapper)
+    where TResult : class</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
 <table class="table table-bordered table-striped table-condensed">
@@ -186,23 +196,16 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-      <td><span class="parametername">fields</span></td>
-      <td><p>Fields to insert</p>
-</td>
-    </tr>
-    <tr>
-      <td><span class="xref">DataTable</span></td>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.datatable">DataTable</a></td>
       <td><span class="parametername">data</span></td>
       <td><p>Data table filled by data
 <br>Access data by <a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Data.html#XData_Database_SqlBlock_ISqlValueAdapter_Data__1_System_String_">Data&lt;T&gt;(String)</a> method inside <code>expressions</code></p>
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.html">ISqlValueAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlValue.html">ISqlValue</a>&gt;&gt;[]</td>
-      <td><span class="parametername">expressions</span></td>
-      <td><p>Values to insert description
-<br>Use same order of values as specified by <code>fields</code> parameter</p>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISetBlockAdapter.html">ISetBlockAdapter</a>, TResult&gt;&gt;</td>
+      <td><span class="parametername">mapper</span></td>
+      <td><p>Fields to insert values mapper</p>
 </td>
     </tr>
   </tbody>
@@ -223,7 +226,22 @@
     </tr>
   </tbody>
 </table>
-<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert_System_String_System_Collections_Generic_ICollection_System_String__DataTable_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlValueAdapter_XData_Database_SqlBlock_ISqlValue______seealso">See Also</h5>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">TResult</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Data_DataTable_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISetBlockAdapter___0____seealso">See Also</h5>
 <div class="seealso">
     <div><a class="xref" href="XData.Database.SqlBlock.ISqlValueAdapter.Data.html#XData_Database_SqlBlock_ISqlValueAdapter_Data__1_System_String_">Data&lt;T&gt;(String)</a></div>
     <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition.html">SqlBlockDefinition</a>&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
@@ -234,7 +252,7 @@
   <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Insert%60%601(System.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryStructure%2CXData.Database.SqlBlock.IBlockQueryDescription%7B%60%600%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L602">View Source</a>
+  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L706">View Source</a>
 </span>
 <a id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert_" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Insert*"></a>
 <h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Insert__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Insert``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}})">Insert&lt;T&gt;(String, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;T&gt;&gt;&gt;)</h4>
@@ -318,7 +336,7 @@
                     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Insert_.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Insert*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L574" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L681" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

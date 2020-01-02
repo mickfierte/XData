@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Property Variables
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -121,7 +121,7 @@
 <p>Variable values can be used in custom logic (repository)</p>
 <p>Variables is stored in query/repository/call result instance</p></div>
 <h5 id="XData_IDataQuery_Variables_examples">Examples</h5>
-<pre><code class="cs"><p>var rep = dataScope.GetRepository&lt;Customer>(variables: new []{&quot;OurCode&quot;, &quot;SELF&quot;});</p>
+<pre><code class="lang-cs"><p>var rep = dataScope.GetRepository&lt;Customer>(variables: new []{&quot;OurCode&quot;, &quot;SELF&quot;});</p>
 <p>var newInvoice = dataScope.GetRepository&lt;Invoice>().New();</p>
 <p>newInvoice.CustomerFrom += rep.First(x => x.Code.CompareVariable(FilterOperation.Equal, &quot;SELF&quot;));</p></code></pre>
 <h5 id="XData_IDataQuery_Variables_seealso">See Also</h5>

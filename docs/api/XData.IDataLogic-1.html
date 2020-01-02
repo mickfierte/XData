@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IDataLogic&lt;T&gt;
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -114,7 +114,7 @@
 <p>Hint: Separating mapping and logic to different assemblies allows to run data aware logic on XData application server</p>
 <p>Hint: Application can use XData application server or direct connect to database depending of configuration (see <a class="xref" href="XData.Interfaces.IConfiguration.html">IConfiguration</a>)</p></div>
   <h5 id="XData_IDataLogic_1_examples"><strong>Examples</strong></h5>
-  <pre><code class="cs"><p>public abstract class InvoiceLogic : IDataLogic&lt;Invoice> {</p>
+  <pre><code class="lang-cs"><p>public abstract class InvoiceLogic : IDataLogic&lt;Invoice> {</p>
 <p>
 <p>    [Action(DataActionType.BeforeClear)]</p>
 <p>    public readonly static RepositoryTrigger&lt;Invoice> ClearHistoryBatch = </p>

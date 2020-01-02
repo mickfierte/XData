@@ -4,45 +4,29 @@ XData is .Net domain object oriented data access layer component. It is not "yet
 version 1.1.0
 ## NuGet packages
 
-[XData Data Access Layer package](https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/)
-[![NuGet](https://img.shields.io/nuget/v/XData.DataAccessLayer_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.DataAccessLayer_BrokenLink.svg?style=plastic)]()
+[XData Data Access Layer package](https://github.com/mickfierte/XData/packages/95851/)
 
-[XData UnitOfWork package](https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/) - required to use [XData UnitOfWork](http://mickfierte.github.io/XData/tutorial/unit_of_work.html) implementation
-[![NuGet](https://img.shields.io/nuget/v/XData.WorkSet_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.WorkSet_BrokenLink.svg?style=plastic)]()
+[XData UnitOfWork package](https://github.com/mickfierte/XData.WorkSet/packages/95894/) - required to use [XData UnitOfWork](http://mickfierte.github.io/XData/tutorial/unit_of_work.html) implementation
 
-[XData Security package](https://packages.nuget.org/packages/XData.Security.Abstractions_BrokenLink/) - [_ISecuritySession_](http://mickfierte.github.io/XData/api/XData.Interfaces.ISecuritySession.html) interface implementation helper required to use [XData security](http://mickfierte.github.io/XData/tutorial/security.html) functionality
-[![NuGet](https://img.shields.io/nuget/v/XData.WorkSet_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.WorkSet_BrokenLink.svg?style=plastic)]()
+[XData Security package](https://github.com/mickfierte/XData.Security/packages/95893/) - [_ISecuritySession_](http://mickfierte.github.io/XData/api/XData.Interfaces.ISecuritySession.html) interface implementation helper required to use [XData security](http://mickfierte.github.io/XData/tutorial/security.html) functionality
 
-[XData Three-tier client proxy package](https://packages.nuget.org/packages/XData.Remote_BrokenLink/) - client proxy to use in three-tier envirounment (Net 4.0 only, required full Net 4.0 Framework version)
-[![NuGet](https://img.shields.io/nuget/v/XData.Remote_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.Remote_BrokenLink.svg?style=plastic)]()
+[XData Three-tier client proxy package](https://github.com/mickfierte/XData.Remote/packages/95892/) - client proxy to use in three-tier envirounment (Net 4.0 only, required full Net 4.0 Framework version)
 
-[XData Cache package](https://packages.nuget.org/packages/XData.Cache_BrokenLink/) - time limited object caching (Net 4.0 only, required full Net 4.0 Framework version)
-[![NuGet](https://img.shields.io/nuget/v/XData.Cache_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.Cache_BrokenLink.svg?style=plastic)]()
+[XData Cache package](https://github.com/mickfierte/XData.Cache/packages/95880/) - time limited object caching (Net 4.0 only, required full Net 4.0 Framework version)
 
-[XData MsSqlSever adapter package](https://packages.nuget.org/packages/XData.MsSqlServer_BrokenLink/) - Ms SQL Server database dialect and adapter
-[![NuGet](https://img.shields.io/nuget/v/XData.MsSqlServer_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.MsSqlServer_BrokenLink.svg?style=plastic)]()
+[XData MsSqlSever adapter package](https://github.com/mickfierte/XData.MsSqlServer/packages/95896/) - Ms SQL Server database dialect and adapter
 
-[XData Oracle adapter package](https://packages.nuget.org/packages/XData.Oracle.Odp_BrokenLink/) - Oracle database dialect and adapter based on Oracle ODP provider
-[![NuGet](https://img.shields.io/nuget/v/XData.Oracle.Odp_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.Oracle.Odp_BrokenLink.svg?style=plastic)]()
+[XData Oracle adapter package](https://github.com/mickfierte/XData.Oracle.Odp/packages/95899/) - Oracle database dialect and adapter based on Oracle ODP provider
 
-[XData PostgreSql adapter package](https://packages.nuget.org/packages/XData.PostgreSql.NpgSql_BrokenLink/) - Postgre SQL database dialect and adapter based on NpgSql provider
-[![NuGet](https://img.shields.io/nuget/v/XData.PostgreSql.NpgSql_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.PostgreSql.NpgSql_BrokenLink.svg?style=plastic)]()
+[XData PostgreSql adapter package](https://github.com/mickfierte/XData.PostgreSql.NpgSql/packages/95902/) - Postgre SQL database dialect and adapter based on NpgSql provider
 
-[XData SQLite adapter package](https://packages.nuget.org/packages/XData.SQLite_BrokenLink/) - SQLite database dialect and adapter (Net 4.0 version has used System.Data.SQLite provider, Net Standard 2.0 version has used Microsoft.Data.Sqlite provider)
-[![NuGet](https://img.shields.io/nuget/v/XData.SQLite_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.SQLite_BrokenLink.svg?style=plastic)]()
+[XData SQLite adapter package](https://github.com/mickfierte/XData.SQLite/packages/95901/) - SQLite database dialect and adapter (Net 4.0 version has used System.Data.SQLite provider, Net Standard 2.0 version has used Microsoft.Data.Sqlite provider)
 
-[XData MySql adapter package](https://packages.nuget.org/packages/XData.MySql_BrokenLink/) - MySQL database dialect and adapter based on MySql.Data provider
-[![NuGet](https://img.shields.io/nuget/v/XData.MySql_BrokenLink.svg?style=plastic)]()
-[![NuGet](https://img.shields.io/nuget/dt/XData.MySql_BrokenLink.svg?style=plastic)]()
+[XData MySql adapter package](https://github.com/mickfierte/XData.MySql/packages/95898/) - MySQL database dialect and adapter based on MySql.Data provider
+
+[XData net 4.0 System.Diagnistics.Trace log writer package]](https://github.com/mickfierte/XData.Logging.Trace/packages/95890/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
+
+[XData net 4.0 log4net log writer package]](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
 
 ## Basic features
 * Single domain object can be mapped on multiple tables (or views, or procedures) in DB. Every DB object can be mapped multiple times in one (or more mappings).
@@ -65,11 +49,36 @@ version 1.1.0
 
 ## Installation
 
+### NuGet configuration
+
+To get XData NuGet packages You will need moify nuget.config as described below and place it in project root folder near Your solution file.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <packageSources>
+        <clear />
+        <add key="xdata" value="https://nuget.pkg.github.com/mickfierte/index.json" />
+		<add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
+    </packageSources>
+	<packageSourceCredentials>
+        <xdata>
+            <add key="Username" value="API_KEY" />
+            <add key="ClearTextPassword" value="API_KEY" />
+        </xdata>
+    </packageSourceCredentials>
+</configuration>
+```
+* replace API_KEY with API key provided by author
+
+>[!TIP]
+>Some "temporary implementation features" of the NuGet server inside GitHub packages require you to enable the "Include prerelease" switch and not pay attention to the mismatch of the package description fields. Hope it gets better soon.
+
 ### Net 4.0
 
->1) Install Nuget package of XData [engine package](https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/).
+>1) Install Nuget package of XData [engine package](https://github.com/mickfierte/XData/packages/95851/).
 >
->2) (Optional) Download one of [logger binaries](http://mickfierte.github.io/XData/index.html#Net-4.0)
+>2) Install one of logger Nuget packages for [System.Diagnistics.Trace](https://github.com/mickfierte/XData.Logging.Trace/packages/95890/) or [log4net](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/)
 >
 >3) Install XData database adapter Nuget package (see [above](http://mickfierte.github.io/XData/#nuget-packages)) for Your database (or multiple databases).
 >
@@ -77,7 +86,7 @@ version 1.1.0
 
 ### (Optional) Net 4.0 three-tier architecture client libraries
 
->1) Additionally required to install XData [three tier client package](https://packages.nuget.org/packages/XData.Remote_BrokenLink/)
+>1) Additionally required to install XData [three tier client package](https://github.com/mickfierte/XData.Remote/packages/95892/)
 >
 >2) Configuration is described [here](http://mickfierte.github.io/XData/tutorial/three_tier.html)
 
@@ -91,7 +100,7 @@ version 1.1.0
 
 ### NetStandard 2.0
 
->1) Install Nuget package of XData [engine package](https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/).
+>1) Install Nuget package of XData [engine package](https://github.com/mickfierte/XData/packages/95851/).
 >
 >2) Install XData database adapter Nuget package (see [above](http://mickfierte.github.io/XData/#nuget-packages)) for Your database (or multiple databases).
 >
@@ -176,6 +185,9 @@ _For more examples and usage, please refer to the [documentation](http://mickfie
 
 ## Release History
 
+* 1.2.0
+	* SQL Blocks is now supported
+	* Bugs are fixed, algorithms are improved
 * 1.0.0
     * Initially published (deprecated now)
 * 1.1.0

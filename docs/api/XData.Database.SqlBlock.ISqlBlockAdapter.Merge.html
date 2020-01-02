@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Method Merge
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,19 +87,19 @@
 
 <span class="small pull-right mobile-hide">
   <span class="divider">|</span>
-  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Merge__1_System_String_System_Collections_Generic_ICollection_System_String__System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_String_.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Merge%60%601(System.String%2CSystem.Collections.Generic.ICollection%7BSystem.String%7D%2CSystem.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryStructure%2CXData.Database.SqlBlock.IBlockQueryDescription%7B%60%600%7D%7D%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Merge__1_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IMergeBlockAdapter___0___.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Merge%60%601(System.String%2CSystem.String%2CSystem.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IMergeBlockAdapter%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
 </span>
 <span class="small pull-right mobile-hide">
-  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L629">View Source</a>
+  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L730">View Source</a>
 </span>
 <a id="XData_Database_SqlBlock_ISqlBlockAdapter_Merge_" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Merge*"></a>
-<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Merge__1_System_String_System_Collections_Generic_ICollection_System_String__System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_String_" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Merge``1(System.String,System.Collections.Generic.ICollection{System.String},System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``0}}},System.String)">Merge&lt;T&gt;(String, ICollection&lt;String&gt;, String, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;T&gt;&gt;&gt;, String)</h4>
+<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Merge__1_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IMergeBlockAdapter___0___" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Merge``1(System.String,System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IMergeBlockAdapter,``0}})">Merge&lt;T&gt;(String, String, String, Expression&lt;Func&lt;IMergeBlockAdapter, T&gt;&gt;)</h4>
 <div class="markdown level1 summary"><p>MERGE SQL block</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 <h5 class="decalaration">Declaration</h5>
 <div class="codewrapper">
-  <pre><code class="lang-csharp hljs">ISqlBlock Merge&lt;T&gt;(string tableName, ICollection&lt;string&gt; fields, string targetAlias, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;T&gt;&gt;&gt; selectQuery, string dataAlias)
+  <pre><code class="lang-csharp hljs">ISqlBlock Merge&lt;T&gt;(string tableName, string targetAlias, string sourceAlias, Expression&lt;Func&lt;IMergeBlockAdapter, T&gt;&gt; mapper)
     where T : class</code></pre>
 </div>
 <h5 class="parameters">Parameters</h5>
@@ -119,29 +119,23 @@
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-      <td><span class="parametername">fields</span></td>
-      <td><p>Merge fields</p>
-</td>
-    </tr>
-    <tr>
       <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
       <td><span class="parametername">targetAlias</span></td>
       <td><p>Target table alias</p>
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryStructure.html">IBlockQueryStructure</a>, <a class="xref" href="XData.Database.SqlBlock.IBlockQueryDescription-1.html">IBlockQueryDescription</a>&lt;T&gt;&gt;&gt;</td>
-      <td><span class="parametername">selectQuery</span></td>
-      <td><p>Data source query description
-<br>Use <a class="xref" href="XData.Database.SqlBlock.IMergeAdapter.Link.html#XData_Database_SqlBlock_IMergeAdapter_Link_System_String_">Link(String)</a>, <a class="xref" href="XData.Database.SqlBlock.IMergeAdapter.Update.html#XData_Database_SqlBlock_IMergeAdapter_Update_System_String_">Update(String)</a> and <a class="xref" href="XData.Database.SqlBlock.IMergeAdapter.Insert.html#XData_Database_SqlBlock_IMergeAdapter_Insert_System_String_">Insert(String)</a>
-structure flags to set merge role of data source columns</p>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+      <td><span class="parametername">sourceAlias</span></td>
+      <td><p>Data source alias</p>
 </td>
     </tr>
     <tr>
-      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-      <td><span class="parametername">dataAlias</span></td>
-      <td><p>Data source alias</p>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IMergeBlockAdapter.html">IMergeBlockAdapter</a>, T&gt;&gt;</td>
+      <td><span class="parametername">mapper</span></td>
+      <td><p>Data source mapper
+<br>Use <a class="xref" href="XData.Database.SqlBlock.IMergeAttributeAdapter.Link.html#XData_Database_SqlBlock_IMergeAttributeAdapter_Link">Link()</a>, <a class="xref" href="XData.Database.SqlBlock.IMergeAttributeAdapter.Update.html#XData_Database_SqlBlock_IMergeAttributeAdapter_Update">Update()</a> and <a class="xref" href="XData.Database.SqlBlock.IMergeAttributeAdapter.Insert.html#XData_Database_SqlBlock_IMergeAttributeAdapter_Insert">Insert()</a>
+structure flags to set merge role of data source columns</p>
 </td>
     </tr>
   </tbody>
@@ -177,7 +171,108 @@ structure flags to set merge role of data source columns</p>
     </tr>
   </tbody>
 </table>
-<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Merge__1_System_String_System_Collections_Generic_ICollection_System_String__System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___0____System_String__seealso">See Also</h5>
+<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Merge__1_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IMergeBlockAdapter___0____seealso">See Also</h5>
+<div class="seealso">
+    <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition.html">SqlBlockDefinition</a>&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
+    <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">GetSqlBlockData&lt;T&gt;</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition-1.html">SqlBlockDefinition</a>&lt;T&gt;&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
+</div>
+<span class="small pull-right mobile-hide">
+  <span class="divider">|</span>
+  <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Merge__2_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___1____System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IMergeBlockAdapter___0___.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Merge%60%602(System.String%2CSystem.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryStructure%2CXData.Database.SqlBlock.IBlockQueryDescription%7B%60%601%7D%7D%7D%2CSystem.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IMergeBlockAdapter%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+</span>
+<span class="small pull-right mobile-hide">
+  <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L746">View Source</a>
+</span>
+<a id="XData_Database_SqlBlock_ISqlBlockAdapter_Merge_" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Merge*"></a>
+<h4 id="XData_Database_SqlBlock_ISqlBlockAdapter_Merge__2_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___1____System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IMergeBlockAdapter___0___" data-uid="XData.Database.SqlBlock.ISqlBlockAdapter.Merge``2(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryStructure,XData.Database.SqlBlock.IBlockQueryDescription{``1}}},System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IMergeBlockAdapter,``0}})">Merge&lt;T, TSource&gt;(String, String, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;TSource&gt;&gt;&gt;, String, Expression&lt;Func&lt;IMergeBlockAdapter, T&gt;&gt;)</h4>
+<div class="markdown level1 summary"><p>MERGE SQL block</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+<h5 class="decalaration">Declaration</h5>
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">ISqlBlock Merge&lt;T, TSource&gt;(string tableName, string targetAlias, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;TSource&gt;&gt;&gt; sourceQuery, string sourceAlias, Expression&lt;Func&lt;IMergeBlockAdapter, T&gt;&gt; mapper)
+    where T : class where TSource : class</code></pre>
+</div>
+<h5 class="parameters">Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+      <td><span class="parametername">tableName</span></td>
+      <td><p>Table name to merge with</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+      <td><span class="parametername">targetAlias</span></td>
+      <td><p>Target table alias</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryStructure.html">IBlockQueryStructure</a>, <a class="xref" href="XData.Database.SqlBlock.IBlockQueryDescription-1.html">IBlockQueryDescription</a>&lt;TSource&gt;&gt;&gt;</td>
+      <td><span class="parametername">sourceQuery</span></td>
+      <td><p>Source subquery description</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+      <td><span class="parametername">sourceAlias</span></td>
+      <td><p>Data source alias</p>
+</td>
+    </tr>
+    <tr>
+      <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IMergeBlockAdapter.html">IMergeBlockAdapter</a>, T&gt;&gt;</td>
+      <td><span class="parametername">mapper</span></td>
+      <td><p>Data source mapper
+<br>Use <a class="xref" href="XData.Database.SqlBlock.IMergeAttributeAdapter.Link.html#XData_Database_SqlBlock_IMergeAttributeAdapter_Link">Link()</a>, <a class="xref" href="XData.Database.SqlBlock.IMergeAttributeAdapter.Update.html#XData_Database_SqlBlock_IMergeAttributeAdapter_Update">Update()</a> and <a class="xref" href="XData.Database.SqlBlock.IMergeAttributeAdapter.Insert.html#XData_Database_SqlBlock_IMergeAttributeAdapter_Insert">Insert()</a>
+structure flags to set merge role of data source columns</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="returns">Returns</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a class="xref" href="XData.Database.SqlBlock.ISqlBlock.html">ISqlBlock</a></td>
+      <td><p>SQL block description</p>
+</td>
+    </tr>
+  </tbody>
+</table>
+<h5 class="typeParameters">Type Parameters</h5>
+<table class="table table-bordered table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="parametername">T</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><span class="parametername">TSource</span></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="XData_Database_SqlBlock_ISqlBlockAdapter_Merge__2_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryStructure_XData_Database_SqlBlock_IBlockQueryDescription___1____System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IMergeBlockAdapter___0____seealso">See Also</h5>
 <div class="seealso">
     <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition.html">SqlBlockDefinition</a>&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
     <div><a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">GetSqlBlockData&lt;T&gt;</a>(<a class="xref" href="XData.IDataScope.html">IDataScope</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition-1.html">SqlBlockDefinition</a>&lt;T&gt;&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[])</div>
@@ -193,7 +288,7 @@ structure flags to set merge role of data source columns</p>
                     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_ISqlBlockAdapter_Merge_.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.ISqlBlockAdapter.Merge*%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L629" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/Interfaces.cs/#L730" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

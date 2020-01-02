@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Property FixedQuery
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -120,7 +120,7 @@
 <div class="markdown level1 remarks"><p>Used to cache record set once (at first call) and have an access to cached data multiple times</p>
 <p>Hint: Useful when needed to read the same data multiple times according dynamic rules and all records count approximately equal or less then requests count</p></div>
 <h5 id="XData_IRepository_FixedQuery_examples">Examples</h5>
-<pre><code class="cs"><p>var q = dataScope.GetRepository&lt;Some>().Where(x => x.SomeField == 1);</p>
+<pre><code class="lang-cs"><p>var q = dataScope.GetRepository&lt;Some>().Where(x => x.SomeField == 1);</p>
 <p>q.FixedQuery = true;</p>
 <p>q.FirstOrDefault(x => x.OtherField == 3); //Queried across the cached data</p></code></pre>
 </article>

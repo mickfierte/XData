@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum DialectOptions
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,18 +83,7 @@
   
   <h1 id="XData_DialectOptions" data-uid="XData.DialectOptions" class="text-break">Enum DialectOptions
   </h1>
-  <div class="markdown level0 summary"><p>SQL dialect options
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_SequenceRequired">SequenceRequired</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_WithSupported">WithSupported</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_ReturningInResult">ReturningInResult</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_StoredProceduresSupported">StoredProceduresSupported</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_ScalarFunctionsSupported">ScalarFunctionsSupported</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_TableFunctionsSupported">TableFunctionsSupported</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_ObjectParametersSupported">ObjectParametersSupported</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_TableParametersSupported">TableParametersSupported</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_ScalarFunctionsOutParametersAllowed">ScalarFunctionsOutParametersAllowed</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_TableOutParametersAllowed">TableOutParametersAllowed</a>
-<a class="xref" href="XData.DialectOptions.html#XData_DialectOptions_MultipleRecordsetProceduresSupported">MultipleRecordsetProceduresSupported</a></p>
+  <div class="markdown level0 summary"><p>SQL dialect options</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="XData.html">XData</a></h6>
@@ -102,7 +91,7 @@
   <h5 id="XData_DialectOptions_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Flags]
-public enum DialectOptions</code></pre>
+public enum DialectOptions : ulong</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -185,6 +174,11 @@ public enum DialectOptions</code></pre>
 </td>
       </tr>
       <tr>
+        <td id="XData_DialectOptions_SqlBlockOuterTableVariables">SqlBlockOuterTableVariables</td>
+        <td><p>Sql block can operate with table variables out of block only</p>
+</td>
+      </tr>
+      <tr>
         <td id="XData_DialectOptions_StoredProcedureResultAsExecuteScalar">StoredProcedureResultAsExecuteScalar</td>
         <td><p>SQL function result value returned as Execute scalar result</p>
 </td>
@@ -222,6 +216,26 @@ public enum DialectOptions</code></pre>
       <tr>
         <td id="XData_DialectOptions_UdtAsReturnValueSupported">UdtAsReturnValueSupported</td>
         <td><p>SQL function can return UDT or Arrays </p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DialectOptions_UpdateSubqueryFields">UpdateSubqueryFields</td>
+        <td><p>Update can use subquery fields as update source values and target fields</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DialectOptions_UpdateTableNotInFrom">UpdateTableNotInFrom</td>
+        <td><p>Update table is part of update (or delete) statement and not listed in from statement</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DialectOptions_UpdateTableNotUseAlias">UpdateTableNotUseAlias</td>
+        <td><p>Update and delete statements only for one table and not use table alias</p>
+</td>
+      </tr>
+      <tr>
+        <td id="XData_DialectOptions_UpdateUseTableNames">UpdateUseTableNames</td>
+        <td><p>Update not use table aliases but lower case table names</p>
 </td>
       </tr>
       <tr>
@@ -294,7 +308,7 @@ public enum DialectOptions</code></pre>
                     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DialectOptions.md&amp;value=---%0Auid%3A%20XData.DialectOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Enums/DialectOptions.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Enums/DialectOptions.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

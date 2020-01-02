@@ -8,7 +8,7 @@
     <title>Install &amp; configuration | XData website </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Install &amp; configuration | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,11 +79,32 @@
             <article class="content wrap" id="_content" data-uid="config.md">
 <h2 id="installation-and-configuration">Installation and configuration</h2>
 
+<h2 id="nuget-configuration">NuGet configuration</h2>
+<p>To get XData NuGet packages You will need moify nuget.config as described below and place it in project root folder near Your solution file.</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;configuration&gt;
+    &lt;packageSources&gt;
+        &lt;clear /&gt;
+        &lt;add key=&quot;xdata&quot; value=&quot;https://nuget.pkg.github.com/mickfierte/index.json&quot; /&gt;
+        &lt;add key=&quot;nuget.org&quot; value=&quot;https://api.nuget.org/v3/index.json&quot; /&gt;
+    &lt;/packageSources&gt;
+    &lt;packageSourceCredentials&gt;
+        &lt;xdata&gt;
+            &lt;add key=&quot;Username&quot; value=&quot;API_KEY&quot; /&gt;
+            &lt;add key=&quot;ClearTextPassword&quot; value=&quot;API_KEY&quot; /&gt;
+        &lt;/xdata&gt;
+    &lt;/packageSourceCredentials&gt;
+&lt;/configuration&gt;
+</code></pre><ul>
+<li>replace API_KEY with API key provided by author</li>
+</ul>
+<div class="TIP"><h5>Tip</h5><p>Some &quot;temporary implementation features&quot; of the NuGet server inside GitHub packages require you to enable the &quot;Include prerelease&quot; switch and not pay attention to the mismatch of the package description fields. Hope it gets better soon.</p>
+</div>
 <h2 id="installation">Installation</h2>
-<p>To start use XData basic functionality is required to setup NuGet <a href="https://packages.nuget.org/packages/XData.DataAccessLayer_BrokenLink/">XData package</a>. XData <a href="../index.html#plugins">plugins or additional modules</a> can be downloaded and used separately.</p>
-<p>To work with <a href="unit_of_work.html">related objects</a> (<a href="https://www.martinfowler.com/eaaCatalog/unitOfWork.html">Unit of Work</a> implementation) is required to setup NuGet <a href="https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/">XData UnitOfWork package</a>.</p>
-<p>To implement <a href="security.html">security session</a> and use application data access with XData is required to setup NuGet <a href="https://packages.nuget.org/packages/XData.Security.Abstractions_BrokenLink/">XData Security package</a>.</p>
-<p>To use one or more <a href="../index.html#plugins">SQL dialect, SQL adapter, specific log writer</a> XData plugins it can be downloaded and unzipped to application binary folder (same as XData.dll located). Read this topic to the end for configuration rules to any plugin. Read provided readme.txt file to get specific knowledge about choosen plugin.</p>
+<p>To start use XData basic functionality is required to setup NuGet <a href="https://github.com/mickfierte/XData/packages/95851/">XData package</a>. XData <a href="../index.html#plugins">plugins or additional modules</a> can be downloaded and used separately.</p>
+<p>To work with <a href="unit_of_work.html">related objects</a> (<a href="https://www.martinfowler.com/eaaCatalog/unitOfWork.html">Unit of Work</a> implementation) is required to setup NuGet <a href="https://github.com/mickfierte/XData.WorkSet/packages/95894//">XData UnitOfWork package</a>.</p>
+<p>To implement <a href="security.html">security session</a> and use application data access with XData is required to setup NuGet <a href="https://github.com/mickfierte/XData.Security/packages/95893/">XData Security package</a>.</p>
+<p>To use one or more <a href="../index.html#nuget-packages">SQL dialect, SQL adapter, specific .Net 4.0 log writer</a> XData plugins it can be installed like any other NuGet package.</p>
 <p>To deploy application in three-tier architecture read <a href="three_tier.html">here</a></p>
 <h3 id="acquiring-xdata-configuration-during-runtime">Acquiring XData configuration during runtime</h3>
 <p>.Net Standard 2.0:</p>
@@ -153,7 +174,7 @@ var dataEngine = XDataManager.InitXData(x =&gt; x.UseConfiguration(
 <div class="NOTE"><h5>Note</h5><p>Three-tier architecture can be apllied over .Net 4.0 version only! See next versions to use three-tier feature on .Net Standard 2.0 version.</p>
 </div>
 <h4 id="install-and-configure-server">Install and configure server</h4>
-<p>Server is implemented as WCF service <a href="../artifacts/net40/XData.Server.zip">XData.Server.dll</a>. Base engine XData.dll library is required to server functionality. As well as log plugins, dialects and adapters to connect database directly. To run Your application business logic on server side server logic and data mapping modules are required on server side two. </p>
+<p>Server is implemented as WCF service <a href="http://mickfierte.github.io/XData/artifacts/net40/XData.Server.zip">XData.Server.dll</a>. Base engine XData.dll library is required to server functionality. As well as log plugins, dialects and adapters to connect database directly. To run Your application business logic on server side server logic and data mapping modules are required on server side two. </p>
 <p>Limits to choose protocol can be used as transport between client and server:</p>
 <ul>
 <li>Duplex support</li>
@@ -161,7 +182,7 @@ var dataEngine = XDataManager.InitXData(x =&gt; x.UseConfiguration(
 </ul>
 <p>It&#39;s recomended to host XData.Server on IIS. By default IIS is not configured to activate service over net.tcp, and if You whant to use this protocol, see <a href="http://www.codeproject.com/Articles/717327/WCF-NetTcp-Binding">here</a> to configure it.</p>
 <h4 id="changes-on-client-side">Changes on client side</h4>
-<p>When three-tier architecture is used, required to obtain special module <a href="https://packages.nuget.org/packages/XData.Remote_BrokenLink/">XData.Remote</a>. Application folder must contain client logic and data mapping modules, as well as used by Your application log modules, SQL dialect modules <strong>BUT</strong> now adapters not required to contexts used in three-tier mode.</p>
+<p>When three-tier architecture is used, required to obtain special module <a href="https://github.com/mickfierte/XData.Remote/packages/95892/">XData.Remote</a>. Application folder must contain client logic and data mapping modules, as well as used by Your application log modules, SQL dialect modules <strong>BUT</strong> now adapters not required to contexts used in three-tier mode.</p>
 <p>In configuration file, is required to configure WCF client according Your server settings. Section <em>xdata</em> must to be configured as described above with defining of <em>proxy</em> elements for every context that used three-tier architecture. Remote contexts must to have same names on client and server. Sample three-tier configuration can be obtained from XData test project.</p>
 <div class="TIP"><h5>Tip</h5><p>You able to combine local connections to some databases with one or more three-tier servers. In the same time You can use multiple dedicated servers, each for one or more contexts.</p>
 </div>

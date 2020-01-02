@@ -1,5 +1,8 @@
 Version Notes (Current Version: v1.1.0)
 =======================================
+* 1.2.0
+	* SQL Blocks is now supported
+	* Bugs are fixed, algorithms are improved
 * 1.1.0
     * .Net Standard 2.0 version released
 	* MySql is now supported

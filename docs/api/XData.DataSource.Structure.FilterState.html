@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FilterState
    | XData website ">
-    <meta name="generator" content="docfx 2.40.4.0">
+    <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -105,7 +105,7 @@
     <div><a class="xref" href="XData.DataSource.Structure.INamedFilter.html">INamedFilter</a></div>
     <div><a class="xref" href="XData.DataSource.Structure.IOptionalFilter.html">IOptionalFilter</a></div>
     <div><a class="xref" href="XData.DataSource.Structure.IFilter.html">IFilter</a></div>
-    <div><span class="xref">ICloneable</span></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">ICloneable</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="XData.DataSource.Structure.FilterState.html">FilterState</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -136,7 +136,8 @@
   <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_DataSource_Structure_FilterState_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[DataContract]
+    <pre><code class="lang-csharp hljs">[Serializable]
+[DataContract]
 public sealed class FilterState : ISubqueryLink, IInnerViewLink, IInnerLink, IDictionaryFilter, ISubqueryFilter, IExpressionFilter, IRangeFilter, IConstantFilter, IRuntimeFilter, INamedFilter, IOptionalFilter, IFilter, ICloneable, IEquatable&lt;FilterState&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
