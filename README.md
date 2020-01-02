@@ -24,9 +24,9 @@ version 1.1.0
 
 [XData MySql adapter package](https://github.com/mickfierte/XData.MySql/packages/95898/) - MySQL database dialect and adapter based on MySql.Data provider
 
-[XData net 4.0 System.Diagnistics.Trace log writer package]](https://github.com/mickfierte/XData.Logging.Trace/packages/95890/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
+[XData net 4.0 System.Diagnistics.Trace log writer package](https://github.com/mickfierte/XData.Logging.Trace/packages/95890/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
 
-[XData net 4.0 log4net log writer package]](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
+[XData net 4.0 log4net log writer package](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
 
 ## Basic features
 * Single domain object can be mapped on multiple tables (or views, or procedures) in DB. Every DB object can be mapped multiple times in one (or more mappings).
