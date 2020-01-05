@@ -295,6 +295,9 @@ references:
 - uid: security.md
   name: Security issues
   href: tutorial/security.html
+- uid: sql_block.md
+  name: SQL block
+  href: tutorial/sql_block.html
 - uid: three_tier.md
   name: Using three tier architecture
   href: tutorial/three_tier.html

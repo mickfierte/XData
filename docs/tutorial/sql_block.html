@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SQL block | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SQL block | XData website ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="sql_block.md">
+<h2 id="sql-block">SQL block</h2>
+
+<p>XData has the ability to describe and execute an anonymous SQL block in LINQ style. To call an SQL block that does not return a result set, you can call it using the <a class="xref" href="../api/XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock</a> extension method, and <a class="xref" href="../api/XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">GetSqlBlockData&lt;T&gt;</a> can be used to get a collection of objects of type T.</p>
+<p>An expression of type <a class="xref" href="../api/XData.Database.SqlBlock.SqlBlockDefinition.html">Expression&lt;SqlBlockDefinition&gt;</a> is used to describe the SQL block and an expression of type <a class="xref" href="../api/XData.Database.SqlBlock.SqlBlockDefinition-1.html">Expression&lt;SqlBlockDefinition&lt;T&gt;&gt;</a> is used as the value of the block parameter of the methods described above to return a result of type T. These types are delegates of the functions parameterized by <a class="xref" href="../api/XData.Database.SqlBlock.ISqlBlockAdapter.html">ISqlBlockAdapter</a> and <a class="xref" href="../api/XData.Database.SqlBlock.ISqlBlockAdapter-1.html">ISqlBlockAdapter&lt;T&gt;</a>, respectively.</p>
+<p>An array called parameters is used to describe the parameter values of an unnamed SQL block.</p>
+<p>For example:</p>
+<ul>
+<li>to DELETE SQL block...</li>
+</ul>
+<pre><code class="lang-sql">delete T from T_TEST T where T.test2_id = 1
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(x =&gt; x.Delete(t =&gt; t.GetStructure(&quot;T&quot;, 
+    y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;T&quot;,
+        a =&gt; a.ConstFilter(&quot;FilterByTest2Id&quot;, &quot;test2_id&quot;, 1)))));
+</code></pre><ul>
+<li>to INSERT VALUES SQL block...</li>
+</ul>
+<pre><code class="lang-sql">insert into T_TEST(test2_id, date) values(@id, @date)
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(x =&gt; x.Insert(&quot;T_TEST&quot;, z =&gt; new {
+        TestId = z.Value(y =&gt; y.Default&lt;long&gt;(DefaultType.AutoIncrement)),
+        Test2Id = z.Value(&quot;test2_id&quot;, y =&gt; y.Data&lt;long&gt;(&quot;id&quot;)),
+        DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) }),
+    x =&gt; x.Param&lt;long&gt;(&quot;id&quot;, DbType.Int32).Set(1),
+    x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now));
+</code></pre><ul>
+<li>to INSERT MULTIPLE VALUES SQL block...</li>
+</ul>
+<pre><code class="lang-sql">insert into T_TEST(test2_id, date) 
+values(1, &#39;2017-01-01&#39;),
+(1, &#39;2017-01-02&#39;),
+(2, &#39;2017-01-03&#39;)
+</code></pre><pre><code class="lang-csharp">using (var table = new DataTable())
+{
+    table.Columns.AddRange(new[]{ new DataColumn(&quot;id&quot;, typeof(long)),
+                new DataColumn(&quot;date_param&quot;, typeof(DateTime)) });
+    table.Rows.Add(1, DateTime.Parse(&quot;2017-01-01&quot;));
+    table.Rows.Add(1, DateTime.Parse(&quot;2017-01-02&quot;));
+    table.Rows.Add(2, DateTime.Parse(&quot;2017-01-03&quot;));
+    table.AcceptChanges();
+
+    dataScope.ExecuteSqlBlock(
+        x =&gt; x.Insert(&quot;T_TEST&quot;, table, z =&gt; new {
+            TestId = z.Value(y =&gt; y.Default&lt;long&gt;(DefaultType.AutoIncrement)),
+            Test2Id = z.Value(&quot;test2_id&quot;, y =&gt; y.Data&lt;long&gt;(&quot;id&quot;)),
+            DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) }));
+}
+</code></pre><ul>
+<li>to INSERT INTO SELECT SQL block...</li>
+</ul>
+<pre><code class="lang-sql">insert into T_TEST(test2_id, date_field) 
+select 2 as id, dateadd(day, -4, X.date_field) as date_val 
+  from T_TEST X 
+  where test2_id = 1
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.Insert(&quot;T_TEST&quot;,
+        t =&gt; t.GetStructure(&quot;X&quot;, y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;X&quot;, 
+            z =&gt; z.ConstFilter(&quot;FilterByTest2Id&quot;, &quot;test2_id&quot;, 1)))
+            .Select(z =&gt; new {
+                TestId = z.Default&lt;long&gt;(DefaultType.AutoIncrement),
+                Test2Id = z.Expr(&quot;id&quot;, s =&gt; 2, DbType.Int64),
+                DateField = z.Expr(&quot;date_val&quot;, 
+                    s =&gt; s.Field&lt;DateTime&gt;(&quot;X&quot;, 
+                        &quot;date_field&quot;).AddDays(-4), DbType.DateTime) })));
+</code></pre><ul>
+<li>to UPDATE SQL block...</li>
+</ul>
+<pre><code class="lang-sql">update T_TEST T 
+  set date_field = @date 
+  where T.test2_id in (select T2.test2_id from T_TEST2 T2 where T2.some_field = 2)
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.Update(t =&gt; t.GetStructure(&quot;T&quot;, y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;T&quot;,
+                        z =&gt; z.SubqueryFilter(&quot;test2_id&quot;, &quot;X&quot;)
+                            .SetOperation(FilterOperation.In))
+                .Subquery(&quot;X&quot;, XDataMapping.GetStructure(&quot;T2&quot;, null, 
+                        DataStructureFlag.ReadOnly)
+                    .DataTable(&quot;T_TEST2&quot;, &quot;T2&quot;, 
+                        z =&gt; z.ConstFilter(&quot;SomeFilter&quot;, &quot;some_field&quot;, 
+                            FilterConstantType.Const, 2))
+                    .Select(z =&gt; new { Test2Id = z.Field&lt;long&gt;(&quot;T2&quot;, &quot;test2_id&quot;) }), 
+                        &quot;Test2Id&quot;, DataGrouping.None)),
+            z =&gt; new { DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) }),
+    x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now.AddDays(-8)));
+</code></pre><ul>
+<li>to MERGE TABLE with values</li>
+</ul>
+<pre><code class="lang-sql">merge T_TEST2 T
+  using (select @test2_id, @some) S (test2_id, some_field)
+    on (T.test2_id = S.test2_id)
+  when matched then update set some_field = S.some_field
+  when not matched then insert(some_field) values(@some) 
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.Merge(&quot;T_TEST2&quot;, &quot;T&quot;, &quot;S&quot;, z =&gt; new {
+        Test2Id = z.Field(&quot;test2_id&quot;, y =&gt; y.Data&lt;long&gt;(&quot;Test2Id&quot;), 
+            y =&gt; y.Insert(DefaultType.AutoIncrement), y =&gt; y.Link()),
+        SomeField = z.Field(y =&gt; y.Data&lt;int&gt;(&quot;Some&quot;), 
+            y =&gt; y.Update(), y =&gt; y.Insert())   }),
+    x =&gt; x.Param&lt;int&gt;(&quot;Test2Id&quot;, DbType.Int64).Set(3),
+    x =&gt; x.Param&lt;int&gt;(&quot;Some&quot;, DbType.Int32).Set(3));
+</code></pre><ul>
+<li>to IF BLOCK</li>
+</ul>
+<pre><code class="lang-sql">if @id &gt;= 1
+begin
+  insert into T_TEST(test2_id, date_field) values(@id, @date_param)
+end 
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.If(z =&gt; z.Data&lt;long&gt;(&quot;id&quot;), 
+            z =&gt; z.Const(1, DbType.Int64), FilterOperation.GreaterThanOrEqual,
+        s =&gt; s.Insert(&quot;T_TEST&quot;, z =&gt; new {
+            TestId = z.Value(y =&gt; y.Default&lt;long&gt;(DefaultType.AutoIncrement)),
+            Test2Id = z.Value(&quot;test2_id&quot;, y =&gt; y.Data&lt;long&gt;(&quot;id&quot;)),
+            DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) })),
+    x =&gt; x.Param&lt;long&gt;(&quot;id&quot;, DbType.Int64).Set(1),
+    x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now));
+</code></pre><ul>
+<li>to IF EXISTS</li>
+</ul>
+<pre><code class="lang-sql">if not exists(select 1 from T_TEST where test2_id = @id)
+begin
+  insert into T_TEST(test2_id, date_field) values(@id, @date_param)
+end
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.If(t =&gt; t.GetStructure(&quot;T&quot;, y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;T&quot;,
+            z =&gt; z.ConstFilter(&quot;FilterByTest2&quot;, &quot;test2_id&quot;, 
+                FilterConstantType.Variable, &quot;id&quot;))),
+        FilterOperation.NotExists,
+        s =&gt; s.Insert(&quot;T_TEST&quot;, z =&gt; new {
+            TestId = z.Value(y =&gt; y.Default&lt;long&gt;(DefaultType.AutoIncrement)),
+            Test2Id = z.Value(&quot;test2_id&quot;, y =&gt; y.Data&lt;long&gt;(&quot;id&quot;)),
+            DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) })),
+    x =&gt; x.Param&lt;long&gt;(&quot;id&quot;, DbType.Int64).Set(1),
+    x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now));
+</code></pre><ul>
+<li>some other sample</li>
+</ul>
+<pre><code class="lang-sql">declare @test table(test_id int, test2_id int, date_field datetime),
+   @pid int, @pfk int, @pdate datetime;
+begin
+  select test_id, test2_id, date_field into @test from T_TEST;
+  declare test_cursor cursor for select test_id, test2_id, date_field 
+    from @test where test2_id = 2;
+  open test_cursor;
+  fetch next from test_cursor into @pid, @pfk, @pdate;
+  while @@fetch_status = 0
+  begin
+    fetch next from test_cursor into @pid, @pfk, @pdate;
+  end
+  close test_cursor;
+  deallocate test_cursor;
+  select test_id, test2_id, date_field from @test;
+end
+</code></pre><pre><code class="lang-csharp">var sqlBlockData = dataScope.GetSqlBlockData&lt;TestObj&gt;(
+    b =&gt; b.Block&lt;TestObj&gt;(
+        x =&gt; x.Declare(
+            z =&gt; z.Var&lt;DataTable&gt;(&quot;test&quot;,
+                y =&gt; y.Field(&quot;test_id&quot;, DbType.Int64),
+                y =&gt; y.Field(&quot;test2_id&quot;, DbType.Int64),
+                y =&gt; y.Field(&quot;date_field&quot;, DbType.DateTime)),
+            z =&gt; z.Var&lt;long&gt;(&quot;pid&quot;, DbType.Int64),
+            z =&gt; z.Var&lt;long&gt;(&quot;pfk&quot;, DbType.Int64),
+            z =&gt; z.Var&lt;DateTime&gt;(&quot;pdate&quot;, DbType.DateTime)),
+        x =&gt; x.SetVar(t =&gt; t.GetStructure(&quot;T&quot;, 
+            y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;T&quot;))
+                .Select(z =&gt; new {
+                    TestId = z.Field&lt;long&gt;(&quot;T&quot;, string.Empty),
+                    Test2Id = z.Field&lt;long&gt;(&quot;T&quot;, &quot;test2_id&quot;),
+                    DateField = z.Field&lt;DateTime&gt;(&quot;T&quot;, string.Empty)
+                }), z =&gt; z.Var&lt;DataTable&gt;(&quot;test&quot;)),
+        x =&gt; x.ForEach(t =&gt; t.GetStructure(&quot;T&quot;, 
+                y =&gt; y.DataTable(t.Var(&quot;test&quot;), &quot;T&quot;,
+                    z =&gt; z.ConstFilter(&quot;FilterByTest2&quot;, &quot;test2_id&quot;, 
+                        FilterConstantType.Const, 2)))
+            .Select(z =&gt; new {
+                TestId = z.Field&lt;long&gt;(&quot;T&quot;, string.Empty),
+                Test2Id = z.Field&lt;long&gt;(&quot;T&quot;, &quot;test2_id&quot;),
+                DateField = z.Field&lt;DateTime&gt;(&quot;T&quot;, string.Empty) }),
+            &quot;test_cursor&quot;,
+            z =&gt; null,
+            z =&gt; z.Map(&quot;pid&quot;, y =&gt; y.TestId), 
+            z =&gt; z.Map(&quot;pfk&quot;, y =&gt; y.Test2Id), 
+            z =&gt; z.Map(&quot;pdate&quot;, y =&gt; y.DateField)),
+        x =&gt; x.Return(t =&gt; t.GetStructure(&quot;T&quot;, 
+            y =&gt; y.DataTable(t.Var(&quot;test&quot;), &quot;T&quot;))
+                .Select(z =&gt; new TestObj {
+                    TestId = z.Field&lt;long&gt;(&quot;T&quot;, string.Empty),
+                    Test2Id = z.Field&lt;long&gt;(&quot;T&quot;, &quot;test2_id&quot;),
+                    DateField = z.Field&lt;DateTime&gt;(&quot;T&quot;, string.Empty) 
+            }))
+    ));
+foreach (TestObj testObj in sqlBlockData)
+{
+    Console.WriteLine(testObj.DateField);
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mickfierte/private/blob/main/doc/tutorial/sql_block.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -69,7 +69,7 @@ To get XData NuGet packages You will need moify nuget.config as described below 
     </packageSourceCredentials>
 </configuration>
 ```
-* replace API_KEY with API key provided by author
+\* _*replace API_KEY with API key provided by author*_
 
 >Some "temporary implementation features" of the NuGet server inside GitHub packages require you to enable the "Include prerelease" switch and not pay attention to the mismatch of the package description fields. Hope it gets better soon.
 
