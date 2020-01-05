@@ -227,97 +227,189 @@ public sealed class ActionAttribute : Attribute</code></pre>
   </div>
   <h5 id="XData_Mapping_ActionAttribute_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Used to assign one or more <a class="xref" href="XData.DataActionType.html">DataActionType</a> to <a class="xref" href="XData.IDataLogic-1.html">IDataLogic&lt;T&gt;</a> action handler</p>
-<p>Hint: Use <a class="xref" href="XData.Mapping.ActionAttribute.ActionOrder.html#XData_Mapping_ActionAttribute_ActionOrder">ActionOrder</a> to apply execution order of multiple handlers marked <a class="xref" href="XData.Mapping.ActionAttribute.html">ActionAttribute</a> for same <a class="xref" href="XData.DataActionType.html">DataActionType</a></p>
+<p>Hint: Use <a class="xref" href="XData.Mapping.ActionAttribute.html#XData_Mapping_ActionAttribute_ActionOrder">ActionOrder</a> to apply execution order of multiple handlers marked <a class="xref" href="XData.Mapping.ActionAttribute.html">ActionAttribute</a> for same <a class="xref" href="XData.DataActionType.html">DataActionType</a></p>
 <p>Hint: Action handlers will executed on server side when using XData Application server</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ActionAttribute__ctor_XData_DataActionType_System_Int32_.md&amp;value=---%0Auid%3A%20XData.Mapping.ActionAttribute.%23ctor(XData.DataActionType%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ActionAttribute.cs/#L38">View Source</a>
+  </span>
+  <a id="XData_Mapping_ActionAttribute__ctor_" data-uid="XData.Mapping.ActionAttribute.#ctor*"></a>
+  <h4 id="XData_Mapping_ActionAttribute__ctor_XData_DataActionType_System_Int32_" data-uid="XData.Mapping.ActionAttribute.#ctor(XData.DataActionType,System.Int32)">ActionAttribute(DataActionType, Int32)</h4>
+  <div class="markdown level1 summary"><p>Data action attribute</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActionAttribute(DataActionType type, int order = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Mapping_ActionAttribute__ctor_XData_DataActionType_System_Int32_" data-uid="XData.Mapping.ActionAttribute.#ctor(XData.DataActionType,System.Int32)">
-          <a class="xref" href="XData.Mapping.ActionAttribute.-ctor.html#XData_Mapping_ActionAttribute__ctor_XData_DataActionType_System_Int32_">ActionAttribute(DataActionType, Int32)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Data action attribute</p>
+        <td><a class="xref" href="XData.DataActionType.html">DataActionType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Type of action (see DataActionType)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>Action execution order</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ActionAttribute_ActionOrder.md&amp;value=---%0Auid%3A%20XData.Mapping.ActionAttribute.ActionOrder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ActionAttribute.cs/#L32">View Source</a>
+  </span>
+  <a id="XData_Mapping_ActionAttribute_ActionOrder_" data-uid="XData.Mapping.ActionAttribute.ActionOrder*"></a>
+  <h4 id="XData_Mapping_ActionAttribute_ActionOrder" data-uid="XData.Mapping.ActionAttribute.ActionOrder">ActionOrder</h4>
+  <div class="markdown level1 summary"><p>Action execution order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ActionOrder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Mapping_ActionAttribute_ActionOrder" data-uid="XData.Mapping.ActionAttribute.ActionOrder">
-          <a class="xref" href="XData.Mapping.ActionAttribute.ActionOrder.html#XData_Mapping_ActionAttribute_ActionOrder">ActionOrder</a>
-        </td>
-        <td class="markdown level1 summary"><p>Action execution order</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ActionAttribute_ActionType.md&amp;value=---%0Auid%3A%20XData.Mapping.ActionAttribute.ActionType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ActionAttribute.cs/#L28">View Source</a>
+  </span>
+  <a id="XData_Mapping_ActionAttribute_ActionType_" data-uid="XData.Mapping.ActionAttribute.ActionType*"></a>
+  <h4 id="XData_Mapping_ActionAttribute_ActionType" data-uid="XData.Mapping.ActionAttribute.ActionType">ActionType</h4>
+  <div class="markdown level1 summary"><p>Type of action (see DataActionType)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataActionType ActionType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ActionAttribute_ActionType" data-uid="XData.Mapping.ActionAttribute.ActionType">
-          <a class="xref" href="XData.Mapping.ActionAttribute.ActionType.html#XData_Mapping_ActionAttribute_ActionType">ActionType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Type of action (see DataActionType)</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ActionAttribute_TypeId" data-uid="XData.Mapping.ActionAttribute.TypeId">
-          <a class="xref" href="XData.Mapping.ActionAttribute.TypeId.html#XData_Mapping_ActionAttribute_TypeId">TypeId</a>
-        </td>
-        <td class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
+        <td><a class="xref" href="XData.DataActionType.html">DataActionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ActionAttribute_ActionType_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataActionType.html">DataActionType</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ActionAttribute_TypeId.md&amp;value=---%0Auid%3A%20XData.Mapping.ActionAttribute.TypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ActionAttribute.cs/#L22">View Source</a>
+  </span>
+  <a id="XData_Mapping_ActionAttribute_TypeId_" data-uid="XData.Mapping.ActionAttribute.TypeId*"></a>
+  <h4 id="XData_Mapping_ActionAttribute_TypeId" data-uid="XData.Mapping.ActionAttribute.TypeId">TypeId</h4>
+  <div class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object TypeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a> that is a unique identifier for the attribute.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.typeid#System_Attribute_TypeId">Attribute.TypeId</a></div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>

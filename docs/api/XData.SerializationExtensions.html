@@ -123,6 +123,107 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_SerializationExtensions_ObjectToXml_System_Object_.md&amp;value=---%0Auid%3A%20XData.SerializationExtensions.ObjectToXml(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Serialization.cs/#L45">View Source</a>
+  </span>
+  <a id="XData_SerializationExtensions_ObjectToXml_" data-uid="XData.SerializationExtensions.ObjectToXml*"></a>
+  <h4 id="XData_SerializationExtensions_ObjectToXml_System_Object_" data-uid="XData.SerializationExtensions.ObjectToXml(System.Object)">ObjectToXml(Object)</h4>
+  <div class="markdown level1 summary"><p>Serialize object data to Xml</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ObjectToXml(object source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Object to serialize</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Xml string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_SerializationExtensions_ReadXml__1_System_String_.md&amp;value=---%0Auid%3A%20XData.SerializationExtensions.ReadXml%60%601(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Serialization.cs/#L66">View Source</a>
+  </span>
+  <a id="XData_SerializationExtensions_ReadXml_" data-uid="XData.SerializationExtensions.ReadXml*"></a>
+  <h4 id="XData_SerializationExtensions_ReadXml__1_System_String_" data-uid="XData.SerializationExtensions.ReadXml``1(System.String)">ReadXml&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"><p>Deserialize helper</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ReadXml&lt;T&gt;(this string source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>String contained serialized object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>De-serialized object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -132,59 +233,458 @@
     </thead>
     <tbody>
       <tr>
-        <td id="XData_SerializationExtensions_ObjectToXml_System_Object_" data-uid="XData.SerializationExtensions.ObjectToXml(System.Object)">
-          <a class="xref" href="XData.SerializationExtensions.ObjectToXml.html#XData_SerializationExtensions_ObjectToXml_System_Object_">ObjectToXml(Object)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Serialize object data to Xml</p>
+        <td><span class="parametername">T</span></td>
+        <td><p>Object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_SerializationExtensions_Restore__1___0_XData_SerializedData_.md&amp;value=---%0Auid%3A%20XData.SerializationExtensions.Restore%60%601(%60%600%2CXData.SerializedData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Serialization.cs/#L144">View Source</a>
+  </span>
+  <a id="XData_SerializationExtensions_Restore_" data-uid="XData.SerializationExtensions.Restore*"></a>
+  <h4 id="XData_SerializationExtensions_Restore__1___0_XData_SerializedData_" data-uid="XData.SerializationExtensions.Restore``1(``0,XData.SerializedData)">Restore&lt;T&gt;(T, SerializedData)</h4>
+  <div class="markdown level1 summary"><p>Set serialized data to object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Restore&lt;T&gt;(this T obj, SerializedData data)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Data object instance</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_SerializationExtensions_ReadXml__1_System_String_" data-uid="XData.SerializationExtensions.ReadXml``1(System.String)">
-          <a class="xref" href="XData.SerializationExtensions.ReadXml.html#XData_SerializationExtensions_ReadXml__1_System_String_">ReadXml&lt;T&gt;(String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Deserialize helper</p>
+        <td><a class="xref" href="XData.SerializedData.html">SerializedData</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Serialized data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataQueryStructureException.html">XDataQueryStructureException</a></td>
+        <td><p>serialized data contains not mapped properties. </p>
 </td>
       </tr>
       <tr>
-        <td id="XData_SerializationExtensions_Restore__1___0_XData_SerializedData_" data-uid="XData.SerializationExtensions.Restore``1(``0,XData.SerializedData)">
-          <a class="xref" href="XData.SerializationExtensions.Restore.html#XData_SerializationExtensions_Restore__1___0_XData_SerializedData_">Restore&lt;T&gt;(T, SerializedData)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Set serialized data to object</p>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>serialized data is null. </p>
 </td>
       </tr>
       <tr>
-        <td id="XData_SerializationExtensions_Serialize__1___0_" data-uid="XData.SerializationExtensions.Serialize``1(``0)">
-          <a class="xref" href="XData.SerializationExtensions.Serialize.html#XData_SerializationExtensions_Serialize__1___0_">Serialize&lt;T&gt;(T)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Get serialized data from object</p>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>serialized data have a wrong type. </p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_SerializationExtensions_Restore__1___0_XData_SerializedData__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_Serialize__1___0_">Serialize&lt;T&gt;(T)</a></div>
+      <div><a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_Serialize__1_System_Collections_Generic_IEnumerable___0__">Serialize&lt;T&gt;(IEnumerable&lt;T&gt;)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_SerializationExtensions_Serialize__1___0_.md&amp;value=---%0Auid%3A%20XData.SerializationExtensions.Serialize%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Serialization.cs/#L112">View Source</a>
+  </span>
+  <a id="XData_SerializationExtensions_Serialize_" data-uid="XData.SerializationExtensions.Serialize*"></a>
+  <h4 id="XData_SerializationExtensions_Serialize__1___0_" data-uid="XData.SerializationExtensions.Serialize``1(``0)">Serialize&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>Get serialized data from object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SerializedData Serialize&lt;T&gt;(this T obj)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Data object instance</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SerializedData.html">SerializedData</a></td>
+        <td><p>Serialized data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_SerializationExtensions_Serialize__1___0__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_Restore__1___0_XData_SerializedData_">Restore&lt;T&gt;(T, SerializedData)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_SerializationExtensions_Serialize__1_System_Collections_Generic_IEnumerable___0__.md&amp;value=---%0Auid%3A%20XData.SerializationExtensions.Serialize%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Serialization.cs/#L126">View Source</a>
+  </span>
+  <a id="XData_SerializationExtensions_Serialize_" data-uid="XData.SerializationExtensions.Serialize*"></a>
+  <h4 id="XData_SerializationExtensions_Serialize__1_System_Collections_Generic_IEnumerable___0__" data-uid="XData.SerializationExtensions.Serialize``1(System.Collections.Generic.IEnumerable{``0})">Serialize&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get serialized data from objects sequence</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SerializedData[] Serialize&lt;T&gt;(this IEnumerable&lt;T&gt; objects)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><span class="parametername">objects</span></td>
+        <td><p>Data objects sequence</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.SerializedData.html">SerializedData</a>[]</td>
+        <td><p>Serialized data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_SerializationExtensions_Serialize__1_System_Collections_Generic_IEnumerable___0___seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_Restore__1___0_XData_SerializedData_">Restore&lt;T&gt;(T, SerializedData)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_SerializationExtensions_Serialize__1_XData_IDataQuery___0__System_IO_TextWriter_.md&amp;value=---%0Auid%3A%20XData.SerializationExtensions.Serialize%60%601(XData.IDataQuery%7B%60%600%7D%2CSystem.IO.TextWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Serialization.cs/#L81">View Source</a>
+  </span>
+  <a id="XData_SerializationExtensions_Serialize_" data-uid="XData.SerializationExtensions.Serialize*"></a>
+  <h4 id="XData_SerializationExtensions_Serialize__1_XData_IDataQuery___0__System_IO_TextWriter_" data-uid="XData.SerializationExtensions.Serialize``1(XData.IDataQuery{``0},System.IO.TextWriter)">Serialize&lt;T&gt;(IDataQuery&lt;T&gt;, TextWriter)</h4>
+  <div class="markdown level1 summary"><p>Serialize data query helper</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Serialize&lt;T&gt;(this IDataQuery&lt;T&gt; query, TextWriter writer)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataQuery-1.html">IDataQuery</a>&lt;T&gt;</td>
+        <td><span class="parametername">query</span></td>
+        <td><p>Query</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_SerializationExtensions_Serialize__1_System_Collections_Generic_IEnumerable___0__" data-uid="XData.SerializationExtensions.Serialize``1(System.Collections.Generic.IEnumerable{``0})">
-          <a class="xref" href="XData.SerializationExtensions.Serialize.html#XData_SerializationExtensions_Serialize__1_System_Collections_Generic_IEnumerable___0__">Serialize&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Get serialized data from objects sequence</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>Writer to serialize</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Writer is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_SerializationExtensions_Serialize__1_XData_IDataQuery___0__System_IO_TextWriter__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_IO_TextReader_">GetRepository&lt;T&gt;(TextReader)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_SerializationExtensions_Serialize__1_XData_IRepository___0__System_IO_TextWriter_.md&amp;value=---%0Auid%3A%20XData.SerializationExtensions.Serialize%60%601(XData.IRepository%7B%60%600%7D%2CSystem.IO.TextWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Serialization.cs/#L97">View Source</a>
+  </span>
+  <a id="XData_SerializationExtensions_Serialize_" data-uid="XData.SerializationExtensions.Serialize*"></a>
+  <h4 id="XData_SerializationExtensions_Serialize__1_XData_IRepository___0__System_IO_TextWriter_" data-uid="XData.SerializationExtensions.Serialize``1(XData.IRepository{``0},System.IO.TextWriter)">Serialize&lt;T&gt;(IRepository&lt;T&gt;, TextWriter)</h4>
+  <div class="markdown level1 summary"><p>Serialize repository helper</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Serialize&lt;T&gt;(this IRepository&lt;T&gt; repository, TextWriter writer)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IRepository-1.html">IRepository</a>&lt;T&gt;</td>
+        <td><span class="parametername">repository</span></td>
+        <td><p>Repository</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_SerializationExtensions_Serialize__1_XData_IDataQuery___0__System_IO_TextWriter_" data-uid="XData.SerializationExtensions.Serialize``1(XData.IDataQuery{``0},System.IO.TextWriter)">
-          <a class="xref" href="XData.SerializationExtensions.Serialize.html#XData_SerializationExtensions_Serialize__1_XData_IDataQuery___0__System_IO_TextWriter_">Serialize&lt;T&gt;(IDataQuery&lt;T&gt;, TextWriter)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Serialize data query helper</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td><p>Writer to serialize</p>
 </td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_SerializationExtensions_Serialize__1_XData_IRepository___0__System_IO_TextWriter_" data-uid="XData.SerializationExtensions.Serialize``1(XData.IRepository{``0},System.IO.TextWriter)">
-          <a class="xref" href="XData.SerializationExtensions.Serialize.html#XData_SerializationExtensions_Serialize__1_XData_IRepository___0__System_IO_TextWriter_">Serialize&lt;T&gt;(IRepository&lt;T&gt;, TextWriter)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Serialize repository helper</p>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Data object type</p>
 </td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_SerializationExtensions_ToXml__1___0_" data-uid="XData.SerializationExtensions.ToXml``1(``0)">
-          <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">ToXml&lt;T&gt;(T)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Serialize helper</p>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Writer is null</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_SerializationExtensions_Serialize__1_XData_IRepository___0__System_IO_TextWriter__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.IDataScope.html#XData_IDataScope_GetRepository__1_System_IO_TextReader_">GetRepository&lt;T&gt;(TextReader)</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_SerializationExtensions_ToXml__1___0_.md&amp;value=---%0Auid%3A%20XData.SerializationExtensions.ToXml%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Serialization.cs/#L27">View Source</a>
+  </span>
+  <a id="XData_SerializationExtensions_ToXml_" data-uid="XData.SerializationExtensions.ToXml*"></a>
+  <h4 id="XData_SerializationExtensions_ToXml__1___0_" data-uid="XData.SerializationExtensions.ToXml``1(``0)">ToXml&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>Serialize helper</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToXml&lt;T&gt;(this T source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Object to serialize</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>Serialized collection</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Object type</p>
 </td>
       </tr>
     </tbody>

@@ -227,148 +227,450 @@ public sealed class ParameterAttribute : Attribute</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute__ctor_System_String_System_Int32_System_String_System_Type_System_Data_DbType_.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.%23ctor(System.String%2CSystem.Int32%2CSystem.String%2CSystem.Type%2CSystem.Data.DbType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L94">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute__ctor_" data-uid="XData.Mapping.ParameterAttribute.#ctor*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute__ctor_System_String_System_Int32_System_String_System_Type_System_Data_DbType_" data-uid="XData.Mapping.ParameterAttribute.#ctor(System.String,System.Int32,System.String,System.Type,System.Data.DbType)">ParameterAttribute(String, Int32, String, Type, DbType)</h4>
+  <div class="markdown level1 summary"><p>Parameter attribute constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParameterAttribute(string alias, int order, string binding, Type type, DbType dbType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Mapping_ParameterAttribute__ctor_System_String_System_Int32_System_String_System_Type_System_Data_DbType_" data-uid="XData.Mapping.ParameterAttribute.#ctor(System.String,System.Int32,System.String,System.Type,System.Data.DbType)">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.-ctor.html#XData_Mapping_ParameterAttribute__ctor_System_String_System_Int32_System_String_System_Type_System_Data_DbType_">ParameterAttribute(String, Int32, String, Type, DbType)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Parameter attribute constructor</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>SQL stored procedure/function alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">order</span></td>
+        <td><p>Parameter order</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">binding</span></td>
+        <td><p>Parameter to repository variable binding</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Parameter mapped type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td><span class="parametername">dbType</span></td>
+        <td><p>Parameter database type</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_DefaultType.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.DefaultType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L58">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_DefaultType_" data-uid="XData.Mapping.ParameterAttribute.DefaultType*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_DefaultType" data-uid="XData.Mapping.ParameterAttribute.DefaultType">DefaultType</h4>
+  <div class="markdown level1 summary"><p>Parameter default value type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DefaultType DefaultType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Mapping_ParameterAttribute_DefaultType" data-uid="XData.Mapping.ParameterAttribute.DefaultType">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.DefaultType.html#XData_Mapping_ParameterAttribute_DefaultType">DefaultType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Parameter default value type</p>
+        <td><a class="xref" href="XData.DefaultType.html">DefaultType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_DefaultValue.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.DefaultValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L62">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_DefaultValue_" data-uid="XData.Mapping.ParameterAttribute.DefaultValue*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_DefaultValue" data-uid="XData.Mapping.ParameterAttribute.DefaultValue">DefaultValue</h4>
+  <div class="markdown level1 summary"><p>Parameter default value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object DefaultValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_Direction.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.Direction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L38">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_Direction_" data-uid="XData.Mapping.ParameterAttribute.Direction*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_Direction" data-uid="XData.Mapping.ParameterAttribute.Direction">Direction</h4>
+  <div class="markdown level1 summary"><p>Parameter direction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParameterDirection Direction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.parameterdirection">ParameterDirection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_IsArray.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.IsArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L85">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_IsArray_" data-uid="XData.Mapping.ParameterAttribute.IsArray*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_IsArray" data-uid="XData.Mapping.ParameterAttribute.IsArray">IsArray</h4>
+  <div class="markdown level1 summary"><p>User defined type (UDT) collection is VARARRAY</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsArray { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_Name.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L53">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_Name_" data-uid="XData.Mapping.ParameterAttribute.Name*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_Name" data-uid="XData.Mapping.ParameterAttribute.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Parameter name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_NativeSqlType.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.NativeSqlType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L70">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_NativeSqlType_" data-uid="XData.Mapping.ParameterAttribute.NativeSqlType*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_NativeSqlType" data-uid="XData.Mapping.ParameterAttribute.NativeSqlType">NativeSqlType</h4>
+  <div class="markdown level1 summary"><p>Native SQL type name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NativeSqlType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ParameterAttribute_NativeSqlType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Used to specify native SQL column type when conflicted with default type mapping</p>
+<p>WARNING!  May be not supported by database adapter!</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_Scale.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.Scale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L48">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_Scale_" data-uid="XData.Mapping.ParameterAttribute.Scale*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_Scale" data-uid="XData.Mapping.ParameterAttribute.Scale">Scale</h4>
+  <div class="markdown level1 summary"><p>Parameter data scale (if applicable)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Scale { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_Size.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L43">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_Size_" data-uid="XData.Mapping.ParameterAttribute.Size*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_Size" data-uid="XData.Mapping.ParameterAttribute.Size">Size</h4>
+  <div class="markdown level1 summary"><p>Parameter data size (if applicable)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Size { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_TypeId.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.TypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L21">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_TypeId_" data-uid="XData.Mapping.ParameterAttribute.TypeId*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_TypeId" data-uid="XData.Mapping.ParameterAttribute.TypeId">TypeId</h4>
+  <div class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object TypeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a> that is a unique identifier for the attribute.</p>
 </td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.typeid#System_Attribute_TypeId">Attribute.TypeId</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_UdtElementTypeName.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.UdtElementTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L80">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_UdtElementTypeName_" data-uid="XData.Mapping.ParameterAttribute.UdtElementTypeName*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_UdtElementTypeName" data-uid="XData.Mapping.ParameterAttribute.UdtElementTypeName">UdtElementTypeName</h4>
+  <div class="markdown level1 summary"><p>User defined type (UDT) element type name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UdtElementTypeName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ParameterAttribute_DefaultValue" data-uid="XData.Mapping.ParameterAttribute.DefaultValue">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.DefaultValue.html#XData_Mapping_ParameterAttribute_DefaultValue">DefaultValue</a>
-        </td>
-        <td class="markdown level1 summary"><p>Parameter default value</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ParameterAttribute_Direction" data-uid="XData.Mapping.ParameterAttribute.Direction">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.Direction.html#XData_Mapping_ParameterAttribute_Direction">Direction</a>
-        </td>
-        <td class="markdown level1 summary"><p>Parameter direction</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ParameterAttribute_UdtTypeName.md&amp;value=---%0Auid%3A%20XData.Mapping.ParameterAttribute.UdtTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/ParameterAttribute.cs/#L75">View Source</a>
+  </span>
+  <a id="XData_Mapping_ParameterAttribute_UdtTypeName_" data-uid="XData.Mapping.ParameterAttribute.UdtTypeName*"></a>
+  <h4 id="XData_Mapping_ParameterAttribute_UdtTypeName" data-uid="XData.Mapping.ParameterAttribute.UdtTypeName">UdtTypeName</h4>
+  <div class="markdown level1 summary"><p>User defined type (UDT) name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UdtTypeName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ParameterAttribute_IsArray" data-uid="XData.Mapping.ParameterAttribute.IsArray">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.IsArray.html#XData_Mapping_ParameterAttribute_IsArray">IsArray</a>
-        </td>
-        <td class="markdown level1 summary"><p>User defined type (UDT) collection is VARARRAY</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ParameterAttribute_Name" data-uid="XData.Mapping.ParameterAttribute.Name">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.Name.html#XData_Mapping_ParameterAttribute_Name">Name</a>
-        </td>
-        <td class="markdown level1 summary"><p>Parameter name</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Mapping_ParameterAttribute_NativeSqlType" data-uid="XData.Mapping.ParameterAttribute.NativeSqlType">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.NativeSqlType.html#XData_Mapping_ParameterAttribute_NativeSqlType">NativeSqlType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Native SQL type name</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Mapping_ParameterAttribute_Scale" data-uid="XData.Mapping.ParameterAttribute.Scale">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.Scale.html#XData_Mapping_ParameterAttribute_Scale">Scale</a>
-        </td>
-        <td class="markdown level1 summary"><p>Parameter data scale (if applicable)</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Mapping_ParameterAttribute_Size" data-uid="XData.Mapping.ParameterAttribute.Size">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.Size.html#XData_Mapping_ParameterAttribute_Size">Size</a>
-        </td>
-        <td class="markdown level1 summary"><p>Parameter data size (if applicable)</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Mapping_ParameterAttribute_TypeId" data-uid="XData.Mapping.ParameterAttribute.TypeId">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.TypeId.html#XData_Mapping_ParameterAttribute_TypeId">TypeId</a>
-        </td>
-        <td class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Mapping_ParameterAttribute_UdtElementTypeName" data-uid="XData.Mapping.ParameterAttribute.UdtElementTypeName">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.UdtElementTypeName.html#XData_Mapping_ParameterAttribute_UdtElementTypeName">UdtElementTypeName</a>
-        </td>
-        <td class="markdown level1 summary"><p>User defined type (UDT) element type name</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_Mapping_ParameterAttribute_UdtTypeName" data-uid="XData.Mapping.ParameterAttribute.UdtTypeName">
-          <a class="xref" href="XData.Mapping.ParameterAttribute.UdtTypeName.html#XData_Mapping_ParameterAttribute_UdtTypeName">UdtTypeName</a>
-        </td>
-        <td class="markdown level1 summary"><p>User defined type (UDT) name</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>

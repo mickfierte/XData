@@ -94,108 +94,531 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IDataOptions_AddAdapter_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_.md&amp;value=---%0Auid%3A%20XData.IDataOptions.AddAdapter(System.String%2CSystem.String%2CMicrosoft.Extensions.Configuration.IConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.netstandard20.cs/#L99">View Source</a>
+  </span>
+  <a id="XData_IDataOptions_AddAdapter_" data-uid="XData.IDataOptions.AddAdapter*"></a>
+  <h4 id="XData_IDataOptions_AddAdapter_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="XData.IDataOptions.AddAdapter(System.String,System.String,Microsoft.Extensions.Configuration.IConfiguration)">AddAdapter(String, String, IConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Add supported SQL adapter description</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataOptions AddAdapter(string name, string assemblyName, IConfiguration options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_IDataOptions_AddAdapter_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="XData.IDataOptions.AddAdapter(System.String,System.String,Microsoft.Extensions.Configuration.IConfiguration)">
-          <a class="xref" href="XData.IDataOptions.AddAdapter.html#XData_IDataOptions_AddAdapter_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_">AddAdapter(String, String, IConfiguration)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Add supported SQL adapter description</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Adapter name</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_IDataOptions_AddContext_System_String_System_String_System_String_System_String_System_Boolean_System_String_System_String_" data-uid="XData.IDataOptions.AddContext(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String)">
-          <a class="xref" href="XData.IDataOptions.AddContext.html#XData_IDataOptions_AddContext_System_String_System_String_System_String_System_String_System_Boolean_System_String_System_String_">AddContext(String, String, String, String, Boolean, String, String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Add context description</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">assemblyName</span></td>
+        <td><p>Assembly name of adapter plugin</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_IDataOptions_AddDialect_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="XData.IDataOptions.AddDialect(System.String,System.String,Microsoft.Extensions.Configuration.IConfiguration)">
-          <a class="xref" href="XData.IDataOptions.AddDialect.html#XData_IDataOptions_AddDialect_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_">AddDialect(String, String, IConfiguration)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Add supported SQL dialect description</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Adapter options (xml) see concrete adapter readme for details</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataOptions.html">IDataOptions</a></td>
+        <td><p>XData options interface</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IDataOptions_AddContext_System_String_System_String_System_String_System_String_System_Boolean_System_String_System_String_.md&amp;value=---%0Auid%3A%20XData.IDataOptions.AddContext(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.netstandard20.cs/#L119">View Source</a>
+  </span>
+  <a id="XData_IDataOptions_AddContext_" data-uid="XData.IDataOptions.AddContext*"></a>
+  <h4 id="XData_IDataOptions_AddContext_System_String_System_String_System_String_System_String_System_Boolean_System_String_System_String_" data-uid="XData.IDataOptions.AddContext(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String)">AddContext(String, String, String, String, Boolean, String, String)</h4>
+  <div class="markdown level1 summary"><p>Add context description</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataOptions AddContext(string name, string dialect, string adapter, string connectionString, bool isDefault, string sequence = null, string concurrencyErrorId = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Context name</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_IDataOptions_AddProxy_System_String_System_String_" data-uid="XData.IDataOptions.AddProxy(System.String,System.String)">
-          <a class="xref" href="XData.IDataOptions.AddProxy.html#XData_IDataOptions_AddProxy_System_String_System_String_">AddProxy(String, String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Add proxy adapter description</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dialect</span></td>
+        <td><p>Dialect name</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_IDataOptions_SetLifeTmeLimit_System_Int32_" data-uid="XData.IDataOptions.SetLifeTmeLimit(System.Int32)">
-          <a class="xref" href="XData.IDataOptions.SetLifeTmeLimit.html#XData_IDataOptions_SetLifeTmeLimit_System_Int32_">SetLifeTmeLimit(Int32)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Set XData cache lifetime limit in seconds</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td><p>Adapter or proxy name</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_IDataOptions_SetMonitoringContext_System_String_" data-uid="XData.IDataOptions.SetMonitoringContext(System.String)">
-          <a class="xref" href="XData.IDataOptions.SetMonitoringContext.html#XData_IDataOptions_SetMonitoringContext_System_String_">SetMonitoringContext(String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Set monitoring context (optional, manual configuration)</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">connectionString</span></td>
+        <td><p>Connection string</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_IDataOptions_SetSecurityContext_System_String_" data-uid="XData.IDataOptions.SetSecurityContext(System.String)">
-          <a class="xref" href="XData.IDataOptions.SetSecurityContext.html#XData_IDataOptions_SetSecurityContext_System_String_">SetSecurityContext(String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Set security context (optional, manual configuration)</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isDefault</span></td>
+        <td><p>Default context flag</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_IDataOptions_UseCredentials_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_" data-uid="XData.IDataOptions.UseCredentials(System.String,System.String,System.Nullable{System.Boolean},System.String,System.String)">
-          <a class="xref" href="XData.IDataOptions.UseCredentials.html#XData_IDataOptions_UseCredentials_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_">UseCredentials(String, String, Nullable&lt;Boolean&gt;, String, String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Set database credentials</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">sequence</span></td>
+        <td><p>(optional) Assembly qualified type name implements <a class="xref" href="XData.Interfaces.ISequenceNameRule.html">ISequenceNameRule</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">concurrencyErrorId</span></td>
+        <td><p>(optional) Concurrency error id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataOptions.html">IDataOptions</a></td>
+        <td><p>XData options interface</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IDataOptions_AddDialect_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_.md&amp;value=---%0Auid%3A%20XData.IDataOptions.AddDialect(System.String%2CSystem.String%2CMicrosoft.Extensions.Configuration.IConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.netstandard20.cs/#L91">View Source</a>
+  </span>
+  <a id="XData_IDataOptions_AddDialect_" data-uid="XData.IDataOptions.AddDialect*"></a>
+  <h4 id="XData_IDataOptions_AddDialect_System_String_System_String_Microsoft_Extensions_Configuration_IConfiguration_" data-uid="XData.IDataOptions.AddDialect(System.String,System.String,Microsoft.Extensions.Configuration.IConfiguration)">AddDialect(String, String, IConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Add supported SQL dialect description</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataOptions AddDialect(string name, string assemblyName, IConfiguration options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Dialect name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">assemblyName</span></td>
+        <td><p>Assembly name of dialect plugin</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Dialect options (xml) see concrete dialect readme for details</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataOptions.html">IDataOptions</a></td>
+        <td><p>XData options interface</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IDataOptions_AddProxy_System_String_System_String_.md&amp;value=---%0Auid%3A%20XData.IDataOptions.AddProxy(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.netstandard20.cs/#L107">View Source</a>
+  </span>
+  <a id="XData_IDataOptions_AddProxy_" data-uid="XData.IDataOptions.AddProxy*"></a>
+  <h4 id="XData_IDataOptions_AddProxy_System_String_System_String_" data-uid="XData.IDataOptions.AddProxy(System.String,System.String)">AddProxy(String, String)</h4>
+  <div class="markdown level1 summary"><p>Add proxy adapter description</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataOptions AddProxy(string name, string endpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Proxy name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>WCF client endpoint name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataOptions.html">IDataOptions</a></td>
+        <td><p>XData options interface</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IDataOptions_SetLifeTmeLimit_System_Int32_.md&amp;value=---%0Auid%3A%20XData.IDataOptions.SetLifeTmeLimit(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.netstandard20.cs/#L126">View Source</a>
+  </span>
+  <a id="XData_IDataOptions_SetLifeTmeLimit_" data-uid="XData.IDataOptions.SetLifeTmeLimit*"></a>
+  <h4 id="XData_IDataOptions_SetLifeTmeLimit_System_Int32_" data-uid="XData.IDataOptions.SetLifeTmeLimit(System.Int32)">SetLifeTmeLimit(Int32)</h4>
+  <div class="markdown level1 summary"><p>Set XData cache lifetime limit in seconds</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataOptions SetLifeTmeLimit(int seconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">seconds</span></td>
+        <td><p>XData cache lifetime limit</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataOptions.html">IDataOptions</a></td>
+        <td><p>XData options interface</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IDataOptions_SetMonitoringContext_System_String_.md&amp;value=---%0Auid%3A%20XData.IDataOptions.SetMonitoringContext(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.netstandard20.cs/#L83">View Source</a>
+  </span>
+  <a id="XData_IDataOptions_SetMonitoringContext_" data-uid="XData.IDataOptions.SetMonitoringContext*"></a>
+  <h4 id="XData_IDataOptions_SetMonitoringContext_System_String_" data-uid="XData.IDataOptions.SetMonitoringContext(System.String)">SetMonitoringContext(String)</h4>
+  <div class="markdown level1 summary"><p>Set monitoring context (optional, manual configuration)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataOptions SetMonitoringContext(string monitoringContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">monitoringContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataOptions.html">IDataOptions</a></td>
+        <td><p>XData options interface</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IDataOptions_SetSecurityContext_System_String_.md&amp;value=---%0Auid%3A%20XData.IDataOptions.SetSecurityContext(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.netstandard20.cs/#L76">View Source</a>
+  </span>
+  <a id="XData_IDataOptions_SetSecurityContext_" data-uid="XData.IDataOptions.SetSecurityContext*"></a>
+  <h4 id="XData_IDataOptions_SetSecurityContext_System_String_" data-uid="XData.IDataOptions.SetSecurityContext(System.String)">SetSecurityContext(String)</h4>
+  <div class="markdown level1 summary"><p>Set security context (optional, manual configuration)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataOptions SetSecurityContext(string securityContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">securityContext</span></td>
+        <td><p>Security context</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataOptions.html">IDataOptions</a></td>
+        <td><p>XData options interface</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IDataOptions_UseCredentials_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_.md&amp;value=---%0Auid%3A%20XData.IDataOptions.UseCredentials(System.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.netstandard20.cs/#L67">View Source</a>
+  </span>
+  <a id="XData_IDataOptions_UseCredentials_" data-uid="XData.IDataOptions.UseCredentials*"></a>
+  <h4 id="XData_IDataOptions_UseCredentials_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_" data-uid="XData.IDataOptions.UseCredentials(System.String,System.String,System.Nullable{System.Boolean},System.String,System.String)">UseCredentials(String, String, Nullable&lt;Boolean&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Set database credentials</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDataOptions UseCredentials(string dbServer = null, string dbSchema = null, bool? dbIntegratedSecurity = default(bool? ), string dbLogin = null, string dbPassword = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dbServer</span></td>
+        <td><p>Server name or URI</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dbSchema</span></td>
+        <td><p>Database or schema name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">dbIntegratedSecurity</span></td>
+        <td><p>Use integrated security</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dbLogin</span></td>
+        <td><p>Database user login</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dbPassword</span></td>
+        <td><p>Database user password</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataOptions.html">IDataOptions</a></td>
+        <td><p>XData options interface</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>

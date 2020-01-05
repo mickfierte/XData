@@ -123,6 +123,75 @@
   </div>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_Case__2_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___XData_Mapping_Dynamic_TaggedExpression___0___1____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.Case%60%602(XData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2C%60%600%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2C%60%601%7D%7D%2CXData.Mapping.Dynamic.TaggedExpression%7B%60%600%2C%60%601%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L96">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_Case_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.Case*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_Case__2_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___XData_Mapping_Dynamic_TaggedExpression___0___1____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.Case``2(XData.Database.SqlBlock.IBlockQueryAdapter,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``1}},XData.Mapping.Dynamic.TaggedExpression{``0,``1}[])">Case&lt;T, TResult&gt;(IBlockQueryAdapter, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;, TaggedExpression&lt;T, TResult&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Case</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult Case&lt;T, TResult&gt;(this IBlockQueryAdapter adapter, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt; expression, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt; elseValue, params TaggedExpression&lt;T, TResult&gt;[] switchValues)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td><p>Source query structure adapter</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Case expression</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, TResult&gt;&gt;</td>
+        <td><span class="parametername">elseValue</span></td>
+        <td><p>Else value</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.TaggedExpression-2.html">TaggedExpression</a>&lt;T, TResult&gt;[]</td>
+        <td><span class="parametername">switchValues</span></td>
+        <td><p>Case switch values</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><p>Case result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -132,73 +201,815 @@
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_Case__2_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___XData_Mapping_Dynamic_TaggedExpression___0___1____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.Case``2(XData.Database.SqlBlock.IBlockQueryAdapter,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``1}},XData.Mapping.Dynamic.TaggedExpression{``0,``1}[])">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.Case.html#XData_Database_SqlBlock_SqlBlockExtensions_Case__2_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___XData_Mapping_Dynamic_TaggedExpression___0___1____">Case&lt;T, TResult&gt;(IBlockQueryAdapter, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;, TaggedExpression&lt;T, TResult&gt;[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>Case</p>
+        <td><span class="parametername">T</span></td>
+        <td><p>SQL case source data mapped type</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_DateDiff__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_DateTime___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_DateTime___XData_DateDiffKind_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.DateDiff``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,System.DateTime}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,System.DateTime}},XData.DateDiffKind)">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.DateDiff.html#XData_Database_SqlBlock_SqlBlockExtensions_DateDiff__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_DateTime___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_DateTime___XData_DateDiffKind_">DateDiff&lt;T&gt;(IBlockQueryAdapter, Expression&lt;Func&lt;IBlockQueryAdapter, DateTime&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, DateTime&gt;&gt;, DateDiffKind)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Dates difference</p>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>SQL case result mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Function accessible in XData LINQ expressions only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_DateDiff__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_DateTime___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_DateTime___XData_DateDiffKind_.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.DateDiff%60%601(XData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.DateTime%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.DateTime%7D%7D%2CXData.DateDiffKind)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L115">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_DateDiff_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.DateDiff*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_DateDiff__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_DateTime___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_DateTime___XData_DateDiffKind_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.DateDiff``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,System.DateTime}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,System.DateTime}},XData.DateDiffKind)">DateDiff&lt;T&gt;(IBlockQueryAdapter, Expression&lt;Func&lt;IBlockQueryAdapter, DateTime&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, DateTime&gt;&gt;, DateDiffKind)</h4>
+  <div class="markdown level1 summary"><p>Dates difference</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T DateDiff&lt;T&gt;(this IBlockQueryAdapter adapter, Expression&lt;Func&lt;IBlockQueryAdapter, DateTime&gt;&gt; finalDate, Expression&lt;Func&lt;IBlockQueryAdapter, DateTime&gt;&gt; startDate, DateDiffKind kind)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td><p>Source query structure adapter</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock(IDataScope, Expression&lt;SqlBlockDefinition&gt;, Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>Execute SQL block</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;&gt;</td>
+        <td><span class="parametername">finalDate</span></td>
+        <td><p>Final date</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_Exists_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.Exists(XData.Database.SqlBlock.IBlockQueryAdapter,System.String)">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.Exists.html#XData_Database_SqlBlock_SqlBlockExtensions_Exists_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_">Exists(IBlockQueryAdapter, String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Exists</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;&gt;</td>
+        <td><span class="parametername">startDate</span></td>
+        <td><p>Start date</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData``1(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">GetSqlBlockData&lt;T&gt;(IDataScope, Expression&lt;SqlBlockDefinition&lt;T&gt;&gt;, Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>Select SQL block data</p>
+        <td><a class="xref" href="XData.DateDiffKind.html">DateDiffKind</a></td>
+        <td><span class="parametername">kind</span></td>
+        <td><p>Dates differences kind</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>Dates difference</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>SQL function DateDiff result data mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Function accessible in XData LINQ expressions only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope%2CSystem.Linq.Expressions.Expression%7BXData.Database.SqlBlock.SqlBlockDefinition%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.ISqlParamAdapter%2CXData.Database.SqlBlock.ISqlParam%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L39">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.ExecuteSqlBlock(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])">ExecuteSqlBlock(IDataScope, Expression&lt;SqlBlockDefinition&gt;, Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Execute SQL block</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static QueryResult ExecuteSqlBlock(this IDataScope dataScope, Expression&lt;SqlBlockDefinition&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataScope.html">IDataScope</a></td>
+        <td><span class="parametername">dataScope</span></td>
+        <td><p>Data scope</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_HasFlag__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.HasFlag``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.HasFlag.html#XData_Database_SqlBlock_SqlBlockExtensions_HasFlag__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___">HasFlag&lt;T&gt;(IBlockQueryAdapter, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Bit mask has flag</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition.html">SqlBlockDefinition</a>&gt;</td>
+        <td><span class="parametername">block</span></td>
+        <td><p>Sql block structure</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression``2(``0,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``1}})">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Set expression to tag</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[]</td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>Sql block parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.Adapter.QueryResult.html">QueryResult</a></td>
+        <td><p>SQL block executed over database</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_Exists_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.Exists(XData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L79">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_Exists_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.Exists*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_Exists_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.Exists(XData.Database.SqlBlock.IBlockQueryAdapter,System.String)">Exists(IBlockQueryAdapter, String)</h4>
+  <div class="markdown level1 summary"><p>Exists</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Exists(this IBlockQueryAdapter adapter, string subQueryAlias)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td><p>Source query structure adapter</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_SqlExpr__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlExpr``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}}[])">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SqlExpr.html#XData_Database_SqlBlock_SqlBlockExtensions_SqlExpr__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0_____">SqlExpr&lt;TResult&gt;(IBlockQueryAdapter, String, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>Plain SQL expression with XData LINQ expression placeholders</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">subQueryAlias</span></td>
+        <td><p>Subquery alias</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Function accessible in XData LINQ expressions only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData%60%601(XData.IDataScope%2CSystem.Linq.Expressions.Expression%7BXData.Database.SqlBlock.SqlBlockDefinition%7B%60%600%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.ISqlParamAdapter%2CXData.Database.SqlBlock.ISqlParam%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L57">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.GetSqlBlockData``1(XData.IDataScope,System.Linq.Expressions.Expression{XData.Database.SqlBlock.SqlBlockDefinition{``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.ISqlParamAdapter,XData.Database.SqlBlock.ISqlParam}}[])">GetSqlBlockData&lt;T&gt;(IDataScope, Expression&lt;SqlBlockDefinition&lt;T&gt;&gt;, Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Select SQL block data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; GetSqlBlockData&lt;T&gt;(this IDataScope dataScope, Expression&lt;SqlBlockDefinition&lt;T&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)
+    where T : class, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IDataScope.html">IDataScope</a></td>
+        <td><span class="parametername">dataScope</span></td>
+        <td><p>Data scope layer</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_SqlFn__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_Object_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlFn``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,System.Object}}[])">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SqlFn.html#XData_Database_SqlBlock_SqlBlockExtensions_SqlFn__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_Object_____">SqlFn&lt;TResult&gt;(IBlockQueryAdapter, String, Expression&lt;Func&lt;IBlockQueryAdapter, Object&gt;&gt;[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>SQL function call</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="XData.Database.SqlBlock.SqlBlockDefinition-1.html">SqlBlockDefinition</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">block</span></td>
+        <td><p>Sql block structure</p>
 </td>
       </tr>
       <tr>
-        <td id="XData_Database_SqlBlock_SqlBlockExtensions_SqlParam__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlParam``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])">
-          <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SqlParam.html#XData_Database_SqlBlock_SqlBlockExtensions_SqlParam__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____">SqlParam&lt;TResult&gt;(IBlockQueryAdapter, String, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</a>
-        </td>
-        <td class="markdown level1 summary"><p>SQL parameter definition</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.ISqlParamAdapter.html">ISqlParamAdapter</a>, <a class="xref" href="XData.Database.SqlBlock.ISqlParam.html">ISqlParam</a>&gt;&gt;[]</td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>Sql block parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><p>SQL block data selected and mapped</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>SQL block result mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_HasFlag__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.HasFlag%60%601(XData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2C%60%600%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2C%60%600%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2C%60%600%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L134">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_HasFlag_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.HasFlag*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_HasFlag__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0___" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.HasFlag``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}},System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}})">HasFlag&lt;T&gt;(IBlockQueryAdapter, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Bit mask has flag</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T HasFlag&lt;T&gt;(this IBlockQueryAdapter adapter, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt; expression, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt; flagValue, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt; trueValue, Expression&lt;Func&lt;IBlockQueryAdapter, T&gt;&gt; falseValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td><p>Source query structure adapter</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to test</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, T&gt;&gt;</td>
+        <td><span class="parametername">flagValue</span></td>
+        <td><p>Flag value</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, T&gt;&gt;</td>
+        <td><span class="parametername">trueValue</span></td>
+        <td><p>Result if flag exists</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, T&gt;&gt;</td>
+        <td><span class="parametername">falseValue</span></td>
+        <td><p>Result if flag not exists</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>Bit mask has flag than trueValue else falseValue</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>SQL bitmask flag test result data mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Function accessible in XData LINQ expressions only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.SetExpression%60%602(%60%600%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2C%60%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L152">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_SetExpression_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression``2(``0,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``1}})">SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set expression to tag</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TaggedExpression&lt;TTag, TResult&gt; SetExpression&lt;TTag, TResult&gt;(this TTag key, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TTag</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Tag value</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.TaggedExpression-2.html">TaggedExpression</a>&lt;TTag, TResult&gt;</td>
+        <td><p>Tagged expression</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TTag</span></td>
+        <td><p>Tag type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Expression result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_SqlExpr__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0_____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.SqlExpr%60%601(XData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2C%60%600%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L200">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_SqlExpr_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlExpr*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_SqlExpr__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlExpr``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,``0}}[])">SqlExpr&lt;TResult&gt;(IBlockQueryAdapter, String, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Plain SQL expression with XData LINQ expression placeholders</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult SqlExpr&lt;TResult&gt;(this IBlockQueryAdapter adapter, string format, params Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;[] expressions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td><p>Source query structure adapter</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>SQL expression body in <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string.format#System_String_Format_System_String_System_Object___">Format(String, Object[])</a> style</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, TResult&gt;&gt;[]</td>
+        <td><span class="parametername">expressions</span></td>
+        <td><p>XData LINQ parameter expressions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><p>SQL expression result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>SQL expression result mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Database_SqlBlock_SqlBlockExtensions_SqlExpr__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___0______remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>WARNING!  Plain SQL expressions can use specific SQL dialect features!</p>
+<p>Data mapping may be not compatible with other database engines!</p></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Function accessible in XData LINQ expressions only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_SqlFn__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_Object_____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.SqlFn%60%601(XData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.String%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.Object%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L167">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_SqlFn_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlFn*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_SqlFn__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter_System_Object_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlFn``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.String,System.Linq.Expressions.Expression{System.Func{XData.Database.SqlBlock.IBlockQueryAdapter,System.Object}}[])">SqlFn&lt;TResult&gt;(IBlockQueryAdapter, String, Expression&lt;Func&lt;IBlockQueryAdapter, Object&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>SQL function call</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult SqlFn&lt;TResult&gt;(this IBlockQueryAdapter adapter, string name, params Expression&lt;Func&lt;IBlockQueryAdapter, object&gt;&gt;[] parameters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td><p>Source query structure adapter</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>SQL function full qualified name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;[]</td>
+        <td><span class="parametername">parameters</span></td>
+        <td><p>Function parameters descriptions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><p>Function call result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>SQL function result mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Function accessible in XData LINQ expressions only</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_SqlBlock_SqlBlockExtensions_SqlParam__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____.md&amp;value=---%0Auid%3A%20XData.Database.SqlBlock.SqlBlockExtensions.SqlParam%60%601(XData.Database.SqlBlock.IBlockQueryAdapter%2CSystem.String%2CSystem.Data.DbType%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.Mapping.Dynamic.IProcedureParameterAdapter%2CXData.Mapping.Dynamic.IProcedureParameterFlag%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/SqlBlock/XSqlBlock.cs/#L183">View Source</a>
+  </span>
+  <a id="XData_Database_SqlBlock_SqlBlockExtensions_SqlParam_" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlParam*"></a>
+  <h4 id="XData_Database_SqlBlock_SqlBlockExtensions_SqlParam__1_XData_Database_SqlBlock_IBlockQueryAdapter_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____" data-uid="XData.Database.SqlBlock.SqlBlockExtensions.SqlParam``1(XData.Database.SqlBlock.IBlockQueryAdapter,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])">SqlParam&lt;TResult&gt;(IBlockQueryAdapter, String, DbType, Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>SQL parameter definition</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult SqlParam&lt;TResult&gt;(this IBlockQueryAdapter adapter, string binding, DbType type, params Expression&lt;Func&lt;IProcedureParameterAdapter, IProcedureParameterFlag&gt;&gt;[] attributes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Database.SqlBlock.IBlockQueryAdapter.html">IBlockQueryAdapter</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td><p>Query structure adapter</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">binding</span></td>
+        <td><p>Parameter data binding name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Parameter database type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IProcedureParameterAdapter.html">IProcedureParameterAdapter</a>, <a class="xref" href="XData.Mapping.Dynamic.IProcedureParameterFlag.html">IProcedureParameterFlag</a>&gt;&gt;[]</td>
+        <td><span class="parametername">attributes</span></td>
+        <td><p>Parameter mapping attributes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><p>Parameter</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Parameter mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Function accessible in XData LINQ expressions only</p>
 </td>
       </tr>
     </tbody>

@@ -227,158 +227,515 @@ public sealed class ColumnAttribute : Attribute</code></pre>
   </div>
   <h5 id="XData_Mapping_ColumnAttribute_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Used to map data without declaring real property</p>
-<p>This useful for declare <a class="xref" href="XData.DataPropertyFlag.html#XData_DataPropertyFlag_Id">Id</a>, introduce &quot;virtual&quot; property for <a class="xref" href="XData.DataSource.Structure.RuntimeFilter.PropertyName.html#XData_DataSource_Structure_RuntimeFilter_PropertyName">PropertyName</a>, <a class="xref" href="XData.Mapping.ExternalLinkAttribute.ChildProperty.html#XData_Mapping_ExternalLinkAttribute_ChildProperty">ChildProperty</a> or can be used for grouping (see <a class="xref" href="XData.Mapping.ColumnAttribute.GroupOrder.html#XData_Mapping_ColumnAttribute_GroupOrder">GroupOrder</a>)</p></div>
+<p>This useful for declare <a class="xref" href="XData.DataPropertyFlag.html#XData_DataPropertyFlag_Id">Id</a>, introduce &quot;virtual&quot; property for <a class="xref" href="XData.DataSource.Structure.RuntimeFilter.html#XData_DataSource_Structure_RuntimeFilter_PropertyName">PropertyName</a>, <a class="xref" href="XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_ChildProperty">ChildProperty</a> or can be used for grouping (see <a class="xref" href="XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_GroupOrder">GroupOrder</a>)</p></div>
   <h3 id="constructors">Constructors
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute__ctor_System_String_System_Type_System_String_System_String_.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.%23ctor(System.String%2CSystem.Type%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L90">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute__ctor_" data-uid="XData.Mapping.ColumnAttribute.#ctor*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute__ctor_System_String_System_Type_System_String_System_String_" data-uid="XData.Mapping.ColumnAttribute.#ctor(System.String,System.Type,System.String,System.String)">ColumnAttribute(String, Type, String, String)</h4>
+  <div class="markdown level1 summary"><p>Column attribute</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColumnAttribute(string propertyName, Type propertyType, string source = &quot;&quot;, string fieldName = &quot;&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute__ctor_System_String_System_Type_System_String_System_String_" data-uid="XData.Mapping.ColumnAttribute.#ctor(System.String,System.Type,System.String,System.String)">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.-ctor.html#XData_Mapping_ColumnAttribute__ctor_System_String_System_Type_System_String_System_String_">ColumnAttribute(String, Type, String, String)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Column attribute</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">propertyType</span></td>
+        <td><p>Property type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>Field name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Property name cannot be null or empty string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Field name cannot be null or empty string</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Property type cannot be null</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_FieldName.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.FieldName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L48">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_FieldName_" data-uid="XData.Mapping.ColumnAttribute.FieldName*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_FieldName" data-uid="XData.Mapping.ColumnAttribute.FieldName">FieldName</h4>
+  <div class="markdown level1 summary"><p>Field name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FieldName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_FieldName" data-uid="XData.Mapping.ColumnAttribute.FieldName">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.FieldName.html#XData_Mapping_ColumnAttribute_FieldName">FieldName</a>
-        </td>
-        <td class="markdown level1 summary"><p>Field name</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_Flags.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.Flags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L53">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_Flags_" data-uid="XData.Mapping.ColumnAttribute.Flags*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_Flags" data-uid="XData.Mapping.ColumnAttribute.Flags">Flags</h4>
+  <div class="markdown level1 summary"><p>Property flags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataPropertyFlag Flags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_Flags" data-uid="XData.Mapping.ColumnAttribute.Flags">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.Flags.html#XData_Mapping_ColumnAttribute_Flags">Flags</a>
-        </td>
-        <td class="markdown level1 summary"><p>Property flags</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_Grouping" data-uid="XData.Mapping.ColumnAttribute.Grouping">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.Grouping.html#XData_Mapping_ColumnAttribute_Grouping">Grouping</a>
-        </td>
-        <td class="markdown level1 summary"><p>Grouping mode</p>
-</td>
+        <td><a class="xref" href="XData.DataPropertyFlag.html">DataPropertyFlag</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ColumnAttribute_Flags_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataPropertyFlag.html">DataPropertyFlag</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_Grouping.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.Grouping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L59">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_Grouping_" data-uid="XData.Mapping.ColumnAttribute.Grouping*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_Grouping" data-uid="XData.Mapping.ColumnAttribute.Grouping">Grouping</h4>
+  <div class="markdown level1 summary"><p>Grouping mode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataGrouping Grouping { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_GroupOrder" data-uid="XData.Mapping.ColumnAttribute.GroupOrder">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.GroupOrder.html#XData_Mapping_ColumnAttribute_GroupOrder">GroupOrder</a>
-        </td>
-        <td class="markdown level1 summary"><p>Grouping order</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_Hidden" data-uid="XData.Mapping.ColumnAttribute.Hidden">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.Hidden.html#XData_Mapping_ColumnAttribute_Hidden">Hidden</a>
-        </td>
-        <td class="markdown level1 summary"><p>Hidden column flag</p>
-</td>
+        <td><a class="xref" href="XData.DataGrouping.html">DataGrouping</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ColumnAttribute_Grouping_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataGrouping.html">DataGrouping</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_GroupOrder.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.GroupOrder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L64">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_GroupOrder_" data-uid="XData.Mapping.ColumnAttribute.GroupOrder*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_GroupOrder" data-uid="XData.Mapping.ColumnAttribute.GroupOrder">GroupOrder</h4>
+  <div class="markdown level1 summary"><p>Grouping order</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GroupOrder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_NativeSqlType" data-uid="XData.Mapping.ColumnAttribute.NativeSqlType">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.NativeSqlType.html#XData_Mapping_ColumnAttribute_NativeSqlType">NativeSqlType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Native SQL type name</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_PropertyName" data-uid="XData.Mapping.ColumnAttribute.PropertyName">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.PropertyName.html#XData_Mapping_ColumnAttribute_PropertyName">PropertyName</a>
-        </td>
-        <td class="markdown level1 summary"><p>Property name</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_Hidden.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.Hidden%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L71">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_Hidden_" data-uid="XData.Mapping.ColumnAttribute.Hidden*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_Hidden" data-uid="XData.Mapping.ColumnAttribute.Hidden">Hidden</h4>
+  <div class="markdown level1 summary"><p>Hidden column flag</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Hidden { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_PropertyType" data-uid="XData.Mapping.ColumnAttribute.PropertyType">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.PropertyType.html#XData_Mapping_ColumnAttribute_PropertyType">PropertyType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Property type</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_Reference" data-uid="XData.Mapping.ColumnAttribute.Reference">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.Reference.html#XData_Mapping_ColumnAttribute_Reference">Reference</a>
-        </td>
-        <td class="markdown level1 summary"><p>Referenced property name</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ColumnAttribute_Hidden_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Used to exclude column from query selected columns</p>
+<p>Hidden column can be used as: <a class="xref" href="XData.DataSource.Structure.RuntimeFilter.html#XData_DataSource_Structure_RuntimeFilter_PropertyName">PropertyName</a>, <a class="xref" href="XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_ChildProperty">ChildProperty</a> or for grouping (see <a class="xref" href="XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_GroupOrder">GroupOrder</a>)</p></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_NativeSqlType.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.NativeSqlType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L79">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_NativeSqlType_" data-uid="XData.Mapping.ColumnAttribute.NativeSqlType*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_NativeSqlType" data-uid="XData.Mapping.ColumnAttribute.NativeSqlType">NativeSqlType</h4>
+  <div class="markdown level1 summary"><p>Native SQL type name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string NativeSqlType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_ReferenceSource" data-uid="XData.Mapping.ColumnAttribute.ReferenceSource">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.ReferenceSource.html#XData_Mapping_ColumnAttribute_ReferenceSource">ReferenceSource</a>
-        </td>
-        <td class="markdown level1 summary"><p>Referenced property source alias</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_Source" data-uid="XData.Mapping.ColumnAttribute.Source">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.Source.html#XData_Mapping_ColumnAttribute_Source">Source</a>
-        </td>
-        <td class="markdown level1 summary"><p>Data source alias</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ColumnAttribute_NativeSqlType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Used to specify native SQL column type when conflicted with default type mapping</p>
+<p>WARNING!  May be not supported by database adapter!</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_PropertyName.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.PropertyName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L28">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_PropertyName_" data-uid="XData.Mapping.ColumnAttribute.PropertyName*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_PropertyName" data-uid="XData.Mapping.ColumnAttribute.PropertyName">PropertyName</h4>
+  <div class="markdown level1 summary"><p>Property name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PropertyName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ColumnAttribute_TypeId" data-uid="XData.Mapping.ColumnAttribute.TypeId">
-          <a class="xref" href="XData.Mapping.ColumnAttribute.TypeId.html#XData_Mapping_ColumnAttribute_TypeId">TypeId</a>
-        </td>
-        <td class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_PropertyType.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.PropertyType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L40">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_PropertyType_" data-uid="XData.Mapping.ColumnAttribute.PropertyType*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_PropertyType" data-uid="XData.Mapping.ColumnAttribute.PropertyType">PropertyType</h4>
+  <div class="markdown level1 summary"><p>Property type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type PropertyType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_Reference.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.Reference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L36">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_Reference_" data-uid="XData.Mapping.ColumnAttribute.Reference*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_Reference" data-uid="XData.Mapping.ColumnAttribute.Reference">Reference</h4>
+  <div class="markdown level1 summary"><p>Referenced property name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Reference { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_ReferenceSource.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.ReferenceSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L32">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_ReferenceSource_" data-uid="XData.Mapping.ColumnAttribute.ReferenceSource*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_ReferenceSource" data-uid="XData.Mapping.ColumnAttribute.ReferenceSource">ReferenceSource</h4>
+  <div class="markdown level1 summary"><p>Referenced property source alias</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ReferenceSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_Source.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L44">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_Source_" data-uid="XData.Mapping.ColumnAttribute.Source*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_Source" data-uid="XData.Mapping.ColumnAttribute.Source">Source</h4>
+  <div class="markdown level1 summary"><p>Data source alias</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Source { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_TypeId.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.TypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L23">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_TypeId_" data-uid="XData.Mapping.ColumnAttribute.TypeId*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_TypeId" data-uid="XData.Mapping.ColumnAttribute.TypeId">TypeId</h4>
+  <div class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object TypeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a> that is a unique identifier for the attribute.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.typeid#System_Attribute_TypeId">Attribute.TypeId</a></div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>

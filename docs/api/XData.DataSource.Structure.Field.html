@@ -130,232 +130,826 @@ public class Field : IField, ICloneable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_DefaultFeature.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.DefaultFeature%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L74">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_DefaultFeature_" data-uid="XData.DataSource.Structure.Field.DefaultFeature*"></a>
+  <h4 id="XData_DataSource_Structure_Field_DefaultFeature" data-uid="XData.DataSource.Structure.Field.DefaultFeature">DefaultFeature</h4>
+  <div class="markdown level1 summary"><p>Always use the default value (also when updating)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public DefaultFeature DefaultFeature { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_DataSource_Structure_Field_DefaultFeature" data-uid="XData.DataSource.Structure.Field.DefaultFeature">
-          <a class="xref" href="XData.DataSource.Structure.Field.DefaultFeature.html#XData_DataSource_Structure_Field_DefaultFeature">DefaultFeature</a>
-        </td>
-        <td class="markdown level1 summary"><p>Always use the default value (also when updating)</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_DefaultType" data-uid="XData.DataSource.Structure.Field.DefaultType">
-          <a class="xref" href="XData.DataSource.Structure.Field.DefaultType.html#XData_DataSource_Structure_Field_DefaultType">DefaultType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Default source</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_DefaultValue" data-uid="XData.DataSource.Structure.Field.DefaultValue">
-          <a class="xref" href="XData.DataSource.Structure.Field.DefaultValue.html#XData_DataSource_Structure_Field_DefaultValue">DefaultValue</a>
-        </td>
-        <td class="markdown level1 summary"><p>Default value</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_EnumValues" data-uid="XData.DataSource.Structure.Field.EnumValues">
-          <a class="xref" href="XData.DataSource.Structure.Field.EnumValues.html#XData_DataSource_Structure_Field_EnumValues">EnumValues</a>
-        </td>
-        <td class="markdown level1 summary"><p>Enumeration values</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_ExprScale" data-uid="XData.DataSource.Structure.Field.ExprScale">
-          <a class="xref" href="XData.DataSource.Structure.Field.ExprScale.html#XData_DataSource_Structure_Field_ExprScale">ExprScale</a>
-        </td>
-        <td class="markdown level1 summary"><p>Expression scale</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_ExprSize" data-uid="XData.DataSource.Structure.Field.ExprSize">
-          <a class="xref" href="XData.DataSource.Structure.Field.ExprSize.html#XData_DataSource_Structure_Field_ExprSize">ExprSize</a>
-        </td>
-        <td class="markdown level1 summary"><p>Expression size</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_ExprText" data-uid="XData.DataSource.Structure.Field.ExprText">
-          <a class="xref" href="XData.DataSource.Structure.Field.ExprText.html#XData_DataSource_Structure_Field_ExprText">ExprText</a>
-        </td>
-        <td class="markdown level1 summary"><p>Expression text</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_ExprType" data-uid="XData.DataSource.Structure.Field.ExprType">
-          <a class="xref" href="XData.DataSource.Structure.Field.ExprType.html#XData_DataSource_Structure_Field_ExprType">ExprType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Expression type</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_FieldName" data-uid="XData.DataSource.Structure.Field.FieldName">
-          <a class="xref" href="XData.DataSource.Structure.Field.FieldName.html#XData_DataSource_Structure_Field_FieldName">FieldName</a>
-        </td>
-        <td class="markdown level1 summary"><p>Field name</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_Flags" data-uid="XData.DataSource.Structure.Field.Flags">
-          <a class="xref" href="XData.DataSource.Structure.Field.Flags.html#XData_DataSource_Structure_Field_Flags">Flags</a>
-        </td>
-        <td class="markdown level1 summary"><p>Flags</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_IsArray" data-uid="XData.DataSource.Structure.Field.IsArray">
-          <a class="xref" href="XData.DataSource.Structure.Field.IsArray.html#XData_DataSource_Structure_Field_IsArray">IsArray</a>
-        </td>
-        <td class="markdown level1 summary"><p>User defined type (UDT) collection is VARARRAY for field</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_IsAutoIncrement" data-uid="XData.DataSource.Structure.Field.IsAutoIncrement">
-          <a class="xref" href="XData.DataSource.Structure.Field.IsAutoIncrement.html#XData_DataSource_Structure_Field_IsAutoIncrement">IsAutoIncrement</a>
-        </td>
-        <td class="markdown level1 summary"><p>Autoincrement field flag</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_IsSelectable" data-uid="XData.DataSource.Structure.Field.IsSelectable">
-          <a class="xref" href="XData.DataSource.Structure.Field.IsSelectable.html#XData_DataSource_Structure_Field_IsSelectable">IsSelectable</a>
-        </td>
-        <td class="markdown level1 summary"><p>Selectable flag</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_IsTablePk" data-uid="XData.DataSource.Structure.Field.IsTablePk">
-          <a class="xref" href="XData.DataSource.Structure.Field.IsTablePk.html#XData_DataSource_Structure_Field_IsTablePk">IsTablePk</a>
-        </td>
-        <td class="markdown level1 summary"><p>Table primary key flag</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_Name" data-uid="XData.DataSource.Structure.Field.Name">
-          <a class="xref" href="XData.DataSource.Structure.Field.Name.html#XData_DataSource_Structure_Field_Name">Name</a>
-        </td>
-        <td class="markdown level1 summary"><p>Property name</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_NativeSqlType" data-uid="XData.DataSource.Structure.Field.NativeSqlType">
-          <a class="xref" href="XData.DataSource.Structure.Field.NativeSqlType.html#XData_DataSource_Structure_Field_NativeSqlType">NativeSqlType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Native SQL type name</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_SqlType" data-uid="XData.DataSource.Structure.Field.SqlType">
-          <a class="xref" href="XData.DataSource.Structure.Field.SqlType.html#XData_DataSource_Structure_Field_SqlType">SqlType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Sql type</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_UdtElementTypeName" data-uid="XData.DataSource.Structure.Field.UdtElementTypeName">
-          <a class="xref" href="XData.DataSource.Structure.Field.UdtElementTypeName.html#XData_DataSource_Structure_Field_UdtElementTypeName">UdtElementTypeName</a>
-        </td>
-        <td class="markdown level1 summary"><p>User defined type (UDT) element type name for field</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_UdtMappedType" data-uid="XData.DataSource.Structure.Field.UdtMappedType">
-          <a class="xref" href="XData.DataSource.Structure.Field.UdtMappedType.html#XData_DataSource_Structure_Field_UdtMappedType">UdtMappedType</a>
-        </td>
-        <td class="markdown level1 summary"><p>User defined type (UDT) mapped type for field</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_UdtTypeName" data-uid="XData.DataSource.Structure.Field.UdtTypeName">
-          <a class="xref" href="XData.DataSource.Structure.Field.UdtTypeName.html#XData_DataSource_Structure_Field_UdtTypeName">UdtTypeName</a>
-        </td>
-        <td class="markdown level1 summary"><p>User defined type (UDT) name for field</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_UpdateWithExprText" data-uid="XData.DataSource.Structure.Field.UpdateWithExprText">
-          <a class="xref" href="XData.DataSource.Structure.Field.UpdateWithExprText.html#XData_DataSource_Structure_Field_UpdateWithExprText">UpdateWithExprText</a>
-        </td>
-        <td class="markdown level1 summary"><p>Update source expression text</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_UpdateWithExprType" data-uid="XData.DataSource.Structure.Field.UpdateWithExprType">
-          <a class="xref" href="XData.DataSource.Structure.Field.UpdateWithExprType.html#XData_DataSource_Structure_Field_UpdateWithExprType">UpdateWithExprType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Update source expression type</p>
-</td>
-      </tr>
-      <tr>
-        <td id="XData_DataSource_Structure_Field_XPath" data-uid="XData.DataSource.Structure.Field.XPath">
-          <a class="xref" href="XData.DataSource.Structure.Field.XPath.html#XData_DataSource_Structure_Field_XPath">XPath</a>
-        </td>
-        <td class="markdown level1 summary"><p>XML field value XPath</p>
-</td>
+        <td><a class="xref" href="XData.DefaultFeature.html">DefaultFeature</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_DefaultType.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.DefaultType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L62">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_DefaultType_" data-uid="XData.DataSource.Structure.Field.DefaultType*"></a>
+  <h4 id="XData_DataSource_Structure_Field_DefaultType" data-uid="XData.DataSource.Structure.Field.DefaultType">DefaultType</h4>
+  <div class="markdown level1 summary"><p>Default source</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public DefaultType DefaultType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DefaultType.html">DefaultType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_DefaultValue.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.DefaultValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L68">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_DefaultValue_" data-uid="XData.DataSource.Structure.Field.DefaultValue*"></a>
+  <h4 id="XData_DataSource_Structure_Field_DefaultValue" data-uid="XData.DataSource.Structure.Field.DefaultValue">DefaultValue</h4>
+  <div class="markdown level1 summary"><p>Default value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public object DefaultValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_EnumValues.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.EnumValues%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L80">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_EnumValues_" data-uid="XData.DataSource.Structure.Field.EnumValues*"></a>
+  <h4 id="XData_DataSource_Structure_Field_EnumValues" data-uid="XData.DataSource.Structure.Field.EnumValues">EnumValues</h4>
+  <div class="markdown level1 summary"><p>Enumeration values</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public KeyValuePair&lt;long, string&gt;[] EnumValues { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_ExprScale.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.ExprScale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L116">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_ExprScale_" data-uid="XData.DataSource.Structure.Field.ExprScale*"></a>
+  <h4 id="XData_DataSource_Structure_Field_ExprScale" data-uid="XData.DataSource.Structure.Field.ExprScale">ExprScale</h4>
+  <div class="markdown level1 summary"><p>Expression scale</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public int ExprScale { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_ExprSize.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.ExprSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L110">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_ExprSize_" data-uid="XData.DataSource.Structure.Field.ExprSize*"></a>
+  <h4 id="XData_DataSource_Structure_Field_ExprSize" data-uid="XData.DataSource.Structure.Field.ExprSize">ExprSize</h4>
+  <div class="markdown level1 summary"><p>Expression size</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public int ExprSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_ExprText.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.ExprText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L92">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_ExprText_" data-uid="XData.DataSource.Structure.Field.ExprText*"></a>
+  <h4 id="XData_DataSource_Structure_Field_ExprText" data-uid="XData.DataSource.Structure.Field.ExprText">ExprText</h4>
+  <div class="markdown level1 summary"><p>Expression text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public string ExprText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_ExprType.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.ExprType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L86">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_ExprType_" data-uid="XData.DataSource.Structure.Field.ExprType*"></a>
+  <h4 id="XData_DataSource_Structure_Field_ExprType" data-uid="XData.DataSource.Structure.Field.ExprType">ExprType</h4>
+  <div class="markdown level1 summary"><p>Expression type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public DataExpressionType ExprType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataExpressionType.html">DataExpressionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_FieldName.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.FieldName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L50">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_FieldName_" data-uid="XData.DataSource.Structure.Field.FieldName*"></a>
+  <h4 id="XData_DataSource_Structure_Field_FieldName" data-uid="XData.DataSource.Structure.Field.FieldName">FieldName</h4>
+  <div class="markdown level1 summary"><p>Field name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public string FieldName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_Flags.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.Flags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L56">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_Flags_" data-uid="XData.DataSource.Structure.Field.Flags*"></a>
+  <h4 id="XData_DataSource_Structure_Field_Flags" data-uid="XData.DataSource.Structure.Field.Flags">Flags</h4>
+  <div class="markdown level1 summary"><p>Flags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public DataPropertyFlag Flags { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataPropertyFlag.html">DataPropertyFlag</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_IsArray.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.IsArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L134">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_IsArray_" data-uid="XData.DataSource.Structure.Field.IsArray*"></a>
+  <h4 id="XData_DataSource_Structure_Field_IsArray" data-uid="XData.DataSource.Structure.Field.IsArray">IsArray</h4>
+  <div class="markdown level1 summary"><p>User defined type (UDT) collection is VARARRAY for field</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsArray { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_IsAutoIncrement.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.IsAutoIncrement%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L32">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_IsAutoIncrement_" data-uid="XData.DataSource.Structure.Field.IsAutoIncrement*"></a>
+  <h4 id="XData_DataSource_Structure_Field_IsAutoIncrement" data-uid="XData.DataSource.Structure.Field.IsAutoIncrement">IsAutoIncrement</h4>
+  <div class="markdown level1 summary"><p>Autoincrement field flag</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public bool IsAutoIncrement { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_IsSelectable.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.IsSelectable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L38">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_IsSelectable_" data-uid="XData.DataSource.Structure.Field.IsSelectable*"></a>
+  <h4 id="XData_DataSource_Structure_Field_IsSelectable" data-uid="XData.DataSource.Structure.Field.IsSelectable">IsSelectable</h4>
+  <div class="markdown level1 summary"><p>Selectable flag</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public bool IsSelectable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_IsTablePk.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.IsTablePk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L26">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_IsTablePk_" data-uid="XData.DataSource.Structure.Field.IsTablePk*"></a>
+  <h4 id="XData_DataSource_Structure_Field_IsTablePk" data-uid="XData.DataSource.Structure.Field.IsTablePk">IsTablePk</h4>
+  <div class="markdown level1 summary"><p>Table primary key flag</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public bool IsTablePk { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_Name.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L20">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_Name_" data-uid="XData.DataSource.Structure.Field.Name*"></a>
+  <h4 id="XData_DataSource_Structure_Field_Name" data-uid="XData.DataSource.Structure.Field.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Property name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_NativeSqlType.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.NativeSqlType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L148">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_NativeSqlType_" data-uid="XData.DataSource.Structure.Field.NativeSqlType*"></a>
+  <h4 id="XData_DataSource_Structure_Field_NativeSqlType" data-uid="XData.DataSource.Structure.Field.NativeSqlType">NativeSqlType</h4>
+  <div class="markdown level1 summary"><p>Native SQL type name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public string NativeSqlType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_DataSource_Structure_Field_NativeSqlType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Used to specify native SQL column type when conflicted with default type mapping</p>
+<p>WARNING!  May be not supported by database adapter!</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_SqlType.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.SqlType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L44">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_SqlType_" data-uid="XData.DataSource.Structure.Field.SqlType*"></a>
+  <h4 id="XData_DataSource_Structure_Field_SqlType" data-uid="XData.DataSource.Structure.Field.SqlType">SqlType</h4>
+  <div class="markdown level1 summary"><p>Sql type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public DbType SqlType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.data.dbtype">DbType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_UdtElementTypeName.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.UdtElementTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L128">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_UdtElementTypeName_" data-uid="XData.DataSource.Structure.Field.UdtElementTypeName*"></a>
+  <h4 id="XData_DataSource_Structure_Field_UdtElementTypeName" data-uid="XData.DataSource.Structure.Field.UdtElementTypeName">UdtElementTypeName</h4>
+  <div class="markdown level1 summary"><p>User defined type (UDT) element type name for field</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public string UdtElementTypeName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_UdtMappedType.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.UdtMappedType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L139">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_UdtMappedType_" data-uid="XData.DataSource.Structure.Field.UdtMappedType*"></a>
+  <h4 id="XData_DataSource_Structure_Field_UdtMappedType" data-uid="XData.DataSource.Structure.Field.UdtMappedType">UdtMappedType</h4>
+  <div class="markdown level1 summary"><p>User defined type (UDT) mapped type for field</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public Type UdtMappedType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_UdtTypeName.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.UdtTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L122">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_UdtTypeName_" data-uid="XData.DataSource.Structure.Field.UdtTypeName*"></a>
+  <h4 id="XData_DataSource_Structure_Field_UdtTypeName" data-uid="XData.DataSource.Structure.Field.UdtTypeName">UdtTypeName</h4>
+  <div class="markdown level1 summary"><p>User defined type (UDT) name for field</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public string UdtTypeName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_UpdateWithExprText.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.UpdateWithExprText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L104">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_UpdateWithExprText_" data-uid="XData.DataSource.Structure.Field.UpdateWithExprText*"></a>
+  <h4 id="XData_DataSource_Structure_Field_UpdateWithExprText" data-uid="XData.DataSource.Structure.Field.UpdateWithExprText">UpdateWithExprText</h4>
+  <div class="markdown level1 summary"><p>Update source expression text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public string UpdateWithExprText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_UpdateWithExprType.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.UpdateWithExprType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L98">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_UpdateWithExprType_" data-uid="XData.DataSource.Structure.Field.UpdateWithExprType*"></a>
+  <h4 id="XData_DataSource_Structure_Field_UpdateWithExprType" data-uid="XData.DataSource.Structure.Field.UpdateWithExprType">UpdateWithExprType</h4>
+  <div class="markdown level1 summary"><p>Update source expression type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public DataExpressionType UpdateWithExprType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.DataExpressionType.html">DataExpressionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_XPath.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.XPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L157">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_XPath_" data-uid="XData.DataSource.Structure.Field.XPath*"></a>
+  <h4 id="XData_DataSource_Structure_Field_XPath" data-uid="XData.DataSource.Structure.Field.XPath">XPath</h4>
+  <div class="markdown level1 summary"><p>XML field value XPath</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public string XPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_DataSource_Structure_Field_XPath_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Used to specify native SQL column type when conflicted with default type mapping</p>
+<p>WARNING!  May be not supported by database adapter!</p>
+</div>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataSource_Structure_Field_Clone.md&amp;value=---%0Auid%3A%20XData.DataSource.Structure.Field.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/DataSource/Structure/Fields/Field.cs/#L168">View Source</a>
+  </span>
+  <a id="XData_DataSource_Structure_Field_Clone_" data-uid="XData.DataSource.Structure.Field.Clone*"></a>
+  <h4 id="XData_DataSource_Structure_Field_Clone" data-uid="XData.DataSource.Structure.Field.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_DataSource_Structure_Field_Clone" data-uid="XData.DataSource.Structure.Field.Clone">
-          <a class="xref" href="XData.DataSource.Structure.Field.Clone.html#XData_DataSource_Structure_Field_Clone">Clone()</a>
-        </td>
-        <td class="markdown level1 summary"><p>Creates a new object that is a copy of the current instance.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>A new object that is a copy of this instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="XData.DataSource.Structure.IField.html">IField</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icloneable">System.ICloneable</a>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>

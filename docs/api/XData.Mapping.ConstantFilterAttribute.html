@@ -97,16 +97,16 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="XData.Mapping.FilterAttribute.Source.html#XData_Mapping_FilterAttribute_Source">FilterAttribute.Source</a>
+      <a class="xref" href="XData.Mapping.FilterAttribute.html#XData_Mapping_FilterAttribute_Source">FilterAttribute.Source</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.FilterAttribute.FieldName.html#XData_Mapping_FilterAttribute_FieldName">FilterAttribute.FieldName</a>
+      <a class="xref" href="XData.Mapping.FilterAttribute.html#XData_Mapping_FilterAttribute_FieldName">FilterAttribute.FieldName</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.FilterAttribute.Operation.html#XData_Mapping_FilterAttribute_Operation">FilterAttribute.Operation</a>
+      <a class="xref" href="XData.Mapping.FilterAttribute.html#XData_Mapping_FilterAttribute_Operation">FilterAttribute.Operation</a>
     </div>
     <div>
-      <a class="xref" href="XData.Mapping.FilterAttribute.Combination.html#XData_Mapping_FilterAttribute_Combination">FilterAttribute.Combination</a>
+      <a class="xref" href="XData.Mapping.FilterAttribute.html#XData_Mapping_FilterAttribute_Combination">FilterAttribute.Combination</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.equals#System_Attribute_Equals_System_Object_">Attribute.Equals(Object)</a>
@@ -240,116 +240,322 @@
 public sealed class ConstantFilterAttribute : FilterAttribute</code></pre>
   </div>
   <h5 id="XData_Mapping_ConstantFilterAttribute_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Filter value can be constant, data object variable value (see <a class="xref" href="XData.IDataQuery.Variables.html#XData_IDataQuery_Variables">Variables</a>), current date or time</p></div>
+  <div class="markdown level0 remarks"><p>Filter value can be constant, data object variable value (see <a class="xref" href="XData.IDataQuery.html#XData_IDataQuery_Variables">Variables</a>), current date or time</p></div>
   <h3 id="constructors">Constructors
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ConstantFilterAttribute__ctor_System_String_System_String_System_String_System_Object_.md&amp;value=---%0Auid%3A%20XData.Mapping.ConstantFilterAttribute.%23ctor(System.String%2CSystem.String%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/ConstantFilterAttribute.cs/#L62">View Source</a>
+  </span>
+  <a id="XData_Mapping_ConstantFilterAttribute__ctor_" data-uid="XData.Mapping.ConstantFilterAttribute.#ctor*"></a>
+  <h4 id="XData_Mapping_ConstantFilterAttribute__ctor_System_String_System_String_System_String_System_Object_" data-uid="XData.Mapping.ConstantFilterAttribute.#ctor(System.String,System.String,System.String,System.Object)">ConstantFilterAttribute(String, String, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Constant filter attribute</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConstantFilterAttribute(string name, string source, string fieldName, object constant)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Mapping_ConstantFilterAttribute__ctor_System_String_System_String_System_String_System_Object_" data-uid="XData.Mapping.ConstantFilterAttribute.#ctor(System.String,System.String,System.String,System.Object)">
-          <a class="xref" href="XData.Mapping.ConstantFilterAttribute.-ctor.html#XData_Mapping_ConstantFilterAttribute__ctor_System_String_System_String_System_String_System_Object_">ConstantFilterAttribute(String, String, String, Object)</a>
-        </td>
-        <td class="markdown level1 summary"><p>Constant filter attribute</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Filter name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Filter source alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">fieldName</span></td>
+        <td><p>Filter field name</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">constant</span></td>
+        <td><p>Filter value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td><p>Filter name cannot be null or empty string</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ConstantFilterAttribute_ConstantType.md&amp;value=---%0Auid%3A%20XData.Mapping.ConstantFilterAttribute.ConstantType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/ConstantFilterAttribute.cs/#L40">View Source</a>
+  </span>
+  <a id="XData_Mapping_ConstantFilterAttribute_ConstantType_" data-uid="XData.Mapping.ConstantFilterAttribute.ConstantType*"></a>
+  <h4 id="XData_Mapping_ConstantFilterAttribute_ConstantType" data-uid="XData.Mapping.ConstantFilterAttribute.ConstantType">ConstantType</h4>
+  <div class="markdown level1 summary"><p>Filter value type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FilterConstantType ConstantType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td id="XData_Mapping_ConstantFilterAttribute_ConstantType" data-uid="XData.Mapping.ConstantFilterAttribute.ConstantType">
-          <a class="xref" href="XData.Mapping.ConstantFilterAttribute.ConstantType.html#XData_Mapping_ConstantFilterAttribute_ConstantType">ConstantType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Filter value type</p>
-</td>
+        <td><a class="xref" href="XData.FilterConstantType.html">FilterConstantType</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ConstantFilterAttribute_ConstantType_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.FilterConstantType.html">FilterConstantType</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ConstantFilterAttribute_ConstantValue.md&amp;value=---%0Auid%3A%20XData.Mapping.ConstantFilterAttribute.ConstantValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/ConstantFilterAttribute.cs/#L35">View Source</a>
+  </span>
+  <a id="XData_Mapping_ConstantFilterAttribute_ConstantValue_" data-uid="XData.Mapping.ConstantFilterAttribute.ConstantValue*"></a>
+  <h4 id="XData_Mapping_ConstantFilterAttribute_ConstantValue" data-uid="XData.Mapping.ConstantFilterAttribute.ConstantValue">ConstantValue</h4>
+  <div class="markdown level1 summary"><p>Filter value</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object ConstantValue { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ConstantFilterAttribute_ConstantValue" data-uid="XData.Mapping.ConstantFilterAttribute.ConstantValue">
-          <a class="xref" href="XData.Mapping.ConstantFilterAttribute.ConstantValue.html#XData_Mapping_ConstantFilterAttribute_ConstantValue">ConstantValue</a>
-        </td>
-        <td class="markdown level1 summary"><p>Filter value</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ConstantFilterAttribute_FilterType" data-uid="XData.Mapping.ConstantFilterAttribute.FilterType">
-          <a class="xref" href="XData.Mapping.ConstantFilterAttribute.FilterType.html#XData_Mapping_ConstantFilterAttribute_FilterType">FilterType</a>
-        </td>
-        <td class="markdown level1 summary"><p>Filter type</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ConstantFilterAttribute_ConstantValue_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.Mapping.ConstantFilterAttribute.html#XData_Mapping_ConstantFilterAttribute_ConstantType">ConstantType</a></div>
+      <div><a class="xref" href="XData.FilterConstantType.html">FilterConstantType</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ConstantFilterAttribute_FilterType.md&amp;value=---%0Auid%3A%20XData.Mapping.ConstantFilterAttribute.FilterType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/ConstantFilterAttribute.cs/#L52">View Source</a>
+  </span>
+  <a id="XData_Mapping_ConstantFilterAttribute_FilterType_" data-uid="XData.Mapping.ConstantFilterAttribute.FilterType*"></a>
+  <h4 id="XData_Mapping_ConstantFilterAttribute_FilterType" data-uid="XData.Mapping.ConstantFilterAttribute.FilterType">FilterType</h4>
+  <div class="markdown level1 summary"><p>Filter type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override FilterType FilterType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ConstantFilterAttribute_Name" data-uid="XData.Mapping.ConstantFilterAttribute.Name">
-          <a class="xref" href="XData.Mapping.ConstantFilterAttribute.Name.html#XData_Mapping_ConstantFilterAttribute_Name">Name</a>
-        </td>
-        <td class="markdown level1 summary"><p>Filter parameter name</p>
-</td>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
-        <td id="XData_Mapping_ConstantFilterAttribute_Nullable" data-uid="XData.Mapping.ConstantFilterAttribute.Nullable">
-          <a class="xref" href="XData.Mapping.ConstantFilterAttribute.Nullable.html#XData_Mapping_ConstantFilterAttribute_Nullable">Nullable</a>
-        </td>
-        <td class="markdown level1 summary"><p>Filter null value handling mode</p>
-</td>
+        <td><a class="xref" href="XData.FilterType.html">FilterType</a></td>
+        <td><a class="xref" href="XData.FilterType.html#XData_FilterType_Constant">Constant</a></td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="XData.Mapping.FilterBaseAttribute.html#XData_Mapping_FilterBaseAttribute_FilterType">FilterBaseAttribute.FilterType</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ConstantFilterAttribute_Name.md&amp;value=---%0Auid%3A%20XData.Mapping.ConstantFilterAttribute.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/ConstantFilterAttribute.cs/#L29">View Source</a>
+  </span>
+  <a id="XData_Mapping_ConstantFilterAttribute_Name_" data-uid="XData.Mapping.ConstantFilterAttribute.Name*"></a>
+  <h4 id="XData_Mapping_ConstantFilterAttribute_Name" data-uid="XData.Mapping.ConstantFilterAttribute.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Filter parameter name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td id="XData_Mapping_ConstantFilterAttribute_TypeId" data-uid="XData.Mapping.ConstantFilterAttribute.TypeId">
-          <a class="xref" href="XData.Mapping.ConstantFilterAttribute.TypeId.html#XData_Mapping_ConstantFilterAttribute_TypeId">TypeId</a>
-        </td>
-        <td class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ConstantFilterAttribute_Name_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>No Sql parameter prefix needed</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ConstantFilterAttribute_Nullable.md&amp;value=---%0Auid%3A%20XData.Mapping.ConstantFilterAttribute.Nullable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/ConstantFilterAttribute.cs/#L46">View Source</a>
+  </span>
+  <a id="XData_Mapping_ConstantFilterAttribute_Nullable_" data-uid="XData.Mapping.ConstantFilterAttribute.Nullable*"></a>
+  <h4 id="XData_Mapping_ConstantFilterAttribute_Nullable" data-uid="XData.Mapping.ConstantFilterAttribute.Nullable">Nullable</h4>
+  <div class="markdown level1 summary"><p>Filter null value handling mode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FilterNullable Nullable { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.FilterNullable.html">FilterNullable</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_ConstantFilterAttribute_Nullable_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.FilterConstantType.html">FilterConstantType</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ConstantFilterAttribute_TypeId.md&amp;value=---%0Auid%3A%20XData.Mapping.ConstantFilterAttribute.TypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/ConstantFilterAttribute.cs/#L23">View Source</a>
+  </span>
+  <a id="XData_Mapping_ConstantFilterAttribute_TypeId_" data-uid="XData.Mapping.ConstantFilterAttribute.TypeId*"></a>
+  <h4 id="XData_Mapping_ConstantFilterAttribute_TypeId" data-uid="XData.Mapping.ConstantFilterAttribute.TypeId">TypeId</h4>
+  <div class="markdown level1 summary"><p>When implemented in a derived class, gets a unique identifier for this <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute">Attribute</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override object TypeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a> that is a unique identifier for the attribute.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.attribute.typeid#System_Attribute_TypeId">Attribute.TypeId</a></div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="XData.SerializationExtensions.ToXml.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.SetValue.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_SetValue__2___0___1_">CollectionsExtensions.SetValue&lt;TKey, T&gt;(TKey, T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.CollectionsExtensions.AsEnum.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
+      <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">CollectionsExtensions.AsEnum&lt;T&gt;(T)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.CompareVariable.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+      <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.TryConvert.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1____1_">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;, TResult)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Type___System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Type[], Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Type___System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Type[], Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod__1_System_Object_System_Linq_Expressions_Expression_System_Func___0___System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod&lt;TRet&gt;(Object, Expression&lt;Func&lt;TRet&gt;&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Extensions.TypeExtensions.InvokeMethod.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
+      <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_InvokeMethod_System_Object_System_Linq_Expressions_Expression_System_Action__System_Reflection_BindingFlags_">TypeExtensions.InvokeMethod(Object, Expression&lt;Action&gt;, BindingFlags)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.SetExpression.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_IBlockQueryAdapter___1___">SqlBlockExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.SetExpression.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
+      <a class="xref" href="XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">QueryDescriptionExtensions.SetExpression&lt;TTag, TResult&gt;(TTag, Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt;)</a>
   </div>
 </article>
           </div>
