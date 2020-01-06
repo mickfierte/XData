@@ -82,16 +82,16 @@
 <p>XData has the ability to describe and execute an anonymous SQL block in LINQ style. To call an SQL block that does not return a result set, you can call it using the <a class="xref" href="../api/XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_ExecuteSqlBlock_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition__System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">ExecuteSqlBlock</a> extension method, and <a class="xref" href="../api/XData.Database.SqlBlock.SqlBlockExtensions.html#XData_Database_SqlBlock_SqlBlockExtensions_GetSqlBlockData__1_XData_IDataScope_System_Linq_Expressions_Expression_XData_Database_SqlBlock_SqlBlockDefinition___0___System_Linq_Expressions_Expression_System_Func_XData_Database_SqlBlock_ISqlParamAdapter_XData_Database_SqlBlock_ISqlParam_____">GetSqlBlockData&lt;T&gt;</a> can be used to get a collection of objects of type T.</p>
 <p>An expression of type <a class="xref" href="../api/XData.Database.SqlBlock.SqlBlockDefinition.html">Expression&lt;SqlBlockDefinition&gt;</a> is used to describe the SQL block and an expression of type <a class="xref" href="../api/XData.Database.SqlBlock.SqlBlockDefinition-1.html">Expression&lt;SqlBlockDefinition&lt;T&gt;&gt;</a> is used as the value of the block parameter of the methods described above to return a result of type T. These types are delegates of the functions parameterized by <a class="xref" href="../api/XData.Database.SqlBlock.ISqlBlockAdapter.html">ISqlBlockAdapter</a> and <a class="xref" href="../api/XData.Database.SqlBlock.ISqlBlockAdapter-1.html">ISqlBlockAdapter&lt;T&gt;</a>, respectively.</p>
 <p>An array called parameters is used to describe the parameter values of an unnamed SQL block.</p>
-<p>For example:</p>
+<p>Lets explain in more detail with specific examples:</p>
 <ul>
-<li>to DELETE SQL block...</li>
+<li><strong>to DELETE SQL block...</strong></li>
 </ul>
 <pre><code class="lang-sql">delete T from T_TEST T where T.test2_id = 1
 </code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(x =&gt; x.Delete(t =&gt; t.GetStructure(&quot;T&quot;, 
     y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;T&quot;,
         a =&gt; a.ConstFilter(&quot;FilterByTest2Id&quot;, &quot;test2_id&quot;, 1)))));
 </code></pre><ul>
-<li>to INSERT VALUES SQL block...</li>
+<li><strong>to INSERT VALUES SQL block...</strong></li>
 </ul>
 <pre><code class="lang-sql">insert into T_TEST(test2_id, date) values(@id, @date)
 </code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(x =&gt; x.Insert(&quot;T_TEST&quot;, z =&gt; new {
@@ -100,8 +100,10 @@
         DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) }),
     x =&gt; x.Param&lt;long&gt;(&quot;id&quot;, DbType.Int32).Set(1),
     x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now));
-</code></pre><ul>
-<li>to INSERT MULTIPLE VALUES SQL block...</li>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Note that the key auto-increment field is described separately here. For some DBMSs (such as Oracle for example), this is important. But for the rest, this does not interfere with the SQL block.</p>
+</div>
+<ul>
+<li><strong>to INSERT MULTIPLE VALUES SQL block...</strong></li>
 </ul>
 <pre><code class="lang-sql">insert into T_TEST(test2_id, date) 
 values(1, &#39;2017-01-01&#39;),
@@ -123,7 +125,7 @@ values(1, &#39;2017-01-01&#39;),
             DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) }));
 }
 </code></pre><ul>
-<li>to INSERT INTO SELECT SQL block...</li>
+<li><strong>to INSERT INTO SELECT SQL block...</strong></li>
 </ul>
 <pre><code class="lang-sql">insert into T_TEST(test2_id, date_field) 
 select 2 as id, dateadd(day, -4, X.date_field) as date_val 
@@ -134,13 +136,18 @@ select 2 as id, dateadd(day, -4, X.date_field) as date_val
         t =&gt; t.GetStructure(&quot;X&quot;, y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;X&quot;, 
             z =&gt; z.ConstFilter(&quot;FilterByTest2Id&quot;, &quot;test2_id&quot;, 1)))
             .Select(z =&gt; new {
+                //!!! Autoicrement primary key description is required 
+                //!!! here only for Oracle and leads to an error for 
+                //!!! others!
                 TestId = z.Default&lt;long&gt;(DefaultType.AutoIncrement),
                 Test2Id = z.Expr(&quot;id&quot;, s =&gt; 2, DbType.Int64),
                 DateField = z.Expr(&quot;date_val&quot;, 
                     s =&gt; s.Field&lt;DateTime&gt;(&quot;X&quot;, 
                         &quot;date_field&quot;).AddDays(-4), DbType.DateTime) })));
-</code></pre><ul>
-<li>to UPDATE SQL block...</li>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Oracle has required explicit description of autoincrement primary key in that sort SQL block and other RDBMS threat that as error. Due to some features of the implementation at the moment, it was not possible to reduce this to a single syntax. Perhaps this will change further.</p>
+</div>
+<ul>
+<li><strong>to UPDATE SQL block...</strong></li>
 </ul>
 <pre><code class="lang-sql">update T_TEST T 
   set date_field = @date 
@@ -159,7 +166,72 @@ select 2 as id, dateadd(day, -4, X.date_field) as date_val
             z =&gt; new { DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) }),
     x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now.AddDays(-8)));
 </code></pre><ul>
-<li>to MERGE TABLE with values</li>
+<li><strong>to UPDATE FROM SUBQUERY SQL block...</strong></li>
+</ul>
+<pre><code class="lang-sql">update T_TEST T 
+  set date_field = (select min(Z.date_field) from T_TEST Z where Z.test2_id = 2) 
+  where T.test2_id in (select T2.test2_id from T_TEST2 T2 where T2.some_field = 2)
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.Update(t =&gt; t.GetStructure(&quot;T&quot;, y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;T&quot;,
+                        z =&gt; z.SubqueryFilter(&quot;test2_id&quot;, &quot;X&quot;)
+                            .SetOperation(FilterOperation.In))
+                .Subquery(&quot;X&quot;, XDataMapping.GetStructure(&quot;T2&quot;, null, 
+                    DataStructureFlag.ReadOnly)
+                    .DataTable(&quot;T_TEST2&quot;, &quot;T2&quot;, 
+                        z =&gt; z.ConstFilter(&quot;SomeFilter&quot;, &quot;some_field&quot;, 
+                        FilterConstantType.Const, 2))
+                    .Select(z =&gt; new { 
+                        Test2Id = z.Field&lt;long&gt;(&quot;T2&quot;, &quot;test2_id&quot;) }), 
+                        &quot;Test2Id&quot;, DataGrouping.None)),
+                z =&gt; new {
+                    DateField = z.Value(y =&gt; y.Subquery(xa =&gt; 
+                        xa.GetStructure(&quot;Z&quot;, ya =&gt; ya.DataTable(&quot;T_TEST&quot;, &quot;Z&quot;,
+                     za =&gt; za.ConstFilter(&quot;FkFilter&quot;, &quot;test2_id&quot;, 
+                        FilterConstantType.Const, minT2 + 1))
+                    .Column(&quot;TestId&quot;, f =&gt; f.Field&lt;long&gt;(&quot;Z&quot;, &quot;test_id&quot;, 
+                        k =&gt; k.Key(), k =&gt; k.Hidden()))),
+                 za =&gt; za.Field&lt;DateTime&gt;(&quot;Z&quot;, &quot;date_field&quot;, 
+                    ya =&gt; ya.Group(DataGrouping.Min)), 
+                        DataStructureFlag.Grouping)) }));
+</code></pre><div class="NOTE"><h5>Note</h5><p>It is necessary to consider the fact that in MySQL there is a restriction that you cannot access the same table or subqueries based on it during update.</p>
+</div>
+<ul>
+<li><strong>to UPDATE JOINED TABLE SQL block...</strong></li>
+</ul>
+<pre><code class="lang-sql">update T set date = @date from T_TEST T 
+  join T_TEST2 T2 on T.test2_id = T2.test2_id
+  where T2.some_field = 1
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.Update(t =&gt; t.GetStructure(&quot;T&quot;, y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;T&quot;)
+                .DataTable(&quot;T_TEST2&quot;, &quot;T2&quot;,
+                    z =&gt; z.Link(&quot;T&quot;, &quot;test2_id&quot;),
+                    z =&gt; z.ConstFilter(&quot;SomeFilter&quot;, &quot;some_field&quot;, 
+                        FilterConstantType.Const, 1))),
+           z =&gt; new { DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) }),
+    x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now.AddDays(-8)));
+</code></pre><div class="NOTE"><h5>Note</h5><p>It is necessary to consider the fact that in MySQL there is a restriction that you cannot access the same table or subqueries based on it during update.</p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>Not supported in SQLite</p>
+</div>
+<ul>
+<li><strong>to UPDATE SET FIELD VALUE FROM JOINED TABLE SQL block...</strong></li>
+</ul>
+<pre><code class="lang-sql">update T set some_field = T2.some_field from T_TEST2 T 
+  join T_TEST2 T2 on T.test2_id = T2.test2_id
+  where T2.some_field = 1
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.Update(t =&gt; t.GetStructure(&quot;T&quot;, y =&gt; y.DataTable(&quot;T_TEST2&quot;, &quot;T&quot;)
+                .DataTable(&quot;T_TEST2&quot;, &quot;T2&quot;,
+                    z =&gt; z.Link(&quot;T&quot;, &quot;test2_id&quot;),
+                    z =&gt; z.ConstFilter(&quot;SomeFilter&quot;, &quot;some_field&quot;, 
+                        FilterConstantType.Const, 1))),
+           z =&gt; new { SomeField = z.Value(y =&gt; y.Field&lt;int&gt;(&quot;T2&quot;, &quot;some_field&quot;)) }));
+</code></pre><div class="NOTE"><h5>Note</h5><p>It is necessary to consider the fact that in MySQL there is a restriction that you cannot access the same table or subqueries based on it during update.</p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>Not supported in SQLite</p>
+</div>
+<ul>
+<li><strong>to MERGE TABLE WITH VALUES...</strong></li>
 </ul>
 <pre><code class="lang-sql">merge T_TEST2 T
   using (select @test2_id, @some) S (test2_id, some_field)
@@ -174,8 +246,46 @@ select 2 as id, dateadd(day, -4, X.date_field) as date_val
             y =&gt; y.Update(), y =&gt; y.Insert())   }),
     x =&gt; x.Param&lt;int&gt;(&quot;Test2Id&quot;, DbType.Int64).Set(3),
     x =&gt; x.Param&lt;int&gt;(&quot;Some&quot;, DbType.Int32).Set(3));
-</code></pre><ul>
-<li>to IF BLOCK</li>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Not supported in SQLite</p>
+</div>
+<ul>
+<li><strong>to MERGE TABLE WITH ANOTHER TABLE...</strong></li>
+</ul>
+<pre><code class="lang-sql">merge T_TEST2 T
+  using (select doc_state_id DS_doc_state_id, 1 some_field 
+    from T_DOC_STATE DS where DS.doc_state_id=1) S 
+    (doc_state_id, some_field)
+  on (T.test2_id = S.doc_state_id)
+  when matched then update set some_field = @some
+  when not matched then insert(some_field) values(@some) 
+</code></pre><pre><code class="lang-csharp">dataScope.ExecuteSqlBlock(
+    x =&gt; x.Merge(&quot;T_TEST2&quot;, &quot;T&quot;,
+        z =&gt; z.GetStructure(&quot;DS&quot;, y =&gt; y.DataTable(&quot;T_DOC_STATE&quot;, &quot;DS&quot;, 
+            f =&gt; f.ConstFilter(&quot;FilterById&quot;, &quot;doc_state_id&quot;, 
+                FilterConstantType.Const, 1)))
+            .Select(s =&gt; new {
+                DocStateId = s.Field&lt;long&gt;(&quot;DS&quot;, &quot;doc_state_id&quot;),
+                //!!! PostgreSql and MySql don&#39;t support merge statement
+                //!!! only insert with conflict handling so second field 
+                //!!! leads to error but requred for MS SQL Server and 
+                //!!! Oracle!
+                SomeField = s.Expr&lt;int&gt;(&quot;some_field&quot;, 
+                    DataExpressionType.PlainSql, &quot;1&quot;, DbType.Int32) }),
+        &quot;S&quot;,
+        z =&gt; new {
+            Test2Id = z.Field(&quot;test2_id&quot;, 
+                y =&gt; y.Field&lt;long&gt;(&quot;S&quot;, &quot;doc_state_id&quot;), 
+                    y =&gt; y.Insert(DefaultType.AutoIncrement), 
+                    y =&gt; y.Link()),
+            SomeField = z.Field(y =&gt; y.Data&lt;int&gt;(&quot;Some&quot;), 
+                y =&gt; y.Update(), y =&gt; y.Insert()) }),
+    x =&gt; x.Param&lt;int&gt;(&quot;Some&quot;, DbType.Int32).Set(4));
+</code></pre><div class="WARNING"><h5>Warning</h5><p>PostgreSql and MySql don&#39;t support merge statement only insert with conflict handling so second field leads to error but requred for MS SQL Server and Oracle!</p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>Not supported in SQLite</p>
+</div>
+<ul>
+<li><strong>to IF BLOCK...</strong></li>
 </ul>
 <pre><code class="lang-sql">if @id &gt;= 1
 begin
@@ -190,8 +300,10 @@ end
             DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) })),
     x =&gt; x.Param&lt;long&gt;(&quot;id&quot;, DbType.Int64).Set(1),
     x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now));
-</code></pre><ul>
-<li>to IF EXISTS</li>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Unnamed procedure SQL blocks are not supported in SQLite and MySQL</p>
+</div>
+<ul>
+<li><strong>to IF EXISTS...</strong></li>
 </ul>
 <pre><code class="lang-sql">if not exists(select 1 from T_TEST where test2_id = @id)
 begin
@@ -208,8 +320,10 @@ end
             DateField = z.Value(y =&gt; y.Data&lt;DateTime&gt;(&quot;date_param&quot;)) })),
     x =&gt; x.Param&lt;long&gt;(&quot;id&quot;, DbType.Int64).Set(1),
     x =&gt; x.Param&lt;DateTime&gt;(&quot;date_param&quot;, DbType.DateTime).Set(DateTime.Now));
-</code></pre><ul>
-<li>some other sample</li>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Unnamed procedure SQL blocks are not supported in SQLite and MySQL</p>
+</div>
+<ul>
+<li><strong>some other sample</strong></li>
 </ul>
 <pre><code class="lang-sql">declare @test table(test_id int, test2_id int, date_field datetime),
    @pid int, @pfk int, @pdate datetime;
@@ -269,7 +383,13 @@ foreach (TestObj testObj in sqlBlockData)
 {
     Console.WriteLine(testObj.DateField);
 }
-</code></pre></article>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Oracle support predefined table variables types only so table variable type declaration in unnamed block is not supported in Oracle and block need to be redesigned</p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>Oracle support return table from predefined pipelined functions only so unnamed SQL blocks thats returns collection of objects conflicts with Oracle concept and not supported at RDMS level. This block in Oracle can be realised using pipelined functions and XData procedure call ability </p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>Unnamed procedure SQL blocks are not supported in SQLite and MySQL</p>
+</div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
