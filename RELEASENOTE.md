@@ -1,4 +1,4 @@
-Version Notes (Current Version: v1.1.0)
+Version Notes (Current Version: v1.2.0)
 =======================================
 * 1.2.0
 	* SQL Blocks is now supported
