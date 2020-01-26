@@ -2104,30 +2104,6 @@ references:
   commentId: F:XData.Combination.Or
   fullName: XData.Combination.Or
   nameWithType: Combination.Or
-- uid: XData.CopyFlag
-  name: CopyFlag
-  href: api/XData.CopyFlag.html
-  commentId: T:XData.CopyFlag
-  fullName: XData.CopyFlag
-  nameWithType: CopyFlag
-- uid: XData.CopyFlag.CopyReadOnlyProperties
-  name: CopyReadOnlyProperties
-  href: api/XData.CopyFlag.html#XData_CopyFlag_CopyReadOnlyProperties
-  commentId: F:XData.CopyFlag.CopyReadOnlyProperties
-  fullName: XData.CopyFlag.CopyReadOnlyProperties
-  nameWithType: CopyFlag.CopyReadOnlyProperties
-- uid: XData.CopyFlag.Default
-  name: Default
-  href: api/XData.CopyFlag.html#XData_CopyFlag_Default
-  commentId: F:XData.CopyFlag.Default
-  fullName: XData.CopyFlag.Default
-  nameWithType: CopyFlag.Default
-- uid: XData.CopyFlag.ExceptProperties
-  name: ExceptProperties
-  href: api/XData.CopyFlag.html#XData_CopyFlag_ExceptProperties
-  commentId: F:XData.CopyFlag.ExceptProperties
-  fullName: XData.CopyFlag.ExceptProperties
-  nameWithType: CopyFlag.ExceptProperties
 - uid: XData.CurrentObjectChanged`1
   name: CurrentObjectChanged<T>
   href: api/XData.CurrentObjectChanged-1.html
@@ -7933,15 +7909,15 @@ references:
   fullName.vb: XData.DataObjectExtensions.Copy(Of T)(T, T, System.String())
   nameWithType: DataObjectExtensions.Copy<T>(T, T, String[])
   nameWithType.vb: DataObjectExtensions.Copy(Of T)(T, T, String())
-- uid: XData.DataObjectExtensions.Copy``1(``0,``0,XData.CopyFlag,System.String[])
-  name: Copy<T>(T, T, CopyFlag, String[])
-  href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_CopyFlag_System_String___
-  commentId: M:XData.DataObjectExtensions.Copy``1(``0,``0,XData.CopyFlag,System.String[])
-  name.vb: Copy(Of T)(T, T, CopyFlag, String())
-  fullName: XData.DataObjectExtensions.Copy<T>(T, T, XData.CopyFlag, System.String[])
-  fullName.vb: XData.DataObjectExtensions.Copy(Of T)(T, T, XData.CopyFlag, System.String())
-  nameWithType: DataObjectExtensions.Copy<T>(T, T, CopyFlag, String[])
-  nameWithType.vb: DataObjectExtensions.Copy(Of T)(T, T, CopyFlag, String())
+- uid: XData.DataObjectExtensions.Copy``1(``0,``0,XData.ApplyFlag,System.String[])
+  name: Copy<T>(T, T, ApplyFlag, String[])
+  href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_ApplyFlag_System_String___
+  commentId: M:XData.DataObjectExtensions.Copy``1(``0,``0,XData.ApplyFlag,System.String[])
+  name.vb: Copy(Of T)(T, T, ApplyFlag, String())
+  fullName: XData.DataObjectExtensions.Copy<T>(T, T, XData.ApplyFlag, System.String[])
+  fullName.vb: XData.DataObjectExtensions.Copy(Of T)(T, T, XData.ApplyFlag, System.String())
+  nameWithType: DataObjectExtensions.Copy<T>(T, T, ApplyFlag, String[])
+  nameWithType.vb: DataObjectExtensions.Copy(Of T)(T, T, ApplyFlag, String())
 - uid: XData.DataObjectExtensions.Execute*
   name: Execute
   href: api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Execute_
@@ -13166,6 +13142,12 @@ references:
   commentId: F:XData.Exceptions.XDataQueryStructureExceptionType.WrongDataSourceTypeError
   fullName: XData.Exceptions.XDataQueryStructureExceptionType.WrongDataSourceTypeError
   nameWithType: XDataQueryStructureExceptionType.WrongDataSourceTypeError
+- uid: XData.Exceptions.XDataQueryStructureExceptionType.WrongLoadChildPropertyTypeError
+  name: WrongLoadChildPropertyTypeError
+  href: api/XData.Exceptions.XDataQueryStructureExceptionType.html#XData_Exceptions_XDataQueryStructureExceptionType_WrongLoadChildPropertyTypeError
+  commentId: F:XData.Exceptions.XDataQueryStructureExceptionType.WrongLoadChildPropertyTypeError
+  fullName: XData.Exceptions.XDataQueryStructureExceptionType.WrongLoadChildPropertyTypeError
+  nameWithType: XDataQueryStructureExceptionType.WrongLoadChildPropertyTypeError
 - uid: XData.Exceptions.XDataRuntimeException
   name: XDataRuntimeException
   href: api/XData.Exceptions.XDataRuntimeException.html
@@ -14290,6 +14272,28 @@ references:
   isSpec: "True"
   fullName: XData.Extensions.TypeExtensions.ArrayCast
   nameWithType: TypeExtensions.ArrayCast
+- uid: XData.Extensions.TypeExtensions.ChangeType(System.Object,System.Type)
+  name: ChangeType(Object, Type)
+  href: api/XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_ChangeType_System_Object_System_Type_
+  commentId: M:XData.Extensions.TypeExtensions.ChangeType(System.Object,System.Type)
+  fullName: XData.Extensions.TypeExtensions.ChangeType(System.Object, System.Type)
+  nameWithType: TypeExtensions.ChangeType(Object, Type)
+- uid: XData.Extensions.TypeExtensions.ChangeType*
+  name: ChangeType
+  href: api/XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_ChangeType_
+  commentId: Overload:XData.Extensions.TypeExtensions.ChangeType
+  isSpec: "True"
+  fullName: XData.Extensions.TypeExtensions.ChangeType
+  nameWithType: TypeExtensions.ChangeType
+- uid: XData.Extensions.TypeExtensions.ChangeType``1(System.Object)
+  name: ChangeType<T>(Object)
+  href: api/XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_ChangeType__1_System_Object_
+  commentId: M:XData.Extensions.TypeExtensions.ChangeType``1(System.Object)
+  name.vb: ChangeType(Of T)(Object)
+  fullName: XData.Extensions.TypeExtensions.ChangeType<T>(System.Object)
+  fullName.vb: XData.Extensions.TypeExtensions.ChangeType(Of T)(System.Object)
+  nameWithType: TypeExtensions.ChangeType<T>(Object)
+  nameWithType.vb: TypeExtensions.ChangeType(Of T)(Object)
 - uid: XData.Extensions.TypeExtensions.ConvertTo*
   name: ConvertTo
   href: api/XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_ConvertTo_
@@ -16962,11 +16966,11 @@ references:
   isSpec: "True"
   fullName: XData.IWorkSet.Name
   nameWithType: IWorkSet.Name
-- uid: XData.IWorkSet.Submit(XData.IDataScope)
+- uid: XData.IWorkSet.Submit(IDataScope)
   name: Submit(IDataScope)
-  href: api/XData.IWorkSet.html#XData_IWorkSet_Submit_XData_IDataScope_
-  commentId: M:XData.IWorkSet.Submit(XData.IDataScope)
-  fullName: XData.IWorkSet.Submit(XData.IDataScope)
+  href: api/XData.IWorkSet.html#XData_IWorkSet_Submit_IDataScope_
+  commentId: M:XData.IWorkSet.Submit(IDataScope)
+  fullName: XData.IWorkSet.Submit(IDataScope)
   nameWithType: IWorkSet.Submit(IDataScope)
 - uid: XData.IWorkSet.Submit*
   name: Submit
@@ -17119,22 +17123,22 @@ references:
   fullName.vb: XData.IWorkSet(Of T).Get(Of TKey)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey), XData.WorkState)
   nameWithType: IWorkSet<T>.Get<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, WorkState)
   nameWithType.vb: IWorkSet(Of T).Get(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), WorkState)
-- uid: XData.IWorkSet`1.Lock(XData.IDataScope,System.Func{`0,System.Boolean})
+- uid: XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Boolean})
   name: Lock(IDataScope, Func<T, Boolean>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_XData_IDataScope_System_Func__0_System_Boolean__
-  commentId: M:XData.IWorkSet`1.Lock(XData.IDataScope,System.Func{`0,System.Boolean})
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Boolean__
+  commentId: M:XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Boolean})
   name.vb: Lock(IDataScope, Func(Of T, Boolean))
-  fullName: XData.IWorkSet<T>.Lock(XData.IDataScope, System.Func<T, System.Boolean>)
-  fullName.vb: XData.IWorkSet(Of T).Lock(XData.IDataScope, System.Func(Of T, System.Boolean))
+  fullName: XData.IWorkSet<T>.Lock(IDataScope, System.Func<T, System.Boolean>)
+  fullName.vb: XData.IWorkSet(Of T).Lock(IDataScope, System.Func(Of T, System.Boolean))
   nameWithType: IWorkSet<T>.Lock(IDataScope, Func<T, Boolean>)
   nameWithType.vb: IWorkSet(Of T).Lock(IDataScope, Func(Of T, Boolean))
-- uid: XData.IWorkSet`1.Lock(XData.IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
+- uid: XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
   name: Lock(IDataScope, Func<T, Int32, Boolean>, Func<T, IComparable>[])
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_XData_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____
-  commentId: M:XData.IWorkSet`1.Lock(XData.IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____
+  commentId: M:XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
   name.vb: Lock(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, IComparable)())
-  fullName: XData.IWorkSet<T>.Lock(XData.IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[])
-  fullName.vb: XData.IWorkSet(Of T).Lock(XData.IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)())
+  fullName: XData.IWorkSet<T>.Lock(IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[])
+  fullName.vb: XData.IWorkSet(Of T).Lock(IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)())
   nameWithType: IWorkSet<T>.Lock(IDataScope, Func<T, Int32, Boolean>, Func<T, IComparable>[])
   nameWithType.vb: IWorkSet(Of T).Lock(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, IComparable)())
 - uid: XData.IWorkSet`1.Lock*
@@ -17146,13 +17150,13 @@ references:
   fullName.vb: XData.IWorkSet(Of T).Lock
   nameWithType: IWorkSet<T>.Lock
   nameWithType.vb: IWorkSet(Of T).Lock
-- uid: XData.IWorkSet`1.Lock``1(XData.IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
+- uid: XData.IWorkSet`1.Lock``1(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
   name: Lock<TKey>(IDataScope, Func<T, Int32, Boolean>, Func<T, TKey>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock__1_XData_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__
-  commentId: M:XData.IWorkSet`1.Lock``1(XData.IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock__1_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__
+  commentId: M:XData.IWorkSet`1.Lock``1(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
   name.vb: Lock(Of TKey)(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, TKey))
-  fullName: XData.IWorkSet<T>.Lock<TKey>(XData.IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>)
-  fullName.vb: XData.IWorkSet(Of T).Lock(Of TKey)(XData.IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey))
+  fullName: XData.IWorkSet<T>.Lock<TKey>(IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>)
+  fullName.vb: XData.IWorkSet(Of T).Lock(Of TKey)(IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey))
   nameWithType: IWorkSet<T>.Lock<TKey>(IDataScope, Func<T, Int32, Boolean>, Func<T, TKey>)
   nameWithType.vb: IWorkSet(Of T).Lock(Of TKey)(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, TKey))
 - uid: XData.IWorkSet`1.Select(XData.WorkState)
@@ -17369,6 +17373,33 @@ references:
   fullName.vb: XData.Json.JsonSettings(Of T).LinkMode
   nameWithType: JsonSettings<T>.LinkMode
   nameWithType.vb: JsonSettings(Of T).LinkMode
+- uid: XData.Json.JsonSettings`1.LoadChild*
+  name: LoadChild
+  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadChild_
+  commentId: Overload:XData.Json.JsonSettings`1.LoadChild
+  isSpec: "True"
+  fullName: XData.Json.JsonSettings<T>.LoadChild
+  fullName.vb: XData.Json.JsonSettings(Of T).LoadChild
+  nameWithType: JsonSettings<T>.LoadChild
+  nameWithType.vb: JsonSettings(Of T).LoadChild
+- uid: XData.Json.JsonSettings`1.LoadChild``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},XData.IRepository{``0})
+  name: LoadChild<TChild>(Expression<Func<T, Object>>, IRepository<TChild>)
+  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadChild__1_System_Linq_Expressions_Expression_System_Func__0_System_Object___XData_IRepository___0__
+  commentId: M:XData.Json.JsonSettings`1.LoadChild``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},XData.IRepository{``0})
+  name.vb: LoadChild(Of TChild)(Expression(Of Func(Of T, Object)), IRepository(Of TChild))
+  fullName: XData.Json.JsonSettings<T>.LoadChild<TChild>(System.Linq.Expressions.Expression<System.Func<T, System.Object>>, XData.IRepository<TChild>)
+  fullName.vb: XData.Json.JsonSettings(Of T).LoadChild(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Object)), XData.IRepository(Of TChild))
+  nameWithType: JsonSettings<T>.LoadChild<TChild>(Expression<Func<T, Object>>, IRepository<TChild>)
+  nameWithType.vb: JsonSettings(Of T).LoadChild(Of TChild)(Expression(Of Func(Of T, Object)), IRepository(Of TChild))
+- uid: XData.Json.JsonSettings`1.LoadChild``1(System.String,XData.IRepository{``0})
+  name: LoadChild<TChild>(String, IRepository<TChild>)
+  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadChild__1_System_String_XData_IRepository___0__
+  commentId: M:XData.Json.JsonSettings`1.LoadChild``1(System.String,XData.IRepository{``0})
+  name.vb: LoadChild(Of TChild)(String, IRepository(Of TChild))
+  fullName: XData.Json.JsonSettings<T>.LoadChild<TChild>(System.String, XData.IRepository<TChild>)
+  fullName.vb: XData.Json.JsonSettings(Of T).LoadChild(Of TChild)(System.String, XData.IRepository(Of TChild))
+  nameWithType: JsonSettings<T>.LoadChild<TChild>(String, IRepository<TChild>)
+  nameWithType.vb: JsonSettings(Of T).LoadChild(Of TChild)(String, IRepository(Of TChild))
 - uid: XData.Json.JsonSettings`1.LoadLob
   name: LoadLob()
   href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadLob
@@ -18574,6 +18605,14 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IExternalLinkAdapter(Of T, TChild).Property(System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Object)))
   nameWithType: IExternalLinkAdapter<T, TChild>.Property(Expression<Func<TChild, Object>>)
   nameWithType.vb: IExternalLinkAdapter(Of T, TChild).Property(Expression(Of Func(Of TChild, Object)))
+- uid: XData.Mapping.Dynamic.IExternalLinkAdapter`2.Property(System.String)
+  name: Property(String)
+  href: api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Property_System_String_
+  commentId: M:XData.Mapping.Dynamic.IExternalLinkAdapter`2.Property(System.String)
+  fullName: XData.Mapping.Dynamic.IExternalLinkAdapter<T, TChild>.Property(System.String)
+  fullName.vb: XData.Mapping.Dynamic.IExternalLinkAdapter(Of T, TChild).Property(System.String)
+  nameWithType: IExternalLinkAdapter<T, TChild>.Property(String)
+  nameWithType.vb: IExternalLinkAdapter(Of T, TChild).Property(String)
 - uid: XData.Mapping.Dynamic.IExternalLinkAdapter`2.Property*
   name: Property
   href: api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Property_
@@ -18584,14 +18623,23 @@ references:
   nameWithType: IExternalLinkAdapter<T, TChild>.Property
   nameWithType.vb: IExternalLinkAdapter(Of T, TChild).Property
 - uid: XData.Mapping.Dynamic.IExternalLinkAdapter`2.Property``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
-  name: Property<TChildLink>(Expression<Func<TChildLink, Object>>)
+  name: Property<TChildInner>(Expression<Func<TChildInner, Object>>)
   href: api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Property__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
   commentId: M:XData.Mapping.Dynamic.IExternalLinkAdapter`2.Property``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
-  name.vb: Property(Of TChildLink)(Expression(Of Func(Of TChildLink, Object)))
-  fullName: XData.Mapping.Dynamic.IExternalLinkAdapter<T, TChild>.Property<TChildLink>(System.Linq.Expressions.Expression<System.Func<TChildLink, System.Object>>)
-  fullName.vb: XData.Mapping.Dynamic.IExternalLinkAdapter(Of T, TChild).Property(Of TChildLink)(System.Linq.Expressions.Expression(Of System.Func(Of TChildLink, System.Object)))
-  nameWithType: IExternalLinkAdapter<T, TChild>.Property<TChildLink>(Expression<Func<TChildLink, Object>>)
-  nameWithType.vb: IExternalLinkAdapter(Of T, TChild).Property(Of TChildLink)(Expression(Of Func(Of TChildLink, Object)))
+  name.vb: Property(Of TChildInner)(Expression(Of Func(Of TChildInner, Object)))
+  fullName: XData.Mapping.Dynamic.IExternalLinkAdapter<T, TChild>.Property<TChildInner>(System.Linq.Expressions.Expression<System.Func<TChildInner, System.Object>>)
+  fullName.vb: XData.Mapping.Dynamic.IExternalLinkAdapter(Of T, TChild).Property(Of TChildInner)(System.Linq.Expressions.Expression(Of System.Func(Of TChildInner, System.Object)))
+  nameWithType: IExternalLinkAdapter<T, TChild>.Property<TChildInner>(Expression<Func<TChildInner, Object>>)
+  nameWithType.vb: IExternalLinkAdapter(Of T, TChild).Property(Of TChildInner)(Expression(Of Func(Of TChildInner, Object)))
+- uid: XData.Mapping.Dynamic.IExternalLinkAdapter`2.Property``1(System.String)
+  name: Property<TChildInner>(String)
+  href: api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Property__1_System_String_
+  commentId: M:XData.Mapping.Dynamic.IExternalLinkAdapter`2.Property``1(System.String)
+  name.vb: Property(Of TChildInner)(String)
+  fullName: XData.Mapping.Dynamic.IExternalLinkAdapter<T, TChild>.Property<TChildInner>(System.String)
+  fullName.vb: XData.Mapping.Dynamic.IExternalLinkAdapter(Of T, TChild).Property(Of TChildInner)(System.String)
+  nameWithType: IExternalLinkAdapter<T, TChild>.Property<TChildInner>(String)
+  nameWithType.vb: IExternalLinkAdapter(Of T, TChild).Property(Of TChildInner)(String)
 - uid: XData.Mapping.Dynamic.IExternalLinkAdapter`2.TreeFilter
   name: TreeFilter()
   href: api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_TreeFilter
@@ -18633,6 +18681,15 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T).ExternalLink
   nameWithType: IExternalLinkDefinitionAdapter<T>.ExternalLink
   nameWithType.vb: IExternalLinkDefinitionAdapter(Of T).ExternalLink
+- uid: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter`1.ExternalLink``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkAdapter{`0,``0},XData.Mapping.Dynamic.IExternalLinkFlag}}[])
+  name: ExternalLink<TChild>(Expression<Func<T, Object>>, Expression<Func<IExternalLinkAdapter<T, TChild>, IExternalLinkFlag>>[])
+  href: api/XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html#XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter_1_ExternalLink__1_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkAdapter__0___0__XData_Mapping_Dynamic_IExternalLinkFlag_____
+  commentId: M:XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter`1.ExternalLink``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkAdapter{`0,``0},XData.Mapping.Dynamic.IExternalLinkFlag}}[])
+  name.vb: ExternalLink(Of TChild)(Expression(Of Func(Of T, Object)), Expression(Of Func(Of IExternalLinkAdapter(Of T, TChild), IExternalLinkFlag))())
+  fullName: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter<T>.ExternalLink<TChild>(System.Linq.Expressions.Expression<System.Func<T, System.Object>>, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExternalLinkAdapter<T, TChild>, XData.Mapping.Dynamic.IExternalLinkFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T).ExternalLink(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Object)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExternalLinkAdapter(Of T, TChild), XData.Mapping.Dynamic.IExternalLinkFlag))())
+  nameWithType: IExternalLinkDefinitionAdapter<T>.ExternalLink<TChild>(Expression<Func<T, Object>>, Expression<Func<IExternalLinkAdapter<T, TChild>, IExternalLinkFlag>>[])
+  nameWithType.vb: IExternalLinkDefinitionAdapter(Of T).ExternalLink(Of TChild)(Expression(Of Func(Of T, Object)), Expression(Of Func(Of IExternalLinkAdapter(Of T, TChild), IExternalLinkFlag))())
 - uid: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter`1.ExternalLink``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkAdapter{`0,``0},XData.Mapping.Dynamic.IExternalLinkFlag}}[])
   name: ExternalLink<TChild>(Expression<Func<IExternalLinkAdapter<T, TChild>, IExternalLinkFlag>>[])
   href: api/XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html#XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter_1_ExternalLink__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkAdapter__0___0__XData_Mapping_Dynamic_IExternalLinkFlag_____
@@ -18642,15 +18699,6 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T).ExternalLink(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExternalLinkAdapter(Of T, TChild), XData.Mapping.Dynamic.IExternalLinkFlag))())
   nameWithType: IExternalLinkDefinitionAdapter<T>.ExternalLink<TChild>(Expression<Func<IExternalLinkAdapter<T, TChild>, IExternalLinkFlag>>[])
   nameWithType.vb: IExternalLinkDefinitionAdapter(Of T).ExternalLink(Of TChild)(Expression(Of Func(Of IExternalLinkAdapter(Of T, TChild), IExternalLinkFlag))())
-- uid: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter`1.ExternalLink``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{``0},System.Object}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkAdapter{`0,``0},XData.Mapping.Dynamic.IExternalLinkFlag}}[])
-  name: ExternalLink<TChild>(Expression<Func<IRepositoryStructureAdapter<TChild>, Object>>, Expression<Func<IExternalLinkAdapter<T, TChild>, IExternalLinkFlag>>[])
-  href: api/XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html#XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter_1_ExternalLink__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter___0__System_Object___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkAdapter__0___0__XData_Mapping_Dynamic_IExternalLinkFlag_____
-  commentId: M:XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter`1.ExternalLink``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{``0},System.Object}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkAdapter{`0,``0},XData.Mapping.Dynamic.IExternalLinkFlag}}[])
-  name.vb: ExternalLink(Of TChild)(Expression(Of Func(Of IRepositoryStructureAdapter(Of TChild), Object)), Expression(Of Func(Of IExternalLinkAdapter(Of T, TChild), IExternalLinkFlag))())
-  fullName: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter<T>.ExternalLink<TChild>(System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IRepositoryStructureAdapter<TChild>, System.Object>>, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExternalLinkAdapter<T, TChild>, XData.Mapping.Dynamic.IExternalLinkFlag>>[])
-  fullName.vb: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T).ExternalLink(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryStructureAdapter(Of TChild), System.Object)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExternalLinkAdapter(Of T, TChild), XData.Mapping.Dynamic.IExternalLinkFlag))())
-  nameWithType: IExternalLinkDefinitionAdapter<T>.ExternalLink<TChild>(Expression<Func<IRepositoryStructureAdapter<TChild>, Object>>, Expression<Func<IExternalLinkAdapter<T, TChild>, IExternalLinkFlag>>[])
-  nameWithType.vb: IExternalLinkDefinitionAdapter(Of T).ExternalLink(Of TChild)(Expression(Of Func(Of IRepositoryStructureAdapter(Of TChild), Object)), Expression(Of Func(Of IExternalLinkAdapter(Of T, TChild), IExternalLinkFlag))())
 - uid: XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter`1.ExternalLink``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkAdapter{`0,``0},XData.Mapping.Dynamic.IExternalLinkFlag}}[])
   name: ExternalLink<TChild>(String, Expression<Func<IExternalLinkAdapter<T, TChild>, IExternalLinkFlag>>[])
   href: api/XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html#XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter_1_ExternalLink__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkAdapter__0___0__XData_Mapping_Dynamic_IExternalLinkFlag_____
@@ -24129,13 +24177,13 @@ references:
   isSpec: "True"
   fullName: XData.Security.SecuritySession.Action
   nameWithType: SecuritySession.Action
-- uid: XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{XData.CustomLogic{``0}}})
+- uid: XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{CustomLogic{``0}}})
   name: Action<T>(Expression<Func<CustomLogic<T>>>)
-  href: api/XData.Security.SecuritySession.html#XData_Security_SecuritySession_Action__1_System_Linq_Expressions_Expression_System_Func_XData_CustomLogic___0____
-  commentId: M:XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{XData.CustomLogic{``0}}})
+  href: api/XData.Security.SecuritySession.html#XData_Security_SecuritySession_Action__1_System_Linq_Expressions_Expression_System_Func_CustomLogic___0____
+  commentId: M:XData.Security.SecuritySession.Action``1(System.Linq.Expressions.Expression{System.Func{CustomLogic{``0}}})
   name.vb: Action(Of T)(Expression(Of Func(Of CustomLogic(Of T))))
-  fullName: XData.Security.SecuritySession.Action<T>(System.Linq.Expressions.Expression<System.Func<XData.CustomLogic<T>>>)
-  fullName.vb: XData.Security.SecuritySession.Action(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.CustomLogic(Of T))))
+  fullName: XData.Security.SecuritySession.Action<T>(System.Linq.Expressions.Expression<System.Func<CustomLogic<T>>>)
+  fullName.vb: XData.Security.SecuritySession.Action(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of CustomLogic(Of T))))
   nameWithType: SecuritySession.Action<T>(Expression<Func<CustomLogic<T>>>)
   nameWithType.vb: SecuritySession.Action(Of T)(Expression(Of Func(Of CustomLogic(Of T))))
 - uid: XData.Security.SecuritySession.FilterGrantedObjects*

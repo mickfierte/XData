@@ -176,6 +176,7 @@ obj.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString());
 <li>Source - only source will be serialized</li>
 </ul>
 </li>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadChild__1_System_Linq_Expressions_Expression_System_Func__0_System_Object___XData_IRepository___0__">LoadChild</a> - allow serialize а child repository in unmapped property with the type of the repository element (for one-to-one) or with the type of an array of this type (for one-to-many) </li>
 </ul>
 <pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().ToArray()
 .WithJsonSettings(s =&gt; s.Hide(JsonHideFlags.Columns) //hide all columns
@@ -183,7 +184,9 @@ obj.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString());
     .LoadLob() //load all large data properties
     .LinkMode(LinkMode.Deafult, 
         x =&gt; SomeLinkProperty, x =&gt; AnotherLinkProperty) //set default rules to 2 properties
-    .LinkMode(LinkMode.Value)); //set other link properties serialize Value property only
+    .LinkMode(LinkMode.Value) //set other link properties serialize Value property only
+    .LoadChild(x =&gt; x.Childs, rep.GetChild&lt;ChildEntity&gt;()); //serilize child repository ChildEntity 
+    // into Childs property. Property Childs can has type ChildEntity or ChildEntity[]
 </code></pre><div class="WARNING"><h5>Warning</h5><p>Deserialized objects are detached from repository and had limited ways of using!</p>
 </div>
 <ul>
@@ -193,13 +196,19 @@ obj.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString());
 if(found == null) throw DbConcurrencyException();
 return found.SetDeleted(true).Submit();
 </code></pre><ul>
-<li>Deserialized object can be used as a source to copy some data to new object with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_CopyFlag_System_String___">Copy</a> method:</li>
+<li>Deserialized object can be used as a source to copy some data to new object with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_ApplyFlag_System_String___">Copy</a> method:</li>
 </ul>
-<pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().New().Copy(detachedObj).Submit();
+<pre><code class="lang-csharp">//if property Childs contains entities of ChildEntity child repository
+detachedObj.WithJsonSettings(x =&gt; x.LoadChild(z =&gt; z.Childs, 
+    rep.GetChild&lt;ChildEntity&gt;()));
+return dataScope.GetRepository&lt;Some&gt;().New().Copy(detachedObj).Submit();
 </code></pre><ul>
 <li>Deserialized object can be used as to apply changes to database with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Apply__1_XData_IRepository___0____0_XData_ApplyFlag_System_String___">Apply</a> method:</li>
 </ul>
-<pre><code class="lang-csharp">dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
+<pre><code class="lang-csharp">//if property Childs contains entities of ChildEntity child repository
+detachedObj.WithJsonSettings(x =&gt; x.LoadChild(z =&gt; z.Childs, 
+    rep.GetChild&lt;ChildEntity&gt;()));
+dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
 </code></pre><p><em>Apply</em> is a combination of <em>Find</em> and <em>Copy</em> methods with followed algorithm:</p>
 <p>1) if <em>detached object</em> has all keys assigned, corresponded object will be searched in database using keys and correlation token (if described in mapping) values (*)</p>
 <p>2) if no data found XDataConcurrencyException will be throwed (**)</p>
@@ -207,7 +216,7 @@ return found.SetDeleted(true).Submit();
 <p>4) <em>detached object&#39;s</em> data will be copyed to found (or new) object (***)</p>
 <p>(*) Using of correlation token value with <em>Find</em> method can be escaped with optional <em>ignoreConcurrency</em> parameter. Same result can be reached with <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.IgnoreConcurrency</a> flag has been passed in <em>Apply</em> method call.</p>
 <p>(**) <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.AddWhenNotFound</a> flag can be passed in <em>Apply</em> method call to add new entity when not found in database.</p>
-<p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify wich property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> or <a class="xref" href="../api/XData.CopyFlag.html">CopyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> or <a class="xref" href="../api/XData.CopyFlag.html">CopyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
+<p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify wich property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
 <h3 id="asynchronious-wrapped-operations">Asynchronious wrapped operations</h3>
 <p>To access data with XData inside async methods it&#39;s handy to use asynchronous wrappers declared inside <a class="xref" href="../api/XData.Async.AsyncExtensions.html">XData.Async etxtension methods</a> as illustrated in followed example:</p>
 <pre><code class="lang-csharp">internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine)
