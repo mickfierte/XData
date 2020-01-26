@@ -185,8 +185,9 @@ obj.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString());
     .LinkMode(LinkMode.Deafult, 
         x =&gt; SomeLinkProperty, x =&gt; AnotherLinkProperty) //set default rules to 2 properties
     .LinkMode(LinkMode.Value) //set other link properties serialize Value property only
-    .LoadChild(x =&gt; x.Childs, rep.GetChild&lt;ChildEntity&gt;()); //serilize child repository ChildEntity 
-    // into Childs property. Property Childs can has type ChildEntity or ChildEntity[]
+    // serilize child repository ChildEntity into Childs property. Property Childs can has 
+    // type ChildEntity or ChildEntity[]
+    .LoadChild(x =&gt; x.Childs, rep.GetChild&lt;ChildEntity&gt;()); 
 </code></pre><div class="WARNING"><h5>Warning</h5><p>Deserialized objects are detached from repository and had limited ways of using!</p>
 </div>
 <ul>
