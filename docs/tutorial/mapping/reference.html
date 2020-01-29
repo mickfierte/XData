@@ -79,13 +79,13 @@
             <article class="content wrap" id="_content" data-uid="mapping_reference.md">
 <h3 id="child-repositories-referencies">Child repositories referencies</h3>
 
-<p>Slave related repositories XData require to perform as:</p>
+<p>Detail related repositories XData require to perform as:</p>
 <pre><code class="lang-csharp">public IRepository&lt;InvoiceSpec&gt; Spec { 
     get { 
             return this.GetRepository().GetChild&lt;InvoiceSpec&gt;(); 
         } 
 }
-</code></pre><p>No additional mapping description are needed. Only <a href="mapping.html#master-slave-relations">external reference</a> is required.</p>
+</code></pre><p>No additional mapping description are needed. Only <a href="mapping.html#master-detail-relations">external reference</a> is required.</p>
 <div class="TIP"><h5>Tip</h5><p>To use XData Unit of Work realization (<a href="../unit_of_work.html">WorkSet</a>), child repositories referencies are required.</p>
 </div>
 </article>

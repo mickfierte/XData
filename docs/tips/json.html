@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="tips_json.md">
 <h3 id="json-serialization">JSON serialization</h3>
 
-<p>When used <a href="https://www.newtonsoft.com/json">Json.NET</a> XData <a href="">data objects</a> are serialized and deserialized automaticaly. </p>
+<p>When used <a href="https://www.newtonsoft.com/json">Json.NET</a> XData <a href="../tutorial/glossary.html#data-object">data objects</a> are serialized and deserialized automaticaly. </p>
 <p>There are some serialization specifics of data objects:</p>
 <ul>
 <li>By default <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> are serialized and deserialized as well as writable properties, but have a some restrictions when copyed to object to apply into database (see <em>Apply</em> method description below).</li>
@@ -97,7 +97,7 @@
 <li>Source - only source will be serialized</li>
 </ul>
 </li>
-<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadChild__1_System_Linq_Expressions_Expression_System_Func__0_System_Object___XData_IRepository___0__">LoadChild</a> - allow serialize а child repository in unmapped property with the type of the repository element (for one-to-one) or with the type of an array of this type (for one-to-many) </li>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">DeleteFlag</a> - allow to delete child entities in database using unmapped boolean proprety value in JSON serialized child object (see below). Used to deserialized (detached) objects only!</li>
 </ul>
 <pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().ToArray()
 .WithJsonSettings(s =&gt; s.Hide(JsonHideFlags.Columns) //hide all columns
@@ -105,32 +105,23 @@
     .LoadLob() //load all large data properties
     .LinkMode(LinkMode.Deafult, 
         x =&gt; SomeLinkProperty, x =&gt; AnotherLinkProperty) //set default rules to 2 properties
-    .LinkMode(LinkMode.Value) //set other link properties serialize Value property only
-    // serilize child repository ChildEntity into Childs property. Property Childs can has 
-    // type ChildEntity or ChildEntity[]
-    .LoadChild(x =&gt; x.Childs, rep.GetChild&lt;ChildEntity&gt;()); 
+    .LinkMode(LinkMode.Value));  //set other link properties serialize Value property only
 </code></pre><div class="WARNING"><h5>Warning</h5><p>Deserialized objects are detached from repository and had limited ways of using!</p>
 </div>
 <ul>
 <li>Deserialized object can be used as a filter to find data object in database (for example to delete) with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Find__1_XData_IRepository___0____0_System_Boolean_">Find</a> method:</li>
 </ul>
 <pre><code class="lang-csharp">var found = dataScope.GetRepository&lt;Some&gt;().Find(detachedObj);
-if(found == null) throw DbConcurrencyException();
+if(found == null) throw new DbConcurrencyException();
 return found.SetDeleted(true).Submit();
 </code></pre><ul>
 <li>Deserialized object can be used as a source to copy some data to new object with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Copy__1___0___0_XData_ApplyFlag_System_String___">Copy</a> method:</li>
 </ul>
-<pre><code class="lang-csharp">//if property Childs contains entities of ChildEntity child repository
-detachedObj.WithJsonSettings(x =&gt; x.LoadChild(z =&gt; z.Childs, 
-    rep.GetChild&lt;ChildEntity&gt;()));
-return dataScope.GetRepository&lt;Some&gt;().New().Copy(detachedObj).Submit();
+<pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().New().Copy(detachedObj).Submit();
 </code></pre><ul>
 <li>Deserialized object can be used as to apply changes to database with <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Apply__1_XData_IRepository___0____0_XData_ApplyFlag_System_String___">Apply</a> method:</li>
 </ul>
-<pre><code class="lang-csharp">//if property Childs contains entities of ChildEntity child repository
-detachedObj.WithJsonSettings(x =&gt; x.LoadChild(z =&gt; z.Childs, 
-    rep.GetChild&lt;ChildEntity&gt;()));
-dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
+<pre><code class="lang-csharp">dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
 </code></pre><p><em>Apply</em> is a combination of <em>Find</em> and <em>Copy</em> methods with followed algorithm:</p>
 <p>1) if <em>detached object</em> has all keys assigned, corresponded object will be searched in database using keys and correlation token (if described in mapping) values (*)</p>
 <p>2) if no data found XDataConcurrencyException will be throwed (**)</p>
@@ -139,6 +130,12 @@ dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
 <p>(*) Using of correlation token value with <em>Find</em> method can be escaped with optional <em>ignoreConcurrency</em> parameter. Same result can be reached with <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.IgnoreConcurrency</a> flag has been passed in <em>Apply</em> method call.</p>
 <p>(**) <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.AddWhenNotFound</a> flag can be passed in <em>Apply</em> method call to add new entity when not found in database.</p>
 <p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify wich property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
+<p>You can define child repositories and associate them using the <em>property</em> parameter of the <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> method with an unmatched property with the type of the child repository (for one-to-one relationships) or with a typed array of the child repository (for one-to-many relationships) . These properties will be populated during data collection, and the values ​​will be automatically serialized to JSON and deserialized from JSON to a detached object. These values ​​can be used to cascade changes to the database. Inserting and updating child objects is supported without further action. But for deleting entities, it is required that the developer define a delete flag - it the unmapped property used as a flag to mark the child entity as removed. To specify which property will be used as the delete flag for the property associated with the child repository, the <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_WithJsonSettings__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___">WithJsonSettings</a> method is used with the <a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">DeleteFlag</a> combination applied to the detached object.</p>
+<pre><code class="lang-csharp">// set delete flag to child repository entities to unmapped boolean property
+detachedObj.WithJsonSettings(x =&gt;
+    x.DeleteFlag(z =&gt; z.Childs, z =&gt; z.Deleted));
+dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
+</code></pre><p>See <a href="../tutorial/mapping/master_detail.html">Master-detail relations</a> to get more information about linking objects with Master-detail relations.</p>
 </article>
           </div>
           

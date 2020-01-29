@@ -80,9 +80,9 @@
 <h3 id="hidden-properties">Hidden properties</h3>
 
 <p>Some columns in database is needed to full description of mapping, but not required to business logic. This columns is declared as part of mapping named <em>Column</em> is selected from database, but not mapped on data object properties.</p>
-<p>For example - XData can operate primary (PK) and foreign (FK) keys of business objects and work with master-slave references between them, but mapping to property of <a href="mapping.html#master-slave-relations">external references</a> is not required to operate with key. </p>
+<p>For example - XData can operate primary (PK) and foreign (FK) keys of business objects and work with master-detail references between them, but mapping to property of <a href="mapping.html#master-detail-relations">external references</a> is not required to operate with key. </p>
 <p>Second case - optimistic concurrency resolving (see <a href="../concurrency.html">concurrency resolving</a>) required concurrency token field, but this field is not required to busines logic.</p>
-<p>Third example - when data is grouped, needed to declare some field to link with <a href="mapping.html#master-slave-relations">external reference</a>, but in this case possibly we can`t include this field in SELECT expression because of GROUP BY syntax. This case is resolved by <a class="xref" href="../../api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_Hidden">Hidden</a> property of column declaration. When <em>Hidden</em> is true - column will be not included into SELECT expression of resulted SQL query.</p>
+<p>Third example - when data is grouped, needed to declare some field to link with <a href="mapping.html#master-detail-relations">external reference</a>, but in this case possibly we can`t include this field in SELECT expression because of GROUP BY syntax. This case is resolved by <a class="xref" href="../../api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_Hidden">Hidden</a> property of column declaration. When <em>Hidden</em> is true - column will be not included into SELECT expression of resulted SQL query.</p>
 <p>Hidden properties description is various to <a href="static/static.html#hidden-properties">static</a> and <a href="dynamic/dynamic.html#hidden-properties">dynamic</a> mapping declaration methods.</p>
 </article>
           </div>

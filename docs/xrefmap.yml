@@ -157,9 +157,9 @@ references:
 - uid: mapping_link.md
   name: Link properties
   href: tutorial/mapping/link.html
-- uid: mapping_master_slave.md
-  name: Master slave relations
-  href: tutorial/mapping/master_slave.html
+- uid: mapping_master_detail.md
+  name: Master detail relations
+  href: tutorial/mapping/master_detail.html
 - uid: mapping_procedures.md
   name: SQL functions & procedures
   href: tutorial/mapping/procedures.html
@@ -12029,12 +12029,6 @@ references:
   commentId: T:XData.DataSubmitFlag
   fullName: XData.DataSubmitFlag
   nameWithType: DataSubmitFlag
-- uid: XData.DataSubmitFlag.Cascade
-  name: Cascade
-  href: api/XData.DataSubmitFlag.html#XData_DataSubmitFlag_Cascade
-  commentId: F:XData.DataSubmitFlag.Cascade
-  fullName: XData.DataSubmitFlag.Cascade
-  nameWithType: DataSubmitFlag.Cascade
 - uid: XData.DataSubmitFlag.IgnoreConcurrency
   name: IgnoreConcurrency
   href: api/XData.DataSubmitFlag.html#XData_DataSubmitFlag_IgnoreConcurrency
@@ -16731,6 +16725,33 @@ references:
   fullName.vb: XData.IRepository(Of T).Execute
   nameWithType: IRepository<T>.Execute
   nameWithType.vb: IRepository(Of T).Execute
+- uid: XData.IRepository`1.GetChild*
+  name: GetChild
+  href: api/XData.IRepository-1.html#XData_IRepository_1_GetChild_
+  commentId: Overload:XData.IRepository`1.GetChild
+  isSpec: "True"
+  fullName: XData.IRepository<T>.GetChild
+  fullName.vb: XData.IRepository(Of T).GetChild
+  nameWithType: IRepository<T>.GetChild
+  nameWithType.vb: IRepository(Of T).GetChild
+- uid: XData.IRepository`1.GetChild``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.String,XData.Interfaces.ISecuritySession,XData.Variable[])
+  name: GetChild<TChild>(Expression<Func<T, TChild[]>>, String, ISecuritySession, Variable[])
+  href: api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_String_XData_Interfaces_ISecuritySession_XData_Variable___
+  commentId: M:XData.IRepository`1.GetChild``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.String,XData.Interfaces.ISecuritySession,XData.Variable[])
+  name.vb: GetChild(Of TChild)(Expression(Of Func(Of T, TChild())), String, ISecuritySession, Variable())
+  fullName: XData.IRepository<T>.GetChild<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.String, XData.Interfaces.ISecuritySession, XData.Variable[])
+  fullName.vb: XData.IRepository(Of T).GetChild(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.String, XData.Interfaces.ISecuritySession, XData.Variable())
+  nameWithType: IRepository<T>.GetChild<TChild>(Expression<Func<T, TChild[]>>, String, ISecuritySession, Variable[])
+  nameWithType.vb: IRepository(Of T).GetChild(Of TChild)(Expression(Of Func(Of T, TChild())), String, ISecuritySession, Variable())
+- uid: XData.IRepository`1.GetChild``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String,XData.Interfaces.ISecuritySession,XData.Variable[])
+  name: GetChild<TChild>(Expression<Func<T, TChild>>, String, ISecuritySession, Variable[])
+  href: api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_XData_Interfaces_ISecuritySession_XData_Variable___
+  commentId: M:XData.IRepository`1.GetChild``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String,XData.Interfaces.ISecuritySession,XData.Variable[])
+  name.vb: GetChild(Of TChild)(Expression(Of Func(Of T, TChild)), String, ISecuritySession, Variable())
+  fullName: XData.IRepository<T>.GetChild<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.String, XData.Interfaces.ISecuritySession, XData.Variable[])
+  fullName.vb: XData.IRepository(Of T).GetChild(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.String, XData.Interfaces.ISecuritySession, XData.Variable())
+  nameWithType: IRepository<T>.GetChild<TChild>(Expression<Func<T, TChild>>, String, ISecuritySession, Variable[])
+  nameWithType.vb: IRepository(Of T).GetChild(Of TChild)(Expression(Of Func(Of T, TChild)), String, ISecuritySession, Variable())
 - uid: XData.IRepository`1.Lock(`0)
   name: Lock(T)
   href: api/XData.IRepository-1.html#XData_IRepository_1_Lock__0_
@@ -17295,6 +17316,33 @@ references:
   fullName.vb: XData.Json.JsonSettings(Of T).JsonSettings
   nameWithType: JsonSettings<T>.JsonSettings
   nameWithType.vb: JsonSettings(Of T).JsonSettings
+- uid: XData.Json.JsonSettings`1.DeleteFlag*
+  name: DeleteFlag
+  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag_
+  commentId: Overload:XData.Json.JsonSettings`1.DeleteFlag
+  isSpec: "True"
+  fullName: XData.Json.JsonSettings<T>.DeleteFlag
+  fullName.vb: XData.Json.JsonSettings(Of T).DeleteFlag
+  nameWithType: JsonSettings<T>.DeleteFlag
+  nameWithType.vb: JsonSettings(Of T).DeleteFlag
+- uid: XData.Json.JsonSettings`1.DeleteFlag``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: DeleteFlag<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Boolean>>)
+  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Json.JsonSettings`1.DeleteFlag``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: DeleteFlag(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Boolean)))
+  fullName: XData.Json.JsonSettings<T>.DeleteFlag<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>)
+  fullName.vb: XData.Json.JsonSettings(Of T).DeleteFlag(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)))
+  nameWithType: JsonSettings<T>.DeleteFlag<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Boolean>>)
+  nameWithType.vb: JsonSettings(Of T).DeleteFlag(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Boolean)))
+- uid: XData.Json.JsonSettings`1.DeleteFlag``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: DeleteFlag<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Boolean>>)
+  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.Json.JsonSettings`1.DeleteFlag``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: DeleteFlag(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Boolean)))
+  fullName: XData.Json.JsonSettings<T>.DeleteFlag<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>)
+  fullName.vb: XData.Json.JsonSettings(Of T).DeleteFlag(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)))
+  nameWithType: JsonSettings<T>.DeleteFlag<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Boolean>>)
+  nameWithType.vb: JsonSettings(Of T).DeleteFlag(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Boolean)))
 - uid: XData.Json.JsonSettings`1.Hide
   name: Hide()
   href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_Hide
@@ -17373,33 +17421,6 @@ references:
   fullName.vb: XData.Json.JsonSettings(Of T).LinkMode
   nameWithType: JsonSettings<T>.LinkMode
   nameWithType.vb: JsonSettings(Of T).LinkMode
-- uid: XData.Json.JsonSettings`1.LoadChild*
-  name: LoadChild
-  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadChild_
-  commentId: Overload:XData.Json.JsonSettings`1.LoadChild
-  isSpec: "True"
-  fullName: XData.Json.JsonSettings<T>.LoadChild
-  fullName.vb: XData.Json.JsonSettings(Of T).LoadChild
-  nameWithType: JsonSettings<T>.LoadChild
-  nameWithType.vb: JsonSettings(Of T).LoadChild
-- uid: XData.Json.JsonSettings`1.LoadChild``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},XData.IRepository{``0})
-  name: LoadChild<TChild>(Expression<Func<T, Object>>, IRepository<TChild>)
-  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadChild__1_System_Linq_Expressions_Expression_System_Func__0_System_Object___XData_IRepository___0__
-  commentId: M:XData.Json.JsonSettings`1.LoadChild``1(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},XData.IRepository{``0})
-  name.vb: LoadChild(Of TChild)(Expression(Of Func(Of T, Object)), IRepository(Of TChild))
-  fullName: XData.Json.JsonSettings<T>.LoadChild<TChild>(System.Linq.Expressions.Expression<System.Func<T, System.Object>>, XData.IRepository<TChild>)
-  fullName.vb: XData.Json.JsonSettings(Of T).LoadChild(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Object)), XData.IRepository(Of TChild))
-  nameWithType: JsonSettings<T>.LoadChild<TChild>(Expression<Func<T, Object>>, IRepository<TChild>)
-  nameWithType.vb: JsonSettings(Of T).LoadChild(Of TChild)(Expression(Of Func(Of T, Object)), IRepository(Of TChild))
-- uid: XData.Json.JsonSettings`1.LoadChild``1(System.String,XData.IRepository{``0})
-  name: LoadChild<TChild>(String, IRepository<TChild>)
-  href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadChild__1_System_String_XData_IRepository___0__
-  commentId: M:XData.Json.JsonSettings`1.LoadChild``1(System.String,XData.IRepository{``0})
-  name.vb: LoadChild(Of TChild)(String, IRepository(Of TChild))
-  fullName: XData.Json.JsonSettings<T>.LoadChild<TChild>(System.String, XData.IRepository<TChild>)
-  fullName.vb: XData.Json.JsonSettings(Of T).LoadChild(Of TChild)(System.String, XData.IRepository(Of TChild))
-  nameWithType: JsonSettings<T>.LoadChild<TChild>(String, IRepository<TChild>)
-  nameWithType.vb: JsonSettings(Of T).LoadChild(Of TChild)(String, IRepository(Of TChild))
 - uid: XData.Json.JsonSettings`1.LoadLob
   name: LoadLob()
   href: api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadLob
