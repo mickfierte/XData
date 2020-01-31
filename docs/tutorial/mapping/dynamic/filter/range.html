@@ -81,7 +81,7 @@
 <h4 id="range-filters">Range filters</h4>
 <p>To define filter checks field value over array of values used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_RangeFilter_System_String_System_Object___">RangeFilter</a> methods of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface.</p>
 <pre><code class="lang-csharp">...
-, RangeFilter(&quot;discount&quot;, new[] {0,5,10})
+, RangeFilter(&quot;discount&quot;, 1, 5, 10)
     .SetOperation(FilterOperation.In)
 ... 
 </code></pre></article>

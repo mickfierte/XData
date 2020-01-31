@@ -385,6 +385,9 @@ references:
 - uid: tips_update_source.md
   name: Property update source
   href: tips/update_source.html
+- uid: tips_useful.md
+  name: Useful little things...
+  href: tips/useful.html
 - uid: tips_view.md
   name: Mapping view
   href: tips/view.html
@@ -14027,6 +14030,49 @@ references:
   fullName.vb: XData.Extensions.Indexer(Of T).GetInstance
   nameWithType: Indexer<T>.GetInstance
   nameWithType.vb: Indexer(Of T).GetInstance
+- uid: XData.Extensions.IProcess`1
+  name: IProcess<T>
+  href: api/XData.Extensions.IProcess-1.html
+  commentId: T:XData.Extensions.IProcess`1
+  name.vb: IProcess(Of T)
+  fullName: XData.Extensions.IProcess<T>
+  fullName.vb: XData.Extensions.IProcess(Of T)
+  nameWithType: IProcess<T>
+  nameWithType.vb: IProcess(Of T)
+- uid: XData.Extensions.IProcess`1.Instance
+  name: Instance
+  href: api/XData.Extensions.IProcess-1.html#XData_Extensions_IProcess_1_Instance
+  commentId: P:XData.Extensions.IProcess`1.Instance
+  fullName: XData.Extensions.IProcess<T>.Instance
+  fullName.vb: XData.Extensions.IProcess(Of T).Instance
+  nameWithType: IProcess<T>.Instance
+  nameWithType.vb: IProcess(Of T).Instance
+- uid: XData.Extensions.IProcess`1.Instance*
+  name: Instance
+  href: api/XData.Extensions.IProcess-1.html#XData_Extensions_IProcess_1_Instance_
+  commentId: Overload:XData.Extensions.IProcess`1.Instance
+  isSpec: "True"
+  fullName: XData.Extensions.IProcess<T>.Instance
+  fullName.vb: XData.Extensions.IProcess(Of T).Instance
+  nameWithType: IProcess<T>.Instance
+  nameWithType.vb: IProcess(Of T).Instance
+- uid: XData.Extensions.IProcess`1.State
+  name: State
+  href: api/XData.Extensions.IProcess-1.html#XData_Extensions_IProcess_1_State
+  commentId: P:XData.Extensions.IProcess`1.State
+  fullName: XData.Extensions.IProcess<T>.State
+  fullName.vb: XData.Extensions.IProcess(Of T).State
+  nameWithType: IProcess<T>.State
+  nameWithType.vb: IProcess(Of T).State
+- uid: XData.Extensions.IProcess`1.State*
+  name: State
+  href: api/XData.Extensions.IProcess-1.html#XData_Extensions_IProcess_1_State_
+  commentId: Overload:XData.Extensions.IProcess`1.State
+  isSpec: "True"
+  fullName: XData.Extensions.IProcess<T>.State
+  fullName.vb: XData.Extensions.IProcess(Of T).State
+  nameWithType: IProcess<T>.State
+  nameWithType.vb: IProcess(Of T).State
 - uid: XData.Extensions.JoinedEnumerable
   name: JoinedEnumerable
   href: api/XData.Extensions.JoinedEnumerable.html
@@ -14202,6 +14248,28 @@ references:
   fullName.vb: XData.Extensions.JoinedEnumerable(Of T).System.Collections.IEnumerable.GetEnumerator
   nameWithType: JoinedEnumerable<T>.IEnumerable.GetEnumerator
   nameWithType.vb: JoinedEnumerable(Of T).System.Collections.IEnumerable.GetEnumerator
+- uid: XData.Extensions.Processing
+  name: Processing
+  href: api/XData.Extensions.Processing.html
+  commentId: T:XData.Extensions.Processing
+  fullName: XData.Extensions.Processing
+  nameWithType: Processing
+- uid: XData.Extensions.Processing.Do*
+  name: Do
+  href: api/XData.Extensions.Processing.html#XData_Extensions_Processing_Do_
+  commentId: Overload:XData.Extensions.Processing.Do
+  isSpec: "True"
+  fullName: XData.Extensions.Processing.Do
+  nameWithType: Processing.Do
+- uid: XData.Extensions.Processing.Do``1(``0,System.Action{XData.Extensions.IProcess{``0}}[])
+  name: Do<T>(T, Action<IProcess<T>>[])
+  href: api/XData.Extensions.Processing.html#XData_Extensions_Processing_Do__1___0_System_Action_XData_Extensions_IProcess___0_____
+  commentId: M:XData.Extensions.Processing.Do``1(``0,System.Action{XData.Extensions.IProcess{``0}}[])
+  name.vb: Do(Of T)(T, Action(Of IProcess(Of T))())
+  fullName: XData.Extensions.Processing.Do<T>(T, System.Action<XData.Extensions.IProcess<T>>[])
+  fullName.vb: XData.Extensions.Processing.Do(Of T)(T, System.Action(Of XData.Extensions.IProcess(Of T))())
+  nameWithType: Processing.Do<T>(T, Action<IProcess<T>>[])
+  nameWithType.vb: Processing.Do(Of T)(T, Action(Of IProcess(Of T))())
 - uid: XData.Extensions.TypeComparer
   name: TypeComparer
   href: api/XData.Extensions.TypeComparer.html

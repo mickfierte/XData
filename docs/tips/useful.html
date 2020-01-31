@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Useful little things... | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Useful little things... | XData website ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href=".././images/cube.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="tips_useful.md">
+<h2 id="useful-little-things">Useful little things...</h2>
+
+<p>During the development of XData, some helpers were developed that may be useful to You too...</p>
+<h3 id="single-value-ienumerable">Single value IEnumerable</h3>
+<p>When it is necessary to call the method that requires <em>IEnumerable&lt;T&gt;</em> and You have a single value, the <a class="xref" href="../api/XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_AsEnum__1___0_">AsEnum</a> method will be useful.</p>
+<h3 id="extensions-for-collections">Extensions for collections</h3>
+<p>To clear <em>List</em> with a preliminary call of some logic to free resources associated with a sheet element, the <a class="xref" href="../api/XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_Clear__1_System_Collections_Generic_List___0__System_Action___0__">Clear</a> method will help.</p>
+<p>The <a class="xref" href="../api/XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_GetOrAdd__1_System_Collections_Generic_IList___0__System_Func___0_System_Boolean__System_Func___0__">GetOrAdd</a> method for <em>List</em> will also be useful.</p>
+<p>When you need to compare two <em>Dictionary</em> instnces, the <a class="xref" href="../api/XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_HasSameValuesAs__2_System_Collections_Generic_IDictionary___0___1__System_Collections_Generic_IDictionary___0___1__">HasSameValuesAs</a> method can help.</p>
+<p>For <em>ConcurrentDictionary</em>, the <a class="xref" href="../api/XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_RemoveAll__2_System_Collections_Concurrent_ConcurrentDictionary___0___1__System_Func___0_System_Boolean__">RemoveAll</a> method may come in handy.</p>
+<h3 id="outer-join">Outer join</h3>
+<p>For those who are familiar with SQL, it is often convenient to use the concept of * OuterJoin * in the union of sets, and how it is implemented in LINQ is not comfortable to use. XData has a built-in mechanism for combining sets using methods:</p>
+<ul>
+<li><a class="xref" href="../api/XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_FullOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">FullOuterJoin</a></li>
+<li><a class="xref" href="../api/XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_LeftOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">LeftOuterJoin</a></li>
+<li><a class="xref" href="../api/XData.Extensions.JoinedEnumerable.html#XData_Extensions_JoinedEnumerable_RightOuterJoin__4_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___1__System_Func___0___2__System_Func___1___2__System_Func___0___1___3__System_Collections_Generic_IEqualityComparer___2__">RightOuterJoin</a></li>
+</ul>
+<div class="TIP"><h5>Tip</h5><p>It is necessary to take into account that these procedures use the Linq2object interface <em>IEnumerable</em> and for the effective use of combining data in the database, you must use <a href="../tutorial/mapping/mapping.html">mapping</a> or <a href="../tutorial/query.html">dynamic queries</a>.</p>
+</div>
+<h3 id="processing">Processing</h3>
+<p>To pre-process an object before using it (for example, to initialize the properties of a repository before using it as a LINQ data source), it is useful to use the <a class="xref" href="../api/XData.Extensions.Processing.html#XData_Extensions_Processing_Do__1___0_System_Action_XData_Extensions_IProcess___0_____">Do</a> extension:</p>
+<pre><code class="lang-csharp">var obj = dataScope.GetRepository&lt;Invoice&gt;()
+    .Do(x =&gt; x.Instance.GetChild(z =&gt; z.InvoiceSpec))
+    .First();
+</code></pre><p>To access source object use property <em>Instance</em> of action argument and properties of dynamic property <em>State</em> of action argument to store some values between actions.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mickfierte/private/blob/main/doc/tips/useful.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
