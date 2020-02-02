@@ -2015,6 +2015,156 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_ClearAsync__1_XData_IRepository___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.ClearAsync%60%601(XData.IRepository%7B%60%600%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Boolean%7D%7D%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1765">View Source</a>
+  </span>
+  <a id="XData_Async_AsyncExtensions_ClearAsync_" data-uid="XData.Async.AsyncExtensions.ClearAsync*"></a>
+  <h4 id="XData_Async_AsyncExtensions_ClearAsync__1_XData_IRepository___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___XData_DataSubmitFlag_" data-uid="XData.Async.AsyncExtensions.ClearAsync``1(XData.IRepository{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},XData.DataSubmitFlag)">ClearAsync&lt;T&gt;(IRepository&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, DataSubmitFlag)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous wrapper over Clear</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ClearAsync&lt;T&gt;(this IRepository&lt;T&gt; repository, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, DataSubmitFlag flag = DataSubmitFlag.None)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IRepository-1.html">IRepository</a>&lt;T&gt;</td>
+        <td><span class="parametername">repository</span></td>
+        <td><p>Repository to submit</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>Predicate to filer repository before clear</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.DataSubmitFlag.html">DataSubmitFlag</a></td>
+        <td><span class="parametername">flag</span></td>
+        <td><p>Data submit flag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>Asynchronous wrapper over Submit</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_ClearAsync__1_XData_IRepository___0__XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.ClearAsync%60%601(XData.IRepository%7B%60%600%7D%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1752">View Source</a>
+  </span>
+  <a id="XData_Async_AsyncExtensions_ClearAsync_" data-uid="XData.Async.AsyncExtensions.ClearAsync*"></a>
+  <h4 id="XData_Async_AsyncExtensions_ClearAsync__1_XData_IRepository___0__XData_DataSubmitFlag_" data-uid="XData.Async.AsyncExtensions.ClearAsync``1(XData.IRepository{``0},XData.DataSubmitFlag)">ClearAsync&lt;T&gt;(IRepository&lt;T&gt;, DataSubmitFlag)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous wrapper over Clear</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ClearAsync&lt;T&gt;(this IRepository&lt;T&gt; repository, DataSubmitFlag flag = DataSubmitFlag.None)
+    where T : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IRepository-1.html">IRepository</a>&lt;T&gt;</td>
+        <td><span class="parametername">repository</span></td>
+        <td><p>Repository to submit</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.DataSubmitFlag.html">DataSubmitFlag</a></td>
+        <td><span class="parametername">flag</span></td>
+        <td><p>Data submit flag</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>Asynchronous wrapper over Submit</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.ContainsAsync%60%601(System.Linq.IQueryable%7B%60%600%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -4783,7 +4933,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_LoadLobAsync__1___0_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.LoadLobAsync%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1860">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1888">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_LoadLobAsync_" data-uid="XData.Async.AsyncExtensions.LoadLobAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_LoadLobAsync__1___0_" data-uid="XData.Async.AsyncExtensions.LoadLobAsync``1(``0)">LoadLobAsync&lt;T&gt;(T)</h4>
@@ -4849,7 +4999,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.LoadLobAsync%60%601(%60%600%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Object%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1911">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1939">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_LoadLobAsync_" data-uid="XData.Async.AsyncExtensions.LoadLobAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____" data-uid="XData.Async.AsyncExtensions.LoadLobAsync``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}}[])">LoadLobAsync&lt;T&gt;(T, Expression&lt;Func&lt;T, Object&gt;&gt;[])</h4>
@@ -4921,7 +5071,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_String___.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.LoadLobAsync%60%601(%60%600%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1885">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1913">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_LoadLobAsync_" data-uid="XData.Async.AsyncExtensions.LoadLobAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_String___" data-uid="XData.Async.AsyncExtensions.LoadLobAsync``1(``0,System.String[])">LoadLobAsync&lt;T&gt;(T, String[])</h4>
@@ -4993,7 +5143,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.LoadLobAsync%60%601(%60%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1871">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1899">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_LoadLobAsync_" data-uid="XData.Async.AsyncExtensions.LoadLobAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_Threading_CancellationToken_" data-uid="XData.Async.AsyncExtensions.LoadLobAsync``1(``0,System.Threading.CancellationToken)">LoadLobAsync&lt;T&gt;(T, CancellationToken)</h4>
@@ -5065,7 +5215,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Object_____.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.LoadLobAsync%60%601(%60%600%2CSystem.Threading.CancellationToken%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Object%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1923">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1951">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_LoadLobAsync_" data-uid="XData.Async.AsyncExtensions.LoadLobAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_Threading_CancellationToken_System_Linq_Expressions_Expression_System_Func___0_System_Object_____" data-uid="XData.Async.AsyncExtensions.LoadLobAsync``1(``0,System.Threading.CancellationToken,System.Linq.Expressions.Expression{System.Func{``0,System.Object}}[])">LoadLobAsync&lt;T&gt;(T, CancellationToken, Expression&lt;Func&lt;T, Object&gt;&gt;[])</h4>
@@ -5143,7 +5293,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_Threading_CancellationToken_System_String___.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.LoadLobAsync%60%601(%60%600%2CSystem.Threading.CancellationToken%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1897">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1925">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_LoadLobAsync_" data-uid="XData.Async.AsyncExtensions.LoadLobAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_LoadLobAsync__1___0_System_Threading_CancellationToken_System_String___" data-uid="XData.Async.AsyncExtensions.LoadLobAsync``1(``0,System.Threading.CancellationToken,System.String[])">LoadLobAsync&lt;T&gt;(T, CancellationToken, String[])</h4>
@@ -6749,7 +6899,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.SubmitAndReturnAsync%60%601(%60%600%2CSystem.Func%7BXData.Json.JsonSettings%7B%60%600%7D%2CXData.Json.JsonSettings%7B%60%600%7D%7D%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1817">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1845">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_SubmitAndReturnAsync_" data-uid="XData.Async.AsyncExtensions.SubmitAndReturnAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___XData_DataSubmitFlag_" data-uid="XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},XData.DataSubmitFlag)">SubmitAndReturnAsync&lt;T&gt;(T, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt;, DataSubmitFlag)</h4>
@@ -6827,7 +6977,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Threading_CancellationToken_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.SubmitAndReturnAsync%60%601(%60%600%2CSystem.Threading.CancellationToken%2CSystem.Func%7BXData.Json.JsonSettings%7B%60%600%7D%2CXData.Json.JsonSettings%7B%60%600%7D%7D%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1835">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1863">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_SubmitAndReturnAsync_" data-uid="XData.Async.AsyncExtensions.SubmitAndReturnAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Threading_CancellationToken_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___XData_DataSubmitFlag_" data-uid="XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,System.Threading.CancellationToken,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}},XData.DataSubmitFlag)">SubmitAndReturnAsync&lt;T&gt;(T, CancellationToken, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt;, DataSubmitFlag)</h4>
@@ -6911,7 +7061,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Threading_CancellationToken_XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.SubmitAndReturnAsync%60%601(%60%600%2CSystem.Threading.CancellationToken%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1796">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1824">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_SubmitAndReturnAsync_" data-uid="XData.Async.AsyncExtensions.SubmitAndReturnAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_System_Threading_CancellationToken_XData_DataSubmitFlag_" data-uid="XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,System.Threading.CancellationToken,XData.DataSubmitFlag)">SubmitAndReturnAsync&lt;T&gt;(T, CancellationToken, DataSubmitFlag)</h4>
@@ -6989,7 +7139,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.SubmitAndReturnAsync%60%601(%60%600%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1765">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1793">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_SubmitAndReturnAsync_" data-uid="XData.Async.AsyncExtensions.SubmitAndReturnAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_SubmitAndReturnAsync__1___0_XData_DataSubmitFlag_" data-uid="XData.Async.AsyncExtensions.SubmitAndReturnAsync``1(``0,XData.DataSubmitFlag)">SubmitAndReturnAsync&lt;T&gt;(T, DataSubmitFlag)</h4>
@@ -7061,7 +7211,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_SubmitAsync__1___0_System_Threading_CancellationToken_XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.SubmitAsync%60%601(%60%600%2CSystem.Threading.CancellationToken%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1781">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1809">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_SubmitAsync_" data-uid="XData.Async.AsyncExtensions.SubmitAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_SubmitAsync__1___0_System_Threading_CancellationToken_XData_DataSubmitFlag_" data-uid="XData.Async.AsyncExtensions.SubmitAsync``1(``0,System.Threading.CancellationToken,XData.DataSubmitFlag)">SubmitAsync&lt;T&gt;(T, CancellationToken, DataSubmitFlag)</h4>
@@ -7139,7 +7289,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Async_AsyncExtensions_SubmitAsync__1___0_XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.Async.AsyncExtensions.SubmitAsync%60%601(%60%600%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1753">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/AsyncExtensions.netstandard20.cs/#L1781">View Source</a>
   </span>
   <a id="XData_Async_AsyncExtensions_SubmitAsync_" data-uid="XData.Async.AsyncExtensions.SubmitAsync*"></a>
   <h4 id="XData_Async_AsyncExtensions_SubmitAsync__1___0_XData_DataSubmitFlag_" data-uid="XData.Async.AsyncExtensions.SubmitAsync``1(``0,XData.DataSubmitFlag)">SubmitAsync&lt;T&gt;(T, DataSubmitFlag)</h4>

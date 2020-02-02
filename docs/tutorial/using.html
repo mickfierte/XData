@@ -183,6 +183,72 @@ return invoice.SetDeleted(true).Submit(out _);
 <pre><code class="lang-csharp">newInvoice.Submit(out var invoice);
 var docTypeCode = invoice.DocTypeCode;
 </code></pre><p>To submit changes apllied to multiple data objects of the same type can be used <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Submit__0__XData_DataSubmitFlag_">IRepository&lt;T&gt;.Submit</a> method accepted (<em>IEnumerable&lt;T&gt;</em>) as one of parameters. When object is not changed this method will skip it while updating database.</p>
+<h3 id="mapping-declaration">Mapping declaration</h3>
+<p>To use the repository, recuired to describe the object-relational mapping rule for the type of repository objects. XData has two styles of mapping definition static - based on attribute assignment and dynamic - LINQ style mapping description.</p>
+<p>SQL representation of samples below:</p>
+<pre><code class="lang-sql">SELECT A.amount AS A_amount /* Amount */,
+    A.DOC_SPEC_ID AS A_DOC_SPEC_ID,
+    DS.doc_id AS DS_doc_id /* DocId */,
+    DS.doc_spec_id AS DS_doc_spec_id /* DocSpecId */,
+    DS.DOC_SPEC_TYPE_ID AS DS_DOC_SPEC_TYPE_ID,
+    ST.code AS ST_code /* Code */,
+    ST.DOC_SPEC_TYPE_ID AS ST_DOC_SPEC_TYPE_ID,
+    ST.name AS ST_name /* Name */
+FROM T_DOC_SPEC DS
+    JOIN T_DOC_SPEC_AMOUNT A ON A.DOC_SPEC_ID = DS.DOC_SPEC_ID
+    JOIN T_DOC_SPEC_TYPE ST ON ST.DOC_SPEC_TYPE_ID = DS.DOC_SPEC_TYPE_ID
+</code></pre><p>Static mapping description sample:</p>
+<pre><code class="lang-csharp">[DataObject(&quot;DS&quot;), 
+    DataTable(&quot;T_DOC_SPEC&quot;, &quot;DS&quot;), 
+    DataTable(&quot;T_DOC_SPEC_AMOUNT&quot;, &quot;A&quot;, Parent = &quot;DS&quot;),
+    DataTable(&quot;T_DOC_SPEC_TYPE&quot;, &quot;ST&quot;),
+    Link(&quot;A&quot;, &quot;doc_spec_id&quot;, &quot;DS&quot;),
+    Link(&quot;ST&quot;, &quot;doc_spec_type_id&quot;, &quot;DS&quot;),
+    Column(&quot;DocSpecId&quot;, typeof(long), &quot;DS&quot;, Flags = DataPropertyFlag.Id),
+    ColumnDefault(&quot;DocSpecId&quot;, DefaultType.AutoIncrement),
+    Column(&quot;DocSpecTypeId&quot;, typeof(long), &quot;ST&quot;),
+    Column(&quot;DocId&quot;, typeof(long), &quot;DS&quot;)]
+public class InvoiceSpec: IDataObject
+{
+    [Property(&quot;ST&quot;), 
+        LinkProperty,
+        LinkProperty(Property = &quot;DocSpecTypeId&quot;),
+        LinkProperty(Property = &quot;Code&quot;)]
+    public Link&lt;string, DocSpecType&gt; Name { get; set; }
+    [Property(&quot;ST&quot;)]
+    public string Code { get { return this.GetProperty(x =&gt; x.Code); } }
+    [Property(&quot;A&quot;)]
+    public decimal Amount { get; set; }
+}
+</code></pre><p>Dynamic mapping description sample:</p>
+<pre><code class="lang-csharp">public partial class InvoiceSpec: IDataObject
+{
+    private static Expression&lt;CustomMapping&lt;InvoiceSpec&gt;&gt; _mapping = (
+        () =&gt; XDataMapping.CustomMapping&lt;InvoiceSpec&gt;()
+            .DataTable(&quot;T_DOC_SPEC&quot;, &quot;DS&quot;)
+            .DataTable(&quot;T_DOC_SPEC_AMOUNT&quot;, &quot;A&quot;, &quot;DS&quot;, 
+                x =&gt; x.Link(&quot;DS&quot;, &quot;doc_spec_id&quot;))
+            .DataTable(&quot;T_DOC_SPEC_TYPE&quot;, &quot;ST&quot;, 
+                x =&gt; x.Link(&quot;DS&quot;, &quot;doc_spec_type_id&quot;))
+            .Column(&quot;DocSpecId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;DS&quot;, string.Empty, 
+                z =&gt; z.Key(), z =&gt; z.Default(DefaultType.AutoIncrement)))
+            .Column(&quot;DocSpecTypeId&quot;, 
+                x =&gt; x.Field&lt;long&gt;(&quot;ST&quot;, string.Empty))
+            .Column(&quot;DocId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;DS&quot;, string.Empty))
+            .Map(x =&gt; new InvoiceSpec {
+                Name = x.Link&lt;string, DocSpecType&gt;(&quot;ST&quot;, &quot;name&quot;,
+                    z =&gt; z.LinkProperty&lt;DocSpecType&gt;(y =&gt; y.Name),
+                    z =&gt; z.LinkProperty&lt;DocSpecType&gt;((InvoiceSpec y) =&gt; y.Code)),
+                Amount = x.Field&lt;decimal&gt;(&quot;A&quot;, string.Empty)
+            }).SetBaseTable(&quot;DS&quot;));
+}
+public partial class InvoiceSpec
+{
+    public Link&lt;string, DocSpecType&gt; Name { get; set; }
+    public string Code { get { return this.GetProperty(x =&gt; x.Code); } }
+    public decimal Amount { get; set; }
+}
+</code></pre><p>Detailed desciption of <a href="mapping/static/static.html">static</a> and <a href="mapping/dynamic/dynamic.html">dynamic</a> methods of mapping definie described in relevant sections.</p>
 </article>
           </div>
           

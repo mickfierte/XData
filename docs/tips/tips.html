@@ -235,9 +235,50 @@ Console.WriteLine(&quot;*** Testing context: {0} (DB type: {1})&quot;, ctx.Name,
 Console.WriteLine(&quot;*** Server: {0}, Schema: {1}&quot;, ctx.ConnectionInfo.Server, ctx.ConnectionInfo.Schema);
 </code></pre><h3 id="optional-filters">Optional filters</h3>
 <p>Optional filters is the mechanic to simplify query structure when some filters are not set. For example, we can map data structure to some class and to alow filter objects over some property of dictionary linked to main data structure. When filter applied this link to dictionary table is used, but when not we ineffectively rize query complexity.</p>
-<p>To avoid unplanned query complexity XData has <em>optional filter</em> feature. Some filters marked as <em>primary</em> - when this filter has value, query has full form. When filter value has cleared or set to null, data source of filtered field (table or view) will be skiped when SQL query composed. When data source has been skipped then links between already skipped and other data sources are analized. And when found link marked as <em>primary</em> linked data source will also skipped. When <a href="../tutorial/glossary.html#base-table">base table</a> of subquery has been skipped - all subquery will be skipped and subquery links analizis for <em>primary</em> links will be provided over outer query. Until no <em>primary</em> filters found.</p>
+<p>To avoid unplanned query complexity XData has <em>optional filter</em> feature. Some filters marked as <em>primary</em> - when this filter has value, query has full form. When filter value has cleared or set to null, data source of filtered field (table or view) will be skipped when SQL query composed. When data source has been skipped then links between already skipped and other data sources are analized. And when found link marked as <em>primary</em> linked data source will also skipped. When <a href="../tutorial/glossary.html#base-table">base table</a> of subquery has been skipped - all subquery will be skipped and subquery links analizis for <em>primary</em> links will be provided over outer query. Until no <em>primary</em> filters found.</p>
 <p>This alowes to compose complex query relations over multiple tables and subqueries that reflect on real query only when it realy necessary.</p>
-<h3 id="conditional-filters">Conditional filters</h3>
+<pre><code class="lang-csharp">public partial class TestOptional: IDataObject
+{
+    private static Expression&lt;CustomMapping&lt;TestOptional&gt;&gt; _mapping = (
+        () =&gt; XDataMapping.CustomMapping&lt;TestOptional&gt;()
+            .DataTable(&quot;T_TEST&quot;, &quot;T&quot;, 
+                x =&gt; x.SubqueryFilter(string.Empty, &quot;A&quot;)
+                    .SetOperation(FilterOperation.Exists)
+            .Subquery(&quot;A&quot;, XDataMapping.GetStructure(&quot;H&quot;, null, 
+                    DataStructureFlag.None)
+                .DataTable(&quot;T_TEST_OPT&quot;, &quot;H&quot;)
+                .DataTable(&quot;T_OPT&quot;, &quot;P&quot;,
+                    // Link btween H and P table marked as Primary filter
+                    x =&gt; x.Link(&quot;H&quot;, &quot;opt_id&quot;).AsPrimary(),
+                    // ConstFilter &quot;OptCode&quot; marked as Primary filter
+                    x =&gt; x.ConstFilter(&quot;OptCode&quot;, &quot;code&quot;, null).AsPrimary())
+                .Select(x =&gt; new {
+                    TestId = x.Field&lt;long&gt;(&quot;H&quot;, string.Empty)
+                }), &quot;TestId&quot;, DataGrouping.None, x =&gt; x.SubqueryLink(&quot;DocId&quot;))
+            .Column(&quot;TestId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;T&quot;, string.Empty))
+            .Map(x =&gt; new TestOptional {
+                Name = x.Field&lt;decimal&gt;(&quot;T&quot;, string.Empty)
+            }).SetBaseTable(&quot;T&quot;));
+}
+</code></pre><p>When repository accessed like that...</p>
+<pre><code class="lang-csharp">dataScope.GetReposytory&lt;TestOptional&gt;().ToArray();
+</code></pre><p>XData generate a simple SQL...</p>
+<pre><code class="lang-sql">select T.test_id as T_test_id, T.name as T_name from T_TEST T
+</code></pre><p>Because...</p>
+<ol>
+<li>ConstFilter &quot;OptCode&quot; has null value and marked as primary =&gt; T_OPT table skipped</li>
+<li>T_OPT table skipped and Link to T_TEST_OPT marked as primary =&gt; T_TEST_OPT table skipped</li>
+<li>T_TEST_OPT table skipped and marked as base table =&gt; subquery is skipped and SubqueryFilter skipped as well, but because it not marked as primary =&gt; table T_TEST is not skiped</li>
+</ol>
+<p>And when filter is filled...</p>
+<pre><code class="lang-csharp">dataScope.GetReposytory&lt;TestOptional&gt;()
+    .SetFilterValue(new FilterName(&quot;OptCode&quot;), &quot;TEST&quot;).ToArray();
+</code></pre><p>Now XData generate SQL with optional parts...</p>
+<pre><code class="lang-sql">select T.test_id as T_test_id, T.name as T_name from T_TEST T 
+where exists(select 1 
+    from T_TEST_OPT H join T_OPT P on H.opt_id = P.opt_id 
+    where P.code = &quot;TEST&quot;)
+</code></pre><h3 id="conditional-filters">Conditional filters</h3>
 <p>XData realization of LINQ &quot;Where&quot; method has provide ability to use runtime condition evaluation during predicate compilation into SQL statements to analyze runtime data and conditionaly omit non valued data (0, empty or null) filters.</p>
 <pre><code class="lang-csharp">// string author, int rating, decimal? lowerPrice and decimal? higherPrice is an optional filter values
 return dataScope.GetRepository&lt;Book&gt;()
@@ -396,6 +437,12 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 <p>This features helps logicaly combine mappings to hide technological entities, which don&#39;t reflect buseness object model of application. </p>
 <p>Default features can be combined. For example: </p>
 <pre><code class="lang-csharp">DefaultFeature.UseOnUpdate | DefaultFeature.SkipWhenAssigned
+</code></pre><h3 id="cast-to-type">Cast to type</h3>
+<p>To cast type of <em>Field</em> or <em>Expression</em> while mapping declaration can be reached using <a class="xref" href="../api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_CastTo__1">CastTo</a> method.</p>
+<pre><code class="lang-csharp">...
+OrgSubType = x.Expr(&quot;org_subtype&quot;, 
+    z =&gt; z.CastTo&lt;OrgSubType&gt;().Field&lt;string&gt;(&quot;S&quot;, &quot;param_value&quot;), DbType.String)
+... 
 </code></pre><h3 id="caching-repository-data">Caching repository data</h3>
 <p>Some data is changed often, some is rarely, but some data will never changed untill application has upgraded. To reduse requery of this static data, XData has mechanism to cache requested data (not a mapped objects) in XData. Repository property <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_FixedQuery">FixedQuery</a> can be assigned to true when caching is required. All LINQ queries will be translated to this cache without requery data from database. When this property resets to false, the cache will erased and repository returns to common algorithms of database requests. Similar feature is used to access rarely changed <a href="dictionary.html">dictionary</a> data over multiple related operative data canges.</p>
 <h3 id="copy-data">Copy data</h3>

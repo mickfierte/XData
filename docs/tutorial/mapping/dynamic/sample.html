@@ -327,6 +327,96 @@ Default Encoding: UTF-8
 Language: en
 Country: US
 --></g></svg> </div><p>Dynamic mapping example for same data object as represented in <a href="../static/static.html#static-mapping-sample">static mapping</a> description:</p>
+<p>SQL representation of following sample: </p>
+<pre><code class="lang-sql">with recursive T (catalogue_id, code, name, parent_id) 
+   as ((SELECT R.catalogue_id AS R_catalogue_id,
+            R.code AS R_code,
+            R.name AS R_name,
+            R.parent_id AS R_parent_id
+        FROM T_CATALOGUE R
+        WHERE ((@FilterByRoot is not null
+            and R.catalogue_id = @FilterByRoot)
+            OR (@FilterByRoot is null
+            and R.parent_id is null))) UNION (SELECT S.catalogue_id AS S_catalogue_id,
+            S.code AS S_code,
+            S.name AS S_name,
+            S.parent_id AS S_parent_id
+        FROM T_CATALOGUE S, T T
+        WHERE S.parent_id = (T.catalogue_id)))
+SELECT CF.CUSTOMER_ID AS CF_CUSTOMER_ID,
+    CF.DOC_CUST_ID AS CF_DOC_CUST_ID,
+    CF.DOC_CUST_TYPE_ID AS CF_DOC_CUST_TYPE_ID,
+    CF.DOC_ID AS CF_DOC_ID,
+    CT.CUSTOMER_ID AS CT_CUSTOMER_ID,
+    CT.DOC_CUST_ID AS CT_DOC_CUST_ID,
+    CT.DOC_CUST_TYPE_ID AS CT_DOC_CUST_TYPE_ID,
+    CT.DOC_ID AS CT_DOC_ID,
+    CAST((SELECT Sum(A.amount) AS A_amount
+        FROM T_DOC_SPEC S
+            JOIN T_DOC_SPEC_AMOUNT A ON A.DOC_SPEC_ID = S.DOC_SPEC_ID
+        WHERE S.doc_id = S.doc_id) AS NUMERIC(17, 5)) AS doc_amount /* DocAmount */,
+    D.doc_date AS D_doc_date /* DocDate */,
+    D.doc_id AS D_doc_id /* DocId */,
+    D.DOC_TYPE_ID AS D_DOC_TYPE_ID,
+    D.generation AS D_generation /* Generation */,
+    D.changed AS D_changed /* Changed */,
+    D.author AS D_author /* Author */,
+    DD.delivery_date AS DD_delivery_date /* DeliveryDate */,
+    DD.delivery_type AS DD_delivery_type /* DeliveryType */,
+    DD.DOC_ID AS DD_DOC_ID,
+    DS.DOC_DOC_STATE_ID AS DS_DOC_DOC_STATE_ID,
+    DS.DOC_ID AS DS_DOC_ID,
+    DS.DOC_STATE_ID AS DS_DOC_STATE_ID,
+    F.CODE AS F_CODE,
+    F.CUSTOMER_ID AS F_CUSTOMER_ID,
+    F.name AS F_name /* CustomerFrom */,
+    H.H_doc_id AS H_H_doc_id,
+    H.H_history_date AS H_H_history_date /* DocLastChange */,
+    N.DOC_ID AS N_DOC_ID,
+    N.numb AS N_numb /* DocNumb */,
+    S.code AS S_code /* DocStateCode */,
+    S.DOC_STATE_ID AS S_DOC_STATE_ID,
+    S.name AS S_name /* DocState */,
+    SC.DOC_ID AS SC_DOC_ID,
+    SC.scan AS SC_scan /* Scan */,
+    SR.DOC_ID AS SR_DOC_ID,
+    SR.source AS SR_source /* Source */,
+    ST.S_doc_id AS ST_S_doc_id,
+    T.CODE AS T_CODE,
+    T.CUSTOMER_ID AS T_CUSTOMER_ID,
+    T.name AS T_name /* CustomerTo */
+FROM T_DOC D
+    JOIN T_DOC_DOC_STATE DS ON DS.doc_id = D.doc_id
+    JOIN T_DOC_STATE S ON S.DOC_STATE_ID = DS.DOC_STATE_ID
+    JOIN T_DOC_NUMBER N ON N.doc_id = D.doc_id
+    JOIN T_DOC_CUST CF ON CF.doc_id = D.doc_id
+    JOIN T_DOC_CATALOGUE DC ON DC.doc_id = D.doc_id
+    JOIN T_CATALOGUE U ON DC.catalogue_id = U.catalogue_id
+    JOIN T_CUSTOMER F ON F.CUSTOMER_ID = CF.CUSTOMER_ID
+    JOIN T_DOC_CUST CT ON CT.doc_id = D.doc_id
+    JOIN T_CUSTOMER T ON T.CUSTOMER_ID = CF.CUSTOMER_ID
+    LEFT OUTER JOIN T_DOC_SCAN SC ON SC.doc_id = D.doc_id
+    LEFT OUTER JOIN T_DOC_SOURCE SR ON SR.doc_id = D.doc_id
+    LEFT OUTER JOIN T_DOC_DELIVERY DD ON DD.doc_id = D.doc_id
+    LEFT OUTER JOIN (SELECT H.doc_id AS H_doc_id,
+            H.history_date AS H_history_date
+        FROM T_DOC_HISTORY H) H ON D.doc_id = H.H_doc_id
+    JOIN (SELECT S.doc_id AS S_doc_id
+        FROM T_DOC_SPEC_TYPE ST
+            JOIN T_DOC_SPEC S ON S.DOC_SPEC_TYPE_ID = ST.DOC_SPEC_TYPE_ID
+        WHERE ST.code = @FilterBySpecTypeCode) ST ON D.doc_id = ST.S_doc_id
+WHERE D.DOC_TYPE_ID = (select doc_type_id
+        from T_DOC_TYPE
+        where code=&#39;INVOICE&#39;)
+    AND CF.DOC_CUST_TYPE_ID = (select doc_cust_type_id
+        from T_DOC_CUST_TYPE
+        where code=&#39;FROM&#39;)
+    AND CF.DOC_CUST_TYPE_ID = (select doc_cust_type_id
+        from T_DOC_CUST_TYPE
+        where code=&#39;TO&#39;)
+    AND D.doc_id = @FilterByDocId
+    AND DC.catalogue_id in (SELECT T.catalogue_id AS T_catalogue_id FROM T T)
+</code></pre><p>Mapping sample:</p>
 <pre><code class="lang-csharp">public partial class Invoice: IDataObject
 {
     public static CustomLogic&lt;Invoice&gt; TestCustomLogic;

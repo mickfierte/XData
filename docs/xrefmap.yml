@@ -322,6 +322,9 @@ references:
 - uid: tips_calculated.md
   name: Business logic calculated fields
   href: tips/calculated.html
+- uid: tips_cast_type.md
+  name: Cast to type
+  href: tips/cast_type.html
 - uid: tips_conditional.md
   name: Conditional filters
   href: tips/conditional.html
@@ -739,6 +742,31 @@ references:
   fullName.vb: XData.Async.AsyncExtensions.AverageAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken, System.Linq.Expressions.Expression(Of System.Func(Of T, System.Single)))
   nameWithType: AsyncExtensions.AverageAsync<T>(IQueryable<T>, CancellationToken, Expression<Func<T, Single>>)
   nameWithType.vb: AsyncExtensions.AverageAsync(Of T)(IQueryable(Of T), CancellationToken, Expression(Of Func(Of T, Single)))
+- uid: XData.Async.AsyncExtensions.ClearAsync*
+  name: ClearAsync
+  href: api/XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ClearAsync_
+  commentId: Overload:XData.Async.AsyncExtensions.ClearAsync
+  isSpec: "True"
+  fullName: XData.Async.AsyncExtensions.ClearAsync
+  nameWithType: AsyncExtensions.ClearAsync
+- uid: XData.Async.AsyncExtensions.ClearAsync``1(XData.IRepository{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},XData.DataSubmitFlag)
+  name: ClearAsync<T>(IRepository<T>, Expression<Func<T, Boolean>>, DataSubmitFlag)
+  href: api/XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ClearAsync__1_XData_IRepository___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___XData_DataSubmitFlag_
+  commentId: M:XData.Async.AsyncExtensions.ClearAsync``1(XData.IRepository{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},XData.DataSubmitFlag)
+  name.vb: ClearAsync(Of T)(IRepository(Of T), Expression(Of Func(Of T, Boolean)), DataSubmitFlag)
+  fullName: XData.Async.AsyncExtensions.ClearAsync<T>(XData.IRepository<T>, System.Linq.Expressions.Expression<System.Func<T, System.Boolean>>, XData.DataSubmitFlag)
+  fullName.vb: XData.Async.AsyncExtensions.ClearAsync(Of T)(XData.IRepository(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Boolean)), XData.DataSubmitFlag)
+  nameWithType: AsyncExtensions.ClearAsync<T>(IRepository<T>, Expression<Func<T, Boolean>>, DataSubmitFlag)
+  nameWithType.vb: AsyncExtensions.ClearAsync(Of T)(IRepository(Of T), Expression(Of Func(Of T, Boolean)), DataSubmitFlag)
+- uid: XData.Async.AsyncExtensions.ClearAsync``1(XData.IRepository{``0},XData.DataSubmitFlag)
+  name: ClearAsync<T>(IRepository<T>, DataSubmitFlag)
+  href: api/XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ClearAsync__1_XData_IRepository___0__XData_DataSubmitFlag_
+  commentId: M:XData.Async.AsyncExtensions.ClearAsync``1(XData.IRepository{``0},XData.DataSubmitFlag)
+  name.vb: ClearAsync(Of T)(IRepository(Of T), DataSubmitFlag)
+  fullName: XData.Async.AsyncExtensions.ClearAsync<T>(XData.IRepository<T>, XData.DataSubmitFlag)
+  fullName.vb: XData.Async.AsyncExtensions.ClearAsync(Of T)(XData.IRepository(Of T), XData.DataSubmitFlag)
+  nameWithType: AsyncExtensions.ClearAsync<T>(IRepository<T>, DataSubmitFlag)
+  nameWithType.vb: AsyncExtensions.ClearAsync(Of T)(IRepository(Of T), DataSubmitFlag)
 - uid: XData.Async.AsyncExtensions.ContainsAsync*
   name: ContainsAsync
   href: api/XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ContainsAsync_
