@@ -309,6 +309,114 @@ outer join t_user_app A on A.user_id = U.user_id and A.app_type = 1 and A.enable
 <p>Similar rules is applied to static mapping and dynamic query.</p>
 <h3 id="tree-organized-repository-child-specifics">Tree organized repository child specifics</h3>
 <p>When master repository has hierarchy structure, than detail objects can be filtered by two methods to choose detail repository data: filter data linked with selected tree node only (<a class="xref" href="../api/XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_DirectLink">direct links</a>), and linked to subtree from selected node and below by hierarchy. XData has functional to choose one of this methods in runtime. To provide this ability mapping of master objects must describe <a href="../tutorial/mapping/mapping.html#master-detail-relations">external links</a> marked as <a class="xref" href="../api/XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_DirectLink">direct links</a>. Than master repository flag <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_ShowSubtree">ShowSubtree</a> can be used as a switch between this two methods.</p>
+<p>Let&#39;s explain that on example...</p>
+<p>Mapping master tree organized dataobject...</p>
+<pre><code class="lang-csharp">private static Expression&lt;CustomMapping&lt;Catalog&gt;&gt; _unused = (
+    () =&gt; XDataMapping.CustomMapping&lt;Catalog&gt;()
+        .DataTable(&quot;R&quot;, &quot;T_CATALOG&quot;)
+        .Map(x =&gt; new Catalog{
+            CatalogId = x.Field&lt;long&gt;(&quot;R&quot;, string.Empty, z =&gt; z.Key()),
+            Code = x.Field&lt;string&gt;(&quot;R&quot;, string.Empty),
+            Name = x.Field&lt;string&gt;(&quot;R&quot;, string.Empty),
+            ParentId = x.Field&lt;long?&gt;(&quot;R&quot;, string.Empty) }, 
+        // Direct link
+        x =&gt; x.ExternalLink&lt;Document&gt;(x =&gt; x.CatalogId, x =&gt; x.DirectLink()),
+        // Subquery link
+        x =&gt; x.ExternalLink&lt;Document&gt;(x =&gt; x.CatalogId, 
+            z =&gt; z.Filter(y =&gt; new FilterName(&quot;FilterByRoot&quot;))))
+        .SetBaseTable(&quot;R&quot;).SetFlags(DataStructureFlag.Tree)
+    );
+</code></pre><p>Master dataobject SQL...</p>
+<pre><code class="lang-sql">SELECT R.catalog_id AS R_catalog_id,
+  R.code AS R_code,
+  R.name AS R_name,
+  R.parent_id AS R_parent_id
+FROM T_CATALOG R
+</code></pre><p>Mapping detail dataobject...</p>
+<pre><code class="lang-csharp">private static Expression&lt;CustomMapping&lt;Document&gt;&gt; _unused = (
+    () =&gt; XDataMapping.CustomMapping&lt;Document&gt;()
+        .DataTable(&quot;D&quot;, &quot;T_DOC&quot;)
+        .DataTable(&quot;DC&quot;, &quot;T_DOC_CATALOG&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;),
+            x =&gt; x.SubqueryFilter(&quot;catalog_id&quot;, &quot;UT&quot;)
+                .SetOperation(FilterOperation.In))
+        .Subquery&lt;CatalogTree&gt;(&quot;UT&quot;, x =&gt; x.CatalogId, DataGrouping.None)
+        .Map(x =&gt; new Document{
+            DocId = x.Field&lt;long&gt;(&quot;D&quot;, string.Empty, z =&gt; z.Key()),
+            DocDate = x.Field&lt;DateTime&gt;(&quot;D&quot;, string.Empty),
+            CatalogId = x.Field&lt;long&gt;(&quot;DC&quot;, string.Empty) })
+        .SetBaseTable(&quot;D&quot;)
+    );
+...
+private static Expression&lt;CustomMapping&lt;CatalogTree&gt;&gt; _unused = (
+    () =&gt; XDataMapping.CustomMapping&lt;CatalogTree&gt;()
+        .With(&quot;CAT&quot;, XDataMapping.GetStructure(&quot;R&quot;, null, 
+            DataStructureFlag.ReadOnly)
+                .DataTable(&quot;T_CATALOG&quot;, &quot;R&quot;,  
+                    x =&gt; x.ConstFilter(&quot;FilterByRoot&quot;, &quot;parent_id&quot;,
+                            FilterConstantType.Const, null, 
+                            FilterNullable.NullsCompared))
+                .Select(x =&gt; new {
+                    CatalogId = x.Field&lt;long&gt;(&quot;R&quot;, string.Empty, z =&gt; z.Key()),
+                    ParentId = x.Field&lt;long?&gt;(&quot;R&quot;, string.Empty),
+                }), x =&gt; x.Properties(z =&gt; z.CatalogId, z =&gt; z.ParentId),
+                x =&gt; x.WithRecursive(&quot;S&quot;, XDataMapping.GetStructure(&quot;S&quot;, null, 
+                        DataStructureFlag.ReadOnly)
+                    .DataTable(&quot;T_CATALOG&quot;, &quot;S&quot;)
+                    .Select(y =&gt; new {
+                        CatalogId = y.Field&lt;long&gt;(&quot;S&quot;, string.Empty, z =&gt; z.Key()),
+                        ParentId = y.Field&lt;long?&gt;(&quot;S&quot;, string.Empty)
+                    }), 
+                    z =&gt; z.SubqueryLink(y =&gt; y.ParentId, y =&gt; y.CatalogId)))
+        .ReadOnlyProperty(x =&gt; x.CatalogId, 
+            x =&gt; x.Field&lt;long&gt;(&quot;CAT&quot;, string.Empty, z =&gt; z.Key()))
+        .ReadOnlyProperty(x =&gt; x.ParentId, 
+            x =&gt; x.Field&lt;long?&gt;(&quot;CAT&quot;, string.Empty))
+        .Map(x =&gt; new CatalogTree()).SetFlags(DataStructureFlag.ReadOnly)
+    );
+</code></pre><p>Link and using dataobjects with <em>ShowSubtree</em> off...</p>
+<pre><code class="lang-csharp">dataScope.GetReposytory&lt;Catalog&gt;()
+    .Do(x =&gt; x.Instance.GetChild&lt;Document&gt;())
+    .ToArray();
+</code></pre><p>Detail dataobject SQL...</p>
+<pre><code class="lang-sql">with recursive T (catalog_id, code, name, parent_id) 
+  as ((SELECT R.catalog_id AS R_catalog_id,
+        R.parent_id AS R_parent_id
+    FROM T_CATALOG R
+    WHERE R.catalog_id = @FilterByRoot) 
+    UNION ALL (SELECT S.catalog_id AS S_catalog_id,
+        S.parent_id AS S_parent_id
+    FROM T_CATALOG S, T T
+    WHERE S.parent_id = (T.catalog_id)))
+SELECT D.doc_date AS D_doc_date /* DocDate */,
+  D.doc_id AS D_doc_id /* DocId */,
+  DC.catalog_id AS DC_catalog_id /* CatalogId */
+FROM T_DOC D
+  JOIN T_DOC_CATALOGUE DC ON DC.doc_id = D.doc_id
+WHERE DC.catalog_id in (SELECT T.catalog_id AS T_catalog_id FROM T T)
+  and DC.catalog_id = @FilterByCatalogId
+</code></pre><p>Direct link is filled and deteil dataobject data is restricted by single catalogue_id from master dataobject.</p>
+<p>Link and using dataobjects with <em>ShowSubtree</em> on...</p>
+<pre><code class="lang-csharp">dataScope.GetReposytory&lt;Catalog&gt;()
+    .Do(x =&gt; x.Instance.GetChild&lt;Document&gt;(),
+        x =&gt; x.Instance.ShowSubtree = true)
+    .ToArray();
+</code></pre><p>Detail dataobject SQL...</p>
+<pre><code class="lang-sql">with recursive T (catalog_id, code, name, parent_id) 
+  as ((SELECT R.catalog_id AS R_catalog_id,
+        R.parent_id AS R_parent_id
+    FROM T_CATALOG R
+    WHERE R.catalog_id = @FilterByRoot) 
+    UNION ALL (SELECT S.catalog_id AS S_catalog_id,
+        S.parent_id AS S_parent_id
+    FROM T_CATALOG S, T T
+    WHERE S.parent_id = (T.catalog_id)))
+SELECT D.doc_date AS D_doc_date /* DocDate */,
+  D.doc_id AS D_doc_id /* DocId */,
+  DC.catalog_id AS DC_catalog_id /* CatalogId */
+FROM T_DOC D
+  JOIN T_DOC_CATALOGUE DC ON DC.doc_id = D.doc_id
+WHERE DC.catalog_id in (SELECT T.catalog_id AS T_catalog_id FROM T T)
+</code></pre><p>Direct link not filled and data not restricted by single catalogue_id from master dataobject. Resulted detail data will match master dataobject current record subtree.</p>
 <h3 id="reuse-mapping-in-dynamic-query">Reuse mapping in dynamic query</h3>
 <p>Already declared mappings can be reused in <a href="../tutorial/query.html">dynamic query</a> construction with generic <a class="xref" href="../api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure__1_System_String_">GetStructure</a> method overload.</p>
 <p>See the example below to understand how it works:</p>

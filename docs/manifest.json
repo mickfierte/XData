@@ -4008,7 +4008,7 @@
       "output": {
         ".html": {
           "relative_path": "tips/tips.html",
-          "hash": "g547nLE9pF+Rr5FRa8qlkg=="
+          "hash": "LEEAnyFh99Qus9IP4ayKwA=="
         }
       },
       "is_incremental": false,
@@ -4044,7 +4044,7 @@
       "output": {
         ".html": {
           "relative_path": "tips/tree_childs.html",
-          "hash": "g3d/riwIJkEcSJlrtan0UQ=="
+          "hash": "RMgper/+Ds+avMvnYKbtjw=="
         }
       },
       "is_incremental": false,
@@ -5491,21 +5491,12 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "skipped_file_count": 0
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -5513,17 +5504,24 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 301,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 136,
-          "skipped_file_count": 0
+          "skipped_file_count": 132
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 301,
+          "skipped_file_count": 301
         }
       }
     },
