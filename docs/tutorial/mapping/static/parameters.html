@@ -83,12 +83,7 @@
 <p>Example:</p>
 <pre><code class="lang-csharp">[DataObject(&quot;D&quot; /* base table alias */, 
     Context: &quot;Main&quot;, Flags: DataObjectFlags.ReadOnly)]
-</code></pre><p>All tables in <a href="../../glossary.html#repository">repository</a> query must to be specified using <a class="xref" href="../../../api/XData.Mapping.DataTableAttribute.html">DataTableAttribute</a>. Parameters of <em>DataTableAttribute</em>: <em>Name</em> - name of table and <em>Alias</em> - table alias in query. Tables in <a href="../../glossary.html#updatable-tables-hierarchy">updatable tables hierarchy</a>, but not <a href="../../glossary.html#base-table">base table</a> must to specify <em>Parent</em> parameter of this attribute - alias of parent table in updatable tables hierarchy.</p>
-<pre><code class="lang-csharp">[DataTable(&quot;P&quot; /* table alias */, 
-    &quot;patient&quot; /* table name */, 
-    &quot;D&quot; /* parent table alias */)]
-</code></pre><p>Same way we can define mapping to view, but all fields of view must to be explicitly defined as <a href="../mapping.html#readonly-properties">readonly properties</a> or <a href="../mapping.html#hidden-properties">columns</a>.</p>
-</article>
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

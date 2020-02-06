@@ -120,15 +120,6 @@ Example:</p>
 .SetBaseTable(&quot;D&quot;).SetLogicAssembly(&quot;XDataObjectTest&quot;)
 ... 
 </code></pre><p>More detailed repository properties map description <a href="dynamic.html#properties">see below</a>.</p>
-<p>All tables of <a href="../../glossary.html#data-object">data object</a> mapping decribed by IRepositoryStructure&lt;T&gt;.<a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a> method. Tables included into <a href="../../glossary.html#updatable-tables-hierarchy">updatable tables hierarchy</a> excluding <a href="../../glossary.html#base-table">base table</a> must be defined using special <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">overload</a> alowes to set parent table alias.</p>
-<pre><code class="lang-csharp">...
-.DataTable(&quot;T_DOC&quot;, &quot;D&quot;, 
-    x =&gt; x.DictFilter(&quot;T_DOC_TYPE&quot;, &quot;doc_type_id&quot;, &quot;code&quot;, &quot;INVOICE&quot;))
-.DataTable(&quot;T_DOC_DOC_STATE&quot;, &quot;DS&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;))
-...
-</code></pre><p>Same way is possible to define mapping to <em>view</em>, but all properties must to mapped as <a href="../mapping.html#readonly-properties">read only properties</a> or <a href="../mapping.html#hidden-properties">hidden fields</a>.</p>
-<div class="IMPORTANT"><h5>Important</h5><p>Filters and links between tables is defined using <em>filters</em> parameter of IRepositoryStructure&lt;T&gt;.<a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a> method or it&#39;s <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">overload</a>. Detailed filter definition described <a href="dynamic.html#filters">below</a>.</p>
-</div>
 </article>
           </div>
           

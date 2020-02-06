@@ -46,6 +46,9 @@ references:
 - uid: mapping_dynamic.md
   name: Dynamic mapping
   href: tutorial/mapping/dynamic/dynamic.html
+- uid: mapping_dynamic_datatable.md
+  name: Tables
+  href: tutorial/mapping/dynamic/datatable.html
 - uid: mapping_dynamic_external_link.md
   name: External link
   href: tutorial/mapping/dynamic/external_link.html
@@ -172,6 +175,9 @@ references:
 - uid: mapping_static.md
   name: Static mapping
   href: tutorial/mapping/static/static.html
+- uid: mapping_static_datatable.md
+  name: Tables
+  href: tutorial/mapping/static/datatable.html
 - uid: mapping_static_external_link.md
   name: External link
   href: tutorial/mapping/static/external_link.html

@@ -530,7 +530,8 @@ WHERE D.DOC_TYPE_ID = (select doc_type_id
 <p>Example:</p>
 <pre><code class="lang-csharp">[DataObject(&quot;D&quot; /* base table alias */, 
     Context: &quot;Main&quot;, Flags: DataObjectFlags.ReadOnly)]
-</code></pre><p>All tables in <a href="../../glossary.html#repository">repository</a> query must to be specified using <a class="xref" href="../../../api/XData.Mapping.DataTableAttribute.html">DataTableAttribute</a>. Parameters of <em>DataTableAttribute</em>: <em>Name</em> - name of table and <em>Alias</em> - table alias in query. Tables in <a href="../../glossary.html#updatable-tables-hierarchy">updatable tables hierarchy</a>, but not <a href="../../glossary.html#base-table">base table</a> must to specify <em>Parent</em> parameter of this attribute - alias of parent table in updatable tables hierarchy.</p>
+</code></pre><h2 id="tables">Tables</h2>
+<p>All tables in <a href="../../glossary.html#repository">repository</a> query must to be specified using <a class="xref" href="../../../api/XData.Mapping.DataTableAttribute.html">DataTableAttribute</a>. Parameters of <em>DataTableAttribute</em>: <em>Name</em> - name of table and <em>Alias</em> - table alias in query. Tables in <a href="../../glossary.html#updatable-tables-hierarchy">updatable tables hierarchy</a>, but not <a href="../../glossary.html#base-table">base table</a> must to specify <em>Parent</em> parameter of this attribute - alias of parent table in updatable tables hierarchy.</p>
 <pre><code class="lang-csharp">[DataTable(&quot;P&quot; /* table alias */, 
     &quot;patient&quot; /* table name */, 
     &quot;D&quot; /* parent table alias */)]
