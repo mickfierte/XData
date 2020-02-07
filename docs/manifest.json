@@ -3728,23 +3728,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "quick_start/asp_net_core/column.md",
+      "source_relative_path": "quick_start/asp_net_core/first_mapping.md",
       "output": {
         ".html": {
-          "relative_path": "quick_start/asp_net_core/column.html",
-          "hash": "6ATQeoACFCbjXzqrkmE5Ew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "quick_start/asp_net_core/fist_mapping.md",
-      "output": {
-        ".html": {
-          "relative_path": "quick_start/asp_net_core/fist_mapping.html",
-          "hash": "12HEE9x0mbn+x5ddhQT5nQ=="
+          "relative_path": "quick_start/asp_net_core/first_mapping.html",
+          "hash": "w41HFK+Yt1ofMcf6/xvbpw=="
         }
       },
       "is_incremental": false,
@@ -3764,35 +3752,35 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "quick_start/asp_net_core/link_property.md",
-      "output": {
-        ".html": {
-          "relative_path": "quick_start/asp_net_core/link_property.html",
-          "hash": "3lIuO1uD9kYN720nQhlhIg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "quick_start/asp_net_core/lob_xml.md",
-      "output": {
-        ".html": {
-          "relative_path": "quick_start/asp_net_core/lob_xml.html",
-          "hash": "hmW6cK+j1fVDCSOeWbdgYw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "quick_start/asp_net_core/mapping_multiple.md",
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/mapping_multiple.html",
-          "hash": "7GAfFpZ8kPtTLO+IpvkvWw=="
+          "hash": "AdsJYujBn9tAkgcuKhyiHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "quick_start/asp_net_core/mapping_three.md",
+      "output": {
+        ".html": {
+          "relative_path": "quick_start/asp_net_core/mapping_three.html",
+          "hash": "gbtbtZF6EDnWUCNiTuXJBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "quick_start/asp_net_core/mapping_two.md",
+      "output": {
+        ".html": {
+          "relative_path": "quick_start/asp_net_core/mapping_two.html",
+          "hash": "cvysY0O0N5d+1laJSKTjvg=="
         }
       },
       "is_incremental": false,
@@ -3805,18 +3793,6 @@
         ".html": {
           "relative_path": "quick_start/asp_net_core/register.html",
           "hash": "p3WRg/cm7208RWdR3LzAIQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "quick_start/asp_net_core/sql_expression.md",
-      "output": {
-        ".html": {
-          "relative_path": "quick_start/asp_net_core/sql_expression.html",
-          "hash": "Y/m0m7GNwYoLJSqahWrBlQ=="
         }
       },
       "is_incremental": false,
@@ -3840,7 +3816,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/web_api_controller.html",
-          "hash": "R9/fLa2LRi0iYMzManVPNw=="
+          "hash": "cFoLugiLvzPKZ8gAnxSJvQ=="
         }
       },
       "is_incremental": false,
@@ -3864,7 +3840,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/toc.html",
-          "hash": "t3zkWqehLbtFGeFVg6ccag=="
+          "hash": "EaiiXiuTJ6qX/GoZDTADLA=="
         }
       },
       "is_incremental": false,
@@ -4416,7 +4392,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/db_diagram.html",
-          "hash": "xKZm1FeqtX/SzE4O5INYVA=="
+          "hash": "L7RM2MbYdXcFUxFK4WUa+Q=="
         }
       },
       "is_incremental": false,
@@ -4443,7 +4419,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/dynamic.html",
-          "hash": "5WzefLtEoilo/IfxBNe04g=="
+          "hash": "t1O6cinuPYfkZYl3kiWWIg=="
         }
       },
       "is_incremental": false,
@@ -4887,7 +4863,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/sample.html",
-          "hash": "Kl1+rFGg9xFlAtGApQGVUw=="
+          "hash": "FCC4/kqX5F3PxcyLpRY4JQ=="
         }
       },
       "is_incremental": false,
@@ -5454,7 +5430,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/sample.html",
-          "hash": "WDkNbZ5B/yfVtsd1ZgJr1g=="
+          "hash": "HHoxB2TlGjAn+/i2hF2B9w=="
         }
       },
       "is_incremental": false,
@@ -5469,7 +5445,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/static.html",
-          "hash": "I/uSmpX2xQUWL54ZxWmmpA=="
+          "hash": "SN7ZSmXN/DAbW3jSk194Eg=="
         }
       },
       "is_incremental": false,
@@ -5667,6 +5643,13 @@
         "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -5683,14 +5666,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 149,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 147,
           "skipped_file_count": 0
         }
       }
