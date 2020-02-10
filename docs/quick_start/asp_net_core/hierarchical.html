@@ -79,7 +79,317 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="hierarchical-object">Hierarchical object</h2>
 
-<p>Not ready yet...</p>
+<p>1) Now let&#39;s build a hierarchically constructed object. To do this, we’ll complete the database again ...</p>
+<div class="lang-plantUml" \=""> <?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="222px" preserveaspectratio="none" style="width:247px;height:222px;" version="1.1" viewbox="0 0 247 222" width="247px" zoomandpan="magnify"><defs><filter height="300%" id="f1d4p2t4hz5hwg" width="300%" x="-1" y="-1"><fegaussianblur result="blurOut" stddeviation="2.0"></fegaussianblur><fecolormatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"></fecolormatrix><feoffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"></feoffset><feblend in="SourceGraphic" in2="blurOut3" mode="normal"></feblend></filter></defs><g><!--MD5=[5ea577eca533bfca935d04f775d3f167]
+class t_doc--><rect fill="#FFFFFF" filter="url(#f1d4p2t4hz5hwg)" height="39.9688" id="t_doc" style="stroke: #000000; stroke-width: 1.0;" width="40" x="169.5" y="8"></rect><rect fill="#D3D3D3" height="23.9688" style="stroke: #000000; stroke-width: 1.0;" width="40" x="169.5" y="8"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthadjust="spacingAndGlyphs" textlength="34" x="172.5" y="24.1387">t_doc</text><line style="stroke: #000000; stroke-width: 1.0;" x1="170.5" x2="208.5" y1="31.9688" y2="31.9688"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="170.5" x2="208.5" y1="39.9688" y2="39.9688"></line><!--MD5=[8e96e01ed3abbee593418fa4b48090e7]
+class t_good--><rect fill="#FFFFFF" filter="url(#f1d4p2t4hz5hwg)" height="91.1875" id="t_good" style="stroke: #000000; stroke-width: 1.0;" width="69.3333" x="6" y="120"></rect><rect fill="#D3D3D3" height="23.9688" style="stroke: #000000; stroke-width: 1.0;" width="69.3333" x="6" y="120"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthadjust="spacingAndGlyphs" textlength="43" x="19.1667" y="136.1387">t_good</text><line style="stroke: #000000; stroke-width: 1.5;" x1="7" x2="74.3333" y1="143.9688" y2="143.9688"></line><path d="M18.0417,150.6901 C16.7767,150.6901 15.75,151.7168 15.75,152.9818 C15.75,153.1284 15.7802,153.254 15.8078,153.3833 L13,156.191 L13,158.0244 L15.75,158.0244 L15.75,156.191 L17.5833,156.191 L17.5833,155.2744 L17.6411,155.2166 C17.7694,155.2441 17.895,155.2744 18.0426,155.2744 C19.3076,155.2744 20.3342,154.2477 20.3342,152.9827 C20.3342,151.7177 19.3076,150.691 18.0426,150.691 M18.5009,151.6077 C19.0051,151.6077 19.4176,152.0202 19.4176,152.5244 C19.4176,153.0285 19.0051,153.441 18.5009,153.441 C17.9968,153.441 17.5843,153.0285 17.5843,152.5244 C17.5843,152.0202 17.9968,151.6077 18.5009,151.6077 " fill="#000000" style="stroke: ; stroke-width: 0.0; stroke-dasharray: ;"></path><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacingAndGlyphs" textlength="44" x="25.3333" y="158.1792">good_id</text><line style="stroke: #000000; stroke-width: 1.0;" x1="7" x2="74.3333" y1="164.7734" y2="164.7734"></line><path d="M17.5833,172.4115 L14.8333,177.9115 L15.75,177.9115 L18.5,172.4115 L17.5833,172.4115 M13.9167,173.3281 L13,175.1615 L13.9167,176.9948 L14.8333,176.9948 L13.9167,175.1615 L14.8333,173.3281 L13.9167,173.3281 M18.5,173.3281 L19.4167,175.1615 L18.5,176.9948 L19.4167,176.9948 L20.3333,175.1615 L19.4167,173.3281 L18.5,173.3281 " fill="#000000" style="stroke: ; stroke-width: 0.0; stroke-dasharray: ;"></path><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacingAndGlyphs" textlength="27" x="25.3333" y="178.9839">code</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacingAndGlyphs" textlength="32" x="12" y="191.7886">name</text><path d="M15.75,197.1042 L15.75,198.0208 L15.0625,198.0208 C14.4337,198.0208 13.9167,198.5378 13.9167,199.1667 L13.9167,199.625 C13.9167,200.2465 14.3173,200.7635 14.9195,200.9138 L17.2689,201.5152 C17.4,201.5482 17.5843,201.7865 17.5843,201.9167 L17.5843,202.375 C17.5843,202.4978 17.4779,202.6042 17.3551,202.6042 L15.0634,202.6042 C14.9571,202.6042 14.8691,202.5703 14.8342,202.5464 L14.8342,201.6866 L13.9176,201.6866 L13.9176,202.6033 C13.9176,202.9168 14.1037,203.178 14.3191,203.3192 C14.5336,203.4613 14.7939,203.5199 15.0643,203.5199 L15.7518,203.5199 L15.7518,204.4366 L16.6685,204.4366 L16.6685,203.5199 L17.356,203.5199 C17.9848,203.5199 18.5018,203.0029 18.5018,202.3741 L18.5018,201.9158 C18.5018,201.2943 18.1013,200.7773 17.499,200.6269 L15.1496,200.0256 C15.0185,199.9926 14.8342,199.7543 14.8342,199.6241 L14.8342,199.1658 C14.8342,199.0429 14.9406,198.9366 15.0634,198.9366 L17.3551,198.9366 C17.4614,198.9366 17.5494,198.9705 17.5843,198.9943 L17.5843,199.8542 L18.5009,199.8542 L18.5009,198.9375 C18.5009,198.624 18.3148,198.3628 18.0994,198.2216 C17.8849,198.0795 17.6246,198.0208 17.3542,198.0208 L16.6667,198.0208 L16.6667,197.1042 L15.75,197.1042 " fill="#000000" style="stroke: ; stroke-width: 0.0; stroke-dasharray: ;"></path><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacingAndGlyphs" textlength="28" x="25.3333" y="204.5933">price</text><!--MD5=[4ed4cd12cd2eeb59e644791b1ec40217]
+class t_doc_spec--><rect fill="#FFFFFF" filter="url(#f1d4p2t4hz5hwg)" height="91.1875" id="t_doc_spec" style="stroke: #000000; stroke-width: 1.0;" width="94.3333" x="142.5" y="120"></rect><rect fill="#D3D3D3" height="23.9688" style="stroke: #000000; stroke-width: 1.0;" width="94.3333" x="142.5" y="120"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthadjust="spacingAndGlyphs" textlength="70" x="154.6667" y="136.1387">t_doc_spec</text><line style="stroke: #000000; stroke-width: 1.5;" x1="143.5" x2="235.8333" y1="143.9688" y2="143.9688"></line><path d="M154.5417,150.6901 C153.2767,150.6901 152.25,151.7168 152.25,152.9818 C152.25,153.1284 152.2803,153.254 152.3078,153.3833 L149.5,156.191 L149.5,158.0244 L152.25,158.0244 L152.25,156.191 L154.0833,156.191 L154.0833,155.2744 L154.1411,155.2166 C154.2694,155.2441 154.395,155.2744 154.5426,155.2744 C155.8076,155.2744 156.8343,154.2477 156.8343,152.9827 C156.8343,151.7177 155.8076,150.691 154.5426,150.691 M155.0009,151.6077 C155.5051,151.6077 155.9176,152.0202 155.9176,152.5244 C155.9176,153.0285 155.5051,153.441 155.0009,153.441 C154.4968,153.441 154.0843,153.0285 154.0843,152.5244 C154.0843,152.0202 154.4968,151.6077 155.0009,151.6077 " fill="#000000" style="stroke: ; stroke-width: 0.0; stroke-dasharray: ;"></path><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacingAndGlyphs" textlength="69" x="161.8333" y="158.1792">doc_spec_id</text><line style="stroke: #000000; stroke-width: 1.0;" x1="143.5" x2="235.8333" y1="164.7734" y2="164.7734"></line><path d="M153.1667,171.4948 C151.1408,171.4948 149.5,173.1356 149.5,175.1615 C149.5,177.1873 151.1408,178.8281 153.1667,178.8281 C155.1925,178.8281 156.8333,177.1873 156.8333,175.1615 C156.8333,173.1356 155.1925,171.4948 153.1667,171.4948 M153.1667,172.4115 L155.9167,175.1615 L153.1667,177.9115 L153.1667,176.0781 L150.4167,176.0781 L150.4167,174.2448 L153.1667,174.2448 L153.1667,172.4115 " fill="#000000" style="stroke: ; stroke-width: 0.0; stroke-dasharray: ;"></path><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacingAndGlyphs" textlength="36" x="161.8333" y="178.9839">doc_id</text><path d="M153.1667,184.2995 C151.1408,184.2995 149.5,185.9403 149.5,187.9661 C149.5,189.992 151.1408,191.6328 153.1667,191.6328 C155.1925,191.6328 156.8333,189.992 156.8333,187.9661 C156.8333,185.9403 155.1925,184.2995 153.1667,184.2995 M153.1667,185.2161 L155.9167,187.9661 L153.1667,190.7161 L153.1667,188.8828 L150.4167,188.8828 L150.4167,187.0495 L153.1667,187.0495 L153.1667,185.2161 " fill="#000000" style="stroke: ; stroke-width: 0.0; stroke-dasharray: ;"></path><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacingAndGlyphs" textlength="44" x="161.8333" y="191.7886">good_id</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthadjust="spacingAndGlyphs" textlength="45" x="148.5" y="204.5933">quantity</text><!--MD5=[cef6fc7600387b202b7e697154b0ecaf]
+link t_doc to t_doc_spec--><path d="M189.5,48.126 C189.5,64.629 189.5,89.267 189.5,111.6298 " fill="none" id="t_doc-&gt;t_doc_spec" style="stroke: #000000; stroke-width: 1.0;"></path><line style="stroke: #000000; stroke-width: 1.0;" x1="189.5" x2="197.5" y1="111.7464" y2="119.7464"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="189.5" x2="181.5" y1="111.7464" y2="119.7464"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="189.5" x2="189.5" y1="111.7464" y2="119.7464"></line><text fill="#000000" font-family="sans-serif" font-size="8" lengthadjust="spacingAndGlyphs" textlength="25" x="190.5" y="86.4258">doc_id</text><!--MD5=[eeb11361b0a0b0ef64915b36dd69fe72]
+link t_good to t_doc_spec--><path d="M75.0581,165.5 C92.6633,165.5 114.493,165.5 134.352,165.5 " fill="none" id="t_good-&gt;t_doc_spec" style="stroke: #000000; stroke-width: 1.0;"></path><line style="stroke: #000000; stroke-width: 1.0;" x1="134.432" x2="142.432" y1="165.5" y2="157.5"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="134.432" x2="142.432" y1="165.5" y2="173.5"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="134.432" x2="142.432" y1="165.5" y2="165.5"></line><text fill="#000000" font-family="sans-serif" font-size="8" lengthadjust="spacingAndGlyphs" textlength="31" x="93.25" y="158.9258">good_id</text><!--MD5=[584a83cddb0c79aa9fa934276afbf8b0]
+@startuml
+
+
+hide circle
+skinparam ClassHeaderBackgroundColor lightgray
+skinparam ClassBorderColor black
+skinparam ClassBorderThickness 1
+skinparam ClassBackgroundColor transparrent
+skinparam ArrowFontSize 8
+skinparam ArrowColor black
+
+entity t_doc
+{
+}
+
+entity t_good
+{
+   <&key> good_id
+   - -
+   <&code> code
+   name
+   <&dollar> price
+}
+
+entity t_doc_spec
+{
+   <&key> doc_spec_id
+   - -
+   <&arrow-circle-right> doc_id
+   <&arrow-circle-right> good_id
+   quantity
+}
+t_doc -down-{ t_doc_spec : doc_id
+t_good -right-{ t_doc_spec : good_id
+@enduml
+
+PlantUML version 1.2020.01beta15(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg> </div><p>2) <em>Goods</em> dictationary and specification of a document itself contain mostly familiar to us elements...</p>
+<pre><code class="lang-csharp">public partial class Good
+{
+    public long GoodId =&gt; this.GetProperty(x =&gt; x.GoodId);
+    public string Code { get; set; }
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+}
+</code></pre><pre><code class="lang-csharp">public partial class Good : IDataObject
+{
+    private static Expression&lt;CustomMapping&lt;Good&gt;&gt; _ =
+        () =&gt; XDataMapping.CustomMapping&lt;Good&gt;()
+            .DataTable(&quot;T_GOOD&quot;, &quot;G&quot;)
+            .ReadOnlyProperty(x =&gt; x.GoodId, 
+                x =&gt; x.Field&lt;long&gt;(&quot;G&quot;, string.Empty, z =&gt; z.Key(), 
+                    z =&gt; z.Default(DefaultType.AutoIncrement)))
+            .Map(x =&gt; new Good {
+                Code = x.Field&lt;string&gt;(&quot;G&quot;, string.Empty),
+                Name = x.Field&lt;string&gt;(&quot;G&quot;, string.Empty),
+                Price = x.Field&lt;decimal&gt;(&quot;G&quot;, string.Empty)
+            }).SetBaseTable(&quot;G&quot;);
+}
+</code></pre><pre><code class="lang-csharp">public partial class DocSpec
+{
+    public long DocSpecId =&gt; this.GetProperty(x =&gt; x.DocSpecId);
+    public long DocId =&gt; this.GetProperty(x =&gt; x.DocId);
+    public string GoodCode =&gt; this.GetProperty(x =&gt; x.GoodCode);
+    public Link&lt;string, Good&gt; Good { get; set; }
+    public decimal Price =&gt; this.GetProperty(x =&gt; x.Price);
+    public decimal Quantity { get; set; }
+    public decimal Amount =&gt; this.GetProperty(x =&gt; x.Amount);
+    public bool Deleted { get; set; }
+}
+</code></pre><pre><code class="lang-csharp">public partial class DocSpec : IDataObject
+{
+    private static Expression&lt;CustomMapping&lt;DocSpec&gt;&gt; _ =
+        () =&gt; XDataMapping.CustomMapping&lt;DocSpec&gt;()
+            .DataTable(&quot;T_DOC_SPEC&quot;, &quot;S&quot;)
+            .DataTable(&quot;T_GOOD&quot;, &quot;G&quot;, 
+                x =&gt; x.Link(&quot;S&quot;, &quot;good_id&quot;))
+            .ReadOnlyProperty(x =&gt; x.DocSpecId, 
+                x =&gt; x.Field&lt;long&gt;(&quot;S&quot;, string.Empty, z =&gt; z.Key(), 
+                    z =&gt; z.Default(DefaultType.AutoIncrement)))
+            .ReadOnlyProperty(x =&gt; x.DocId, 
+                x =&gt; x.Field&lt;long&gt;(&quot;S&quot;, string.Empty))
+            .ReadOnlyProperty(x =&gt; x.GoodCode, 
+                x =&gt; x.Field&lt;string&gt;(&quot;G&quot;, &quot;code&quot;))
+            .ReadOnlyProperty(x =&gt; x.Price, 
+                x =&gt; x.Field&lt;decimal&gt;(&quot;G&quot;, string.Empty))
+            .ReadOnlyProperty(x =&gt; x.Amount, 
+                x =&gt; x.Expr&lt;decimal&gt;(&quot;amount&quot;, 
+                    z =&gt; z.Field&lt;decimal&gt;(&quot;G&quot;, &quot;price&quot;) * 
+                        z.Field&lt;decimal&gt;(&quot;S&quot;, &quot;quantity&quot;), 
+                    DbType.Decimal, z =&gt; z.Size(17, 2)))
+            .Column(&quot;GoodId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;G&quot;, string.Empty))
+            .Map(x =&gt; new DocSpec {
+                Quantity = x.Field&lt;decimal&gt;(&quot;S&quot;, string.Empty),
+                Good = x.Link&lt;string, Good&gt;(&quot;S&quot;, &quot;name&quot;,
+                    z =&gt; z.LinkProperty&lt;Good&gt;(y =&gt; y.Name),
+                    z =&gt; z.LinkProperty&lt;Good&gt;((Invoice y) =&gt; y.GoodId),
+                    z =&gt; z.LinkProperty&lt;Good&gt;(y =&gt; y.Code, y =&gt; y.GoodCode))
+            }).SetBaseTable(&quot;S&quot;);
+}
+</code></pre><p>3) What is new to us here is only the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr</a> method, which allows us to use SQL expressions in mapping. In this case, we calculated the position amount by multiplying the quantity by the goods price. The first parameter is the name of the expression field, the second describes the expression itself, the third is the type of expression (DbType.Decimal), <a class="xref" href="../../api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_Size_System_Int32_System_Int32_">Size</a> is used as a modifier, which allows us to specify the size and accuracy of the expression. See <a href="../../tutorial/mapping/dynamic/dynamic.html#sql-expression-property">documentation topic</a> for more details</p>
+<p>4) And also note that in the <em>DocSpec</em> object there is a boolean flag <em>Deleted</em> not reflected on the database. But we&#39;ll talk about it a little later...</p>
+<p>5) Create a <em>GoodController</em> controller (in Controllers\API folder)...</p>
+<pre><code class="lang-csharp">using XData;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using &lt;..Youre namespace..&gt;.Models;
+
+namespace &lt;..Youre namespace..&gt;.Controllers.API
+{
+    public class GoodController : DataObjectController&lt;Good&gt;
+    {
+        public DocStateController(IDataEngine dataEngine) : base(dataEngine) { }
+
+        [HttpGet]
+        public async Task&lt;ActionResult&lt;Good&gt;&gt; Get(long id)
+        {
+            try
+            {
+                using (var dataScope = _dataEngine.NewDataScope())
+                {
+                    return await dataScope.GetRepository&lt;Good&gt;()
+                        .SingleOrDefaultAsync(x =&gt; x.GoodId == id);
+                }
+            }
+            catch (Exception e)
+            {
+                e.FillModelState(ModelState);
+                throw;
+            }
+        }
+    }
+}
+</code></pre><p>6) And here, instead of the sequence of actions we already know, we modify the object from the previous part (Advanced mapping) of the lesson in order to learn how to work with hierarchical objects. First, we will show the changes in the code and then in detail we will analyze all the new techniques for us that will be used here...</p>
+<pre><code class="lang-csharp">public partial class Invoice
+{
+    public long DocId =&gt; this.GetProperty(x =&gt; x.DocId);
+    public string DocStateCode =&gt; this.GetProperty(x =&gt; x.DocStateCode);
+    public Link&lt;string, DocState&gt; DocState { get; set; }
+    public long DocCatalogId { get; set; }
+    public string Numb { get; set; }
+    public DateTime? DocDate { get; set; }
+    public Guid Generation =&gt; this.GetProperty(x =&gt; x.Generation);
+    public DateTime Changed =&gt; this.GetProperty(x =&gt; x.Changed);
+    public Lob Scan { get; set; }
+    public Xml Source { get; set; }
+    public DeliveryTypeEnum DeliveryType { get; set; }
+    public DateTime DeliveryDate { get; set; }
+    // Add an array for the entries of the child repository
+    public DocSpec[] Specification { get; set; }
+    // And the calculated amount for the document as a whole
+    public decimal DocAmount =&gt; this.GetProperty(x =&gt; x.DocAmount);
+}
+</code></pre><pre><code class="lang-csharp">public partial class Invoice: IDataObject
+{
+    private static Expression&lt;CustomMapping&lt;Invoice&gt;&gt; _ = (
+        () =&gt; XDataMapping.CustomMapping&lt;Invoice&gt;()
+            .DataTable(&quot;T_DOC&quot;, &quot;D&quot;, 
+                x =&gt; x.DictFilter(&quot;T_DOC_TYPE&quot;, &quot;doc_type_id&quot;, &quot;code&quot;, &quot;INVOICE&quot;))
+            .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_state_id&quot;))
+            .DataTable(&quot;T_DOC_CATALOG&quot;, &quot;DC&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;))
+            .DataTable(&quot;T_DOC_SCAN&quot;, &quot;SC&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;)
+                .SetOperation(FilterOperation.OuterJoin))
+            .DataTable(&quot;T_DOC_SOURCE&quot;, &quot;SR&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;)
+                .SetOperation(FilterOperation.OuterJoin))
+            .DataTable(&quot;T_DOC_DELIVERY&quot;, &quot;DD&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;))
+            .ReadOnlyProperty(x =&gt; x.DocId, x =&gt; x.Field&lt;long&gt;(&quot;D&quot;, string.Empty, 
+                z =&gt; z.Key(), 
+                z =&gt; z.Default(DefaultType.AutoIncrement)))
+            .Column(&quot;DocStateId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;S&quot;, string.Empty))
+            .ReadOnlyProperty(x =&gt; x.DocStateCode, x =&gt; x.Field&lt;string&gt;(&quot;S&quot;, &quot;code&quot;))
+            .ReadOnlyProperty(x =&gt; x.Generation, x =&gt; x.Field&lt;Guid&gt;(&quot;D&quot;, string.Empty, 
+                z =&gt; z.ConcurrencyToken(), z =&gt; z.Default(DefaultType.NewGuid)))
+            .ReadOnlyProperty(x =&gt; x.Changed, x =&gt; x.Field&lt;DateTime&gt;(&quot;D&quot;, string.Empty, 
+                z =&gt; z.Default(DefaultType.CurrentDateTime, DefaultFeature.UseOnUpdate)))
+            // Describe the subquery for calculating the amount of the document
+            .Subquery(&quot;A&quot;, typeof(DocSpecAmount), &quot;Amount&quot;, DataGrouping.Sum, 
+                x =&gt; x.SubqueryLink(x =&gt; x.DocId))
+            //And mapping properties for the amount of the document
+            .ReadOnlyProperty(x =&gt; x.DocAmount, 
+                x =&gt; x.Expr&lt;decimal?&gt;(null, DataExpressionType.SubQuery, 
+                    &quot;A&quot;, DbType.Decimal, z =&gt; z.Size(17, 5)))
+            .Map(x =&gt; new Invoice {
+                DocCatalogId =&gt; x.Field&lt;long&gt;(&quot;DC&quot;, &quot;catalog_id&quot;),
+                DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
+                    z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Name),
+                    z =&gt; z.LinkProperty&lt;DocState&gt;((Invoice y) =&gt; y.DocStateId),
+                    z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Code, y =&gt; y.DocStateCode)),
+                Numb = x.Field&lt;string&gt;(&quot;D&quot;, string.Empty),
+                DocDate = x.Field&lt;DateTime?&gt;(&quot;D&quot;, string.Empty, 
+                    z =&gt; z.Default(DefaultType.CurrentDate)),
+                Scan = x.Lob(&quot;SC&quot;, z =&gt; z.OuterFlag()),
+                Source = x.Xml(&quot;SR&quot;, z =&gt; z.OuterFlag()),
+                DeliveryType = x.Field&lt;DeliveryTypeEnum&gt;(&quot;DD&quot;, string.Empty),
+                DeliveryDate = x.Field&lt;DateTime&gt;(&quot;DD&quot;, string.Empty, 
+                    z =&gt; z.Default(DefaultType.CurrentDate))
+            },
+            // Define a rule for link to a DocSpec child repository
+            x =&gt; x.ExternalLink&lt;DocSpec&gt;(x =&gt; x.DocId)
+            ).SetBaseTable(&quot;D&quot;)
+    );
+}
+</code></pre><p>7) We describe the subquery as a separate mapping. In this case, we don’t need the object itself, but a separate mapping calculating the amount for any type of documents will come in handy...</p>
+<pre><code class="lang-csharp">public partial class DocSpecAmount: ISqlObject
+{
+    private static Expression&lt;CustomMapping&lt;DocSpecAmount&gt;&gt; _ = (
+        () =&gt; XDataMapping.CustomMapping&lt;DocSpecAmount&gt;()
+            .DataTable(&quot;T_DOC_SPEC&quot;, &quot;S&quot;)
+            .DataTable(&quot;T_GOOD&quot;, &quot;G&quot;, 
+                x =&gt; x.Link(&quot;S&quot;, &quot;good_id&quot;))
+            .Column(&quot;DocId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;S&quot;, string.Empty, 
+                z =&gt; z.Hidden()))
+            .Column(&quot;Amount&quot;, x =&gt; x.Expr&lt;decimal&gt;(&quot;amount&quot;, 
+                    z =&gt; z.Field&lt;decimal&gt;(&quot;G&quot;, &quot;price&quot;) * 
+                        z.Field&lt;decimal&gt;(&quot;S&quot;, &quot;quantity&quot;), 
+                    DbType.Decimal, z =&gt; z.Hidden(), z =&gt; z.Size(17, 2)))
+            .Map(x =&gt; new DocSpecAmount()).SetBaseTable(&quot;S&quot;));
+}
+</code></pre><p>8) Now we will deal with the new that is used in the presented pieces of code...</p>
+<p>9) First, we added an array <em>Specification</em> for the objects of the <em>DocSpec</em> type described earlier to the main declaration of the <em>Invoice</em> object. But we note that he does not participate directly in mapping, and nevertheless, there will be child records in it. But first things first...</p>
+<p>10) A subquery is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a> method with parameters - the alias of the subquery, the type of mapping description of this subquery, the property that will be selected from it, the group operation that will be applied to this property (note that we are talking here not only about the usual properties of the object, but also about hidden properties, as in this example). The last parameter describes <a class="xref" href="../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter-2.html#XData_Mapping_Dynamic_ISubqueryLinkAdapter_2_SubqueryLink_System_Linq_Expressions_Expression_System_Func__1_System_Object___">SubqueryLink</a> - the filter which the subquery link with an external query. The property by which the subquery will be linked will be <em>DocId</em>, and since in the subquery the communication property is named the same, additional information is not required. See <a href="../../tutorial/mapping/dynamic/dynamic.html#subqueries">documentation topic</a> for more details</p>
+<p>11) The description of the SQL expression when using a subquery is somewhat different and uses a different overload of the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr</a> method. The first parameter, as before, is the name of the field - expression, but here it is possible to specify <em>null</em> to use the field name according to the naming rules depending on the name of the property (here it will be <em>doc_amount</em>). The second parameter determines the type of SQL expression and <a class="xref" href="../../api/XData.DataExpressionType.html">DataExpressionType.SubQuery</a> is used here. The third parameter in this case (since the SQL type of the expression is <em>DataExpressionType.SubQuery</em>) should be equal to the subquery alias &quot;A&quot;. See <a href="../../tutorial/mapping/dynamic/dynamic.html#sql-expression-property">documentation topic</a> for more details</p>
+<p>12) To describe the link rule with the child repository <em>DocSpec</em>, the <a class="xref" href="../../api/XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html#XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter_1_ExternalLink__1_System_Linq_Expressions_Expression_System_Func__0_System_Object___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkAdapter__0___0__XData_Mapping_Dynamic_IExternalLinkFlag_____">ExternalLink</a> modifier of the <em>Map</em> method is used. The <em>DocId</em> property is specified as its first parameter, and since the associated property has the same name, this is enough. See <a href="../../tutorial/mapping/dynamic/dynamic.html#external-link">documentation topic</a> for more details</p>
+<p>13) The description of the mapping of the subquery implements the <a class="xref" href="../../api/XData.ISqlObject.html">ISqlObject</a> interface and since we will not use it as an independent data object, we have enough. Quite a few extensions are assigned to the <em>IDataObject</em> interface and the use of a more general interface is architecturally justified here.</p>
+<p>14) The <em>Column</em> method in our example for both properties is marked with the <a class="xref" href="../../api/XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_Hidden">Hidden</a> modifier. This modifier hides this field from the SQL construct <em>Select</em> and for group operations (and we define this subquery exactly for this only), it is often justified. Since we described the name of the &quot;Amount&quot; property and the group operation <a class="xref" href="../../api/XData.DataGrouping.html">DataGrouping.Sum</a> in the description of the use of the subquery, this information will be enough to build the correct SQL construct without further limiting the possible reused description in the future.</p>
+<p>15) And now we change <em>InvoiceController</em> WebAPI controller...</p>
+<pre><code class="lang-csharp">[HttpGet]
+public async Task&lt;ActionResult&lt;Invoice&gt;&gt; Get(long id)
+{
+    try
+    {
+        using (var dataScope = _dataEngine.NewDataScope())
+        {
+            return await dataScope.GetRepository&lt;Invoice&gt;()
+                // Initialize the child repository
+                .Do(x =&gt; x.Instance.GetChild&lt;DocSpec&gt;(z =&gt; z.Specification))
+                .SingleOrDefaultAsync(x =&gt; x.DocId == id);
+        }
+    }
+    catch (Exception e)
+    {
+        e.FillModelState(ModelState);
+        throw;
+    }
+}
+</code></pre><pre><code class="lang-csharp">[HttpDelete]
+public override async Task&lt;ActionResult&lt;bool&gt;&gt; Delete([FromBody] Invoice obj)
+{
+    try
+    {
+        using (var dataScope = _dataEngine.NewDataScope())
+        {
+            var found = dataScope.GetRepository&lt;Invoice&gt;()
+                // Initialize the child repository
+                .Do(x =&gt; x.Instance.GetChild&lt;DocSpec&gt;())
+                .Find(obj);
+            if (found == null) return NotFound();
+            return await found.SetDeleted(true).SubmitAsync();
+        }
+    }
+    catch (Exception e)
+    {
+        e.FillModelState(ModelState);
+        throw;
+    }
+}
+</code></pre><pre><code class="lang-csharp">[HttpPut]
+public override async Task&lt;ActionResult&lt;Invoice&gt;&gt; Save([FromBody] Invoice obj)
+{
+    try
+    {
+        using (var dataScope = _dataEngine.NewDataScope())
+        {
+            return await dataScope.GetRepository&lt;Invoice&gt;()
+                // Initialize the child repository
+                .Do(x =&gt; x.Instance.GetChild&lt;DocSpec&gt;(z =&gt; z.Specification),
+                    // Specify DeleteFlag
+                    x =&gt; obj.WithJsonSettings(
+                        z =&gt; z.DeleteFlag(
+                            y =&gt; y.Specification, y =&gt; z.Deleted)))
+                .Apply(obj).SubmitAndReturnAsync();
+        }
+    }
+    catch (Exception e)
+    {
+        e.FillModelState(ModelState);
+        throw;
+    }
+}
+</code></pre><p>16) A call was added to the <em>Get</em> method. <a class="xref" href="../../api/XData.Extensions.Processing.html#XData_Extensions_Processing_Do__1___0_System_Action_XData_Extensions_IProcess___0_____">Do</a> is a helper that allows you to add processing to some object, and after the actions of this processing, we need to continue actions on this object, regardless of what methods that are used in the processing steps are returned. For example, here we use Do processing to initialize communication with a child repository. To do this, the repository that is accessible through the processing <a class="xref" href="../../api/XData.Extensions.IProcess-1.html#XData_Extensions_IProcess_1_Instance">Instance</a> property calls the <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> method typed by DocSpec and specifies the Specification property where the child entities will be placed. See <a href="../../tips/useful.html#processing">documentation topic</a> for more details</p>
+<div class="IMPORTANT"><h5>Important</h5><p>It is important to note that we do not always use binding with the child repository, but only when we really need to and specify the property where the child entities will be unloaded even less often. Such an approach allows us to significantly increase productivity due to the fact that we access the child repository only when it is really necessary and fill the array of child entities even less often.</p>
+</div>
+<p>17) In the <em>Delete</em> method, we initialize the connection with the child repository so that cascading deletion occurs, but (as noted above), we do not specify a property for storing child entities, since this is not required here.</p>
+<p>18) In the <em>Save</em> method, we not only initialize the connection with the child repository for applying changes to the child objects, but also indicate that these child objects have an additional <em>Deleted</em> property not mapped to the database (now we can understand what it for) with which we we can tell the XData system that we need to delete this child entity. To do this, use the WithJsonSettings method, which is applied to the disconnected object received from the web. Here, the <a class="xref" href="../../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">DeleteFlag</a> method with parameters is used as a modifier — the property to which the child repository is configured and the property of the child object that is used as the delete flag. See <a href="../../tips/json.html">documentation topic</a> for more details</p>
+<div class="TIP"><h5>Tip</h5><p>It is important to note that this mechanism can be used for hierarchical construction of objects with several child repositories (and even with several differently filtered repositories of the same type), as well as for organizing hierarchically organized objects of unlimited nesting. It is only necessary to take into account the overhead affecting performance.</p>
+</div>
 </article>
           </div>
           

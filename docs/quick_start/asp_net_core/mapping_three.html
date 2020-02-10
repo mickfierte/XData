@@ -103,7 +103,7 @@ reverse link t_catalog to t_catalog_doc--><path d="M54,56.25 C54,76.59 54,104.44
 link t_catalog_doc to t_doc--><path d="M88.4076,192.234 C116.697,218.737 157.289,256.765 189.919,287.334 " fill="none" id="t_catalog_doc-&gt;t_doc" style="stroke: #000000; stroke-width: 1.0;"></path><line style="stroke: #000000; stroke-width: 1.0;" x1="190.0759" x2="195.914" y1="287.4814" y2="287.1129"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="190.0759" x2="195.914" y1="287.4814" y2="298.7891"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="190.0759" x2="195.914" y1="287.4814" y2="292.951"></line><text fill="#000000" font-family="sans-serif" font-size="8" lengthadjust="spacingAndGlyphs" textlength="25" x="139" y="236.4258">doc_id</text><!--MD5=[94de7abaa940d64e718a7c3244926e87]
 reverse link t_doc_delivery to t_doc--><path d="M199.502,205.988 C206.043,225.394 213.795,248.391 220.981,269.709 " fill="none" id="t_doc_delivery&lt;-t_doc" style="stroke: #000000; stroke-width: 1.0;"></path><line style="stroke: #000000; stroke-width: 1.0;" x1="199.428" x2="191.1865" y1="205.7657" y2="200.102"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="199.428" x2="202.5575" y1="205.7657" y2="196.268"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="199.428" x2="196.872" y1="205.7657" y2="198.185"></line><ellipse cx="201.3449" cy="211.4512" fill="none" rx="4" ry="4" style="stroke: #000000; stroke-width: 1.0;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="8" lengthadjust="spacingAndGlyphs" textlength="25" x="212" y="236.4258">doc_id</text><!--MD5=[7c459e52799c0d4d655e72449bb91e72]
 reverse link t_doc_scan to t_doc--><path d="M290.561,199.869 C283.612,220.484 274.937,246.22 266.964,269.872 " fill="none" id="t_doc_scan&lt;-t_doc" style="stroke: #000000; stroke-width: 1.0;"></path><line style="stroke: #000000; stroke-width: 1.0;" x1="290.578" x2="287.4485" y1="199.8147" y2="190.317"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="290.578" x2="298.8195" y1="199.8147" y2="194.151"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="290.578" x2="293.134" y1="199.8147" y2="192.234"></line><ellipse cx="288.6611" cy="205.5002" fill="none" rx="4" ry="4" style="stroke: #000000; stroke-width: 1.0;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="8" lengthadjust="spacingAndGlyphs" textlength="25" x="280" y="236.4258">doc_id</text><!--MD5=[4aa29f824d631e9db9c0b4ff518403cc]
-reverse link t_doc_source to t_doc--><path d="M383.844,198.156 C357.011,224.989 320.901,261.099 292.096,289.904 " fill="none" id="t_doc_source&lt;-t_doc" style="stroke: #000000; stroke-width: 1.0;"></path><line style="stroke: #000000; stroke-width: 1.0;" x1="384.1091" x2="385.5234" y1="197.8909" y2="187.9914"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="384.1091" x2="394.0086" y1="197.8909" y2="196.4766"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="384.1091" x2="389.766" y1="197.8909" y2="192.234"></line><ellipse cx="379.8665" cy="202.1335" fill="none" rx="4" ry="4" style="stroke: #000000; stroke-width: 1.0;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="8" lengthadjust="spacingAndGlyphs" textlength="25" x="349" y="236.4258">doc_id</text><!--MD5=[e740aff0a1c9fe27d94f06793086c862]
+reverse link t_doc_source to t_doc--><path d="M383.844,198.156 C357.011,224.989 320.901,261.099 292.096,289.904 " fill="none" id="t_doc_source&lt;-t_doc" style="stroke: #000000; stroke-width: 1.0;"></path><line style="stroke: #000000; stroke-width: 1.0;" x1="384.1091" x2="385.5234" y1="197.8909" y2="187.9914"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="384.1091" x2="394.0086" y1="197.8909" y2="196.4766"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="384.1091" x2="389.766" y1="197.8909" y2="192.234"></line><ellipse cx="379.8665" cy="202.1335" fill="none" rx="4" ry="4" style="stroke: #000000; stroke-width: 1.0;"></ellipse><text fill="#000000" font-family="sans-serif" font-size="8" lengthadjust="spacingAndGlyphs" textlength="25" x="349" y="236.4258">doc_id</text><!--MD5=[d80ff92a29ef273f0304653454c19cd0]
 @startuml
 
 
@@ -176,7 +176,7 @@ entity t_doc_source
 t_doc_source }o- - t_doc : doc_id
 @enduml
 
-PlantUML version 1.2020.01beta14(Unknown compile time)
+PlantUML version 1.2020.01beta15(Unknown compile time)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM
@@ -201,7 +201,7 @@ public partial class Invoice
     public long DocId =&gt; this.GetProperty(x =&gt; x.DocId);
     public string DocStateCode =&gt; this.GetProperty(x =&gt; x.DocStateCode);
     public Link&lt;string, DocState&gt; DocState { get; set; }
-    public Link&lt;string, Catalogue&gt; DocCatalog { get; set; }
+    public long DocCatalogId { get; set; }
     public string Numb { get; set; }
     public DateTime? DocDate { get; set; }
     public Guid Generation =&gt; this.GetProperty(x =&gt; x.Generation);
@@ -235,6 +235,7 @@ public partial class Invoice
             .ReadOnlyProperty(x =&gt; x.Changed, x =&gt; x.Field&lt;DateTime&gt;(&quot;D&quot;, string.Empty, 
                 z =&gt; z.Default(DefaultType.CurrentDateTime, DefaultFeature.UseOnUpdate)))
             .Map(x =&gt; new Invoice {
+                DocCatalogId =&gt; x.Field&lt;long&gt;(&quot;DC&quot;, &quot;catalog_id&quot;),
                 DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
                     z =&gt; z.LinkProperty&lt;DocState&gt;(y =&gt; y.Name),
                     z =&gt; z.LinkProperty&lt;DocState&gt;((Invoice y) =&gt; y.DocStateId),
@@ -250,14 +251,17 @@ public partial class Invoice
             }).SetBaseTable(&quot;D&quot;)
     );
 }
-</code></pre><p>4) The first unfamiliar thing for us is <a class="xref" href="../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_DictFilter_System_String_System_String_System_String_System_String_">DictFilter</a>. This method allows you to filter the data object by reference to the dictionary in which there is a unique string field Code with which we can not rely on the dictionary identifiers at the level of mapping and business logic. In fact, it degenerates into a filter on a subquery (in our case it will be <em>D.doc_type_id = (select doc_type_id from T_DOC_TYPE where code = &#39;INVOICE&#39;)</em>). See <a href="../../tutorial/mapping/dynamic/dynamic.html#dictionary-filters">documentation topic</a> for more details</p>
-<p>5) The next interesting thing is the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryReadOnlyPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_ConcurrencyToken">ConcurrencyToken</a> modifier, which is responsible for <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic lock</a> support. This modifier works in tandem with the familiar <em>Default</em> modifier, which is initialized with the <a class="xref" href="../../api/XData.DefaultType.html">DefaultType.NewGuid</a> value, which means generating a new unique key (GUID). See <a href="../../tutorial/mapping/dynamic/dynamic.html#properties">documentation topic</a> for more details</p>
+</code></pre><p>4) The first unfamiliar thing for us is <a class="xref" href="../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_DictFilter_System_String_System_String_System_String_System_String_">DictFilter</a>. This method allows you to filter the data object by reference to the dictionary in which there is a unique string field <em>Code</em> with which we can not rely on the dictionary identifiers at the level of mapping and business logic. In fact, it degenerates into a filter on a subquery (in our case it will be <em>D.doc_type_id = (select doc_type_id from T_DOC_TYPE where code = &#39;INVOICE&#39;)</em>). See <a href="../../tutorial/mapping/dynamic/dynamic.html#dictionary-filters">documentation topic</a> for more details</p>
+<p>5) A not very noticeable, but extremely important detail is that for some tables a new overload of the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a> method is used with the <em>parent</em> parameter, which defines the alias of the parent table in <a href="../../tutorial/glossary.html#updatable-tables-hierarchy">updatable tables hierarchy</a>. The introduction of this concept allows applying the change not to one table, but to any number of tables in which information about an instance of a data object is stored.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>Do not forget to specify the parent table in the <em>updatable table tree</em> for those tables that should be updated when the data object changes. At the same time, tables containing reference information are not included in the <em>updatable table tree</em> and do not participate in the update process. For such tables, an overload of the <em>DataTable</em> method is used, which we used earlier.</p>
+</div>
+<p>6) The next interesting thing is the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryReadOnlyPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_ConcurrencyToken">ConcurrencyToken</a> modifier, which is responsible for <a href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic lock</a> support. This modifier works in tandem with the familiar <em>Default</em> modifier, which is initialized with the <a class="xref" href="../../api/XData.DefaultType.html">DefaultType.NewGuid</a> value, which means generating a new unique key (GUID). See <a href="../../tutorial/mapping/dynamic/dynamic.html#properties">documentation topic</a> for more details</p>
 <div class="TIP"><h5>Tip</h5><p>Note that the competition token is described in mapping and does not require any other code! It can even be mapped into a read-only field (as in this case).</p>
 </div>
-<p>6) The next interesting detail is the automatic completion of the <em>Changed</em> property by change date. Using the <em>Default</em> modifier with two parameters, the first <a class="xref" href="../../api/XData.DefaultType.html">DefaultType.CurrentDateTime</a> sets the mechanism for obtaining the default field value by storing the date and time of the change in the local time zone, and the second <a class="xref" href="../../api/XData.DefaultFeature.html">DefaultFeature.UseOnUpdate</a> allows you to save the change time not only during insertion but also during update. See <a href="../../tips/default_features.html">documentation topic</a> for more details</p>
-<p>7) The <em>DocDate</em> and <em>DeliveryDate</em> properties are modified with the default value <a class="xref" href="../../api/XData.DefaultType.html">DefaultType.CurrentDate</a> which means that by default, the current date will be written to these properties.</p>
-<p>8) The <em>Scan</em> property has a specific type of <a class="xref" href="../../api/XData.Mapping.Lob.html">Lob</a> and its mapping is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Lob_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Lob</a> method. Similarly, the <em>Source</em> property has a specific <a class="xref" href="../../api/XData.Mapping.Xml.html">Xml</a> type and its mapping is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Xml_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Xml</a> method. The work with these types is different, but it is important that by default the value of such fields is loaded only if the value of a large object is immediately addressed. There are also features when serializing them in JSON (we will consider this below). There are also features when serializing them in JSON (we will consider this below). This behavior allows you to significantly accelerate the work with objects that contain information in large fields. See documentation topic about <a href="../../tutorial/mapping/mapping.html#bynary-properties">bynary properties</a> and <a href="../../tutorial/mapping/mapping.html#xml-properties">Xml properties</a> for more details</p>
-<p>9) Web API controller for this object will look like...</p>
+<p>7) The next interesting detail is the automatic completion of the <em>Changed</em> property by change date. Using the <em>Default</em> modifier with two parameters, the first <a class="xref" href="../../api/XData.DefaultType.html">DefaultType.CurrentDateTime</a> sets the mechanism for obtaining the default field value by storing the date and time of the change in the local time zone, and the second <a class="xref" href="../../api/XData.DefaultFeature.html">DefaultFeature.UseOnUpdate</a> allows you to save the change time not only during insertion but also during update. See <a href="../../tips/default_features.html">documentation topic</a> for more details</p>
+<p>8) The <em>DocDate</em> and <em>DeliveryDate</em> properties are modified with the default value <a class="xref" href="../../api/XData.DefaultType.html">DefaultType.CurrentDate</a> which means that by default, the current date will be written to these properties.</p>
+<p>9) The <em>Scan</em> property has a specific type of <a class="xref" href="../../api/XData.Mapping.Lob.html">Lob</a> and its mapping is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Lob_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Lob</a> method. Similarly, the <em>Source</em> property has a specific <a class="xref" href="../../api/XData.Mapping.Xml.html">Xml</a> type and its mapping is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Xml_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Xml</a> method. The work with these types is different, but it is important that by default the value of such fields is loaded only if the value of a large object is immediately addressed. There are also features when serializing them in JSON (we will consider this below). There are also features when serializing them in JSON (we will consider this below). This behavior allows you to significantly accelerate the work with objects that contain information in large fields. See documentation topic about <a href="../../tutorial/mapping/mapping.html#bynary-properties">bynary properties</a> and <a href="../../tutorial/mapping/mapping.html#xml-properties">Xml properties</a> for more details</p>
+<p>10) Web API controller for this object will look like...</p>
 <pre><code class="lang-csharp">using XData;
 using System.Linq;
 using System.Threading.Tasks;
@@ -279,6 +283,24 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
                 {
                     return await dataScope.GetRepository&lt;Invoice&gt;()
                         .SingleOrDefaultAsync(x =&gt; x.DocId == id);
+                }
+            }
+            catch (Exception e)
+            {
+                e.FillModelState(ModelState);
+                throw;
+            }
+        }
+
+        [HttpGet]
+        public async Task&lt;ActionResult&lt;Invoice[]&gt;&gt; GetByCatalog(long id)
+        {
+            try
+            {
+                using (var dataScope = _dataEngine.NewDataScope())
+                {
+                    return await dataScope.GetRepository&lt;Invoice&gt;()
+                        .ToArrayAsync(x =&gt; x.CatalogId == id);
                 }
             }
             catch (Exception e)
@@ -346,9 +368,9 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         }
     }
 }
-</code></pre><p>10) The <em>Export</em> method shows how you can get an object with large fields filled. This is available due to the use of the <a class="xref" href="../../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadLob">LoadLob</a> modifier. Most asynchronous XData methods have overloads to describe serialization parameters. For a complete description, refer to the corresponding <a href="../../tips/json.html">documentation article</a>.</p>
-<p>11) Getting the value of a binary object is shown in the <em>GetScan</em> method. To get the value, use the <a class="xref" href="../../api/XData.Mapping.Lob.html#XData_Mapping_Lob_Value">Value</a> property of the <em>Lob</em> object.</p>
-<p>12) The <em>Xml</em> type is interesting, among other things, because its contents can be used to construct XPath queries and use them to filter data. To do this, use the <a class="xref" href="../../api/XData.Mapping.Xml.html#XData_Mapping_Xml_Extract_System_String_System_Collections_Generic_KeyValuePair_System_String_System_String____">Extract</a> method of type <em>Xml</em> as shown in the <em>FindBySource</em> method.</p>
+</code></pre><p>11) The <em>Export</em> method shows how you can get an object with large fields filled. This is available due to the use of the <a class="xref" href="../../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_LoadLob">LoadLob</a> modifier. Most asynchronous XData methods have overloads to describe serialization parameters. For a complete description, refer to the corresponding <a href="../../tips/json.html">documentation article</a>.</p>
+<p>12) Getting the value of a binary object is shown in the <em>GetScan</em> method. To get the value, use the <a class="xref" href="../../api/XData.Mapping.Lob.html#XData_Mapping_Lob_Value">Value</a> property of the <em>Lob</em> object.</p>
+<p>13) The <em>Xml</em> type is interesting, among other things, because its contents can be used to construct XPath queries and use them to filter data. To do this, use the <a class="xref" href="../../api/XData.Mapping.Xml.html#XData_Mapping_Xml_Extract_System_String_System_Collections_Generic_KeyValuePair_System_String_System_String____">Extract</a> method of type <em>Xml</em> as shown in the <em>FindBySource</em> method.</p>
 </article>
           </div>
           
