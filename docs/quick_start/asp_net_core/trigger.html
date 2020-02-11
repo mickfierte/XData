@@ -79,6 +79,9 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="trigger-logic">Trigger logic</h2>
 
+<p>When a task arises of maintaining information that is not directly related to the business logic of the application, for example, an audit task, it is convenient to take out the code leading the tracking of such information and store it separately from the main application code. Moreover, it usually does not require user input. Nevertheless, it is often necessary to conduct an audit. The task given here is somewhat degenerate, but nevertheless it is simple and explains the essence of the approach, which is important for training.</p>
+<p>In addition, in the course of a closer acquaintance with this mechanism, you will be able to discover not obvious aspects of its use and will be able to evaluate its significance in a new way.</p>
+<p>1) Let&#39;s start as always with the database...</p>
 <div class="lang-plantUml" \=""> <?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="118px" preserveaspectratio="none" style="width:389px;height:118px;" version="1.1" viewbox="0 0 389 118" width="389px" zoomandpan="magnify"><defs><filter height="300%" id="fd0np8szrz5xv" width="300%" x="-1" y="-1"><fegaussianblur result="blurOut" stddeviation="2.0"></fegaussianblur><fecolormatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"></fecolormatrix><feoffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"></feoffset><feblend in="SourceGraphic" in2="blurOut3" mode="normal"></feblend></filter></defs><g><!--MD5=[5ea577eca533bfca935d04f775d3f167]
 class t_doc--><rect fill="#FFFFFF" filter="url(#fd0np8szrz5xv)" height="39.9688" id="t_doc" style="stroke: #000000; stroke-width: 1.0;" width="40" x="338.5" y="37.5"></rect><rect fill="#D3D3D3" height="23.9688" style="stroke: #000000; stroke-width: 1.0;" width="40" x="338.5" y="37.5"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthadjust="spacingAndGlyphs" textlength="34" x="341.5" y="53.6387">t_doc</text><line style="stroke: #000000; stroke-width: 1.0;" x1="339.5" x2="377.5" y1="61.4688" y2="61.4688"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="339.5" x2="377.5" y1="69.4688" y2="69.4688"></line><!--MD5=[4efa0cfa5e1d38a4afda4e219b98680a]
 class t_doc_state--><rect fill="#FFFFFF" filter="url(#fd0np8szrz5xv)" height="39.9688" id="t_doc_state" style="stroke: #000000; stroke-width: 1.0;" width="79" x="6" y="37.5"></rect><rect fill="#D3D3D3" height="23.9688" style="stroke: #000000; stroke-width: 1.0;" width="79" x="6" y="37.5"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthadjust="spacingAndGlyphs" textlength="73" x="9" y="53.6387">t_doc_state</text><line style="stroke: #000000; stroke-width: 1.0;" x1="7" x2="84" y1="61.4688" y2="61.4688"></line><line style="stroke: #000000; stroke-width: 1.0;" x1="7" x2="84" y1="69.4688" y2="69.4688"></line><!--MD5=[0d4a222ed2d2d268b8328f05b8f9e363]
@@ -126,7 +129,88 @@ Operating System: Linux
 Default Encoding: UTF-8
 Language: en
 Country: US
---></g></svg> </div><p>Not ready yet...</p>
+--></g></svg> </div><p>2) We describe the new mapping of <em>DocHistory</em> the and a class of logic. It is recommended to describe the logic and related class mappings in a separate assembly. This will allow loading module as plugin...</p>
+<pre><code class="lang-csharp">public partial class DocHistory
+{
+    public long DocId =&gt; this.GetProperty(x =&gt; x.DocId);
+    public long DocStateId =&gt; this.GetProperty(x =&gt; x.DocStateId);
+    public DateTime Changed { get; set; }
+}
+</code></pre><pre><code class="lang-csharp">public partial class DocHistory : IDataObject
+{
+    private static Expression&lt;CustomMapping&lt;DocHistory&gt;&gt; _ =
+        () =&gt; XDataMapping.CustomMapping&lt;DocHistory&gt;()
+            .DataTable(&quot;T_DOC_HISTORY&quot;, &quot;H&quot;)
+            .ReadOnlyProperty(x =&gt; x.DocId, 
+                x =&gt; x.Field&lt;long&gt;(&quot;H&quot;, string.Empty))
+            .ReadOnlyProperty(x =&gt; x.DocStateId, 
+                x =&gt; x.Field&lt;long&gt;(&quot;H&quot;, string.Empty))
+            .Column(&quot;DocHistoryId&quot;, 
+                x =&gt; x.Field&lt;long&gt;(&quot;H&quot;, string.Empty, z =&gt; z.Key()))
+            .Map(x =&gt; new DocHistory {
+                Changed = x.Field&lt;DateTime&gt;(&quot;H&quot;, string.Empty)
+            }).SetBaseTable(&quot;H&quot;);
+}
+</code></pre><pre><code class="lang-csharp">public class InvoiceLogic : XDataLogic&lt;Invoice&gt;
+{
+    [Action(DataActionType.AfterInsert), Action(DataActionType.AfterUpdate)]
+    public Trigger&lt;Invoice&gt; UpdateHistory =&gt; 
+        ((ref Invoice invoice, ref DataTriggerFlag flag) =&gt;
+    {
+        if (!invoice.CheckState(DataObjectState.New) 
+            &amp;&amp; !invoice.IsChanged(x =&gt; x.DocState)) return true;
+        var rep = invoice.GetRepository();
+        using (var hist = GetRepository&lt;DocHistory&gt;(rep.Layer, context: rep.Context))
+        {
+            return hist.Do(x =&gt; x.Instance.Reset()
+                    .SetFilterValue&lt;DocHistory&gt;(x =&gt; x.DocId, invoice.DocId)
+                    .SetFilterValue&lt;DocHistory&gt;(x =&gt; x.DocStateId, 
+                        invoice.GetProperty&lt;long&gt;(&quot;DocStateId&quot;)))
+                .New(x =&gt; x.Changed = DateTime.Now)
+                .Submit();
+        }
+    });
+
+    [Action(DataActionType.BeforeDelete)]
+    public Trigger&lt;Invoice&gt; ClearHistory =&gt; 
+        ((ref Invoice invoice, ref DataTriggerFlag flag) =&gt;
+    {
+        var i = invoice;
+        using (var hist = GetRepository&lt;DocHistory&gt;(
+            i.GetLayer(), context: i.GetContext()))
+        {
+            return hist.Reset().Clear(x =&gt; x.DocId == i.DocId));
+        }
+    });
+
+    [Action(DataActionType.BeforeClear)]
+    public RepositoryTrigger&lt;Invoice&gt; ClearHistoryBatch =&gt;
+        ((IRepository&lt;Invoice&gt; invoiceRepository, ref DataTriggerFlag flag) =&gt;
+    {
+        using (var hist = GetRepository&lt;DocHistory&gt;(invoiceRepository.Layer, 
+            context: invoiceRepository.Context))
+        {
+            return hist.Reset().Clear(x =&gt;
+                invoiceRepository.Any(z =&gt; x.DocId == z.DocId));
+        }
+    });
+}
+</code></pre><p>3) The type of logic module must be inherited from the <a class="xref" href="../../api/XData.XDataLogic-1.html">XDataLogic&lt;T&gt;</a> class typed by the type of the parent data object (<em>Invoice</em>).</p>
+<p>4) Inside the logic module, the properties of the delegate type are described which will be called during the processing of entities of the base type (<em>Invoice</em>). The moment of the logic call is set using the <a class="xref" href="../../api/XData.Mapping.ActionAttribute.html">Action</a> attribute to which <a class="xref" href="../../api/XData.DataActionType.html">DataActionType</a>, the type of handler, is passed as a parameter. In this case, the same handler can be assigned to several actions (this is shown by the example of the <em>UpdateHistory</em> handler). The types of delegates are different for <a class="xref" href="../../api/XData.Trigger-1.html">Trigger&lt;T&gt;</a> record-level handlers, which are triggered when changes are applied to the same object and the repository level - <a class="xref" href="../../api/XData.RepositoryTrigger-1.html">RepositoryTrigger&lt;T&gt;</a>, which are triggered by mass actions on repository objects.</p>
+<p>5) It should be noted that a different <a class="xref" href="../../api/XData.XDataLogic-1.html#XData_XDataLogic_1_GetRepository__1_System_Guid_System_String_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetRepository</a> method is used here. It takes as parameters the identifier of the layer and the database context in which the base object (and its repository) are located. This allows us to get into the context of making changes to the base object.</p>
+<p>6) In addition, the <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_Reset">Reset</a> method is used here, which clears the filters assigned to the repository instance and thereby frees us from the influence of its previous use.</p>
+<p>7) Our new method will be <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_Clear_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___XData_DataSubmitFlag_">Clear</a>. It is used to delete all repository objects or objects that satisfy a certain condition specified when this method is called. In addition, you can configure the logic module to call a special handler before or after deleting objects using this method (as demonstrated by the <em>ClearHistoryBatch</em> delegate).</p>
+<div class="IMPORTANT"><h5>Important</h5><p>It is important to understand the difference between database level triggers and these XData level triggers. A database trigger is called during changes made to the records of the table, whereas XData logic module processes the changes in the level of the data object. It must be remembered that a data object can include several database tables on the one hand (the same <em>Invoice</em> object can serve as an example here) and, on the other hand, a part of information regarding other objects can be stored in one table (for example, the <em>T_DOC</em> table will contain data not only related to the <em>Invoice</em>). And from this point of view, the value of such a mechanism inside the XData can hardly be overestimated!</p>
+</div>
+<p>8) We register our logic module in the IoC container. In this case, we will provide the registration code directly during the initialization of the container, but you can use more complex usage scenarios if necessary.</p>
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.AddSingleton&lt;IDataLogic&lt;Invoice&gt;, InvoiceLogic&gt;();
+    ...
+}
+</code></pre><div class="TIP"><h5>Tip</h5><p>Note that we use the <a class="xref" href="../../api/XData.IDataLogic-1.html">IDataLogic&lt;T&gt;</a> interface typed by our data object type <em>Invoice</em> as the registration interface in the IoC container</p>
+</div>
 </article>
           </div>
           
