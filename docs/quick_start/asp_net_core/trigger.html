@@ -208,8 +208,13 @@ Country: US
     ...
     services.AddSingleton&lt;IDataLogic&lt;Invoice&gt;, InvoiceLogic&gt;();
     ...
+    serviceProvider.InitXData();
+    ...
 }
-</code></pre><div class="TIP"><h5>Tip</h5><p>Note that we use the <a class="xref" href="../../api/XData.IDataLogic-1.html">IDataLogic&lt;T&gt;</a> interface typed by our data object type <em>Invoice</em> as the registration interface in the IoC container</p>
+</code></pre><p>9) In order to use the registration of logic modules in the IoC container, you need to call the <a class="xref" href="../../api/XData.XDataManager.html#XData_XDataManager_InitXData_System_IServiceProvider_">InitXData</a> method from the service provider.</p>
+<div class="WARNING"><h5>Warning</h5><p>Registration of logic modules with the IoC container is supported only in the version of the XData .Net Standard 2.0</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>Note that we use the <a class="xref" href="../../api/XData.IDataLogic-1.html">IDataLogic&lt;T&gt;</a> interface typed by our data object type <em>Invoice</em> as the registration interface in the IoC container</p>
 </div>
 </article>
           </div>

@@ -149,7 +149,7 @@ var dataEngine = XDataManager.InitXData(x =&gt; x.UseConfiguration(
 </code></pre><p>There are three possible ways to secure connection string in configuration file:</p>
 <ul>
 <li><a href="https://msdn.microsoft.com/en-us/library/ms254494(v=vs.110).aspx">Chipher config file section</a> <em>connectionStrings</em> section</li>
-<li>Using <a class="xref" href="../api/XData.IDataOptions.html#XData_IDataOptions_UseCredentials_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_">partial connection strings</a> during runtime</li>
+<li>Using <a class="xref" href="../api/XData.IDataOptions.html#XData_IDataOptions_UseCredentials_System_String_System_Collections_Generic_KeyValuePair_XData_CredentialsType_System_String____">partial connection strings</a> during runtime</li>
 <li>Deploy application in <a href="three_tier.html">three tier mode</a>. In this case connection string is not required to be configured on client side.</li>
 </ul>
 <p>XData specific section <em>xdata</em> has a structure: </p>

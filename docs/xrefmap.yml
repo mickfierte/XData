@@ -2141,6 +2141,42 @@ references:
   commentId: F:XData.Combination.Or
   fullName: XData.Combination.Or
   nameWithType: Combination.Or
+- uid: XData.CredentialsType
+  name: CredentialsType
+  href: api/XData.CredentialsType.html
+  commentId: T:XData.CredentialsType
+  fullName: XData.CredentialsType
+  nameWithType: CredentialsType
+- uid: XData.CredentialsType.DbIntegratedSecurity
+  name: DbIntegratedSecurity
+  href: api/XData.CredentialsType.html#XData_CredentialsType_DbIntegratedSecurity
+  commentId: F:XData.CredentialsType.DbIntegratedSecurity
+  fullName: XData.CredentialsType.DbIntegratedSecurity
+  nameWithType: CredentialsType.DbIntegratedSecurity
+- uid: XData.CredentialsType.DbLogin
+  name: DbLogin
+  href: api/XData.CredentialsType.html#XData_CredentialsType_DbLogin
+  commentId: F:XData.CredentialsType.DbLogin
+  fullName: XData.CredentialsType.DbLogin
+  nameWithType: CredentialsType.DbLogin
+- uid: XData.CredentialsType.DbPassword
+  name: DbPassword
+  href: api/XData.CredentialsType.html#XData_CredentialsType_DbPassword
+  commentId: F:XData.CredentialsType.DbPassword
+  fullName: XData.CredentialsType.DbPassword
+  nameWithType: CredentialsType.DbPassword
+- uid: XData.CredentialsType.DbSchema
+  name: DbSchema
+  href: api/XData.CredentialsType.html#XData_CredentialsType_DbSchema
+  commentId: F:XData.CredentialsType.DbSchema
+  fullName: XData.CredentialsType.DbSchema
+  nameWithType: CredentialsType.DbSchema
+- uid: XData.CredentialsType.DbServer
+  name: DbServer
+  href: api/XData.CredentialsType.html#XData_CredentialsType_DbServer
+  commentId: F:XData.CredentialsType.DbServer
+  fullName: XData.CredentialsType.DbServer
+  nameWithType: CredentialsType.DbServer
 - uid: XData.CurrentObjectChanged`1
   name: CurrentObjectChanged<T>
   href: api/XData.CurrentObjectChanged-1.html
@@ -2378,23 +2414,6 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).Config
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.Config
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).Config
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.ConnectionString
-  name: ConnectionString
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_ConnectionString
-  commentId: P:XData.Database.Adapter.BaseDatabaseAdapter`2.ConnectionString
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.ConnectionString
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).ConnectionString
-  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.ConnectionString
-  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).ConnectionString
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.ConnectionString*
-  name: ConnectionString
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_ConnectionString_
-  commentId: Overload:XData.Database.Adapter.BaseDatabaseAdapter`2.ConnectionString
-  isSpec: "True"
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.ConnectionString
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).ConnectionString
-  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.ConnectionString
-  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).ConnectionString
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.ConnectType
   name: ConnectType
   href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_ConnectType
@@ -4565,15 +4584,15 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.GetClearQuery
   nameWithType: BaseSqlBuilder.GetClearQuery
-- uid: XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String,System.String,System.String,System.Nullable{System.Boolean},System.String,System.String)
-  name: GetConnectionInfo(String, String, String, Nullable<Boolean>, String, String)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetConnectionInfo_System_String_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String,System.String,System.String,System.Nullable{System.Boolean},System.String,System.String)
-  name.vb: GetConnectionInfo(String, String, String, Nullable(Of Boolean), String, String)
-  fullName: XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String, System.String, System.String, System.Nullable<System.Boolean>, System.String, System.String)
-  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String, System.String, System.String, System.Nullable(Of System.Boolean), System.String, System.String)
-  nameWithType: BaseSqlBuilder.GetConnectionInfo(String, String, String, Nullable<Boolean>, String, String)
-  nameWithType.vb: BaseSqlBuilder.GetConnectionInfo(String, String, String, Nullable(Of Boolean), String, String)
+- uid: XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String,System.Collections.Generic.Dictionary{XData.CredentialsType,System.String})
+  name: GetConnectionInfo(String, Dictionary<CredentialsType, String>)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetConnectionInfo_System_String_System_Collections_Generic_Dictionary_XData_CredentialsType_System_String__
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String,System.Collections.Generic.Dictionary{XData.CredentialsType,System.String})
+  name.vb: GetConnectionInfo(String, Dictionary(Of CredentialsType, String))
+  fullName: XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String, System.Collections.Generic.Dictionary<XData.CredentialsType, System.String>)
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo(System.String, System.Collections.Generic.Dictionary(Of XData.CredentialsType, System.String))
+  nameWithType: BaseSqlBuilder.GetConnectionInfo(String, Dictionary<CredentialsType, String>)
+  nameWithType.vb: BaseSqlBuilder.GetConnectionInfo(String, Dictionary(Of CredentialsType, String))
 - uid: XData.Database.Dialect.BaseSqlBuilder.GetConnectionInfo*
   name: GetConnectionInfo
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetConnectionInfo_
@@ -6110,19 +6129,6 @@ references:
   commentId: T:XData.Database.Dialect.XConnectionInfo
   fullName: XData.Database.Dialect.XConnectionInfo
   nameWithType: XConnectionInfo
-- uid: XData.Database.Dialect.XConnectionInfo.ConnectionString
-  name: ConnectionString
-  href: api/XData.Database.Dialect.XConnectionInfo.html#XData_Database_Dialect_XConnectionInfo_ConnectionString
-  commentId: P:XData.Database.Dialect.XConnectionInfo.ConnectionString
-  fullName: XData.Database.Dialect.XConnectionInfo.ConnectionString
-  nameWithType: XConnectionInfo.ConnectionString
-- uid: XData.Database.Dialect.XConnectionInfo.ConnectionString*
-  name: ConnectionString
-  href: api/XData.Database.Dialect.XConnectionInfo.html#XData_Database_Dialect_XConnectionInfo_ConnectionString_
-  commentId: Overload:XData.Database.Dialect.XConnectionInfo.ConnectionString
-  isSpec: "True"
-  fullName: XData.Database.Dialect.XConnectionInfo.ConnectionString
-  nameWithType: XConnectionInfo.ConnectionString
 - uid: XData.Database.Dialect.XConnectionInfo.DbLogin
   name: DbLogin
   href: api/XData.Database.Dialect.XConnectionInfo.html#XData_Database_Dialect_XConnectionInfo_DbLogin
@@ -15167,15 +15173,15 @@ references:
   isSpec: "True"
   fullName: XData.IDataOptions.SetSecurityContext
   nameWithType: IDataOptions.SetSecurityContext
-- uid: XData.IDataOptions.UseCredentials(System.String,System.String,System.Nullable{System.Boolean},System.String,System.String)
-  name: UseCredentials(String, String, Nullable<Boolean>, String, String)
-  href: api/XData.IDataOptions.html#XData_IDataOptions_UseCredentials_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_
-  commentId: M:XData.IDataOptions.UseCredentials(System.String,System.String,System.Nullable{System.Boolean},System.String,System.String)
-  name.vb: UseCredentials(String, String, Nullable(Of Boolean), String, String)
-  fullName: XData.IDataOptions.UseCredentials(System.String, System.String, System.Nullable<System.Boolean>, System.String, System.String)
-  fullName.vb: XData.IDataOptions.UseCredentials(System.String, System.String, System.Nullable(Of System.Boolean), System.String, System.String)
-  nameWithType: IDataOptions.UseCredentials(String, String, Nullable<Boolean>, String, String)
-  nameWithType.vb: IDataOptions.UseCredentials(String, String, Nullable(Of Boolean), String, String)
+- uid: XData.IDataOptions.UseCredentials(System.String,System.Collections.Generic.KeyValuePair{XData.CredentialsType,System.String}[])
+  name: UseCredentials(String, KeyValuePair<CredentialsType, String>[])
+  href: api/XData.IDataOptions.html#XData_IDataOptions_UseCredentials_System_String_System_Collections_Generic_KeyValuePair_XData_CredentialsType_System_String____
+  commentId: M:XData.IDataOptions.UseCredentials(System.String,System.Collections.Generic.KeyValuePair{XData.CredentialsType,System.String}[])
+  name.vb: UseCredentials(String, KeyValuePair(Of CredentialsType, String)())
+  fullName: XData.IDataOptions.UseCredentials(System.String, System.Collections.Generic.KeyValuePair<XData.CredentialsType, System.String>[])
+  fullName.vb: XData.IDataOptions.UseCredentials(System.String, System.Collections.Generic.KeyValuePair(Of XData.CredentialsType, System.String)())
+  nameWithType: IDataOptions.UseCredentials(String, KeyValuePair<CredentialsType, String>[])
+  nameWithType.vb: IDataOptions.UseCredentials(String, KeyValuePair(Of CredentialsType, String)())
 - uid: XData.IDataOptions.UseCredentials*
   name: UseCredentials
   href: api/XData.IDataOptions.html#XData_IDataOptions_UseCredentials_
@@ -18307,19 +18313,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.DataObjectAttribute.Flags
   nameWithType: DataObjectAttribute.Flags
-- uid: XData.Mapping.DataObjectAttribute.LogicAssemblyName
-  name: LogicAssemblyName
-  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_LogicAssemblyName
-  commentId: P:XData.Mapping.DataObjectAttribute.LogicAssemblyName
-  fullName: XData.Mapping.DataObjectAttribute.LogicAssemblyName
-  nameWithType: DataObjectAttribute.LogicAssemblyName
-- uid: XData.Mapping.DataObjectAttribute.LogicAssemblyName*
-  name: LogicAssemblyName
-  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_LogicAssemblyName_
-  commentId: Overload:XData.Mapping.DataObjectAttribute.LogicAssemblyName
+- uid: XData.Mapping.DataObjectAttribute.LogicAssemblyNames
+  name: LogicAssemblyNames
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_LogicAssemblyNames
+  commentId: P:XData.Mapping.DataObjectAttribute.LogicAssemblyNames
+  fullName: XData.Mapping.DataObjectAttribute.LogicAssemblyNames
+  nameWithType: DataObjectAttribute.LogicAssemblyNames
+- uid: XData.Mapping.DataObjectAttribute.LogicAssemblyNames*
+  name: LogicAssemblyNames
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_LogicAssemblyNames_
+  commentId: Overload:XData.Mapping.DataObjectAttribute.LogicAssemblyNames
   isSpec: "True"
-  fullName: XData.Mapping.DataObjectAttribute.LogicAssemblyName
-  nameWithType: DataObjectAttribute.LogicAssemblyName
+  fullName: XData.Mapping.DataObjectAttribute.LogicAssemblyNames
+  nameWithType: DataObjectAttribute.LogicAssemblyNames
 - uid: XData.Mapping.DataSourceAttribute
   name: DataSourceAttribute
   href: api/XData.Mapping.DataSourceAttribute.html
@@ -20060,23 +20066,24 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryDescription(Of T).SetFlags
   nameWithType: IRepositoryDescription<T>.SetFlags
   nameWithType.vb: IRepositoryDescription(Of T).SetFlags
-- uid: XData.Mapping.Dynamic.IRepositoryDescription`1.SetLogicAssembly(System.String)
-  name: SetLogicAssembly(String)
-  href: api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetLogicAssembly_System_String_
-  commentId: M:XData.Mapping.Dynamic.IRepositoryDescription`1.SetLogicAssembly(System.String)
-  fullName: XData.Mapping.Dynamic.IRepositoryDescription<T>.SetLogicAssembly(System.String)
-  fullName.vb: XData.Mapping.Dynamic.IRepositoryDescription(Of T).SetLogicAssembly(System.String)
-  nameWithType: IRepositoryDescription<T>.SetLogicAssembly(String)
-  nameWithType.vb: IRepositoryDescription(Of T).SetLogicAssembly(String)
-- uid: XData.Mapping.Dynamic.IRepositoryDescription`1.SetLogicAssembly*
-  name: SetLogicAssembly
-  href: api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetLogicAssembly_
-  commentId: Overload:XData.Mapping.Dynamic.IRepositoryDescription`1.SetLogicAssembly
+- uid: XData.Mapping.Dynamic.IRepositoryDescription`1.SetLogicAssemblies(System.String[])
+  name: SetLogicAssemblies(String[])
+  href: api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetLogicAssemblies_System_String___
+  commentId: M:XData.Mapping.Dynamic.IRepositoryDescription`1.SetLogicAssemblies(System.String[])
+  name.vb: SetLogicAssemblies(String())
+  fullName: XData.Mapping.Dynamic.IRepositoryDescription<T>.SetLogicAssemblies(System.String[])
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryDescription(Of T).SetLogicAssemblies(System.String())
+  nameWithType: IRepositoryDescription<T>.SetLogicAssemblies(String[])
+  nameWithType.vb: IRepositoryDescription(Of T).SetLogicAssemblies(String())
+- uid: XData.Mapping.Dynamic.IRepositoryDescription`1.SetLogicAssemblies*
+  name: SetLogicAssemblies
+  href: api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetLogicAssemblies_
+  commentId: Overload:XData.Mapping.Dynamic.IRepositoryDescription`1.SetLogicAssemblies
   isSpec: "True"
-  fullName: XData.Mapping.Dynamic.IRepositoryDescription<T>.SetLogicAssembly
-  fullName.vb: XData.Mapping.Dynamic.IRepositoryDescription(Of T).SetLogicAssembly
-  nameWithType: IRepositoryDescription<T>.SetLogicAssembly
-  nameWithType.vb: IRepositoryDescription(Of T).SetLogicAssembly
+  fullName: XData.Mapping.Dynamic.IRepositoryDescription<T>.SetLogicAssemblies
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryDescription(Of T).SetLogicAssemblies
+  nameWithType: IRepositoryDescription<T>.SetLogicAssemblies
+  nameWithType.vb: IRepositoryDescription(Of T).SetLogicAssemblies
 - uid: XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter
   name: IRepositoryExpressionMappingAdapter
   href: api/XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter.html
@@ -25301,6 +25308,19 @@ references:
   isSpec: "True"
   fullName: XData.XDataManager.Configuration
   nameWithType: XDataManager.Configuration
+- uid: XData.XDataManager.Credentials
+  name: Credentials
+  href: api/XData.XDataManager.html#XData_XDataManager_Credentials
+  commentId: P:XData.XDataManager.Credentials
+  fullName: XData.XDataManager.Credentials
+  nameWithType: XDataManager.Credentials
+- uid: XData.XDataManager.Credentials*
+  name: Credentials
+  href: api/XData.XDataManager.html#XData_XDataManager_Credentials_
+  commentId: Overload:XData.XDataManager.Credentials
+  isSpec: "True"
+  fullName: XData.XDataManager.Credentials
+  nameWithType: XDataManager.Credentials
 - uid: XData.XDataManager.GetConcurrencyErrorId(System.String)
   name: GetConcurrencyErrorId(String)
   href: api/XData.XDataManager.html#XData_XDataManager_GetConcurrencyErrorId_System_String_
@@ -25314,12 +25334,38 @@ references:
   isSpec: "True"
   fullName: XData.XDataManager.GetConcurrencyErrorId
   nameWithType: XDataManager.GetConcurrencyErrorId
+- uid: XData.XDataManager.InitXData(System.IServiceProvider)
+  name: InitXData(IServiceProvider)
+  href: api/XData.XDataManager.html#XData_XDataManager_InitXData_System_IServiceProvider_
+  commentId: M:XData.XDataManager.InitXData(System.IServiceProvider)
+  fullName: XData.XDataManager.InitXData(System.IServiceProvider)
+  nameWithType: XDataManager.InitXData(IServiceProvider)
+- uid: XData.XDataManager.InitXData*
+  name: InitXData
+  href: api/XData.XDataManager.html#XData_XDataManager_InitXData_
+  commentId: Overload:XData.XDataManager.InitXData
+  isSpec: "True"
+  fullName: XData.XDataManager.InitXData
+  nameWithType: XDataManager.InitXData
 - uid: XData.XDataManager.Resources
   name: Resources
   href: api/XData.XDataManager.html#XData_XDataManager_Resources
   commentId: F:XData.XDataManager.Resources
   fullName: XData.XDataManager.Resources
   nameWithType: XDataManager.Resources
+- uid: XData.XDataManager.ServiceProvider
+  name: ServiceProvider
+  href: api/XData.XDataManager.html#XData_XDataManager_ServiceProvider
+  commentId: P:XData.XDataManager.ServiceProvider
+  fullName: XData.XDataManager.ServiceProvider
+  nameWithType: XDataManager.ServiceProvider
+- uid: XData.XDataManager.ServiceProvider*
+  name: ServiceProvider
+  href: api/XData.XDataManager.html#XData_XDataManager_ServiceProvider_
+  commentId: Overload:XData.XDataManager.ServiceProvider
+  isSpec: "True"
+  fullName: XData.XDataManager.ServiceProvider
+  nameWithType: XDataManager.ServiceProvider
 - uid: XData.XDataPureLinqMethodAttribute
   name: XDataPureLinqMethodAttribute
   href: api/XData.XDataPureLinqMethodAttribute.html

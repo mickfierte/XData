@@ -333,7 +333,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">T Assign&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, Func&lt;T&gt; data, WorkState state = WorkState.Active)
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -424,7 +423,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Find&lt;TRet&gt;(Func&lt;T, bool&gt; predicate, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; child)
-
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -498,7 +496,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Find&lt;TRet&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, IComparable&gt;[] order, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; child)
-
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -578,7 +575,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Find&lt;TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; child)
-
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -646,9 +642,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Find&lt;TRet, TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; child)
-
     where TRet : class, IDataObject, new()
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -851,7 +845,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">T Get&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, WorkState state = WorkState.Active)
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1049,7 +1042,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool Lock&lt;TKey&gt;(IDataScope dataScope, Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order)
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1247,6 +1239,9 @@
   </div>
   <div>
       <a class="xref" href="XData.Extensions.DataObjectQueryableExtensions.html#XData_Extensions_DataObjectQueryableExtensions_CompareVariable_System_Object_XData_FilterOperation_System_String_">DataObjectQueryableExtensions.CompareVariable(Object, FilterOperation, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Extensions.Processing.html#XData_Extensions_Processing_Do__1___0_System_Action_XData_Extensions_IProcess___0_____">Processing.Do&lt;T&gt;(T, Action&lt;IProcess&lt;T&gt;&gt;[])</a>
   </div>
   <div>
       <a class="xref" href="XData.Extensions.TypeExtensions.html#XData_Extensions_TypeExtensions_TryConvert__2___0_System_Func___0___1__">TypeExtensions.TryConvert&lt;T, TResult&gt;(T, Func&lt;T, TResult&gt;)</a>
