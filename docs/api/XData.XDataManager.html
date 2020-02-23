@@ -215,36 +215,6 @@ Defines user session context across (possible) multiple data sources</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_XDataManager_ServiceProvider.md&amp;value=---%0Auid%3A%20XData.XDataManager.ServiceProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/XDataManager.netstandard20.cs/#L129">View Source</a>
-  </span>
-  <a id="XData_XDataManager_ServiceProvider_" data-uid="XData.XDataManager.ServiceProvider*"></a>
-  <h4 id="XData_XDataManager_ServiceProvider" data-uid="XData.XDataManager.ServiceProvider">ServiceProvider</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceProvider ServiceProvider { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -355,18 +325,19 @@ Defines user session context across (possible) multiple data sources</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_XDataManager_InitXData_System_IServiceProvider_.md&amp;value=---%0Auid%3A%20XData.XDataManager.InitXData(System.IServiceProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_XDataManager_UseXDataDependencies_System_IServiceProvider_.md&amp;value=---%0Auid%3A%20XData.XDataManager.UseXDataDependencies(System.IServiceProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/XDataManager.netstandard20.cs/#L131">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/XDataManager.netstandard20.cs/#L136">View Source</a>
   </span>
-  <a id="XData_XDataManager_InitXData_" data-uid="XData.XDataManager.InitXData*"></a>
-  <h4 id="XData_XDataManager_InitXData_System_IServiceProvider_" data-uid="XData.XDataManager.InitXData(System.IServiceProvider)">InitXData(IServiceProvider)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="XData_XDataManager_UseXDataDependencies_" data-uid="XData.XDataManager.UseXDataDependencies*"></a>
+  <h4 id="XData_XDataManager_UseXDataDependencies_System_IServiceProvider_" data-uid="XData.XDataManager.UseXDataDependencies(System.IServiceProvider)">UseXDataDependencies(IServiceProvider)</h4>
+  <div class="markdown level1 summary"><p>Inversion of Control dependency service provider initialization</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceProvider InitXData(this IServiceProvider provider)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceProvider UseXDataDependencies(this IServiceProvider provider)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -381,7 +352,8 @@ Defines user session context across (possible) multiple data sources</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></td>
         <td><span class="parametername">provider</span></td>
-        <td></td>
+        <td><p>Service provider interface</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -396,7 +368,8 @@ Defines user session context across (possible) multiple data sources</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></td>
-        <td></td>
+        <td><p>Service provider interface</p>
+</td>
       </tr>
     </tbody>
   </table>

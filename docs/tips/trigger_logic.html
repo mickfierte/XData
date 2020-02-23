@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="tips_trigger_logic.md">
 <h3 id="trigger-business-logic">Trigger business logic</h3>
 
+<div class="IMPORTANT"><h5>Important</h5><p>It is important to understand the difference between database level triggers and these XData level triggers. A database trigger is called during changes made to the records of the table, whereas XData logic module processes the changes in the level of the data object. It must be remembered that a data object can include several database tables on the one hand and, on the other hand, a part of information regarding other objects can be stored in one table. And from this point of view, the value of such a mechanism inside the XData can hardly be overestimated!</p>
+</div>
 <p><a href="custom_logic.html">Custom logic</a> called over <a href="../tutorial/glossary.html#data-object">data object</a> explicitly. But XData can call trigger logic over business valuable <a href="../tutorial/glossary.html#data-object">data object</a> (not a single table!) on middleware level (no matter extracted this logic to dedicated application server or not). This logic will be called automatically when corresponded changes are applied:</p>
 <ul>
 <li><em>InitRepository</em> - middleware trigger executed when Repository has been initialized (trigger delegate type -<a class="xref" href="../api/XData.InitRepository-1.html">InitRepository&lt;T&gt;</a>)</li>

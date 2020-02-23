@@ -219,6 +219,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISqlBlock Block&lt;T&gt;(params Expression&lt;Func&lt;ISqlBlockAdapter&lt;T&gt;, ISqlBlock&gt;&gt;[] blocks)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -400,6 +401,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISqlBlock ForEach&lt;T&gt;(Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;T&gt;&gt;&gt; selectQuery, string cursorName, Expression&lt;Func&lt;ISqlBlockAdapter, ISqlBlock&gt;&gt; body, params Expression&lt;Action&lt;ILoopVariableAdapter&lt;T&gt;&gt;&gt;[] mapping)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -647,6 +649,7 @@ or <a class="xref" href="XData.FilterOperation.html#XData_FilterOperation_NotExi
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISqlBlock Insert&lt;TResult&gt;(string tableName, DataTable data, Expression&lt;Func&lt;ISetBlockAdapter, TResult&gt;&gt; mapper)
+
     where TResult : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -732,6 +735,7 @@ or <a class="xref" href="XData.FilterOperation.html#XData_FilterOperation_NotExi
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISqlBlock Insert&lt;T&gt;(string tableName, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;T&gt;&gt;&gt; selectQuery)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -810,6 +814,7 @@ or <a class="xref" href="XData.FilterOperation.html#XData_FilterOperation_NotExi
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISqlBlock Insert&lt;TResult&gt;(string tableName, Expression&lt;Func&lt;ISetBlockAdapter, TResult&gt;&gt; mapper)
+
     where TResult : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -887,6 +892,7 @@ or <a class="xref" href="XData.FilterOperation.html#XData_FilterOperation_NotExi
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISqlBlock Merge&lt;T&gt;(string tableName, string targetAlias, string sourceAlias, Expression&lt;Func&lt;IMergeBlockAdapter, T&gt;&gt; mapper)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -978,6 +984,7 @@ structure flags to set merge role of data source columns</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISqlBlock Merge&lt;T, TSource&gt;(string tableName, string targetAlias, Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryDescription&lt;TSource&gt;&gt;&gt; sourceQuery, string sourceAlias, Expression&lt;Func&lt;IMergeBlockAdapter, T&gt;&gt; mapper)
+
     where T : class where TSource : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1212,6 +1219,7 @@ structure flags to set merge role of data source columns</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ISqlBlock Update&lt;T&gt;(Expression&lt;Func&lt;IBlockQueryStructure, IBlockQueryStructure&gt;&gt; query, Expression&lt;Func&lt;ISetBlockAdapter, T&gt;&gt; setExpr)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

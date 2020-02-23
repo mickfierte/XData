@@ -901,6 +901,7 @@ WARNING!  Mast to be filled in constructor!</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Query BuildSqlBlock&lt;T&gt;(Expression&lt;SqlBlockDefinition&lt;T&gt;&gt; sqlBlock, Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters, out Func&lt;DataRow, T&gt; mapper)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

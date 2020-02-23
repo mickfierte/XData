@@ -522,6 +522,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">T GetDictionaryValue&lt;T&gt;(Expression&lt;Func&lt;T, bool&gt;&gt; findExpression, string alias = null, ISecuritySession security = null, params Variable[] variables)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -632,6 +633,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IDataQuery&lt;T&gt; GetQuery&lt;T&gt;(TextReader reader, string alias = null, ISecuritySession security = null)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -742,6 +744,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(TextReader reader)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -840,6 +843,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(string alias = null, ISecuritySession security = null, params Variable[] variables)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -950,6 +954,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(string alias = null, params Variable[] variables)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1054,6 +1059,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(ISecuritySession security = null, params Variable[] variables)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1158,6 +1164,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;T&gt; GetRepository&lt;T&gt;(params Variable[] variables)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

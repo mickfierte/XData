@@ -120,6 +120,7 @@
   <h5 id="XData_Json_JsonSettings_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class JsonSettings&lt;T&gt;
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -172,6 +173,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public JsonSettings&lt;T&gt; DeleteFlag&lt;TChild&gt;(Expression&lt;Func&lt;T, TChild[]&gt;&gt; child, Expression&lt;Func&lt;TChild, bool&gt;&gt; property)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -243,6 +245,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public JsonSettings&lt;T&gt; DeleteFlag&lt;TChild&gt;(Expression&lt;Func&lt;T, TChild&gt;&gt; child, Expression&lt;Func&lt;TChild, bool&gt;&gt; property)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

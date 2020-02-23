@@ -28,6 +28,8 @@ version 1.1.0
 
 [XData net 4.0 log4net log writer package](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
 
+[XData net 4.0 Inversion of Control container package](https://github.com/mickfierte/XData.IoC.Container/packages/135244/) - Support for registering logic modules using the IoC container (Net 4.0 version only, required full Net 4.5 Framework version). Any IoC container with [IDependencyResolver](https://docs.microsoft.com/en-us/previous-versions/aspnet/hh969144(v%3Dvs.118)) interface implementation is supported. Net Standard 2.0 version does not require additional packages since .Net Standard has built-in support for IoC containers
+
 ## Basic features
 * Single domain object can be mapped on multiple tables (or views, or procedures) in DB. Every DB object can be mapped multiple times in one (or more mappings).
 * _IQueryable_ interface is fully supported.
@@ -184,9 +186,6 @@ _For more examples and usage, please refer to the [documentation](http://mickfie
 
 ## Release History
 
-* 1.2.0
-	* SQL Blocks is now supported
-	* Bugs are fixed, algorithms are improved
 * 1.0.0
     * Initially published (deprecated now)
 * 1.1.0
@@ -196,6 +195,10 @@ _For more examples and usage, please refer to the [documentation](http://mickfie
 	* Local temporary tables is now supported in dynamic queries
 	* Lot of bugs are fixed
 	* Documetation is available now
+* 1.2.0
+	* SQL Blocks is now supported
+	* Using DI containers for trigger logic modules
+	* Bugs are fixed, algorithms are improved
 
 ## Contacts
 

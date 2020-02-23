@@ -137,6 +137,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; AllAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -210,6 +211,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; AllAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -289,6 +291,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; AnyAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -356,6 +359,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; AnyAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -429,6 +433,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; AnyAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -508,6 +513,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;decimal&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, decimal&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -581,6 +587,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, double&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -654,6 +661,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, int&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -727,6 +735,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, long&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -800,6 +809,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;decimal?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, decimal?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -873,6 +883,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, double?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -946,6 +957,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, int?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1019,6 +1031,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, long?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1092,6 +1105,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;float?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, float?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1165,6 +1179,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;float&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, float&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1238,6 +1253,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;decimal&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, decimal&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1317,6 +1333,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, double&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1396,6 +1413,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, int&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1475,6 +1493,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, long&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1554,6 +1573,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;decimal?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, decimal?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1633,6 +1653,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, double?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1712,6 +1733,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, int?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1791,6 +1813,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, long?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1870,6 +1893,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;float?&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, float?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1949,6 +1973,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;float&gt; AverageAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, float&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2028,6 +2053,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ClearAsync&lt;T&gt;(this IRepository&lt;T&gt; repository, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, DataSubmitFlag flag = DataSubmitFlag.None)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2106,6 +2132,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ClearAsync&lt;T&gt;(this IRepository&lt;T&gt; repository, DataSubmitFlag flag = DataSubmitFlag.None)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2178,6 +2205,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, T item)
+
     where T : class, IComparable&lt;T&gt;, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2251,6 +2279,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, T item, IEqualityComparer&lt;T&gt; comparer)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2330,6 +2359,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, T item, params Func&lt;T, object&gt;[] properties)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2409,6 +2439,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, T item)
+
     where T : class, IComparable&lt;T&gt;, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2488,6 +2519,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; ContainsAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, T item, IEqualityComparer&lt;T&gt; comparer)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2573,6 +2605,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; CountAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2640,6 +2673,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; CountAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2713,6 +2747,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; CountAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2786,6 +2821,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;int&gt; CountAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3391,6 +3427,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3458,6 +3495,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3531,6 +3569,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3604,6 +3643,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3683,6 +3723,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3762,6 +3803,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3847,6 +3889,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3914,6 +3957,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3987,6 +4031,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4060,6 +4105,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4139,6 +4185,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4218,6 +4265,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; FirstOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4303,6 +4351,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task ForEachAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Action&lt;T&gt; body)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4376,6 +4425,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task ForEachAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Func&lt;T, Task&gt; body)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4449,6 +4499,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task ForEachAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Action&lt;T&gt; body)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4528,6 +4579,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task ForEachAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Func&lt;T, Task&gt; body)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4607,6 +4659,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; GetSqlBlockDataAsync&lt;T&gt;(this IDataScope dataScope, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings, Expression&lt;SqlBlockDefinition&lt;T&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4691,6 +4744,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; GetSqlBlockDataAsync&lt;T&gt;(this IDataScope dataScope, Expression&lt;SqlBlockDefinition&lt;T&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4769,6 +4823,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; GetSqlBlockDataAsync&lt;T&gt;(this IDataScope dataScope, CancellationToken token, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings, Expression&lt;SqlBlockDefinition&lt;T&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4859,6 +4914,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; GetSqlBlockDataAsync&lt;T&gt;(this IDataScope dataScope, CancellationToken token, Expression&lt;SqlBlockDefinition&lt;T&gt;&gt; block, params Expression&lt;Func&lt;ISqlParamAdapter, ISqlParam&gt;&gt;[] parameters)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4943,6 +4999,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadLobAsync&lt;T&gt;(this T obj)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5009,6 +5066,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadLobAsync&lt;T&gt;(this T obj, params Expression&lt;Func&lt;T, object&gt;&gt;[] properties)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5081,6 +5139,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadLobAsync&lt;T&gt;(this T obj, params string[] properties)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5153,6 +5212,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadLobAsync&lt;T&gt;(this T obj, CancellationToken token)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5225,6 +5285,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadLobAsync&lt;T&gt;(this T obj, CancellationToken token, params Expression&lt;Func&lt;T, object&gt;&gt;[] properties)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5303,6 +5364,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; LoadLobAsync&lt;T&gt;(this T obj, CancellationToken token, params string[] properties)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5381,6 +5443,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;long&gt; LongCountAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5448,6 +5511,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;long&gt; LongCountAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5521,6 +5585,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;long&gt; LongCountAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5594,6 +5659,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;long&gt; LongCountAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5673,6 +5739,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;TResult&gt; MaxAsync&lt;T, TResult&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, TResult&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5751,6 +5818,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;TResult&gt; MaxAsync&lt;T, TResult&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, TResult&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5835,6 +5903,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;TResult&gt; MinAsync&lt;T, TResult&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, TResult&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5913,6 +5982,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;TResult&gt; MinAsync&lt;T, TResult&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, TResult&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5997,6 +6067,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6064,6 +6135,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6137,6 +6209,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6210,6 +6283,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6289,6 +6363,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6368,6 +6443,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6453,6 +6529,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6520,6 +6597,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6593,6 +6671,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6666,6 +6745,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6745,6 +6825,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6824,6 +6905,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SingleOrDefaultAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, bool&gt;&gt; predicate, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6909,6 +6991,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SubmitAndReturnAsync&lt;T&gt;(this T obj, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings, DataSubmitFlag flag = DataSubmitFlag.None)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -6987,6 +7070,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SubmitAndReturnAsync&lt;T&gt;(this T obj, CancellationToken token, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings, DataSubmitFlag flag = DataSubmitFlag.None)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7071,6 +7155,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SubmitAndReturnAsync&lt;T&gt;(this T obj, CancellationToken token, DataSubmitFlag flag = DataSubmitFlag.None)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7149,6 +7234,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; SubmitAndReturnAsync&lt;T&gt;(this T obj, DataSubmitFlag flag = DataSubmitFlag.None)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7221,6 +7307,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; SubmitAsync&lt;T&gt;(this T obj, CancellationToken token, DataSubmitFlag flag = DataSubmitFlag.None)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7299,6 +7386,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;bool&gt; SubmitAsync&lt;T&gt;(this T obj, DataSubmitFlag flag = DataSubmitFlag.None)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7371,6 +7459,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;decimal&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, decimal&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7444,6 +7533,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, double&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7517,6 +7607,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, int&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7590,6 +7681,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, long&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7663,6 +7755,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;decimal?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, decimal?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7736,6 +7829,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, double?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7809,6 +7903,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, int?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7882,6 +7977,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, long?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -7955,6 +8051,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;float?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, float?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8028,6 +8125,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;float&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Expression&lt;Func&lt;T, float&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8101,6 +8199,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;decimal&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, decimal&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8180,6 +8279,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, double&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8259,6 +8359,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, int&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8338,6 +8439,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, long&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8417,6 +8519,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;decimal?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, decimal?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8496,6 +8599,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, double?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8575,6 +8679,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, int?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8654,6 +8759,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;double?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, long?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8733,6 +8839,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;float?&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, float?&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8812,6 +8919,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;float&gt; SumAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Expression&lt;Func&lt;T, float&gt;&gt; selector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8891,6 +8999,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; ToArrayAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -8958,6 +9067,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; ToArrayAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -9031,6 +9141,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; ToArrayAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -9104,6 +9215,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;T[]&gt; ToArrayAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -9183,6 +9295,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;Dictionary&lt;TKey, TValue&gt;&gt; ToDictionaryAsync&lt;T, TKey, TValue&gt;(this IQueryable&lt;T&gt; source, Func&lt;T, TKey&gt; keySelector, Func&lt;T, TValue&gt; elementSelector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -9272,6 +9385,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;Dictionary&lt;TKey, TValue&gt;&gt; ToDictionaryAsync&lt;T, TKey, TValue&gt;(this IQueryable&lt;T&gt; source, CancellationToken token, Func&lt;T, TKey&gt; keySelector, Func&lt;T, TValue&gt; elementSelector)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -9367,6 +9481,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;List&lt;T&gt;&gt; ToListAsync&lt;T&gt;(this IQueryable&lt;T&gt; source)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -9434,6 +9549,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Task&lt;List&lt;T&gt;&gt; ToListAsync&lt;T&gt;(this IQueryable&lt;T&gt; source, CancellationToken token)
+
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

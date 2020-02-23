@@ -168,6 +168,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IBlockQueryStructure GetStructure&lt;T&gt;(string baseTableAlias, Expression&lt;Func&lt;IQueryStructure, IQueryStructure&gt;&gt; query)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -244,6 +245,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IBlockQueryDescription&lt;TResult&gt; Select&lt;TResult&gt;(Expression&lt;Func&lt;IBlockQueryAdapter, TResult&gt;&gt; mapper)
+
     where TResult : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

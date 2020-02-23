@@ -255,6 +255,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool Add&lt;TFrom&gt;(IQueryable&lt;TFrom&gt; source, Mapping&lt;TFrom, T&gt; mapping = null)
+
     where TFrom : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -849,6 +850,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;TChild&gt; GetChild&lt;TChild&gt;(Expression&lt;Func&lt;T, TChild[]&gt;&gt; property, string alias = null, ISecuritySession security = null, params Variable[] variables)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -963,6 +965,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;TChild&gt; GetChild&lt;TChild&gt;(Expression&lt;Func&lt;T, TChild&gt;&gt; property, string alias = null, ISecuritySession security = null, params Variable[] variables)
+
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

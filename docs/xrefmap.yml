@@ -25334,38 +25334,25 @@ references:
   isSpec: "True"
   fullName: XData.XDataManager.GetConcurrencyErrorId
   nameWithType: XDataManager.GetConcurrencyErrorId
-- uid: XData.XDataManager.InitXData(System.IServiceProvider)
-  name: InitXData(IServiceProvider)
-  href: api/XData.XDataManager.html#XData_XDataManager_InitXData_System_IServiceProvider_
-  commentId: M:XData.XDataManager.InitXData(System.IServiceProvider)
-  fullName: XData.XDataManager.InitXData(System.IServiceProvider)
-  nameWithType: XDataManager.InitXData(IServiceProvider)
-- uid: XData.XDataManager.InitXData*
-  name: InitXData
-  href: api/XData.XDataManager.html#XData_XDataManager_InitXData_
-  commentId: Overload:XData.XDataManager.InitXData
-  isSpec: "True"
-  fullName: XData.XDataManager.InitXData
-  nameWithType: XDataManager.InitXData
 - uid: XData.XDataManager.Resources
   name: Resources
   href: api/XData.XDataManager.html#XData_XDataManager_Resources
   commentId: F:XData.XDataManager.Resources
   fullName: XData.XDataManager.Resources
   nameWithType: XDataManager.Resources
-- uid: XData.XDataManager.ServiceProvider
-  name: ServiceProvider
-  href: api/XData.XDataManager.html#XData_XDataManager_ServiceProvider
-  commentId: P:XData.XDataManager.ServiceProvider
-  fullName: XData.XDataManager.ServiceProvider
-  nameWithType: XDataManager.ServiceProvider
-- uid: XData.XDataManager.ServiceProvider*
-  name: ServiceProvider
-  href: api/XData.XDataManager.html#XData_XDataManager_ServiceProvider_
-  commentId: Overload:XData.XDataManager.ServiceProvider
+- uid: XData.XDataManager.UseXDataDependencies(System.IServiceProvider)
+  name: UseXDataDependencies(IServiceProvider)
+  href: api/XData.XDataManager.html#XData_XDataManager_UseXDataDependencies_System_IServiceProvider_
+  commentId: M:XData.XDataManager.UseXDataDependencies(System.IServiceProvider)
+  fullName: XData.XDataManager.UseXDataDependencies(System.IServiceProvider)
+  nameWithType: XDataManager.UseXDataDependencies(IServiceProvider)
+- uid: XData.XDataManager.UseXDataDependencies*
+  name: UseXDataDependencies
+  href: api/XData.XDataManager.html#XData_XDataManager_UseXDataDependencies_
+  commentId: Overload:XData.XDataManager.UseXDataDependencies
   isSpec: "True"
-  fullName: XData.XDataManager.ServiceProvider
-  nameWithType: XDataManager.ServiceProvider
+  fullName: XData.XDataManager.UseXDataDependencies
+  nameWithType: XDataManager.UseXDataDependencies
 - uid: XData.XDataPureLinqMethodAttribute
   name: XDataPureLinqMethodAttribute
   href: api/XData.XDataPureLinqMethodAttribute.html

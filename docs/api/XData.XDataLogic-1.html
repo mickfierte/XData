@@ -217,6 +217,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected TDict GetDictionaryValue&lt;TDict&gt;(Expression&lt;Func&lt;TDict, bool&gt;&gt; findExpression, Guid layer, string alias = null, string context = null, ISecuritySession security = null, params Variable[] variables)
+
     where TDict : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -305,6 +306,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected IRepository&lt;TRep&gt; GetRepository&lt;TRep&gt;(Guid layer, string alias = null, string context = null, ISecuritySession security = null, params Variable[] variables)
+
     where TRep : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
