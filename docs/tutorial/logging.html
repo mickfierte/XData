@@ -100,6 +100,14 @@
     } 
   }
 }
+</code></pre><p>or in code</p>
+<pre><code class="lang-csharp">services.AddLogging(x =&gt; x.AddFilter(&quot;XData&quot;,
+#if DEBUG
+    LogLevel.Debug
+#else
+    LogLevel.Information
+#endif
+    ).AddDebug().AddConsole());
 </code></pre><p>* (version .Net 4.0)
 <em>System.Diagnostics.Trace</em> switch name for XData log messages is &quot;logLevelSwitch&quot;. See System.Diagnostics.Trace <a href="https://msdn.microsoft.com/en-en/windows/desktop/system.diagnostics.traceswitch">documentation</a> for details.</p>
 <p><em>log4net</em> requires no specific constants to configure log messages severity level. See log4net <a href="https://logging.apache.org/log4net/release/config-examples.html">documentation</a> to obtain configuration details.</p>

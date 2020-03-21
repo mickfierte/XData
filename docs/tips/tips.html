@@ -249,7 +249,7 @@ return found.SetDeleted(true).Submit();
 dataScope.GetRepository&lt;Some&gt;()
     .Do(x =&gt; x.Instance.GetChild&lt;Child&gt;(z =&gt; z.Childs),
         x =&gt; detachedObj.WithJsonSettings(
-            z =&gt; z.DeleteFlag(y =&gt; y.Childs, y =&gt; z.Deleted)))
+            z =&gt; z.DeleteFlag(y =&gt; y.Childs, y =&gt; y.Deleted)))
     .Apply(detachedObj).Submit();
 </code></pre><p>See <a href="../tutorial/mapping/master_detail.html">Master-detail relations</a> to get more information about linking objects with Master-detail relations.</p>
 <h3 id="asynchronious-wrapped-operations">Asynchronious wrapped operations</h3>
