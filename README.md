@@ -73,8 +73,6 @@ To get XData NuGet packages You will need moify nuget.config as described below 
 ```
 \* _*replace API_KEY with API key provided by author*_
 
->Some "temporary implementation features" of the NuGet server inside GitHub packages require you to enable the "Include prerelease" switch and not pay attention to the mismatch of the package description fields. Hope it gets better soon.
-
 ### Net 4.0
 
 >1) Install Nuget package of XData [engine package](https://github.com/mickfierte/XData/packages/95851/).
