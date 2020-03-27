@@ -242,20 +242,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_Add__1_System_Linq_IQueryable___0__XData_Mapping___0__0__.md&amp;value=---%0Auid%3A%20XData.IRepository%601.Add%60%601(System.Linq.IQueryable%7B%60%600%7D%2CXData.Mapping%7B%60%600%2C%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_Add__1_System_Collections_Generic_IEnumerable___0__XData_Mapping___0__0__XData_DataSubmitFlag_.md&amp;value=---%0Auid%3A%20XData.IRepository%601.Add%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CXData.Mapping%7B%60%600%2C%600%7D%2CXData.DataSubmitFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L493">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L494">View Source</a>
   </span>
   <a id="XData_IRepository_1_Add_" data-uid="XData.IRepository`1.Add*"></a>
-  <h4 id="XData_IRepository_1_Add__1_System_Linq_IQueryable___0__XData_Mapping___0__0__" data-uid="XData.IRepository`1.Add``1(System.Linq.IQueryable{``0},XData.Mapping{``0,`0})">Add&lt;TFrom&gt;(IQueryable&lt;TFrom&gt;, Mapping&lt;TFrom, T&gt;)</h4>
+  <h4 id="XData_IRepository_1_Add__1_System_Collections_Generic_IEnumerable___0__XData_Mapping___0__0__XData_DataSubmitFlag_" data-uid="XData.IRepository`1.Add``1(System.Collections.Generic.IEnumerable{``0},XData.Mapping{``0,`0},XData.DataSubmitFlag)">Add&lt;TFrom&gt;(IEnumerable&lt;TFrom&gt;, Mapping&lt;TFrom, T&gt;, DataSubmitFlag)</h4>
   <div class="markdown level1 summary"><p>Copy objects from source repository</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool Add&lt;TFrom&gt;(IQueryable&lt;TFrom&gt; source, Mapping&lt;TFrom, T&gt; mapping = null)
-
+    <pre><code class="lang-csharp hljs">bool Add&lt;TFrom&gt;(IEnumerable&lt;TFrom&gt; source, Mapping&lt;TFrom, T&gt; mapping = null, DataSubmitFlag flag = DataSubmitFlag.None)
     where TFrom : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -269,7 +268,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.iqueryable-1">IQueryable</a>&lt;TFrom&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TFrom&gt;</td>
         <td><span class="parametername">source</span></td>
         <td><p>Source repository</p>
 </td>
@@ -278,6 +277,12 @@
         <td><a class="xref" href="XData.Mapping-2.html">Mapping</a>&lt;TFrom, T&gt;</td>
         <td><span class="parametername">mapping</span></td>
         <td><p>Data mapping</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.DataSubmitFlag.html">DataSubmitFlag</a></td>
+        <td><span class="parametername">flag</span></td>
+        <td><p>Submit flag</p>
 </td>
       </tr>
     </tbody>
@@ -334,7 +339,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_IRepository_1_Add__1_System_Linq_IQueryable___0__XData_Mapping___0__0___seealso">See Also</h5>
+  <h5 id="XData_IRepository_1_Add__1_System_Collections_Generic_IEnumerable___0__XData_Mapping___0__0__XData_DataSubmitFlag__seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="XData.Mapping-2.html">Mapping</a>&lt;TFrom, T&gt;</div>
   </div>
@@ -343,7 +348,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0____.md&amp;value=---%0Auid%3A%20XData.IRepository%601.Attach(%600%2CXData.DataObjectState%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.Object%7D%7D%2CXData.AttachedHandler%7B%600%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L529">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L530">View Source</a>
   </span>
   <a id="XData_IRepository_1_Attach_" data-uid="XData.IRepository`1.Attach*"></a>
   <h4 id="XData_IRepository_1_Attach__0_XData_DataObjectState_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_AttachedHandler__0____" data-uid="XData.IRepository`1.Attach(`0,XData.DataObjectState,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.Object}},XData.AttachedHandler{`0}[])">Attach(T, DataObjectState, IEnumerable&lt;KeyValuePair&lt;String, Object&gt;&gt;, AttachedHandler&lt;T&gt;[])</h4>
@@ -445,7 +450,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_AttachNewObjects_System_Collections_Generic_IEnumerable__0__XData_AttachedHandler__0____.md&amp;value=---%0Auid%3A%20XData.IRepository%601.AttachNewObjects(System.Collections.Generic.IEnumerable%7B%600%7D%2CXData.AttachedHandler%7B%600%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L550">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L551">View Source</a>
   </span>
   <a id="XData_IRepository_1_AttachNewObjects_" data-uid="XData.IRepository`1.AttachNewObjects*"></a>
   <h4 id="XData_IRepository_1_AttachNewObjects_System_Collections_Generic_IEnumerable__0__XData_AttachedHandler__0____" data-uid="XData.IRepository`1.AttachNewObjects(System.Collections.Generic.IEnumerable{`0},XData.AttachedHandler{`0}[])">AttachNewObjects(IEnumerable&lt;T&gt;, AttachedHandler&lt;T&gt;[])</h4>
@@ -614,7 +619,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_ClearAttachedObjects.md&amp;value=---%0Auid%3A%20XData.IRepository%601.ClearAttachedObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L566">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L567">View Source</a>
   </span>
   <a id="XData_IRepository_1_ClearAttachedObjects_" data-uid="XData.IRepository`1.ClearAttachedObjects*"></a>
   <h4 id="XData_IRepository_1_ClearAttachedObjects" data-uid="XData.IRepository`1.ClearAttachedObjects">ClearAttachedObjects()</h4>
@@ -669,7 +674,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_Detach_System_Predicate__0__.md&amp;value=---%0Auid%3A%20XData.IRepository%601.Detach(System.Predicate%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L559">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L560">View Source</a>
   </span>
   <a id="XData_IRepository_1_Detach_" data-uid="XData.IRepository`1.Detach*"></a>
   <h4 id="XData_IRepository_1_Detach_System_Predicate__0__" data-uid="XData.IRepository`1.Detach(System.Predicate{`0})">Detach(Predicate&lt;T&gt;)</h4>
@@ -745,7 +750,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_Execute_System_String_System_Collections_Generic_IEnumerable__0__System_Collections_Generic_IDictionary_System_String_System_Action_System_Byte_____System_Collections_Generic_IDictionary_System_String_System_Func_System_Byte___System_Byte_____.md&amp;value=---%0Auid%3A%20XData.IRepository%601.Execute(System.String%2CSystem.Collections.Generic.IEnumerable%7B%600%7D%2CSystem.Collections.Generic.IDictionary%7BSystem.String%2CSystem.Action%7BSystem.Byte%5B%5D%7D%7D%2CSystem.Collections.Generic.IDictionary%7BSystem.String%2CSystem.Func%7BSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L506">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L507">View Source</a>
   </span>
   <a id="XData_IRepository_1_Execute_" data-uid="XData.IRepository`1.Execute*"></a>
   <h4 id="XData_IRepository_1_Execute_System_String_System_Collections_Generic_IEnumerable__0__System_Collections_Generic_IDictionary_System_String_System_Action_System_Byte_____System_Collections_Generic_IDictionary_System_String_System_Func_System_Byte___System_Byte_____" data-uid="XData.IRepository`1.Execute(System.String,System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IDictionary{System.String,System.Action{System.Byte[]}},System.Collections.Generic.IDictionary{System.String,System.Func{System.Byte[],System.Byte[]}})">Execute(String, IEnumerable&lt;T&gt;, IDictionary&lt;String, Action&lt;Byte[]&gt;&gt;, IDictionary&lt;String, Func&lt;Byte[], Byte[]&gt;&gt;)</h4>
@@ -840,7 +845,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_String_XData_Interfaces_ISecuritySession_XData_Variable___.md&amp;value=---%0Auid%3A%20XData.IRepository%601.GetChild%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%5B%5D%7D%7D%2CSystem.String%2CXData.Interfaces.ISecuritySession%2CXData.Variable%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L621">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L622">View Source</a>
   </span>
   <a id="XData_IRepository_1_GetChild_" data-uid="XData.IRepository`1.GetChild*"></a>
   <h4 id="XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_String_XData_Interfaces_ISecuritySession_XData_Variable___" data-uid="XData.IRepository`1.GetChild``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.String,XData.Interfaces.ISecuritySession,XData.Variable[])">GetChild&lt;TChild&gt;(Expression&lt;Func&lt;T, TChild[]&gt;&gt;, String, ISecuritySession, Variable[])</h4>
@@ -850,7 +855,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;TChild&gt; GetChild&lt;TChild&gt;(Expression&lt;Func&lt;T, TChild[]&gt;&gt; property, string alias = null, ISecuritySession security = null, params Variable[] variables)
-
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -955,7 +959,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_XData_Interfaces_ISecuritySession_XData_Variable___.md&amp;value=---%0Auid%3A%20XData.IRepository%601.GetChild%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CSystem.String%2CXData.Interfaces.ISecuritySession%2CXData.Variable%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L606">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L607">View Source</a>
   </span>
   <a id="XData_IRepository_1_GetChild_" data-uid="XData.IRepository`1.GetChild*"></a>
   <h4 id="XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_XData_Interfaces_ISecuritySession_XData_Variable___" data-uid="XData.IRepository`1.GetChild``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String,XData.Interfaces.ISecuritySession,XData.Variable[])">GetChild&lt;TChild&gt;(Expression&lt;Func&lt;T, TChild&gt;&gt;, String, ISecuritySession, Variable[])</h4>
@@ -965,7 +969,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepository&lt;TChild&gt; GetChild&lt;TChild&gt;(Expression&lt;Func&lt;T, TChild&gt;&gt; property, string alias = null, ISecuritySession security = null, params Variable[] variables)
-
     where TChild : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1388,7 +1391,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_SetAttachedHandlers__0__XData_AttachedHandler__0____.md&amp;value=---%0Auid%3A%20XData.IRepository%601.SetAttachedHandlers(%600%40%2CXData.AttachedHandler%7B%600%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L581">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L582">View Source</a>
   </span>
   <a id="XData_IRepository_1_SetAttachedHandlers_" data-uid="XData.IRepository`1.SetAttachedHandlers*"></a>
   <h4 id="XData_IRepository_1_SetAttachedHandlers__0__XData_AttachedHandler__0____" data-uid="XData.IRepository`1.SetAttachedHandlers(`0@,XData.AttachedHandler{`0}[])">SetAttachedHandlers(ref T, AttachedHandler&lt;T&gt;[])</h4>
@@ -1459,7 +1462,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IRepository_1_SetAttachedHandlers_XData_RepositoryAttachedHandler__0____.md&amp;value=---%0Auid%3A%20XData.IRepository%601.SetAttachedHandlers(XData.RepositoryAttachedHandler%7B%600%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L591">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Interfaces.cs/#L592">View Source</a>
   </span>
   <a id="XData_IRepository_1_SetAttachedHandlers_" data-uid="XData.IRepository`1.SetAttachedHandlers*"></a>
   <h4 id="XData_IRepository_1_SetAttachedHandlers_XData_RepositoryAttachedHandler__0____" data-uid="XData.IRepository`1.SetAttachedHandlers(XData.RepositoryAttachedHandler{`0}[])">SetAttachedHandlers(RepositoryAttachedHandler&lt;T&gt;[])</h4>
@@ -2055,6 +2058,273 @@
   </div>
   <div>
       <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ToArrayAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.ToArrayAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ToArrayAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_">AsyncExtensions.ToArrayAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ToListAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.ToListAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ToListAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_">AsyncExtensions.ToListAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ToDictionaryAsync__3_System_Linq_IQueryable___0__System_Func___0___1__System_Func___0___2__">AsyncExtensions.ToDictionaryAsync&lt;T, TKey, TValue&gt;(IQueryable&lt;T&gt;, Func&lt;T, TKey&gt;, Func&lt;T, TValue&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ToDictionaryAsync__3_System_Linq_IQueryable___0__System_Func___0___1__System_Func___0___2__System_Threading_CancellationToken_">AsyncExtensions.ToDictionaryAsync&lt;T, TKey, TValue&gt;(IQueryable&lt;T&gt;, Func&lt;T, TKey&gt;, Func&lt;T, TValue&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Func___0_System_Threading_Tasks_Task__">AsyncExtensions.ForEachAsync&lt;T&gt;(IQueryable&lt;T&gt;, Func&lt;T, Task&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Func___0_System_Threading_Tasks_Task__System_Threading_CancellationToken_">AsyncExtensions.ForEachAsync&lt;T&gt;(IQueryable&lt;T&gt;, Func&lt;T, Task&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Action___0__">AsyncExtensions.ForEachAsync&lt;T&gt;(IQueryable&lt;T&gt;, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ForEachAsync__1_System_Linq_IQueryable___0__System_Action___0__System_Threading_CancellationToken_">AsyncExtensions.ForEachAsync&lt;T&gt;(IQueryable&lt;T&gt;, Action&lt;T&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AllAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">AsyncExtensions.AllAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AllAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_">AsyncExtensions.AllAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AnyAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.AnyAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AnyAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">AsyncExtensions.AnyAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AnyAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_">AsyncExtensions.AnyAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_System_Func___0_System_Object____">AsyncExtensions.ContainsAsync&lt;T&gt;(IQueryable&lt;T&gt;, T, Func&lt;T, Object&gt;[])</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken___0_System_Func___0_System_Object____">AsyncExtensions.ContainsAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken, T, Func&lt;T, Object&gt;[])</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_System_Collections_Generic_IEqualityComparer___0__">AsyncExtensions.ContainsAsync&lt;T&gt;(IQueryable&lt;T&gt;, T, IEqualityComparer&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_ContainsAsync__1_System_Linq_IQueryable___0____0_System_Collections_Generic_IEqualityComparer___0__System_Threading_CancellationToken_">AsyncExtensions.ContainsAsync&lt;T&gt;(IQueryable&lt;T&gt;, T, IEqualityComparer&lt;T&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.FirstAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">AsyncExtensions.FirstAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_FirstAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_">AsyncExtensions.FirstAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.FirstOrDefaultAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">AsyncExtensions.FirstOrDefaultAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_FirstOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_">AsyncExtensions.FirstOrDefaultAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.SingleAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">AsyncExtensions.SingleAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SingleAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_">AsyncExtensions.SingleAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.SingleOrDefaultAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">AsyncExtensions.SingleOrDefaultAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SingleOrDefaultAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_">AsyncExtensions.SingleOrDefaultAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_CountAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.CountAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_CountAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_">AsyncExtensions.CountAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_CountAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">AsyncExtensions.CountAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_CountAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_">AsyncExtensions.CountAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_LongCountAsync__1_System_Linq_IQueryable___0__">AsyncExtensions.LongCountAsync&lt;T&gt;(IQueryable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_LongCountAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_">AsyncExtensions.LongCountAsync&lt;T&gt;(IQueryable&lt;T&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_LongCountAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">AsyncExtensions.LongCountAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_LongCountAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Threading_CancellationToken_">AsyncExtensions.LongCountAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Boolean&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_MaxAsync__2_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0___1___">AsyncExtensions.MaxAsync&lt;T, TResult&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_MaxAsync__2_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0___1___System_Threading_CancellationToken_">AsyncExtensions.MaxAsync&lt;T, TResult&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, TResult&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_MinAsync__2_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0___1___">AsyncExtensions.MinAsync&lt;T, TResult&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_MinAsync__2_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0___1___System_Threading_CancellationToken_">AsyncExtensions.MinAsync&lt;T, TResult&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, TResult&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Single___">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Single&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Single___System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Single&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Double___">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Double&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Double___System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Double&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Decimal___">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Decimal&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Decimal___System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Decimal&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int32___">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Int32&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int32___System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Int32&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int64___">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Int64&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int64___System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Int64&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Single&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Single&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Double&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Double&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Decimal&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Decimal&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Int32&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Int32&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Int64&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_AverageAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____System_Threading_CancellationToken_">AsyncExtensions.AverageAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Int64&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Single___">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Single&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Single___System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Single&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Double___">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Double&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Double___System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Double&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Decimal___">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Decimal&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Decimal___System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Decimal&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int32___">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Int32&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int32___System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Int32&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int64___">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Int64&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Int64___System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Int64&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Single&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Single____System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Single&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Double&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Double____System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Double&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Decimal&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Decimal____System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Decimal&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Int32&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int32____System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Int32&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Int64&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_SumAsync__1_System_Linq_IQueryable___0__System_Linq_Expressions_Expression_System_Func___0_System_Nullable_System_Int64____System_Threading_CancellationToken_">AsyncExtensions.SumAsync&lt;T&gt;(IQueryable&lt;T&gt;, Expression&lt;Func&lt;T, Nullable&lt;Int64&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_GetParameterAsync__1_XData_IDataQuery_System_String_System_Threading_CancellationToken_">AsyncExtensions.GetParameterAsync&lt;T&gt;(IDataQuery, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_GetParameterAsync__1_XData_IDataQuery_System_String_">AsyncExtensions.GetParameterAsync&lt;T&gt;(IDataQuery, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_GetResultSetAsync__1_XData_IDataQuery_System_String_System_Threading_CancellationToken_">AsyncExtensions.GetResultSetAsync&lt;TRes&gt;(IDataQuery, String, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_GetResultSetAsync__1_XData_IDataQuery_System_String_">AsyncExtensions.GetResultSetAsync&lt;TRes&gt;(IDataQuery, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_GetResultSetAsync__1_XData_IDataQuery_System_Linq_Expressions_Expression_System_Func_System_Collections_Generic_IEnumerable___0____System_Threading_CancellationToken_">AsyncExtensions.GetResultSetAsync&lt;TRes&gt;(IDataQuery, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt;, CancellationToken)</a>
+  </div>
+  <div>
+      <a class="xref" href="XData.Async.AsyncExtensions.html#XData_Async_AsyncExtensions_GetResultSetAsync__1_XData_IDataQuery_System_Linq_Expressions_Expression_System_Func_System_Collections_Generic_IEnumerable___0____">AsyncExtensions.GetResultSetAsync&lt;TRes&gt;(IDataQuery, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt;)</a>
   </div>
   <div>
       <a class="xref" href="XData.Extensions.CollectionsExtensions.html#XData_Extensions_CollectionsExtensions_ToSortedSet__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__">CollectionsExtensions.ToSortedSet&lt;T&gt;(IEnumerable&lt;T&gt;, IComparer&lt;T&gt;)</a>

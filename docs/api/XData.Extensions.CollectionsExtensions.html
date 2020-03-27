@@ -409,7 +409,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool HasSameValuesAs&lt;TKey, TValue&gt;(this ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; source, ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; other)
-
     where TValue : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -487,7 +486,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool HasSameValuesAs&lt;TKey, TValue&gt;(this IDictionary&lt;TKey, TValue&gt; source, IDictionary&lt;TKey, TValue&gt; other)
-
     where TValue : IEquatable&lt;TValue&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -895,7 +893,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SortedList&lt;TKey, TValue&gt; ToSortedList&lt;TKey, TValue&gt;(this IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; pairs)
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -968,7 +965,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static SortedList&lt;TKey, List&lt;TValue&gt;&gt; ToSortedList&lt;TKey, TValue&gt;(this IEnumerable&lt;IGrouping&lt;TKey, TValue&gt;&gt; groupings)
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1116,7 +1112,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static object TryGetValue&lt;TKey, TValue&gt;(this IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; source, TKey key)
-
     where TKey : IEquatable&lt;TKey&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

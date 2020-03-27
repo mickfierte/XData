@@ -170,7 +170,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Apply&lt;T&gt;(this IRepository&lt;T&gt; repository, T source, params string[] properties)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -250,7 +249,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Apply&lt;T&gt;(this IRepository&lt;T&gt; repository, T source, ApplyFlag flags, params string[] properties)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -336,7 +334,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool AssignProperty&lt;T, TValue&gt;(this T obj, string prop, TValue value)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -437,7 +434,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string AsString&lt;T&gt;(this IQueryable&lt;T&gt; queryable)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -508,7 +504,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Callback&lt;T&gt;(this T obj, string message, ref byte[] data)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -577,7 +572,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_CheckState__1___0_XData_DataObjectState_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.CheckState%60%601(%60%600%2CXData.DataObjectState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1554">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1555">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_CheckState_" data-uid="XData.DataObjectExtensions.CheckState*"></a>
   <h4 id="XData_DataObjectExtensions_CheckState__1___0_XData_DataObjectState_" data-uid="XData.DataObjectExtensions.CheckState``1(``0,XData.DataObjectState)">CheckState&lt;T&gt;(T, DataObjectState)</h4>
@@ -587,7 +582,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool CheckState&lt;T&gt;(this T obj, DataObjectState state)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -682,7 +676,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Copy&lt;T&gt;(this T target, T source, params string[] properties)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -762,7 +755,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Copy&lt;T&gt;(this T target, T source, ApplyFlag flags, params string[] properties)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -848,7 +840,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Execute&lt;T&gt;(this T obj, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt; routine, IDictionary&lt;string, Action&lt;byte[]&gt;&gt; post = null, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; callback = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -961,7 +952,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Execute&lt;T&gt;(this T obj, string key, IDictionary&lt;string, Action&lt;byte[]&gt;&gt; post = null, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; callback = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1069,7 +1059,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Execute&lt;T&gt;(this ICollection&lt;T&gt; objects, Expression&lt;Func&lt;CustomLogic&lt;T&gt;&gt;&gt; routine, IDictionary&lt;string, Action&lt;byte[]&gt;&gt; post = null, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; callback = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1182,7 +1171,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Execute&lt;T&gt;(this ICollection&lt;T&gt; objects, string key, IDictionary&lt;string, Action&lt;byte[]&gt;&gt; post = null, IDictionary&lt;string, Func&lt;byte[], byte[]&gt;&gt; callback = null)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1280,7 +1268,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_Find__1_XData_IRepository___0____0_System_Boolean_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.Find%60%601(XData.IRepository%7B%60%600%7D%2C%60%600%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L892">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L893">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_Find_" data-uid="XData.DataObjectExtensions.Find*"></a>
   <h4 id="XData_DataObjectExtensions_Find__1_XData_IRepository___0____0_System_Boolean_" data-uid="XData.DataObjectExtensions.Find``1(XData.IRepository{``0},``0,System.Boolean)">Find&lt;T&gt;(IRepository&lt;T&gt;, T, Boolean)</h4>
@@ -1290,7 +1278,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Find&lt;T&gt;(this IRepository&lt;T&gt; repository, T source, bool ignoreConcurrency = false)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1360,7 +1347,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_FindMemberExpression_System_Linq_Expressions_Expression_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.FindMemberExpression(System.Linq.Expressions.Expression)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1224">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1225">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_FindMemberExpression_" data-uid="XData.DataObjectExtensions.FindMemberExpression*"></a>
   <h4 id="XData_DataObjectExtensions_FindMemberExpression_System_Linq_Expressions_Expression_" data-uid="XData.DataObjectExtensions.FindMemberExpression(System.Linq.Expressions.Expression)">FindMemberExpression(Expression)</h4>
@@ -1561,7 +1548,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetParameter__1_XData_IDataQuery_System_String_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetParameter%60%601(XData.IDataQuery%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1115">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1116">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetParameter_" data-uid="XData.DataObjectExtensions.GetParameter*"></a>
   <h4 id="XData_DataObjectExtensions_GetParameter__1_XData_IDataQuery_System_String_" data-uid="XData.DataObjectExtensions.GetParameter``1(XData.IDataQuery,System.String)">GetParameter&lt;T&gt;(IDataQuery, String)</h4>
@@ -1652,7 +1639,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetParameter__2___0_System_Linq_Expressions_Expression_System_Func___0___1___.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetParameter%60%602(%60%600%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2C%60%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1082">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1083">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetParameter_" data-uid="XData.DataObjectExtensions.GetParameter*"></a>
   <h4 id="XData_DataObjectExtensions_GetParameter__2___0_System_Linq_Expressions_Expression_System_Func___0___1___" data-uid="XData.DataObjectExtensions.GetParameter``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}})">GetParameter&lt;T, TRet&gt;(T, Expression&lt;Func&lt;T, TRet&gt;&gt;)</h4>
@@ -1662,7 +1649,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetParameter&lt;T, TRet&gt;(this T obj, Expression&lt;Func&lt;T, TRet&gt;&gt; param)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1747,7 +1733,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetParameter__2___0_System_String_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetParameter%60%602(%60%600%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1063">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1064">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetParameter_" data-uid="XData.DataObjectExtensions.GetParameter*"></a>
   <h4 id="XData_DataObjectExtensions_GetParameter__2___0_System_String_" data-uid="XData.DataObjectExtensions.GetParameter``2(``0,System.String)">GetParameter&lt;T, TRet&gt;(T, String)</h4>
@@ -1757,7 +1743,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetParameter&lt;T, TRet&gt;(this T obj, string param)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1846,7 +1831,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetParameter__2_XData_IDataQuery___0__System_Linq_Expressions_Expression_System_Func___0___1___.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetParameter%60%602(XData.IDataQuery%7B%60%600%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2C%60%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1101">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1102">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetParameter_" data-uid="XData.DataObjectExtensions.GetParameter*"></a>
   <h4 id="XData_DataObjectExtensions_GetParameter__2_XData_IDataQuery___0__System_Linq_Expressions_Expression_System_Func___0___1___" data-uid="XData.DataObjectExtensions.GetParameter``2(XData.IDataQuery{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">GetParameter&lt;T, TRet&gt;(IDataQuery&lt;T&gt;, Expression&lt;Func&lt;T, TRet&gt;&gt;)</h4>
@@ -1856,7 +1841,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetParameter&lt;T, TRet&gt;(this IDataQuery&lt;T&gt; query, Expression&lt;Func&lt;T, TRet&gt;&gt; param)
-
     where T : class, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1951,7 +1935,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; GetProperties&lt;T&gt;(this T obj, IEnumerable&lt;string&gt; props, DataVersion version = DataVersion.Actual)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2051,7 +2034,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; GetProperties&lt;T&gt;(this T obj, params string[] props)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2128,7 +2110,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt; GetProperties&lt;T&gt;(this T obj, DataVersion version = DataVersion.Actual, params string[] props)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2303,7 +2284,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetProperty&lt;T, TRet&gt;(this T obj, Expression&lt;Func&lt;T, TRet&gt;&gt; prop)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2398,7 +2378,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TRet GetProperty&lt;T, TRet&gt;(this T obj, Expression&lt;Func&lt;T, TRet&gt;&gt; prop, DataVersion version)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2489,7 +2468,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetRepository__1___0_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetRepository%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1362">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1363">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetRepository_" data-uid="XData.DataObjectExtensions.GetRepository*"></a>
   <h4 id="XData_DataObjectExtensions_GetRepository__1___0_" data-uid="XData.DataObjectExtensions.GetRepository``1(``0)">GetRepository&lt;T&gt;(T)</h4>
@@ -2499,7 +2478,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IRepository&lt;T&gt; GetRepository&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2638,7 +2616,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetResultSet__1_XData_IDataQuery_System_Linq_Expressions_Expression_System_Func_System_Collections_Generic_IEnumerable___0____.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetResultSet%60%601(XData.IDataQuery%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BSystem.Collections.Generic.IEnumerable%7B%60%600%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1169">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1170">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetResultSet_" data-uid="XData.DataObjectExtensions.GetResultSet*"></a>
   <h4 id="XData_DataObjectExtensions_GetResultSet__1_XData_IDataQuery_System_Linq_Expressions_Expression_System_Func_System_Collections_Generic_IEnumerable___0____" data-uid="XData.DataObjectExtensions.GetResultSet``1(XData.IDataQuery,System.Linq.Expressions.Expression{System.Func{System.Collections.Generic.IEnumerable{``0}}})">GetResultSet&lt;TRes&gt;(IDataQuery, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt;)</h4>
@@ -2648,7 +2626,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;TRes&gt;(this IDataQuery query, Expression&lt;Func&lt;IEnumerable&lt;TRes&gt;&gt;&gt; resultSetName)
-
     where TRes : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2732,7 +2709,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetResultSet__1_XData_IDataQuery_System_String_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetResultSet%60%601(XData.IDataQuery%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1150">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1151">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetResultSet_" data-uid="XData.DataObjectExtensions.GetResultSet*"></a>
   <h4 id="XData_DataObjectExtensions_GetResultSet__1_XData_IDataQuery_System_String_" data-uid="XData.DataObjectExtensions.GetResultSet``1(XData.IDataQuery,System.String)">GetResultSet&lt;TRes&gt;(IDataQuery, String)</h4>
@@ -2742,7 +2719,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;TRes&gt;(this IDataQuery query, string resultSetName)
-
     where TRes : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2826,7 +2802,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetResultSet__2___0_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetResultSet%60%602(%60%600%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1131">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1132">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetResultSet_" data-uid="XData.DataObjectExtensions.GetResultSet*"></a>
   <h4 id="XData_DataObjectExtensions_GetResultSet__2___0_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____" data-uid="XData.DataObjectExtensions.GetResultSet``2(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}})">GetResultSet&lt;T, TRes&gt;(T, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt;)</h4>
@@ -2836,9 +2812,7 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;T, TRes&gt;(this T obj, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt; resultSetName)
-
     where T : class, IDataObject, new()
-
     where TRes : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2923,7 +2897,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetResultSet__2_XData_IRepository___0__System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetResultSet%60%602(XData.IRepository%7B%60%600%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1189">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1190">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetResultSet_" data-uid="XData.DataObjectExtensions.GetResultSet*"></a>
   <h4 id="XData_DataObjectExtensions_GetResultSet__2_XData_IRepository___0__System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____" data-uid="XData.DataObjectExtensions.GetResultSet``2(XData.IRepository{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}})">GetResultSet&lt;T, TRes&gt;(IRepository&lt;T&gt;, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt;)</h4>
@@ -2933,9 +2907,7 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;TRes&gt; GetResultSet&lt;T, TRes&gt;(this IRepository&lt;T&gt; repository, Expression&lt;Func&lt;T, IEnumerable&lt;TRes&gt;&gt;&gt; resultSetName)
-
     where T : class, IDataObject, new()
-
     where TRes : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3024,7 +2996,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_GetState__1___0_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.GetState%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1530">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1531">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_GetState_" data-uid="XData.DataObjectExtensions.GetState*"></a>
   <h4 id="XData_DataObjectExtensions_GetState__1___0_" data-uid="XData.DataObjectExtensions.GetState``1(``0)">GetState&lt;T&gt;(T)</h4>
@@ -3034,7 +3006,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static DataObjectState GetState&lt;T&gt;(this T obj)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3113,7 +3084,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_IsAttached_XData_IDataObject_System_Type_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.IsAttached(XData.IDataObject%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1431">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1432">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_IsAttached_" data-uid="XData.DataObjectExtensions.IsAttached*"></a>
   <h4 id="XData_DataObjectExtensions_IsAttached_XData_IDataObject_System_Type_" data-uid="XData.DataObjectExtensions.IsAttached(XData.IDataObject,System.Type)">IsAttached(IDataObject, Type)</h4>
@@ -3195,7 +3166,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsChanged&lt;T&gt;(this T obj, params Expression&lt;Func&lt;T, object&gt;&gt;[] prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3285,7 +3255,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsChanged&lt;T&gt;(this T obj, string prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3375,7 +3344,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsCleared&lt;T&gt;(this T obj, string prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3465,7 +3433,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsEmpty&lt;T&gt;(this T obj, Expression&lt;Func&lt;T, object&gt;&gt; prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3555,7 +3522,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsEmpty&lt;T&gt;(this T obj, string prop)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3635,7 +3601,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_LoadLob__1___0_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.LoadLob%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L953">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L954">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_LoadLob_" data-uid="XData.DataObjectExtensions.LoadLob*"></a>
   <h4 id="XData_DataObjectExtensions_LoadLob__1___0_" data-uid="XData.DataObjectExtensions.LoadLob``1(``0)">LoadLob&lt;T&gt;(T)</h4>
@@ -3645,7 +3611,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T LoadLob&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3703,7 +3668,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.LoadLob%60%601(%60%600%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Object%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L919">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L920">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_LoadLob_" data-uid="XData.DataObjectExtensions.LoadLob*"></a>
   <h4 id="XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____" data-uid="XData.DataObjectExtensions.LoadLob``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}}[])">LoadLob&lt;T&gt;(T, Expression&lt;Func&lt;T, Object&gt;&gt;[])</h4>
@@ -3713,7 +3678,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T LoadLob&lt;T&gt;(this T obj, params Expression&lt;Func&lt;T, object&gt;&gt;[] properties)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3777,7 +3741,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_LoadLob__1___0_System_String___.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.LoadLob%60%601(%60%600%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L966">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L967">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_LoadLob_" data-uid="XData.DataObjectExtensions.LoadLob*"></a>
   <h4 id="XData_DataObjectExtensions_LoadLob__1___0_System_String___" data-uid="XData.DataObjectExtensions.LoadLob``1(``0,System.String[])">LoadLob&lt;T&gt;(T, String[])</h4>
@@ -3787,7 +3751,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T LoadLob&lt;T&gt;(this T obj, params string[] properties)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -3861,7 +3824,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Lock&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4089,7 +4051,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Modify&lt;T&gt;(this T obj, params Action&lt;T&gt;[] actions)
-
     where T : class, IDataObject</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4163,7 +4124,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void PostData&lt;T&gt;(this T obj, string message, Func&lt;byte[]&gt; data)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4227,7 +4187,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Refresh&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4295,7 +4254,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IRepository&lt;T&gt; Refresh&lt;T&gt;(this IRepository&lt;T&gt; source)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4353,7 +4311,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_SetAttachedHandlers__1___0_XData_AttachedHandler___0____.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.SetAttachedHandlers%60%601(%60%600%2CXData.AttachedHandler%7B%60%600%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1393">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1394">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_SetAttachedHandlers_" data-uid="XData.DataObjectExtensions.SetAttachedHandlers*"></a>
   <h4 id="XData_DataObjectExtensions_SetAttachedHandlers__1___0_XData_AttachedHandler___0____" data-uid="XData.DataObjectExtensions.SetAttachedHandlers``1(``0,XData.AttachedHandler{``0}[])">SetAttachedHandlers&lt;T&gt;(T, AttachedHandler&lt;T&gt;[])</h4>
@@ -4363,7 +4321,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void SetAttachedHandlers&lt;T&gt;(this T obj, params AttachedHandler&lt;T&gt;[] handlers)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4421,7 +4378,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void SetCurrent&lt;T&gt;(this T obj)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4467,7 +4423,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_SetDeleted__1___0_System_Boolean_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.SetDeleted%60%601(%60%600%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1570">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1571">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_SetDeleted_" data-uid="XData.DataObjectExtensions.SetDeleted*"></a>
   <h4 id="XData_DataObjectExtensions_SetDeleted__1___0_System_Boolean_" data-uid="XData.DataObjectExtensions.SetDeleted``1(``0,System.Boolean)">SetDeleted&lt;T&gt;(T, Boolean)</h4>
@@ -4477,7 +4433,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T SetDeleted&lt;T&gt;(this T obj, bool setState)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4562,7 +4517,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_SetDeleted__1_System_Collections_Generic_ICollection___0__System_Boolean_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.SetDeleted%60%601(System.Collections.Generic.ICollection%7B%60%600%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1593">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1594">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_SetDeleted_" data-uid="XData.DataObjectExtensions.SetDeleted*"></a>
   <h4 id="XData_DataObjectExtensions_SetDeleted__1_System_Collections_Generic_ICollection___0__System_Boolean_" data-uid="XData.DataObjectExtensions.SetDeleted``1(System.Collections.Generic.ICollection{``0},System.Boolean)">SetDeleted&lt;T&gt;(ICollection&lt;T&gt;, Boolean)</h4>
@@ -4572,7 +4527,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static ICollection&lt;T&gt; SetDeleted&lt;T&gt;(this ICollection&lt;T&gt; collection, bool setState)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4657,7 +4611,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_SetFilterValue__2_XData_IRepository___0__System_Linq_Expressions_Expression_System_Func___0___1_____1_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.SetFilterValue%60%602(XData.IRepository%7B%60%600%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2C%60%601%7D%7D%2C%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1209">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1210">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_SetFilterValue_" data-uid="XData.DataObjectExtensions.SetFilterValue*"></a>
   <h4 id="XData_DataObjectExtensions_SetFilterValue__2_XData_IRepository___0__System_Linq_Expressions_Expression_System_Func___0___1_____1_" data-uid="XData.DataObjectExtensions.SetFilterValue``2(XData.IRepository{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},``1)">SetFilterValue&lt;T, TRes&gt;(IRepository&lt;T&gt;, Expression&lt;Func&lt;T, TRes&gt;&gt;, TRes)</h4>
@@ -4667,7 +4621,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IRepository&lt;T&gt; SetFilterValue&lt;T, TRes&gt;(this IRepository&lt;T&gt; repository, Expression&lt;Func&lt;T, TRes&gt;&gt; propertyExpression, TRes filterValue)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4742,7 +4695,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_SetVar__1_System_String___0_.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.SetVar%60%601(System.String%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1375">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1376">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_SetVar_" data-uid="XData.DataObjectExtensions.SetVar*"></a>
   <h4 id="XData_DataObjectExtensions_SetVar__1_System_String___0_" data-uid="XData.DataObjectExtensions.SetVar``1(System.String,``0)">SetVar&lt;T&gt;(String, T)</h4>
@@ -4824,7 +4777,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Submit&lt;T&gt;(this T obj, out T res, DataSubmitFlag flag = DataSubmitFlag.None)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4908,7 +4860,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Submit&lt;T&gt;(this T obj, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings, out T res, DataSubmitFlag flag = DataSubmitFlag.None)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -4998,7 +4949,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Submit&lt;T&gt;(this T obj, DataSubmitFlag flag = DataSubmitFlag.None)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5076,7 +5026,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T[] ToArray&lt;T&gt;(this IEnumerable&lt;T&gt; sourceEnumerable, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5140,7 +5089,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_WithJsonSettings__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.WithJsonSettings%60%601(%60%600%2CSystem.Func%7BXData.Json.JsonSettings%7B%60%600%7D%2CXData.Json.JsonSettings%7B%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L999">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1000">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_WithJsonSettings_" data-uid="XData.DataObjectExtensions.WithJsonSettings*"></a>
   <h4 id="XData_DataObjectExtensions_WithJsonSettings__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___" data-uid="XData.DataObjectExtensions.WithJsonSettings``1(``0,System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})">WithJsonSettings&lt;T&gt;(T, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt;)</h4>
@@ -5150,7 +5099,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T WithJsonSettings&lt;T&gt;(this T obj, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -5214,7 +5162,7 @@ Hint: To get a single property value use GetProperty function.</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_DataObjectExtensions_WithJsonSettings__1_System_Collections_Generic_ICollection___0__System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___.md&amp;value=---%0Auid%3A%20XData.DataObjectExtensions.WithJsonSettings%60%601(System.Collections.Generic.ICollection%7B%60%600%7D%2CSystem.Func%7BXData.Json.JsonSettings%7B%60%600%7D%2CXData.Json.JsonSettings%7B%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1014">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Common/Extensions.cs/#L1015">View Source</a>
   </span>
   <a id="XData_DataObjectExtensions_WithJsonSettings_" data-uid="XData.DataObjectExtensions.WithJsonSettings*"></a>
   <h4 id="XData_DataObjectExtensions_WithJsonSettings__1_System_Collections_Generic_ICollection___0__System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___" data-uid="XData.DataObjectExtensions.WithJsonSettings``1(System.Collections.Generic.ICollection{``0},System.Func{XData.Json.JsonSettings{``0},XData.Json.JsonSettings{``0}})">WithJsonSettings&lt;T&gt;(ICollection&lt;T&gt;, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt;)</h4>
@@ -5224,7 +5172,6 @@ Hint: To get a single property value use GetProperty function.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static ICollection&lt;T&gt; WithJsonSettings&lt;T&gt;(this ICollection&lt;T&gt; collection, Func&lt;JsonSettings&lt;T&gt;, JsonSettings&lt;T&gt;&gt; settings)
-
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

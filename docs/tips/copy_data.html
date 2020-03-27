@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="tips_copy_data.md">
 <h3 id="copy-data">Copy data</h3>
 
-<p>Data can be copied from one repository to another using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Add__1_System_Linq_IQueryable___0__XData_Mapping___0__0__">IRepository&lt;T&gt;.Add&lt;TFrom&gt;</a> method as illustrated in followed example:</p>
+<p>Data can be copied from one repository to another using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Add__1_System_Collections_Generic_IEnumerable___0__XData_Mapping___0__0__XData_DataSubmitFlag_">IRepository&lt;T&gt;.Add&lt;TFrom&gt;</a> method as illustrated in followed example:</p>
 <pre><code class="lang-csharp">// Query source data (statically, or dynamically) into sourceQuery variable 
 var rep = dataScope.GetRepository&lt;Target&gt;();
 using(var tr = dataScope.BeginTransaction())

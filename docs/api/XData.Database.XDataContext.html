@@ -92,6 +92,10 @@ Provides database adapter and SQL builder access</p>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">XDataContext</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -120,7 +124,7 @@ Provides database adapter and SQL builder access</p>
   <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Database_XDataContext_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class XDataContext</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class XDataContext : IDisposable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -129,7 +133,7 @@ Provides database adapter and SQL builder access</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_ConcurrencyErrorId.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.ConcurrencyErrorId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L54">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L73">View Source</a>
   </span>
   <a id="XData_Database_XDataContext_ConcurrencyErrorId_" data-uid="XData.Database.XDataContext.ConcurrencyErrorId*"></a>
   <h4 id="XData_Database_XDataContext_ConcurrencyErrorId" data-uid="XData.Database.XDataContext.ConcurrencyErrorId">ConcurrencyErrorId</h4>
@@ -160,7 +164,7 @@ Provides database adapter and SQL builder access</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_ConnectionInfo.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.ConnectionInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L136">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L155">View Source</a>
   </span>
   <a id="XData_Database_XDataContext_ConnectionInfo_" data-uid="XData.Database.XDataContext.ConnectionInfo*"></a>
   <h4 id="XData_Database_XDataContext_ConnectionInfo" data-uid="XData.Database.XDataContext.ConnectionInfo">ConnectionInfo</h4>
@@ -191,7 +195,7 @@ Provides database adapter and SQL builder access</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_DatabaseAdapter.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.DatabaseAdapter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L30">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L49">View Source</a>
   </span>
   <a id="XData_Database_XDataContext_DatabaseAdapter_" data-uid="XData.Database.XDataContext.DatabaseAdapter*"></a>
   <h4 id="XData_Database_XDataContext_DatabaseAdapter" data-uid="XData.Database.XDataContext.DatabaseAdapter">DatabaseAdapter</h4>
@@ -222,7 +226,7 @@ Provides database adapter and SQL builder access</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_DatabaseDialect.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.DatabaseDialect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L40">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L59">View Source</a>
   </span>
   <a id="XData_Database_XDataContext_DatabaseDialect_" data-uid="XData.Database.XDataContext.DatabaseDialect*"></a>
   <h4 id="XData_Database_XDataContext_DatabaseDialect" data-uid="XData.Database.XDataContext.DatabaseDialect">DatabaseDialect</h4>
@@ -253,7 +257,7 @@ Provides database adapter and SQL builder access</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_DialectName.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.DialectName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L45">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L64">View Source</a>
   </span>
   <a id="XData_Database_XDataContext_DialectName_" data-uid="XData.Database.XDataContext.DialectName*"></a>
   <h4 id="XData_Database_XDataContext_DialectName" data-uid="XData.Database.XDataContext.DialectName">DialectName</h4>
@@ -284,7 +288,7 @@ Provides database adapter and SQL builder access</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_DialectOptions.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.DialectOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L50">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L69">View Source</a>
   </span>
   <a id="XData_Database_XDataContext_DialectOptions_" data-uid="XData.Database.XDataContext.DialectOptions*"></a>
   <h4 id="XData_Database_XDataContext_DialectOptions" data-uid="XData.Database.XDataContext.DialectOptions">DialectOptions</h4>
@@ -315,7 +319,7 @@ Provides database adapter and SQL builder access</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_Name.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L25">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L44">View Source</a>
   </span>
   <a id="XData_Database_XDataContext_Name_" data-uid="XData.Database.XDataContext.Name*"></a>
   <h4 id="XData_Database_XDataContext_Name" data-uid="XData.Database.XDataContext.Name">Name</h4>
@@ -346,7 +350,7 @@ Provides database adapter and SQL builder access</p>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_Proxy.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.Proxy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L35">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L54">View Source</a>
   </span>
   <a id="XData_Database_XDataContext_Proxy_" data-uid="XData.Database.XDataContext.Proxy*"></a>
   <h4 id="XData_Database_XDataContext_Proxy" data-uid="XData.Database.XDataContext.Proxy">Proxy</h4>
@@ -372,6 +376,59 @@ Provides database adapter and SQL builder access</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_Dispose.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L24">View Source</a>
+  </span>
+  <a id="XData_Database_XDataContext_Dispose_" data-uid="XData.Database.XDataContext.Dispose*"></a>
+  <h4 id="XData_Database_XDataContext_Dispose" data-uid="XData.Database.XDataContext.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Database_XDataContext_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20XData.Database.XDataContext.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Database/XDataContext.cs/#L30">View Source</a>
+  </span>
+  <a id="XData_Database_XDataContext_Dispose_" data-uid="XData.Database.XDataContext.Dispose*"></a>
+  <h4 id="XData_Database_XDataContext_Dispose_System_Boolean_" data-uid="XData.Database.XDataContext.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>

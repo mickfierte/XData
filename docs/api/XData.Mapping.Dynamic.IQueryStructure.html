@@ -232,7 +232,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IDataQuery&lt;TResult&gt; Call&lt;TResult&gt;(Guid layer, string resultSetName, params Variable[] variables)
-
     where TResult : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -603,7 +602,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IQueryStructure InnerView&lt;TDobj&gt;(string alias, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -683,7 +681,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IQueryStructure InnerView&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -769,7 +766,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryDescription&lt;TResult&gt; Map&lt;TResult&gt;(Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;TResult&gt;, TResult&gt;&gt; mapper, params Expression&lt;Func&lt;IRepositoryStructureAdapter&lt;TResult&gt;, IExternalLinkDefinition&gt;&gt;[] externalLinks)
-
     where TResult : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1014,7 +1010,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IQueryStructure Return&lt;T&gt;(string alias, string name, int order, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; mapper = null)
-
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1100,7 +1095,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IQueryDescription&lt;TResult&gt; Select&lt;TResult&gt;()
-
     where TResult : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -1157,7 +1151,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IQueryDescription&lt;TResult&gt; Select&lt;TResult&gt;(Expression&lt;Func&lt;IQueryStructureAdapter, TResult&gt;&gt; mapper)
-
     where TResult : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1312,7 +1305,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IQueryStructure Subquery&lt;TDobj&gt;(string alias, Expression&lt;Func&lt;TDobj, object&gt;&gt; property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1404,7 +1396,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IQueryStructure Subquery&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1574,7 +1565,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IQueryStructure With&lt;TRoot&gt;(string alias, IQueryDescription&lt;TRoot&gt; sub, params Expression&lt;Func&lt;IQueryWithAdapter&lt;TRoot&gt;, IQueryWithFlag&gt;&gt;[] attributes)
-
     where TRoot : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

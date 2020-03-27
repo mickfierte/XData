@@ -253,12 +253,33 @@ dataScope.GetRepository&lt;Some&gt;()
     .Apply(detachedObj).Submit();
 </code></pre><p>See <a href="../tutorial/mapping/master_detail.html">Master-detail relations</a> to get more information about linking objects with Master-detail relations.</p>
 <h3 id="asynchronious-wrapped-operations">Asynchronious wrapped operations</h3>
+<div class="WARNING"><h5>Warning</h5><p>Only .Net Core Standard 2.0 version supported asynchronious wrapped operations</p>
+</div>
 <p>To access data with XData inside async methods it&#39;s handy to use asynchronous wrappers declared inside <a class="xref" href="../api/XData.Async.AsyncExtensions.html">XData.Async etxtension methods</a> as illustrated in followed example:</p>
-<pre><code class="lang-csharp">internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine)
+<pre><code class="lang-csharp">using XData.Async;
+...
+internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine, CancellationToken cancellationToken)
 {
     using (var dataScope = dataEngine.NewDataScope(&quot;TEST_POSTGRE_NPG&quot;))
     {
-        return await dataScope.GetRepository&lt;DocType&gt;().ToArrayAsync();
+        return await dataScope.GetRepository&lt;DocType&gt;().ToArrayAsync(cancellationToken);
+    }
+}
+</code></pre><p>Using asynchronously diposable objects requires an additional package <a href="https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/">XData net standard 2.0 Asynchronous Disposable support package</a> and version of .Net Core supporting .Net Core Standard 2.1 specification</p>
+<p>To get asynchronous diposable version of... </p>
+<ul>
+<li><em>IDataScope</em> use <em>NewDataScopeAsync</em> or <em>GetDataScopeAsync</em> extension methods of <em>IDataEngine</em>. </li>
+<li><em>ITransaction</em> use <em>BeginTransactionAsync</em> extension methods of <em>IDataScope</em>. </li>
+<li><em>IRepository&lt;T&gt;</em> use <em>GetRepositoryAsync&lt;T&gt;</em> extension methods of <em>IDataScope</em>.</li>
+</ul>
+<pre><code class="lang-csharp">using XData.Async;
+using XData.AsyncDisposable;
+...
+internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine, CancellationToken cancellationToken)
+{
+    await using (var dataScope = dataEngine.NewDataScopeAsync(&quot;TEST_POSTGRE_NPG&quot;))
+    {
+        return await dataScope.GetRepository&lt;DocType&gt;().ToArrayAsync(cancellationToken);
     }
 }
 </code></pre><h3 id="mapping-view">Mapping view</h3>
@@ -592,7 +613,7 @@ OrgSubType = x.Expr(&quot;org_subtype&quot;,
 </code></pre><h3 id="caching-repository-data">Caching repository data</h3>
 <p>Some data is changed often, some is rarely, but some data will never changed untill application has upgraded. To reduse requery of this static data, XData has mechanism to cache requested data (not a mapped objects) in XData. Repository property <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_FixedQuery">FixedQuery</a> can be assigned to true when caching is required. All LINQ queries will be translated to this cache without requery data from database. When this property resets to false, the cache will erased and repository returns to common algorithms of database requests. Similar feature is used to access rarely changed <a href="dictionary.html">dictionary</a> data over multiple related operative data canges.</p>
 <h3 id="copy-data">Copy data</h3>
-<p>Data can be copied from one repository to another using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Add__1_System_Linq_IQueryable___0__XData_Mapping___0__0__">IRepository&lt;T&gt;.Add&lt;TFrom&gt;</a> method as illustrated in followed example:</p>
+<p>Data can be copied from one repository to another using <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Add__1_System_Collections_Generic_IEnumerable___0__XData_Mapping___0__0__XData_DataSubmitFlag_">IRepository&lt;T&gt;.Add&lt;TFrom&gt;</a> method as illustrated in followed example:</p>
 <pre><code class="lang-csharp">// Query source data (statically, or dynamically) into sourceQuery variable 
 var rep = dataScope.GetRepository&lt;Target&gt;();
 using(var tr = dataScope.BeginTransaction())

@@ -91,7 +91,6 @@
   <h5 id="XData_Mapping_Dynamic_IRepositoryStructure_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IRepositoryStructure&lt;T&gt;
-
     where T : class, ISqlObject, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -481,7 +480,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; InnerView&lt;TDobj&gt;(string alias, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -561,7 +559,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; InnerView&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -946,7 +943,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Return&lt;TResult&gt;(string alias, string name, int order, Expression&lt;Func&lt;IQueryStructureAdapter, T&gt;&gt; mapper = null)
-
     where TResult : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1112,7 +1108,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Subquery&lt;TDobj&gt;(string alias, Expression&lt;Func&lt;TDobj, object&gt;&gt; property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1204,7 +1199,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; Subquery&lt;TDobj&gt;(string alias, IQueryDescription&lt;TDobj&gt; sub, string property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter&lt;T, TDobj&gt;, IFilterDescription&gt;&gt;[] filters)
-
     where TDobj : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1303,7 +1297,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRepositoryStructure&lt;T&gt; With&lt;TRoot&gt;(string alias, IQueryDescription&lt;TRoot&gt; sub, params Expression&lt;Func&lt;IQueryWithAdapter&lt;TRoot&gt;, IQueryWithFlag&gt;&gt;[] attributes)
-
     where TRoot : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

@@ -126,7 +126,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DatabaseAdapter(&quot;NONE&quot;)]
 public abstract class BaseDatabaseAdapter&lt;TConnection, TParameter&gt; : IDatabaseAdapter, IDisposable where TConnection : DbConnection, new()
-
     where TParameter : IDbDataParameter, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -2171,7 +2170,6 @@ Hint: Override this method to use UDT stored procedure parameters</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual T ReadUtd&lt;T&gt;(object utdObject)
-
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -2721,7 +2719,6 @@ WARNING!  Throws a error if test failed!</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual object WrapUtd&lt;T&gt;(T value, string utdTypeName)
-
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
