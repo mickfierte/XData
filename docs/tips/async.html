@@ -91,7 +91,7 @@ internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine, Canc
         return await dataScope.GetRepository&lt;DocType&gt;().ToArrayAsync(cancellationToken);
     }
 }
-</code></pre><p>Using asynchronously diposable objects requires an additional package <a href="https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/">XData net standard 2.0 Asynchronous Disposable support package</a> and version of .Net Core supporting .Net Core Standard 2.1 specification</p>
+</code></pre><p>Using asynchronously diposable objects requires an additional package <a href="https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/">XData net standard 2.0 Asynchronous Disposable support package</a> and supporting of .Net Standard 2.1 specification</p>
 <p>To get asynchronous diposable version of... </p>
 <ul>
 <li><em>IDataScope</em> use <em>NewDataScopeAsync</em> or <em>GetDataScopeAsync</em> extension methods of <em>IDataEngine</em>. </li>

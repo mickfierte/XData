@@ -30,6 +30,8 @@ version 1.1.0
 
 [XData net 4.0 Inversion of Control container package](https://github.com/mickfierte/XData.IoC.Container/packages/135244/) - Support for registering logic modules using the IoC container (Net 4.0 version only, required full Net 4.5 Framework version). Any IoC container with [IDependencyResolver](https://docs.microsoft.com/en-us/previous-versions/aspnet/hh969144(v%3Dvs.118)) interface implementation is supported. Net Standard 2.0 version does not require additional packages since .Net Standard has built-in support for IoC containers
 
+[XData net standard 2.0 Asynchronous Disposable support package](https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/) - Support for [IAsyncDisposable](https://docs.microsoft.com/ru-ru/dotnet/api/system.iasyncdisposable) interface for diposable objects (Net Standard 2.0 version only, required Net Standard 2.1 specification version support)
+
 ## Basic features
 * Single domain object can be mapped on multiple tables (or views, or procedures) in DB. Every DB object can be mapped multiple times in one (or more mappings).
 * _IQueryable_ interface is fully supported.
