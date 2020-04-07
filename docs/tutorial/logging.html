@@ -100,7 +100,11 @@
     } 
   }
 }
-</code></pre><p>or in code</p>
+</code></pre><p>and in code</p>
+<pre><code class="lang-csharp">services.AddLogging(x =&gt; x.ClearProviders()
+    .AddConfiguration(Configuration.GetSection(&quot;Logging&quot;))
+    .AddDebug().AddConsole());
+</code></pre><p>or in code only</p>
 <pre><code class="lang-csharp">services.AddLogging(x =&gt; x.AddFilter(&quot;XData&quot;,
 #if DEBUG
     LogLevel.Debug
