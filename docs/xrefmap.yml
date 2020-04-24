@@ -16446,12 +16446,6 @@ references:
   commentId: T:XData.Interfaces.ILogWriter
   fullName: XData.Interfaces.ILogWriter
   nameWithType: ILogWriter
-- uid: XData.Interfaces.ILogWriter.Write(System.Exception)
-  name: Write(Exception)
-  href: api/XData.Interfaces.ILogWriter.html#XData_Interfaces_ILogWriter_Write_System_Exception_
-  commentId: M:XData.Interfaces.ILogWriter.Write(System.Exception)
-  fullName: XData.Interfaces.ILogWriter.Write(System.Exception)
-  nameWithType: ILogWriter.Write(Exception)
 - uid: XData.Interfaces.ILogWriter.Write(XData.MessageType,System.String)
   name: Write(MessageType, String)
   href: api/XData.Interfaces.ILogWriter.html#XData_Interfaces_ILogWriter_Write_XData_MessageType_System_String_
