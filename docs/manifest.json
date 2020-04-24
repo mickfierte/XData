@@ -864,7 +864,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Adapter.BaseDatabaseAdapter-2.html",
-          "hash": "dmO2szLQvT01au23zIeQSQ=="
+          "hash": "Ydd6axQDh1cZBhlvH/cjhA=="
         }
       },
       "is_incremental": false,
@@ -1020,7 +1020,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Dialect.BaseSqlBuilder.html",
-          "hash": "A9BVVPfkayI0s6E/pEyd0g=="
+          "hash": "VmH6xOq2Mt5zS1x5jKILQg=="
         }
       },
       "is_incremental": false,
@@ -1536,7 +1536,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.AdditionalInfo.html",
-          "hash": "M6NpR5UIlUc9D3ZoBV+ddw=="
+          "hash": "B9gjCGmhuxwjGIo33NSILg=="
         }
       },
       "is_incremental": false,
@@ -1572,7 +1572,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataConcurrencyException.html",
-          "hash": "uqyRjLw4PgdYAd5aFkfjTQ=="
+          "hash": "PHRJxdk1MNpdZY8eUb1mKQ=="
         }
       },
       "is_incremental": false,
@@ -1656,7 +1656,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataRuntimeException.html",
-          "hash": "8Zjate7YS0tRXOFqU53gEQ=="
+          "hash": "mjHtc6JPujqt6sb2+85guA=="
         }
       },
       "is_incremental": false,
@@ -1680,7 +1680,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataSecurityException.html",
-          "hash": "Rf+qCPEh8T7hkB64Lnsqag=="
+          "hash": "HelSUOi82GLDbvKjXQ/01w=="
         }
       },
       "is_incremental": false,
@@ -1692,7 +1692,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Exceptions.XDataSqlException.html",
-          "hash": "Iw9fuHfFxT0RQ8T/0M2Dtg=="
+          "hash": "d58ZFq7KwhLsRncZngJpXQ=="
         }
       },
       "is_incremental": false,
@@ -2196,7 +2196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Interfaces.ILogWriter.html",
-          "hash": "0X5qW9D2nWme5h1vBLBdFw=="
+          "hash": "C8ouFmGzbXPpu9hrDtuNLw=="
         }
       },
       "is_incremental": false,
@@ -2388,7 +2388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Log.html",
-          "hash": "zNCfnSgTXv9Rqzc79YU3Jw=="
+          "hash": "4BBowgQgPNWKTCZDaXLRTw=="
         }
       },
       "is_incremental": false,
@@ -3744,7 +3744,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/first_mapping.html",
-          "hash": "VRiW7TedgMgjmw5Flkk4qg=="
+          "hash": "RBJ0kN9zY9RaSZV182ozbw=="
         }
       },
       "is_incremental": false,
@@ -3756,7 +3756,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/hierarchical.html",
-          "hash": "n7VhNfHs4PJqAXcY8jZMrg=="
+          "hash": "kAOF11ZMZBGsq/JA6m7WTw=="
         }
       },
       "is_incremental": false,
@@ -3768,7 +3768,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/mapping_three.html",
-          "hash": "9P7WzpDuCI/qNQJwPIxeDw=="
+          "hash": "QE4KmekQcSpbpZduQDLhIw=="
         }
       },
       "is_incremental": false,
@@ -3780,7 +3780,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/mapping_two.html",
-          "hash": "K1EGM6a3oD8n6aZl26K/Eg=="
+          "hash": "tAxzecGezzKsYhRfQw6wfg=="
         }
       },
       "is_incremental": false,
@@ -3804,7 +3804,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/trigger.html",
-          "hash": "71c96RNKU96GhwjpAEevgg=="
+          "hash": "cQtUjfJ3yxTZetzo1YOdPQ=="
         }
       },
       "is_incremental": false,
@@ -4296,7 +4296,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/glossary.html",
-          "hash": "WToPfR46iTKMUsp2RwV0sQ=="
+          "hash": "B2G+S97zXClzzmtBEmncdg=="
         }
       },
       "is_incremental": false,
@@ -4392,7 +4392,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/db_diagram.html",
-          "hash": "/DXZPtVTNFAJJuTSQ8WOGg=="
+          "hash": "fb4yI4SgksaxLOjsNwsQdg=="
         }
       },
       "is_incremental": false,
@@ -4419,7 +4419,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/dynamic.html",
-          "hash": "+y0oFDuuUnr8AZ2OBSQChg=="
+          "hash": "WvV5vLtz56lHVu1MQF6DlA=="
         }
       },
       "is_incremental": false,
@@ -4863,7 +4863,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/sample.html",
-          "hash": "13FIWQsnFkljTg1PZrnjvw=="
+          "hash": "59d6xORryBTqbv+zmZc3FA=="
         }
       },
       "is_incremental": false,
@@ -5430,7 +5430,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/sample.html",
-          "hash": "FtTLR4or4kKth8HbntxAgQ=="
+          "hash": "VeeDuWkepjzCKyaoicVaog=="
         }
       },
       "is_incremental": false,
@@ -5445,7 +5445,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/static.html",
-          "hash": "QDI5jJuGSv6n3e1mCyw1GA=="
+          "hash": "hZBNnVvX7MGNVI0HoRouFQ=="
         }
       },
       "is_incremental": false,
@@ -5636,11 +5636,11 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
         "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ResourceDocumentProcessor": {
@@ -5650,11 +5650,10 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 146,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -5663,10 +5662,11 @@
           "total_file_count": 302,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 146,
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }

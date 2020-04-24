@@ -169,7 +169,7 @@ public sealed class AdditionalInfo</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Value { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public object Value { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,13 +181,63 @@ public sealed class AdditionalInfo</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="operators">Operators
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Exceptions_AdditionalInfo_op_Implicit_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_Exceptions_AdditionalInfo.md&amp;value=---%0Auid%3A%20XData.Exceptions.AdditionalInfo.op_Implicit(System.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.Object%7D)~XData.Exceptions.AdditionalInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Exceptions/Exceptions.cs/#L56">View Source</a>
+  </span>
+  <a id="XData_Exceptions_AdditionalInfo_op_Implicit_" data-uid="XData.Exceptions.AdditionalInfo.op_Implicit*"></a>
+  <h4 id="XData_Exceptions_AdditionalInfo_op_Implicit_System_Collections_Generic_KeyValuePair_System_String_System_Object___XData_Exceptions_AdditionalInfo" data-uid="XData.Exceptions.AdditionalInfo.op_Implicit(System.Collections.Generic.KeyValuePair{System.String,System.Object})~XData.Exceptions.AdditionalInfo">Implicit(KeyValuePair&lt;String, Object&gt; to AdditionalInfo)</h4>
+  <div class="markdown level1 summary"><p>Exception additional info</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AdditionalInfo(KeyValuePair&lt;string, object&gt; source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source key value pair</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.AdditionalInfo.html">AdditionalInfo</a></td>
+        <td><p>Exception additional info</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Exceptions_AdditionalInfo_op_Implicit_System_Collections_Generic_KeyValuePair_System_String_System_String___XData_Exceptions_AdditionalInfo.md&amp;value=---%0Auid%3A%20XData.Exceptions.AdditionalInfo.op_Implicit(System.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D)~XData.Exceptions.AdditionalInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -218,56 +268,6 @@ public sealed class AdditionalInfo</code></pre>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><span class="parametername">source</span></td>
         <td><p>Source key value pair</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XData.Exceptions.AdditionalInfo.html">AdditionalInfo</a></td>
-        <td><p>Exception additional info</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Exceptions_AdditionalInfo_op_Implicit_System_String____XData_Exceptions_AdditionalInfo.md&amp;value=---%0Auid%3A%20XData.Exceptions.AdditionalInfo.op_Implicit(System.String%5B%5D)~XData.Exceptions.AdditionalInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Exceptions/Exceptions.cs/#L56">View Source</a>
-  </span>
-  <a id="XData_Exceptions_AdditionalInfo_op_Implicit_" data-uid="XData.Exceptions.AdditionalInfo.op_Implicit*"></a>
-  <h4 id="XData_Exceptions_AdditionalInfo_op_Implicit_System_String____XData_Exceptions_AdditionalInfo" data-uid="XData.Exceptions.AdditionalInfo.op_Implicit(System.String[])~XData.Exceptions.AdditionalInfo">Implicit(String[] to AdditionalInfo)</h4>
-  <div class="markdown level1 summary"><p>Exception additional info</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator AdditionalInfo(string[] source)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Source string array</p>
 </td>
       </tr>
     </tbody>
