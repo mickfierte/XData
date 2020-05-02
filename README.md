@@ -1,7 +1,7 @@
 # XData
 XData is .Net domain object oriented data access layer component. It is not "yet another ORM", but а comlete feature rich data access layer for Your solutions. Basic idea to create this component was a suppling high quality tool to professional developers, having deep competences in data storage modeling and access.
 
-version 1.1.0
+version 1.2.0
 ## NuGet packages
 
 [XData Data Access Layer package](https://github.com/mickfierte/XData/packages/95851/)
@@ -30,7 +30,9 @@ version 1.1.0
 
 [XData net 4.0 Inversion of Control container package](https://github.com/mickfierte/XData.IoC.Container/packages/135244/) - Support for registering logic modules using the IoC container (Net 4.0 version only, required full Net 4.5 Framework version). Any IoC container with [IDependencyResolver](https://docs.microsoft.com/en-us/previous-versions/aspnet/hh969144(v%3Dvs.118)) interface implementation is supported. Net Standard 2.0 version does not require additional packages since .Net Standard has built-in support for IoC containers
 
-[XData net standard 2.0 Asynchronous Disposable support package](https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/) - Support for [IAsyncDisposable](https://docs.microsoft.com/ru-ru/dotnet/api/system.iasyncdisposable) interface for diposable objects (Net Standard 2.0 version only, required Net Standard 2.1 specification version support)
+[XData net standard 2.0 Asynchronous Disposable support package](https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/) - Support for [IAsyncDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncdisposable) interface for diposable objects (Net Standard 2.0 version only, required Net Standard 2.1 specification version support)
+
+[XData net standard 2.0 Asp.Net Core HealthChecks support package](https://github.com/mickfierte/XData.AspNetCore.Diagnostics.HealthChecks/packages/208467/) - Support for [Asp.Net Core HealthChecks](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks) (Net Standard 2.0 version only, required Net Standard 2.1 specification version support)
 
 ## Basic features
 * Single domain object can be mapped on multiple tables (or views, or procedures) in DB. Every DB object can be mapped multiple times in one (or more mappings).
@@ -139,8 +141,9 @@ using(var serviceProvider = new ServiceCollection()
     .BuildServiceProvider())
 {
 	//Configure logging
-	serviceProvider.GetRequiredService<ILoggerFactory>()
-		.AddConsole(LogLevel.Warning).AddDebug();
+	services.AddLogging(x => x.ClearProviders()
+		.AddConfiguration(Configuration.GetSection("Logging"))
+		.AddDebug().AddConsole());
 
 	var dataEngine = serviceProvider.GetRequiredService<IDataEngine>();
 	
@@ -193,11 +196,15 @@ _For more examples and usage, please refer to the [documentation](http://mickfie
 	* MySql is now supported
 	* XML data sources is now supported in dynamic queries
 	* Local temporary tables is now supported in dynamic queries
+	* JSON serialization without DTO
 	* Lot of bugs are fixed
-	* Documetation is available now
+	* Documentation is available now
 * 1.2.0
 	* SQL Blocks is now supported
+	* IAsyncDisposable is now supported
+	* Asp.Net Core HealthChecks is now supported
 	* Using DI containers for trigger logic modules
+	* Using hierarchical organized objects
 	* Bugs are fixed, algorithms are improved
 
 ## Contacts

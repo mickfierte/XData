@@ -10246,6 +10246,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.FilterState.LinkedField
   nameWithType: FilterState.LinkedField
+- uid: XData.DataSource.Structure.FilterState.LinkedPropertyName
+  name: LinkedPropertyName
+  href: api/XData.DataSource.Structure.FilterState.html#XData_DataSource_Structure_FilterState_LinkedPropertyName
+  commentId: P:XData.DataSource.Structure.FilterState.LinkedPropertyName
+  fullName: XData.DataSource.Structure.FilterState.LinkedPropertyName
+  nameWithType: FilterState.LinkedPropertyName
+- uid: XData.DataSource.Structure.FilterState.LinkedPropertyName*
+  name: LinkedPropertyName
+  href: api/XData.DataSource.Structure.FilterState.html#XData_DataSource_Structure_FilterState_LinkedPropertyName_
+  commentId: Overload:XData.DataSource.Structure.FilterState.LinkedPropertyName
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.FilterState.LinkedPropertyName
+  nameWithType: FilterState.LinkedPropertyName
 - uid: XData.DataSource.Structure.FilterState.LinkedSourceAlias
   name: LinkedSourceAlias
   href: api/XData.DataSource.Structure.FilterState.html#XData_DataSource_Structure_FilterState_LinkedSourceAlias
@@ -10324,6 +10337,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.FilterState.Primary
   nameWithType: FilterState.Primary
+- uid: XData.DataSource.Structure.FilterState.PropertyName
+  name: PropertyName
+  href: api/XData.DataSource.Structure.FilterState.html#XData_DataSource_Structure_FilterState_PropertyName
+  commentId: P:XData.DataSource.Structure.FilterState.PropertyName
+  fullName: XData.DataSource.Structure.FilterState.PropertyName
+  nameWithType: FilterState.PropertyName
+- uid: XData.DataSource.Structure.FilterState.PropertyName*
+  name: PropertyName
+  href: api/XData.DataSource.Structure.FilterState.html#XData_DataSource_Structure_FilterState_PropertyName_
+  commentId: Overload:XData.DataSource.Structure.FilterState.PropertyName
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.FilterState.PropertyName
+  nameWithType: FilterState.PropertyName
 - uid: XData.DataSource.Structure.FilterState.RangeValues
   name: RangeValues
   href: api/XData.DataSource.Structure.FilterState.html#XData_DataSource_Structure_FilterState_RangeValues
@@ -12062,6 +12088,19 @@ references:
   commentId: T:XData.DataSource.Structure.ISubqueryLink
   fullName: XData.DataSource.Structure.ISubqueryLink
   nameWithType: ISubqueryLink
+- uid: XData.DataSource.Structure.ISubqueryLink.LinkedPropertyName
+  name: LinkedPropertyName
+  href: api/XData.DataSource.Structure.ISubqueryLink.html#XData_DataSource_Structure_ISubqueryLink_LinkedPropertyName
+  commentId: P:XData.DataSource.Structure.ISubqueryLink.LinkedPropertyName
+  fullName: XData.DataSource.Structure.ISubqueryLink.LinkedPropertyName
+  nameWithType: ISubqueryLink.LinkedPropertyName
+- uid: XData.DataSource.Structure.ISubqueryLink.LinkedPropertyName*
+  name: LinkedPropertyName
+  href: api/XData.DataSource.Structure.ISubqueryLink.html#XData_DataSource_Structure_ISubqueryLink_LinkedPropertyName_
+  commentId: Overload:XData.DataSource.Structure.ISubqueryLink.LinkedPropertyName
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.ISubqueryLink.LinkedPropertyName
+  nameWithType: ISubqueryLink.LinkedPropertyName
 - uid: XData.DataSource.Structure.ISubqueryLink.LinkedType
   name: LinkedType
   href: api/XData.DataSource.Structure.ISubqueryLink.html#XData_DataSource_Structure_ISubqueryLink_LinkedType
@@ -12075,6 +12114,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.ISubqueryLink.LinkedType
   nameWithType: ISubqueryLink.LinkedType
+- uid: XData.DataSource.Structure.ISubqueryLink.PropertyName
+  name: PropertyName
+  href: api/XData.DataSource.Structure.ISubqueryLink.html#XData_DataSource_Structure_ISubqueryLink_PropertyName
+  commentId: P:XData.DataSource.Structure.ISubqueryLink.PropertyName
+  fullName: XData.DataSource.Structure.ISubqueryLink.PropertyName
+  nameWithType: ISubqueryLink.PropertyName
+- uid: XData.DataSource.Structure.ISubqueryLink.PropertyName*
+  name: PropertyName
+  href: api/XData.DataSource.Structure.ISubqueryLink.html#XData_DataSource_Structure_ISubqueryLink_PropertyName_
+  commentId: Overload:XData.DataSource.Structure.ISubqueryLink.PropertyName
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.ISubqueryLink.PropertyName
+  nameWithType: ISubqueryLink.PropertyName
 - uid: XData.DataSource.Structure.ITable
   name: ITable
   href: api/XData.DataSource.Structure.ITable.html
@@ -25891,19 +25943,25 @@ references:
   commentId: F:XData.XDataManager.Resources
   fullName: XData.XDataManager.Resources
   nameWithType: XDataManager.Resources
-- uid: XData.XDataManager.UseXDataDependencies(System.IServiceProvider)
-  name: UseXDataDependencies(IServiceProvider)
-  href: api/XData.XDataManager.html#XData_XDataManager_UseXDataDependencies_System_IServiceProvider_
-  commentId: M:XData.XDataManager.UseXDataDependencies(System.IServiceProvider)
-  fullName: XData.XDataManager.UseXDataDependencies(System.IServiceProvider)
-  nameWithType: XDataManager.UseXDataDependencies(IServiceProvider)
-- uid: XData.XDataManager.UseXDataDependencies*
-  name: UseXDataDependencies
-  href: api/XData.XDataManager.html#XData_XDataManager_UseXDataDependencies_
-  commentId: Overload:XData.XDataManager.UseXDataDependencies
+- uid: XData.XDataManager.UseXData(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseXData(IApplicationBuilder)
+  href: api/XData.XDataManager.html#XData_XDataManager_UseXData_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:XData.XDataManager.UseXData(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: XData.XDataManager.UseXData(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: XDataManager.UseXData(IApplicationBuilder)
+- uid: XData.XDataManager.UseXData(System.IServiceProvider)
+  name: UseXData(IServiceProvider)
+  href: api/XData.XDataManager.html#XData_XDataManager_UseXData_System_IServiceProvider_
+  commentId: M:XData.XDataManager.UseXData(System.IServiceProvider)
+  fullName: XData.XDataManager.UseXData(System.IServiceProvider)
+  nameWithType: XDataManager.UseXData(IServiceProvider)
+- uid: XData.XDataManager.UseXData*
+  name: UseXData
+  href: api/XData.XDataManager.html#XData_XDataManager_UseXData_
+  commentId: Overload:XData.XDataManager.UseXData
   isSpec: "True"
-  fullName: XData.XDataManager.UseXDataDependencies
-  nameWithType: XDataManager.UseXDataDependencies
+  fullName: XData.XDataManager.UseXData
+  nameWithType: XDataManager.UseXData
 - uid: XData.XDataPureLinqMethodAttribute
   name: XDataPureLinqMethodAttribute
   href: api/XData.XDataPureLinqMethodAttribute.html
