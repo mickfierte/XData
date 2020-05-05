@@ -260,7 +260,7 @@ public partial class Invoice
 </div>
 <p>7) The next interesting detail is the automatic completion of the <em>Changed</em> property by change date. Using the <em>Default</em> modifier with two parameters, the first <a class="xref" href="../../api/XData.DefaultType.html">DefaultType.CurrentDateTime</a> sets the mechanism for obtaining the default field value by storing the date and time of the change in the local time zone, and the second <a class="xref" href="../../api/XData.DefaultFeature.html">DefaultFeature.UseOnUpdate</a> allows you to save the change time not only during insertion but also during update. See <a href="../../tips/default_features.html">documentation topic</a> for more details</p>
 <p>8) The <em>DocDate</em> and <em>DeliveryDate</em> properties are modified with the default value <a class="xref" href="../../api/XData.DefaultType.html">DefaultType.CurrentDate</a> which means that by default, the current date will be written to these properties.</p>
-<p>9) The <em>Scan</em> property has a specific type of <a class="xref" href="../../api/XData.Mapping.Lob.html">Lob</a> and its mapping is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Lob_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Lob</a> method. Similarly, the <em>Source</em> property has a specific <a class="xref" href="../../api/XData.Mapping.Xml.html">Xml</a> type and its mapping is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Xml_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Xml</a> method. The work with these types is different, but it is important that by default the value of such fields is loaded only if the value of a large object is immediately addressed. There are also features when serializing them in JSON (we will consider this below). There are also features when serializing them in JSON (we will consider this below). This behavior allows you to significantly accelerate the work with objects that contain information in large fields. See documentation topic about <a href="../../tutorial/mapping/mapping.html#bynary-properties">bynary properties</a> and <a href="../../tutorial/mapping/mapping.html#xml-properties">Xml properties</a> for more details</p>
+<p>9) The <em>Scan</em> property has a specific type of <a class="xref" href="../../api/XData.Mapping.Lob.html">Lob</a> and its mapping is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Lob_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Lob</a> method. Similarly, the <em>Source</em> property has a specific <a class="xref" href="../../api/XData.Mapping.Xml.html">Xml</a> type and its mapping is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Xml_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Xml</a> method. The work with these types is different, but it is important that by default the value of such fields is loaded only if the value of a large object is immediately addressed. There are also features when serializing them in JSON (we will consider this below). There are also features when serializing them in JSON (we will consider this below). This behavior allows you to significantly accelerate the work with objects that contain information in large fields. See documentation topic about <a href="../../tutorial/mapping/mapping.html#binary-properties">binary properties</a> and <a href="../../tutorial/mapping/mapping.html#xml-properties">Xml properties</a> for more details</p>
 <p>10) Web API controller for this object will look like...</p>
 <pre><code class="lang-csharp">using XData;
 using System.Linq;
@@ -275,11 +275,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         public InvoiceController(IDataEngine dataEngine) : base(dataEngine) { }
 
         [HttpGet]
-        public async Task&lt;ActionResult&lt;Invoice&gt;&gt; Get(long id)
+        public async Task&lt;ActionResult&lt;Invoice&gt;&gt; Get(long id, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;Invoice&gt;()
                         .SingleOrDefaultAsync(x =&gt; x.DocId == id);
@@ -293,11 +293,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         }
 
         [HttpGet]
-        public async Task&lt;ActionResult&lt;Invoice[]&gt;&gt; GetByCatalog(long id)
+        public async Task&lt;ActionResult&lt;Invoice[]&gt;&gt; GetByCatalog(long id, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;Invoice&gt;()
                         .ToArrayAsync(x =&gt; x.CatalogId == id);
@@ -311,11 +311,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         }
 
         [HttpGet]
-        public async Task&lt;ActionResult&lt;Invoice&gt;&gt; Export(long id)
+        public async Task&lt;ActionResult&lt;Invoice&gt;&gt; Export(long id, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;Invoice&gt;()
                         .SingleOrDefaultAsync(x =&gt; x.DocId == id,
@@ -330,11 +330,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         }
 
         [HttpGet]
-        public async Task&lt;ActionResult&lt;byte[]&gt;&gt; GetScan(long id)
+        public async Task&lt;ActionResult&lt;byte[]&gt;&gt; GetScan(long id, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;Invoice&gt;()
                         .Where(x =&gt; x.DocId == id)
@@ -349,11 +349,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         }
 
         [HttpPut]
-        public async Task&lt;ActionResult&lt;Invoice[]&gt;&gt; FindBySource([FromBody]string xpath, string value)
+        public async Task&lt;ActionResult&lt;Invoice[]&gt;&gt; FindBySource([FromBody]string xpath, string value, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;Invoice&gt;()
                         .Where(x =&gt; x.Source.Extract(xpath) == value)

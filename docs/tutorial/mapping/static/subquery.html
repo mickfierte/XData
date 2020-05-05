@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_subquery.md">
 <h3 id="subqueries">Subqueries</h3>
 
-<p>XData alowes use subqueries as part of mapping. This feature can be used for get property values from subquery, for <a href="static.html#subquery-filters">subquery filters</a>, and inner view definitions.</p>
+<p>XData allows use subqueries as part of mapping. This feature can be used for get property values from subquery, for <a href="static.html#subquery-filters">subquery filters</a>, and inner view definitions.</p>
 <p>Subquery recursive deep is not limited.</p>
 <p>Class used subquery in mapping definition must to marked with attribute <a class="xref" href="../../../api/XData.Mapping.SubqueryAttribute.html">SubqueryAttribute</a> or <a class="xref" href="../../../api/XData.Mapping.InnerViewAttribute.html">InnerViewAttribute</a> (when it used as inner view definition). Both of them has a parameter <em>Alias</em> - subquery alias in resulting query. <em>InnerViewAttribute</em> additionally has parameter <em>InnerViewType</em> - type mapped to subquery. <em>SubqueryAttribute</em> additionally has parameters: <em>SubqueryType</em> - type mapped to subquery, <em>PropertyName</em> - subquery returned property and <em>Grouping</em> - aggregation type of resulting property.</p>
 <pre><code class="lang-csharp">[Subquery(&quot;A&quot; /* subquery alias */, 

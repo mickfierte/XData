@@ -79,11 +79,11 @@
             <article class="content wrap" id="_content" data-uid="logging.md">
 <h2 id="logging-and-debug-info">Logging and debug info</h2>
 
-<p>During process of developing and debuging Your application the XData can provide You information to find error or understand context of any data processing activity. XData does not enforce developer with using some logging system. Instead of that XData (version .Net 4.0) provide simple interface <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> to implement. Implementation of this interface (if not implemented yet) alowes to integrate XData log output into any You choose logging subsystem of Your application. As example You can use any log writer plugin from XData sources. Configuration of log writer plugin is described <a href="config.html">configuration file section <em>xdata</em></a> using attribute <em>log</em> providing value with assembly qualified type name, where type is implements <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> interface.</p>
+<p>During process of developing and debugging Your application the XData can provide You information to find error or understand context of any data processing activity. XData does not enforce developer with using some logging system. Instead of that XData (version .Net 4.0) provide simple interface <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> to implement. Implementation of this interface (if not implemented yet) allows to integrate XData log output into any You choose logging subsystem of Your application. As example You can use any log writer plugin from XData sources. Configuration of log writer plugin is described <a href="config.html">configuration file section <em>xdata</em></a> using attribute <em>log</em> providing value with assembly qualified type name, where type is implements <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> interface.</p>
 <p>XData (version .Net Standard 2.0) use <a href="https://www.nuget.org/packages/Microsoft.Extensions.Logging">Microsoft.Extensions.Logging</a> subsystem.</p>
 <p>In the case when the default level (usually the logging level “Information”) is not sufficient to diagnose the problem, it can be lowered by means of the basic logging technology (including by setting the logging parameters in the configuration file). The configuration rules of the basic logging subsystem can be found on their websites: <a href="https://www.nuget.org/packages/Microsoft.Extensions.Logging">Microsoft.Extensions.Logging</a>, <a href="https://msdn.microsoft.com/en-en/windows/desktop/system.diagnostics.trace">System.Diagnostics.Trace</a>, <a href="https://logging.apache.org/log4net">log4net</a>.</p>
 <p>* (version .Net Standard 2.0)
-<em>Microsoft.Extensions.Logging</em> cathegory name of XData loger is &quot;XData&quot;. Sample loging configuration for debug:</p>
+<em>Microsoft.Extensions.Logging</em> category name of XData logger is &quot;XData&quot;. Sample logging configuration for debug:</p>
 <pre><code class="lang-json">{
   &quot;Logging&quot;: {
     &quot;LogLevel&quot;: {
@@ -115,8 +115,8 @@
 </code></pre><p>* (version .Net 4.0)
 <em>System.Diagnostics.Trace</em> switch name for XData log messages is &quot;logLevelSwitch&quot;. See System.Diagnostics.Trace <a href="https://msdn.microsoft.com/en-en/windows/desktop/system.diagnostics.traceswitch">documentation</a> for details.</p>
 <p><em>log4net</em> requires no specific constants to configure log messages severity level. See log4net <a href="https://logging.apache.org/log4net/release/config-examples.html">documentation</a> to obtain configuration details.</p>
-<div class="IMPORTANT"><h5>Important</h5><p>Configuration of logging subsystem to debug mode can reduse application productivity. It&#39;s recomended to switch off debug mode when not required.
-But it&#39;s a very powerfull tool to help developer with repository mapping correctness check. I&#39;ts a highly recommended to use it on debug stage!
+<div class="IMPORTANT"><h5>Important</h5><p>Configuration of logging subsystem to debug mode can reduce application productivity. It&#39;s recommended to switch off debug mode when not required.
+But it&#39;s a very powerful tool to help developer with repository mapping correctness check. It&#39;s a highly recommended to use it on debug stage!
 SQL query logging can be also used as source for checking query plan effectiveness. Always check query plans - it&#39;s help You to develop high quality products.</p>
 </div>
 </article>

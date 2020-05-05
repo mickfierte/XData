@@ -80,7 +80,7 @@
 <h2 id="versions-of-xdata">Versions of XData</h2>
 
 <p>XData delivered as two specific versions: .Net 4.0 package to use with full featured Windows .Net framework version 4.0 or later, and cross platformed .Net Standard 2.0 package.</p>
-<p>The versions has similar API but some diferent implementations of certain features:</p>
+<p>The versions has similar API but some different implementations of certain features:</p>
 <p>1) Different initialization of XData:</p>
 <p>Net 4.0:</p>
 <pre><code class="lang-csharp">using (var dataEngine = XDataManager.InitXData(x =&gt; 
@@ -123,7 +123,7 @@ using(var serviceProvider = new ServiceCollection()
 </code></pre><p>2) Logging in .Net 4.0 version is realized with log plugins implements <a class="xref" href="../api/XData.Interfaces.ILogWriter.html">ILogWriter</a> interface.
 Logging in .Net Standard 2.0 version is realized using Microsoft.Extensions.Logging service.</p>
 <p>3) Configuration of .Net 4.0 version is limited by using app.config/web.config files. Configuration in .Net Standard 2.0 version is realized using Microsoft.Extensions.Configuration service. Configuration structure for both versions described <a href="config.html">here</a>.</p>
-<p>4) Localization of .Net 4.0 version use sattelite localization assemblies. Localization in .Net Standard 2.0 version is realized using Microsoft.Extensions.Localization service. Localization procedures for both versions described <a href="localization.html">here</a>.</p>
+<p>4) Localization of .Net 4.0 version use satellite localization assemblies. Localization in .Net Standard 2.0 version is realized using Microsoft.Extensions.Localization service. Localization procedures for both versions described <a href="localization.html">here</a>.</p>
 <p>5) Some database adapters not implemented for .Net Standard 2.0 version because no applicable implementation of .Net data providers for .Net Standard 2.0 found now. We are hope they will be implemented in short time future, and XData can be use that databases too.</p>
 <p>6) Three tier architecture is not implemented for .Net Standard 2.0 version for now. Some limitations of current .Net Core realization makes not possible to implement this feature on same technologies now. And no specific requests to implement it quick as possible.</p>
 <p>7) Three tier client plugin required full .Net 4.0 framework only (base functionality is available on .Net 4.0 Client version). Life time limited cache (for <a class="xref" href="../api/XData.IDataScope.html">IDataScope</a> and <a class="xref" href="../api/XData.IWorkSet-1.html">WorkSet</a>) is required full .Net 4.0 framework. Same caching functionality is implemented in .Net Standard 2.0 version.</p>

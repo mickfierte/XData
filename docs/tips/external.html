@@ -100,7 +100,7 @@ var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
         // note, string and number (decimal) xml fields need size defined, like an expression fields
         Test = x.XmlField&lt;string&gt;(&quot;T&quot;, string.Empty, &quot;@test&quot;, DbType.String, z =&gt; z.Size(20))
     // set XML string to variable with the same name as XmlSource
-    }).AsQuery(dataScope.Layer, &quot;Test&quot;.SetVar(doc));
+    }).AsQuery(dataScope, &quot;Test&quot;.SetVar(doc));
 </code></pre><h3 id="temporary-table">Temporary table</h3>
 <pre><code class="lang-csharp">// prepare tabular data
 var table = new DataTable();
@@ -121,7 +121,7 @@ var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
         // note, string and number (decimal) xml fields need size defined, like an expression fields
         Test = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty, DbType.String, z =&gt; z.Size(20))
     // set DataTable to variable with the same name as TempTable
-    }).AsQuery(dataScope.Layer, &quot;Test&quot;.SetVar(table));
+    }).AsQuery(dataScope, &quot;Test&quot;.SetVar(table));
 </code></pre></article>
           </div>
           

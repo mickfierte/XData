@@ -79,8 +79,8 @@
             <article class="content wrap" id="_content" data-uid="tips_container.md">
 <h3 id="using-di-container">Using DI container</h3>
 
-<p>XData can be effecively used with any DI containers You prefer. </p>
-<p>When using the .Net Standard 2.0 version of XData, the .Net Core Dependency Abstraction technology is applied internally and can be implemented with any DI container. The <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> interface is injected as dependency by calling <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a> method during <em>ConfigureServices</em> method of <em>Startup</em> module. Any <a href="trigger_logic.html">trigger logic modules</a> can be registred as singleton services in DI container as well.</p>
+<p>XData can be effectively used with any DI containers You prefer. </p>
+<p>When using the .Net Standard 2.0 version of XData, the .Net Core Dependency Abstraction technology is applied internally and can be implemented with any DI container. The <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> interface is injected as dependency by calling <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a> method during <em>ConfigureServices</em> method of <em>Startup</em> module. Any <a href="trigger_logic.html">trigger logic modules</a> can be registered as singleton services in DI container as well.</p>
 <pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
 {
     services.AddXData(x =&gt; x.AddDialect(Constants.DialectName, 
@@ -96,14 +96,14 @@
 </div>
 <div class="TIP"><h5>Tip</h5><p>The number of logic modules for each data object is not limited, but it must be kipped in mind that the order in which various handlers are called is not guaranteed</p>
 </div>
-<p>If any <em>loic module</em> are injected through DI container <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_UseXData_Microsoft_AspNetCore_Builder_IApplicationBuilder_">UseXData</a> method required to call during <em>Configure</em> method of <em>Startup</em> module.</p>
+<p>If any <em>logic module</em> are injected through DI container <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_UseXData_Microsoft_AspNetCore_Builder_IApplicationBuilder_">UseXData</a> method required to call during <em>Configure</em> method of <em>Startup</em> module.</p>
 <pre><code class="lang-csharp">public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     ...
     app.UseXData();
     ...
 }
-</code></pre><p>When using .Net 4.0 XData version <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> interface can be obtained from container similarly. In this case, you must use an additional NuGet package <a href="../index.html#nuget-packages">XData net 4.0 Inversion of Control container package</a>. IDataEngine must to be registered as singleton with <em>XDataManager.InitXData</em> method call. If any <em>loic module</em> are injected through DI container <em>UseXDataDependencies</em> extension method similar to previously reviewed before version for .Net Standard 2.0 but asigned to <em>IDependencyResolver</em> interface is required to call. Here is an example using Autofac but you can use any DI container implementation analogically...</p>
+</code></pre><p>When using .Net 4.0 XData version <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> interface can be obtained from container similarly. In this case, you must use an additional NuGet package <a href="../index.html#nuget-packages">XData net 4.0 Inversion of Control container package</a>. IDataEngine must to be registered as singleton with <em>XDataManager.InitXData</em> method call. If any <em>logic module</em> are injected through DI container <em>UseXDataDependencies</em> extension method similar to previously reviewed before version for .Net Standard 2.0 but assigned to <em>IDependencyResolver</em> interface is required to call. Here is an example using Autofac but you can use any DI container implementation analogically...</p>
 <pre><code class="lang-csharp">var builder = new ContainerBuilder();
 builder.Register&lt;IDataLogic&lt;Invoice&gt;&gt;(x =&gt; new InvoiceLogic());
 builder.Register(x =&gt; XDataManager.InitXData(z =&gt;

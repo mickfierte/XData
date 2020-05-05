@@ -149,7 +149,7 @@
 <li>set server module assembly name in data object mapping in data modules</li>
 </ul>
 <pre><code class="lang-csharp">[DataObject(&quot;D&quot;, LogicAssemblyName = &quot;InvoiceServerLogic&quot;)] //for static mapping
-//или
+//or
 ...
 .SetLogicAssembly(&quot;InvoiceServerLogic&quot;)  //for dynamic mapping
 </code></pre><ul>
@@ -177,7 +177,7 @@ return dataScope.GetRepository&lt;Invoice&gt;().ToArray().Execute(
                 ? null 
                 : Encoding.UTF8.GetString(data)));
     })).AsEnum().ToDictionary());
-</code></pre><div class="TIP"><h5>Tip</h5><p>Custom logic handlers can use synchronic and asynchronic calbacks to client code and perform analysys of synchronic callbacks result. This functionality alowes to realize very complex and interactive disributed business processes.</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Custom logic handlers can use synchronous and asynchronous callbacks to client code and perform analysis of synchronous callbacks result. This functionality allows to realize very complex and interactive distributed business processes.</p>
 </div>
 </article>
           </div>

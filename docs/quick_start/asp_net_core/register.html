@@ -85,7 +85,7 @@
 <p>4) Configure the configuration file of your solution in the <a href="../../tutorial/config.html#configuration-xdata-using-config-file">xml</a> notation (or json or <a href="../../tips/yaml_config.html#yaml-configuration-file">yaml</a> or any you like and .Net Core supported). And add XData initialization in your <em>startup.cs</em> file...</p>
 <pre><code class="lang-csharp">services.AddXData(x =&gt; x.UseConfiguration(
     System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(&quot;~&quot;)))
-</code></pre><p>Opionaly you can define configuration <a href="../../tutorial/config.html#acquiring-xdata-configuration-during-runtime">during runtime</a> like that...</p>
+</code></pre><p>Optionally you can define configuration <a href="../../tutorial/config.html#acquiring-xdata-configuration-during-runtime">during runtime</a> like that...</p>
 <pre><code class="lang-csharp">// You can use something like that class to define constants
 public static class Constants
 {
@@ -111,11 +111,11 @@ public static class Constants
             Constants.AdapterName, testDb, true));
     ...
 }
-</code></pre><div class="TIP"><h5>Tip</h5><p>You can add multiply dialects, adapters nd contexts you need</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p>You can add multiply dialects, adapters and contexts you need</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>You can share dialects and/or adapters between multiple contexts</p>
 </div>
-<div class="WARNING"><h5>Warning</h5><p>Only one context can be mared as default. But if no default context defined an initialization error will occur</p>
+<div class="WARNING"><h5>Warning</h5><p>Only one context can be marked as default. But if no default context defined an initialization error will occur</p>
 </div>
 <p>See <a href="../../tutorial/config.html#installation-and-configuration">documentation topic</a> for more details </p>
 </article>

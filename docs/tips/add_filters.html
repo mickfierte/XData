@@ -104,7 +104,7 @@
             // construct role name based by *app_type* enum field and role name using SQL *Case* expression
             Value = x.Expr(&quot;val&quot;, z =&gt; z.Case(y =&gt; y.Field&lt;long&gt;(&quot;R&quot;, &quot;app_type&quot;), y =&gt; &quot;&quot;, enumValues) 
                 + &quot;.&quot; + x.Field&lt;string&gt;(&quot;R&quot;, &quot;role&quot;), DbType.String)
-        }).AsQuery(dataScope.Layer);
+        }).AsQuery(dataScope);
 
     user.Applications = apps.SetFilterValue(x =&gt; UserId, userId).ToArray();
     user.Roles = dataScope.GetRepository&lt;UserRole&gt;().SetFilterValue(x =&gt; UserId, userId).ToArray();

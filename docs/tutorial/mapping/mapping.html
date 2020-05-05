@@ -83,17 +83,17 @@
 <hr>
 <h2 id="mapping-common-rules">Mapping common rules</h2>
 <p>All data objects must to be signed with marker interface (empty interface) <a class="xref" href="../../api/XData.IDataObject.html">IDataObject</a>. All objects describes subqueries must to be signed with marker interface <a class="xref" href="../../api/XData.ISqlObject.html">ISqlObject</a>.</p>
-<div class="TIP"><h5>Tip</h5><p>Ability of defining maping to marker interface is key feature of XData alowed get flexible and natural objects deriving hierarchy with full featured and handy methods to work with it (using extension methods).</p>
+<div class="TIP"><h5>Tip</h5><p>Ability of defining mapping to marker interface is key feature of XData allowed to get flexible and natural objects deriving hierarchy with full featured and handy methods to work with it (using extension methods).</p>
 </div>
 <p>Mapping rules can be declared statically with attributes of class and its properties (see <a href="static/static.html">static mapping</a>), and dynamically using LINQ style expression (see <a href="dynamic/dynamic.html">dynamic mapping</a>).</p>
 <h3 id="common-types-properties">Common types properties</h3>
 <p>Common types properties (string, bool, int...) including nullable (int?, bool?...), and enum properties is declared as common class properties. Data access to this properties is usual. Only mapping description is depends on <a href="static/static.html#properties">static</a> or <a href="dynamic/dynamic.html#properties">dynamic</a> method of declaration.</p>
-<h3 id="bynary-properties">Bynary properties</h3>
+<h3 id="binary-properties">Binary properties</h3>
 <p>To work with large binary object (BLOB) using lazy coupling XData represent property type <a class="xref" href="../../api/XData.Mapping.Lob.html">Lob</a>. This type has followed...</p>
 <p>properties:</p>
 <ul>
 <li>byte[] <em>Value</em> - binary object value</li>
-<li>(readonly) bool <em>Assigned</em> - check object has value (including empty value) or NULL</li>
+<li>(read-only) bool <em>Assigned</em> - check object has value (including empty value) or NULL</li>
 </ul>
 <p>methods:</p>
 <ul>
@@ -102,7 +102,7 @@
 </ul>
 <p>operation: </p>
 <ul>
-<li>+= - &quot;syntax sugar&quot;, _data.SomeBlob += _someVariable identic with _data.SomeBlob.Value = _someVariable.</li>
+<li>+= - &quot;syntax sugar&quot;, _data.SomeBlob += _someVariable identical with _data.SomeBlob.Value = _someVariable.</li>
 </ul>
 <p>Examples:</p>
 <pre><code class="lang-csharp">newInvoice.Scan += _image;
@@ -116,7 +116,7 @@ invoice.Scan.Modify(x =&gt; x = new byte[0]);
 <p>properties:</p>
 <ul>
 <li>XDocument <em>Document</em> - get or set Xml value</li>
-<li>(readonly) bool <em>Assigned</em> - check Xml field for NULL value</li>
+<li>(read-only) bool <em>Assigned</em> - check Xml field for NULL value</li>
 </ul>
 <p>methods:</p>
 <ul>
@@ -141,19 +141,19 @@ invoice.Source.Modify(x =&gt; x = new XDocument());
 <ul>
 <li>TVal <em>Value</em> - this property to get preview of linked object</li>
 <li>TSrc <em>Source</em> - this property can be used to set linked object</li>
-<li>(readonly) bool <em>Assigned</em> - check link value for NULL value</li>
+<li>(read-only) bool <em>Assigned</em> - check link value for NULL value</li>
 </ul>
 <p>operations: </p>
 <ul>
-<li>+= - &quot;syntax sugar&quot;, _data.SomeLink += _someDictionaryObject identic with _data.SomeLink.Source = _someDictionaryObject.</li>
+<li>+= - &quot;syntax sugar&quot;, _data.SomeLink += _someDictionaryObject identical with _data.SomeLink.Source = _someDictionaryObject.</li>
 </ul>
 <pre><code class="lang-csharp">newInvoice.DocState += dataScope.GetDictionaryValue&lt;DocState&gt;(x =&gt; x.Code == &quot;CREATED&quot;);
 </code></pre><p>To make link properties work correct, at mapping level need to be defined pairs of properties source and current objects, that values will be copied from source object to current when link is applied. Link description is deferent for <a href="static/static.html#links">static</a> and <a href="dynamic/dynamic.html#links">dynamic</a> methods of mapping.</p>
-<h3 id="readonly-properties">Readonly properties</h3>
+<h3 id="read-only-properties">Read only properties</h3>
 <p>Read only properties XData require to perform as in example below: </p>
 <pre><code class="lang-csharp">public string DocStateCode { get { return this.GetProperty(x =&gt; x.DocStateCode); } }
 </code></pre><p>Data access is provided through extension method <a class="xref" href="../../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_GetProperty__2___0_System_Linq_Expressions_Expression_System_Func___0___1___">GetProperty</a>, but property is read only.</p>
-<h3 id="child-repositories-referencies">Child repositories referencies</h3>
+<h3 id="child-repositories-references">Child repositories references</h3>
 <p>Detail related repositories XData require to perform as:</p>
 <pre><code class="lang-csharp">public IRepository&lt;InvoiceSpec&gt; Spec { 
     get { 
@@ -161,27 +161,27 @@ invoice.Source.Modify(x =&gt; x = new XDocument());
         } 
 }
 </code></pre><p>No additional mapping description are needed. Only <a href="mapping.html#master-detail-relations">external reference</a> is required.</p>
-<div class="TIP"><h5>Tip</h5><p>To use XData Unit of Work realization (<a href="../unit_of_work.html">WorkSet</a>), child repositories referencies are required.</p>
+<div class="TIP"><h5>Tip</h5><p>To use XData Unit of Work realization (<a href="../unit_of_work.html">WorkSet</a>), child repositories references are required.</p>
 </div>
 <h3 id="hidden-properties">Hidden properties</h3>
 <p>Some columns in database is needed to full description of mapping, but not required to business logic. This columns is declared as part of mapping named <em>Column</em> is selected from database, but not mapped on data object properties.</p>
 <p>For example - XData can operate primary (PK) and foreign (FK) keys of business objects and work with master-detail references between them, but mapping to property of <a href="mapping.html#master-detail-relations">external references</a> is not required to operate with key. </p>
-<p>Second case - optimistic concurrency resolving (see <a href="../concurrency.html">concurrency resolving</a>) required concurrency token field, but this field is not required to busines logic.</p>
+<p>Second case - optimistic concurrency resolving (see <a href="../concurrency.html">concurrency resolving</a>) required concurrency token field, but this field is not required to business logic.</p>
 <p>Third example - when data is grouped, needed to declare some field to link with <a href="mapping.html#master-detail-relations">external reference</a>, but in this case possibly we can`t include this field in SELECT expression because of GROUP BY syntax. This case is resolved by <a class="xref" href="../../api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_Hidden">Hidden</a> property of column declaration. When <em>Hidden</em> is true - column will be not included into SELECT expression of resulted SQL query.</p>
 <p>Hidden properties description is various to <a href="static/static.html#hidden-properties">static</a> and <a href="dynamic/dynamic.html#hidden-properties">dynamic</a> mapping declaration methods.</p>
 <h2 id="master-detail-relations">Master detail relations</h2>
-<p>External referencies is the base element of master-detail references definition in XData. It describes link rules between related detail entities from master entities. XData support multi master and multi detail relation (many-to-many). And it&#39;s possible to define multiple relations between every two data objects. </p>
-<p>External referencies is the declarations of <em>possible</em> master-detail relations between <a href="../glossary.html#data-object">data objects</a>. Each of external reference is describe master property (or <a href="mapping.html#hidden-properties">column</a>) to detail filter relation, used to filter detail collections data when master <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_Current">current</a> object is set. </p>
-<div class="TIP"><h5>Tip</h5><p>External referencies applied to <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_GetChild__1_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">manualy attached</a> detail data sources only.</p>
+<p>External references is the base element of master-detail references definition in XData. It describes link rules between related detail entities from master entities. XData support multi master and multi detail relation (many-to-many). And it&#39;s possible to define multiple relations between every two data objects. </p>
+<p>External references is the declarations of <em>possible</em> master-detail relations between <a href="../glossary.html#data-object">data objects</a>. Each of external reference is describe master property (or <a href="mapping.html#hidden-properties">column</a>) to detail filter relation, used to filter detail collections data when master <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_Current">current</a> object is set. </p>
+<div class="TIP"><h5>Tip</h5><p>External references applied to <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_GetChild__1_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">manually attached</a> detail data sources only.</p>
 </div>
 <p>External references definition is differs for <a href="static/static.html#external-link">static</a> and <a href="dynamic/dynamic.html#external-link">dynamic</a> methods of mapping.</p>
-<p>Reference rules is defined at mapping level, and when detail object will be attached using <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_GetChild__1_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> method, that rules will be applyed.</p>
-<p>To fill child repository data in some unmapped array property (when the reference has type &quot;one-to-many&quot;) can be used special overload of <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> method. And whenreference has type &quot;one-to-one&quot; can be used <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> overload. That properties will be filled by child data automatically during data accure when child repositories has been connected using that overloads of method.</p>
+<p>Reference rules is defined at mapping level, and when detail object will be attached using <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_GetChild__1_System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> method, that rules will be applied.</p>
+<p>To fill child repository data in some unmapped array property (when the reference has type &quot;one-to-many&quot;) can be used special overload of <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> method. And when reference has type &quot;one-to-one&quot; can be used <a class="xref" href="../../api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> overload. That properties will be filled by child data automatically during data acquire when child repositories has been connected using that overloads of method.</p>
 <pre><code class="lang-csharp">var rep = dataScope.GetRepository&lt;Invoice&gt;();
 var child = rep.GetChild(z =&gt; z.InvoiceSpec);
-</code></pre><div class="WARNING"><h5>Warning</h5><p>Data hierarchy can be accured by that way has not limited deep level, but impotant keep in mind the price of that is performance. Use child repository data loading into unmapped properties when needed only!</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Data hierarchy can be acquired by that way has not limited deep level, but important keep in mind the price of that is performance. Use child repository data loading into unmapped properties when needed only!</p>
 </div>
-<p>To break master-detail reference call <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_DetachChild__1_System_String_">DetachChild</a> method. When <a href="../glossary.html#data-scope">data scope</a> or one of referenced <a href="../glossary.html#repository">repositories</a> will be disposed - reference is breaked automatically.</p>
+<p>To break master-detail reference call <a class="xref" href="../../api/XData.IRepository.html#XData_IRepository_DetachChild__1_System_String_">DetachChild</a> method. When <a href="../glossary.html#data-scope">data scope</a> or one of referenced <a href="../glossary.html#repository">repositories</a> will be disposed - reference is beaked automatically.</p>
 <p>Detail object reference filter value is set when <a class="xref" href="../../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_SetCurrent__1___0_">SetCurrent</a> extension method is called for master object.</p>
 <pre><code class="lang-csharp">if (newInvoice.Submit())
 {
@@ -191,11 +191,11 @@ var child = rep.GetChild(z =&gt; z.InvoiceSpec);
 </code></pre><p>Master-detail linked repositories can be used for cascade delete operation over multiple related data objects:</p>
 <pre><code class="lang-csharp">newInvoice.SetDeleted(true);
 newInvoice.Submit();
-</code></pre><p>or cascade delete applyed for filtered subset of repository objects and their detail objects:</p>
+</code></pre><p>or cascade delete applied for filtered subset of repository objects and their detail objects:</p>
 <pre><code class="lang-csharp">invoices.Clear(x =&gt; x.DocStateCode == &quot;REJECTED&quot;);
 </code></pre><h2 id="tree">Tree</h2>
 <p>XData can use CTE (common table expression) as part of <a href="../glossary.html#repository">repository</a> data source definition. Supported as plain (WITH), as recursive (WITH RECURSIVE) expressions.</p>
-<p>CTE is defined in mapping diferently for <a href="static/static.html#tree">static</a> and <a href="dynamic/dynamic.html#tree">dynamic</a> mapping paradigm, but it can be used with similar way: defined one or more tables with unique aliases and name equals CTE name.</p>
+<p>CTE is defined in mapping differently for <a href="static/static.html#tree">static</a> and <a href="dynamic/dynamic.html#tree">dynamic</a> mapping paradigm, but it can be used with similar way: defined one or more tables with unique aliases and name equals CTE name.</p>
 <p>Recursive CTE can be used as independent data source too. In this case CTE name must to be declared as base table of repository.</p>
 <h2 id="sql-functions--procedures">SQL functions &amp; procedures</h2>
 <p>Stored procedures and functions can be used as data source of mapping (if used DBMS and ADO .Net provider is support this). </p>
@@ -203,11 +203,11 @@ newInvoice.Submit();
 </div>
 <p>XData has support followed SQL procedure mapping styles and call conventions and it combinations:</p>
 <ul>
-<li>Using procedure resultset as data source</li>
-<li>Using procedure with multiple resultsets</li>
+<li>Using procedure result set as data source</li>
+<li>Using procedure with multiple result sets</li>
 <li>Using out parameters</li>
 <li>Using return value of stored procedure </li>
-<li>Using symple type array as parameter</li>
+<li>Using simple type array as parameter</li>
 <li>Using cursor as parameter</li>
 <li>Using UTD (user defined type) as parameter</li>
 <li>Using table valued function as data source</li>

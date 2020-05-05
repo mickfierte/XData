@@ -95,7 +95,7 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 <li><a class="xref" href="../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_UpdateWith_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__1___">UpdateWith(Expression&lt;Func&lt;IQueryStructureAdapter, TValue&gt;&gt; expr)</a></li>
 </ul>
 <pre><code class="lang-csharp">DeliveryDate = x.Field&lt;DateTime?&gt;(&quot;DD&quot;, string.Empty, z =&gt; z.UpdateWith(y =&gt; DateTime.Today.AddDays(1)))
-</code></pre><p>Property value update source dependancy when using static mapping is defined by <a class="xref" href="../api/XData.Mapping.PropertyUpdateWithAttribute.html">PropertyUpdateWithAttribute</a> (or <a class="xref" href="../api/XData.Mapping.ColumnUpdateWithAttribute.html">ColumnUpdateWithAttribute</a>) with same rules as Subquery <a href="../tutorial/mapping/static/static.html#sql-expression-property">SQL expression properties</a>:</p>
+</code></pre><p>Property value update source dependency when using static mapping is defined by <a class="xref" href="../api/XData.Mapping.PropertyUpdateWithAttribute.html">PropertyUpdateWithAttribute</a> (or <a class="xref" href="../api/XData.Mapping.ColumnUpdateWithAttribute.html">ColumnUpdateWithAttribute</a>) with same rules as Subquery <a href="../tutorial/mapping/static/static.html#sql-expression-property">SQL expression properties</a>:</p>
 <pre><code class="lang-csharp">[Subquery(&quot;A&quot; /* subquery alias */, 
     typeof(DocSpecAmounts) /* subquery mapped type */, 
     &quot;Amount&quot; /* subquery result property name */, 

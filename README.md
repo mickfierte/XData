@@ -1,5 +1,5 @@
 # XData
-XData is .Net domain object oriented data access layer component. It is not "yet another ORM", but а comlete feature rich data access layer for Your solutions. Basic idea to create this component was a suppling high quality tool to professional developers, having deep competences in data storage modeling and access.
+XData is .Net domain object oriented data access layer component. It is not "yet another ORM", but a complete feature rich data access layer for Your solutions. Basic idea to create this component was a suppling high quality tool to professional developers, having deep competences in data storage modeling and access.
 
 version 1.2.0
 ## NuGet packages
@@ -10,7 +10,7 @@ version 1.2.0
 
 [XData Security package](https://github.com/mickfierte/XData.Security/packages/95893/) - [_ISecuritySession_](http://mickfierte.github.io/XData/api/XData.Interfaces.ISecuritySession.html) interface implementation helper required to use [XData security](http://mickfierte.github.io/XData/tutorial/security.html) functionality
 
-[XData Three-tier client proxy package](https://github.com/mickfierte/XData.Remote/packages/95892/) - client proxy to use in three-tier envirounment (Net 4.0 only, required full Net 4.0 Framework version)
+[XData Three-tier client proxy package](https://github.com/mickfierte/XData.Remote/packages/95892/) - client proxy to use in three-tier environment (Net 4.0 only, required full Net 4.0 Framework version)
 
 [XData Cache package](https://github.com/mickfierte/XData.Cache/packages/95880/) - time limited object caching (Net 4.0 only, required full Net 4.0 Framework version)
 
@@ -18,46 +18,46 @@ version 1.2.0
 
 [XData Oracle adapter package](https://github.com/mickfierte/XData.Oracle.Odp/packages/95899/) - Oracle database dialect and adapter based on Oracle ODP provider
 
-[XData PostgreSql adapter package](https://github.com/mickfierte/XData.PostgreSql.NpgSql/packages/95902/) - Postgre SQL database dialect and adapter based on NpgSql provider
+[XData PostgreSql adapter package](https://github.com/mickfierte/XData.PostgreSql.NpgSql/packages/95902/) - PostgreSQL database dialect and adapter based on NpgSql provider
 
 [XData SQLite adapter package](https://github.com/mickfierte/XData.SQLite/packages/95901/) - SQLite database dialect and adapter (Net 4.0 version has used System.Data.SQLite provider, Net Standard 2.0 version has used Microsoft.Data.Sqlite provider)
 
 [XData MySql adapter package](https://github.com/mickfierte/XData.MySql/packages/95898/) - MySQL database dialect and adapter based on MySql.Data provider
 
-[XData net 4.0 System.Diagnistics.Trace log writer package](https://github.com/mickfierte/XData.Logging.Trace/packages/95890/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
+[XData net 4.0 System.Diagnostics.Trace log writer package](https://github.com/mickfierte/XData.Logging.Trace/packages/95890/) - (Net 4.0 only) Log writer over System.Diagnostics.Trace
 
-[XData net 4.0 log4net log writer package](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/) - (Net 4.0 only) Log writer over System.Diagnistics.Trace
+[XData net 4.0 log4net log writer package](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/) - (Net 4.0 only) Log writer over Log4Net
 
 [XData net 4.0 Inversion of Control container package](https://github.com/mickfierte/XData.IoC.Container/packages/135244/) - Support for registering logic modules using the IoC container (Net 4.0 version only, required full Net 4.5 Framework version). Any IoC container with [IDependencyResolver](https://docs.microsoft.com/en-us/previous-versions/aspnet/hh969144(v%3Dvs.118)) interface implementation is supported. Net Standard 2.0 version does not require additional packages since .Net Standard has built-in support for IoC containers
 
-[XData net standard 2.0 Asynchronous Disposable support package](https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/) - Support for [IAsyncDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncdisposable) interface for diposable objects (Net Standard 2.0 version only, required Net Standard 2.1 specification version support)
+[XData net standard 2.0 Asynchronous Disposable support package](https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/) - Support for [IAsyncDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncdisposable) interface for disposable objects (Net Standard 2.0 version only, required Net Standard 2.1 specification version support)
 
 [XData net standard 2.0 Asp.Net Core HealthChecks support package](https://github.com/mickfierte/XData.AspNetCore.Diagnostics.HealthChecks/packages/208467/) - Support for [Asp.Net Core HealthChecks](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks) (Net Standard 2.0 version only, required Net Standard 2.1 specification version support)
 
 ## Basic features
 * Single domain object can be mapped on multiple tables (or views, or procedures) in DB. Every DB object can be mapped multiple times in one (or more mappings).
 * _IQueryable_ interface is fully supported.
-* Surrogate primary and foreign keys can be used in atomatical or manual mode.
+* Surrogate primary and foreign keys can be used in automatically or manual mode.
 * Lazy large object (LOB, XML) binding.
-* Mapping on UDT (user data types) SQL procedure parameters (limited by choosen ADO .Net provider's capabilities).
-* Enumeration types mapping support (including bitmask).
-* Master-slave data mapped entities realtion is supported.
+* Mapping on UDT (user data types) SQL procedure parameters (limited by chosen ADO .Net provider's capabilities).
+* Enumeration types mapping support (including bit mask).
+* Master-slave data mapped entities relation is supported.
 * Hierarchy organized data mapping.
 * Optional mapping SQL parts.
-* Dynamic (linq-style, fluent) or static (based on attributes) mapping can be used.
-* Using statically mapped subqueries in dinamic mapping expression.
-* Using mapping variables can change query structure dinamically.
+* Dynamic (LINQ-style, fluent) or static (based on attributes) mapping can be used.
+* Using statically mapped subqueries in dynamic mapping expression.
+* Using mapping variables can change query structure dynamically.
 * Programmer can use (or not use) dictionary data cache using its own decision.
 * Using SQL procedures and functions as base of mapping.
-* Same programming modules can be used in two-tier mode (e.g. for debuging) and three-tier mode (in production) based on configuration file settings.
+* Same programming modules can be used in two-tier mode (e.g. for debugging) and three-tier mode (in production) based on configuration file settings.
 * Declarative Unit of Work realization.
-* Might and flaxible data access control rules can be used.
+* Might and flexible data access control rules can be used.
 
 ## Installation
 
 ### NuGet configuration
 
-To get XData NuGet packages You will need moify nuget.config as described below and place it in project root folder near Your solution file.
+To get XData NuGet packages You will need modify nuget.config as described below and place it in project root folder near Your solution file.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -81,7 +81,7 @@ To get XData NuGet packages You will need moify nuget.config as described below 
 
 >1) Install Nuget package of XData [engine package](https://github.com/mickfierte/XData/packages/95851/).
 >
->2) Install one of logger Nuget packages for [System.Diagnistics.Trace](https://github.com/mickfierte/XData.Logging.Trace/packages/95890/) or [log4net](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/)
+>2) Install one of logger Nuget packages for [System.Diagnostics.Trace](https://github.com/mickfierte/XData.Logging.Trace/packages/95890/) or [log4net](https://github.com/mickfierte/XData.Logging.Log4Net/packages/95889/)
 >
 >3) Install XData database adapter Nuget package (see [above](http://mickfierte.github.io/XData/#nuget-packages)) for Your database (or multiple databases).
 >

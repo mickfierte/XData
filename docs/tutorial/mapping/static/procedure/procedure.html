@@ -79,19 +79,19 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure.md">
 <h3 id="sql-procedures--functions">SQL procedures &amp; functions</h3>
 
-<p>Common information about mapping to SQL procedures and functions has described in <a href="../../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just reprensent static mapping rules for various procedure types.</p>
+<p>Common information about mapping to SQL procedures and functions has described in <a href="../../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just represent static mapping rules for various procedure types.</p>
 <h4 id="sql-procedure-as-query">SQL procedure as query</h4>
 <p>To define procedure as data source of mapping used <a class="xref" href="../../../../api/XData.Mapping.ProcedureAttribute.html">ProcedureAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - procedure or function name, <em>ProcedureType</em> - <a class="xref" href="../../../../api/XData.ProcedureType.html">ProcedureType</a>: <em>ProcedureType</em>.<strong>Procedure</strong> or <em>ProcedureType</em>.<strong>Function</strong>.</p>
 <h4 id="sql-procedure-parameter">SQL procedure parameter</h4>
-<p>To define SQL procedure parameter used <a class="xref" href="../../../../api/XData.Mapping.ParameterAttribute.html">ParameterAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Order</em> - order number of parameter, <em>Binding</em> - name used inside application code (it&#39;s handy to use parameter with another name, not the name defined inside DB), <em>Type</em> - data type used inside application code, <em>DbType</em> - data type on ADO .Net provider level, <em>Direction</em> - optional, parameter direction, default is <em>ParameterDirection</em>.<strong>Input</strong>, <em>Size</em> - optional, parameter size(if applicable), <em>Scale</em> - optional, parameter presision (if applicable), <em>Name</em> - optional, parameter name, default is equal with <em>Binding</em>, <em>DefaultType</em> - <a href="../../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultType</em>, <em>NativeSqlType</em> - optional, SQL type name (<em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type), <em>UdtTypeName</em> - optional, user defined type (UDT), <em>UdtElementTypeName</em> - optional, user defined type (UDT) of <em>UdtTypeName</em> element (in case where <em>UdtTypeName</em> - array or table), <em>IsArray</em> - optional, parameter is array of <em>UdtElementTypeName</em> (when <em>UdtElementTypeName</em> is omited, array of <em>DbType</em>), default is <strong>false</strong>.</p>
-<h4 id="sql-procedure-resultset">SQL procedure resultset</h4>
-<p>To describe resultset of SQL procedure used <a class="xref" href="../../../../api/XData.Mapping.ResultSetAttribute.html">ResultSetAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - resultset name used inside application code, <em>Order</em> - optional, order number of resultset (required to procedures returns multiple resultsets), <em>ResultType</em> - optional, mapped type of resultset, default is attributed class itself, <em>IsDefault</em> - optional, resultset is default - mapped to attributed class (used when procedure returns multiple resultsets), default is <strong>false</strong>.</p>
-<h4 id="sql-procedure-resultset-as-query-sample">SQL procedure resultset as query sample</h4>
+<p>To define SQL procedure parameter used <a class="xref" href="../../../../api/XData.Mapping.ParameterAttribute.html">ParameterAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Order</em> - order number of parameter, <em>Binding</em> - name used inside application code (it&#39;s handy to use parameter with another name, not the name defined inside DB), <em>Type</em> - data type used inside application code, <em>DbType</em> - data type on ADO .Net provider level, <em>Direction</em> - optional, parameter direction, default is <em>ParameterDirection</em>.<strong>Input</strong>, <em>Size</em> - optional, parameter size(if applicable), <em>Scale</em> - optional, parameter precision (if applicable), <em>Name</em> - optional, parameter name, default is equal with <em>Binding</em>, <em>DefaultType</em> - <a href="../../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultType</em>, <em>NativeSqlType</em> - optional, SQL type name (<em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type), <em>UdtTypeName</em> - optional, user defined type (UDT), <em>UdtElementTypeName</em> - optional, user defined type (UDT) of <em>UdtTypeName</em> element (in case where <em>UdtTypeName</em> - array or table), <em>IsArray</em> - optional, parameter is array of <em>UdtElementTypeName</em> (when <em>UdtElementTypeName</em> is omitted, array of <em>DbType</em>), default is <strong>false</strong>.</p>
+<h4 id="sql-procedure-result-set">SQL procedure result set</h4>
+<p>To describe result set of SQL procedure used <a class="xref" href="../../../../api/XData.Mapping.ResultSetAttribute.html">ResultSetAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - result set name used inside application code, when result set is not mapped to procedure parameter set it to <em>&quot;&quot;</em> (empty string), <em>Order</em> - optional, order number of result set (required to procedures returns multiple result sets), <em>ResultType</em> - optional, mapped type of result set, default is attributed class itself, <em>IsDefault</em> - optional, result set is default - mapped to attributed class (used when procedure returns multiple result sets), default is <strong>false</strong>.</p>
+<h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -99,14 +99,14 @@ public class TestProcedure : IDataObject
     [Property(&quot;T&quot;, &quot;Name&quot;)]
     public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
 }
-</code></pre><h4 id="sql-procedure-with-multiple-resultsets-sample">SQL procedure with multiple resultsets sample</h4>
+</code></pre><h4 id="sql-procedure-with-multiple-result-sets-sample">SQL procedure with multiple result sets sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
     Parameter(&quot;T&quot;, 3, &quot;param3&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 4, &quot;param4&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;, IsDefault = true),
+    ResultSet(&quot;T&quot;, &quot;&quot;, IsDefault = true),
     ResultSet(&quot;T&quot;, &quot;SecondResult&quot;, ResultType = typeof(TestResult), Order = 2)]
 public class TestProcedure2 : IDataObject
 {
@@ -132,7 +132,7 @@ public class TestProcedure3 : IDataObject
     public string OutParameter 
         { get { return this.GetParameter(x =&gt; x.OutParameter); } }
 }
-</code></pre><h4 id="sql-procedure-with-out-parameter-and-resultset-sample">SQL procedure with out parameter and resultset sample</h4>
+</code></pre><h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -142,7 +142,7 @@ public class TestProcedure3 : IDataObject
             Size = 20, 
             Direction = ParameterDirection.Output, 
             Name = &quot;param3&quot;),
-        ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+        ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure4 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -167,7 +167,7 @@ public class TestProcedure5 : IDataObject
     public string OutParameter 
         { get { return this.GetParameter(x =&gt; x.OutParameter); } }
 }
-</code></pre><h4 id="sql-procedure-with-return-value-and-resultset-sample">SQL procedure with return value and resultset sample</h4>
+</code></pre><h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -175,7 +175,7 @@ public class TestProcedure5 : IDataObject
     Parameter(&quot;T&quot;, 3, &quot;ResultParameter&quot;, typeof(int), 
         DbType.Int32, 
         Direction = ParameterDirection.ReturnValue),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure6 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -235,7 +235,7 @@ public class Classifier
         typeof(Classifier[]) /* Parameter type must be an array of mapped type */, 
         DbType.Object, 
         UdtTypeName = &quot;dbo.Classifier&quot; /* Full qualified name of UDT */ ),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure7 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -248,7 +248,7 @@ public class TestProcedure7 : IDataObject
     Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestFunction3 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]

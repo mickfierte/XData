@@ -83,7 +83,7 @@
 <p><a href="../mapping.html">Mapping common rules</a></p>
 <hr>
 <h2 id="dynamic-mapping">Dynamic mapping</h2>
-<div class="TIP"><h5>Tip</h5><p>Before read this topic be sure to already readed <a href="../../glossary.html">Glosary</a> and <a href="../mapping.html">Common mapping rules</a> containg base infomation to better understanding this.</p>
+<div class="TIP"><h5>Tip</h5><p>Before read this topic be sure to already readied <a href="../../glossary.html">Glossary</a> and <a href="../mapping.html">Common mapping rules</a> contains base information to better understanding this.</p>
 </div>
 <p>Dynamic mapping is defined using specific LINQ style expression as private static field of mapped class and it properties.</p>
 <h2 id="dynamic-mapping-sample">Dynamic mapping sample</h2>
@@ -542,7 +542,7 @@ public partial class Invoice
     }
 }
 </code></pre><p>Dynamic mapping provide more representable mechanics to define mapping because of no attribute parameters limitation. Subqueries and inner views can be described in place using <a href="../../query.html">dynamic query</a> mechanics. SQL expressions can be described in LINQ style in place. This abilities enreach representability of dynamic mapping.</p>
-<p>Dynamic mapping alowes split <a href="../../glossary.html#data-object">data object</a> to partial class definitions with basic class definition and mapping.</p>
+<p>Dynamic mapping allows split <a href="../../glossary.html#data-object">data object</a> to partial class definitions with basic class definition and mapping.</p>
 <p>Dynamic mapping is described as private static field of type Expression&lt;CustomMapping&lt;T&gt;&gt; where T - data object type. The value of this property is assigned by call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_CustomMapping__1">XDataMapping.CustomMapping&lt;T&gt;</a> method returning <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a>. Interface <em>IRepositoryStructure&lt;T&gt;</em> has a number of methods to describe all of mapping entities analog to <a href="../static/static.html">static mapping</a> attributes.</p>
 <h3 id="mapping-parameters">Mapping parameters</h3>
 <p>To set parameters of dynamically mapped classes used <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryDescription-1.html">IRepositoryDescription&lt;T&gt;</a> interface methods:</p>
@@ -550,9 +550,9 @@ public partial class Invoice
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetBaseTable_System_String_">SetBaseTable</a> - to set <a href="../../glossary.html#base-table">base table</a>, (optional, by default used <a href="../../glossary.html#virtual-table">virtual table</a> with the empty alias)</li>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetContext_System_String_">SetContext</a> - database <a href="../../glossary.html#context">context</a> (optional, by default context will by assigned in runtime)</li>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetFlags_XData_DataStructureFlag_">SetFlags</a> - <a href="../../glossary.html#data-source-flags">data source flags</a> (optional, by default <strong>None</strong>)</li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetLogicAssemblies_System_String___">SetLogicAssemblies</a> - to set data processing logic classes assemblies FullName for this <a href="../../glossary.html#repository">repository </a> (see <a href="../../three_tier.html#using-three-tier-architecture">Using three tier architecture</a> и <a class="xref" href="../../../api/XData.XDataLogic-1.html"><em>IDataLogic&lt;T&gt;</em></a>)</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryDescription-1.html#XData_Mapping_Dynamic_IRepositoryDescription_1_SetLogicAssemblies_System_String___">SetLogicAssemblies</a> - to set data processing logic classes assemblies FullName for this <a href="../../glossary.html#repository">repository </a> (see <a href="../../three_tier.html#using-three-tier-architecture">Using three tier architecture</a> and <a class="xref" href="../../../api/XData.XDataLogic-1.html"><em>IDataLogic&lt;T&gt;</em></a>)</li>
 </ul>
-<p>To get reference to <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryDescription-1.html">IRepositoryDescription&lt;T&gt;</a> interface is required to define maping of <a href="../../glossary.html#repository">repository</a> read/write properties using <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface method <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____">Map</a>
+<p>To get reference to <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryDescription-1.html">IRepositoryDescription&lt;T&gt;</a> interface is required to define mapping of <a href="../../glossary.html#repository">repository</a> read/write properties using <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface method <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____">Map</a>
 Example:</p>
 <pre><code class="lang-csharp">...
 .Map(x =&gt; new Invoice {
@@ -587,13 +587,13 @@ Example:</p>
 ... 
 </code></pre><p>More detailed repository properties map description <a href="dynamic.html#properties">see below</a>.</p>
 <h2 id="tables">Tables</h2>
-<p>All tables of <a href="../../glossary.html#data-object">data object</a> mapping decribed by IRepositoryStructure&lt;T&gt;.<a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a> method. Tables included into <a href="../../glossary.html#updatable-tables-hierarchy">updatable tables hierarchy</a> excluding <a href="../../glossary.html#base-table">base table</a> must be defined using special <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">overload</a> alowes to set parent table alias.</p>
+<p>All tables of <a href="../../glossary.html#data-object">data object</a> mapping described by IRepositoryStructure&lt;T&gt;.<a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a> method. Tables included into <a href="../../glossary.html#updatable-tables-hierarchy">updatable tables hierarchy</a> excluding <a href="../../glossary.html#base-table">base table</a> must be defined using special <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">overload</a> allows to set parent table alias.</p>
 <pre><code class="lang-csharp">...
 .DataTable(&quot;T_DOC&quot;, &quot;D&quot;, 
     x =&gt; x.DictFilter(&quot;T_DOC_TYPE&quot;, &quot;doc_type_id&quot;, &quot;code&quot;, &quot;INVOICE&quot;))
 .DataTable(&quot;T_DOC_DOC_STATE&quot;, &quot;DS&quot;, &quot;D&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;))
 ...
-</code></pre><p>Same way is possible to define mapping to <em>view</em>, but all properties must to mapped as <a href="../mapping.html#readonly-properties">read only properties</a> or <a href="../mapping.html#hidden-properties">hidden fields</a>.</p>
+</code></pre><p>Same way is possible to define mapping to <em>view</em>, but all properties must to mapped as <a href="../mapping.html#read-only-properties">read only properties</a> or <a href="../mapping.html#hidden-properties">hidden fields</a>.</p>
 <div class="IMPORTANT"><h5>Important</h5><p>Filters and links between tables is defined using <em>filters</em> parameter of IRepositoryStructure&lt;T&gt;.<a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a> method or it&#39;s <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">overload</a>. Detailed filter definition described <a href="dynamic.html#filters">below</a>.</p>
 </div>
 <h2 id="subqueries">Subqueries</h2>
@@ -603,7 +603,7 @@ Example:</p>
 <li>inner view</li>
 <li>subquery expression as single property source (<a href="dynamic.html#sql-expression-property">see below</a>)</li>
 </ul>
-<p>Subquery deep level not reglamented.</p>
+<p>Subquery deep level is not limited.</p>
 <p>In dynamic mapping of data object subqueries can be defined using one of  <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a> or <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView</a> methods overload of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface to define subqueries or inner views respectively.</p>
 <p>While using generic overloads of <em>Subquery</em> or <em>InnerView</em>, parameter <em>IQueryDescription&lt;TDobj&gt; sub</em> can be used with in place <a href="../../query.html">dynamic query</a> notation.</p>
 <p>Non generic overloads of <em>Subquery</em> or <em>InnerView</em> must provide ISqlType or IDataObject marked class type as parameter <em>Type dobjType</em> to reuse of existing mapping. This class can be mapped using static or dynamic style,<br>no matter.</p>
@@ -634,7 +634,7 @@ Example:</p>
 <li>Subquery filters</li>
 <li>Inner links</li>
 </ul>
-<p>Each of them described by corresponding LINQ expression define their parameters depending on the context of their use and the type of the filter itself (see below). Filter descriptions are provided to <em>filters</em> paramter value of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a>, <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a>, <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView</a> and <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a> methods of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface, or <a class="xref" href="../../../api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html#XData_Mapping_Dynamic_IQueryWithAdapter_1_WithRecursive__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">WithRecursive</a> method of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html">IQueryWithAdapter&lt;TRoot&gt;</a>. Each of expression has described one filter. Type of filter is declared by one of fabric method of interface inside lambda expression with one of followed filter adapter:</p>
+<p>Each of them described by corresponding LINQ expression define their parameters depending on the context of their use and the type of the filter itself (see below). Filter descriptions are provided to <em>filters</em> parameter value of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a>, <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a>, <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView</a> and <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a> methods of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface, or <a class="xref" href="../../../api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html#XData_Mapping_Dynamic_IQueryWithAdapter_1_WithRecursive__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">WithRecursive</a> method of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html">IQueryWithAdapter&lt;TRoot&gt;</a>. Each of expression has described one filter. Type of filter is declared by one of fabric method of interface inside lambda expression with one of followed filter adapter:</p>
 <ul>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> - filter adapter to define filters and links inside plain query (see <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">DataTable</a>, <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a>),</li>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter.html">ISubqueryLinkAdapter</a>, <a class="xref" href="../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter-1.html">ISubqueryLinkAdapter&lt;TDObj&gt;</a> and <a class="xref" href="../../../api/XData.Mapping.Dynamic.ISubqueryLinkAdapter-2.html">ISubqueryLinkAdapter&lt;T,TDObj&gt;</a> - used in various overloads of subquery definition (see <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a>, <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView</a> and <a class="xref" href="../../../api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html#XData_Mapping_Dynamic_IQueryWithAdapter_1_WithRecursive__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">WithRecursive</a>) to declare links with subqueries.</li>
@@ -642,7 +642,7 @@ Example:</p>
 <p>Specific parameters for each type of filter is described in filter fabric methods described below in specific topics. And some optional modificators can be defined using continue LINQ calls with extension methods:</p>
 <ul>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetOperation__1___0_XData_FilterOperation_">SetOperation</a> - to set <a class="xref" href="../../../api/XData.FilterOperation.html">filter operation</a></li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> - to set <a href="../../glossary.html#optional-referencies">optional filter</a> flag</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_AsPrimary__1___0_">AsPrimary</a> - to set <a href="../../glossary.html#optional-references">optional filter</a> flag</li>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetCombination__1___0_System_String_">SetCombination</a> - to set <a href="../../glossary.html#filter-group">filter combination</a></li>
 </ul>
 <p>Each of filter type is defined by own special method of corresponding filter adapter. </p>
@@ -661,8 +661,8 @@ Example:</p>
 <li><strong>Like</strong> - field value correlated with find expression</li>
 <li><strong>NotLike</strong> - field value not correlated with find expression</li>
 <li><strong>OuterJoin</strong> - left outer join link between query sources (tables or inner views)</li>
-<li><strong>Contains</strong> - field value correlated with fulltext search</li>
-<li><strong>NotContains</strong> - field value not correlated with fulltext search</li>
+<li><strong>Contains</strong> - field value correlated with full-text search</li>
+<li><strong>NotContains</strong> - field value not correlated with full-text search</li>
 </ul>
 <h4 id="filter-group">Filter group</h4>
 <p>Filter group of filter can be assigned to it declaration by <a class="xref" href="../../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetCombination__1___0_System_String_">SetCombination</a> extension of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IFilterDescription.html">IFilterDescription</a> interface.</p>
@@ -672,11 +672,11 @@ Example:</p>
     .SetCombination(&quot;root&quot;)
 ...
 </code></pre><h4 id="constant-filters">Constant filters</h4>
-<p>Constant filters alowes to restict selection of data by some constant value. This filter defined by one of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_Object_">ConstFilter</a> method overloads of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface. </p>
+<p>Constant filters allows to restrict selection of data by some constant value. This filter defined by one of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_System_Object_">ConstFilter</a> method overloads of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface. </p>
 <p>Constant type list restricted by enum <a class="xref" href="../../../api/XData.FilterConstantType.html">FilterConstantType</a>:</p>
 <ul>
-<li><strong>Const</strong> - constant with value setted by <em>ConstantValue</em>.</li>
-<li><strong>Variable</strong> - value of <a class="xref" href="../../../api/XData.Variable.html">variable</a> with name setted by <em>ConstantValue</em>.</li>
+<li><strong>Const</strong> - constant with value set by <em>ConstantValue</em>.</li>
+<li><strong>Variable</strong> - value of <a class="xref" href="../../../api/XData.Variable.html">variable</a> with name set by <em>ConstantValue</em>.</li>
 <li><strong>CurrentDate</strong> - current date.</li>
 <li><strong>CurrentDateTime</strong> - current date and time.</li>
 <li><strong>CurrentDateTimeUTC</strong> - current date and time (UTC).</li>
@@ -723,7 +723,7 @@ Example:</p>
     .SetOperation(FilterOperation.In)
 ... 
 </code></pre><h4 id="dictionary-filters">Dictionary filters</h4>
-<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recomended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
+<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recommended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
 <p>XData supports using mnemonic code when define filters on dictionary value - dictionary filters. They defined by one of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_DictFilter_System_String_System_String_System_String_System_String_">DictFilter</a> overloads of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface.</p>
 <div class="IMPORTANT"><h5>Important</h5><p>This filter can be used when dictionary has simple (one field only) identity field and mnemonic code field. But it&#39;s a very common case.</p>
 </div>
@@ -758,7 +758,7 @@ Example:</p>
 <p>Properties dynamic mapping is performed as method call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface:</p>
 <ul>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Column__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___">Column</a> method call for each of <a href="../mapping.html#hidden-properties">hidden properties</a> mapping</li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_ReadOnlyProperty__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___">ReadOnlyProperty</a> method call for each of <a href="../mapping.html#readonly-properties">readonly properties</a> mapping</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_ReadOnlyProperty__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___">ReadOnlyProperty</a> method call for each of <a href="../mapping.html#read-only-properties">read only properties</a> mapping</li>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____">Map</a> method call for declare all of read/write properties mapping</li>
 </ul>
 <pre><code class="lang-csharp">...
@@ -769,7 +769,7 @@ Example:</p>
     x =&gt; x.Field&lt;DateTime&gt;(&quot;D&quot;, string.Empty, 
         z =&gt; z.Default(DefaultType.CurrentDateTime, DefaultFeature.UseOnUpdate)))
 ...
-</code></pre><p>Parameter <em>mapper</em> of <em>Map</em> method alowes to define mapping rule for multiple read/write properties using lambda expression with <a class="xref" href="../../../api/XData.Mapping.Dynamic.IQueryStructureAdapter.html">IQueryStructureAdapter</a> interface as parameter.</p>
+</code></pre><p>Parameter <em>mapper</em> of <em>Map</em> method allows to define mapping rule for multiple read/write properties using lambda expression with <a class="xref" href="../../../api/XData.Mapping.Dynamic.IQueryStructureAdapter.html">IQueryStructureAdapter</a> interface as parameter.</p>
 <pre><code class="lang-csharp">...
 .Map(x =&gt; new Invoice {
     DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
@@ -821,7 +821,7 @@ Example:</p>
 <ul>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryReadOnlyPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_ConcurrencyToken">ConcurrencyToken</a> - <a href="../../concurrency.html">concurrency token</a> flag for property</li>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_">Default</a> - <a href="">default value</a> assign rules for property</li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryReadOnlyPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_OuterFlag">OuterFlag</a> - outer join mandatory flag, values of properties marked this flag is analyzed during making decision of operations over tables in <a href="../../glossary.html#optional-referencies">optional references</a></li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryReadOnlyPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_OuterFlag">OuterFlag</a> - outer join mandatory flag, values of properties marked this flag is analyzed during making decision of operations over tables in <a href="../../glossary.html#optional-references">optional references</a></li>
 </ul>
 <div class="IMPORTANT"><h5>Important</h5><p>Required to set at least one property of mapped class as primary unique key. Subqueries and inner views can has no key properties.</p>
 </div>
@@ -830,10 +830,10 @@ Interfaces <em>IRepositoryStructureAdapter</em> and <em>IRepositoryStructureAdap
 Interface <em>IPropertyMappingAdapter</em> is used as in <a href="../../query.html">dynamic queries</a> as in dynamic repository mapping.
 Interface <em>IRepositoryPropertyMappingAdapter</em> is inherited from [IPropertyMappingAdapter] and used in dynamic repository mapping only.</p>
 <h4 id="sql-expression-property">SQL expression property</h4>
-<p><a href="../mapping.html#readonly-properties">Readonly property</a> can be mapped to SQL expression. Dynamic mapping of SQL expression is defined by one of  <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html">IRepositoryStructureAdapter</a> interface <em>Expr</em> method overload:</p>
+<p><a href="../mapping.html#read-only-properties">Read only property</a> can be mapped to SQL expression. Dynamic mapping of SQL expression is defined by one of  <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html">IRepositoryStructureAdapter</a> interface <em>Expr</em> method overload:</p>
 <ul>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr&lt;TValue&gt;(string fieldName, Expression&lt;Func&lt;IQueryStructureAdapter, TValue&gt;&gt; expr, DbType dbType, params Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[] attributes)</a></li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr&lt;TValue&gt;(string fieldName, DataExpressionType type, string exprText, DbType dbType, params Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[] attributes)</a> - used to define sql expression <em>DataExpressionType.SubQuery</em> or <em>DataExpressionType.PlainSql</em></li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr&lt;TValue&gt;(string fieldName, DataExpressionType type, string exprText, DbType dbType, params Expression&lt;Func&lt;IRepositoryExpressionMappingAdapter, IStructureFlag&gt;&gt;[] attributes)</a> - used to define SQL expression <em>DataExpressionType.SubQuery</em> or <em>DataExpressionType.PlainSql</em></li>
 </ul>
 <p>When first overload used, SQL expression is defined by <em>expr</em> parameter value as lambda function with <a class="xref" href="../../../api/XData.Mapping.Dynamic.IQueryStructureAdapter.html">IQueryStructureAdapter</a> interface extension methods inside:</p>
 <ul>
@@ -882,10 +882,10 @@ Interface <em>IRepositoryPropertyMappingAdapter</em> is inherited from [IPropert
 <h4 id="property-default-value">Property default value</h4>
 <p>To set default value of property with dynamic mapping, use one of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html">IRepositoryPropertyMappingAdapter&lt;T, TValue&gt;</a> interface <em>Default</em> method overload:</p>
 <ul>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_">Default(DefaultType source)</a> - use with <em>DefaultType.AutoIncrement</em>, <em>DefaultType.CurrentDate</em>, <em>DefaultType.CurrentDateTime</em>, <em>DefaultType.CurrentDateTimeUtc</em>, <em>DefaultType.NewGuid</em>, <em>DefaultType.UserName</em> where default value asssigned data row on insert only</li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_XData_DefaultFeature_">Default(DefaultType source, DefaultFeature features)</a> - use with <em>DefaultType.AutoIncrement</em>, <em>DefaultType.CurrentDate</em>, <em>DefaultType.CurrentDateTime</em>, <em>DefaultType.CurrentDateTimeUtc</em>, <em>DefaultType.NewGuid</em>, <em>DefaultType.UserName</em> where default value asssigned data row on insert or update</li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_">Default(DefaultType source, TValue value)</a> - use with <em>DefaultType.Const</em> or <em>DefaultType.Variable</em> where default value asssigned data row on insert only</li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_XData_DefaultFeature_">Default(DefaultType source, TValue value, DefaultFeature features)</a> - use with <em>DefaultType.Const</em> or <em>DefaultType.Variable</em> where default value asssigned data row on insert or update</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_">Default(DefaultType source)</a> - use with <em>DefaultType.AutoIncrement</em>, <em>DefaultType.CurrentDate</em>, <em>DefaultType.CurrentDateTime</em>, <em>DefaultType.CurrentDateTimeUtc</em>, <em>DefaultType.NewGuid</em>, <em>DefaultType.UserName</em> where default value assigned data row on insert only</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType_XData_DefaultFeature_">Default(DefaultType source, DefaultFeature features)</a> - use with <em>DefaultType.AutoIncrement</em>, <em>DefaultType.CurrentDate</em>, <em>DefaultType.CurrentDateTime</em>, <em>DefaultType.CurrentDateTimeUtc</em>, <em>DefaultType.NewGuid</em>, <em>DefaultType.UserName</em> where default value assigned data row on insert or update</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_">Default(DefaultType source, TValue value)</a> - use with <em>DefaultType.Const</em> or <em>DefaultType.Variable</em> where default value assigned data row on insert only</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_Default_XData_DefaultType__1_XData_DefaultFeature_">Default(DefaultType source, TValue value, DefaultFeature features)</a> - use with <em>DefaultType.Const</em> or <em>DefaultType.Variable</em> where default value assigned data row on insert or update</li>
 </ul>
 <pre><code class="lang-csharp">...
 .ReadOnlyProperty(x =&gt; x.Changed, 
@@ -929,9 +929,9 @@ HistoryDate = x.Field&lt;DateTime?&gt;(&quot;H&quot;, string.Empty,
 </ul>
 <p>Parameter <em>attributes</em> of method <em>Link</em> value used to define link properties pairs with one of <a class="xref" href="../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html">ILinkPropertyMappingAdapter&lt;T&gt;</a> interface <em>LinkProperties</em> method overload call:</p>
 <ul>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty">LinkProperty()</a> - used property of source object to assiciate with link property defined by <em>Link</em> method</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty">LinkProperty()</a> - used property of source object to associate with link property defined by <em>Link</em> method</li>
 <li><a class="xref" href="../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___">LinkProperty&lt;TSource&gt;(Expression&lt;Func&lt;TSource, object&gt;&gt; source)</a> - used <em>source</em> as source property and equal named property from target object</li>
-<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___System_Linq_Expressions_Expression_System_Func__0_System_Object___">LinkProperty&lt;TSource&gt;(Expression&lt;Func&lt;TSource, object&gt;&gt; source, Expression&lt;Func&lt;T, object&gt;&gt; property)</a> - specifing both properties</li>
+<li><a class="xref" href="../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___System_Linq_Expressions_Expression_System_Func__0_System_Object___">LinkProperty&lt;TSource&gt;(Expression&lt;Func&lt;TSource, object&gt;&gt; source, Expression&lt;Func&lt;T, object&gt;&gt; property)</a> - specifying both properties</li>
 </ul>
 <pre><code class="lang-csharp">...
 DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
@@ -998,27 +998,28 @@ DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
 <li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Filter_System_Linq_Expressions_Expression_System_Func__1_XData_DataSource_Structure_RuntimeFilter___">Filter</a></em> - used to specify external link runtime filter,</li>
 <li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_FilterCombination_System_String_">FilterCombination</a></em> - used to set filter group of filter,</li>
 <li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_DirectLink">DirectLink</a></em> - used to set direct link flag, see <a href="../../../tips/tree_childs.html">tree master-detail specifics</a> for details, </li>
-<li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_MasterRefresh">MasterRefresh</a></em> - used to set refresh master repository current row data on submit details changes flag (usefull when master has calculated properties over detail repository data),</li>
-<li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Nullable_XData_FilterNullable_">Nullable</a></em> - <a href="../../glossary.html#filter-null-processing-behaviour">filter null processing behaviour</a>,</li>
+<li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_MasterRefresh">MasterRefresh</a></em> - used to set refresh master repository current row data on submit details changes flag (useful when master has calculated properties over detail repository data),</li>
+<li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Nullable_XData_FilterNullable_">Nullable</a></em> - <a href="../../glossary.html#filter-null-processing-behavior">filter null processing behavior</a>,</li>
 <li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Operation_XData_FilterOperation_">Operation</a></em> - link filter operation (see <a href="dynamic.html#filters">Filters</a>),</li>
 <li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_PrimaryFilter">PrimaryFilter</a></em> - used to specify external link is optional filter,</li>
-<li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Property_System_Linq_Expressions_Expression_System_Func__1_System_Object___">Property</a></em> - link property in master repository (used when property is <a href="../mapping.html#hidden-properties">hidden peroperty</a>),</li>
+<li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Property_System_Linq_Expressions_Expression_System_Func__1_System_Object___">Property</a></em> - link property in master repository (used when property is <a href="../mapping.html#hidden-properties">hidden property</a>),</li>
 <li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_Property__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___">Property&lt;TChildLink&gt;</a></em> - link property in master repository (used when property is actual property), </li>
 <li><em><a class="xref" href="../../../api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html#XData_Mapping_Dynamic_IExternalLinkAdapter_2_TreeFilter">TreeFilter</a></em> - used to set external link filter&#39;s tree filter flag</li>
 </ul>
 <pre><code class="lang-csharp">// when external link used hidden property
 ..., x =&gt; x.ExternalLink&lt;InvoiceSpec&gt;(&quot;DocId&quot;))
-// when external link used readonly or regular property
+// when external link used read-only or regular property
 ..., x =&gt; x.ExternalLink&lt;InvoiceSpec&gt;(z =&gt; z.DocId))
 </code></pre><h3 id="sql-procedures--functions">SQL procedures &amp; functions</h3>
-<p>Common information about mapping to SQL procedures and functions described in <a href="../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just reprensent dynamic mapping rules for various procedure types.</p>
+<p>Common information about mapping to SQL procedures and functions described in <a href="../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just represent dynamic mapping rules for various procedure types.</p>
 <h4 id="sql-procedure-as-query">SQL procedure as query</h4>
 <p>To define procedure as data source of mapping used <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a> method call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
 <h4 id="sql-procedure-parameter">SQL procedure parameter</h4>
 <p>To define SQL procedure parameter used <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____">Parameter</a> method call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
-<h4 id="sql-procedure-resultset">SQL procedure resultset</h4>
-<p>To describe resultset of SQL procedure used <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___">Return</a> method call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
-<h4 id="sql-procedure-resultset-as-query-sample">SQL procedure resultset as query sample</h4>
+<h4 id="sql-procedure-result-set">SQL procedure result set</h4>
+<p>To describe result set of SQL procedure used <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___">Return</a> method call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
+<p>* - when result set is not mapped to procedure parameter set result set name to <em>string.Empty</em></p>
+<h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
 <pre><code class="lang-csharp">var res = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
@@ -1028,7 +1029,7 @@ DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in res)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
-</code></pre><h4 id="sql-procedure-with-multiple-resultsets-sample">SQL procedure with multiple resultsets sample</h4>
+</code></pre><h4 id="sql-procedure-with-multiple-result-sets-sample">SQL procedure with multiple result sets sample</h4>
 <pre><code class="lang-csharp">var res2 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
@@ -1053,16 +1054,16 @@ foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quo
     .Call(DataScope.Layer, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
-</code></pre><h4 id="sql-procedure-with-out-parameter-and-resultset-sample">SQL procedure with out parameter and resultset sample</h4>
+</code></pre><h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
 <pre><code class="lang-csharp">var res4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
     .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Return(&quot;T&quot;, &quot;Result&quot;, 1, x =&gt; new Classifier { 
+    .Return(&quot;T&quot;, string.Empty, 1, x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
+    .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res4.GetParameter&lt;int&gt;(&quot;result&quot;));
 foreach (var classifier in res4)
@@ -1074,17 +1075,17 @@ foreach (var classifier in res4)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
     .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
+    .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res5.GetParameter&lt;int&gt;(&quot;result&quot;));
-</code></pre><h4 id="sql-procedure-with-return-value-and-resultset-sample">SQL procedure with return value and resultset sample</h4>
+</code></pre><h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
 <pre><code class="lang-csharp">var res6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
-    .Return(&quot;T&quot;, &quot;Result&quot;, 1, x =&gt; new Classifier { 
+    .Return(&quot;T&quot;, string.Empty, 1, x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, &quot;param1&quot;.SetVar(param));
+    .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in res6)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
@@ -1147,7 +1148,7 @@ Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
     .Select(x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
-    .AsQuery(DataScope.Layer, &quot;param1&quot;.SetVar(param));
+    .AsQuery(DataScope, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in f3)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
@@ -1158,7 +1159,7 @@ foreach (var classifier in f3)
     .Select(x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
-    .AsQuery(DataScope.Layer, 
+    .AsQuery(DataScope, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in f1)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);

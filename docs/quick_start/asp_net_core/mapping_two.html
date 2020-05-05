@@ -164,7 +164,7 @@ namespace &lt;..Your namespace..&gt;.Models
 <p>6) By default, the connection has the operation &quot;equal&quot;, but in this case we need to link these tables by the outer join join and to indicate this we &quot;refine&quot; the link using the <a class="xref" href="../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetOperation__1___0_XData_FilterOperation_">SetOperation</a> method and specify the operation <a class="xref" href="../../api/XData.FilterOperation.html">FilterOperation.OuterJoin</a>. See <a href="../../tutorial/mapping/dynamic/dynamic.html#filters">documentation topic</a> for more details</p>
 <p>7) For now, skip the <em>Column</em> method and return to it later...</p>
 <p>8) The next new element for us will be a description of the mapping of the &quot;Parent&quot; link field. It is described by the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_1_Link__2_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ILinkPropertyMappingAdapter__0__XData_Mapping_Dynamic_IStructureFlag_____">Link&lt;TVal,TSource&gt;</a> method typed as the type of the property in the main description of the object. The first parameter is the data source alias (&quot;P&quot;) of the field that will be assigned in link <em>Value</em>, the second parameter designates the field that will be assigned in <em>Value</em>. The third parameter contains the lambda-modifiers assigned to the link field ... </p>
-<p>9) The first modifier <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryReadOnlyPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_OuterFlag">OuterFlag</a> shows that this field is an indicator of whether or not to insert an entry into the table connected by the outer join (when inserting). If value is null inserting to this table (and thair child tables in updatable tables hierarchy) will be skipped. When updating to an empty value, it signals the need to delete the record from the table optionally connected and thair child tables in updatable tables hierarchy. See <a href="../../tutorial/mapping/dynamic/dynamic.html#properties">documentation topic</a> for more details</p>
+<p>9) The first modifier <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryReadOnlyPropertyMappingAdapter.html#XData_Mapping_Dynamic_IRepositoryReadOnlyPropertyMappingAdapter_OuterFlag">OuterFlag</a> shows that this field is an indicator of whether or not to insert an entry into the table connected by the outer join (when inserting). If value is null inserting to this table (and their child tables in updatable tables hierarchy) will be skipped. When updating to an empty value, it signals the need to delete the record from the table optionally connected and their child tables in updatable tables hierarchy. See <a href="../../tutorial/mapping/dynamic/dynamic.html#properties">documentation topic</a> for more details</p>
 <p>10) The rest of the modifiers describe which fields will be copied when assigning the link from the source object. There are few overloads of the <a class="xref" href="../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty">LinkProperty</a> method:</p>
 <ul>
 <li>with one lambda parameter that takes a link type parameter (in our case, the first occurrence). It determines which property of the link object will be copied to <em>Value</em></li>
@@ -187,11 +187,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         public CatalogController(IDataEngine dataEngine) : base(dataEngine) { }
 
         [HttpGet]
-        public async Task&lt;ActionResult&lt;Catalog&gt;&gt; Get(long id)
+        public async Task&lt;ActionResult&lt;Catalog&gt;&gt; Get(long id, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;Catalog&gt;()
                         .SingleOrDefaultAsync(x =&gt; x.CatalogId == id);
@@ -205,11 +205,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         }
 
         [HttpGet]
-        public async Task&lt;ActionResult&lt;Catalog[]&gt;&gt; GetChilds(long id)
+        public async Task&lt;ActionResult&lt;Catalog[]&gt;&gt; GetChilds(long id, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     if(id == 0) //return root catalogs
                         return await dataScope.GetRepository&lt;Catalog&gt;()

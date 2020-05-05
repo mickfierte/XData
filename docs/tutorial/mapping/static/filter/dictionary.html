@@ -79,9 +79,9 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_filter_dictionary.md">
 
 <h4 id="dictionary-filters">Dictionary filters</h4>
-<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recomended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
+<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recommended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
 <p>XData supports using mnemonic code when define filters on dictionary value - dictionary filters. They defined by <a class="xref" href="../../../../api/XData.Mapping.DictionaryFilterAttribute.html">DictionaryFilterAttribute</a> with specific (over described <a href="../static.html#filters">above</a>) parameters: <em>DictionaryTable</em> - dictionary table name, <em>DictionaryId</em> - dictionary id field name, <em>DictionaryCode</em> - dictionary mnemonic code field name, <em>DictionaryValue</em> - mnemonic code value to filter query on, <em>ValueIsVariable</em> - flag <em>DictionaryValue</em> contains not a value but name of <a class="xref" href="../../../../api/XData.Variable.html">variable</a> with value.</p>
-<div class="TIP"><h5>Tip</h5><p>In case filter field name is equals dictionary id field name, parameter <em>FieldName</em> can be omited. </p>
+<div class="TIP"><h5>Tip</h5><p>In case filter field name is equals dictionary id field name, parameter <em>FieldName</em> can be omitted. </p>
 </div>
 <div class="IMPORTANT"><h5>Important</h5><p>This filter can be used when dictionary has simple (one field only) identity field and mnemonic code field. But it&#39;s a very common case.</p>
 </div>

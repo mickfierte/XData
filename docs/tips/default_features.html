@@ -87,7 +87,7 @@
 <li><strong>UpdateWhenAssigned</strong> - change insert operation over table to update when PK value assigned explicitly.</li>
 </ul>
 <p>Last two of features is usable when data object &#39;s primary table is linked with another table in data object mapping as one-to-one, and insert into base table can be skipped (or replaced with update statement) when it&#39;s primary key is assigned explicitly in application code.</p>
-<p>This features helps logicaly combine mappings to hide technological entities, which don&#39;t reflect buseness object model of application. </p>
+<p>This features helps logically combine mappings to hide technological entities, which don&#39;t reflect business object model of application. </p>
 <p>Default features can be combined. For example: </p>
 <pre><code class="lang-csharp">DefaultFeature.UseOnUpdate | DefaultFeature.SkipWhenAssigned
 </code></pre></article>

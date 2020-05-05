@@ -79,11 +79,11 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_property_link.md">
 
 <h4 id="links">Links</h4>
-<p>To statically define <a href="../../mapping.html#link-properties">link property</a> pairs used <a class="xref" href="../../../../api/XData.Mapping.LinkPropertyAttribute.html">LinkPropertyAttribute</a> with parameters: <em>DictSource</em> - optional, source object property name, <em>Property</em> - optional, property name. When one or both of parameters is omited, folowed rules are used:</p>
+<p>To statically define <a href="../../mapping.html#link-properties">link property</a> pairs used <a class="xref" href="../../../../api/XData.Mapping.LinkPropertyAttribute.html">LinkPropertyAttribute</a> with parameters: <em>DictSource</em> - optional, source object property name, <em>Property</em> - optional, property name. When one or both of parameters is omitted, followed rules are used:</p>
 <ul>
-<li>When omit both propeties - used property name of link property as target and equal named property from source object</li>
-<li>When <em>DictSource</em> is omited -  used <em>Property</em> as target property name  and equal named property from source object</li>
-<li>When <em>Property</em> is omited - used property name of link property as target and property with name equals <em>DictSource</em> from source object</li>
+<li>When omit both properties - used property name of link property as target and equal named property from source object</li>
+<li>When <em>DictSource</em> is omitted -  used <em>Property</em> as target property name  and equal named property from source object</li>
+<li>When <em>Property</em> is omitted - used property name of link property as target and property with name equals <em>DictSource</em> from source object</li>
 </ul>
 <pre><code class="lang-csharp">[Property(&quot;S&quot;, &quot;name&quot;),
     LinkProperty(&quot;Name&quot;) /* DocState.Name -&gt; this.DocState */,

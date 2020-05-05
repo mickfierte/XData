@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="tips_lob.md">
 <h3 id="large-object-loading">Large object loading</h3>
 
-<p>Large objects specific properties <a class="xref" href="../api/XData.Mapping.Lob.html">Lob</a> and <a class="xref" href="../api/XData.Mapping.Xml.html">Xml</a> specialy used to lazy access to potetialy big sized data stored in database.</p>
+<p>Large objects specific properties <a class="xref" href="../api/XData.Mapping.Lob.html">Lob</a> and <a class="xref" href="../api/XData.Mapping.Xml.html">Xml</a> specially used to lazy access to potentially big sized data stored in database.</p>
 <p>When <a href="../tutorial/glossary.html#data-object">data object</a> accessed using XData, large objects data not queried, but replaced with null values to create full structure of object. </p>
 <p>To get or set value of <em>Lob</em> or <em>Xml</em> <a class="xref" href="../api/XData.Mapping.Lob.html#XData_Mapping_Lob_Value">Lob.Value</a> and <a class="xref" href="../api/XData.Mapping.Xml.html#XData_Mapping_Xml_Document">Xml.Document</a> properties are used. Size of <em>Lob</em> can be checked using <a class="xref" href="../api/XData.Mapping.Lob.html#XData_Mapping_Lob_GetSize">GetSize</a> method.</p>
 <p>To simplify value assigning overrided operation <a class="xref" href="../api/XData.Mapping.Lob.html#XData_Mapping_Lob_op_Addition_XData_Mapping_Lob_System_Byte___">+=</a> can be used as described in example below:</p>
@@ -90,7 +90,7 @@ obj.Scan += Encoding.UTF8.GetBytes(z.Source.Document.ToString());
         z =&gt; z.DocState += dataScope.GetDictionaryValue&lt;DocState&gt;(x =&gt; x.Code == newStateCode),
         z =&gt; z.Source.Modify(doc =&gt; doc.Element(&quot;invoice&quot;).Attribute(&quot;state&quot;).Value = newStateCode))
     .Submit();
-</code></pre><div class="WARNING"><h5>Warning</h5><p>When object is <a href="json.html">serialized</a> large objects properties are serialized with null values by default! When actual value of large object is required it must to be requested separatly. To fill object large properties before serialization can be used one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> or <a href="">LoadLobAsync</a> helper method overloads.</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>When object is <a href="json.html">serialized</a> large objects properties are serialized with null values by default! When actual value of large object is required it must to be requested separately. To fill object large properties before serialization can be used one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> or <a href="">LoadLobAsync</a> helper method overloads.</p>
 </div>
 </article>
           </div>

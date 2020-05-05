@@ -136,7 +136,7 @@ select 2 as id, dateadd(day, -4, X.date_field) as date_val
         t =&gt; t.GetStructure(&quot;X&quot;, y =&gt; y.DataTable(&quot;T_TEST&quot;, &quot;X&quot;, 
             z =&gt; z.ConstFilter(&quot;FilterByTest2Id&quot;, &quot;test2_id&quot;, 1)))
             .Select(z =&gt; new {
-                //!!! Autoicrement primary key description is required 
+                //!!! Auto increment primary key description is required 
                 //!!! here only for Oracle and leads to an error for 
                 //!!! others!
                 TestId = z.Default&lt;long&gt;(DefaultType.AutoIncrement),
@@ -144,7 +144,7 @@ select 2 as id, dateadd(day, -4, X.date_field) as date_val
                 DateField = z.Expr(&quot;date_val&quot;, 
                     s =&gt; s.Field&lt;DateTime&gt;(&quot;X&quot;, 
                         &quot;date_field&quot;).AddDays(-4), DbType.DateTime) })));
-</code></pre><div class="WARNING"><h5>Warning</h5><p>Oracle has required explicit description of autoincrement primary key in that sort SQL block and other RDBMS threat that as error. Due to some features of the implementation at the moment, it was not possible to reduce this to a single syntax. Perhaps this will change further.</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Oracle has required explicit description of auto increment primary key in that sort SQL block and other RDBMS threat that as error. Due to some features of the implementation at the moment, it was not possible to reduce this to a single syntax. Perhaps this will change further.</p>
 </div>
 <ul>
 <li><strong>to UPDATE SQL block...</strong></li>
@@ -267,7 +267,7 @@ select 2 as id, dateadd(day, -4, X.date_field) as date_val
                 DocStateId = s.Field&lt;long&gt;(&quot;DS&quot;, &quot;doc_state_id&quot;),
                 //!!! PostgreSql and MySql don&#39;t support merge statement
                 //!!! only insert with conflict handling so second field 
-                //!!! leads to error but requred for MS SQL Server and 
+                //!!! leads to error but required for MS SQL Server and 
                 //!!! Oracle!
                 SomeField = s.Expr&lt;int&gt;(&quot;some_field&quot;, 
                     DataExpressionType.PlainSql, &quot;1&quot;, DbType.Int32) }),
@@ -280,7 +280,7 @@ select 2 as id, dateadd(day, -4, X.date_field) as date_val
             SomeField = z.Field(y =&gt; y.Data&lt;int&gt;(&quot;Some&quot;), 
                 y =&gt; y.Update(), y =&gt; y.Insert()) }),
     x =&gt; x.Param&lt;int&gt;(&quot;Some&quot;, DbType.Int32).Set(4));
-</code></pre><div class="WARNING"><h5>Warning</h5><p>PostgreSql and MySql don&#39;t support merge statement only insert with conflict handling so second field leads to error but requred for MS SQL Server and Oracle!</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>PostgreSql and MySql don&#39;t support merge statement only insert with conflict handling so second field leads to error but required for MS SQL Server and Oracle!</p>
 </div>
 <div class="WARNING"><h5>Warning</h5><p>Not supported in SQLite</p>
 </div>
@@ -385,7 +385,7 @@ foreach (TestObj testObj in sqlBlockData)
 }
 </code></pre><div class="WARNING"><h5>Warning</h5><p>Oracle support predefined table variables types only so table variable type declaration in unnamed block is not supported in Oracle and block need to be redesigned</p>
 </div>
-<div class="WARNING"><h5>Warning</h5><p>Oracle support return table from predefined pipelined functions only so unnamed SQL blocks thats returns collection of objects conflicts with Oracle concept and not supported at RDMS level. This block in Oracle can be realised using pipelined functions and XData procedure call ability </p>
+<div class="WARNING"><h5>Warning</h5><p>Oracle support return table from predefined pipelined functions only so unnamed SQL blocks thats returns collection of objects conflicts with Oracle concept and not supported at RDMS level. This block in Oracle can be realized using pipelined functions and XData procedure call ability </p>
 </div>
 <div class="WARNING"><h5>Warning</h5><p>Unnamed procedure SQL blocks are not supported in SQLite and MySQL</p>
 </div>

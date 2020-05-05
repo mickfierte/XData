@@ -534,7 +534,7 @@ public partial class Invoice
     }
 }
 </code></pre><p>Dynamic mapping provide more representable mechanics to define mapping because of no attribute parameters limitation. Subqueries and inner views can be described in place using <a href="../../query.html">dynamic query</a> mechanics. SQL expressions can be described in LINQ style in place. This abilities enreach representability of dynamic mapping.</p>
-<p>Dynamic mapping alowes split <a href="../../glossary.html#data-object">data object</a> to partial class definitions with basic class definition and mapping.</p>
+<p>Dynamic mapping allows split <a href="../../glossary.html#data-object">data object</a> to partial class definitions with basic class definition and mapping.</p>
 <p>Dynamic mapping is described as private static field of type Expression&lt;CustomMapping&lt;T&gt;&gt; where T - data object type. The value of this property is assigned by call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_CustomMapping__1">XDataMapping.CustomMapping&lt;T&gt;</a> method returning <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a>. Interface <em>IRepositoryStructure&lt;T&gt;</em> has a number of methods to describe all of mapping entities analog to <a href="../static/static.html">static mapping</a> attributes.</p>
 </article>
           </div>

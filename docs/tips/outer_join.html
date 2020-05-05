@@ -83,7 +83,7 @@
     .DataTable(&quot;t_user&quot;, &quot;U&quot;)
     // *t_user_claim* has inner joined to *t_user* by *user_id* field
     .DataTable(&quot;t_user_claim&quot;, &quot;UC&quot;, z =&gt; z.Link(&quot;U&quot;, &quot;user_id&quot;),
-        // constant filter use defaut equal operation (see SQL result below)
+        // constant filter use default equal operation (see SQL result below)
         z =&gt; z.ConstFilter(&quot;ClaimNickName&quot;, &quot;claim_type&quot;, &quot;nickname&quot;))
     // *t_user_app* has outer joined to *t_user* by *user_id* field
     .DataTable(&quot;t_user_app&quot;, &quot;A&quot;,

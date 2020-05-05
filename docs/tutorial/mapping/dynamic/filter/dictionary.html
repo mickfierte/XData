@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_filter_dictionary.md">
 
 <h4 id="dictionary-filters">Dictionary filters</h4>
-<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recomended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
+<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recommended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
 <p>XData supports using mnemonic code when define filters on dictionary value - dictionary filters. They defined by one of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_DictFilter_System_String_System_String_System_String_System_String_">DictFilter</a> overloads of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html">IInnerFilterAdapter</a> interface.</p>
 <div class="IMPORTANT"><h5>Important</h5><p>This filter can be used when dictionary has simple (one field only) identity field and mnemonic code field. But it&#39;s a very common case.</p>
 </div>

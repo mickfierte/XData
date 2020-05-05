@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Asynchronious wrapped operations | XData website </title>
+    <title>Asynchronous wrapped operations | XData website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Asynchronious wrapped operations | XData website ">
+    <meta name="title" content="Asynchronous wrapped operations | XData website ">
     <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href=".././images/cube.ico">
@@ -77,36 +77,37 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="tips_async.md">
-<h3 id="asynchronious-wrapped-operations">Asynchronious wrapped operations</h3>
+<h3 id="asynchronous-wrapped-operations">Asynchronous wrapped operations</h3>
 
-<div class="WARNING"><h5>Warning</h5><p>Only .Net Core Standard 2.0 version supported asynchronious wrapped operations</p>
+<div class="WARNING"><h5>Warning</h5><p>Only .Net Core Standard 2.0 version supported asynchronous wrapped operations</p>
 </div>
-<p>To access data with XData inside async methods it&#39;s handy to use asynchronous wrappers declared inside <a class="xref" href="../api/XData.Async.AsyncExtensions.html">XData.Async etxtension methods</a> as illustrated in followed example:</p>
+<p>To access data with XData inside async methods it&#39;s handy to use asynchronous wrappers declared inside <a class="xref" href="../api/XData.Async.AsyncExtensions.html">XData.Async extension methods</a> as illustrated in followed example:</p>
 <pre><code class="lang-csharp">using XData.Async;
 ...
-internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine, CancellationToken cancellationToken)
+IDataEngine _dataEngine;
+...
+internal async Task&lt;DocType[]&gt; TestArrayAsync(CancellationToken cancellationToken)
 {
-    using (var dataScope = dataEngine.NewDataScope(&quot;TEST_POSTGRE_NPG&quot;))
+    using (var dataScope = dataEngine.NewDataScope(&quot;TEST_POSTGRE_NPG&quot;, cancellationToken))
     {
-        return await dataScope.GetRepository&lt;DocType&gt;().ToArrayAsync(cancellationToken);
+        return await dataScope.GetRepository&lt;DocType&gt;().ToArrayAsync();
     }
 }
-</code></pre><p>Using asynchronously diposable objects requires an additional package <a href="https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/">XData net standard 2.0 Asynchronous Disposable support package</a> and supporting of .Net Standard 2.1 specification</p>
-<p>To get asynchronous diposable version of... </p>
+</code></pre><p>Using asynchronously disposable objects requires an additional package <a href="https://github.com/mickfierte/XData.AsyncDisposable/packages/164357/">XData net standard 2.0 Asynchronous Disposable support package</a> and supporting of .Net Standard 2.1 specification</p>
+<p>To get asynchronous disposable version of... </p>
 <ul>
 <li><em>IDataScope</em> use <em>NewDataScopeAsync</em> or <em>GetDataScopeAsync</em> extension methods of <em>IDataEngine</em>. </li>
 <li><em>ITransaction</em> use <em>BeginTransactionAsync</em> extension methods of <em>IDataScope</em>. </li>
-<li><em>IRepository&lt;T&gt;</em> use <em>GetRepositoryAsync&lt;T&gt;</em> extension methods of <em>IDataScope</em>.</li>
 </ul>
 <pre><code class="lang-csharp">using XData.Async;
 using XData.AsyncDisposable;
 ...
-internal async Task&lt;DocType[]&gt; TestArrayAsync(IDataEngine dataEngine, CancellationToken cancellationToken)
+IDataEngine _dataEngine;
+...
+internal async Task&lt;DocType[]&gt; TestArrayAsync(CancellationToken cancellationToken)
 {
-    await using (var dataScope = dataEngine.NewDataScopeAsync(&quot;TEST_POSTGRE_NPG&quot;))
-    {
-        return await dataScope.GetRepository&lt;DocType&gt;().ToArrayAsync(cancellationToken);
-    }
+    await using var dataScope = _dataEngine.NewDataScopeAsync(&quot;TEST_POSTGRE_NPG&quot;, cancellationToken);
+    return await dataScope.GetRepository&lt;DocType&gt;().ToArrayAsync();
 }
 </code></pre></article>
           </div>

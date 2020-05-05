@@ -79,14 +79,15 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure.md">
 <h3 id="sql-procedures--functions">SQL procedures &amp; functions</h3>
 
-<p>Common information about mapping to SQL procedures and functions described in <a href="../../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just reprensent dynamic mapping rules for various procedure types.</p>
+<p>Common information about mapping to SQL procedures and functions described in <a href="../../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just represent dynamic mapping rules for various procedure types.</p>
 <h4 id="sql-procedure-as-query">SQL procedure as query</h4>
 <p>To define procedure as data source of mapping used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a> method call of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
 <h4 id="sql-procedure-parameter">SQL procedure parameter</h4>
 <p>To define SQL procedure parameter used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Parameter__1_System_String_System_Int32_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____">Parameter</a> method call of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
-<h4 id="sql-procedure-resultset">SQL procedure resultset</h4>
-<p>To describe resultset of SQL procedure used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___">Return</a> method call of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
-<h4 id="sql-procedure-resultset-as-query-sample">SQL procedure resultset as query sample</h4>
+<h4 id="sql-procedure-result-set">SQL procedure result set</h4>
+<p>To describe result set of SQL procedure used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___">Return</a> method call of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
+<p>* - when result set is not mapped to procedure parameter set result set name to <em>string.Empty</em></p>
+<h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
 <pre><code class="lang-csharp">var res = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
@@ -96,7 +97,7 @@
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in res)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
-</code></pre><h4 id="sql-procedure-with-multiple-resultsets-sample">SQL procedure with multiple resultsets sample</h4>
+</code></pre><h4 id="sql-procedure-with-multiple-result-sets-sample">SQL procedure with multiple result sets sample</h4>
 <pre><code class="lang-csharp">var res2 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
@@ -121,16 +122,16 @@ foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quo
     .Call(DataScope.Layer, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
-</code></pre><h4 id="sql-procedure-with-out-parameter-and-resultset-sample">SQL procedure with out parameter and resultset sample</h4>
+</code></pre><h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
 <pre><code class="lang-csharp">var res4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
     .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Return(&quot;T&quot;, &quot;Result&quot;, 1, x =&gt; new Classifier { 
+    .Return(&quot;T&quot;, string.Empty, 1, x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
+    .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res4.GetParameter&lt;int&gt;(&quot;result&quot;));
 foreach (var classifier in res4)
@@ -142,17 +143,17 @@ foreach (var classifier in res4)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
     .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
+    .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res5.GetParameter&lt;int&gt;(&quot;result&quot;));
-</code></pre><h4 id="sql-procedure-with-return-value-and-resultset-sample">SQL procedure with return value and resultset sample</h4>
+</code></pre><h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
 <pre><code class="lang-csharp">var res6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
-    .Return(&quot;T&quot;, &quot;Result&quot;, 1, x =&gt; new Classifier { 
+    .Return(&quot;T&quot;, string.Empty, 1, x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, &quot;param1&quot;.SetVar(param));
+    .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in res6)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
@@ -215,7 +216,7 @@ Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
     .Select(x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
-    .AsQuery(DataScope.Layer, &quot;param1&quot;.SetVar(param));
+    .AsQuery(DataScope, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in f3)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
@@ -226,7 +227,7 @@ foreach (var classifier in f3)
     .Select(x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
-    .AsQuery(DataScope.Layer, 
+    .AsQuery(DataScope, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in f1)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);

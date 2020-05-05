@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>SQL procedure with out parameter and resultset sample | XData website </title>
+    <title>SQL procedure with out parameter and result set sample | XData website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="SQL procedure with out parameter and resultset sample | XData website ">
+    <meta name="title" content="SQL procedure with out parameter and result set sample | XData website ">
     <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../../../.././images/cube.ico">
@@ -78,7 +78,7 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_out_cursor.md">
 
-<h4 id="sql-procedure-with-out-parameter-and-resultset-sample">SQL procedure with out parameter and resultset sample</h4>
+<h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -88,7 +88,7 @@
             Size = 20, 
             Direction = ParameterDirection.Output, 
             Name = &quot;param3&quot;),
-        ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+        ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure4 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]

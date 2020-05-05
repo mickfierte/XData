@@ -79,12 +79,12 @@
             <article class="content wrap" id="_content" data-uid="tips_json.md">
 <h3 id="json-serialization">JSON serialization</h3>
 
-<p>When used <a href="https://www.newtonsoft.com/json">Json.NET</a> XData <a href="../tutorial/glossary.html#data-object">data objects</a> are serialized and deserialized automaticaly. </p>
+<p>When used <a href="https://www.newtonsoft.com/json">Json.NET</a> XData <a href="../tutorial/glossary.html#data-object">data objects</a> are serialized and deserialized automatically. </p>
 <p>There are some serialization specifics of data objects:</p>
 <ul>
-<li>By default <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> are serialized and deserialized as well as writable properties, but have a some restrictions when copyed to object to apply into database (see <em>Apply</em> method description below).</li>
+<li>By default <a href="../tutorial/mapping/mapping.html#read-only-properties">Read only properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> are serialized and deserialized as well as writable properties, but have a some restrictions when copied to object to apply into database (see <em>Apply</em> method description below).</li>
 <li><a href="lob.html">Large objects</a>) are serialized to null value by default. They are designed for lazy data loading. To serialize data with actual values one of <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_LoadLob__1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">LoadLob</a> helper method overloads can be used.</li>
-<li>By default <a href="../tutorial/mapping/mapping.html#link-properties">Links</a> are serialized as limited representation of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Source">link source</a> object. Only properties listed as <a href="../tutorial/mapping/dynamic/dynamic.html#links">LinkProperties</a> are included in serialized object. Additinaly an <em>&quot;linkPropertyName.Value&quot;</em> JSON property is serialized with the value of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Value">Link.Value</a> property.</li>
+<li>By default <a href="../tutorial/mapping/mapping.html#link-properties">Links</a> are serialized as limited representation of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Source">link source</a> object. Only properties listed as <a href="../tutorial/mapping/dynamic/dynamic.html#links">LinkProperties</a> are included in serialized object. Additionally an <em>&quot;linkPropertyName.Value&quot;</em> JSON property is serialized with the value of <a class="xref" href="../api/XData.Mapping.Link-2.html#XData_Mapping_Link_2_Value">Link.Value</a> property.</li>
 </ul>
 <p>Default serialization rules can be overrided with <em>ICollection&lt;T&gt;</em> and <em>T</em> <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_WithJsonSettings__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___">WithJsonSettings</a> extension methods.</p>
 <p><a class="xref" href="../api/XData.Json.JsonSettings-1.html">JsonSettings&lt;T&gt;</a> has followed methods to specify serializing options:</p>
@@ -97,13 +97,13 @@
 <li>Source - only source will be serialized</li>
 </ul>
 </li>
-<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">DeleteFlag</a> - allow to delete child entities in database using unmapped boolean proprety value in JSON serialized child object (see below). Used to deserialized (detached) objects only!</li>
+<li><a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">DeleteFlag</a> - allow to delete child entities in database using unmapped boolean property value in JSON serialized child object (see below). Used to deserialized (detached) objects only!</li>
 </ul>
 <pre><code class="lang-csharp">return dataScope.GetRepository&lt;Some&gt;().ToArray()
 .WithJsonSettings(s =&gt; s.Hide(JsonHideFlags.Columns) //hide all columns
     .Hide(x =&gt; x.SomeReadOnlyProperty) //hide SomeReadOnlyProperty
     .LoadLob() //load all large data properties
-    .LinkMode(LinkMode.Deafult, 
+    .LinkMode(LinkMode.Default, 
         x =&gt; SomeLinkProperty, x =&gt; AnotherLinkProperty) //set default rules to 2 properties
     .LinkMode(LinkMode.Value));  //set other link properties serialize Value property only
 </code></pre><div class="WARNING"><h5>Warning</h5><p>Deserialized objects are detached from repository and had limited ways of using!</p>
@@ -124,12 +124,12 @@ return found.SetDeleted(true).Submit();
 <pre><code class="lang-csharp">dataScope.GetRepository&lt;Some&gt;().Apply(detachedObj).Submit();
 </code></pre><p><em>Apply</em> is a combination of <em>Find</em> and <em>Copy</em> methods with followed algorithm:</p>
 <p>1) if <em>detached object</em> has all keys assigned, corresponded object will be searched in database using keys and correlation token (if described in mapping) values (*)</p>
-<p>2) if no data found XDataConcurrencyException will be throwed (**)</p>
+<p>2) if no data found XDataConcurrencyException will be trowed (**)</p>
 <p>3) when some key properties are not assigned new entity has been created </p>
-<p>4) <em>detached object&#39;s</em> data will be copyed to found (or new) object (***)</p>
+<p>4) <em>detached object&#39;s</em> data will be copied to found (or new) object (***)</p>
 <p>(*) Using of correlation token value with <em>Find</em> method can be escaped with optional <em>ignoreConcurrency</em> parameter. Same result can be reached with <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.IgnoreConcurrency</a> flag has been passed in <em>Apply</em> method call.</p>
 <p>(**) <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.AddWhenNotFound</a> flag can be passed in <em>Apply</em> method call to add new entity when not found in database.</p>
-<p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify wich property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#readonly-properties">Readonly properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
+<p>(***) <em>Copy</em> and <em>Apply</em> has parameter <em>properties</em> to specify witch property values will be copied. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.ExceptProperties</a> flag can be used to SKIP listed <em>properties</em> on copy. <a class="xref" href="../api/XData.ApplyFlag.html">ApplyFlag.CopyReadOnlyProperties</a> flag can be used to allow copy <a href="../tutorial/mapping/mapping.html#read-only-properties">Read only properties</a> and <a href="../tutorial/mapping/mapping.html#hidden-properties">Hidden properties</a> disabled by default.</p>
 <p>You can define child repositories and associate them using the <em>property</em> parameter of the <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_GetChild__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_String_XData_Interfaces_ISecuritySession_XData_Variable___">GetChild</a> method with an unmatched property with the type of the child repository (for one-to-one relationships) or with a typed array of the child repository (for one-to-many relationships) . These properties will be populated during data collection, and the values ​​will be automatically serialized to JSON and deserialized from JSON to a detached object. These values ​​can be used to cascade changes to the database. Inserting and updating child objects is supported without further action. But for deleting entities, it is required that the developer define a delete flag - it the unmapped property used as a flag to mark the child entity as removed. To specify which property will be used as the delete flag for the property associated with the child repository, the <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_WithJsonSettings__1___0_System_Func_XData_Json_JsonSettings___0__XData_Json_JsonSettings___0___">WithJsonSettings</a> method is used with the <a class="xref" href="../api/XData.Json.JsonSettings-1.html#XData_Json_JsonSettings_1_DeleteFlag__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">DeleteFlag</a> combination applied to the detached object.</p>
 <pre><code class="lang-csharp">// set delete flag to child repository entities to unmapped boolean property
 dataScope.GetRepository&lt;Some&gt;()

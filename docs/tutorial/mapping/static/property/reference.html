@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_property_reference.md">
 
 <h4 id="inner-view-reference">Inner view reference</h4>
-<p>To map property to field from inner view a <a class="xref" href="../../../../api/XData.Mapping.ReferenceAttribute.html">ReferenceAttribute</a> is used with parameters: <em>Source</em> - inner view alias, <em>PropertyName</em> - optional, DB field name (may be omited when property name is equals with inner view mapped class property), <em>Flags</em> - optional, mask of <a href="../../../glossary.html#property-flags">property flags</a>,<em>NativeSqlType</em> - optional, SQL type name in DB. Parameter <em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type name.</p>
+<p>To map property to field from inner view a <a class="xref" href="../../../../api/XData.Mapping.ReferenceAttribute.html">ReferenceAttribute</a> is used with parameters: <em>Source</em> - inner view alias, <em>PropertyName</em> - optional, DB field name (may be omitted when property name is equals with inner view mapped class property), <em>Flags</em> - optional, mask of <a href="../../../glossary.html#property-flags">property flags</a>,<em>NativeSqlType</em> - optional, SQL type name in DB. Parameter <em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type name.</p>
 <pre><code class="lang-csharp">[Reference(&quot;H&quot; /* inner view alias */, 
     &quot;HistoryDate&quot; /* property name inside inner view */)]
 </code></pre></article>

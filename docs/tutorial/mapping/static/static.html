@@ -83,7 +83,7 @@
 <p><a href="../mapping.html">Mapping common rules</a></p>
 <hr>
 <h2 id="static-mapping">Static mapping</h2>
-<div class="TIP"><h5>Tip</h5><p>Before read this topic be sure to already readed <a href="../../glossary.html">Glosary</a> and <a href="../mapping.html">Common mapping rules</a> containg base infomation to better understanding this.</p>
+<div class="TIP"><h5>Tip</h5><p>Before read this topic be sure to already readied <a href="../../glossary.html">Glossary</a> and <a href="../mapping.html">Common mapping rules</a> contains base information to better understanding this.</p>
 </div>
 <p>Static mapping is defined using attributes of mapped class and it properties.</p>
 <h3 id="static-mapping-sample">Static mapping sample</h3>
@@ -334,7 +334,7 @@ Operating System: Linux
 Default Encoding: UTF-8
 Language: en
 Country: US
---></g></svg> </div><p>Here is example of data object static mapping. Of course, real mapping is much simpler then this, but as example of XData capabilities it&#39;s realy representative...</p>
+--></g></svg> </div><p>Here is example of data object static mapping. Of course, real mapping is much simpler then this, but as example of XData capabilities it&#39;s really representative...</p>
 <p>SQL representation of following sample: </p>
 <pre><code class="lang-sql">with recursive T (catalogue_id, code, name, parent_id) 
    as ((SELECT R.catalogue_id AS R_catalogue_id,
@@ -535,9 +535,9 @@ WHERE D.DOC_TYPE_ID = (select doc_type_id
 <pre><code class="lang-csharp">[DataTable(&quot;P&quot; /* table alias */, 
     &quot;patient&quot; /* table name */, 
     &quot;D&quot; /* parent table alias */)]
-</code></pre><p>Same way we can define mapping to view, but all fields of view must to be explicitly defined as <a href="../mapping.html#readonly-properties">readonly properties</a> or <a href="../mapping.html#hidden-properties">columns</a>.</p>
+</code></pre><p>Same way we can define mapping to view, but all fields of view must to be explicitly defined as <a href="../mapping.html#read-only-properties">read-only properties</a> or <a href="../mapping.html#hidden-properties">columns</a>.</p>
 <h3 id="subqueries">Subqueries</h3>
-<p>XData alowes use subqueries as part of mapping. This feature can be used for get property values from subquery, for <a href="static.html#subquery-filters">subquery filters</a>, and inner view definitions.</p>
+<p>XData allows use subqueries as part of mapping. This feature can be used for get property values from subquery, for <a href="static.html#subquery-filters">subquery filters</a>, and inner view definitions.</p>
 <p>Subquery recursive deep is not limited.</p>
 <p>Class used subquery in mapping definition must to marked with attribute <a class="xref" href="../../../api/XData.Mapping.SubqueryAttribute.html">SubqueryAttribute</a> or <a class="xref" href="../../../api/XData.Mapping.InnerViewAttribute.html">InnerViewAttribute</a> (when it used as inner view definition). Both of them has a parameter <em>Alias</em> - subquery alias in resulting query. <em>InnerViewAttribute</em> additionally has parameter <em>InnerViewType</em> - type mapped to subquery. <em>SubqueryAttribute</em> additionally has parameters: <em>SubqueryType</em> - type mapped to subquery, <em>PropertyName</em> - subquery returned property and <em>Grouping</em> - aggregation type of resulting property.</p>
 <pre><code class="lang-csharp">[Subquery(&quot;A&quot; /* subquery alias */, 
@@ -573,11 +573,11 @@ WHERE D.DOC_TYPE_ID = (select doc_type_id
 <li><strong>Like</strong> - field value correlated with find expression</li>
 <li><strong>NotLike</strong> - field value not correlated with find expression</li>
 <li><strong>OuterJoin</strong> - left outer join link between query sources (tables or inner views)</li>
-<li><strong>Contains</strong> - field value correlated with fulltext search</li>
-<li><strong>NotContains</strong> - field value not correlated with fulltext search</li>
+<li><strong>Contains</strong> - field value correlated with full-text search</li>
+<li><strong>NotContains</strong> - field value not correlated with full-text search</li>
 </ul>
 <h4 id="filter-group">Filter group</h4>
-<p>Filter group can be defined by <a class="xref" href="../../../api/XData.Mapping.FilterCombinationAttribute.html">FilterCombinationAttribute</a> with parameters: <em>Name</em> - filter group unique name, <em>Combination</em> - logical operation between filters and subgroups inside group (optional, default is <em>FilterCombination</em>.<strong>And</strong>), <em>Parent</em> - parent filter group name (optional, can be omited for filter groups with parent - root filter group).</p>
+<p>Filter group can be defined by <a class="xref" href="../../../api/XData.Mapping.FilterCombinationAttribute.html">FilterCombinationAttribute</a> with parameters: <em>Name</em> - filter group unique name, <em>Combination</em> - logical operation between filters and subgroups inside group (optional, default is <em>FilterCombination</em>.<strong>And</strong>), <em>Parent</em> - parent filter group name (optional, can be omitted for filter groups with parent - root filter group).</p>
 <p>Logic operation inside filter group is defined by enum <a class="xref" href="../../../api/XData.Combination.html">Combination</a>:</p>
 <ul>
 <li><strong>And</strong> - and</li>
@@ -633,14 +633,14 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 </div>
 <h4 id="range-filters">Range filters</h4>
 <p>To define filter checks field value over array of values used <a class="xref" href="../../../api/XData.Mapping.RangeFilterAttribute.html">RangeFilterAttribute</a> with specific (over described <a href="static.html#filters">above</a>) parameter: <em>Range</em> - array of values to filter on.</p>
-<pre><code class="lang-csharp">[RangeFilter(&quot;P&quot; /* table ealias */, 
+<pre><code class="lang-csharp">[RangeFilter(&quot;P&quot; /* table alias */, 
     &quot;discount&quot; /* field name */, 
     new[] {0,5,10} /* range of values */, 
     Operation: FilterOperation.In /* filter operation */)]
 </code></pre><h4 id="dictionary-filters">Dictionary filters</h4>
-<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recomended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
+<p>Dictionaries surrogate keys may varied over one instance to another, and names can be changed by users. Sometimes business logic need to operate with the concrete value of dictionary. Because of this it&#39;s recommended to add into dictionary DB structure a special unique text field - mnemonic code.</p>
 <p>XData supports using mnemonic code when define filters on dictionary value - dictionary filters. They defined by <a class="xref" href="../../../api/XData.Mapping.DictionaryFilterAttribute.html">DictionaryFilterAttribute</a> with specific (over described <a href="static.html#filters">above</a>) parameters: <em>DictionaryTable</em> - dictionary table name, <em>DictionaryId</em> - dictionary id field name, <em>DictionaryCode</em> - dictionary mnemonic code field name, <em>DictionaryValue</em> - mnemonic code value to filter query on, <em>ValueIsVariable</em> - flag <em>DictionaryValue</em> contains not a value but name of <a class="xref" href="../../../api/XData.Variable.html">variable</a> with value.</p>
-<div class="TIP"><h5>Tip</h5><p>In case filter field name is equals dictionary id field name, parameter <em>FieldName</em> can be omited. </p>
+<div class="TIP"><h5>Tip</h5><p>In case filter field name is equals dictionary id field name, parameter <em>FieldName</em> can be omitted. </p>
 </div>
 <div class="IMPORTANT"><h5>Important</h5><p>This filter can be used when dictionary has simple (one field only) identity field and mnemonic code field. But it&#39;s a very common case.</p>
 </div>
@@ -650,7 +650,7 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
     &quot;CREATED&quot; /* mnemonic code value */, 
     &quot;D&quot; /* filtered table alias */)]
 </code></pre><h4 id="inner-links">Inner links</h4>
-<p>To define links between data sources inside query used <a class="xref" href="../../../api/XData.Mapping.LinkAttribute.html">LinkAttribute</a> with specific parameters: <em>LinkedSourceAlias</em> - linked table alias, <em>LinkedFieldName</em> - linked table field name (optional, can be omited when equals with <em>FieldName</em>). </p>
+<p>To define links between data sources inside query used <a class="xref" href="../../../api/XData.Mapping.LinkAttribute.html">LinkAttribute</a> with specific parameters: <em>LinkedSourceAlias</em> - linked table alias, <em>LinkedFieldName</em> - linked table field name (optional, can be omitted when equals with <em>FieldName</em>). </p>
 <div class="TIP"><h5>Tip</h5><p>Inner links can be used to define <a href="../../../tips/optional.html">optional filters</a>. To specify role in optional filter chain need to set parameter <em>PrimaryFilter</em> to <em>true</em>.</p>
 </div>
 <pre><code class="lang-csharp">[Link(&quot;D&quot; /* table alias */, 
@@ -662,17 +662,17 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
     &quot;doc_state_id&quot; /* field name */, 
     &quot;A&quot; /* subquery alias */, 
     Operation: FilterOperation.In /* filter operation */)]
-</code></pre><p>When flag <em>PrimaryFilter</em> is set to <em>true</em> optional part of query is defined by followed rules: when one of linked data sources is skiped then other one will skipped too. When <a href="../../glossary.html#base-table">base table</a> of subquery is skipped then subquery is skipped completely.</p>
+</code></pre><p>When flag <em>PrimaryFilter</em> is set to <em>true</em> optional part of query is defined by followed rules: when one of linked data sources is skipped then other one will skipped too. When <a href="../../glossary.html#base-table">base table</a> of subquery is skipped then subquery is skipped completely.</p>
 <h4 id="subquery-links">Subquery links</h4>
-<p>Links with subqueries is used to link not table fields but properties of base class and subquery mapped class including <a href="../mapping.html#hidden-properties">hidden properties</a>. To link with subquery or inner view used <a class="xref" href="../../../api/XData.Mapping.SubqueryLinkAttribute.html">SubqueryLinkAttribute</a> with parameters: <em>Subquery</em> - subquery alias, <em>SubqueryProperty</em> - linked property from subquery, <em>PropertyName</em> - optional, linked property from base class (when omit, base class property name is equal <em>SubqueryProperty</em>), also optional properties: <em>Operation</em>, <em>Combination</em> и <em>PrimaryFilter</em> is supported. They was described above in topics <a href="static.html#filters">Filters</a> and <a href="static.html#inner-links">Inner links</a>.</p>
+<p>Links with subqueries is used to link not table fields but properties of base class and subquery mapped class including <a href="../mapping.html#hidden-properties">hidden properties</a>. To link with subquery or inner view used <a class="xref" href="../../../api/XData.Mapping.SubqueryLinkAttribute.html">SubqueryLinkAttribute</a> with parameters: <em>Subquery</em> - subquery alias, <em>SubqueryProperty</em> - linked property from subquery, <em>PropertyName</em> - optional, linked property from base class (when omit, base class property name is equal <em>SubqueryProperty</em>), also optional properties: <em>Operation</em>, <em>Combination</em> and <em>PrimaryFilter</em> is supported. They was described above in topics <a href="static.html#filters">Filters</a> and <a href="static.html#inner-links">Inner links</a>.</p>
 <pre><code class="lang-csharp">[SubqueryLink(&quot;H&quot; /* subquery alias */, 
     &quot;DocId&quot; /* subquery property to link */)]
-</code></pre><p>When flag <em>PrimaryFilter</em> is set to <em>true</em> optional part of query is defined by followed rules: when subquery is skipped, then data source linked to subquery by this filter will be skipped too, and skip data sources analisys will continue inside base class (see <a href="static.html#inner-links">Inner links</a>).</p>
+</code></pre><p>When flag <em>PrimaryFilter</em> is set to <em>true</em> optional part of query is defined by followed rules: when subquery is skipped, then data source linked to subquery by this filter will be skipped too, and skip data sources analysis will continue inside base class (see <a href="static.html#inner-links">Inner links</a>).</p>
 <h3 id="properties">Properties</h3>
-<p>Static mapping is performed as each property with specific attributes mark. Main attribute to statically map property is <a class="xref" href="../../../api/XData.Mapping.PropertyAttribute.html">PropertyAttribute</a> with parameters: <em>Source</em> - data source alias (may be omited for <a href="../../glossary.html#virtual-table">virtual table</a>), <em>FieldName</em> - DB field name mapped to property (may be omited when field and property correspond naming rule, for example DB field named as <strong>some_field_name</strong> and mapped to <strong>SomeFieldName</strong> property), <em>Flags</em> - optional, mask of <a href="../../glossary.html#property-flags">property flags</a>,<em>NativeSqlType</em> - optional, SQL type name in DB. Parameter <em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type name.</p>
+<p>Static mapping is performed as each property with specific attributes mark. Main attribute to statically map property is <a class="xref" href="../../../api/XData.Mapping.PropertyAttribute.html">PropertyAttribute</a> with parameters: <em>Source</em> - data source alias (may be omitted for <a href="../../glossary.html#virtual-table">virtual table</a>), <em>FieldName</em> - DB field name mapped to property (may be omitted when field and property correspond naming rule, for example DB field named as <strong>some_field_name</strong> and mapped to <strong>SomeFieldName</strong> property), <em>Flags</em> - optional, mask of <a href="../../glossary.html#property-flags">property flags</a>,<em>NativeSqlType</em> - optional, SQL type name in DB. Parameter <em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type name.</p>
 <pre><code class="lang-csharp">[Property(&quot;S&quot; /* table alias */, &quot;code&quot; /* field name */)]
 </code></pre><h4 id="sql-expression-property">SQL expression property</h4>
-<p><a href="../mapping.html#readonly-properties">Readonly property</a> can be mapped to SQL expression. Static mapping of SQL expression is defined by <a class="xref" href="../../../api/XData.Mapping.PropertyExpressionAttribute.html">PropertyExpressionAttribute</a> with parameters: <em>ExprText</em> - depends of <em>ExprType</em> value (see below) it can be: subquery alias / SQL expression / private static field name define SQL expression in LINQ style, <em>ExprType</em> - optional, <a href="../../glossary.html#sql-expression-type">SQL expression type</a>, default is <em>DataExpressionType</em>.<strong>PlainSql</strong>, <em>DbType</em> - ADO ,Net provider data type (optional, default is <em>DbType</em>.<strong>String</strong>), <em>ExprSize</em> - optional, expression field size (if applicable), <em>ExprScale</em> - optional, expression field precision (if applicable). Possible to use SQL expressions of three types: </p>
+<p><a href="../mapping.html#read-only-properties">Read only property</a> can be mapped to SQL expression. Static mapping of SQL expression is defined by <a class="xref" href="../../../api/XData.Mapping.PropertyExpressionAttribute.html">PropertyExpressionAttribute</a> with parameters: <em>ExprText</em> - depends of <em>ExprType</em> value (see below) it can be: subquery alias / SQL expression / private static field name define SQL expression in LINQ style, <em>ExprType</em> - optional, <a href="../../glossary.html#sql-expression-type">SQL expression type</a>, default is <em>DataExpressionType</em>.<strong>PlainSql</strong>, <em>DbType</em> - ADO ,Net provider data type (optional, default is <em>DbType</em>.<strong>String</strong>), <em>ExprSize</em> - optional, expression field size (if applicable), <em>ExprScale</em> - optional, expression field precision (if applicable). Possible to use SQL expressions of three types: </p>
 <ul>
 <li>subquery,</li>
 </ul>
@@ -706,7 +706,7 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 </div>
 <div class="IMPORTANT"><h5>Important</h5><p>If possible do not use plain SQL expressions. It possibly use specific SQL dialect features not supported by other DBMS or providers.</p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>It&#39;s recomended to use <a href="../../glossary.html#virtual-table">virtual table</a> as SQL expression source omiting data source alias in <em>PropertyAttribute</em>.</p>
+<div class="TIP"><h5>Tip</h5><p>It&#39;s recommended to use <a href="../../glossary.html#virtual-table">virtual table</a> as SQL expression source omitting data source alias in <em>PropertyAttribute</em>.</p>
 </div>
 <h4 id="property-default-value">Property default value</h4>
 <p>To set default value of property with static mapping, use <a class="xref" href="../../../api/XData.Mapping.PropertyDefaultAttribute.html">PropertyDefaultAttribute</a> with parameters: <em>DefaultSource</em> - <a href="../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultSource</em>, <em>DefaultFeature</em> - optional, default is <strong>DefaultFeature.UseOnInsert</strong>, default value assignment will be applied with some extended <a href="../../glossary.html#default-value-features">features</a>.</p>
@@ -716,21 +716,21 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 <pre><code class="lang-csharp">[PropertyGrouping(DataGrouping.Sum)]
 </code></pre><h4 id="hidden-properties">Hidden properties</h4>
 <p><a href="../mapping.html#hidden-properties">Hidden properties</a> statically defined using couple of specific attributes: <a class="xref" href="../../../api/XData.Mapping.ColumnAttribute.html">ColumnAttribute</a>, <a class="xref" href="../../../api/XData.Mapping.ColumnExpressionAttribute.html">ColumnExpressionAttribute</a> and <a class="xref" href="../../../api/XData.Mapping.ColumnDefaultAttribute.html">ColumnDefaultAttribute</a> as analog with similar attributes of <a href="static.html#properties">properties</a>.</p>
-<p><a class="xref" href="../../../api/XData.Mapping.ColumnAttribute.html">ColumnAttribute</a> has parameters: <em>PropertyName</em> - name of hidden property, <em>PropertyType</em> - type of hidden property, <em>Source</em> - data source alias, <em>FieldName</em> - optional, DB field name (can be omited when correspond default mapping rule (exampple: <strong>some_field_name</strong> is mapped to <strong>SomeFieldName</strong>)), <em>Flags</em> - optional, bitmask of <a href="../../glossary.html#property-flags">property flags</a>, <em>Grouping</em> - optional, defined <a href="../../glossary.html#aggregation-type">aggreagation type</a>, default is <strong>None</strong>, <em>GroupOrder</em> - optional, group order when <em>Grouping</em> = <em>DataGrouping</em>.<strong>None</strong>, <em>Hidden</em> - optional, mapped field omited in SELECT expression of result query (when grouping limitations demand this), default is <strong>false</strong>, <em>NativeSqlType</em> - optional, native SQL type name. <em>NativeSqlType</em> is used when default datatype mapping is conflicted with resultset data type.</p>
+<p><a class="xref" href="../../../api/XData.Mapping.ColumnAttribute.html">ColumnAttribute</a> has parameters: <em>PropertyName</em> - name of hidden property, <em>PropertyType</em> - type of hidden property, <em>Source</em> - data source alias, <em>FieldName</em> - optional, DB field name (can be omitted when correspond default mapping rule (example: <strong>some_field_name</strong> is mapped to <strong>SomeFieldName</strong>)), <em>Flags</em> - optional, bit mask of <a href="../../glossary.html#property-flags">property flags</a>, <em>Grouping</em> - optional, defined <a href="../../glossary.html#aggregation-type">aggregation type</a>, default is <strong>None</strong>, <em>GroupOrder</em> - optional, group order when <em>Grouping</em> = <em>DataGrouping</em>.<strong>None</strong>, <em>Hidden</em> - optional, mapped field omitted in SELECT expression of result query (when grouping limitations demand this), default is <strong>false</strong>, <em>NativeSqlType</em> - optional, native SQL type name. <em>NativeSqlType</em> is used when default data type mapping is conflicted with result set data type.</p>
 <p><a class="xref" href="../../../api/XData.Mapping.ColumnExpressionAttribute.html">ColumnExpressionAttribute</a> has parameters: <em>PropertyName</em> - name of hidden property (same as defined by <em>ColumnAttribute</em>), <em>ExprText</em> - depends on <em>ExprType</em> (see below): subquery alias / SQL expression text / field name with LINQ style expression definition, <em>ExprType</em> - optional, <a href="../../glossary.html#sql-expression-type">SQL expression type</a> default is <em>DataExpressionType</em>.<strong>PlainSql</strong>, <em>DbType</em> - data type on ADO .Net provider level (optional, default is <em>DbType</em>.<strong>String</strong>), <em>ExprSize</em> - optional, expression field size (if applicable), <em>ExprScale</em> - optional, expression field precision (if applicable).</p>
 <p><a class="xref" href="../../../api/XData.Mapping.ColumnDefaultAttribute.html">ColumnDefaultAttribute</a> has parameters: <em>PropertyName</em> - hidden property name (same as defined by <em>ColumnAttribute</em>), <em>DefaultSource</em> - <a href="../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultSource</em>, <em>DefaultFeature</em> - optional, default is <strong>DefaultFeature.UseOnInsert</strong>, default value assignment will be applied with some extended <a href="../../glossary.html#default-value-features">features</a>.</p>
 <pre><code class="lang-csharp">[Column(&quot;DocId&quot;, typeof(long?), &quot;D&quot;, Flags = DataPropertyFlag.Id),
     ColumnDefault(&quot;DocId&quot;, DefaultType.AutoIncrement)]
 </code></pre><h4 id="inner-view-reference">Inner view reference</h4>
-<p>To map property to field from inner view a <a class="xref" href="../../../api/XData.Mapping.ReferenceAttribute.html">ReferenceAttribute</a> is used with parameters: <em>Source</em> - inner view alias, <em>PropertyName</em> - optional, DB field name (may be omited when property name is equals with inner view mapped class property), <em>Flags</em> - optional, mask of <a href="../../glossary.html#property-flags">property flags</a>,<em>NativeSqlType</em> - optional, SQL type name in DB. Parameter <em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type name.</p>
+<p>To map property to field from inner view a <a class="xref" href="../../../api/XData.Mapping.ReferenceAttribute.html">ReferenceAttribute</a> is used with parameters: <em>Source</em> - inner view alias, <em>PropertyName</em> - optional, DB field name (may be omitted when property name is equals with inner view mapped class property), <em>Flags</em> - optional, mask of <a href="../../glossary.html#property-flags">property flags</a>,<em>NativeSqlType</em> - optional, SQL type name in DB. Parameter <em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type name.</p>
 <pre><code class="lang-csharp">[Reference(&quot;H&quot; /* inner view alias */, 
     &quot;HistoryDate&quot; /* property name inside inner view */)]
 </code></pre><h4 id="links">Links</h4>
-<p>To statically define <a href="../mapping.html#link-properties">link property</a> pairs used <a class="xref" href="../../../api/XData.Mapping.LinkPropertyAttribute.html">LinkPropertyAttribute</a> with parameters: <em>DictSource</em> - optional, source object property name, <em>Property</em> - optional, property name. When one or both of parameters is omited, folowed rules are used:</p>
+<p>To statically define <a href="../mapping.html#link-properties">link property</a> pairs used <a class="xref" href="../../../api/XData.Mapping.LinkPropertyAttribute.html">LinkPropertyAttribute</a> with parameters: <em>DictSource</em> - optional, source object property name, <em>Property</em> - optional, property name. When one or both of parameters is omitted, followed rules are used:</p>
 <ul>
-<li>When omit both propeties - used property name of link property as target and equal named property from source object</li>
-<li>When <em>DictSource</em> is omited -  used <em>Property</em> as target property name  and equal named property from source object</li>
-<li>When <em>Property</em> is omited - used property name of link property as target and property with name equals <em>DictSource</em> from source object</li>
+<li>When omit both properties - used property name of link property as target and equal named property from source object</li>
+<li>When <em>DictSource</em> is omitted -  used <em>Property</em> as target property name  and equal named property from source object</li>
+<li>When <em>Property</em> is omitted - used property name of link property as target and property with name equals <em>DictSource</em> from source object</li>
 </ul>
 <pre><code class="lang-csharp">[Property(&quot;S&quot;, &quot;name&quot;),
     LinkProperty(&quot;Name&quot;) /* DocState.Name -&gt; this.DocState */,
@@ -789,22 +789,22 @@ public Link&lt;string, DocState&gt; DocState { get; set; }
         Column(&quot;ParentId&quot;, typeof(long?), &quot;S&quot;)]
     public class CatalogueTreeFolders : ISqlObject {}   
 </code></pre><h3 id="external-link">External link</h3>
-<p><a href="../mapping.html#master-detail-relations">External link</a> can be statically defined using <a class="xref" href="../../../api/XData.Mapping.ExternalLinkAttribute.html">ExternalLinkAttribute</a> with parameters: <em>ChildType</em> - detail <a href="../../glossary.html#repository">repository</a> mapped type, <em>ChildProperty</em> - link property in detail repository, <em>Property</em> - optional, link property in master repository, default used same name as <em>ChildProperty</em>, <em>FilterName</em> - optional, detail repository filter name, default used <strong>&quot;FilterBy&quot;</strong> + <em>ChildProperty</em>, <em>MasterRefresh</em> - optional, refresh master repository current row data on submit detail changes flag (usefull when master has calculated properties over detail repository data), default is <strong>false</strong>, <em>DirectLink</em> - optional, see <a href="../../../tips/tree_childs.html">tree master-detail specifics</a> for details, default is <strong>false</strong> <em>Operation</em> - optional, link filter operation (see <a href="static.html#filters">Filters</a>), default <em>FilterOperation</em>.<strong>Equal</strong>, <em>Nullable</em> - optional, <a href="../../glossary.html#filter-null-processing-behaviour">filter null processing behaviour</a>, default is  <em>FilterNullable</em>.<strong>Nullable</strong>, <em>Combination</em> - optional, <a href="static.html#filter-group">filter group</a> name in detail repository. External links can be used in optional filters description (see <a href="../../../tips/optional.html">Optional filters and optional subqueries</a>). To specify external link is optional filter part You can set primary filter flag <em>PrimaryFilter</em>.</p>
+<p><a href="../mapping.html#master-detail-relations">External link</a> can be statically defined using <a class="xref" href="../../../api/XData.Mapping.ExternalLinkAttribute.html">ExternalLinkAttribute</a> with parameters: <em>ChildType</em> - detail <a href="../../glossary.html#repository">repository</a> mapped type, <em>ChildProperty</em> - link property in detail repository, <em>Property</em> - optional, link property in master repository, default used same name as <em>ChildProperty</em>, <em>FilterName</em> - optional, detail repository filter name, default used <strong>&quot;FilterBy&quot;</strong> + <em>ChildProperty</em>, <em>MasterRefresh</em> - optional, refresh master repository current row data on submit detail changes flag (useful when master has calculated properties over detail repository data), default is <strong>false</strong>, <em>DirectLink</em> - optional, see <a href="../../../tips/tree_childs.html">tree master-detail specifics</a> for details, default is <strong>false</strong> <em>Operation</em> - optional, link filter operation (see <a href="static.html#filters">Filters</a>), default <em>FilterOperation</em>.<strong>Equal</strong>, <em>Nullable</em> - optional, <a href="../../glossary.html#filter-null-processing-behavior">filter null processing behavior</a>, default is  <em>FilterNullable</em>.<strong>Nullable</strong>, <em>Combination</em> - optional, <a href="static.html#filter-group">filter group</a> name in detail repository. External links can be used in optional filters description (see <a href="../../../tips/optional.html">Optional filters and optional subqueries</a>). To specify external link is optional filter part You can set primary filter flag <em>PrimaryFilter</em>.</p>
 <pre><code class="lang-csharp">[ExternalLink(typeof(InvoiceSpec), &quot;DocId&quot;)]
 </code></pre><h3 id="sql-procedures--functions">SQL procedures &amp; functions</h3>
-<p>Common information about mapping to SQL procedures and functions has described in <a href="../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just reprensent static mapping rules for various procedure types.</p>
+<p>Common information about mapping to SQL procedures and functions has described in <a href="../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just represent static mapping rules for various procedure types.</p>
 <h4 id="sql-procedure-as-query">SQL procedure as query</h4>
 <p>To define procedure as data source of mapping used <a class="xref" href="../../../api/XData.Mapping.ProcedureAttribute.html">ProcedureAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - procedure or function name, <em>ProcedureType</em> - <a class="xref" href="../../../api/XData.ProcedureType.html">ProcedureType</a>: <em>ProcedureType</em>.<strong>Procedure</strong> or <em>ProcedureType</em>.<strong>Function</strong>.</p>
 <h4 id="sql-procedure-parameter">SQL procedure parameter</h4>
-<p>To define SQL procedure parameter used <a class="xref" href="../../../api/XData.Mapping.ParameterAttribute.html">ParameterAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Order</em> - order number of parameter, <em>Binding</em> - name used inside application code (it&#39;s handy to use parameter with another name, not the name defined inside DB), <em>Type</em> - data type used inside application code, <em>DbType</em> - data type on ADO .Net provider level, <em>Direction</em> - optional, parameter direction, default is <em>ParameterDirection</em>.<strong>Input</strong>, <em>Size</em> - optional, parameter size(if applicable), <em>Scale</em> - optional, parameter presision (if applicable), <em>Name</em> - optional, parameter name, default is equal with <em>Binding</em>, <em>DefaultType</em> - <a href="../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultType</em>, <em>NativeSqlType</em> - optional, SQL type name (<em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type), <em>UdtTypeName</em> - optional, user defined type (UDT), <em>UdtElementTypeName</em> - optional, user defined type (UDT) of <em>UdtTypeName</em> element (in case where <em>UdtTypeName</em> - array or table), <em>IsArray</em> - optional, parameter is array of <em>UdtElementTypeName</em> (when <em>UdtElementTypeName</em> is omited, array of <em>DbType</em>), default is <strong>false</strong>.</p>
-<h4 id="sql-procedure-resultset">SQL procedure resultset</h4>
-<p>To describe resultset of SQL procedure used <a class="xref" href="../../../api/XData.Mapping.ResultSetAttribute.html">ResultSetAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - resultset name used inside application code, <em>Order</em> - optional, order number of resultset (required to procedures returns multiple resultsets), <em>ResultType</em> - optional, mapped type of resultset, default is attributed class itself, <em>IsDefault</em> - optional, resultset is default - mapped to attributed class (used when procedure returns multiple resultsets), default is <strong>false</strong>.</p>
-<h4 id="sql-procedure-resultset-as-query-sample">SQL procedure resultset as query sample</h4>
+<p>To define SQL procedure parameter used <a class="xref" href="../../../api/XData.Mapping.ParameterAttribute.html">ParameterAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Order</em> - order number of parameter, <em>Binding</em> - name used inside application code (it&#39;s handy to use parameter with another name, not the name defined inside DB), <em>Type</em> - data type used inside application code, <em>DbType</em> - data type on ADO .Net provider level, <em>Direction</em> - optional, parameter direction, default is <em>ParameterDirection</em>.<strong>Input</strong>, <em>Size</em> - optional, parameter size(if applicable), <em>Scale</em> - optional, parameter precision (if applicable), <em>Name</em> - optional, parameter name, default is equal with <em>Binding</em>, <em>DefaultType</em> - <a href="../../glossary.html#default-value-type">default value type</a>, <em>DefaultValue</em> optional, depends on <em>DefaultType</em>, <em>NativeSqlType</em> - optional, SQL type name (<em>NativeSqlType</em> is used when type default mapping is conflicted with real SQL type), <em>UdtTypeName</em> - optional, user defined type (UDT), <em>UdtElementTypeName</em> - optional, user defined type (UDT) of <em>UdtTypeName</em> element (in case where <em>UdtTypeName</em> - array or table), <em>IsArray</em> - optional, parameter is array of <em>UdtElementTypeName</em> (when <em>UdtElementTypeName</em> is omitted, array of <em>DbType</em>), default is <strong>false</strong>.</p>
+<h4 id="sql-procedure-result-set">SQL procedure result set</h4>
+<p>To describe result set of SQL procedure used <a class="xref" href="../../../api/XData.Mapping.ResultSetAttribute.html">ResultSetAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - result set name used inside application code, when result set is not mapped to procedure parameter set it to <em>&quot;&quot;</em> (empty string), <em>Order</em> - optional, order number of result set (required to procedures returns multiple result sets), <em>ResultType</em> - optional, mapped type of result set, default is attributed class itself, <em>IsDefault</em> - optional, result set is default - mapped to attributed class (used when procedure returns multiple result sets), default is <strong>false</strong>.</p>
+<h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -812,14 +812,14 @@ public class TestProcedure : IDataObject
     [Property(&quot;T&quot;, &quot;Name&quot;)]
     public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
 }
-</code></pre><h4 id="sql-procedure-with-multiple-resultsets-sample">SQL procedure with multiple resultsets sample</h4>
+</code></pre><h4 id="sql-procedure-with-multiple-result-sets-sample">SQL procedure with multiple result sets sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
     Parameter(&quot;T&quot;, 3, &quot;param3&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 4, &quot;param4&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;, IsDefault = true),
+    ResultSet(&quot;T&quot;, &quot;&quot;, IsDefault = true),
     ResultSet(&quot;T&quot;, &quot;SecondResult&quot;, ResultType = typeof(TestResult), Order = 2)]
 public class TestProcedure2 : IDataObject
 {
@@ -845,7 +845,7 @@ public class TestProcedure3 : IDataObject
     public string OutParameter 
         { get { return this.GetParameter(x =&gt; x.OutParameter); } }
 }
-</code></pre><h4 id="sql-procedure-with-out-parameter-and-resultset-sample">SQL procedure with out parameter and resultset sample</h4>
+</code></pre><h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -855,7 +855,7 @@ public class TestProcedure3 : IDataObject
             Size = 20, 
             Direction = ParameterDirection.Output, 
             Name = &quot;param3&quot;),
-        ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+        ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure4 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -880,7 +880,7 @@ public class TestProcedure5 : IDataObject
     public string OutParameter 
         { get { return this.GetParameter(x =&gt; x.OutParameter); } }
 }
-</code></pre><h4 id="sql-procedure-with-return-value-and-resultset-sample">SQL procedure with return value and resultset sample</h4>
+</code></pre><h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -888,7 +888,7 @@ public class TestProcedure5 : IDataObject
     Parameter(&quot;T&quot;, 3, &quot;ResultParameter&quot;, typeof(int), 
         DbType.Int32, 
         Direction = ParameterDirection.ReturnValue),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure6 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -948,7 +948,7 @@ public class Classifier
         typeof(Classifier[]) /* Parameter type must be an array of mapped type */, 
         DbType.Object, 
         UdtTypeName = &quot;dbo.Classifier&quot; /* Full qualified name of UDT */ ),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure7 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -961,7 +961,7 @@ public class TestProcedure7 : IDataObject
     Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestFunction3 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]

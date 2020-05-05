@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Bynary properties | XData website </title>
+    <title>Binary properties | XData website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Bynary properties | XData website ">
+    <meta name="title" content="Binary properties | XData website ">
     <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../.././images/cube.ico">
@@ -77,13 +77,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="mapping_binary_type.md">
-<h3 id="bynary-properties">Bynary properties</h3>
+<h3 id="binary-properties">Binary properties</h3>
 
 <p>To work with large binary object (BLOB) using lazy coupling XData represent property type <a class="xref" href="../../api/XData.Mapping.Lob.html">Lob</a>. This type has followed...</p>
 <p>properties:</p>
 <ul>
 <li>byte[] <em>Value</em> - binary object value</li>
-<li>(readonly) bool <em>Assigned</em> - check object has value (including empty value) or NULL</li>
+<li>(read-only) bool <em>Assigned</em> - check object has value (including empty value) or NULL</li>
 </ul>
 <p>methods:</p>
 <ul>
@@ -92,7 +92,7 @@
 </ul>
 <p>operation: </p>
 <ul>
-<li>+= - &quot;syntax sugar&quot;, _data.SomeBlob += _someVariable identic with _data.SomeBlob.Value = _someVariable.</li>
+<li>+= - &quot;syntax sugar&quot;, _data.SomeBlob += _someVariable identical with _data.SomeBlob.Value = _someVariable.</li>
 </ul>
 <p>Examples:</p>
 <pre><code class="lang-csharp">newInvoice.Scan += _image;

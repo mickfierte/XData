@@ -81,7 +81,7 @@
 
 <div class="WARNING"><h5>Warning</h5><p>Before using SQL hints, be sure to use all other query optimization features. This is a &quot;double-edged weapon.&quot; You need to understand very well why you are using what hints and how it will affect performance, and also make all the necessary tests confirming the effectiveness of the changes you made!</p>
 </div>
-<p>XData supports using SQL hints to improve SQL query productivity. All databases supports this feature using vaious mechanics and can change various parameters of SQL execution...</p>
+<p>XData supports using SQL hints to improve SQL query productivity. All databases supports this feature using various mechanics and can change various parameters of SQL execution...</p>
 <p>Types of hints supported by XData for RDBMS...</p>
 <h4 id="ms-sql-server">MS SQL Server</h4>
 <p><a href="https://docs.microsoft.com/en-gb/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-2017">Query hints</a>
@@ -91,8 +91,8 @@
 <h4 id="mysql">MySql</h4>
 <p><a href="https://dev.mysql.com/doc/refman/5.7/en/optimizer-hints.html">Query hints</a></p>
 <h4 id="postgresql">PostgreSQL</h4>
-<p>PostgreSQL does not support hints for queries, but <a href="https://wiki.postgresql.org/wiki/Return_more_than_one_row_of_data_from_PL/pgSQL_functions">procedures that returns <em>setof record</em></a> required declare columns definition on call (see example below). Of coase, this is not a SQL hint actually, but...</p>
-<pre><code class="lang-sql">create or replace function GetRows(text) returns setof record as
+<p>PostgreSQL does not support hints for queries, but <a href="https://wiki.postgresql.org/wiki/Return_more_than_one_row_of_data_from_PL/pgSQL_functions">procedures that returns <em>set of record</em></a> required declare columns definition on call (see example below). Of course, this is not a SQL hint actually, but...</p>
+<pre><code class="lang-sql">create or replace function GetRows(text) returns set of record as
 $
 declare
 r record;
@@ -110,7 +110,7 @@ select * from GetRows(&#39;Department&#39;) as dept(deptid int, deptname text);
 <p>SQLite does not support hints.</p>
 <h4 id="using-hints-in-static-mapping">Using hints in static mapping</h4>
 <p>Query hints:</p>
-<pre><code class="lang-csharp">// hint for epmty string alias is applied to query
+<pre><code class="lang-csharp">// hint for empty string alias is applied to query
 // possible to apply different hints on 
 // select, insert, update, delete statements or their combination
 [DataObject(&quot;T&quot;),
@@ -140,7 +140,7 @@ public class PostgreSqlTestFunction9 : IDataObject
 }
 </code></pre><h4 id="using-hints-in-dynamic-mapping-and-dynamic-queries">Using hints in dynamic mapping and dynamic queries</h4>
 <p>Query hints:</p>
-<pre><code class="lang-csharp">// hint for epmty string alias is applied to query
+<pre><code class="lang-csharp">// hint for empty string alias is applied to query
 // possible to apply different hints on 
 // select, insert, update, delete statements or their combination
 XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
@@ -159,7 +159,7 @@ XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
     .Select(x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
-    .AsQuery(DataScope.Layer, &quot;p_tab&quot;.SetVar(param));
+    .AsQuery(DataScope, &quot;p_tab&quot;.SetVar(param));
 </code></pre></article>
           </div>
           

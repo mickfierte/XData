@@ -85,7 +85,7 @@
 <li>inner view</li>
 <li>subquery expression as single property source (<a href="dynamic.html#sql-expression-property">see below</a>)</li>
 </ul>
-<p>Subquery deep level not reglamented.</p>
+<p>Subquery deep level is not limited.</p>
 <p>In dynamic mapping of data object subqueries can be defined using one of  <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a> or <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView</a> methods overload of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface to define subqueries or inner views respectively.</p>
 <p>While using generic overloads of <em>Subquery</em> or <em>InnerView</em>, parameter <em>IQueryDescription&lt;TDobj&gt; sub</em> can be used with in place <a href="../../query.html">dynamic query</a> notation.</p>
 <p>Non generic overloads of <em>Subquery</em> or <em>InnerView</em> must provide ISqlType or IDataObject marked class type as parameter <em>Type dobjType</em> to reuse of existing mapping. This class can be mapped using static or dynamic style,<br>no matter.</p>

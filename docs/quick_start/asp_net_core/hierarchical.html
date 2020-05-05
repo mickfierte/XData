@@ -131,7 +131,7 @@ Operating System: Linux
 Default Encoding: UTF-8
 Language: en
 Country: US
---></g></svg> </div><p>2) <em>Goods</em> dictationary and specification of a document itself contain mostly familiar to us elements...</p>
+--></g></svg> </div><p>2) <em>Goods</em> dictionary and specification of a document itself contain mostly familiar to us elements...</p>
 <pre><code class="lang-csharp">public partial class Good
 {
     public long GoodId =&gt; this.GetProperty(x =&gt; x.GoodId);
@@ -209,11 +209,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         public DocStateController(IDataEngine dataEngine) : base(dataEngine) { }
 
         [HttpGet]
-        public async Task&lt;ActionResult&lt;Good&gt;&gt; Get(long id)
+        public async Task&lt;ActionResult&lt;Good&gt;&gt; Get(long id, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;Good&gt;()
                         .SingleOrDefaultAsync(x =&gt; x.GoodId == id);
@@ -321,11 +321,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
 <p>14) The <em>Column</em> method in our example for both properties is marked with the <a class="xref" href="../../api/XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_Hidden">Hidden</a> modifier. This modifier hides this field from the SQL construct <em>Select</em> and for group operations (and we define this subquery exactly for this only), it is often justified. Since we described the name of the &quot;Amount&quot; property and the group operation <a class="xref" href="../../api/XData.DataGrouping.html">DataGrouping.Sum</a> in the description of the use of the subquery, this information will be enough to build the correct SQL construct without further limiting the possible reused description in the future.</p>
 <p>15) And now we change <em>InvoiceController</em> WebAPI controller...</p>
 <pre><code class="lang-csharp">[HttpGet]
-public async Task&lt;ActionResult&lt;Invoice&gt;&gt; Get(long id)
+public async Task&lt;ActionResult&lt;Invoice&gt;&gt; Get(long id, CancellationToken cancellationToken)
 {
     try
     {
-        using (var dataScope = _dataEngine.NewDataScope())
+        using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
         {
             return await dataScope.GetRepository&lt;Invoice&gt;()
                 // Initialize the child repository
@@ -340,11 +340,11 @@ public async Task&lt;ActionResult&lt;Invoice&gt;&gt; Get(long id)
     }
 }
 </code></pre><pre><code class="lang-csharp">[HttpDelete]
-public override async Task&lt;ActionResult&lt;bool&gt;&gt; Delete([FromBody] Invoice obj)
+public override async Task&lt;ActionResult&lt;bool&gt;&gt; Delete([FromBody] Invoice obj, CancellationToken cancellationToken)
 {
     try
     {
-        using (var dataScope = _dataEngine.NewDataScope())
+        using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
         {
             var found = dataScope.GetRepository&lt;Invoice&gt;()
                 // Initialize the child repository
@@ -361,11 +361,11 @@ public override async Task&lt;ActionResult&lt;bool&gt;&gt; Delete([FromBody] Inv
     }
 }
 </code></pre><pre><code class="lang-csharp">[HttpPut]
-public override async Task&lt;ActionResult&lt;Invoice&gt;&gt; Save([FromBody] Invoice obj)
+public override async Task&lt;ActionResult&lt;Invoice&gt;&gt; Save([FromBody] Invoice obj, CancellationToken cancellationToken)
 {
     try
     {
-        using (var dataScope = _dataEngine.NewDataScope())
+        using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
         {
             return await dataScope.GetRepository&lt;Invoice&gt;()
                 // Initialize the child repository

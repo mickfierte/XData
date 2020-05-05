@@ -81,7 +81,7 @@
 
 <p>When master repository has hierarchy structure, than detail objects can be filtered by two methods to choose detail repository data: filter data linked with selected tree node only (<a class="xref" href="../api/XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_DirectLink">direct links</a>), and linked to subtree from selected node and below by hierarchy. XData has functional to choose one of this methods in runtime. To provide this ability mapping of master objects must describe <a href="../tutorial/mapping/mapping.html#master-detail-relations">external links</a> marked as <a class="xref" href="../api/XData.Mapping.ExternalLinkAttribute.html#XData_Mapping_ExternalLinkAttribute_DirectLink">direct links</a>. Than master repository flag <a class="xref" href="../api/XData.IRepository.html#XData_IRepository_ShowSubtree">ShowSubtree</a> can be used as a switch between this two methods.</p>
 <p>Let&#39;s explain that on example...</p>
-<p>Mapping master tree organized dataobject...</p>
+<p>Mapping master tree organized data object...</p>
 <pre><code class="lang-csharp">private static Expression&lt;CustomMapping&lt;Catalog&gt;&gt; _unused = (
     () =&gt; XDataMapping.CustomMapping&lt;Catalog&gt;()
         .DataTable(&quot;R&quot;, &quot;T_CATALOG&quot;)
@@ -97,13 +97,13 @@
             z =&gt; z.Filter(y =&gt; new FilterName(&quot;FilterByRoot&quot;))))
         .SetBaseTable(&quot;R&quot;).SetFlags(DataStructureFlag.Tree)
     );
-</code></pre><p>Master dataobject SQL...</p>
+</code></pre><p>Master data object SQL...</p>
 <pre><code class="lang-sql">SELECT R.catalog_id AS R_catalog_id,
   R.code AS R_code,
   R.name AS R_name,
   R.parent_id AS R_parent_id
 FROM T_CATALOG R
-</code></pre><p>Mapping detail dataobject...</p>
+</code></pre><p>Mapping detail data object...</p>
 <pre><code class="lang-csharp">private static Expression&lt;CustomMapping&lt;Document&gt;&gt; _unused = (
     () =&gt; XDataMapping.CustomMapping&lt;Document&gt;()
         .DataTable(&quot;D&quot;, &quot;T_DOC&quot;)
@@ -144,11 +144,11 @@ private static Expression&lt;CustomMapping&lt;CatalogTree&gt;&gt; _unused = (
             x =&gt; x.Field&lt;long?&gt;(&quot;CAT&quot;, string.Empty))
         .Map(x =&gt; new CatalogTree()).SetFlags(DataStructureFlag.ReadOnly)
     );
-</code></pre><p>Link and using dataobjects with <em>ShowSubtree</em> off...</p>
+</code></pre><p>Link and using data objects with <em>ShowSubtree</em> off...</p>
 <pre><code class="lang-csharp">dataScope.GetReposytory&lt;Catalog&gt;()
     .Do(x =&gt; x.Instance.GetChild&lt;Document&gt;())
     .ToArray();
-</code></pre><p>Detail dataobject SQL...</p>
+</code></pre><p>Detail data object SQL...</p>
 <pre><code class="lang-sql">with recursive T (catalog_id, code, name, parent_id) 
   as ((SELECT R.catalog_id AS R_catalog_id,
         R.parent_id AS R_parent_id
@@ -165,13 +165,13 @@ FROM T_DOC D
   JOIN T_DOC_CATALOGUE DC ON DC.doc_id = D.doc_id
 WHERE DC.catalog_id in (SELECT T.catalog_id AS T_catalog_id FROM T T)
   and DC.catalog_id = @FilterByCatalogId
-</code></pre><p>Direct link is filled and deteil dataobject data is restricted by single catalogue_id from master dataobject.</p>
-<p>Link and using dataobjects with <em>ShowSubtree</em> on...</p>
+</code></pre><p>Direct link is filled and detail data object data is restricted by single catalogue_id from master data object.</p>
+<p>Link and using data objects with <em>ShowSubtree</em> on...</p>
 <pre><code class="lang-csharp">dataScope.GetReposytory&lt;Catalog&gt;()
     .Do(x =&gt; x.Instance.GetChild&lt;Document&gt;(),
         x =&gt; x.Instance.ShowSubtree = true)
     .ToArray();
-</code></pre><p>Detail dataobject SQL...</p>
+</code></pre><p>Detail data object SQL...</p>
 <pre><code class="lang-sql">with recursive T (catalog_id, code, name, parent_id) 
   as ((SELECT R.catalog_id AS R_catalog_id,
         R.parent_id AS R_parent_id
@@ -187,7 +187,7 @@ SELECT D.doc_date AS D_doc_date /* DocDate */,
 FROM T_DOC D
   JOIN T_DOC_CATALOGUE DC ON DC.doc_id = D.doc_id
 WHERE DC.catalog_id in (SELECT T.catalog_id AS T_catalog_id FROM T T)
-</code></pre><p>Direct link not filled and data not restricted by single catalogue_id from master dataobject. Resulted detail data will match master dataobject current record subtree.</p>
+</code></pre><p>Direct link not filled and data not restricted by single catalogue_id from master data object. Resulted detail data will match master data object current record subtree.</p>
 </article>
           </div>
           

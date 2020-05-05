@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="tips_custom_sql.md">
 <h3 id="call-custom-sql-code">Call custom SQL code</h3>
 
-<p>XData can help the programmer to obtain data and process it with many ways. But also we hold in mind XData is just a common tool with limited quantity of features, and some very specific (but handy and powerfull) SQL dialect constructions may be out of XData possibilities. </p>
+<p>XData can help the programmer to obtain data and process it with many ways. But also we hold in mind XData is just a common tool with limited quantity of features, and some very specific (but handy and powerful) SQL dialect constructions may be out of XData possibilities. </p>
 <p>To call dialect specific SQL statements used <a class="xref" href="../api/XData.IDataScope.html">IDataScope interface</a> with methods: <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_FillTable_XData_Database_Adapter_Query_System_Data_CommandBehavior_">FillTable</a>, <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteScalar__1_XData_Database_Adapter_Query_">ExecuteScalar</a> and <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_ExecuteNonQuery_XData_Database_Adapter_Query_">ExecuteNonQuery</a>. </p>
 <pre><code class="lang-csharp">const string getCoordComResourceStateChangesForCaseCommand = @&quot;
 select x.ResourceCode, x.ReportedDateTime, x.UserName, x.MissionStatusCode, 
@@ -144,10 +144,10 @@ using (var dataScope = DataEngine.Value.NewDataScope(CoordComDb))
             x.Field&lt;string&gt;(0), x.Field&lt;DateTime&gt;(1), x.Field&lt;string&gt;(2),
             x.Field&lt;string&gt;(3) == &quot;---&quot; ? x.Field&lt;string&gt;(4) : x.Field&lt;string&gt;(3))).ToList();
 }
-</code></pre><div class="TIP"><h5>Tip</h5><p>Use this mechanism with maximum care! This eliminates cross dialect approach of XData development, but we are in a real world with real programmers tasks... and we are never seen real tasks are correspond the rules of ideal programm system architecture ;) Anyway this <em>bad</em> feature is a backdoor we must provide while XData is not support all features of all specific SQL dialects.<br>
-Is this realy possible?. We think that not, but we will try to provide most of nessesary features inside XData as soon as possible. We are need Your help to choose the order of features implementation and ideas to do it best!</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p>Use this mechanism with maximum care! This eliminates cross dialect approach of XData development, but we are in a real world with real programmers tasks... and we are never seen real tasks are correspond the rules of ideal program system architecture ;) Anyway this <em>bad</em> feature is a back-door we must provide while XData is not support all features of all specific SQL dialects.<br>
+Is this really possible?. We think that not, but we will try to provide most of necessary features inside XData as soon as possible. We are need Your help to choose the order of features implementation and ideas to do it best!</p>
 </div>
-<div class="IMPORTANT"><h5>Important</h5><p>DDL instructions is not implemented by design. We believe DDL in big complicated real business application is not a thing we can delegate to &quot;dumb-metal-doll&quot;. This is why XData has no mechanics to &quot;CodeFirst&quot;... If You&#39;re task can use CodeFirst approach - use EF. This way is historically reserved by EF, and no reason to fight for it. Calling custom SQL code is a legal way to apply DDL in XData context. Programmer or database administrator write this SQL script. This code is prodused by human, real (not artifical) intellect of professional... XData only has ability to run it over database.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>DDL instructions is not implemented by design. We believe DDL in big complicated real business application is not a thing we can delegate to &quot;dumb-metal-doll&quot;. This is why XData has no mechanics to &quot;CodeFirst&quot;... If You&#39;re task can use CodeFirst approach - use EF. This way is historically reserved by EF, and no reason to fight for it. Calling custom SQL code is a legal way to apply DDL in XData context. Programmer or database administrator write this SQL script. This code is produced by human, real (not artificial) intellect of professional... XData only has ability to run it over database.</p>
 </div>
 </article>
           </div>

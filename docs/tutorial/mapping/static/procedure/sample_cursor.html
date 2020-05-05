@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>SQL procedure resultset as query sample | XData website </title>
+    <title>SQL procedure result set as query sample | XData website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="SQL procedure resultset as query sample | XData website ">
+    <meta name="title" content="SQL procedure result set as query sample | XData website ">
     <meta name="generator" content="docfx 2.48.0.0">
     
     <link rel="shortcut icon" href="../../../.././images/cube.ico">
@@ -78,12 +78,12 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_cursor.md">
 
-<h4 id="sql-procedure-resultset-as-query-sample">SQL procedure resultset as query sample</h4>
+<h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+    ResultSet(&quot;T&quot;, &quot;&quot;)]
 public class TestProcedure : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]

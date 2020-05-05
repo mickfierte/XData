@@ -84,8 +84,8 @@
 <p>XData use data scope isolation when same typed <a href="glossary.html#repository">repositories</a> used by multiple logic at the same time. Data scope is represented by <a class="xref" href="../api/XData.IDataScope.html">IDataScope</a> interface. Data scope identified by <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_Layer">Layer</a> (GUID).</p>
 <div class="IMPORTANT"><h5>Important</h5><p><em>IDataScope</em> is <em>IDisposable</em>. When disposing <em>IDataScope</em> all repositories, opened at this scope are disposed and XData free all memory used by this data scope.</p>
 </div>
-<p>To get <a href="glossary.html#data-object">data object</a> instances of type <em>T</em> it&#39;s recuired to get typed repository interface <a class="xref" href="../api/XData.IRepository-1.html">IRepository&lt;T&gt;</a> using method <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_XData_Variable___">GetRepository&lt;T&gt;</a> of <em>IDataScope</em>.</p>
-<div class="TIP"><h5>Tip</h5><p><em>IRepository</em> is also <em>IDisposable</em>. When disposing <em>IRepository</em> it&#39;s data cache cleared. You can dispose repositories manualy, but if not, disposing data scope will free that repository resources. Recommended to dispose large data repositories manualy to reduce memory utilized by application.</p>
+<p>To get <a href="glossary.html#data-object">data object</a> instances of type <em>T</em> it&#39;s required to get typed repository interface <a class="xref" href="../api/XData.IRepository-1.html">IRepository&lt;T&gt;</a> using method <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_XData_Variable___">GetRepository&lt;T&gt;</a> of <em>IDataScope</em>.</p>
+<div class="TIP"><h5>Tip</h5><p><em>IRepository</em> is also <em>IDisposable</em>. When disposing <em>IRepository</em> it&#39;s data cache cleared. You can dispose repositories manually, but if not, disposing data scope will free that repository resources. Recommended to dispose large data repositories manually to reduce memory utilized by application.</p>
 </div>
 <p>While repository is not disposed inside data scope it can be requested many times without recreating and database access and <a class="xref" href="../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_XData_Variable___">GetRepository&lt;T&gt;</a> method of same <em>IDataScope</em> returns the same instance of repository.</p>
 <p>Net 4.0:</p>
@@ -182,9 +182,9 @@ return invoice.SetDeleted(true).Submit(out _);
 <p>To submit changes can be used extension method of interface <em>IDataObject</em> <a class="xref" href="../api/XData.DataObjectExtensions.html#XData_DataObjectExtensions_Submit__1___0___0__XData_DataSubmitFlag_">Submit</a></p>
 <pre><code class="lang-csharp">newInvoice.Submit(out var invoice);
 var docTypeCode = invoice.DocTypeCode;
-</code></pre><p>To submit changes apllied to multiple data objects of the same type can be used <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Submit__0__XData_DataSubmitFlag_">IRepository&lt;T&gt;.Submit</a> method accepted (<em>IEnumerable&lt;T&gt;</em>) as one of parameters. When object is not changed this method will skip it while updating database.</p>
+</code></pre><p>To submit changes applied to multiple data objects of the same type can be used <a class="xref" href="../api/XData.IRepository-1.html#XData_IRepository_1_Submit__0__XData_DataSubmitFlag_">IRepository&lt;T&gt;.Submit</a> method accepted (<em>IEnumerable&lt;T&gt;</em>) as one of parameters. When object is not changed this method will skip it while updating database.</p>
 <h3 id="mapping-declaration">Mapping declaration</h3>
-<p>To use the repository, recuired to describe the object-relational mapping rule for the type of repository objects. XData has two styles of mapping definition static - based on attribute assignment and dynamic - LINQ style mapping description.</p>
+<p>To use the repository, required to describe the object-relational mapping rule for the type of repository objects. XData has two styles of mapping definition static - based on attribute assignment and dynamic - LINQ style mapping description.</p>
 <p>SQL representation of samples below:</p>
 <pre><code class="lang-sql">SELECT A.amount AS A_amount /* Amount */,
     A.DOC_SPEC_ID AS A_DOC_SPEC_ID,
@@ -248,7 +248,7 @@ public partial class InvoiceSpec
     public string Code { get { return this.GetProperty(x =&gt; x.Code); } }
     public decimal Amount { get; set; }
 }
-</code></pre><p>Detailed desciption of <a href="mapping/static/static.html">static</a> and <a href="mapping/dynamic/dynamic.html">dynamic</a> methods of mapping definie described in relevant sections.</p>
+</code></pre><p>Detailed description of <a href="mapping/static/static.html">static</a> and <a href="mapping/dynamic/dynamic.html">dynamic</a> methods of mapping described in relevant sections.</p>
 </article>
           </div>
           

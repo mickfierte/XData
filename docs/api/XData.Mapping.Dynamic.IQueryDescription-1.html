@@ -96,7 +96,7 @@
   <h6><strong>Assembly</strong>: XData.docfx.dll</h6>
   <h5 id="XData_Mapping_Dynamic_IQueryDescription_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IQueryDescription&lt;T&gt; : IQueryDescription</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IQueryDescription&lt;out T&gt; : IQueryDescription</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,19 +118,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_IQueryDescription_1_AsQuery_System_Guid_XData_Variable___.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.IQueryDescription%601.AsQuery(System.Guid%2CXData.Variable%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_IQueryDescription_1_AsQuery_XData_IDataScope_XData_Variable___.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.IQueryDescription%601.AsQuery(XData.IDataScope%2CXData.Variable%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/Interfaces.cs/#L410">View Source</a>
   </span>
   <a id="XData_Mapping_Dynamic_IQueryDescription_1_AsQuery_" data-uid="XData.Mapping.Dynamic.IQueryDescription`1.AsQuery*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryDescription_1_AsQuery_System_Guid_XData_Variable___" data-uid="XData.Mapping.Dynamic.IQueryDescription`1.AsQuery(System.Guid,XData.Variable[])">AsQuery(Guid, Variable[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryDescription_1_AsQuery_XData_IDataScope_XData_Variable___" data-uid="XData.Mapping.Dynamic.IQueryDescription`1.AsQuery(XData.IDataScope,XData.Variable[])">AsQuery(IDataScope, Variable[])</h4>
   <div class="markdown level1 summary"><p>Returns queryable data source based on description</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IDataQuery&lt;T&gt; AsQuery(Guid layer, params Variable[] variables)</code></pre>
+    <pre><code class="lang-csharp hljs">IDataQuery&lt;T&gt; AsQuery(IDataScope dataScope, params Variable[] variables)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,9 +143,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">layer</span></td>
-        <td><p>Layer</p>
+        <td><a class="xref" href="XData.IDataScope.html">IDataScope</a></td>
+        <td><span class="parametername">dataScope</span></td>
+        <td><p>Data scope</p>
 </td>
       </tr>
       <tr>

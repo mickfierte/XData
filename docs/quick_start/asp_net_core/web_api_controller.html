@@ -126,11 +126,11 @@ namespace &lt;..Youre namespace..&gt;
         }
 
         [HttpGet]
-        public virtual async Task&lt;ActionResult&lt;T[]&gt;&gt; All()
+        public virtual async Task&lt;ActionResult&lt;T[]&gt;&gt; All(CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;T&gt;().ToArrayAsync();
                 }
@@ -143,11 +143,11 @@ namespace &lt;..Youre namespace..&gt;
         }
 
         [HttpDelete]
-        public virtual async Task&lt;ActionResult&lt;bool&gt;&gt; Delete([FromBody] T obj)
+        public virtual async Task&lt;ActionResult&lt;bool&gt;&gt; Delete([FromBody] T obj, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     var found = dataScope.GetRepository&lt;T&gt;().Find(obj);
                     if (found == null) return NotFound();
@@ -162,11 +162,11 @@ namespace &lt;..Youre namespace..&gt;
         }
 
         [HttpPut]
-        public virtual async Task&lt;ActionResult&lt;T&gt;&gt; Save([FromBody] T obj)
+        public virtual async Task&lt;ActionResult&lt;T&gt;&gt; Save([FromBody] T obj, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;T&gt;()
                         .Apply(obj).SubmitAndReturnAsync();
@@ -198,11 +198,11 @@ namespace &lt;..Youre namespace..&gt;.Controllers.API
         public DocStateController(IDataEngine dataEngine) : base(dataEngine) { }
 
         [HttpGet]
-        public async Task&lt;ActionResult&lt;DocState&gt;&gt; Get(long id)
+        public async Task&lt;ActionResult&lt;DocState&gt;&gt; Get(long id, CancellationToken cancellationToken)
         {
             try
             {
-                using (var dataScope = _dataEngine.NewDataScope())
+                using (var dataScope = _dataEngine.NewDataScope(cancellationToken))
                 {
                     return await dataScope.GetRepository&lt;DocState&gt;()
                         .SingleOrDefaultAsync(x =&gt; x.DocStateId == id);

@@ -254,7 +254,7 @@ public abstract class OptionalFilterAttribute : FilterAttribute</code></pre>
 <p>If base source <a class="xref" href="XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_BaseSource">BaseSource</a>  is omitted - all entire query is omitted</p>
 <p>Hint: It can be used to build conditional sub queries or inner views</p>
 <p>For example:<pre><code class="lang-sql">-- if filterBySomeField has PrimaryFilter flag = true, query...
-select ot.one_table_id, ot.name from one_table ot where ot.one_table_id in (select st.one_table_id from second_table st where st.somefield = :filterBySomeField)
+select ot.one_table_id, ot.name from one_table ot where ot.one_table_id in (select st.one_table_id from second_table st where st.some_field = :filterBySomeField)
 -- when filterBySomeField has no value assigned will be transformed into... 
 select one_table_id, name from one_table
 -- bat have a full form when filterBySomeField value is assigned</code></pre></p>
@@ -266,7 +266,7 @@ select one_table_id, name from one_table
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_OptionalFilterAttribute__ctor_System_String_System_String_.md&amp;value=---%0Auid%3A%20XData.Mapping.OptionalFilterAttribute.%23ctor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/OptionalFilterAttribute.cs/#L41">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/OptionalFilterAttribute.cs/#L42">View Source</a>
   </span>
   <a id="XData_Mapping_OptionalFilterAttribute__ctor_" data-uid="XData.Mapping.OptionalFilterAttribute.#ctor*"></a>
   <h4 id="XData_Mapping_OptionalFilterAttribute__ctor_System_String_System_String_" data-uid="XData.Mapping.OptionalFilterAttribute.#ctor(System.String,System.String)">OptionalFilterAttribute(String, String)</h4>
@@ -308,7 +308,7 @@ select one_table_id, name from one_table
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_OptionalFilterAttribute_PrimaryFilter.md&amp;value=---%0Auid%3A%20XData.Mapping.OptionalFilterAttribute.PrimaryFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/OptionalFilterAttribute.cs/#L34">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/OptionalFilterAttribute.cs/#L35">View Source</a>
   </span>
   <a id="XData_Mapping_OptionalFilterAttribute_PrimaryFilter_" data-uid="XData.Mapping.OptionalFilterAttribute.PrimaryFilter*"></a>
   <h4 id="XData_Mapping_OptionalFilterAttribute_PrimaryFilter" data-uid="XData.Mapping.OptionalFilterAttribute.PrimaryFilter">PrimaryFilter</h4>
@@ -398,7 +398,7 @@ select one_table_id, name from one_table
                     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_OptionalFilterAttribute.md&amp;value=---%0Auid%3A%20XData.Mapping.OptionalFilterAttribute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/OptionalFilterAttribute.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Filters/OptionalFilterAttribute.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

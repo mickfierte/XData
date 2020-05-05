@@ -86,9 +86,9 @@
 </ul>
 <p>Parameter <em>attributes</em> of method <em>Link</em> value used to define link properties pairs with one of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html">ILinkPropertyMappingAdapter&lt;T&gt;</a> interface <em>LinkProperties</em> method overload call:</p>
 <ul>
-<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty">LinkProperty()</a> - used property of source object to assiciate with link property defined by <em>Link</em> method</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty">LinkProperty()</a> - used property of source object to associate with link property defined by <em>Link</em> method</li>
 <li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___">LinkProperty&lt;TSource&gt;(Expression&lt;Func&lt;TSource, object&gt;&gt; source)</a> - used <em>source</em> as source property and equal named property from target object</li>
-<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___System_Linq_Expressions_Expression_System_Func__0_System_Object___">LinkProperty&lt;TSource&gt;(Expression&lt;Func&lt;TSource, object&gt;&gt; source, Expression&lt;Func&lt;T, object&gt;&gt; property)</a> - specifing both properties</li>
+<li><a class="xref" href="../../../../api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html#XData_Mapping_Dynamic_ILinkPropertyMappingAdapter_1_LinkProperty__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___System_Linq_Expressions_Expression_System_Func__0_System_Object___">LinkProperty&lt;TSource&gt;(Expression&lt;Func&lt;TSource, object&gt;&gt; source, Expression&lt;Func&lt;T, object&gt;&gt; property)</a> - specifying both properties</li>
 </ul>
 <pre><code class="lang-csharp">...
 DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,

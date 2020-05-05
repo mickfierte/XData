@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="tips_conditional.md">
 <h3 id="conditional-filters">Conditional filters</h3>
 
-<p>XData realization of LINQ &quot;Where&quot; method has provide ability to use runtime condition evaluation during predicate compilation into SQL statements to analyze runtime data and conditionaly omit non valued data (0, empty or null) filters.</p>
+<p>XData realization of LINQ &quot;Where&quot; method has provide ability to use runtime condition evaluation during predicate compilation into SQL statements to analyze runtime data and conditionally omit non valued data (0, empty or null) filters.</p>
 <pre><code class="lang-csharp">// string author, int rating, decimal? lowerPrice and decimal? higherPrice is an optional filter values
 return dataScope.GetRepository&lt;Book&gt;()
     .Where(x =&gt; (string.IsNullOrEmpty(author) || x.Author == author)

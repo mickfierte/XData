@@ -80,7 +80,7 @@
 <h2 id="processing-of-related-objects-unit-of-work">Processing of related objects (Unit of Work)</h2>
 
 <p>XData has supported processing data object mapped to number of tricky related tables. Transactional support is required to apply changes over various but related data objects.</p>
-<p>For example we have a business object having one ore more related objects collections. Every one of thouse can have related collections of other objects and so on. And some business logic works with this related conglomerate as single complicated entity required submitted into DB using one transaction.</p>
+<p>For example we have a business object having one ore more related objects collections. Every one of thous can have related collections of other objects and so on. And some business logic works with this related conglomerate as single complicated entity required submitted into DB using one transaction.</p>
 <p>XData is support using <a href="https://en.wikipedia.org/wiki/Database_transaction">transaction</a>, but some non terminal data objects can be inserted inside the same transaction and writing code that can support this case is a non trivial thing.</p>
 <p>Common but elegant way to make it simple and clear is a realizing &quot;Unit of Work&quot; pattern. Most of ORM has own realization of this pattern, but XData using this mechanic on right level of business logic - to operate with related conglomerate of business objects. Using of Unit of Work pattern with XData is pure declarative: no custom business logic classes is needed to use it.</p>
 <p>Lets describe this by example:</p>
@@ -98,11 +98,11 @@ using (var work = Work.Add(instance,
 {
     if (new PatientWindow { DataContext = new Patient(work), Owner = window }
         .ShowDialog() == true)
-        work.Submit(); // submiting UoW container changes
+        work.Submit(); // submitting UoW container changes
 }
 </code></pre><p>Initialization of UoW container for existing object (update):</p>
 <pre><code class="lang-csharp">/* 
-  Using static class Work we init UoW container over existed root object and decribe 
+  Using static class Work we init UoW container over existed root object and describe 
   collections of related objects. Because of root object is exists collections will 
   be filled from DB using Work.Fill method.
 */
@@ -112,11 +112,11 @@ using (var work = Work.Add(patient,
 {
     if (new PatientWindow { DataContext = new Patient(work), Owner = window }
     .ShowDialog() != true) return;
-    work.Submit(); // submiting UoW container changes
+    work.Submit(); // submitting UoW container changes
 }
 </code></pre><p>Initialization of single related object inside of UoW container (one-to-one relationship) is described by <a class="xref" href="../api/XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get</a> method, that analog to <a class="xref" href="../api/XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty</a> and <a class="xref" href="../api/XData.Work.html#XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill</a> methods we use before.</p>
 <p>UoW container can be initialized with a not only single root object, but using collection of root objects with overloaded <a href="">Add</a> method that accept an collection (<em>ICollection</em>) of root objects.</p>
-<p>To select a single object form UoW container use <a class="xref" href="../api/XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get</a> method. This method can accept predicate as parameter to specify unique condition of object selection. After acquiring a single object we can change it (or delete it as explained in followed examle):</p>
+<p>To select a single object form UoW container use <a class="xref" href="../api/XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get</a> method. This method can accept predicate as parameter to specify unique condition of object selection. After acquiring a single object we can change it (or delete it as explained in followed example):</p>
 <pre><code class="lang-csharp">_patient = work.Get();
 _patient.SetDeleted(True);
 </code></pre><p>To select multiple objects from UoW container can be made using <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_Select__1_System_Func__0___0__XData_WorkState_">Select</a> method:</p>
@@ -125,9 +125,9 @@ _patient.SetDeleted(True);
 <pre><code class="lang-csharp">work.Find(x =&gt; x.PatientOperList).Add(() =&gt; n.Data);
 </code></pre><p>To exchange object in UoW container use <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_Assign__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__System_Func__0__XData_WorkState_">Assign</a> method. When object is exchanged all his detail UoW containers will be dismissed and all changes in it will be lost!</p>
 <pre><code class="lang-csharp">work.Assign(x =&gt; true, repository.New());
-</code></pre><div class="WARNING"><h5>Warning</h5><p>Do not use <em>Assign</em> method to change object property values! Updating properties of object inside UoW container can be produed by acquiring object using <em>Get</em> method and changing it properties. Method <em>Assign</em> is used to exchange object incuding his detail containers by another object!</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Do not use <em>Assign</em> method to change object property values! Updating properties of object inside UoW container can be produced by acquiring object using <em>Get</em> method and changing it properties. Method <em>Assign</em> is used to exchange object including his detail containers by another object!</p>
 </div>
-<div class="IMPORTANT"><h5>Important</h5><p>Uint of Work realization is not internal part of XData. It can be attached to Your project when this functionality is realy needed using separate NuGet package <a href="https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/">XData UnitOfWork package</a>.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>Unit of Work realization is not internal part of XData. It can be attached to Your project when this functionality is really needed using separate NuGet package <a href="https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/">XData UnitOfWork package</a>.</p>
 </div>
 </article>
           </div>

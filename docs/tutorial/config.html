@@ -80,7 +80,7 @@
 <h2 id="installation-and-configuration">Installation and configuration</h2>
 
 <h3 id="nuget-configuration">NuGet configuration</h3>
-<p>To get XData NuGet packages You will need moify nuget.config as described below and place it in project root folder near Your solution file.</p>
+<p>To get XData NuGet packages You will need modify nuget.config as described below and place it in project root folder near Your solution file.</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;configuration&gt;
     &lt;packageSources&gt;
@@ -146,7 +146,7 @@ var dataEngine = XDataManager.InitXData(x =&gt; x.UseConfiguration(
   &lt;/connectionStrings&gt;
 </code></pre><p>There are three possible ways to secure connection string in configuration file:</p>
 <ul>
-<li><a href="https://msdn.microsoft.com/en-us/library/ms254494(v=vs.110).aspx">Chipher config file section</a> <em>connectionStrings</em> section</li>
+<li><a href="https://msdn.microsoft.com/en-us/library/ms254494(v=vs.110).aspx">Cipher config file section</a> <em>connectionStrings</em> section</li>
 <li>Using <a class="xref" href="../api/XData.IDataOptions.html#XData_IDataOptions_UseCredentials_System_String_System_Collections_Generic_KeyValuePair_XData_CredentialsType_System_String____">partial connection strings</a> during runtime</li>
 <li>Deploy application in <a href="three_tier.html">three tier mode</a>. In this case connection string is not required to be configured on client side.</li>
 </ul>
@@ -162,27 +162,27 @@ var dataEngine = XDataManager.InitXData(x =&gt; x.UseConfiguration(
 <ul>
 <li><strong>dialect</strong> (required always, can be shared between multiple contexts) - register an unique alias to specific RDBMS SQL dialect support. Attribute <em>name</em> contains an alias of dialect. Attribute <em>assembly</em> - assembly name of specific dialect plugin. When plugin implementation support additional configuration settings, element <em>dialect</em> may have an specifically organized internal structure described in plugin readme file.</li>
 <li><strong>adapter</strong> (required when two-tier architecture is used only, can be shared between multiple contexts) - register unique alias to adapter for specific ADO.Net provider. Attribute <em>name</em> contains an alias of adapter. Attribute <em>assembly</em> - assembly name of specific adapter plugin. When plugin implementation support additional configuration settings, element <em>adapter</em> may have an specifically organized internal structure described in plugin readme file.</li>
-<li><strong>context</strong> (required always) - contains <a href="glossary.html#context">context</a> settings. Attribute <em>name</em> contains context name. Attribute <em>adapter</em> (required when two-tier architecture is used only) contains adapter alias. Attribute <em>dialect</em> - dialect alias. In case of using sequences required to specify attribute <em>sequence</em> contains assembly qualified type name of <a class="xref" href="../api/XData.Interfaces.ISequenceNameRule.html">ISequenceNameRule</a> implementation. When <a class="xref" href="../api/XData.Exceptions.XDataConcurrencyException.html">optimistic concurrention</a> error code need to have a special value for some reason (see specific adapter readme file) set <em>concurrencyError</em> attribute to specific error code value.</li>
-<li><strong>proxy</strong> (required when three-tier architecture is used only) - declare WCF client endpoint name for context named same as proxy attribute <em>name</em> value. WCF client endpoint name is stored in <em>endpoint</em> attribute value. Same WCF endpoint can be used for multiple contexts. Contexts names on client and server must to have same names. Deploing and configuration process for three tier architecture is described <a href="three_tier.html">here</a>.</li>
+<li><strong>context</strong> (required always) - contains <a href="glossary.html#context">context</a> settings. Attribute <em>name</em> contains context name. Attribute <em>adapter</em> (required when two-tier architecture is used only) contains adapter alias. Attribute <em>dialect</em> - dialect alias. In case of using sequences required to specify attribute <em>sequence</em> contains assembly qualified type name of <a class="xref" href="../api/XData.Interfaces.ISequenceNameRule.html">ISequenceNameRule</a> implementation. When <a class="xref" href="../api/XData.Exceptions.XDataConcurrencyException.html">optimistic concurrency</a> error code need to have a special value for some reason (see specific adapter readme file) set <em>concurrencyError</em> attribute to specific error code value.</li>
+<li><strong>proxy</strong> (required when three-tier architecture is used only) - declare WCF client endpoint name for context named same as proxy attribute <em>name</em> value. WCF client endpoint name is stored in <em>endpoint</em> attribute value. Same WCF endpoint can be used for multiple contexts. Contexts names on client and server must to have same names. Deploying and configuration process for three tier architecture is described <a href="three_tier.html">here</a>.</li>
 </ul>
-<h3 id="deploing-application-in-three-three-tier-architecture">Deploing application in three three-tier architecture</h3>
+<h3 id="deploying-application-in-three-three-tier-architecture">Deploying application in three three-tier architecture</h3>
 <p>Project organization rules and assembly deployment principles to deploy application using three-tier architecture described <a href="three_tier.html">here</a>.</p>
-<div class="NOTE"><h5>Note</h5><p>Three-tier architecture can be apllied over .Net 4.0 version only! See next versions to use three-tier feature on .Net Standard 2.0 version.</p>
+<div class="NOTE"><h5>Note</h5><p>Three-tier architecture can be applied over .Net 4.0 version only! See next versions to use three-tier feature on .Net Standard 2.0 version.</p>
 </div>
 <h4 id="install-and-configure-server">Install and configure server</h4>
 <p>Server is implemented as WCF service <a href="http://mickfierte.github.io/XData/artifacts/net40/XData.Server.zip">XData.Server.dll</a>. Base engine XData.dll library is required to server functionality. As well as log plugins, dialects and adapters to connect database directly. To run Your application business logic on server side server logic and data mapping modules are required on server side two. </p>
 <p>Limits to choose protocol can be used as transport between client and server:</p>
 <ul>
 <li>Duplex support</li>
-<li>Reenterability inside one session support</li>
+<li>Reenter-ability inside one session support</li>
 </ul>
-<p>It&#39;s recomended to host XData.Server on IIS. By default IIS is not configured to activate service over net.tcp, and if You whant to use this protocol, see <a href="http://www.codeproject.com/Articles/717327/WCF-NetTcp-Binding">here</a> to configure it.</p>
+<p>It&#39;s recommended to host XData.Server on IIS. By default IIS is not configured to activate service over net.tcp, and if You want to use this protocol, see <a href="http://www.codeproject.com/Articles/717327/WCF-NetTcp-Binding">here</a> to configure it.</p>
 <h4 id="changes-on-client-side">Changes on client side</h4>
 <p>When three-tier architecture is used, required to obtain special module <a href="https://github.com/mickfierte/XData.Remote/packages/95892/">XData.Remote</a>. Application folder must contain client logic and data mapping modules, as well as used by Your application log modules, SQL dialect modules <strong>BUT</strong> now adapters not required to contexts used in three-tier mode.</p>
 <p>In configuration file, is required to configure WCF client according Your server settings. Section <em>xdata</em> must to be configured as described above with defining of <em>proxy</em> elements for every context that used three-tier architecture. Remote contexts must to have same names on client and server. Sample three-tier configuration can be obtained from XData test project.</p>
 <div class="TIP"><h5>Tip</h5><p>You able to combine local connections to some databases with one or more three-tier servers. In the same time You can use multiple dedicated servers, each for one or more contexts.</p>
 </div>
-<div class="TIP"><h5>Tip</h5><p>You can fast and simple switch from three-tier mode to client server mode and then back to three-tier by commenting/uncommenting <em>proxy</em> descriptions. It&#39;s a very usefull feature to debug server logic code ;)</p>
+<div class="TIP"><h5>Tip</h5><p>You can fast and simple switch from three-tier mode to client server mode and then back to three-tier by commenting/uncommenting <em>proxy</em> descriptions. It&#39;s a very useful feature to debug server logic code ;)</p>
 </div>
 </article>
           </div>

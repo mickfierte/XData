@@ -667,14 +667,14 @@
     <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/Interfaces.cs/#L569">View Source</a>
   </span>
   <a id="XData_Mapping_Dynamic_IQueryStructureAdapter_Ref_" data-uid="XData.Mapping.Dynamic.IQueryStructureAdapter.Ref*"></a>
-  <h4 id="XData_Mapping_Dynamic_IQueryStructureAdapter_Ref__2_System_String_System_Linq_Expressions_Expression_System_Func___1_System_Object___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____" data-uid="XData.Mapping.Dynamic.IQueryStructureAdapter.Ref``2(System.String,System.Linq.Expressions.Expression{System.Func{``1,System.Object}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IPropertyMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])">Ref&lt;TValue, TDobj&gt;(String, Expression&lt;Func&lt;TDobj, Object&gt;&gt;, Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[])</h4>
+  <h4 id="XData_Mapping_Dynamic_IQueryStructureAdapter_Ref__2_System_String_System_Linq_Expressions_Expression_System_Func___1_System_Object___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IPropertyMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____" data-uid="XData.Mapping.Dynamic.IQueryStructureAdapter.Ref``2(System.String,System.Linq.Expressions.Expression{System.Func{``1,System.Object}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IPropertyMappingAdapter,XData.Mapping.Dynamic.IStructureFlag}}[])">Ref&lt;TValue, TInnerView&gt;(String, Expression&lt;Func&lt;TInnerView, Object&gt;&gt;, Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Inner view property reference mapping</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TValue Ref&lt;TValue, TDobj&gt;(string sourceAlias, Expression&lt;Func&lt;TDobj, object&gt;&gt; property, params Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[] attributes)
-    where TDobj : class</code></pre>
+    <pre><code class="lang-csharp hljs">TValue Ref&lt;TValue, TInnerView&gt;(string sourceAlias, Expression&lt;Func&lt;TInnerView, object&gt;&gt; property, params Expression&lt;Func&lt;IPropertyMappingAdapter, IStructureFlag&gt;&gt;[] attributes)
+    where TInnerView : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -693,7 +693,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TDobj, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TInnerView, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;&gt;</td>
         <td><span class="parametername">property</span></td>
         <td><p>Referenced property name</p>
 </td>
@@ -737,7 +737,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">TDobj</span></td>
+        <td><span class="parametername">TInnerView</span></td>
         <td><p>Referenced inner view type</p>
 </td>
       </tr>

@@ -84,11 +84,11 @@
 <ul>
 <li>TVal <em>Value</em> - this property to get preview of linked object</li>
 <li>TSrc <em>Source</em> - this property can be used to set linked object</li>
-<li>(readonly) bool <em>Assigned</em> - check link value for NULL value</li>
+<li>(read-only) bool <em>Assigned</em> - check link value for NULL value</li>
 </ul>
 <p>operations: </p>
 <ul>
-<li>+= - &quot;syntax sugar&quot;, _data.SomeLink += _someDictionaryObject identic with _data.SomeLink.Source = _someDictionaryObject.</li>
+<li>+= - &quot;syntax sugar&quot;, _data.SomeLink += _someDictionaryObject identical with _data.SomeLink.Source = _someDictionaryObject.</li>
 </ul>
 <pre><code class="lang-csharp">newInvoice.DocState += dataScope.GetDictionaryValue&lt;DocState&gt;(x =&gt; x.Code == &quot;CREATED&quot;);
 </code></pre><p>To make link properties work correct, at mapping level need to be defined pairs of properties source and current objects, that values will be copied from source object to current when link is applied. Link description is deferent for <a href="static/static.html#links">static</a> and <a href="dynamic/dynamic.html#links">dynamic</a> methods of mapping.</p>
