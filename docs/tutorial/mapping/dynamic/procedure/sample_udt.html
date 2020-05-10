@@ -89,7 +89,7 @@ public class Classifier
     public string Name { get; set; }
 }
 ...
-var f5 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+var f5 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function)
     .Parameter&lt;Classifier&gt;(&quot;T&quot;, 1, &quot;p_obj&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(&quot;classifier_rec&quot;))

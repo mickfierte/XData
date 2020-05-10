@@ -52,6 +52,8 @@ version 1.2.0
 * Same programming modules can be used in two-tier mode (e.g. for debugging) and three-tier mode (in production) based on configuration file settings.
 * Declarative Unit of Work realization.
 * Might and flexible data access control rules can be used.
+* Convenient and powerful built-in JSON serialization system does not require conversion from-to-DTO.
+* Parts of the mapping description can be inherited using the standard inheritance hierarchy or with the construction of an independent hierarchy of mapping inheritance.
 
 ## Installation
 
@@ -205,6 +207,7 @@ _For more examples and usage, please refer to the [documentation](http://mickfie
 	* Asp.Net Core HealthChecks is now supported
 	* Using DI containers for trigger logic modules
 	* Using hierarchical organized objects
+	* Mapping inheritance
 	* Bugs are fixed, algorithms are improved
 
 ## Contacts

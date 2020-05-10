@@ -94,8 +94,7 @@
     x =&gt; x.SubqueryLink(&quot;DocId&quot;))
     .Subquery&lt;CatalogueTree&gt;(&quot;UT&quot;, x =&gt; x.CatalogueId, DataGrouping.None)
     .InnerView(&quot;H&quot;, 
-        XDataMapping.GetStructure(&quot;H&quot;, null, DataStructureFlag.Grouping, 
-            new Variable[0])
+        XDataMapping.GetStructure(&quot;H&quot;, DataStructureFlag.Grouping)
         .DataTable(&quot;T_DOC_HISTORY&quot;, &quot;H&quot;)
         .Select(x =&gt; new {
             DocId = x.Field&lt;long?&gt;(&quot;H&quot;, string.Empty, 

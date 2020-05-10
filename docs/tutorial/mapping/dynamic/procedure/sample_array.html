@@ -80,7 +80,7 @@
 
 <h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
 <pre><code class="lang-csharp">var arr = new[] { 1, 2, 3 };
-var f6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+var f6 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;TestFunction6&quot;, ProcedureType.Function)
     .Parameter&lt;int[]&gt;(&quot;T&quot;, 1, &quot;p_arr&quot;, DbType.Int32, z =&gt; z.Array())
     .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 

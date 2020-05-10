@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_cursor.md">
 
 <h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
-<pre><code class="lang-csharp">var res = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+<pre><code class="lang-csharp">var res = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)

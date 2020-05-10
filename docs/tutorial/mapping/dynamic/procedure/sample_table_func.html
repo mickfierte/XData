@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_table_func.md">
 
 <h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
-<pre><code class="lang-csharp">var f3 = XDataMapping.GetStructure(context: DataScope.DefaultContext)
+<pre><code class="lang-csharp">var f3 = XDataMapping.GetStructure()
     .Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(&quot;dbo.Classifier&quot;))

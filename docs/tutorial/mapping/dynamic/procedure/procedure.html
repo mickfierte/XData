@@ -88,7 +88,7 @@
 <p>To describe result set of SQL procedure used <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___">Return</a> method call of <a class="xref" href="../../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
 <p>* - when result set is not mapped to procedure parameter set result set name to <em>string.Empty</em></p>
 <h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
-<pre><code class="lang-csharp">var res = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+<pre><code class="lang-csharp">var res = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
@@ -98,7 +98,7 @@
 foreach (var classifier in res)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-procedure-with-multiple-result-sets-sample">SQL procedure with multiple result sets sample</h4>
-<pre><code class="lang-csharp">var res2 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+<pre><code class="lang-csharp">var res2 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
@@ -113,7 +113,7 @@ foreach (var classifier in res2)
 foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quot;))
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-procedure-with-out-parameter-sample">SQL procedure with out parameter sample</h4>
-<pre><code class="lang-csharp">var res3 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+<pre><code class="lang-csharp">var res3 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure3&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
@@ -123,7 +123,7 @@ foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quo
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
 </code></pre><h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
-<pre><code class="lang-csharp">var res4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+<pre><code class="lang-csharp">var res4 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
@@ -137,7 +137,7 @@ Console.WriteLine(res4.GetParameter&lt;int&gt;(&quot;result&quot;));
 foreach (var classifier in res4)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-procedure-with-return-value-sample">SQL procedure with return value sample</h4>
-<pre><code class="lang-csharp">var res5 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+<pre><code class="lang-csharp">var res5 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
@@ -147,7 +147,7 @@ foreach (var classifier in res4)
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res5.GetParameter&lt;int&gt;(&quot;result&quot;));
 </code></pre><h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
-<pre><code class="lang-csharp">var res6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+<pre><code class="lang-csharp">var res6 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
@@ -158,7 +158,7 @@ foreach (var classifier in res6)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
 <pre><code class="lang-csharp">var arr = new[] { 1, 2, 3 };
-var f6 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+var f6 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;TestFunction6&quot;, ProcedureType.Function)
     .Parameter&lt;int[]&gt;(&quot;T&quot;, 1, &quot;p_arr&quot;, DbType.Int32, z =&gt; z.Array())
     .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
@@ -176,7 +176,7 @@ public class Classifier
     public string Name { get; set; }
 }
 ...
-var f5 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+var f5 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function)
     .Parameter&lt;Classifier&gt;(&quot;T&quot;, 1, &quot;p_obj&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(&quot;classifier_rec&quot;))
@@ -200,7 +200,7 @@ public class Classifier
 ...
 var param = new[] { new Classifier { Id = 1, Name = &quot;Test&quot; },
     new Classifier { Id = 2, Name = &quot;Some&quot; } };
-var f4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+var f4 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestFunction4&quot;, ProcedureType.Function)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
@@ -209,7 +209,7 @@ var f4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
     .Call(DataScope.Layer, &quot;param1&quot;.SetVar(param));
 Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
 </code></pre><h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
-<pre><code class="lang-csharp">var f3 = XDataMapping.GetStructure(context: DataScope.DefaultContext)
+<pre><code class="lang-csharp">var f3 = XDataMapping.GetStructure()
     .Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(&quot;dbo.Classifier&quot;))
@@ -220,7 +220,7 @@ Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
 foreach (var classifier in f3)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 </code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
-<pre><code class="lang-csharp">var f1 = XDataMapping.GetStructure(context: DataScope.DefaultContext)
+<pre><code class="lang-csharp">var f1 = XDataMapping.GetStructure()
     .Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)

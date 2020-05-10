@@ -127,7 +127,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_CustomMapping__1.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.CustomMapping%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L35">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L76">View Source</a>
   </span>
   <a id="XData_Mapping_Dynamic_XDataMapping_CustomMapping_" data-uid="XData.Mapping.Dynamic.XDataMapping.CustomMapping*"></a>
   <h4 id="XData_Mapping_Dynamic_XDataMapping_CustomMapping__1" data-uid="XData.Mapping.Dynamic.XDataMapping.CustomMapping``1">CustomMapping&lt;T&gt;()</h4>
@@ -166,7 +166,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Repository element mapped type</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -193,10 +194,102 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_GetStructure.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.GetStructure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L62">View Source</a>
+  </span>
+  <a id="XData_Mapping_Dynamic_XDataMapping_GetStructure_" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure*"></a>
+  <h4 id="XData_Mapping_Dynamic_XDataMapping_GetStructure" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure">GetStructure()</h4>
+  <div class="markdown level1 summary"><p>Returns dynamic query structure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryStructure GetStructure()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></td>
+        <td><p>Dynamic query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_XDataMapping_GetStructure_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L51">View Source</a>
+  </span>
+  <a id="XData_Mapping_Dynamic_XDataMapping_GetStructure_" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure*"></a>
+  <h4 id="XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String)">GetStructure(String)</h4>
+  <div class="markdown level1 summary"><p>Returns dynamic query structure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryStructure GetStructure(string baseTableAlias)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">baseTableAlias</span></td>
+        <td><p>Base table alias</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></td>
+        <td><p>Dynamic query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String%2CSystem.String%2CXData.DataStructureFlag%2CXData.Variable%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L19">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L21">View Source</a>
   </span>
   <a id="XData_Mapping_Dynamic_XDataMapping_GetStructure_" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure*"></a>
   <h4 id="XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String,System.String,XData.DataStructureFlag,XData.Variable[])">GetStructure(String, String, DataStructureFlag, Variable[])</h4>
@@ -205,7 +298,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQueryStructure GetStructure(string baseTableAlias = &quot;&quot;, string context = null, DataStructureFlag flags = DataStructureFlag.ReadOnly, params Variable[] variables)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IQueryStructure GetStructure(string baseTableAlias, string context, DataStructureFlag flags = DataStructureFlag.ReadOnly, params Variable[] variables)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,10 +360,71 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_XData_DataStructureFlag_.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String%2CXData.DataStructureFlag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L37">View Source</a>
+  </span>
+  <a id="XData_Mapping_Dynamic_XDataMapping_GetStructure_" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure*"></a>
+  <h4 id="XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_XData_DataStructureFlag_" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String,XData.DataStructureFlag)">GetStructure(String, DataStructureFlag)</h4>
+  <div class="markdown level1 summary"><p>Returns dynamic query structure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryStructure GetStructure(string baseTableAlias, DataStructureFlag flags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">baseTableAlias</span></td>
+        <td><p>Base table alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td><p>Data object flags</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></td>
+        <td><p>Dynamic query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_XData_DataStructureFlag__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_GetStructure__1_System_String_.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.GetStructure%60%601(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L49">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L162">View Source</a>
   </span>
   <a id="XData_Mapping_Dynamic_XDataMapping_GetStructure_" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure*"></a>
   <h4 id="XData_Mapping_Dynamic_XDataMapping_GetStructure__1_System_String_" data-uid="XData.Mapping.Dynamic.XDataMapping.GetStructure``1(System.String)">GetStructure&lt;T&gt;(String)</h4>
@@ -337,6 +491,332 @@
       <div><a class="xref" href="XData.Variable.html">Variable</a></div>
       <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
   </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_UseMapping__1.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.UseMapping%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L110">View Source</a>
+  </span>
+  <a id="XData_Mapping_Dynamic_XDataMapping_UseMapping_" data-uid="XData.Mapping.Dynamic.XDataMapping.UseMapping*"></a>
+  <h4 id="XData_Mapping_Dynamic_XDataMapping_UseMapping__1" data-uid="XData.Mapping.Dynamic.XDataMapping.UseMapping``1">UseMapping&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Returns dynamic repository inherited structure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IInheritedStructure&lt;T&gt; UseMapping&lt;T&gt;()
+    where T : class, ISqlObject, new()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IInheritedStructure-1.html">IInheritedStructure</a>&lt;T&gt;</td>
+        <td><p>Dynamic query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Repository element mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_XDataMapping_UseMapping__1_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></div>
+      <div><a class="xref" href="XData.Variable.html">Variable</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_UseMapping__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter___0__XData_Mapping_Dynamic_IExternalLinkDefinition_____.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.UseMapping%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7BXData.Mapping.Dynamic.IExternalLinkDefinitionAdapter%7B%60%600%7D%2CXData.Mapping.Dynamic.IExternalLinkDefinition%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L146">View Source</a>
+  </span>
+  <a id="XData_Mapping_Dynamic_XDataMapping_UseMapping_" data-uid="XData.Mapping.Dynamic.XDataMapping.UseMapping*"></a>
+  <h4 id="XData_Mapping_Dynamic_XDataMapping_UseMapping__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter___0__XData_Mapping_Dynamic_IExternalLinkDefinition_____" data-uid="XData.Mapping.Dynamic.XDataMapping.UseMapping``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{``0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])">UseMapping&lt;T&gt;(Expression&lt;Func&lt;IExternalLinkDefinitionAdapter&lt;T&gt;, IExternalLinkDefinition&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Returns dynamic repository inherited structure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IRepositoryDescription&lt;T&gt; UseMapping&lt;T&gt;(params Expression&lt;Func&lt;IExternalLinkDefinitionAdapter&lt;T&gt;, IExternalLinkDefinition&gt;&gt;[] externalLinks)
+    where T : class, ISqlObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html">IExternalLinkDefinitionAdapter</a>&lt;T&gt;, <a class="xref" href="XData.Mapping.Dynamic.IExternalLinkDefinition.html">IExternalLinkDefinition</a>&gt;&gt;[]</td>
+        <td><span class="parametername">externalLinks</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryDescription-1.html">IRepositoryDescription</a>&lt;T&gt;</td>
+        <td><p>Dynamic query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Repository element mapped type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_XDataMapping_UseMapping__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter___0__XData_Mapping_Dynamic_IExternalLinkDefinition______seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></div>
+      <div><a class="xref" href="XData.Variable.html">Variable</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_UseMapping__2.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.UseMapping%60%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L92">View Source</a>
+  </span>
+  <a id="XData_Mapping_Dynamic_XDataMapping_UseMapping_" data-uid="XData.Mapping.Dynamic.XDataMapping.UseMapping*"></a>
+  <h4 id="XData_Mapping_Dynamic_XDataMapping_UseMapping__2" data-uid="XData.Mapping.Dynamic.XDataMapping.UseMapping``2">UseMapping&lt;T, TParent&gt;()</h4>
+  <div class="markdown level1 summary"><p>Returns dynamic repository inherited structure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IInheritedStructure&lt;T&gt; UseMapping&lt;T, TParent&gt;()
+    where T : class, ISqlObject, new()
+    where TParent : class, ISqlObject, new()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IInheritedStructure-1.html">IInheritedStructure</a>&lt;T&gt;</td>
+        <td><p>Dynamic query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Repository element mapped type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TParent</span></td>
+        <td><p>Parent mapping structure type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_XDataMapping_UseMapping__2_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></div>
+      <div><a class="xref" href="XData.Variable.html">Variable</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping_UseMapping__2_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter___0__XData_Mapping_Dynamic_IExternalLinkDefinition_____.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping.UseMapping%60%602(System.Linq.Expressions.Expression%7BSystem.Func%7BXData.Mapping.Dynamic.IExternalLinkDefinitionAdapter%7B%60%600%7D%2CXData.Mapping.Dynamic.IExternalLinkDefinition%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L128">View Source</a>
+  </span>
+  <a id="XData_Mapping_Dynamic_XDataMapping_UseMapping_" data-uid="XData.Mapping.Dynamic.XDataMapping.UseMapping*"></a>
+  <h4 id="XData_Mapping_Dynamic_XDataMapping_UseMapping__2_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter___0__XData_Mapping_Dynamic_IExternalLinkDefinition_____" data-uid="XData.Mapping.Dynamic.XDataMapping.UseMapping``2(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{``0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])">UseMapping&lt;T, TParent&gt;(Expression&lt;Func&lt;IExternalLinkDefinitionAdapter&lt;T&gt;, IExternalLinkDefinition&gt;&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Returns dynamic repository inherited structure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IRepositoryDescription&lt;T&gt; UseMapping&lt;T, TParent&gt;(params Expression&lt;Func&lt;IExternalLinkDefinitionAdapter&lt;T&gt;, IExternalLinkDefinition&gt;&gt;[] externalLinks)
+    where T : class, TParent, new()
+    where TParent : class, ISqlObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html">IExternalLinkDefinitionAdapter</a>&lt;T&gt;, <a class="xref" href="XData.Mapping.Dynamic.IExternalLinkDefinition.html">IExternalLinkDefinition</a>&gt;&gt;[]</td>
+        <td><span class="parametername">externalLinks</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Mapping.Dynamic.IRepositoryDescription-1.html">IRepositoryDescription</a>&lt;T&gt;</td>
+        <td><p>Dynamic query structure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Repository element mapped type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TParent</span></td>
+        <td><p>Parent mapping structure type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.Exceptions.XDataRuntimeException.html">XDataRuntimeException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="XData_Mapping_Dynamic_XDataMapping_UseMapping__2_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter___0__XData_Mapping_Dynamic_IExternalLinkDefinition______seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="XData.DataStructureFlag.html">DataStructureFlag</a></div>
+      <div><a class="xref" href="XData.Variable.html">Variable</a></div>
+      <div><a class="xref" href="XData.Mapping.Dynamic.IQueryStructure.html">IQueryStructure</a></div>
+  </div>
 </article>
           </div>
           
@@ -348,7 +828,7 @@
                     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_Dynamic_XDataMapping.md&amp;value=---%0Auid%3A%20XData.Mapping.Dynamic.XDataMapping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Dynamic/XDataMapping.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

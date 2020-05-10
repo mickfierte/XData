@@ -84,8 +84,7 @@
 </div>
 <pre><code class="lang-csharp">private static Expression&lt;CustomMapping&lt;CatalogueTree&gt;&gt; _unused = (
     () =&gt; XDataMapping.CustomMapping&lt;CatalogueTree&gt;()
-        .With(&quot;CAT&quot;, XDataMapping.GetStructure(&quot;R&quot;, null, 
-            DataStructureFlag.ReadOnly)
+        .With(&quot;CAT&quot;, XDataMapping.GetStructure(&quot;R&quot;)
             .DataTable(&quot;T_CATALOGUE&quot;, &quot;R&quot;,  
                 x =&gt; x.Combination(&quot;root&quot;, Combination.Or),
                 x =&gt; x.ConstFilter(&quot;FilterByCathalogue&quot;, &quot;catalogue_id&quot;, 
@@ -103,7 +102,7 @@
             }), x =&gt; x.Properties(z =&gt; z.CatalogueId, 
                 z =&gt; z.Code, z =&gt; z.Name, z =&gt; z.ParentId),
             x =&gt; x.WithRecursive(&quot;S&quot;, XDataMapping
-                .GetStructure(&quot;S&quot;, null, DataStructureFlag.ReadOnly)
+                .GetStructure(&quot;S&quot;)
                 .DataTable(&quot;T_CATALOGUE&quot;, &quot;S&quot;)
                 .Select(y =&gt; new {
                     CatalogueId = y.Field&lt;long&gt;(&quot;S&quot;, string.Empty, z =&gt; z.Key()),
@@ -120,7 +119,7 @@
             x =&gt; x.Field&lt;string&gt;(&quot;CAT&quot;, string.Empty))
         .ReadOnlyProperty(x =&gt; x.ParentId, 
             x =&gt; x.Field&lt;long?&gt;(&quot;CAT&quot;, string.Empty))
-        .Map(x =&gt; new CatalogueTree())
+        .Map()
         .SetFlags(DataStructureFlag.ReadOnly | DataStructureFlag.Tree)
     );
 </code></pre></article>

@@ -80,7 +80,7 @@
 <h2 id="read-only-dynamic-query-building">Read only dynamic query building</h2>
 
 <p>XData have a feature allow the programmer to build read-only data query in dynamic LINQ like style:</p>
-<pre><code class="lang-csharp">var query = XDataMapping.GetStructure(&quot;D&quot;, dataScope.DefaultContext)
+<pre><code class="lang-csharp">var query = XDataMapping.GetStructure(&quot;D&quot;)
     .DataTable(&quot;T_DOC&quot;, &quot;D&quot;, 
         x =&gt; x.DictFilter(&quot;T_DOC_TYPE&quot;, &quot;doc_type_id&quot;, &quot;code&quot;, &quot;INVOICE&quot;))
     .DataTable(&quot;T_DOC_NUMBER&quot;, &quot;N&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;))
@@ -89,7 +89,7 @@
     .DataTable(&quot;T_DOC_SOURCE&quot;, &quot;SR&quot;, x =&gt; x.Link(&quot;D&quot;, &quot;doc_id&quot;))
     .Subquery(&quot;A&quot;, typeof(DocSpecAmounts), &quot;Amount&quot;, 
         DataGrouping.Sum, x =&gt; x.SubqueryLink(&quot;DocId&quot;))
-    .InnerView(&quot;H&quot;, XDataMapping.GetStructure(&quot;H&quot;, flags: DataStructureFlag.Grouping)
+    .InnerView(&quot;H&quot;, XDataMapping.GetStructure(&quot;H&quot;)
         .DataTable(&quot;T_DOC_HISTORY&quot;, &quot;H&quot;)
         .Select(x =&gt; new {
             DocId = x.Field&lt;int?&gt;(&quot;H&quot;, string.Empty, 

@@ -89,7 +89,7 @@ var doc = new XDocument(new XElement(&quot;root&quot;,
     new XElement(&quot;test&quot;, new XAttribute(&quot;doc_state_id&quot;, 1), new XAttribute(&quot;test&quot;, &quot;one&quot;)),
     new XElement(&quot;test&quot;, new XAttribute(&quot;doc_state_id&quot;, 2), new XAttribute(&quot;test&quot;, &quot;two&quot;))
     )).ToString();
-var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
+var query = XDataMapping.GetStructure(&quot;S&quot;)
     .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;)
     // use XmlSource definition providing XPath expression for data source
     .XmlSource(&quot;Test&quot;, &quot;T&quot;, &quot;root/test&quot;, x =&gt; x.Link(&quot;S&quot;, &quot;doc_state_id&quot;))
@@ -110,7 +110,7 @@ table.Rows.Add(1, &quot;one&quot;);
 table.Rows.Add(2, &quot;two&quot;);
 table.AcceptChanges();
 
-var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
+var query = XDataMapping.GetStructure(&quot;S&quot;)
     .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;)
     // use temporary table definition
     .TempTable(&quot;Test&quot;, &quot;T&quot;, x =&gt; x.Link(&quot;S&quot;, &quot;doc_state_id&quot;))

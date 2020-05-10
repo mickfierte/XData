@@ -157,6 +157,12 @@ references:
 - uid: mapping_dynamic_tree.md
   name: Tree
   href: tutorial/mapping/dynamic/tree.html
+- uid: mapping_dynamic_variables.md
+  name: Variables
+  href: tutorial/mapping/dynamic/variables.html
+- uid: mapping_inheritance.md
+  name: Mapping inheritance
+  href: tutorial/mapping/inheritance.html
 - uid: mapping_link.md
   name: Link properties
   href: tutorial/mapping/link.html
@@ -286,6 +292,9 @@ references:
 - uid: mapping_static_tree.md
   name: Tree
   href: tutorial/mapping/static/tree.html
+- uid: mapping_static_variables.md
+  name: Variables
+  href: tutorial/mapping/static/variables.html
 - uid: mapping_tree.md
   name: Tree
   href: tutorial/mapping/tree.html
@@ -4825,15 +4834,15 @@ references:
   commentId: T:XData.Database.Dialect.BaseSqlBuilder
   fullName: XData.Database.Dialect.BaseSqlBuilder
   nameWithType: BaseSqlBuilder
-- uid: XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean)
-  name: AddOrderBy(IDataStructure, SortedList<String, Object>, ref StringBuilder, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, Boolean)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddOrderBy_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__System_Text_StringBuilder__XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Boolean_
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean)
-  name.vb: AddOrderBy(IDataStructure, SortedList(Of String, Object), ByRef StringBuilder, ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), Boolean)
-  fullName: XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList<System.String, System.Object>, ref System.Text.StringBuilder, ref XData.Database.Adapter.Query, ref System.Collections.Generic.List<System.Tuple<System.String, System.Type, System.String>>, System.Collections.Generic.ICollection<System.String>, ref System.Collections.Generic.SortedList<System.String, System.Tuple<System.String, System.String>>, System.Boolean)
-  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList(Of System.String, System.Object), ByRef System.Text.StringBuilder, ByRef XData.Database.Adapter.Query, ByRef System.Collections.Generic.List(Of System.Tuple(Of System.String, System.Type, System.String)), System.Collections.Generic.ICollection(Of System.String), ByRef System.Collections.Generic.SortedList(Of System.String, System.Tuple(Of System.String, System.String)), System.Boolean)
-  nameWithType: BaseSqlBuilder.AddOrderBy(IDataStructure, SortedList<String, Object>, ref StringBuilder, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, Boolean)
-  nameWithType.vb: BaseSqlBuilder.AddOrderBy(IDataStructure, SortedList(Of String, Object), ByRef StringBuilder, ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), Boolean)
+- uid: XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Boolean)
+  name: AddOrderBy(IDataStructure, SortedList<String, Object>, ref StringBuilder, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, ref Dictionary<String, Object>, Boolean)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddOrderBy_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__System_Text_StringBuilder__XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Collections_Generic_Dictionary_System_String_System_Object___System_Boolean_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Boolean)
+  name.vb: AddOrderBy(IDataStructure, SortedList(Of String, Object), ByRef StringBuilder, ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), ByRef Dictionary(Of String, Object), Boolean)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList<System.String, System.Object>, ref System.Text.StringBuilder, ref XData.Database.Adapter.Query, ref System.Collections.Generic.List<System.Tuple<System.String, System.Type, System.String>>, System.Collections.Generic.ICollection<System.String>, ref System.Collections.Generic.SortedList<System.String, System.Tuple<System.String, System.String>>, ref System.Collections.Generic.Dictionary<System.String, System.Object>, System.Boolean)
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.AddOrderBy(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList(Of System.String, System.Object), ByRef System.Text.StringBuilder, ByRef XData.Database.Adapter.Query, ByRef System.Collections.Generic.List(Of System.Tuple(Of System.String, System.Type, System.String)), System.Collections.Generic.ICollection(Of System.String), ByRef System.Collections.Generic.SortedList(Of System.String, System.Tuple(Of System.String, System.String)), ByRef System.Collections.Generic.Dictionary(Of System.String, System.Object), System.Boolean)
+  nameWithType: BaseSqlBuilder.AddOrderBy(IDataStructure, SortedList<String, Object>, ref StringBuilder, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, ref Dictionary<String, Object>, Boolean)
+  nameWithType.vb: BaseSqlBuilder.AddOrderBy(IDataStructure, SortedList(Of String, Object), ByRef StringBuilder, ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), ByRef Dictionary(Of String, Object), Boolean)
 - uid: XData.Database.Dialect.BaseSqlBuilder.AddOrderBy*
   name: AddOrderBy
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddOrderBy_
@@ -4857,15 +4866,15 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.AddReturning2Command
   nameWithType: BaseSqlBuilder.AddReturning2Command
-- uid: XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,System.Int32,System.String,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean)
-  name: AddSkipLimitAndOrder(IDataStructure, SortedList<String, Object>, ref StringBuilder, Int32, String, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, Boolean)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddSkipLimitAndOrder_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__System_Text_StringBuilder__System_Int32_System_String_XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Boolean_
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,System.Int32,System.String,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean)
-  name.vb: AddSkipLimitAndOrder(IDataStructure, SortedList(Of String, Object), ByRef StringBuilder, Int32, String, ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), Boolean)
-  fullName: XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList<System.String, System.Object>, ref System.Text.StringBuilder, System.Int32, System.String, ref XData.Database.Adapter.Query, ref System.Collections.Generic.List<System.Tuple<System.String, System.Type, System.String>>, System.Collections.Generic.ICollection<System.String>, ref System.Collections.Generic.SortedList<System.String, System.Tuple<System.String, System.String>>, System.Boolean)
-  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList(Of System.String, System.Object), ByRef System.Text.StringBuilder, System.Int32, System.String, ByRef XData.Database.Adapter.Query, ByRef System.Collections.Generic.List(Of System.Tuple(Of System.String, System.Type, System.String)), System.Collections.Generic.ICollection(Of System.String), ByRef System.Collections.Generic.SortedList(Of System.String, System.Tuple(Of System.String, System.String)), System.Boolean)
-  nameWithType: BaseSqlBuilder.AddSkipLimitAndOrder(IDataStructure, SortedList<String, Object>, ref StringBuilder, Int32, String, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, Boolean)
-  nameWithType.vb: BaseSqlBuilder.AddSkipLimitAndOrder(IDataStructure, SortedList(Of String, Object), ByRef StringBuilder, Int32, String, ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), Boolean)
+- uid: XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,System.Int32,System.String,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Boolean)
+  name: AddSkipLimitAndOrder(IDataStructure, SortedList<String, Object>, ref StringBuilder, Int32, String, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, ref Dictionary<String, Object>, Boolean)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddSkipLimitAndOrder_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__System_Text_StringBuilder__System_Int32_System_String_XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Collections_Generic_Dictionary_System_String_System_Object___System_Boolean_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},System.Text.StringBuilder@,System.Int32,System.String,XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Boolean)
+  name.vb: AddSkipLimitAndOrder(IDataStructure, SortedList(Of String, Object), ByRef StringBuilder, Int32, String, ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), ByRef Dictionary(Of String, Object), Boolean)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList<System.String, System.Object>, ref System.Text.StringBuilder, System.Int32, System.String, ref XData.Database.Adapter.Query, ref System.Collections.Generic.List<System.Tuple<System.String, System.Type, System.String>>, System.Collections.Generic.ICollection<System.String>, ref System.Collections.Generic.SortedList<System.String, System.Tuple<System.String, System.String>>, ref System.Collections.Generic.Dictionary<System.String, System.Object>, System.Boolean)
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList(Of System.String, System.Object), ByRef System.Text.StringBuilder, System.Int32, System.String, ByRef XData.Database.Adapter.Query, ByRef System.Collections.Generic.List(Of System.Tuple(Of System.String, System.Type, System.String)), System.Collections.Generic.ICollection(Of System.String), ByRef System.Collections.Generic.SortedList(Of System.String, System.Tuple(Of System.String, System.String)), ByRef System.Collections.Generic.Dictionary(Of System.String, System.Object), System.Boolean)
+  nameWithType: BaseSqlBuilder.AddSkipLimitAndOrder(IDataStructure, SortedList<String, Object>, ref StringBuilder, Int32, String, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, ref Dictionary<String, Object>, Boolean)
+  nameWithType.vb: BaseSqlBuilder.AddSkipLimitAndOrder(IDataStructure, SortedList(Of String, Object), ByRef StringBuilder, Int32, String, ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), ByRef Dictionary(Of String, Object), Boolean)
 - uid: XData.Database.Dialect.BaseSqlBuilder.AddSkipLimitAndOrder*
   name: AddSkipLimitAndOrder
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_AddSkipLimitAndOrder_
@@ -5295,15 +5304,15 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.GetLockQuery
   nameWithType: BaseSqlBuilder.GetLockQuery
-- uid: XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean,System.Boolean)
-  name: GetOrderByString(IDataStructure, SortedList<String, Object>, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, Boolean, Boolean)
-  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetOrderByString_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Boolean_System_Boolean_
-  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Boolean,System.Boolean)
-  name.vb: GetOrderByString(IDataStructure, SortedList(Of String, Object), ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), Boolean, Boolean)
-  fullName: XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList<System.String, System.Object>, ref XData.Database.Adapter.Query, ref System.Collections.Generic.List<System.Tuple<System.String, System.Type, System.String>>, System.Collections.Generic.ICollection<System.String>, ref System.Collections.Generic.SortedList<System.String, System.Tuple<System.String, System.String>>, System.Boolean, System.Boolean)
-  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList(Of System.String, System.Object), ByRef XData.Database.Adapter.Query, ByRef System.Collections.Generic.List(Of System.Tuple(Of System.String, System.Type, System.String)), System.Collections.Generic.ICollection(Of System.String), ByRef System.Collections.Generic.SortedList(Of System.String, System.Tuple(Of System.String, System.String)), System.Boolean, System.Boolean)
-  nameWithType: BaseSqlBuilder.GetOrderByString(IDataStructure, SortedList<String, Object>, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, Boolean, Boolean)
-  nameWithType.vb: BaseSqlBuilder.GetOrderByString(IDataStructure, SortedList(Of String, Object), ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), Boolean, Boolean)
+- uid: XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Boolean,System.Boolean)
+  name: GetOrderByString(IDataStructure, SortedList<String, Object>, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, ref Dictionary<String, Object>, Boolean, Boolean)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetOrderByString_XData_DataSource_Structure_IDataStructure_System_Collections_Generic_SortedList_System_String_System_Object__XData_Database_Adapter_Query__System_Collections_Generic_List_System_Tuple_System_String_System_Type_System_String____System_Collections_Generic_ICollection_System_String__System_Collections_Generic_SortedList_System_String_System_Tuple_System_String_System_String____System_Collections_Generic_Dictionary_System_String_System_Object___System_Boolean_System_Boolean_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure,System.Collections.Generic.SortedList{System.String,System.Object},XData.Database.Adapter.Query@,System.Collections.Generic.List{System.Tuple{System.String,System.Type,System.String}}@,System.Collections.Generic.ICollection{System.String},System.Collections.Generic.SortedList{System.String,System.Tuple{System.String,System.String}}@,System.Collections.Generic.Dictionary{System.String,System.Object}@,System.Boolean,System.Boolean)
+  name.vb: GetOrderByString(IDataStructure, SortedList(Of String, Object), ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), ByRef Dictionary(Of String, Object), Boolean, Boolean)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList<System.String, System.Object>, ref XData.Database.Adapter.Query, ref System.Collections.Generic.List<System.Tuple<System.String, System.Type, System.String>>, System.Collections.Generic.ICollection<System.String>, ref System.Collections.Generic.SortedList<System.String, System.Tuple<System.String, System.String>>, ref System.Collections.Generic.Dictionary<System.String, System.Object>, System.Boolean, System.Boolean)
+  fullName.vb: XData.Database.Dialect.BaseSqlBuilder.GetOrderByString(XData.DataSource.Structure.IDataStructure, System.Collections.Generic.SortedList(Of System.String, System.Object), ByRef XData.Database.Adapter.Query, ByRef System.Collections.Generic.List(Of System.Tuple(Of System.String, System.Type, System.String)), System.Collections.Generic.ICollection(Of System.String), ByRef System.Collections.Generic.SortedList(Of System.String, System.Tuple(Of System.String, System.String)), ByRef System.Collections.Generic.Dictionary(Of System.String, System.Object), System.Boolean, System.Boolean)
+  nameWithType: BaseSqlBuilder.GetOrderByString(IDataStructure, SortedList<String, Object>, ref Query, ref List<Tuple<String, Type, String>>, ICollection<String>, ref SortedList<String, Tuple<String, String>>, ref Dictionary<String, Object>, Boolean, Boolean)
+  nameWithType.vb: BaseSqlBuilder.GetOrderByString(IDataStructure, SortedList(Of String, Object), ByRef Query, ByRef List(Of Tuple(Of String, Type, String)), ICollection(Of String), ByRef SortedList(Of String, Tuple(Of String, String)), ByRef Dictionary(Of String, Object), Boolean, Boolean)
 - uid: XData.Database.Dialect.BaseSqlBuilder.GetOrderByString*
   name: GetOrderByString
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_GetOrderByString_
@@ -10497,6 +10506,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.Grouping.GroupOrder
   nameWithType: Grouping.GroupOrder
+- uid: XData.DataSource.Structure.Grouping.PropertyName
+  name: PropertyName
+  href: api/XData.DataSource.Structure.Grouping.html#XData_DataSource_Structure_Grouping_PropertyName
+  commentId: P:XData.DataSource.Structure.Grouping.PropertyName
+  fullName: XData.DataSource.Structure.Grouping.PropertyName
+  nameWithType: Grouping.PropertyName
+- uid: XData.DataSource.Structure.Grouping.PropertyName*
+  name: PropertyName
+  href: api/XData.DataSource.Structure.Grouping.html#XData_DataSource_Structure_Grouping_PropertyName_
+  commentId: Overload:XData.DataSource.Structure.Grouping.PropertyName
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.Grouping.PropertyName
+  nameWithType: Grouping.PropertyName
 - uid: XData.DataSource.Structure.Grouping.PropertyOwnerType
   name: PropertyOwnerType
   href: api/XData.DataSource.Structure.Grouping.html#XData_DataSource_Structure_Grouping_PropertyOwnerType
@@ -10870,6 +10892,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.IDataStructure.GetPrimaryKey
   nameWithType: IDataStructure.GetPrimaryKey
+- uid: XData.DataSource.Structure.IDataStructure.GetSubqueryVariables(System.String)
+  name: GetSubqueryVariables(String)
+  href: api/XData.DataSource.Structure.IDataStructure.html#XData_DataSource_Structure_IDataStructure_GetSubqueryVariables_System_String_
+  commentId: M:XData.DataSource.Structure.IDataStructure.GetSubqueryVariables(System.String)
+  fullName: XData.DataSource.Structure.IDataStructure.GetSubqueryVariables(System.String)
+  nameWithType: IDataStructure.GetSubqueryVariables(String)
+- uid: XData.DataSource.Structure.IDataStructure.GetSubqueryVariables*
+  name: GetSubqueryVariables
+  href: api/XData.DataSource.Structure.IDataStructure.html#XData_DataSource_Structure_IDataStructure_GetSubqueryVariables_
+  commentId: Overload:XData.DataSource.Structure.IDataStructure.GetSubqueryVariables
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.IDataStructure.GetSubqueryVariables
+  nameWithType: IDataStructure.GetSubqueryVariables
 - uid: XData.DataSource.Structure.IDataStructure.GetVariableValue(System.String)
   name: GetVariableValue(String)
   href: api/XData.DataSource.Structure.IDataStructure.html#XData_DataSource_Structure_IDataStructure_GetVariableValue_System_String_
@@ -12324,6 +12359,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.Order.FieldName
   nameWithType: Order.FieldName
+- uid: XData.DataSource.Structure.Order.PropertyName
+  name: PropertyName
+  href: api/XData.DataSource.Structure.Order.html#XData_DataSource_Structure_Order_PropertyName
+  commentId: P:XData.DataSource.Structure.Order.PropertyName
+  fullName: XData.DataSource.Structure.Order.PropertyName
+  nameWithType: Order.PropertyName
+- uid: XData.DataSource.Structure.Order.PropertyName*
+  name: PropertyName
+  href: api/XData.DataSource.Structure.Order.html#XData_DataSource_Structure_Order_PropertyName_
+  commentId: Overload:XData.DataSource.Structure.Order.PropertyName
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.Order.PropertyName
+  nameWithType: Order.PropertyName
 - uid: XData.DataSource.Structure.Order.PropertyOwnerType
   name: PropertyOwnerType
   href: api/XData.DataSource.Structure.Order.html#XData_DataSource_Structure_Order_PropertyOwnerType
@@ -19006,6 +19054,12 @@ references:
   commentId: M:XData.Mapping.DataObjectAttribute.#ctor(System.String)
   fullName: XData.Mapping.DataObjectAttribute.DataObjectAttribute(System.String)
   nameWithType: DataObjectAttribute.DataObjectAttribute(String)
+- uid: XData.Mapping.DataObjectAttribute.#ctor(System.Type)
+  name: DataObjectAttribute(Type)
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute__ctor_System_Type_
+  commentId: M:XData.Mapping.DataObjectAttribute.#ctor(System.Type)
+  fullName: XData.Mapping.DataObjectAttribute.DataObjectAttribute(System.Type)
+  nameWithType: DataObjectAttribute.DataObjectAttribute(Type)
 - uid: XData.Mapping.DataObjectAttribute.#ctor*
   name: DataObjectAttribute
   href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute__ctor_
@@ -19013,6 +19067,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.DataObjectAttribute.DataObjectAttribute
   nameWithType: DataObjectAttribute.DataObjectAttribute
+- uid: XData.Mapping.DataObjectAttribute.BaseMappingType
+  name: BaseMappingType
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_BaseMappingType
+  commentId: P:XData.Mapping.DataObjectAttribute.BaseMappingType
+  fullName: XData.Mapping.DataObjectAttribute.BaseMappingType
+  nameWithType: DataObjectAttribute.BaseMappingType
+- uid: XData.Mapping.DataObjectAttribute.BaseMappingType*
+  name: BaseMappingType
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_BaseMappingType_
+  commentId: Overload:XData.Mapping.DataObjectAttribute.BaseMappingType
+  isSpec: "True"
+  fullName: XData.Mapping.DataObjectAttribute.BaseMappingType
+  nameWithType: DataObjectAttribute.BaseMappingType
 - uid: XData.Mapping.DataObjectAttribute.BaseSource
   name: BaseSource
   href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_BaseSource
@@ -19613,6 +19680,355 @@ references:
   commentId: T:XData.Mapping.Dynamic.IFilterDescription
   fullName: XData.Mapping.Dynamic.IFilterDescription
   nameWithType: IFilterDescription
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1
+  name: IInheritedStructure<T>
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html
+  commentId: T:XData.Mapping.Dynamic.IInheritedStructure`1
+  name.vb: IInheritedStructure(Of T)
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T)
+  nameWithType: IInheritedStructure<T>
+  nameWithType.vb: IInheritedStructure(Of T)
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.AddInnerFilters(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: AddInnerFilters(String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_AddInnerFilters_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.AddInnerFilters(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: AddInnerFilters(String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.AddInnerFilters(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).AddInnerFilters(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.AddInnerFilters(String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).AddInnerFilters(String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.AddInnerFilters*
+  name: AddInnerFilters
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_AddInnerFilters_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.AddInnerFilters
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.AddInnerFilters
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).AddInnerFilters
+  nameWithType: IInheritedStructure<T>.AddInnerFilters
+  nameWithType.vb: IInheritedStructure(Of T).AddInnerFilters
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.AddSubqueryLinks(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: AddSubqueryLinks(String, Expression<Func<ISubqueryLinkAdapter<T>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_AddSubqueryLinks_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.AddSubqueryLinks(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: AddSubqueryLinks(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.AddSubqueryLinks(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).AddSubqueryLinks(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.AddSubqueryLinks(String, Expression<Func<ISubqueryLinkAdapter<T>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).AddSubqueryLinks(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.AddSubqueryLinks*
+  name: AddSubqueryLinks
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_AddSubqueryLinks_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.AddSubqueryLinks
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.AddSubqueryLinks
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).AddSubqueryLinks
+  nameWithType: IInheritedStructure<T>.AddSubqueryLinks
+  nameWithType.vb: IInheritedStructure(Of T).AddSubqueryLinks
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.AddSubqueryLinks``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: AddSubqueryLinks<TSubquery>(String, Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_AddSubqueryLinks__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.AddSubqueryLinks``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: AddSubqueryLinks(Of TSubquery)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.AddSubqueryLinks<TSubquery>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TSubquery>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).AddSubqueryLinks(Of TSubquery)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TSubquery), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.AddSubqueryLinks<TSubquery>(String, Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).AddSubqueryLinks(Of TSubquery)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Column*
+  name: Column
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Column_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.Column
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Column
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Column
+  nameWithType: IInheritedStructure<T>.Column
+  nameWithType.vb: IInheritedStructure(Of T).Column
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Column``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},``0}})
+  name: Column<TResult>(String, Expression<Func<IRepositoryStructureAdapter<T>, TResult>>)
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Column__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Column``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},``0}})
+  name.vb: Column(Of TResult)(String, Expression(Of Func(Of IRepositoryStructureAdapter(Of T), TResult)))
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Column<TResult>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IRepositoryStructureAdapter<T>, TResult>>)
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Column(Of TResult)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryStructureAdapter(Of T), TResult)))
+  nameWithType: IInheritedStructure<T>.Column<TResult>(String, Expression<Func<IRepositoryStructureAdapter<T>, TResult>>)
+  nameWithType.vb: IInheritedStructure(Of T).Column(Of TResult)(String, Expression(Of Func(Of IRepositoryStructureAdapter(Of T), TResult)))
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.DataTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: DataTable(String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_DataTable_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.DataTable(System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: DataTable(String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.DataTable(System.String, System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).DataTable(System.String, System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.DataTable(String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).DataTable(String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.DataTable(System.String,System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: DataTable(String, String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_DataTable_System_String_System_String_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.DataTable(System.String,System.String,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: DataTable(String, String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.DataTable(System.String, System.String, System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).DataTable(System.String, System.String, System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.DataTable(String, String, String, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).DataTable(String, String, String, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.DataTable*
+  name: DataTable
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_DataTable_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.DataTable
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.DataTable
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).DataTable
+  nameWithType: IInheritedStructure<T>.DataTable
+  nameWithType.vb: IInheritedStructure(Of T).DataTable
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Hint(System.String,System.String,XData.Mapping.HintType)
+  name: Hint(String, String, HintType)
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Hint_System_String_System_String_XData_Mapping_HintType_
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Hint(System.String,System.String,XData.Mapping.HintType)
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Hint(System.String, System.String, XData.Mapping.HintType)
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Hint(System.String, System.String, XData.Mapping.HintType)
+  nameWithType: IInheritedStructure<T>.Hint(String, String, HintType)
+  nameWithType.vb: IInheritedStructure(Of T).Hint(String, String, HintType)
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Hint*
+  name: Hint
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Hint_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.Hint
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Hint
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Hint
+  nameWithType: IInheritedStructure<T>.Hint
+  nameWithType.vb: IInheritedStructure(Of T).Hint
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: InnerView(String, Type, Expression<Func<ISubqueryLinkAdapter<T>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_InnerView_System_String_System_Type_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.InnerView(System.String,System.Type,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: InnerView(String, Type, Expression(Of Func(Of ISubqueryLinkAdapter(Of T), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.InnerView(System.String, System.Type, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).InnerView(System.String, System.Type, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.InnerView(String, Type, Expression<Func<ISubqueryLinkAdapter<T>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).InnerView(String, Type, Expression(Of Func(Of ISubqueryLinkAdapter(Of T), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.InnerView*
+  name: InnerView
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_InnerView_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.InnerView
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.InnerView
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).InnerView
+  nameWithType: IInheritedStructure<T>.InnerView
+  nameWithType.vb: IInheritedStructure(Of T).InnerView
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: InnerView<TInnerView>(String, Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: InnerView(Of TInnerView)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.InnerView<TInnerView>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TInnerView>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).InnerView(Of TInnerView)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TInnerView), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.InnerView<TInnerView>(String, Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).InnerView(Of TInnerView)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.InnerView``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: InnerView<TInnerView>(String, IQueryDescription<TInnerView>, Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.InnerView``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: InnerView(Of TInnerView)(String, IQueryDescription(Of TInnerView), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.InnerView<TInnerView>(System.String, XData.Mapping.Dynamic.IQueryDescription<TInnerView>, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TInnerView>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).InnerView(Of TInnerView)(System.String, XData.Mapping.Dynamic.IQueryDescription(Of TInnerView), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TInnerView), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.InnerView<TInnerView>(String, IQueryDescription<TInnerView>, Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).InnerView(Of TInnerView)(String, IQueryDescription(Of TInnerView), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.InnerView``1(System.String,XData.Variable[],System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: InnerView<TInnerView>(String, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_InnerView__1_System_String_XData_Variable___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.InnerView``1(System.String,XData.Variable[],System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: InnerView(Of TInnerView)(String, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.InnerView<TInnerView>(System.String, XData.Variable[], System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TInnerView>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).InnerView(Of TInnerView)(System.String, XData.Variable(), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TInnerView), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.InnerView<TInnerView>(String, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).InnerView(Of TInnerView)(String, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name: Map(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name.vb: Map(Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Map(System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter<T>, XData.Mapping.Dynamic.IExternalLinkDefinition>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Map(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T), XData.Mapping.Dynamic.IExternalLinkDefinition))())
+  nameWithType: IInheritedStructure<T>.Map(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  nameWithType.vb: IInheritedStructure(Of T).Map(Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},`0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name: Map(Expression<Func<IRepositoryStructureAdapter<T>, T>>, Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},`0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name.vb: Map(Expression(Of Func(Of IRepositoryStructureAdapter(Of T), T)), Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Map(System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IRepositoryStructureAdapter<T>, T>>, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter<T>, XData.Mapping.Dynamic.IExternalLinkDefinition>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Map(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryStructureAdapter(Of T), T)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T), XData.Mapping.Dynamic.IExternalLinkDefinition))())
+  nameWithType: IInheritedStructure<T>.Map(Expression<Func<IRepositoryStructureAdapter<T>, T>>, Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  nameWithType.vb: IInheritedStructure(Of T).Map(Expression(Of Func(Of IRepositoryStructureAdapter(Of T), T)), Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Map*
+  name: Map
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Map_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.Map
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Map
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Map
+  nameWithType: IInheritedStructure<T>.Map
+  nameWithType.vb: IInheritedStructure(Of T).Map
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Parameter*
+  name: Parameter
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Parameter_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.Parameter
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Parameter
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Parameter
+  nameWithType: IInheritedStructure<T>.Parameter
+  nameWithType.vb: IInheritedStructure(Of T).Parameter
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Parameter``1(System.String,System.Int32,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
+  name: Parameter<TResult>(String, Int32, String, DbType, Expression<Func<IProcedureParameterAdapter, IProcedureParameterFlag>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Parameter__1_System_String_System_Int32_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IProcedureParameterAdapter_XData_Mapping_Dynamic_IProcedureParameterFlag_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Parameter``1(System.String,System.Int32,System.String,System.Data.DbType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IProcedureParameterAdapter,XData.Mapping.Dynamic.IProcedureParameterFlag}}[])
+  name.vb: Parameter(Of TResult)(String, Int32, String, DbType, Expression(Of Func(Of IProcedureParameterAdapter, IProcedureParameterFlag))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Parameter<TResult>(System.String, System.Int32, System.String, System.Data.DbType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Parameter(Of TResult)(System.String, System.Int32, System.String, System.Data.DbType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IProcedureParameterAdapter, XData.Mapping.Dynamic.IProcedureParameterFlag))())
+  nameWithType: IInheritedStructure<T>.Parameter<TResult>(String, Int32, String, DbType, Expression<Func<IProcedureParameterAdapter, IProcedureParameterFlag>>[])
+  nameWithType.vb: IInheritedStructure(Of T).Parameter(Of TResult)(String, Int32, String, DbType, Expression(Of Func(Of IProcedureParameterAdapter, IProcedureParameterFlag))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Procedure(System.String,System.String,XData.ProcedureType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: Procedure(String, String, ProcedureType, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Procedure(System.String,System.String,XData.ProcedureType,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IInnerFilterAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: Procedure(String, String, ProcedureType, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Procedure(System.String, System.String, XData.ProcedureType, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Procedure(System.String, System.String, XData.ProcedureType, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IInnerFilterAdapter, XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.Procedure(String, String, ProcedureType, Expression<Func<IInnerFilterAdapter, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).Procedure(String, String, ProcedureType, Expression(Of Func(Of IInnerFilterAdapter, IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Procedure*
+  name: Procedure
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Procedure_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.Procedure
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Procedure
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Procedure
+  nameWithType: IInheritedStructure<T>.Procedure
+  nameWithType.vb: IInheritedStructure(Of T).Procedure
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.ReadOnlyProperty*
+  name: ReadOnlyProperty
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_ReadOnlyProperty_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.ReadOnlyProperty
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.ReadOnlyProperty
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).ReadOnlyProperty
+  nameWithType: IInheritedStructure<T>.ReadOnlyProperty
+  nameWithType.vb: IInheritedStructure(Of T).ReadOnlyProperty
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.ReadOnlyProperty``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},``0}})
+  name: ReadOnlyProperty<TResult>(Expression<Func<T, TResult>>, Expression<Func<IRepositoryStructureAdapter<T>, TResult>>)
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_ReadOnlyProperty__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0____0___
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.ReadOnlyProperty``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},``0}})
+  name.vb: ReadOnlyProperty(Of TResult)(Expression(Of Func(Of T, TResult)), Expression(Of Func(Of IRepositoryStructureAdapter(Of T), TResult)))
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.ReadOnlyProperty<TResult>(System.Linq.Expressions.Expression<System.Func<T, TResult>>, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IRepositoryStructureAdapter<T>, TResult>>)
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).ReadOnlyProperty(Of TResult)(System.Linq.Expressions.Expression(Of System.Func(Of T, TResult)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryStructureAdapter(Of T), TResult)))
+  nameWithType: IInheritedStructure<T>.ReadOnlyProperty<TResult>(Expression<Func<T, TResult>>, Expression<Func<IRepositoryStructureAdapter<T>, TResult>>)
+  nameWithType.vb: IInheritedStructure(Of T).ReadOnlyProperty(Of TResult)(Expression(Of Func(Of T, TResult)), Expression(Of Func(Of IRepositoryStructureAdapter(Of T), TResult)))
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Return(System.String)
+  name: Return(String)
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Return_System_String_
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Return(System.String)
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Return(System.String)
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Return(System.String)
+  nameWithType: IInheritedStructure<T>.Return(String)
+  nameWithType.vb: IInheritedStructure(Of T).Return(String)
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Return*
+  name: Return
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Return_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.Return
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Return
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Return
+  nameWithType: IInheritedStructure<T>.Return
+  nameWithType.vb: IInheritedStructure(Of T).Return
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Return``1(System.String,System.String,System.Int32,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,`0}})
+  name: Return<TResult>(String, String, Int32, Expression<Func<IQueryStructureAdapter, T>>)
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Return``1(System.String,System.String,System.Int32,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,`0}})
+  name.vb: Return(Of TResult)(String, String, Int32, Expression(Of Func(Of IQueryStructureAdapter, T)))
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Return<TResult>(System.String, System.String, System.Int32, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructureAdapter, T>>)
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Return(Of TResult)(System.String, System.String, System.Int32, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, T)))
+  nameWithType: IInheritedStructure<T>.Return<TResult>(String, String, Int32, Expression<Func<IQueryStructureAdapter, T>>)
+  nameWithType.vb: IInheritedStructure(Of T).Return(Of TResult)(String, String, Int32, Expression(Of Func(Of IQueryStructureAdapter, T)))
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.SetSubqueryVariables(System.String,XData.Variable[])
+  name: SetSubqueryVariables(String, Variable[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_SetSubqueryVariables_System_String_XData_Variable___
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.SetSubqueryVariables(System.String,XData.Variable[])
+  name.vb: SetSubqueryVariables(String, Variable())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.SetSubqueryVariables(System.String, XData.Variable[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).SetSubqueryVariables(System.String, XData.Variable())
+  nameWithType: IInheritedStructure<T>.SetSubqueryVariables(String, Variable[])
+  nameWithType.vb: IInheritedStructure(Of T).SetSubqueryVariables(String, Variable())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.SetSubqueryVariables*
+  name: SetSubqueryVariables
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_SetSubqueryVariables_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.SetSubqueryVariables
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.SetSubqueryVariables
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).SetSubqueryVariables
+  nameWithType: IInheritedStructure<T>.SetSubqueryVariables
+  nameWithType.vb: IInheritedStructure(Of T).SetSubqueryVariables
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: Subquery(String, Type, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: Subquery(String, Type, String, DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of T), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Subquery(System.String, System.Type, System.String, XData.DataGrouping, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Subquery(System.String, System.Type, System.String, XData.DataGrouping, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.Subquery(String, Type, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).Subquery(String, Type, String, DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of T), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Subquery*
+  name: Subquery
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Subquery_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.Subquery
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Subquery
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Subquery
+  nameWithType: IInheritedStructure<T>.Subquery
+  nameWithType.vb: IInheritedStructure(Of T).Subquery
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: Subquery<TSubquery>(String, Expression<Func<TSubquery, Object>>, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: Subquery(Of TSubquery)(String, Expression(Of Func(Of TSubquery, Object)), DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Subquery<TSubquery>(System.String, System.Linq.Expressions.Expression<System.Func<TSubquery, System.Object>>, XData.DataGrouping, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TSubquery>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Subquery(Of TSubquery)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of TSubquery, System.Object)), XData.DataGrouping, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TSubquery), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.Subquery<TSubquery>(String, Expression<Func<TSubquery, Object>>, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).Subquery(Of TSubquery)(String, Expression(Of Func(Of TSubquery, Object)), DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,XData.Variable[],System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: Subquery<TSubquery>(String, Expression<Func<TSubquery, Object>>, DataGrouping, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_XData_Variable___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,XData.Variable[],System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: Subquery(Of TSubquery)(String, Expression(Of Func(Of TSubquery, Object)), DataGrouping, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Subquery<TSubquery>(System.String, System.Linq.Expressions.Expression<System.Func<TSubquery, System.Object>>, XData.DataGrouping, XData.Variable[], System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TSubquery>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Subquery(Of TSubquery)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of TSubquery, System.Object)), XData.DataGrouping, XData.Variable(), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TSubquery), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.Subquery<TSubquery>(String, Expression<Func<TSubquery, Object>>, DataGrouping, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).Subquery(Of TSubquery)(String, Expression(Of Func(Of TSubquery, Object)), DataGrouping, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.Subquery``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: Subquery<TSubquery>(String, IQueryDescription<TSubquery>, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.Subquery``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: Subquery(Of TSubquery)(String, IQueryDescription(Of TSubquery), String, DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.Subquery<TSubquery>(System.String, XData.Mapping.Dynamic.IQueryDescription<TSubquery>, System.String, XData.DataGrouping, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TSubquery>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).Subquery(Of TSubquery)(System.String, XData.Mapping.Dynamic.IQueryDescription(Of TSubquery), System.String, XData.DataGrouping, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TSubquery), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IInheritedStructure<T>.Subquery<TSubquery>(String, IQueryDescription<TSubquery>, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  nameWithType.vb: IInheritedStructure(Of T).Subquery(Of TSubquery)(String, IQueryDescription(Of TSubquery), String, DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.With*
+  name: With
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_With_
+  commentId: Overload:XData.Mapping.Dynamic.IInheritedStructure`1.With
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.With
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).With
+  nameWithType: IInheritedStructure<T>.With
+  nameWithType.vb: IInheritedStructure(Of T).With
+- uid: XData.Mapping.Dynamic.IInheritedStructure`1.With``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryWithAdapter{``0},XData.Mapping.Dynamic.IQueryWithFlag}}[])
+  name: With<TRoot>(String, IQueryDescription<TRoot>, Expression<Func<IQueryWithAdapter<TRoot>, IQueryWithFlag>>[])
+  href: api/XData.Mapping.Dynamic.IInheritedStructure-1.html#XData_Mapping_Dynamic_IInheritedStructure_1_With__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryWithAdapter___0__XData_Mapping_Dynamic_IQueryWithFlag_____
+  commentId: M:XData.Mapping.Dynamic.IInheritedStructure`1.With``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryWithAdapter{``0},XData.Mapping.Dynamic.IQueryWithFlag}}[])
+  name.vb: With(Of TRoot)(String, IQueryDescription(Of TRoot), Expression(Of Func(Of IQueryWithAdapter(Of TRoot), IQueryWithFlag))())
+  fullName: XData.Mapping.Dynamic.IInheritedStructure<T>.With<TRoot>(System.String, XData.Mapping.Dynamic.IQueryDescription<TRoot>, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryWithAdapter<TRoot>, XData.Mapping.Dynamic.IQueryWithFlag>>[])
+  fullName.vb: XData.Mapping.Dynamic.IInheritedStructure(Of T).With(Of TRoot)(System.String, XData.Mapping.Dynamic.IQueryDescription(Of TRoot), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryWithAdapter(Of TRoot), XData.Mapping.Dynamic.IQueryWithFlag))())
+  nameWithType: IInheritedStructure<T>.With<TRoot>(String, IQueryDescription<TRoot>, Expression<Func<IQueryWithAdapter<TRoot>, IQueryWithFlag>>[])
+  nameWithType.vb: IInheritedStructure(Of T).With(Of TRoot)(String, IQueryDescription(Of TRoot), Expression(Of Func(Of IQueryWithAdapter(Of TRoot), IQueryWithFlag))())
 - uid: XData.Mapping.Dynamic.IInnerFilterAdapter
   name: IInnerFilterAdapter
   href: api/XData.Mapping.Dynamic.IInnerFilterAdapter.html
@@ -21054,14 +21470,14 @@ references:
   nameWithType: IRepositoryStructure<T>.InnerView
   nameWithType.vb: IRepositoryStructure(Of T).InnerView
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name: InnerView<TInnerViw>(String, Expression<Func<ISubqueryLinkAdapter<T, TInnerViw>, IFilterDescription>>[])
+  name: InnerView<TInnerView>(String, Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
   commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
-  name.vb: InnerView(Of TInnerViw)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerViw), IFilterDescription))())
-  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.InnerView<TInnerViw>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TInnerViw>, XData.Mapping.Dynamic.IFilterDescription>>[])
-  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).InnerView(Of TInnerViw)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TInnerViw), XData.Mapping.Dynamic.IFilterDescription))())
-  nameWithType: IRepositoryStructure<T>.InnerView<TInnerViw>(String, Expression<Func<ISubqueryLinkAdapter<T, TInnerViw>, IFilterDescription>>[])
-  nameWithType.vb: IRepositoryStructure(Of T).InnerView(Of TInnerViw)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerViw), IFilterDescription))())
+  name.vb: InnerView(Of TInnerView)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.InnerView<TInnerView>(System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TInnerView>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).InnerView(Of TInnerView)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TInnerView), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IRepositoryStructure<T>.InnerView<TInnerView>(String, Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  nameWithType.vb: IRepositoryStructure(Of T).InnerView(Of TInnerView)(String, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
   name: InnerView<TInnerView>(String, IQueryDescription<TInnerView>, Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
@@ -21071,6 +21487,24 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).InnerView(Of TInnerView)(System.String, XData.Mapping.Dynamic.IQueryDescription(Of TInnerView), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TInnerView), XData.Mapping.Dynamic.IFilterDescription))())
   nameWithType: IRepositoryStructure<T>.InnerView<TInnerView>(String, IQueryDescription<TInnerView>, Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
   nameWithType.vb: IRepositoryStructure(Of T).InnerView(Of TInnerView)(String, IQueryDescription(Of TInnerView), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,XData.Variable[],System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: InnerView<TInnerView>(String, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_XData_Variable___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.InnerView``1(System.String,XData.Variable[],System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: InnerView(Of TInnerView)(String, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.InnerView<TInnerView>(System.String, XData.Variable[], System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TInnerView>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).InnerView(Of TInnerView)(System.String, XData.Variable(), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TInnerView), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IRepositoryStructure<T>.InnerView<TInnerView>(String, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
+  nameWithType.vb: IRepositoryStructure(Of T).InnerView(Of TInnerView)(String, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name: Map(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name.vb: Map(Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Map(System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter<T>, XData.Mapping.Dynamic.IExternalLinkDefinition>>[])
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Map(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T), XData.Mapping.Dynamic.IExternalLinkDefinition))())
+  nameWithType: IRepositoryStructure<T>.Map(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  nameWithType.vb: IRepositoryStructure(Of T).Map(Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IRepositoryStructureAdapter{`0},`0}},System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
   name: Map(Expression<Func<IRepositoryStructureAdapter<T>, T>>, Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryStructureAdapter__0___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____
@@ -21143,6 +21577,14 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).ReadOnlyProperty(Of TResult)(System.Linq.Expressions.Expression(Of System.Func(Of T, TResult)), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IRepositoryStructureAdapter(Of T), TResult)))
   nameWithType: IRepositoryStructure<T>.ReadOnlyProperty<TResult>(Expression<Func<T, TResult>>, Expression<Func<IRepositoryStructureAdapter<T>, TResult>>)
   nameWithType.vb: IRepositoryStructure(Of T).ReadOnlyProperty(Of TResult)(Expression(Of Func(Of T, TResult)), Expression(Of Func(Of IRepositoryStructureAdapter(Of T), TResult)))
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Return(System.String)
+  name: Return(String)
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return_System_String_
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Return(System.String)
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Return(System.String)
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Return(System.String)
+  nameWithType: IRepositoryStructure<T>.Return(String)
+  nameWithType.vb: IRepositoryStructure(Of T).Return(String)
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Return*
   name: Return
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return_
@@ -21188,6 +21630,15 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Subquery(Of TSubquery)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of TSubquery, System.Object)), XData.DataGrouping, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TSubquery), XData.Mapping.Dynamic.IFilterDescription))())
   nameWithType: IRepositoryStructure<T>.Subquery<TSubquery>(String, Expression<Func<TSubquery, Object>>, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
   nameWithType.vb: IRepositoryStructure(Of T).Subquery(Of TSubquery)(String, Expression(Of Func(Of TSubquery, Object)), DataGrouping, Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,XData.Variable[],System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name: Subquery<TSubquery>(String, Expression<Func<TSubquery, Object>>, DataGrouping, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_XData_Variable___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery``1(System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},XData.DataGrouping,XData.Variable[],System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
+  name.vb: Subquery(Of TSubquery)(String, Expression(Of Func(Of TSubquery, Object)), DataGrouping, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Subquery<TSubquery>(System.String, System.Linq.Expressions.Expression<System.Func<TSubquery, System.Object>>, XData.DataGrouping, XData.Variable[], System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.ISubqueryLinkAdapter<T, TSubquery>, XData.Mapping.Dynamic.IFilterDescription>>[])
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Subquery(Of TSubquery)(System.String, System.Linq.Expressions.Expression(Of System.Func(Of TSubquery, System.Object)), XData.DataGrouping, XData.Variable(), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TSubquery), XData.Mapping.Dynamic.IFilterDescription))())
+  nameWithType: IRepositoryStructure<T>.Subquery<TSubquery>(String, Expression<Func<TSubquery, Object>>, DataGrouping, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
+  nameWithType.vb: IRepositoryStructure(Of T).Subquery(Of TSubquery)(String, Expression(Of Func(Of TSubquery, Object)), DataGrouping, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TSubquery), IFilterDescription))())
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery``1(System.String,XData.Mapping.Dynamic.IQueryDescription{``0},System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0,``0},XData.Mapping.Dynamic.IFilterDescription}}[])
   name: Subquery<TSubquery>(String, IQueryDescription<TSubquery>, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T, TSubquery>, IFilterDescription>>[])
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____
@@ -21922,6 +22373,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.Exists
   nameWithType: QueryDescriptionExtensions.Exists
+- uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetProperty(XData.ISqlObject,System.String)
+  name: GetProperty(ISqlObject, String)
+  href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_GetProperty_XData_ISqlObject_System_String_
+  commentId: M:XData.Mapping.Dynamic.QueryDescriptionExtensions.GetProperty(XData.ISqlObject,System.String)
+  fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetProperty(XData.ISqlObject, System.String)
+  nameWithType: QueryDescriptionExtensions.GetProperty(ISqlObject, String)
+- uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetProperty*
+  name: GetProperty
+  href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_GetProperty_
+  commentId: Overload:XData.Mapping.Dynamic.QueryDescriptionExtensions.GetProperty
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetProperty
+  nameWithType: QueryDescriptionExtensions.GetProperty
 - uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.HasFlag*
   name: HasFlag
   href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_HasFlag_
@@ -22160,6 +22624,18 @@ references:
   fullName.vb: XData.Mapping.Dynamic.XDataMapping.CustomMapping(Of T)()
   nameWithType: XDataMapping.CustomMapping<T>()
   nameWithType.vb: XDataMapping.CustomMapping(Of T)()
+- uid: XData.Mapping.Dynamic.XDataMapping.GetStructure
+  name: GetStructure()
+  href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure
+  commentId: M:XData.Mapping.Dynamic.XDataMapping.GetStructure
+  fullName: XData.Mapping.Dynamic.XDataMapping.GetStructure()
+  nameWithType: XDataMapping.GetStructure()
+- uid: XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String)
+  name: GetStructure(String)
+  href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_
+  commentId: M:XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String)
+  fullName: XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String)
+  nameWithType: XDataMapping.GetStructure(String)
 - uid: XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String,System.String,XData.DataStructureFlag,XData.Variable[])
   name: GetStructure(String, String, DataStructureFlag, Variable[])
   href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_System_String_XData_DataStructureFlag_XData_Variable___
@@ -22169,6 +22645,12 @@ references:
   fullName.vb: XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String, System.String, XData.DataStructureFlag, XData.Variable())
   nameWithType: XDataMapping.GetStructure(String, String, DataStructureFlag, Variable[])
   nameWithType.vb: XDataMapping.GetStructure(String, String, DataStructureFlag, Variable())
+- uid: XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String,XData.DataStructureFlag)
+  name: GetStructure(String, DataStructureFlag)
+  href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_System_String_XData_DataStructureFlag_
+  commentId: M:XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String,XData.DataStructureFlag)
+  fullName: XData.Mapping.Dynamic.XDataMapping.GetStructure(System.String, XData.DataStructureFlag)
+  nameWithType: XDataMapping.GetStructure(String, DataStructureFlag)
 - uid: XData.Mapping.Dynamic.XDataMapping.GetStructure*
   name: GetStructure
   href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_GetStructure_
@@ -22185,6 +22667,49 @@ references:
   fullName.vb: XData.Mapping.Dynamic.XDataMapping.GetStructure(Of T)(System.String)
   nameWithType: XDataMapping.GetStructure<T>(String)
   nameWithType.vb: XDataMapping.GetStructure(Of T)(String)
+- uid: XData.Mapping.Dynamic.XDataMapping.UseMapping*
+  name: UseMapping
+  href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_UseMapping_
+  commentId: Overload:XData.Mapping.Dynamic.XDataMapping.UseMapping
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.XDataMapping.UseMapping
+  nameWithType: XDataMapping.UseMapping
+- uid: XData.Mapping.Dynamic.XDataMapping.UseMapping``1
+  name: UseMapping<T>()
+  href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_UseMapping__1
+  commentId: M:XData.Mapping.Dynamic.XDataMapping.UseMapping``1
+  name.vb: UseMapping(Of T)()
+  fullName: XData.Mapping.Dynamic.XDataMapping.UseMapping<T>()
+  fullName.vb: XData.Mapping.Dynamic.XDataMapping.UseMapping(Of T)()
+  nameWithType: XDataMapping.UseMapping<T>()
+  nameWithType.vb: XDataMapping.UseMapping(Of T)()
+- uid: XData.Mapping.Dynamic.XDataMapping.UseMapping``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{``0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name: UseMapping<T>(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_UseMapping__1_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter___0__XData_Mapping_Dynamic_IExternalLinkDefinition_____
+  commentId: M:XData.Mapping.Dynamic.XDataMapping.UseMapping``1(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{``0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name.vb: UseMapping(Of T)(Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
+  fullName: XData.Mapping.Dynamic.XDataMapping.UseMapping<T>(System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter<T>, XData.Mapping.Dynamic.IExternalLinkDefinition>>[])
+  fullName.vb: XData.Mapping.Dynamic.XDataMapping.UseMapping(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T), XData.Mapping.Dynamic.IExternalLinkDefinition))())
+  nameWithType: XDataMapping.UseMapping<T>(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  nameWithType.vb: XDataMapping.UseMapping(Of T)(Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
+- uid: XData.Mapping.Dynamic.XDataMapping.UseMapping``2
+  name: UseMapping<T, TParent>()
+  href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_UseMapping__2
+  commentId: M:XData.Mapping.Dynamic.XDataMapping.UseMapping``2
+  name.vb: UseMapping(Of T, TParent)()
+  fullName: XData.Mapping.Dynamic.XDataMapping.UseMapping<T, TParent>()
+  fullName.vb: XData.Mapping.Dynamic.XDataMapping.UseMapping(Of T, TParent)()
+  nameWithType: XDataMapping.UseMapping<T, TParent>()
+  nameWithType.vb: XDataMapping.UseMapping(Of T, TParent)()
+- uid: XData.Mapping.Dynamic.XDataMapping.UseMapping``2(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{``0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name: UseMapping<T, TParent>(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  href: api/XData.Mapping.Dynamic.XDataMapping.html#XData_Mapping_Dynamic_XDataMapping_UseMapping__2_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter___0__XData_Mapping_Dynamic_IExternalLinkDefinition_____
+  commentId: M:XData.Mapping.Dynamic.XDataMapping.UseMapping``2(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{``0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
+  name.vb: UseMapping(Of T, TParent)(Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
+  fullName: XData.Mapping.Dynamic.XDataMapping.UseMapping<T, TParent>(System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter<T>, XData.Mapping.Dynamic.IExternalLinkDefinition>>[])
+  fullName.vb: XData.Mapping.Dynamic.XDataMapping.UseMapping(Of T, TParent)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter(Of T), XData.Mapping.Dynamic.IExternalLinkDefinition))())
+  nameWithType: XDataMapping.UseMapping<T, TParent>(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
+  nameWithType.vb: XDataMapping.UseMapping(Of T, TParent)(Expression(Of Func(Of IExternalLinkDefinitionAdapter(Of T), IExternalLinkDefinition))())
 - uid: XData.Mapping.ExpressionFilterAttribute
   name: ExpressionFilterAttribute
   href: api/XData.Mapping.ExpressionFilterAttribute.html
@@ -23935,6 +24460,12 @@ references:
   commentId: T:XData.Mapping.ResultSetAttribute
   fullName: XData.Mapping.ResultSetAttribute
   nameWithType: ResultSetAttribute
+- uid: XData.Mapping.ResultSetAttribute.#ctor(System.String)
+  name: ResultSetAttribute(String)
+  href: api/XData.Mapping.ResultSetAttribute.html#XData_Mapping_ResultSetAttribute__ctor_System_String_
+  commentId: M:XData.Mapping.ResultSetAttribute.#ctor(System.String)
+  fullName: XData.Mapping.ResultSetAttribute.ResultSetAttribute(System.String)
+  nameWithType: ResultSetAttribute.ResultSetAttribute(String)
 - uid: XData.Mapping.ResultSetAttribute.#ctor(System.String,System.String)
   name: ResultSetAttribute(String, String)
   href: api/XData.Mapping.ResultSetAttribute.html#XData_Mapping_ResultSetAttribute__ctor_System_String_System_String_
@@ -24284,6 +24815,77 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.SubqueryLinkAttribute.TypeId
   nameWithType: SubqueryLinkAttribute.TypeId
+- uid: XData.Mapping.SubqueryVariableAttribute
+  name: SubqueryVariableAttribute
+  href: api/XData.Mapping.SubqueryVariableAttribute.html
+  commentId: T:XData.Mapping.SubqueryVariableAttribute
+  fullName: XData.Mapping.SubqueryVariableAttribute
+  nameWithType: SubqueryVariableAttribute
+- uid: XData.Mapping.SubqueryVariableAttribute.#ctor(System.String,System.String,System.Object)
+  name: SubqueryVariableAttribute(String, String, Object)
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute__ctor_System_String_System_String_System_Object_
+  commentId: M:XData.Mapping.SubqueryVariableAttribute.#ctor(System.String,System.String,System.Object)
+  fullName: XData.Mapping.SubqueryVariableAttribute.SubqueryVariableAttribute(System.String, System.String, System.Object)
+  nameWithType: SubqueryVariableAttribute.SubqueryVariableAttribute(String, String, Object)
+- uid: XData.Mapping.SubqueryVariableAttribute.#ctor*
+  name: SubqueryVariableAttribute
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute__ctor_
+  commentId: Overload:XData.Mapping.SubqueryVariableAttribute.#ctor
+  isSpec: "True"
+  fullName: XData.Mapping.SubqueryVariableAttribute.SubqueryVariableAttribute
+  nameWithType: SubqueryVariableAttribute.SubqueryVariableAttribute
+- uid: XData.Mapping.SubqueryVariableAttribute.Alias
+  name: Alias
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute_Alias
+  commentId: P:XData.Mapping.SubqueryVariableAttribute.Alias
+  fullName: XData.Mapping.SubqueryVariableAttribute.Alias
+  nameWithType: SubqueryVariableAttribute.Alias
+- uid: XData.Mapping.SubqueryVariableAttribute.Alias*
+  name: Alias
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute_Alias_
+  commentId: Overload:XData.Mapping.SubqueryVariableAttribute.Alias
+  isSpec: "True"
+  fullName: XData.Mapping.SubqueryVariableAttribute.Alias
+  nameWithType: SubqueryVariableAttribute.Alias
+- uid: XData.Mapping.SubqueryVariableAttribute.Name
+  name: Name
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute_Name
+  commentId: P:XData.Mapping.SubqueryVariableAttribute.Name
+  fullName: XData.Mapping.SubqueryVariableAttribute.Name
+  nameWithType: SubqueryVariableAttribute.Name
+- uid: XData.Mapping.SubqueryVariableAttribute.Name*
+  name: Name
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute_Name_
+  commentId: Overload:XData.Mapping.SubqueryVariableAttribute.Name
+  isSpec: "True"
+  fullName: XData.Mapping.SubqueryVariableAttribute.Name
+  nameWithType: SubqueryVariableAttribute.Name
+- uid: XData.Mapping.SubqueryVariableAttribute.TypeId
+  name: TypeId
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute_TypeId
+  commentId: P:XData.Mapping.SubqueryVariableAttribute.TypeId
+  fullName: XData.Mapping.SubqueryVariableAttribute.TypeId
+  nameWithType: SubqueryVariableAttribute.TypeId
+- uid: XData.Mapping.SubqueryVariableAttribute.TypeId*
+  name: TypeId
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute_TypeId_
+  commentId: Overload:XData.Mapping.SubqueryVariableAttribute.TypeId
+  isSpec: "True"
+  fullName: XData.Mapping.SubqueryVariableAttribute.TypeId
+  nameWithType: SubqueryVariableAttribute.TypeId
+- uid: XData.Mapping.SubqueryVariableAttribute.Value
+  name: Value
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute_Value
+  commentId: P:XData.Mapping.SubqueryVariableAttribute.Value
+  fullName: XData.Mapping.SubqueryVariableAttribute.Value
+  nameWithType: SubqueryVariableAttribute.Value
+- uid: XData.Mapping.SubqueryVariableAttribute.Value*
+  name: Value
+  href: api/XData.Mapping.SubqueryVariableAttribute.html#XData_Mapping_SubqueryVariableAttribute_Value_
+  commentId: Overload:XData.Mapping.SubqueryVariableAttribute.Value
+  isSpec: "True"
+  fullName: XData.Mapping.SubqueryVariableAttribute.Value
+  nameWithType: SubqueryVariableAttribute.Value
 - uid: XData.Mapping.WithAttribute
   name: WithAttribute
   href: api/XData.Mapping.WithAttribute.html

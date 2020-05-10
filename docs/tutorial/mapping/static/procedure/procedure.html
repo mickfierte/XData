@@ -91,7 +91,7 @@
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;&quot;)]
+    ResultSet(&quot;T&quot;)]
 public class TestProcedure : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -106,7 +106,7 @@ public class TestProcedure : IDataObject
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
     Parameter(&quot;T&quot;, 3, &quot;param3&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 4, &quot;param4&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;&quot;, IsDefault = true),
+    ResultSet(&quot;T&quot;, IsDefault = true),
     ResultSet(&quot;T&quot;, &quot;SecondResult&quot;, ResultType = typeof(TestResult), Order = 2)]
 public class TestProcedure2 : IDataObject
 {
@@ -142,7 +142,7 @@ public class TestProcedure3 : IDataObject
             Size = 20, 
             Direction = ParameterDirection.Output, 
             Name = &quot;param3&quot;),
-        ResultSet(&quot;T&quot;, &quot;&quot;)]
+        ResultSet(&quot;T&quot;)]
 public class TestProcedure4 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -175,7 +175,7 @@ public class TestProcedure5 : IDataObject
     Parameter(&quot;T&quot;, 3, &quot;ResultParameter&quot;, typeof(int), 
         DbType.Int32, 
         Direction = ParameterDirection.ReturnValue),
-    ResultSet(&quot;T&quot;, &quot;&quot;)]
+    ResultSet(&quot;T&quot;)]
 public class TestProcedure6 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -248,7 +248,7 @@ public class TestProcedure7 : IDataObject
     Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-    ResultSet(&quot;T&quot;, &quot;&quot;)]
+    ResultSet(&quot;T&quot;)]
 public class TestFunction3 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]

@@ -91,7 +91,7 @@ public class Classifier
 ...
 var param = new[] { new Classifier { Id = 1, Name = &quot;Test&quot; },
     new Classifier { Id = 2, Name = &quot;Some&quot; } };
-var f4 = XDataMapping.GetStructure(&quot;T&quot;, DataScope.DefaultContext)
+var f4 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestFunction4&quot;, ProcedureType.Function)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))

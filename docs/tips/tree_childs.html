@@ -120,8 +120,7 @@ FROM T_CATALOG R
 ...
 private static Expression&lt;CustomMapping&lt;CatalogTree&gt;&gt; _unused = (
     () =&gt; XDataMapping.CustomMapping&lt;CatalogTree&gt;()
-        .With(&quot;CAT&quot;, XDataMapping.GetStructure(&quot;R&quot;, null, 
-            DataStructureFlag.ReadOnly)
+        .With(&quot;CAT&quot;, XDataMapping.GetStructure(&quot;R&quot;)
                 .DataTable(&quot;T_CATALOG&quot;, &quot;R&quot;,  
                     x =&gt; x.ConstFilter(&quot;FilterByRoot&quot;, &quot;parent_id&quot;,
                             FilterConstantType.Const, null, 
@@ -130,8 +129,7 @@ private static Expression&lt;CustomMapping&lt;CatalogTree&gt;&gt; _unused = (
                     CatalogId = x.Field&lt;long&gt;(&quot;R&quot;, string.Empty, z =&gt; z.Key()),
                     ParentId = x.Field&lt;long?&gt;(&quot;R&quot;, string.Empty),
                 }), x =&gt; x.Properties(z =&gt; z.CatalogId, z =&gt; z.ParentId),
-                x =&gt; x.WithRecursive(&quot;S&quot;, XDataMapping.GetStructure(&quot;S&quot;, null, 
-                        DataStructureFlag.ReadOnly)
+                x =&gt; x.WithRecursive(&quot;S&quot;, XDataMapping.GetStructure(&quot;S&quot;)
                     .DataTable(&quot;T_CATALOG&quot;, &quot;S&quot;)
                     .Select(y =&gt; new {
                         CatalogId = y.Field&lt;long&gt;(&quot;S&quot;, string.Empty, z =&gt; z.Key()),
@@ -142,7 +140,7 @@ private static Expression&lt;CustomMapping&lt;CatalogTree&gt;&gt; _unused = (
             x =&gt; x.Field&lt;long&gt;(&quot;CAT&quot;, string.Empty, z =&gt; z.Key()))
         .ReadOnlyProperty(x =&gt; x.ParentId, 
             x =&gt; x.Field&lt;long?&gt;(&quot;CAT&quot;, string.Empty))
-        .Map(x =&gt; new CatalogTree()).SetFlags(DataStructureFlag.ReadOnly)
+        .Map().SetFlags(DataStructureFlag.ReadOnly)
     );
 </code></pre><p>Link and using data objects with <em>ShowSubtree</em> off...</p>
 <pre><code class="lang-csharp">dataScope.GetReposytory&lt;Catalog&gt;()

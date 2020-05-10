@@ -304,8 +304,7 @@ Console.WriteLine(&quot;*** Server: {0}, Schema: {1}&quot;, ctx.ConnectionInfo.S
             .DataTable(&quot;T_TEST&quot;, &quot;T&quot;, 
                 x =&gt; x.SubqueryFilter(string.Empty, &quot;A&quot;)
                     .SetOperation(FilterOperation.Exists)
-            .Subquery(&quot;A&quot;, XDataMapping.GetStructure(&quot;H&quot;, null, 
-                    DataStructureFlag.None)
+            .Subquery(&quot;A&quot;, XDataMapping.GetStructure(&quot;H&quot;)
                 .DataTable(&quot;T_TEST_OPT&quot;, &quot;H&quot;)
                 .DataTable(&quot;T_OPT&quot;, &quot;P&quot;,
                     // Link between H and P table marked as Primary filter
@@ -408,8 +407,7 @@ FROM T_CATALOG R
 ...
 private static Expression&lt;CustomMapping&lt;CatalogTree&gt;&gt; _unused = (
     () =&gt; XDataMapping.CustomMapping&lt;CatalogTree&gt;()
-        .With(&quot;CAT&quot;, XDataMapping.GetStructure(&quot;R&quot;, null, 
-            DataStructureFlag.ReadOnly)
+        .With(&quot;CAT&quot;, XDataMapping.GetStructure(&quot;R&quot;)
                 .DataTable(&quot;T_CATALOG&quot;, &quot;R&quot;,  
                     x =&gt; x.ConstFilter(&quot;FilterByRoot&quot;, &quot;parent_id&quot;,
                             FilterConstantType.Const, null, 
@@ -418,8 +416,7 @@ private static Expression&lt;CustomMapping&lt;CatalogTree&gt;&gt; _unused = (
                     CatalogId = x.Field&lt;long&gt;(&quot;R&quot;, string.Empty, z =&gt; z.Key()),
                     ParentId = x.Field&lt;long?&gt;(&quot;R&quot;, string.Empty),
                 }), x =&gt; x.Properties(z =&gt; z.CatalogId, z =&gt; z.ParentId),
-                x =&gt; x.WithRecursive(&quot;S&quot;, XDataMapping.GetStructure(&quot;S&quot;, null, 
-                        DataStructureFlag.ReadOnly)
+                x =&gt; x.WithRecursive(&quot;S&quot;, XDataMapping.GetStructure(&quot;S&quot;)
                     .DataTable(&quot;T_CATALOG&quot;, &quot;S&quot;)
                     .Select(y =&gt; new {
                         CatalogId = y.Field&lt;long&gt;(&quot;S&quot;, string.Empty, z =&gt; z.Key()),
@@ -430,7 +427,7 @@ private static Expression&lt;CustomMapping&lt;CatalogTree&gt;&gt; _unused = (
             x =&gt; x.Field&lt;long&gt;(&quot;CAT&quot;, string.Empty, z =&gt; z.Key()))
         .ReadOnlyProperty(x =&gt; x.ParentId, 
             x =&gt; x.Field&lt;long?&gt;(&quot;CAT&quot;, string.Empty))
-        .Map(x =&gt; new CatalogTree()).SetFlags(DataStructureFlag.ReadOnly)
+        .Map().SetFlags(DataStructureFlag.ReadOnly)
     );
 </code></pre><p>Link and using data objects with <em>ShowSubtree</em> off...</p>
 <pre><code class="lang-csharp">dataScope.GetReposytory&lt;Catalog&gt;()
@@ -524,7 +521,7 @@ var doc = new XDocument(new XElement(&quot;root&quot;,
     new XElement(&quot;test&quot;, new XAttribute(&quot;doc_state_id&quot;, 1), new XAttribute(&quot;test&quot;, &quot;one&quot;)),
     new XElement(&quot;test&quot;, new XAttribute(&quot;doc_state_id&quot;, 2), new XAttribute(&quot;test&quot;, &quot;two&quot;))
     )).ToString();
-var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
+var query = XDataMapping.GetStructure(&quot;S&quot;)
     .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;)
     // use XmlSource definition providing XPath expression for data source
     .XmlSource(&quot;Test&quot;, &quot;T&quot;, &quot;root/test&quot;, x =&gt; x.Link(&quot;S&quot;, &quot;doc_state_id&quot;))
@@ -545,7 +542,7 @@ table.Rows.Add(1, &quot;one&quot;);
 table.Rows.Add(2, &quot;two&quot;);
 table.AcceptChanges();
 
-var query = XDataMapping.GetStructure(&quot;S&quot;, dataScope.DefaultContext)
+var query = XDataMapping.GetStructure(&quot;S&quot;)
     .DataTable(&quot;T_DOC_STATE&quot;, &quot;S&quot;)
     // use temporary table definition
     .TempTable(&quot;Test&quot;, &quot;T&quot;, x =&gt; x.Link(&quot;S&quot;, &quot;doc_state_id&quot;))
@@ -590,7 +587,7 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 <li><a class="xref" href="../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_UpdateWith__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func___0__1___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IStructureFlag_____">UpdateWith(string alias, IQueryDescription&lt;TDObj&gt; sub, Expression&lt;Func&lt;TDObj, TValue&gt;&gt; property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter, IStructureFlag&gt;&gt;[] attributes)</a></li>
 </ul>
 <pre><code class="lang-csharp">DeliveryType = x.Field&lt;DeliveryTypeEnum&gt;(&quot;DD&quot;, string.Empty, z =&gt; z.UpdateWith(&quot;DT&quot;, 
-    XDataMapping.GetStructure(&quot;&quot;, null, DataStructureFlag.None)
+    XDataMapping.GetStructure()
         .Select(y =&gt; new { DeliveryType = y.Expr(&quot;delivery_type&quot;, a =&gt; DeliveryTypeEnum.Courier, DbType.Int32)}), 
     y =&gt; y.DeliveryType, DataGrouping.None)),
 </code></pre><h3 id="default-value-features">Default value features</h3>
@@ -845,7 +842,7 @@ select * from GetRows(&#39;Department&#39;) as dept(deptid int, deptname text);
  Parameter(&quot;T&quot;, 1, &quot;p_name1&quot;, typeof(string), DbType.String),
  Parameter(&quot;T&quot;, 1, &quot;p_id2&quot;, typeof(int), DbType.Int32), 
  Parameter(&quot;T&quot;, 1, &quot;p_name2&quot;, typeof(string), DbType.String),
- ResultSet(&quot;T&quot;, &quot;Result&quot;)]
+ ResultSet(&quot;T&quot;)]
 public class PostgreSqlTestFunction9 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
@@ -858,15 +855,15 @@ public class PostgreSqlTestFunction9 : IDataObject
 <pre><code class="lang-csharp">// hint for empty string alias is applied to query
 // possible to apply different hints on 
 // select, insert, update, delete statements or their combination
-XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
+XDataMapping.GetStructure(&quot;T&quot;)
     .Hint(&quot;&quot;, &quot;SQL_NO_CACHE&quot;, HintType.Select)
     .Hint(&quot;&quot;, &quot;HIGH_PRIORITY&quot;, HintType.Select | HintType.Insert)...
 </code></pre><p>Table hints (MS SQL Server only):</p>
-<pre><code class="lang-csharp">XDataMapping.GetStructure(&quot;T&quot;, dataScope.DefaultContext)
+<pre><code class="lang-csharp">XDataMapping.GetStructure(&quot;T&quot;)
     .DataTable(&quot;Test&quot;, &quot;T&quot;)
     .Hint(&quot;T&quot;, &quot;nolock&quot;)...
 </code></pre><p>Procedure hints (PostgreSQL only):</p>
-<pre><code class="lang-csharp">XDataMapping.GetStructure(context: dataScope.DefaultContext)
+<pre><code class="lang-csharp">XDataMapping.GetStructure()
     .Procedure(&quot;T&quot;, &quot;TestFunction8&quot;, ProcedureType.Function)
     .Hint(&quot;T&quot;, &quot;Id integer, Name varchar(20)&quot;)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;p_tab&quot;, DbType.Object, 

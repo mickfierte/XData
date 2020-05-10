@@ -83,7 +83,11 @@
 <p>Example:</p>
 <pre><code class="lang-csharp">[DataObject(&quot;D&quot; /* base table alias */, 
     Context: &quot;Main&quot;, Flags: DataObjectFlags.ReadOnly)]
-</code></pre></article>
+</code></pre><p>The <em>DataObjectAttribute</em> attribute can also be used to inherit the mapping description of the data object. To do this, an alternative <a class="xref" href="../../../api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute__ctor_System_Type_">constructor</a> is used that allows you to limit <em>BaseMappingType</em> - the base object in the inheritance hierarchy of the mapping description. The <em>BaseMappingType</em> class must implement the <a class="xref" href="../../../api/XData.ISqlObject.html">ISqlObject</a> interface but does not have to be associated with the current class. The depth of the inheritance hierarchy of the mapping description is not limited.</p>
+<pre><code class="lang-csharp">[DataObject(typeof(ParentDescription))]
+</code></pre><div class="WARNING"><h5>Warning</h5><p>When inheriting mapping descriptions, a mixture of the static and dynamic description methods within the a single mapping inheritance hierarchy is not allowed!</p>
+</div>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

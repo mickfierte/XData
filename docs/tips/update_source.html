@@ -109,7 +109,7 @@ private static Calculate&lt;int&gt; AllowedDiscount = x =&gt; x.Case&lt;Product,
 <li><a class="xref" href="../api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html#XData_Mapping_Dynamic_IRepositoryPropertyMappingAdapter_2_UpdateWith__1_System_String_XData_Mapping_Dynamic_IQueryDescription___0__System_Linq_Expressions_Expression_System_Func___0__1___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IStructureFlag_____">UpdateWith(string alias, IQueryDescription&lt;TDObj&gt; sub, Expression&lt;Func&lt;TDObj, TValue&gt;&gt; property, DataGrouping grouping = DataGrouping.None, params Expression&lt;Func&lt;ISubqueryLinkAdapter, IStructureFlag&gt;&gt;[] attributes)</a></li>
 </ul>
 <pre><code class="lang-csharp">DeliveryType = x.Field&lt;DeliveryTypeEnum&gt;(&quot;DD&quot;, string.Empty, z =&gt; z.UpdateWith(&quot;DT&quot;, 
-    XDataMapping.GetStructure(&quot;&quot;, null, DataStructureFlag.None)
+    XDataMapping.GetStructure()
         .Select(y =&gt; new { DeliveryType = y.Expr(&quot;delivery_type&quot;, a =&gt; DeliveryTypeEnum.Courier, DbType.Int32)}), 
     y =&gt; y.DeliveryType, DataGrouping.None)),
 </code></pre></article>

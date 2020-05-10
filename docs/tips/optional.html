@@ -90,8 +90,7 @@
             .DataTable(&quot;T_TEST&quot;, &quot;T&quot;, 
                 x =&gt; x.SubqueryFilter(string.Empty, &quot;A&quot;)
                     .SetOperation(FilterOperation.Exists)
-            .Subquery(&quot;A&quot;, XDataMapping.GetStructure(&quot;H&quot;, null, 
-                    DataStructureFlag.None)
+            .Subquery(&quot;A&quot;, XDataMapping.GetStructure(&quot;H&quot;)
                 .DataTable(&quot;T_TEST_OPT&quot;, &quot;H&quot;)
                 .DataTable(&quot;T_OPT&quot;, &quot;P&quot;,
                     // Link between H and P table marked as Primary filter

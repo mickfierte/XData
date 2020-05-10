@@ -6,6 +6,7 @@ Version Notes (Current Version: v1.2.0)
 	* Asp.Net Core HealthChecks is now supported
 	* Using DI containers for trigger logic modules
 	* Using hierarchical organized objects
+	* Mapping inheritance
 	* Bugs are fixed, algorithms are improved
 * 1.1.0
     * .Net Standard 2.0 version released

@@ -86,6 +86,10 @@
 <div class="TIP"><h5>Tip</h5><p>Ability of defining mapping to marker interface is key feature of XData allowed to get flexible and natural objects deriving hierarchy with full featured and handy methods to work with it (using extension methods).</p>
 </div>
 <p>Mapping rules can be declared statically with attributes of class and its properties (see <a href="static/static.html">static mapping</a>), and dynamically using LINQ style expression (see <a href="dynamic/dynamic.html">dynamic mapping</a>).</p>
+<h3 id="mapping-inheritance">Mapping inheritance</h3>
+<p>Complex projects can contain many reusable parts. Including query parts (tables, subqueries, stored procedure calls). Sometimes these reused parts correspond to the inheritance hierarchy, sometimes they don’t.</p>
+<p>XData supports the inheritance of parts of the mapping of <a href="../glossary.html#data-object">data objects</a> both within the hierarchy of inheritance of objects reflected to the database and the construction of its hierarchy for the reuse of parts of mapping.</p>
+<p>Only mapping description is depends on <a href="static/static.html#mapping-parameters">static</a> or <a href="dynamic/dynamic.html#dynamic-mapping-initialization">dynamic</a> method of declaration.</p>
 <h3 id="common-types-properties">Common types properties</h3>
 <p>Common types properties (string, bool, int...) including nullable (int?, bool?...), and enum properties is declared as common class properties. Data access to this properties is usual. Only mapping description is depends on <a href="static/static.html#properties">static</a> or <a href="dynamic/dynamic.html#properties">dynamic</a> method of declaration.</p>
 <h3 id="binary-properties">Binary properties</h3>
@@ -161,7 +165,7 @@ invoice.Source.Modify(x =&gt; x = new XDocument());
         } 
 }
 </code></pre><p>No additional mapping description are needed. Only <a href="mapping.html#master-detail-relations">external reference</a> is required.</p>
-<div class="TIP"><h5>Tip</h5><p>To use XData Unit of Work realization (<a href="../unit_of_work.html">WorkSet</a>), child repositories references are required.</p>
+<div class="TIP"><h5>Tip</h5><p>To use <a href="../../tips/json.html">hierarchical objects</a> and XData Unit of Work realization (<a href="../unit_of_work.html">WorkSet</a>), child repositories references are required.</p>
 </div>
 <h3 id="hidden-properties">Hidden properties</h3>
 <p>Some columns in database is needed to full description of mapping, but not required to business logic. This columns is declared as part of mapping named <em>Column</em> is selected from database, but not mapped on data object properties.</p>
