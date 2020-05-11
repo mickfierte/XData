@@ -79,14 +79,46 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_array.md">
 
 <h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
+<ul>
+<li>MS SQL Server </li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction6(p_arr INTEGER[]) returns integer as $$
+begin
+    return sum(s) from unnest(p_arr) s;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var arr = new[] { 1, 2, 3 };
 var f6 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;TestFunction6&quot;, ProcedureType.Function)
     .Parameter&lt;int[]&gt;(&quot;T&quot;, 1, &quot;p_arr&quot;, DbType.Int32, z =&gt; z.Array())
     .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call(DataScope.Layer, &quot;p_arr&quot;.SetVar(arr));
+    .Call(DataScope, &quot;p_arr&quot;.SetVar(arr));
 Console.WriteLine(f6.GetParameter&lt;int&gt;(&quot;result&quot;));
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;TestFunction6&quot;, ProcedureType.Function)
+.Parameter&lt;int[]&gt;(&quot;T&quot;, 1, &quot;p_arr&quot;, DbType.Int32, z =&gt; z.Array())
+.Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+...
 </code></pre></article>
           </div>
           

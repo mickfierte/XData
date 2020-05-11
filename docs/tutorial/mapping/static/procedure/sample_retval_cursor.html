@@ -79,6 +79,35 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_retval_cursor.md">
 
 <h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
+<ul>
+<li><p>MS SQL Server</p>
+</li>
+<li><p>MS SQL Server</p>
+</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure6]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+SELECT @param1 as Id, @param2 as Name
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),

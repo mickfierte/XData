@@ -79,6 +79,31 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_retval.md">
 
 <h4 id="sql-procedure-with-return-value-sample">SQL procedure with return value sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure5]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var res5 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
@@ -88,6 +113,20 @@
     .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res5.GetParameter&lt;int&gt;(&quot;result&quot;));
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+.Map()
+.SetBaseTable(&quot;T&quot;)
+...
+public int ResultParameter 
+        { get { return this.GetParameter&lt;int&gt;(&quot;result&quot;); } }
 </code></pre></article>
           </div>
           

@@ -79,6 +79,48 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_out_cursor.md">
 
 <h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure4]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+SELECT @param1 as Id, @param2 as Name
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure4(p_Tab in classifier_tab, p_Out out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select Id, Name from table(p_Tab);
+end TestProcedure4;
+</code></pre><div class="TIP"><h5>Tip</h5><p>Use <em>refcursor</em> parameters names as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure4 (p_tab public.classifier_rec [], refcursor)
+RETURNS refcursor AS
+$$
+begin
+    open $2 for select Id, Name from unnest(p_tab);
+    return $2;
+end
+$$
+LANGUAGE plpgsql;
+</code></pre><div class="TIP"><h5>Tip</h5><p>If <em>refcursor</em> parameters have a names it must be used as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),

@@ -79,16 +79,115 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_table_func.md">
 
 <h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE FUNCTION [dbo].[TestFunction] 
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+RETURNS TABLE 
+AS
+RETURN 
+(
+    SELECT @param1 as Id, @param2 as Name
+)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE type classifier_rec is object (Id int, Name varchar2(20));
+CREATE OR REPLACE type classifier_tab is table of classifier_rec;
+
+function TestFunction(p_Id int, p_Name varchar2) return classifier_tab pipelined
+is
+begin
+for curr in (select p_Id as Id, p_Name as Name from dual) loop
+  pipe row (classifier_rec(curr.Id, curr.Name));
+end loop;
+end TestFunction;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction(p_id integer, p_name varchar) 
+returns TABLE (
+  Id bigint,
+  Name varchar
+) as $$
+    select p_id as Id, p_name as Name;
+$$ LANGUAGE SQL;
+</code></pre><p>... or with the same mapping syntax...</p>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestFunction(p_Id integer, p_Name varchar) returns setof classifier_rec as $$
+    select p_Id as Id, p_Name as Name;
+$$ LANGUAGE SQL;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span> </p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var f3 = XDataMapping.GetStructure()
-    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function)
-    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
-        z =&gt; z.UdtDataType(&quot;dbo.Classifier&quot;))
+    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Return(&quot;T&quot;)
     .Select(x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
     .AsQuery(DataScope, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in f3)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Dynamic query table function with joined table</li>
+</ul>
+<pre><code class="lang-csharp">var f1Join = XDataMapping.GetStructure()
+    .DataTable(&quot;T_DOC_TYPE&quot;, &quot;D&quot;)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function, 
+        z =&gt; z.Link(&quot;D&quot;, &quot;doc_type_id&quot;, &quot;Id&quot;))
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Return(&quot;T&quot;)
+    .Select(x =&gt; new {
+        Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()),
+        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;),
+        Code = x.Field&lt;string&gt;(&quot;D&quot;, string.Empty)
+    })
+    .AsQuery(DataScope, &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
+foreach (var res in f1Join)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot; - \&quot;{2}\&quot;&quot;, res.Id, res.Name, res.Code);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestFunction
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;)
+})
+.SetBaseTable(&quot;T&quot;)
+</code></pre><ul>
+<li>Mapping table function with joined table</li>
+</ul>
+<pre><code class="lang-csharp">.DataTable(&quot;T_DOC_TYPE&quot;, &quot;D&quot;)
+.Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function, 
+    z =&gt; z.Link(&quot;D&quot;, &quot;doc_type_id&quot;, &quot;Id&quot;))
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestFunctionJoin
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()),
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;),
+    Code = x.Field&lt;string&gt;(&quot;D&quot;, string.Empty)
+})
+.SetBaseTable(&quot;D&quot;)
 </code></pre></article>
           </div>
           

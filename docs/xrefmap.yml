@@ -169,6 +169,39 @@ references:
 - uid: mapping_master_detail.md
   name: Master detail relations
   href: tutorial/mapping/master_detail.html
+- uid: mapping_procedure_sample_array.md
+  name: mapping_procedure_sample_array.md
+  href: tutorial/mapping/procedure/sample_array.html
+- uid: mapping_procedure_sample_cursor.md
+  name: mapping_procedure_sample_cursor.md
+  href: tutorial/mapping/procedure/sample_cursor.html
+- uid: mapping_procedure_sample_multiple_cursor.md
+  name: mapping_procedure_sample_multiple_cursor.md
+  href: tutorial/mapping/procedure/sample_multiple_cursor.html
+- uid: mapping_procedure_sample_out_cursor.md
+  name: mapping_procedure_sample_out_cursor.md
+  href: tutorial/mapping/procedure/sample_out_cursor.html
+- uid: mapping_procedure_sample_out_param.md
+  name: mapping_procedure_sample_out_param.md
+  href: tutorial/mapping/procedure/sample_out_param.html
+- uid: mapping_procedure_sample_retval.md
+  name: mapping_procedure_sample_retval.md
+  href: tutorial/mapping/procedure/sample_retval.html
+- uid: mapping_procedure_sample_retval_cursor.md
+  name: mapping_procedure_sample_retval_cursor.md
+  href: tutorial/mapping/procedure/sample_retval_cursor.html
+- uid: mapping_procedure_sample_scalar_func.md
+  name: mapping_procedure_sample_scalar_func.md
+  href: tutorial/mapping/procedure/sample_scalar_func.html
+- uid: mapping_procedure_sample_table_func.md
+  name: mapping_procedure_sample_table_func.md
+  href: tutorial/mapping/procedure/sample_table_func.html
+- uid: mapping_procedure_sample_udt.md
+  name: mapping_procedure_sample_udt.md
+  href: tutorial/mapping/procedure/sample_udt.html
+- uid: mapping_procedure_sample_udt_array.md
+  name: mapping_procedure_sample_udt_array.md
+  href: tutorial/mapping/procedure/sample_udt_array.html
 - uid: mapping_procedures.md
   name: SQL functions & procedures
   href: tutorial/mapping/procedures.html

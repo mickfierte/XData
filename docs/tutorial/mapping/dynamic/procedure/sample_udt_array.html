@@ -79,6 +79,38 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_udt_array.md">
 
 <h4 id="sql-procedure-with-udt-array-parameter-sample">SQL procedure with UDT array parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE [dbo].[Classifier] AS TABLE(
+    [Id] [int] NULL,
+    [Name] [varchar](20) NULL
+)
+
+CREATE PROCEDURE [dbo].[TestProcedure7] (@param1 Classifier READONLY)
+AS
+SELECT * from @param1
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="WARNING"><h5>Warning</h5><p>Oracle ODP.Net provider does not support UDT</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestProcedure7(p_tab classifier_rec[]) returns setof classifier_rec as $$
+    select a.Id, a.Name from unnest(p_tab) a;
+$$ LANGUAGE sql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
 [Serializable]
 public class Classifier
@@ -92,13 +124,36 @@ public class Classifier
 var param = new[] { new Classifier { Id = 1, Name = &quot;Test&quot; },
     new Classifier { Id = 2, Name = &quot;Some&quot; } };
 var f4 = XDataMapping.GetStructure(&quot;T&quot;)
-    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction4&quot;, ProcedureType.Function)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure7&quot;, ProcedureType.Procedure)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
-    .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
-        z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call(DataScope.Layer, &quot;param1&quot;.SetVar(param));
-Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
+    .Return(&quot;T&quot;)
+    .Call(DataScope, string.Empty, &quot;param1&quot;.SetVar(param));
+foreach (var classifier in res)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
+[Serializable]
+public class Classifier
+{
+    [XmlAttribute]
+    public int Id { get; set; }
+    [XmlAttribute]
+    public string Name { get; set; }
+}
+...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure7&quot;, ProcedureType.Procedure)
+.Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
+    z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestProcedure
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, string.Empty, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty)
+})
+.SetBaseTable(&quot;T&quot;)
 </code></pre></article>
           </div>
           

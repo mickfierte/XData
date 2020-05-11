@@ -79,6 +79,44 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_out_param.md">
 
 <h4 id="sql-procedure-with-out-parameter-sample">SQL procedure with out parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure3]     
+(   
+    @param1 int, 
+    @param2 varchar(20),
+    @param3 varchar(20) OUTPUT
+)
+AS
+SET @param3 = convert(varchar(20), @param1) + &#39; - &#39; + @param2
+RETURN 
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure3(p_Id int, p_Name varchar2, p_Out out varchar2)
+as
+begin
+    select p_Id || &#39; - &#39; || p_Name into p_Out from dual;
+end TestProcedure3;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestProcedure3(p_id integer, p_name varchar, out p_out varchar) as $$
+begin
+    p_Out := p_id || &#39; - &#39; || p_name;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure3(p_Id int, p_Name varchar(50), out p_Out varchar(100))
+begin
+    set p_Out = CONCAT(p_Id, &#39; - &#39;, p_Name);
+end
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure3&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),

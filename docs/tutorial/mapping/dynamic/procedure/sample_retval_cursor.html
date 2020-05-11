@@ -79,15 +79,65 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_retval_cursor.md">
 
 <h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
+<ul>
+<li><p>MS SQL Server</p>
+</li>
+<li><p>MS SQL Server</p>
+</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure6]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+SELECT @param1 as Id, @param2 as Name
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var res6 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure)
-    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
-        z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+        z =&gt; z.Direction(ParameterDirection.ReturnValue))
     .Return(&quot;T&quot;, string.Empty, 1, x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
     .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in res6)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestProcedure6
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, string.Empty, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty)
+})
+.SetBaseTable(&quot;T&quot;)
+...
+public int ResultParameter 
+        { get { return this.GetParameter(x =&gt; x.ResultParameter); } }
 </code></pre></article>
           </div>
           

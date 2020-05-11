@@ -79,7 +79,64 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_multiple_cursor.md">
 
 <h4 id="sql-procedure-with-multiple-result-sets-sample">SQL procedure with multiple result sets sample</h4>
-<pre><code class="lang-csharp">var res2 = XDataMapping.GetStructure(&quot;T&quot;)
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure2]
+(   
+    @param1 int, 
+    @param2 varchar(20),
+    @param3 int, 
+    @param4 varchar(20)
+)
+AS
+BEGIN
+    SELECT @param1 as Id, @param2 as Name
+    SELECT @param3 as Id, @param4 as Name
+END
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure2(p_Id int, p_Name varchar2, p_Out out SYS_REFCURSOR, p_Out2 out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select p_Id as Id, p_Name as Name from dual;
+    open p_Out2 for select p_Id as Id, p_Name as Name from dual;
+end TestProcedure2;
+</code></pre><div class="TIP"><h5>Tip</h5><p>Use <em>refcursor</em> parameters names as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure2 (p_id integer, p_name varchar, refcursor, refcursor)
+RETURNS SETOF refcursor AS
+$$
+begin
+    open $3 for select p_id as Id, p_name as Name;
+    return NEXT $3;
+    open $4 for select p_id as Id, p_name as Name;
+    return NEXT $4;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Functions witch returns <em>setof refcursor</em> is not supported by NpgSql .Net Standard 2.0 Edition :(
+XData net4.0 version can call that type functions with the same mapping rules as described here...</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>If <em>refcursor</em> parameters have a names it must be used as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure2(p_Id int, p_Name varchar(50))
+begin
+    select p_Id as Id, p_Name as Name;
+    select p_Id as Id, p_Name as Name;
+end
+</code></pre><ul>
+<li>Dynamic query</li>
+</ul>
+<pre><code class="lang-csharp">Expression&lt;Func&lt;IQueryStructureAdapter, PostgreSqlClassifier&gt;&gt; convertor =
+    x =&gt; new PostgreSqlClassifier { Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() };
+var res2 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
@@ -87,12 +144,33 @@
     .Parameter&lt;string&gt;(&quot;T&quot;, 4, &quot;param4&quot;, DbType.String)
     .Return(&quot;T&quot;, &quot;Result1&quot;, 1, convertor)
     .Return(&quot;T&quot;, &quot;Result2&quot;, 2, convertor)
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result1&quot;, &quot;param1&quot;.SetVar(1), 
+    .Call&lt;Classifier&gt;(DataScope, &quot;Result1&quot;, &quot;param1&quot;.SetVar(1), 
         &quot;param2&quot;.SetVar(&quot;Test&quot;), &quot;param3&quot;.SetVar(2), &quot;param4&quot;.SetVar(&quot;Some&quot;));
 foreach (var classifier in res2)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quot;))
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;param3&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 4, &quot;param4&quot;, DbType.String)
+.Return(&quot;T&quot;)
+.Return(&quot;T&quot;, &quot;Result2&quot;, 2, 
+    x =&gt; new PostgreSqlClassifier { 
+        Id = x.Field&lt;int&gt;(z =&gt; z.Key()), 
+        Name = x.Field&lt;string&gt;() })
+.Map(x =&gt; new TestProcedure2
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, string.Empty, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty)
+})
+.SetBaseTable(&quot;T&quot;)
+...
 </code></pre></article>
           </div>
           

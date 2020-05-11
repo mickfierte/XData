@@ -1023,6 +1023,15 @@ DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
     x =&gt; x.SubqueryLink(&quot;DocId&quot;))
 </code></pre><h3 id="sql-procedures--functions">SQL procedures &amp; functions</h3>
 <p>Common information about mapping to SQL procedures and functions described in <a href="../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just represent dynamic mapping rules for various procedure types.</p>
+<div class="WARNING"><h5>Warning</h5><p>SQLite not supported SQL procedures &amp; functions</p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>PostgreSql functions has restrictions:</p>
+<ul>
+<li>returning refcursor or set of refcursor requires transaction!</li>
+<li>parameters use lower case names ONLY! </li>
+<li>result set names (refcursor names) use lower case names ONLY! </li>
+</ul>
+</div>
 <h4 id="sql-procedure-as-query">SQL procedure as query</h4>
 <p>To define procedure as data source of mapping used <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Procedure_System_String_System_String_XData_ProcedureType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IInnerFilterAdapter_XData_Mapping_Dynamic_IFilterDescription_____">Procedure</a> method call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
 <h4 id="sql-procedure-parameter">SQL procedure parameter</h4>
@@ -1031,17 +1040,130 @@ DocState = x.Link&lt;string, DocState&gt;(&quot;S&quot;, &quot;name&quot;,
 <p>To describe result set of SQL procedure used <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Return__1_System_String_System_String_System_Int32_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter__0___">Return</a> method call of <a class="xref" href="../../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html">IRepositoryStructure&lt;T&gt;</a> interface.</p>
 <p>* - when result set is not mapped to procedure parameter set result set name to <em>string.Empty</em></p>
 <h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
-<pre><code class="lang-csharp">var res = XDataMapping.GetStructure(&quot;T&quot;)
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure]
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+    SELECT @param1 as Id, @param2 as Name
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure(p_Id int, p_Name varchar2, p_Out out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select p_Id as Id, p_Name as Name from dual;
+end TestProcedure;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure (p_id integer, p_name varchar, refcursor)
+RETURNS refcursor AS
+$$
+begin
+    open $3 for select p_id as Id, p_name as Name;
+    return $3;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure(p_Id int, p_Name varchar(50))
+begin
+    select p_Id as Id, p_Name as Name;
+end
+</code></pre><ul>
+<li>Dynamic query</li>
+</ul>
+<pre><code class="lang-csharp">Expression&lt;Func&lt;IQueryStructureAdapter, PostgreSqlClassifier&gt;&gt; convertor =
+    x =&gt; new PostgreSqlClassifier { Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() };
+var res = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
-    .Return(&quot;T&quot;, &quot;Result&quot;, 1, convertor)
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result&quot;, 
+    .Return(&quot;T&quot;, string.Empty, 1, convertor)
+    .Call&lt;Classifier&gt;(DataScope, string.Empty, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 foreach (var classifier in res)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestProcedure
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, string.Empty, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty)
+})
+.SetBaseTable(&quot;T&quot;)
+...
 </code></pre><h4 id="sql-procedure-with-multiple-result-sets-sample">SQL procedure with multiple result sets sample</h4>
-<pre><code class="lang-csharp">var res2 = XDataMapping.GetStructure(&quot;T&quot;)
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure2]
+(   
+    @param1 int, 
+    @param2 varchar(20),
+    @param3 int, 
+    @param4 varchar(20)
+)
+AS
+BEGIN
+    SELECT @param1 as Id, @param2 as Name
+    SELECT @param3 as Id, @param4 as Name
+END
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure2(p_Id int, p_Name varchar2, p_Out out SYS_REFCURSOR, p_Out2 out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select p_Id as Id, p_Name as Name from dual;
+    open p_Out2 for select p_Id as Id, p_Name as Name from dual;
+end TestProcedure2;
+</code></pre><div class="TIP"><h5>Tip</h5><p>Use <em>refcursor</em> parameters names as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure2 (p_id integer, p_name varchar, refcursor, refcursor)
+RETURNS SETOF refcursor AS
+$$
+begin
+    open $3 for select p_id as Id, p_name as Name;
+    return NEXT $3;
+    open $4 for select p_id as Id, p_name as Name;
+    return NEXT $4;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Functions witch returns <em>setof refcursor</em> is not supported by NpgSql .Net Standard 2.0 Edition :(
+XData net4.0 version can call that type functions with the same mapping rules as described here...</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>If <em>refcursor</em> parameters have a names it must be used as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure2(p_Id int, p_Name varchar(50))
+begin
+    select p_Id as Id, p_Name as Name;
+    select p_Id as Id, p_Name as Name;
+end
+</code></pre><ul>
+<li>Dynamic query</li>
+</ul>
+<pre><code class="lang-csharp">Expression&lt;Func&lt;IQueryStructureAdapter, PostgreSqlClassifier&gt;&gt; convertor =
+    x =&gt; new PostgreSqlClassifier { Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() };
+var res2 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
@@ -1049,13 +1171,72 @@ foreach (var classifier in res)
     .Parameter&lt;string&gt;(&quot;T&quot;, 4, &quot;param4&quot;, DbType.String)
     .Return(&quot;T&quot;, &quot;Result1&quot;, 1, convertor)
     .Return(&quot;T&quot;, &quot;Result2&quot;, 2, convertor)
-    .Call&lt;Classifier&gt;(DataScope.Layer, &quot;Result1&quot;, &quot;param1&quot;.SetVar(1), 
+    .Call&lt;Classifier&gt;(DataScope, &quot;Result1&quot;, &quot;param1&quot;.SetVar(1), 
         &quot;param2&quot;.SetVar(&quot;Test&quot;), &quot;param3&quot;.SetVar(2), &quot;param4&quot;.SetVar(&quot;Some&quot;));
 foreach (var classifier in res2)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
 foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quot;))
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;param3&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 4, &quot;param4&quot;, DbType.String)
+.Return(&quot;T&quot;)
+.Return(&quot;T&quot;, &quot;Result2&quot;, 2, 
+    x =&gt; new PostgreSqlClassifier { 
+        Id = x.Field&lt;int&gt;(z =&gt; z.Key()), 
+        Name = x.Field&lt;string&gt;() })
+.Map(x =&gt; new TestProcedure2
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, string.Empty, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty)
+})
+.SetBaseTable(&quot;T&quot;)
+...
 </code></pre><h4 id="sql-procedure-with-out-parameter-sample">SQL procedure with out parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure3]     
+(   
+    @param1 int, 
+    @param2 varchar(20),
+    @param3 varchar(20) OUTPUT
+)
+AS
+SET @param3 = convert(varchar(20), @param1) + &#39; - &#39; + @param2
+RETURN 
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure3(p_Id int, p_Name varchar2, p_Out out varchar2)
+as
+begin
+    select p_Id || &#39; - &#39; || p_Name into p_Out from dual;
+end TestProcedure3;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestProcedure3(p_id integer, p_name varchar, out p_out varchar) as $$
+begin
+    p_Out := p_id || &#39; - &#39; || p_name;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure3(p_Id int, p_Name varchar(50), out p_Out varchar(100))
+begin
+    set p_Out = CONCAT(p_Id, &#39; - &#39;, p_Name);
+end
+</code></pre><ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var res3 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure3&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
@@ -1065,7 +1246,61 @@ foreach (var classifier in res2.GetResultSet&lt;Classifier&gt;(&quot;Result2&quo
     .Call(DataScope.Layer, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure3&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;param3&quot;, DbType.String, 
+    z =&gt; z.Size(20), z =&gt; z.Direction(ParameterDirection.Output))
+.Map()
+.SetBaseTable(&quot;T&quot;)
+...
 </code></pre><h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure4]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+SELECT @param1 as Id, @param2 as Name
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure4(p_Tab in classifier_tab, p_Out out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select Id, Name from table(p_Tab);
+end TestProcedure4;
+</code></pre><div class="TIP"><h5>Tip</h5><p>Use <em>refcursor</em> parameters names as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure4 (p_tab public.classifier_rec [], refcursor)
+RETURNS refcursor AS
+$$
+begin
+    open $2 for select Id, Name from unnest(p_tab);
+    return $2;
+end
+$$
+LANGUAGE plpgsql;
+</code></pre><div class="TIP"><h5>Tip</h5><p>If <em>refcursor</em> parameters have a names it must be used as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var res4 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
@@ -1073,13 +1308,55 @@ Console.WriteLine(res3.GetParameter&lt;string&gt;(&quot;param3&quot;));
     .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
     .Return(&quot;T&quot;, string.Empty, 1, x =&gt; new Classifier { 
-        Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
-    .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, 
+        Id = x.Field&lt;int&gt;(z =&gt; z.Key()), 
+        Name = x.Field&lt;string&gt;() })
+    .Call&lt;Classifier&gt;(DataScope, string.Empty, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res4.GetParameter&lt;int&gt;(&quot;result&quot;));
 foreach (var classifier in res4)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestProcedure4
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, string.Empty, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty)
+})
+.SetBaseTable(&quot;T&quot;)
 </code></pre><h4 id="sql-procedure-with-return-value-sample">SQL procedure with return value sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure5]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var res5 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure)
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
@@ -1089,26 +1366,151 @@ foreach (var classifier in res4)
     .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, 
         &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
 Console.WriteLine(res5.GetParameter&lt;int&gt;(&quot;result&quot;));
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+.Map()
+.SetBaseTable(&quot;T&quot;)
+...
+public int ResultParameter 
+        { get { return this.GetParameter&lt;int&gt;(&quot;result&quot;); } }
 </code></pre><h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
+<ul>
+<li><p>MS SQL Server</p>
+</li>
+<li><p>MS SQL Server</p>
+</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure6]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+SELECT @param1 as Id, @param2 as Name
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var res6 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure)
-    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
-        z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+        z =&gt; z.Direction(ParameterDirection.ReturnValue))
     .Return(&quot;T&quot;, string.Empty, 1, x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(z =&gt; z.Key()), Name = x.Field&lt;string&gt;() })
     .Call&lt;Classifier&gt;(DataScope.Layer, string.Empty, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in res6)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Parameter&lt;int&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.Int32, 
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestProcedure6
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, string.Empty, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty)
+})
+.SetBaseTable(&quot;T&quot;)
+...
+public int ResultParameter 
+        { get { return this.GetParameter(x =&gt; x.ResultParameter); } }
 </code></pre><h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
+<ul>
+<li>MS SQL Server </li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction6(p_arr INTEGER[]) returns integer as $$
+begin
+    return sum(s) from unnest(p_arr) s;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var arr = new[] { 1, 2, 3 };
 var f6 = XDataMapping.GetStructure(&quot;T&quot;)
     .Procedure(&quot;T&quot;, &quot;TestFunction6&quot;, ProcedureType.Function)
     .Parameter&lt;int[]&gt;(&quot;T&quot;, 1, &quot;p_arr&quot;, DbType.Int32, z =&gt; z.Array())
     .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
         z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call(DataScope.Layer, &quot;p_arr&quot;.SetVar(arr));
+    .Call(DataScope, &quot;p_arr&quot;.SetVar(arr));
 Console.WriteLine(f6.GetParameter&lt;int&gt;(&quot;result&quot;));
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;TestFunction6&quot;, ProcedureType.Function)
+.Parameter&lt;int[]&gt;(&quot;T&quot;, 1, &quot;p_arr&quot;, DbType.Int32, z =&gt; z.Array())
+.Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+...
 </code></pre><h4 id="sql-procedure-with-udt-parameter-sample">SQL procedure with UDT parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="TIP"><h5>Tip</h5><p>MS SQL Server does not support passing single UDT object as a parameter value, but support array of UDT</p>
+</div>
+<ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="WARNING"><h5>Warning</h5><p>Oracle ODP.Net provider does not support UDT</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestFunction5(p_obj classifier_rec) returns varchar as $$
+begin
+    return p_obj.Id || &#39; - &#39; || p_obj.Name;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
 [Serializable]
 public class Classifier
@@ -1125,12 +1527,69 @@ var f5 = XDataMapping.GetStructure(&quot;T&quot;)
         z =&gt; z.UdtDataType(&quot;classifier_rec&quot;))
     .Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.String, 
         z =&gt; z.Size(20),
-        z =&gt; z.Direction(ParameterDirection.ReturnValue), 
-        z =&gt; z.NativeSqlType(&quot;VARCHAR&quot;))
-    .Call(DataScope.Layer, &quot;p_obj&quot;.SetVar(
+        z =&gt; z.Direction(ParameterDirection.ReturnValue))
+    .Call(DataScope, &quot;p_obj&quot;.SetVar(
         new Classifier { Id = 1, Name = &quot;Test&quot; }));
 Console.WriteLine(f5.GetParameter&lt;string&gt;(&quot;result&quot;));
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
+[Serializable]
+public class Classifier
+{
+    [XmlAttribute]
+    public int Id { get; set; }
+    [XmlAttribute]
+    public string Name { get; set; }
+}
+...
+.Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function)
+.Parameter&lt;Classifier&gt;(&quot;T&quot;, 1, &quot;p_obj&quot;, DbType.Object, 
+    z =&gt; z.UdtDataType(&quot;classifier_rec&quot;))
+.Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.String, 
+    z =&gt; z.Size(20),
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+.Map()
+.SetBaseTable(&quot;T&quot;)
+...
+public class TestFunction5 : IDataObject
+{
+    public string Result =&gt; this.GetParameter(x =&gt; x.Result);
+}
 </code></pre><h4 id="sql-procedure-with-udt-array-parameter-sample">SQL procedure with UDT array parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE [dbo].[Classifier] AS TABLE(
+    [Id] [int] NULL,
+    [Name] [varchar](20) NULL
+)
+
+CREATE PROCEDURE [dbo].[TestProcedure7] (@param1 Classifier READONLY)
+AS
+SELECT * from @param1
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="WARNING"><h5>Warning</h5><p>Oracle ODP.Net provider does not support UDT</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestProcedure7(p_tab classifier_rec[]) returns setof classifier_rec as $$
+    select a.Id, a.Name from unnest(p_tab) a;
+$$ LANGUAGE sql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
 [Serializable]
 public class Classifier
@@ -1144,36 +1603,204 @@ public class Classifier
 var param = new[] { new Classifier { Id = 1, Name = &quot;Test&quot; },
     new Classifier { Id = 2, Name = &quot;Some&quot; } };
 var f4 = XDataMapping.GetStructure(&quot;T&quot;)
-    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction4&quot;, ProcedureType.Function)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestProcedure7&quot;, ProcedureType.Procedure)
     .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
         z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
-    .Parameter&lt;int&gt;(&quot;T&quot;, 2, &quot;result&quot;, DbType.Int32, 
-        z =&gt; z.Direction(ParameterDirection.ReturnValue))
-    .Call(DataScope.Layer, &quot;param1&quot;.SetVar(param));
-Console.WriteLine(f4.GetParameter&lt;int&gt;(&quot;result&quot;));
+    .Return(&quot;T&quot;)
+    .Call(DataScope, string.Empty, &quot;param1&quot;.SetVar(param));
+foreach (var classifier in res)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
+[Serializable]
+public class Classifier
+{
+    [XmlAttribute]
+    public int Id { get; set; }
+    [XmlAttribute]
+    public string Name { get; set; }
+}
+...
+.Procedure(&quot;T&quot;, &quot;dbo.TestProcedure7&quot;, ProcedureType.Procedure)
+.Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
+    z =&gt; z.UdtDataType(null, &quot;dbo.Classifier&quot;))
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestProcedure
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, string.Empty, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, string.Empty)
+})
+.SetBaseTable(&quot;T&quot;)
 </code></pre><h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE FUNCTION [dbo].[TestFunction] 
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+RETURNS TABLE 
+AS
+RETURN 
+(
+    SELECT @param1 as Id, @param2 as Name
+)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE type classifier_rec is object (Id int, Name varchar2(20));
+CREATE OR REPLACE type classifier_tab is table of classifier_rec;
+
+function TestFunction(p_Id int, p_Name varchar2) return classifier_tab pipelined
+is
+begin
+for curr in (select p_Id as Id, p_Name as Name from dual) loop
+  pipe row (classifier_rec(curr.Id, curr.Name));
+end loop;
+end TestFunction;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction(p_id integer, p_name varchar) 
+returns TABLE (
+  Id bigint,
+  Name varchar
+) as $$
+    select p_id as Id, p_name as Name;
+$$ LANGUAGE SQL;
+</code></pre><p>... or with the same mapping syntax...</p>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestFunction(p_Id integer, p_Name varchar) returns setof classifier_rec as $$
+    select p_Id as Id, p_Name as Name;
+$$ LANGUAGE SQL;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span> </p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">var f3 = XDataMapping.GetStructure()
-    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function)
-    .Parameter&lt;Classifier[]&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Object, 
-        z =&gt; z.UdtDataType(&quot;dbo.Classifier&quot;))
+    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function)
+    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+    .Return(&quot;T&quot;)
     .Select(x =&gt; new Classifier { 
         Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
         Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
     .AsQuery(DataScope, &quot;param1&quot;.SetVar(param));
 foreach (var classifier in f3)
     Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
-</code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
-<pre><code class="lang-csharp">var f1 = XDataMapping.GetStructure()
-    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function)
+</code></pre><ul>
+<li>Dynamic query table function with joined table</li>
+</ul>
+<pre><code class="lang-csharp">var f1Join = XDataMapping.GetStructure()
+    .DataTable(&quot;T_DOC_TYPE&quot;, &quot;D&quot;)
+    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function, 
+        z =&gt; z.Link(&quot;D&quot;, &quot;doc_type_id&quot;, &quot;Id&quot;))
     .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
     .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
-    .Select(x =&gt; new Classifier { 
-        Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
-        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
-    .AsQuery(DataScope, 
-        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
-foreach (var classifier in f1)
-    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+    .Return(&quot;T&quot;)
+    .Select(x =&gt; new {
+        Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()),
+        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;),
+        Code = x.Field&lt;string&gt;(&quot;D&quot;, string.Empty)
+    })
+    .AsQuery(DataScope, &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
+foreach (var res in f1Join)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot; - \&quot;{2}\&quot;&quot;, res.Id, res.Name, res.Code);
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">...
+.Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function)
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestFunction
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;)
+})
+.SetBaseTable(&quot;T&quot;)
+</code></pre><ul>
+<li>Mapping table function with joined table</li>
+</ul>
+<pre><code class="lang-csharp">.DataTable(&quot;T_DOC_TYPE&quot;, &quot;D&quot;)
+.Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function, 
+    z =&gt; z.Link(&quot;D&quot;, &quot;doc_type_id&quot;, &quot;Id&quot;))
+.Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
+.Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
+.Return(&quot;T&quot;)
+.Map(x =&gt; new TestFunctionJoin
+{
+    Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()),
+    Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;),
+    Code = x.Field&lt;string&gt;(&quot;D&quot;, string.Empty)
+})
+.SetBaseTable(&quot;D&quot;)
+</code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE FUNCTION [dbo].[TestFunction2]
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+RETURNS varchar(20)
+AS
+BEGIN
+DECLARE @res varchar(20) 
+SET @res = convert(varchar(20), @param1) + &#39; - &#39; + @param2
+RETURN @res
+END
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">function TestFunction2(p_Id int, p_Name varchar2) return varchar2
+is
+begin
+  return p_Id || &#39; - &#39; || p_Name;
+end TestFunction2;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction2(p_id integer, p_name varchar) returns varchar as $$
+DECLARE
+ret varchar;
+begin
+    select p_id || &#39; - &#39; || p_name into ret;
+    return ret;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create function TestFunction2(p_Id int, p_Name varchar(20)) returns varchar(100)
+begin
+    declare res varchar(100);
+    select CONCAT(p_Id, &#39; - &#39;, p_Name) into res;
+    return(res);
+end
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">var t1 = XDataMapping.GetStructure(&quot;T&quot;)
+    .DataTable(&quot;T_DOC_TYPE&quot;, &quot;T&quot;).Select(x =&gt; new
+    {
+        DocTypeId = x.Field&lt;long&gt;(&quot;T&quot;, &quot;doc_type_id&quot;, z =&gt; z.Key()),
+        Code = x.Field&lt;string&gt;(&quot;T&quot;, &quot;code&quot;),
+        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;name&quot;),
+        Test = x.Expr(&quot;test&quot;, z =&gt; z.SqlFn&lt;string&gt;(&quot;dbo.TestFunction2&quot;,
+            y =&gt; y.Field&lt;long&gt;(&quot;T&quot;, &quot;doc_type_id&quot;), y =&gt; y.Field&lt;string&gt;(&quot;T&quot;, &quot;name&quot;)), DbType.String, z =&gt; z.Size(20))
+    }).AsQuery(DataScope);
+foreach (var z in t1)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot; - \&quot;{2}\&quot; - \&quot;{3}\&quot;&quot;, z.DocTypeId, z.Code, z.Name, z.Test);
 </code></pre></article>
           </div>
           

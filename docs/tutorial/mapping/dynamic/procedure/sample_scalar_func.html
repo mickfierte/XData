@@ -79,17 +79,63 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_scalar_func.md">
 
 <h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
-<pre><code class="lang-csharp">var f1 = XDataMapping.GetStructure()
-    .Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function)
-    .Parameter&lt;int&gt;(&quot;T&quot;, 1, &quot;param1&quot;, DbType.Int32)
-    .Parameter&lt;string&gt;(&quot;T&quot;, 2, &quot;param2&quot;, DbType.String)
-    .Select(x =&gt; new Classifier { 
-        Id = x.Field&lt;int&gt;(&quot;T&quot;, &quot;Id&quot;, z =&gt; z.Key()), 
-        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;Name&quot;) })
-    .AsQuery(DataScope, 
-        &quot;param1&quot;.SetVar(1), &quot;param2&quot;.SetVar(&quot;Test&quot;));
-foreach (var classifier in f1)
-    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot;&quot;, classifier.Id, classifier.Name);
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE FUNCTION [dbo].[TestFunction2]
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+RETURNS varchar(20)
+AS
+BEGIN
+DECLARE @res varchar(20) 
+SET @res = convert(varchar(20), @param1) + &#39; - &#39; + @param2
+RETURN @res
+END
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">function TestFunction2(p_Id int, p_Name varchar2) return varchar2
+is
+begin
+  return p_Id || &#39; - &#39; || p_Name;
+end TestFunction2;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction2(p_id integer, p_name varchar) returns varchar as $$
+DECLARE
+ret varchar;
+begin
+    select p_id || &#39; - &#39; || p_name into ret;
+    return ret;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create function TestFunction2(p_Id int, p_Name varchar(20)) returns varchar(100)
+begin
+    declare res varchar(100);
+    select CONCAT(p_Id, &#39; - &#39;, p_Name) into res;
+    return(res);
+end
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">var t1 = XDataMapping.GetStructure(&quot;T&quot;)
+    .DataTable(&quot;T_DOC_TYPE&quot;, &quot;T&quot;).Select(x =&gt; new
+    {
+        DocTypeId = x.Field&lt;long&gt;(&quot;T&quot;, &quot;doc_type_id&quot;, z =&gt; z.Key()),
+        Code = x.Field&lt;string&gt;(&quot;T&quot;, &quot;code&quot;),
+        Name = x.Field&lt;string&gt;(&quot;T&quot;, &quot;name&quot;),
+        Test = x.Expr(&quot;test&quot;, z =&gt; z.SqlFn&lt;string&gt;(&quot;dbo.TestFunction2&quot;,
+            y =&gt; y.Field&lt;long&gt;(&quot;T&quot;, &quot;doc_type_id&quot;), y =&gt; y.Field&lt;string&gt;(&quot;T&quot;, &quot;name&quot;)), DbType.String, z =&gt; z.Size(20))
+    }).AsQuery(DataScope);
+foreach (var z in t1)
+    Console.WriteLine(&quot;{0} - \&quot;{1}\&quot; - \&quot;{2}\&quot; - \&quot;{3}\&quot;&quot;, z.DocTypeId, z.Code, z.Name, z.Test);
 </code></pre></article>
           </div>
           

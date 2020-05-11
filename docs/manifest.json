@@ -3804,7 +3804,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/mapping_two.html",
-          "hash": "8rfLsG7are5a18tevGs8pQ=="
+          "hash": "71e4FqA33Gh3FhNdA4XEYw=="
         }
       },
       "is_incremental": false,
@@ -4443,7 +4443,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/dynamic.html",
-          "hash": "UVItRnFJLJ7qrpMzbbXs6Q=="
+          "hash": "WyCeBgDmK4cHCCSGpx26kw=="
         }
       },
       "is_incremental": false,
@@ -4611,7 +4611,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/procedure.html",
-          "hash": "9437CmjPaksMsEsaUi2btA=="
+          "hash": "gpiw0jeeB/XO+0jmYp3Z2Q=="
         }
       },
       "is_incremental": false,
@@ -4635,7 +4635,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_array.html",
-          "hash": "gPLBmqxEJZv2k0rIpufL7g=="
+          "hash": "aHy4UBkGVEB/9wmtUoqhrw=="
         }
       },
       "is_incremental": false,
@@ -4647,7 +4647,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_cursor.html",
-          "hash": "M4pzg9rhsyD4u2aa+QeeFA=="
+          "hash": "d0RbRN4nXBc9hjE2maxjGA=="
         }
       },
       "is_incremental": false,
@@ -4659,7 +4659,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_multiple_cursor.html",
-          "hash": "MJNrQAFLg18SPPF7h2xv2A=="
+          "hash": "uwaxv9hVC4Ld3E/oxVrkbQ=="
         }
       },
       "is_incremental": false,
@@ -4671,7 +4671,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_out_cursor.html",
-          "hash": "VqvqLpARH5niZ+J7yugDEw=="
+          "hash": "T3ndWizKlt+PfaeRLE8siw=="
         }
       },
       "is_incremental": false,
@@ -4683,7 +4683,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_out_param.html",
-          "hash": "zheGHGE+UbeysCAageKk4g=="
+          "hash": "snzm8LjVVh44hj+Ee+PpEw=="
         }
       },
       "is_incremental": false,
@@ -4695,7 +4695,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_retval.html",
-          "hash": "lvqu3RXfpM8UcjV4Y8riQw=="
+          "hash": "qnj6ULbuUdSSecnGuj9Mpw=="
         }
       },
       "is_incremental": false,
@@ -4707,7 +4707,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_retval_cursor.html",
-          "hash": "XRVQIwjP/dzIcI3EoLmp5w=="
+          "hash": "DNcHZtbrGS79QRlW3cwfmA=="
         }
       },
       "is_incremental": false,
@@ -4719,7 +4719,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_scalar_func.html",
-          "hash": "JGvqzpxGpceULf+48SYDig=="
+          "hash": "lApFp4ed2HZ32fVUHOpqMg=="
         }
       },
       "is_incremental": false,
@@ -4731,7 +4731,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_table_func.html",
-          "hash": "Z7KaP9cqMeoJl7Tkw0wrrg=="
+          "hash": "fsRAmrcNXbvHOGl7zFmE2Q=="
         }
       },
       "is_incremental": false,
@@ -4743,7 +4743,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_udt.html",
-          "hash": "KtmN+iEzVZYC2wLa2Ihoiw=="
+          "hash": "Y/bKQJvh3aKaP15re2FpSQ=="
         }
       },
       "is_incremental": false,
@@ -4755,7 +4755,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/procedure/sample_udt_array.html",
-          "hash": "6jhUgoPs6gYPYaxsmbYvFQ=="
+          "hash": "drooXDu+FBhTRrgFjB1ixQ=="
         }
       },
       "is_incremental": false,
@@ -4994,6 +4994,138 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_array.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_array.html",
+          "hash": "5Hd9vgti6gLVByBkFbLzvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_cursor.html",
+          "hash": "iZZloN4H8DFfZOjPk1PQjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_multiple_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_multiple_cursor.html",
+          "hash": "n7llZRT3OtI3yn721k7BEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_out_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_out_cursor.html",
+          "hash": "7AgjQtx3e77EDuozCWjQeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_out_param.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_out_param.html",
+          "hash": "lqJur2d/J/J0HOBVWVnBzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_retval.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_retval.html",
+          "hash": "4Dh2ZZAureeN4HNBjXYy8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_retval_cursor.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_retval_cursor.html",
+          "hash": "zsa1vwN72d9UJXq0iEdL3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_scalar_func.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_scalar_func.html",
+          "hash": "TaIKGrTiZNOuwYEsxJdVuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_table_func.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_table_func.html",
+          "hash": "/mfXpdZzWlqUUOuQHsjtrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_udt.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_udt.html",
+          "hash": "X71uW0vmGydmMivwidWMXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorial/mapping/procedure/sample_udt_array.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorial/mapping/procedure/sample_udt_array.html",
+          "hash": "8CVJeIB6XFTZBpewqlUpmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tutorial/mapping/procedures.md",
       "output": {
         ".html": {
@@ -5202,7 +5334,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/procedure.html",
-          "hash": "9jjsHFmzZ2WL8PvH/Z7m1A=="
+          "hash": "yDfEfLH0Ybu1x4mgcr1qwg=="
         }
       },
       "is_incremental": false,
@@ -5226,7 +5358,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_array.html",
-          "hash": "FnjPkRHxt5bqodSSidcPbQ=="
+          "hash": "EIRpOf70mhDaN8CKQgOu6A=="
         }
       },
       "is_incremental": false,
@@ -5238,7 +5370,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_cursor.html",
-          "hash": "JuXd6D8nTMYTDXM6S+QFeA=="
+          "hash": "YXFIcDxFXtuWxn6eFxuXiA=="
         }
       },
       "is_incremental": false,
@@ -5250,7 +5382,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_multiple_cursor.html",
-          "hash": "Wra5zAr8vVfgbBG5GqckFQ=="
+          "hash": "Ra12TNypxUwVUl6WkSM3tg=="
         }
       },
       "is_incremental": false,
@@ -5262,7 +5394,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_out_cursor.html",
-          "hash": "ycWiW+/lfu/UG4dYGA5/0g=="
+          "hash": "yOUQlAbJw13V0PnuY+TT3g=="
         }
       },
       "is_incremental": false,
@@ -5274,7 +5406,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_out_param.html",
-          "hash": "hhhzZ6ySWlbIdY25Px+ExA=="
+          "hash": "v87iDIt4DZgatYzb6iJ76w=="
         }
       },
       "is_incremental": false,
@@ -5286,7 +5418,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_retval.html",
-          "hash": "i5BrZbWk13l7aIuEt96Czw=="
+          "hash": "kaJ3zpYyorvxpwwUQ/E6EA=="
         }
       },
       "is_incremental": false,
@@ -5298,7 +5430,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_retval_cursor.html",
-          "hash": "x1bYdHeXhB9Ka5kYCJB53w=="
+          "hash": "mkzn4pSui3OY6FZawnXW2A=="
         }
       },
       "is_incremental": false,
@@ -5310,7 +5442,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_scalar_func.html",
-          "hash": "eSibIiMeghqknRuuSbmiZw=="
+          "hash": "tlGrNA1bX+gBNTbWn38fsQ=="
         }
       },
       "is_incremental": false,
@@ -5322,7 +5454,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_table_func.html",
-          "hash": "gRtFrpEMfXrmK3hO0uNvzw=="
+          "hash": "8I7Qj5ldQu9wFKe7er1vww=="
         }
       },
       "is_incremental": false,
@@ -5334,7 +5466,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_udt.html",
-          "hash": "uSvMRBOHX/i8Lv5tIoZRFQ=="
+          "hash": "1kUfYRo61xye2Ls9RfuKLQ=="
         }
       },
       "is_incremental": false,
@@ -5346,7 +5478,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/procedure/sample_udt_array.html",
-          "hash": "mX0Lfg/KMwySpihB/e44Vw=="
+          "hash": "SO3ctA6Uii2PdSIMfLxdFg=="
         }
       },
       "is_incremental": false,
@@ -5493,7 +5625,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/static.html",
-          "hash": "7wzKX3PsTvr26EB7NjUQdg=="
+          "hash": "sLdVUwXWDwMrN9/O8CJb+g=="
         }
       },
       "is_incremental": false,
@@ -5724,8 +5856,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 149,
-          "skipped_file_count": 147
+          "total_file_count": 160,
+          "skipped_file_count": 132
         }
       }
     },

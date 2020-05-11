@@ -803,6 +803,15 @@ public Link&lt;string, DocState&gt; DocState { get; set; }
     1 /* variable value */)]
 </code></pre><h3 id="sql-procedures--functions">SQL procedures &amp; functions</h3>
 <p>Common information about mapping to SQL procedures and functions has described in <a href="../mapping.html#sql-functions--procedures">common mapping rules description</a> and here we just represent static mapping rules for various procedure types.</p>
+<div class="WARNING"><h5>Warning</h5><p>SQLite not supported SQL procedures &amp; functions</p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>PostgreSql functions has restrictions:</p>
+<ul>
+<li>returning refcursor or set of refcursor requires transaction!</li>
+<li>parameters use lower case names ONLY! </li>
+<li>result set names (refcursor names) use lower case names ONLY! </li>
+</ul>
+</div>
 <h4 id="sql-procedure-as-query">SQL procedure as query</h4>
 <p>To define procedure as data source of mapping used <a class="xref" href="../../../api/XData.Mapping.ProcedureAttribute.html">ProcedureAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - procedure or function name, <em>ProcedureType</em> - <a class="xref" href="../../../api/XData.ProcedureType.html">ProcedureType</a>: <em>ProcedureType</em>.<strong>Procedure</strong> or <em>ProcedureType</em>.<strong>Function</strong>.</p>
 <h4 id="sql-procedure-parameter">SQL procedure parameter</h4>
@@ -810,6 +819,45 @@ public Link&lt;string, DocState&gt; DocState { get; set; }
 <h4 id="sql-procedure-result-set">SQL procedure result set</h4>
 <p>To describe result set of SQL procedure used <a class="xref" href="../../../api/XData.Mapping.ResultSetAttribute.html">ResultSetAttribute</a> with parameters: <em>Alias</em> - procedure alias, <em>Name</em> - result set name used inside application code, when result set is not mapped to procedure parameter set it to <em>&quot;&quot;</em> (empty string), <em>Order</em> - optional, order number of result set (required to procedures returns multiple result sets), <em>ResultType</em> - optional, mapped type of result set, default is attributed class itself, <em>IsDefault</em> - optional, result set is default - mapped to attributed class (used when procedure returns multiple result sets), default is <strong>false</strong>.</p>
 <h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure]
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+    SELECT @param1 as Id, @param2 as Name
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure(p_Id int, p_Name varchar2, p_Out out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select p_Id as Id, p_Name as Name from dual;
+end TestProcedure;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure (p_id integer, p_name varchar, refcursor)
+RETURNS refcursor AS
+$$
+begin
+    open $3 for select p_id as Id, p_name as Name;
+    return $3;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure(p_Id int, p_Name varchar(50))
+begin
+    select p_Id as Id, p_Name as Name;
+end
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -823,6 +871,61 @@ public class TestProcedure : IDataObject
     public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
 }
 </code></pre><h4 id="sql-procedure-with-multiple-result-sets-sample">SQL procedure with multiple result sets sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure2]
+(   
+    @param1 int, 
+    @param2 varchar(20),
+    @param3 int, 
+    @param4 varchar(20)
+)
+AS
+BEGIN
+    SELECT @param1 as Id, @param2 as Name
+    SELECT @param3 as Id, @param4 as Name
+END
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure2(p_Id int, p_Name varchar2, p_Out out SYS_REFCURSOR, p_Out2 out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select p_Id as Id, p_Name as Name from dual;
+    open p_Out2 for select p_Id as Id, p_Name as Name from dual;
+end TestProcedure2;
+</code></pre><div class="TIP"><h5>Tip</h5><p>Use <em>refcursor</em> parameters names as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure2 (p_id integer, p_name varchar, refcursor, refcursor)
+RETURNS SETOF refcursor AS
+$$
+begin
+    open $3 for select p_id as Id, p_name as Name;
+    return NEXT $3;
+    open $4 for select p_id as Id, p_name as Name;
+    return NEXT $4;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Functions witch returns <em>setof refcursor</em> is not supported by NpgSql .Net Standard 2.0 Edition :(
+XData net4.0 version can call that type functions with the same mapping rules as described here...</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>If <em>refcursor</em> parameters have a names it must be used as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure2(p_Id int, p_Name varchar(50))
+begin
+    select p_Id as Id, p_Name as Name;
+    select p_Id as Id, p_Name as Name;
+end
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure2&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -841,6 +944,44 @@ public class TestProcedure2 : IDataObject
         { get { return this.GetResultSet(x =&gt; x.SecondResult); } }
 }
 </code></pre><h4 id="sql-procedure-with-out-parameter-sample">SQL procedure with out parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure3]     
+(   
+    @param1 int, 
+    @param2 varchar(20),
+    @param3 varchar(20) OUTPUT
+)
+AS
+SET @param3 = convert(varchar(20), @param1) + &#39; - &#39; + @param2
+RETURN 
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure3(p_Id int, p_Name varchar2, p_Out out varchar2)
+as
+begin
+    select p_Id || &#39; - &#39; || p_Name into p_Out from dual;
+end TestProcedure3;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestProcedure3(p_id integer, p_name varchar, out p_out varchar) as $$
+begin
+    p_Out := p_id || &#39; - &#39; || p_name;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure3(p_Id int, p_Name varchar(50), out p_Out varchar(100))
+begin
+    set p_Out = CONCAT(p_Id, &#39; - &#39;, p_Name);
+end
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure3&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -856,6 +997,48 @@ public class TestProcedure3 : IDataObject
         { get { return this.GetParameter(x =&gt; x.OutParameter); } }
 }
 </code></pre><h4 id="sql-procedure-with-out-parameter-and-result-set-sample">SQL procedure with out parameter and result set sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure4]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+SELECT @param1 as Id, @param2 as Name
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure4(p_Tab in classifier_tab, p_Out out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select Id, Name from table(p_Tab);
+end TestProcedure4;
+</code></pre><div class="TIP"><h5>Tip</h5><p>Use <em>refcursor</em> parameters names as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure4 (p_tab public.classifier_rec [], refcursor)
+RETURNS refcursor AS
+$$
+begin
+    open $2 for select Id, Name from unnest(p_tab);
+    return $2;
+end
+$$
+LANGUAGE plpgsql;
+</code></pre><div class="TIP"><h5>Tip</h5><p>If <em>refcursor</em> parameters have a names it must be used as <em>ResultSet</em> names!</p>
+</div>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure4&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -876,21 +1059,75 @@ public class TestProcedure4 : IDataObject
         { get { return this.GetParameter(x =&gt; x.OutParameter); } }
 }
 </code></pre><h4 id="sql-procedure-with-return-value-sample">SQL procedure with return value sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure5]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
         Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-        Parameter(&quot;T&quot;, 3, &quot;OutParameter&quot;, typeof(string), 
+        Parameter(&quot;T&quot;, 3, &quot;ReturnValue&quot;, typeof(string), 
             DbType.String, 
             Size = 20, 
-            Direction = ParameterDirection.Output, 
-            Name = &quot;param3&quot;)]
+            Direction = ParameterDirection.ReturnValue, 
+            Name = &quot;result&quot;)]
 public class TestProcedure5 : IDataObject
 {
-    public string OutParameter 
-        { get { return this.GetParameter(x =&gt; x.OutParameter); } }
+    public string ReturnValue 
+        { get { return this.GetParameter(x =&gt; x.ReturnValue); } }
 }
 </code></pre><h4 id="sql-procedure-with-return-value-and-result-set-sample">SQL procedure with return value and result set sample</h4>
+<ul>
+<li><p>MS SQL Server</p>
+</li>
+<li><p>MS SQL Server</p>
+</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure6]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+SELECT @param1 as Id, @param2 as Name
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure6&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
@@ -909,6 +1146,29 @@ public class TestProcedure6 : IDataObject
         { get { return this.GetParameter(x =&gt; x.ResultParameter); } }
 }
 </code></pre><h4 id="sql-procedure-with-simple-array-parameter-sample">SQL procedure with simple array parameter sample</h4>
+<ul>
+<li>MS SQL Server </li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction6(p_arr INTEGER[]) returns integer as $$
+begin
+    return sum(s) from unnest(p_arr) s;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;TestFunction&quot;, ProcedureType.Function),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int[]), DbType.Int32, IsArray = true),
@@ -919,6 +1179,35 @@ public class TestFunction : IDataObject
     public int Result { get { return this.GetParameter(x =&gt; x.Result); } }
 }
 </code></pre><h4 id="sql-procedure-with-udt-parameter-sample">SQL procedure with UDT parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="TIP"><h5>Tip</h5><p>MS SQL Server does not support passing single UDT object as a parameter value, but support array of UDT</p>
+</div>
+<ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="WARNING"><h5>Warning</h5><p>Oracle ODP.Net provider does not support UDT</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestFunction5(p_obj classifier_rec) returns varchar as $$
+begin
+    return p_obj.Id || &#39; - &#39; || p_obj.Name;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
 [Serializable]
 public class Classifier
@@ -930,18 +1219,50 @@ public class Classifier
 }
 ...
 [DataObject(&quot;T&quot;),
-        Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function),
-        Parameter(&quot;T&quot;, 1, &quot;p_obj&quot;, 
-            typeof(Classifier), 
-            DbType.Object, 
-            UdtTypeName =  &quot;dbo.Classifier&quot; /* Full qualified name of UDT */ ),
-        Parameter(&quot;T&quot;, 2, &quot;Result&quot;, typeof(string), DbType.String, Size = 20, 
-            Direction = ParameterDirection.ReturnValue)]
-public class PostgreSqlTestFunction5 : IDataObject
+    Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function),
+    Parameter(&quot;T&quot;, 1, &quot;p_obj&quot;, 
+        typeof(Classifier), 
+        DbType.Object, 
+        UdtTypeName =  &quot;classifier_rec&quot; /* Full qualified name of UDT */ ),
+    Parameter(&quot;T&quot;, 2, &quot;Result&quot;, typeof(string), DbType.String, Size = 20, 
+        Direction = ParameterDirection.ReturnValue)]
+public class TestFunction5 : IDataObject
 {
-    public string Result { get { return this.GetParameter(x =&gt; x.Result); } }
+    public string Result =&gt; this.GetParameter(x =&gt; x.Result);
 }
 </code></pre><h4 id="sql-procedure-with-udt-array-parameter-sample">SQL procedure with UDT array parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE [dbo].[Classifier] AS TABLE(
+    [Id] [int] NULL,
+    [Name] [varchar](20) NULL
+)
+
+CREATE PROCEDURE [dbo].[TestProcedure7] (@param1 Classifier READONLY)
+AS
+SELECT * from @param1
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="WARNING"><h5>Warning</h5><p>Oracle ODP.Net provider does not support UDT</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestProcedure7(p_tab classifier_rec[]) returns setof classifier_rec as $$
+    select a.Id, a.Name from unnest(p_tab) a;
+$$ LANGUAGE sql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
 [Serializable]
 public class Classifier
@@ -958,28 +1279,143 @@ public class Classifier
         typeof(Classifier[]) /* Parameter type must be an array of mapped type */, 
         DbType.Object, 
         UdtTypeName = &quot;dbo.Classifier&quot; /* Full qualified name of UDT */ ),
-    ResultSet(&quot;T&quot;, &quot;&quot;)]
+    ResultSet(&quot;T&quot;)]
 public class TestProcedure7 : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
-    public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
+    public int Id =&gt; this.GetProperty(x =&gt; x.Id);
     [Property(&quot;T&quot;, &quot;Name&quot;)]
-    public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
+    public string Name =&gt; this.GetProperty(x =&gt; x.Name);
 }
 </code></pre><h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE FUNCTION [dbo].[TestFunction] 
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+RETURNS TABLE 
+AS
+RETURN 
+(
+    SELECT @param1 as Id, @param2 as Name
+)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE type classifier_rec is object (Id int, Name varchar2(20));
+CREATE OR REPLACE type classifier_tab is table of classifier_rec;
+
+function TestFunction(p_Id int, p_Name varchar2) return classifier_tab pipelined
+is
+begin
+for curr in (select p_Id as Id, p_Name as Name from dual) loop
+  pipe row (classifier_rec(curr.Id, curr.Name));
+end loop;
+end TestFunction;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction(p_id integer, p_name varchar) 
+returns TABLE (
+  Id bigint,
+  Name varchar
+) as $$
+    select p_id as Id, p_name as Name;
+$$ LANGUAGE SQL;
+</code></pre><p>... or with the same mapping syntax...</p>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestFunction(p_Id integer, p_Name varchar) returns setof classifier_rec as $$
+    select p_Id as Id, p_Name as Name;
+$$ LANGUAGE SQL;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span> </p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
-    Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function),
+    Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
     ResultSet(&quot;T&quot;)]
-public class TestFunction3 : IDataObject
+public class TestFunction : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
     public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
     [Property(&quot;T&quot;, &quot;Name&quot;)]
     public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
 }
+</code></pre><ul>
+<li>Mapping table function with joined table</li>
+</ul>
+<pre><code class="lang-csharp">[DataObject(&quot;D&quot;),
+    Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function),
+    Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+    Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+    ResultSet(&quot;T&quot;),
+    DataTable(&quot;T_DOC_TYPE&quot;, &quot;D&quot;),
+    Link(&quot;D&quot;, &quot;doc_type_id&quot;, &quot;T&quot;, &quot;Id&quot;)]
+public class TestFunctionJoin : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get; set; }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get; set; }
+    [Property(&quot;D&quot;, &quot;Code&quot;)]
+    public string Code { get; set; }
+}
 </code></pre><h4 id="sql-scalar-function-as-property-data-source-sample">SQL scalar function as property data source sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE FUNCTION [dbo].[TestFunction2]
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+RETURNS varchar(20)
+AS
+BEGIN
+DECLARE @res varchar(20) 
+SET @res = convert(varchar(20), @param1) + &#39; - &#39; + @param2
+RETURN @res
+END
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">function TestFunction2(p_Id int, p_Name varchar2) return varchar2
+is
+begin
+  return p_Id || &#39; - &#39; || p_Name;
+end TestFunction2;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction2(p_id integer, p_name varchar) returns varchar as $$
+DECLARE
+ret varchar;
+begin
+    select p_id || &#39; - &#39; || p_name into ret;
+    return ret;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create function TestFunction2(p_Id int, p_Name varchar(20)) returns varchar(100)
+begin
+    declare res varchar(100);
+    select CONCAT(p_Id, &#39; - &#39;, p_Name) into res;
+    return(res);
+end
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     DataTable(&quot;T_DOC_TYPE&quot;, &quot;T&quot;),
     Column(&quot;DocTypeId&quot;, typeof(long), Flags = DataPropertyFlag.Id)]

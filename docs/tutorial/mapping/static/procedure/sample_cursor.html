@@ -79,6 +79,45 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_cursor.md">
 
 <h4 id="sql-procedure-result-set-as-query-sample">SQL procedure result set as query sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure]
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+    SELECT @param1 as Id, @param2 as Name
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">procedure TestProcedure(p_Id int, p_Name varchar2, p_Out out SYS_REFCURSOR)
+as
+begin
+    open p_Out for select p_Id as Id, p_Name as Name from dual;
+end TestProcedure;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE FUNCTION public.TestProcedure (p_id integer, p_name varchar, refcursor)
+RETURNS refcursor AS
+$$
+begin
+    open $3 for select p_id as Id, p_name as Name;
+    return $3;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<pre><code class="lang-sql">create procedure TestProcedure(p_Id int, p_Name varchar(50))
+begin
+    select p_Id as Id, p_Name as Name;
+end
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
     Procedure(&quot;T&quot;, &quot;dbo.TestProcedure&quot;, ProcedureType.Procedure),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),

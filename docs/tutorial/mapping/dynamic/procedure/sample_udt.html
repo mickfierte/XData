@@ -79,6 +79,35 @@
             <article class="content wrap" id="_content" data-uid="mapping_dynamic_procedure_sample_udt.md">
 
 <h4 id="sql-procedure-with-udt-parameter-sample">SQL procedure with UDT parameter sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="TIP"><h5>Tip</h5><p>MS SQL Server does not support passing single UDT object as a parameter value, but support array of UDT</p>
+</div>
+<ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<div class="WARNING"><h5>Warning</h5><p>Oracle ODP.Net provider does not support UDT</p>
+</div>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestFunction5(p_obj classifier_rec) returns varchar as $$
+begin
+    return p_obj.Id || &#39; - &#39; || p_obj.Name;
+end
+$$ LANGUAGE plpgsql;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Dynamic query</li>
+</ul>
 <pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
 [Serializable]
 public class Classifier
@@ -95,11 +124,36 @@ var f5 = XDataMapping.GetStructure(&quot;T&quot;)
         z =&gt; z.UdtDataType(&quot;classifier_rec&quot;))
     .Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.String, 
         z =&gt; z.Size(20),
-        z =&gt; z.Direction(ParameterDirection.ReturnValue), 
-        z =&gt; z.NativeSqlType(&quot;VARCHAR&quot;))
-    .Call(DataScope.Layer, &quot;p_obj&quot;.SetVar(
+        z =&gt; z.Direction(ParameterDirection.ReturnValue))
+    .Call(DataScope, &quot;p_obj&quot;.SetVar(
         new Classifier { Id = 1, Name = &quot;Test&quot; }));
 Console.WriteLine(f5.GetParameter&lt;string&gt;(&quot;result&quot;));
+</code></pre><ul>
+<li>Mapping</li>
+</ul>
+<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
+[Serializable]
+public class Classifier
+{
+    [XmlAttribute]
+    public int Id { get; set; }
+    [XmlAttribute]
+    public string Name { get; set; }
+}
+...
+.Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function)
+.Parameter&lt;Classifier&gt;(&quot;T&quot;, 1, &quot;p_obj&quot;, DbType.Object, 
+    z =&gt; z.UdtDataType(&quot;classifier_rec&quot;))
+.Parameter&lt;string&gt;(&quot;T&quot;, 3, &quot;result&quot;, DbType.String, 
+    z =&gt; z.Size(20),
+    z =&gt; z.Direction(ParameterDirection.ReturnValue))
+.Map()
+.SetBaseTable(&quot;T&quot;)
+...
+public class TestFunction5 : IDataObject
+{
+    public string Result =&gt; this.GetParameter(x =&gt; x.Result);
+}
 </code></pre></article>
           </div>
           

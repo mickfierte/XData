@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>SQL procedure with UDT parameter sample | XData website </title>
+    <title> | XData website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="SQL procedure with UDT parameter sample | XData website ">
+    <meta name="title" content=" | XData website ">
     <meta name="generator" content="docfx 2.48.0.0">
     
-    <link rel="shortcut icon" href="../../../.././images/cube.ico">
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <link rel="shortcut icon" href="../../.././images/cube.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
     
-    <meta property="docfx:rel" content="../../../../">
+    <meta property="docfx:rel" content="../../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../../../index.html">
-                <img id="logo" class="svg" src="../../../.././images/cube-white.png" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../.././images/cube-white.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -76,60 +76,43 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_udt.md">
+            <article class="content wrap" id="_content" data-uid="mapping_procedure_sample_out_param.md">
 
-<h4 id="sql-procedure-with-udt-parameter-sample">SQL procedure with UDT parameter sample</h4>
 <ul>
 <li>MS SQL Server</li>
 </ul>
-<p><span style="color:red">Not supported</span></p>
-<div class="TIP"><h5>Tip</h5><p>MS SQL Server does not support passing single UDT object as a parameter value, but support array of UDT</p>
-</div>
-<ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure3]     
+(   
+    @param1 int, 
+    @param2 varchar(20),
+    @param3 varchar(20) OUTPUT
+)
+AS
+SET @param3 = convert(varchar(20), @param1) + &#39; - &#39; + @param2
+RETURN 
+</code></pre><ul>
 <li>Oracle</li>
 </ul>
-<p><span style="color:red">Not supported</span></p>
-<div class="WARNING"><h5>Warning</h5><p>Oracle ODP.Net provider does not support UDT</p>
-</div>
-<ul>
+<pre><code class="lang-sql">procedure TestProcedure3(p_Id int, p_Name varchar2, p_Out out varchar2)
+as
+begin
+    select p_Id || &#39; - &#39; || p_Name into p_Out from dual;
+end TestProcedure3;
+</code></pre><ul>
 <li>PostgreSQL</li>
 </ul>
-<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
-
-CREATE or REPLACE function TestFunction5(p_obj classifier_rec) returns varchar as $$
+<pre><code class="lang-sql">CREATE or REPLACE function TestProcedure3(p_id integer, p_name varchar, out p_out varchar) as $$
 begin
-    return p_obj.Id || &#39; - &#39; || p_obj.Name;
+    p_Out := p_id || &#39; - &#39; || p_name;
 end
 $$ LANGUAGE plpgsql;
 </code></pre><ul>
 <li>MySQL</li>
 </ul>
-<p><span style="color:red">Not supported</span></p>
-<ul>
-<li>Mapping</li>
-</ul>
-<pre><code class="lang-csharp">/* Type mapped to UDT required to be Xml serializable */
-[Serializable]
-public class Classifier
-{
-    [XmlAttribute]
-    public int Id { get; set; }
-    [XmlAttribute]
-    public string Name { get; set; }
-}
-...
-[DataObject(&quot;T&quot;),
-    Procedure(&quot;T&quot;, &quot;TestFunction5&quot;, ProcedureType.Function),
-    Parameter(&quot;T&quot;, 1, &quot;p_obj&quot;, 
-        typeof(Classifier), 
-        DbType.Object, 
-        UdtTypeName =  &quot;classifier_rec&quot; /* Full qualified name of UDT */ ),
-    Parameter(&quot;T&quot;, 2, &quot;Result&quot;, typeof(string), DbType.String, Size = 20, 
-        Direction = ParameterDirection.ReturnValue)]
-public class TestFunction5 : IDataObject
-{
-    public string Result =&gt; this.GetParameter(x =&gt; x.Result);
-}
+<pre><code class="lang-sql">create procedure TestProcedure3(p_Id int, p_Name varchar(50), out p_Out varchar(100))
+begin
+    set p_Out = CONCAT(p_Id, &#39; - &#39;, p_Name);
+end
 </code></pre></article>
           </div>
           
@@ -138,7 +121,7 @@ public class TestFunction5 : IDataObject
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/main/doc/tutorial/mapping/static/procedure/sample_udt.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/mickfierte/private/blob/main/doc/tutorial/mapping/procedure/sample_out_param.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -164,8 +147,8 @@ public class TestFunction5 : IDataObject
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

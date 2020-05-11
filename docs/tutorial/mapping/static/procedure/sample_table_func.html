@@ -79,17 +79,86 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_table_func.md">
 
 <h4 id="sql-table-valued-function-as-query-sample">SQL table valued function as query sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE FUNCTION [dbo].[TestFunction] 
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+RETURNS TABLE 
+AS
+RETURN 
+(
+    SELECT @param1 as Id, @param2 as Name
+)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<pre><code class="lang-sql">CREATE OR REPLACE type classifier_rec is object (Id int, Name varchar2(20));
+CREATE OR REPLACE type classifier_tab is table of classifier_rec;
+
+function TestFunction(p_Id int, p_Name varchar2) return classifier_tab pipelined
+is
+begin
+for curr in (select p_Id as Id, p_Name as Name from dual) loop
+  pipe row (classifier_rec(curr.Id, curr.Name));
+end loop;
+end TestFunction;
+</code></pre><ul>
+<li>PostgreSQL</li>
+</ul>
+<pre><code class="lang-sql">CREATE or REPLACE function TestFunction(p_id integer, p_name varchar) 
+returns TABLE (
+  Id bigint,
+  Name varchar
+) as $$
+    select p_id as Id, p_name as Name;
+$$ LANGUAGE SQL;
+</code></pre><p>... or with the same mapping syntax...</p>
+<pre><code class="lang-sql">CREATE TYPE public.classifier_rec AS ( Id integer, Name varchar(20) );
+
+CREATE or REPLACE function TestFunction(p_Id integer, p_Name varchar) returns setof classifier_rec as $$
+    select p_Id as Id, p_Name as Name;
+$$ LANGUAGE SQL;
+</code></pre><ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span> </p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
-    Procedure(&quot;T&quot;, &quot;dbo.TestFunction3&quot;, ProcedureType.Function),
+    Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function),
     Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
     Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
     ResultSet(&quot;T&quot;)]
-public class TestFunction3 : IDataObject
+public class TestFunction : IDataObject
 {
     [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
     public int Id { get { return this.GetProperty(x =&gt; x.Id); } }
     [Property(&quot;T&quot;, &quot;Name&quot;)]
     public string Name { get { return this.GetProperty(x =&gt; x.Name); } }
+}
+</code></pre><ul>
+<li>Mapping table function with joined table</li>
+</ul>
+<pre><code class="lang-csharp">[DataObject(&quot;D&quot;),
+    Procedure(&quot;T&quot;, &quot;dbo.TestFunction&quot;, ProcedureType.Function),
+    Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
+    Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
+    ResultSet(&quot;T&quot;),
+    DataTable(&quot;T_DOC_TYPE&quot;, &quot;D&quot;),
+    Link(&quot;D&quot;, &quot;doc_type_id&quot;, &quot;T&quot;, &quot;Id&quot;)]
+public class TestFunctionJoin : IDataObject
+{
+    [Property(&quot;T&quot;, &quot;Id&quot;, Flags = DataPropertyFlag.Id)]
+    public int Id { get; set; }
+    [Property(&quot;T&quot;, &quot;Name&quot;)]
+    public string Name { get; set; }
+    [Property(&quot;D&quot;, &quot;Code&quot;)]
+    public string Code { get; set; }
 }
 </code></pre></article>
           </div>

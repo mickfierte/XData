@@ -79,19 +79,44 @@
             <article class="content wrap" id="_content" data-uid="mapping_static_procedure_sample_retval.md">
 
 <h4 id="sql-procedure-with-return-value-sample">SQL procedure with return value sample</h4>
+<ul>
+<li>MS SQL Server</li>
+</ul>
+<pre><code class="lang-sql">CREATE PROCEDURE [dbo].[TestProcedure5]     
+(   
+    @param1 int, 
+    @param2 varchar(20)
+)
+AS
+RETURN(@param1)
+</code></pre><ul>
+<li>Oracle</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>MySQL</li>
+</ul>
+<p><span style="color:red">Not supported</span></p>
+<ul>
+<li>Mapping</li>
+</ul>
 <pre><code class="lang-csharp">[DataObject(&quot;T&quot;),
         Procedure(&quot;T&quot;, &quot;dbo.TestProcedure5&quot;, ProcedureType.Procedure),
         Parameter(&quot;T&quot;, 1, &quot;param1&quot;, typeof(int), DbType.Int32),
         Parameter(&quot;T&quot;, 2, &quot;param2&quot;, typeof(string), DbType.String),
-        Parameter(&quot;T&quot;, 3, &quot;OutParameter&quot;, typeof(string), 
+        Parameter(&quot;T&quot;, 3, &quot;ReturnValue&quot;, typeof(string), 
             DbType.String, 
             Size = 20, 
-            Direction = ParameterDirection.Output, 
-            Name = &quot;param3&quot;)]
+            Direction = ParameterDirection.ReturnValue, 
+            Name = &quot;result&quot;)]
 public class TestProcedure5 : IDataObject
 {
-    public string OutParameter 
-        { get { return this.GetParameter(x =&gt; x.OutParameter); } }
+    public string ReturnValue 
+        { get { return this.GetParameter(x =&gt; x.ReturnValue); } }
 }
 </code></pre></article>
           </div>
