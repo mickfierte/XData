@@ -98,7 +98,7 @@
 </code></pre><p>* <em><em>replace API_KEY with API key provided by author</em></em></p>
 <h3 id="installation">Installation</h3>
 <p>To start use XData basic functionality is required to setup NuGet <a href="https://github.com/mickfierte/XData/packages/95851/">XData package</a>. XData <a href="../index.html#plugins">plugins or additional modules</a> can be downloaded and used separately.</p>
-<p>To work with <a href="unit_of_work.html">related objects</a> (<a href="https://www.martinfowler.com/eaaCatalog/unitOfWork.html">Unit of Work</a> implementation) is required to setup NuGet <a href="https://github.com/mickfierte/XData.WorkSet/packages/95894//">XData UnitOfWork package</a>.</p>
+<p>To work with <a href="unit_of_work.html">related objects</a> (<a href="https://www.martinfowler.com/eaaCatalog/unitOfWork.html">Unit of Work</a> implementation) is required to setup NuGet <a href="https://github.com/mickfierte/XData.WorkSet/packages/95894//">XData WorkSet (UnitOfWork) package</a>.</p>
 <p>To implement <a href="security.html">security session</a> and use application data access with XData is required to setup NuGet <a href="https://github.com/mickfierte/XData.Security/packages/95893/">XData Security package</a>.</p>
 <p>To use one or more <a href="../index.html#nuget-packages">SQL dialect, SQL adapter, specific .Net 4.0 log writer</a> XData plugins it can be installed like any other NuGet package.</p>
 <p>To deploy application in three-tier architecture read <a href="three_tier.html">here</a></p>
@@ -110,12 +110,12 @@
         .AddAdapter(&quot;postgresql&quot;, XDataAdapter.PostgreSql.Adapter)
         .AddContext(&quot;test&quot;, &quot;postgresql&quot;, &quot;postgresql&quot;, 
 &quot;Server=localhost;Database=XDataTest;User Id=postgres;Password=123456&quot;, true))
-</code></pre><p>Configuration file in .Net Standard 2.0 version is readed by <a href="https://www.nuget.org/packages/Microsoft.Extensions.Configuration/">Microsoft.Extensions.Configuration</a> service registered during application startup.</p>
+</code></pre><p>Configuration file in .Net Standard 2.0 version is read by <a href="https://www.nuget.org/packages/Microsoft.Extensions.Configuration/">Microsoft.Extensions.Configuration</a> service registered during application startup.</p>
 <div class="TIP"><h5>Tip</h5><p>XDataAdapter.PostgreSql.Dialect, XDataAdapter.PostgreSql.Adapter and similar constants for other databases is defined in adapter NuGet packages.</p>
 </div>
 <p>.Net 4.0:</p>
 <p>XData can be dynamically configured when acquiring XData engine <em>XDataManager.InitXData</em> using optional parameter <em>options</em> in LINQ style.</p>
-<div class="WARNING"><h5>Warning</h5><p>Signature of XDataManager.InitXData method is slightly different for .Net 4.0 version! See <a href="versions.html">versions comparision</a> for details.</p>
+<div class="WARNING"><h5>Warning</h5><p>Signature of XDataManager.InitXData method is slightly different for .Net 4.0 version! See <a href="versions.html">versions comparison</a> for details.</p>
 </div>
 <pre><code class="lang-csharp">var dataEngine = XDataManager.InitXData(x =&gt; 
     x.AddDialect(&quot;postgresql&quot;, XData.PostgreSql.Dialect)
@@ -125,7 +125,7 @@
 //or using configuration file
 var dataEngine = XDataManager.InitXData(x =&gt; x.UseConfiguration(
     System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(&quot;~&quot;)))
-</code></pre><div class="TIP"><h5>Tip</h5><p><strong>When using both versions</strong> You can use <a class="xref" href="../api/XData.IDataOptions.html">IDataOptions</a> methods to store partial non secure connection string only and fill credentials during runtime. Security related information can be obtained separatly from some secure source.</p>
+</code></pre><div class="TIP"><h5>Tip</h5><p><strong>When using both versions</strong> You can use <a class="xref" href="../api/XData.IDataOptions.html">IDataOptions</a> methods to store partial non secure connection string only and fill credentials during runtime. Security related information can be obtained separately from some secure source.</p>
 </div>
 <h3 id="configuration-xdata-using-config-file">Configuration XData using config file</h3>
 <div class="TIP"><h5>Tip</h5><p>When using .Net Standard 2.0 version config file can be formatted in any notation but structure of config file need to be correspond XML structure described here</p>

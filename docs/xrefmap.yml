@@ -364,6 +364,9 @@ references:
 - uid: tips_attached.md
   name: Virtual data and attached handlers
   href: tips/attached.html
+- uid: tips_cache_lifetime.md
+  name: Set cache lifetime limit
+  href: tips/cache_lifetime.html
 - uid: tips_calback.md
   name: Using business logic callbacks
   href: tips/callback.html
@@ -397,6 +400,9 @@ references:
 - uid: tips_events.md
   name: Using events
   href: tips/events.html
+- uid: tips_exists.md
+  name: Using EXISTS expressions
+  href: tips/exists.html
 - uid: tips_external.md
   name: Dynamic query external data sources
   href: tips/external.html
@@ -3233,6 +3239,23 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).FillTable
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.FillTable
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).FillTable
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.FixFieldDataType(System.Data.DataRow)
+  name: FixFieldDataType(DataRow)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_FixFieldDataType_System_Data_DataRow_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.FixFieldDataType(System.Data.DataRow)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.FixFieldDataType(System.Data.DataRow)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).FixFieldDataType(System.Data.DataRow)
+  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.FixFieldDataType(DataRow)
+  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).FixFieldDataType(DataRow)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.FixFieldDataType*
+  name: FixFieldDataType
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_FixFieldDataType_
+  commentId: Overload:XData.Database.Adapter.BaseDatabaseAdapter`2.FixFieldDataType
+  isSpec: "True"
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.FixFieldDataType
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).FixFieldDataType
+  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.FixFieldDataType
+  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).FixFieldDataType
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetConnection(System.Guid)
   name: GetConnection(Guid)
   href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetConnection_System_Guid_
@@ -3311,14 +3334,15 @@ references:
   fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall
   nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetProcedureCall
   nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetProcedureCall
-- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetSqlType(System.String)
-  name: GetSqlType(String)
-  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetSqlType_System_String_
-  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.GetSqlType(System.String)
-  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetSqlType(System.String)
-  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetSqlType(System.String)
-  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetSqlType(String)
-  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetSqlType(String)
+- uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetSqlType(System.String,System.Int32@,System.Int32@,System.Int32)
+  name: GetSqlType(String, ref Int32, ref Int32, Int32)
+  href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetSqlType_System_String_System_Int32__System_Int32__System_Int32_
+  commentId: M:XData.Database.Adapter.BaseDatabaseAdapter`2.GetSqlType(System.String,System.Int32@,System.Int32@,System.Int32)
+  name.vb: GetSqlType(String, ByRef Int32, ByRef Int32, Int32)
+  fullName: XData.Database.Adapter.BaseDatabaseAdapter<TConnection, TParameter>.GetSqlType(System.String, ref System.Int32, ref System.Int32, System.Int32)
+  fullName.vb: XData.Database.Adapter.BaseDatabaseAdapter(Of TConnection, TParameter).GetSqlType(System.String, ByRef System.Int32, ByRef System.Int32, System.Int32)
+  nameWithType: BaseDatabaseAdapter<TConnection, TParameter>.GetSqlType(String, ref Int32, ref Int32, Int32)
+  nameWithType.vb: BaseDatabaseAdapter(Of TConnection, TParameter).GetSqlType(String, ByRef Int32, ByRef Int32, Int32)
 - uid: XData.Database.Adapter.BaseDatabaseAdapter`2.GetSqlType*
   name: GetSqlType
   href: api/XData.Database.Adapter.BaseDatabaseAdapter-2.html#XData_Database_Adapter_BaseDatabaseAdapter_2_GetSqlType_
@@ -5008,6 +5032,19 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.Context
   nameWithType: BaseSqlBuilder.Context
+- uid: XData.Database.Dialect.BaseSqlBuilder.ConvertTextExpr(XData.DataSource.Structure.IField,System.String)
+  name: ConvertTextExpr(IField, String)
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_ConvertTextExpr_XData_DataSource_Structure_IField_System_String_
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.ConvertTextExpr(XData.DataSource.Structure.IField,System.String)
+  fullName: XData.Database.Dialect.BaseSqlBuilder.ConvertTextExpr(XData.DataSource.Structure.IField, System.String)
+  nameWithType: BaseSqlBuilder.ConvertTextExpr(IField, String)
+- uid: XData.Database.Dialect.BaseSqlBuilder.ConvertTextExpr*
+  name: ConvertTextExpr
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_ConvertTextExpr_
+  commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.ConvertTextExpr
+  isSpec: "True"
+  fullName: XData.Database.Dialect.BaseSqlBuilder.ConvertTextExpr
+  nameWithType: BaseSqlBuilder.ConvertTextExpr
 - uid: XData.Database.Dialect.BaseSqlBuilder.DialectOptions
   name: DialectOptions
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_DialectOptions
@@ -5672,6 +5709,19 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.SqlTypes
   nameWithType: BaseSqlBuilder.SqlTypes
+- uid: XData.Database.Dialect.BaseSqlBuilder.SqlTypeSizes
+  name: SqlTypeSizes
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_SqlTypeSizes
+  commentId: P:XData.Database.Dialect.BaseSqlBuilder.SqlTypeSizes
+  fullName: XData.Database.Dialect.BaseSqlBuilder.SqlTypeSizes
+  nameWithType: BaseSqlBuilder.SqlTypeSizes
+- uid: XData.Database.Dialect.BaseSqlBuilder.SqlTypeSizes*
+  name: SqlTypeSizes
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_SqlTypeSizes_
+  commentId: Overload:XData.Database.Dialect.BaseSqlBuilder.SqlTypeSizes
+  isSpec: "True"
+  fullName: XData.Database.Dialect.BaseSqlBuilder.SqlTypeSizes
+  nameWithType: BaseSqlBuilder.SqlTypeSizes
 - uid: XData.Database.Dialect.BaseSqlBuilder.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_System_Collections_IEnumerable_GetEnumerator
@@ -6753,6 +6803,36 @@ references:
   commentId: F:XData.Database.Dialect.SqlStringType.Years
   fullName: XData.Database.Dialect.SqlStringType.Years
   nameWithType: SqlStringType.Years
+- uid: XData.Database.Dialect.SqlTypeSize
+  name: SqlTypeSize
+  href: api/XData.Database.Dialect.SqlTypeSize.html
+  commentId: T:XData.Database.Dialect.SqlTypeSize
+  fullName: XData.Database.Dialect.SqlTypeSize
+  nameWithType: SqlTypeSize
+- uid: XData.Database.Dialect.SqlTypeSize.None
+  name: None
+  href: api/XData.Database.Dialect.SqlTypeSize.html#XData_Database_Dialect_SqlTypeSize_None
+  commentId: F:XData.Database.Dialect.SqlTypeSize.None
+  fullName: XData.Database.Dialect.SqlTypeSize.None
+  nameWithType: SqlTypeSize.None
+- uid: XData.Database.Dialect.SqlTypeSize.Precision
+  name: Precision
+  href: api/XData.Database.Dialect.SqlTypeSize.html#XData_Database_Dialect_SqlTypeSize_Precision
+  commentId: F:XData.Database.Dialect.SqlTypeSize.Precision
+  fullName: XData.Database.Dialect.SqlTypeSize.Precision
+  nameWithType: SqlTypeSize.Precision
+- uid: XData.Database.Dialect.SqlTypeSize.Scale
+  name: Scale
+  href: api/XData.Database.Dialect.SqlTypeSize.html#XData_Database_Dialect_SqlTypeSize_Scale
+  commentId: F:XData.Database.Dialect.SqlTypeSize.Scale
+  fullName: XData.Database.Dialect.SqlTypeSize.Scale
+  nameWithType: SqlTypeSize.Scale
+- uid: XData.Database.Dialect.SqlTypeSize.Size
+  name: Size
+  href: api/XData.Database.Dialect.SqlTypeSize.html#XData_Database_Dialect_SqlTypeSize_Size
+  commentId: F:XData.Database.Dialect.SqlTypeSize.Size
+  fullName: XData.Database.Dialect.SqlTypeSize.Size
+  nameWithType: SqlTypeSize.Size
 - uid: XData.Database.Dialect.XConnectionInfo
   name: XConnectionInfo
   href: api/XData.Database.Dialect.XConnectionInfo.html
@@ -6856,6 +6936,45 @@ references:
   isSpec: "True"
   fullName: XData.Database.FieldInfo.Name
   nameWithType: FieldInfo.Name
+- uid: XData.Database.FieldInfo.NativeDataType
+  name: NativeDataType
+  href: api/XData.Database.FieldInfo.html#XData_Database_FieldInfo_NativeDataType
+  commentId: P:XData.Database.FieldInfo.NativeDataType
+  fullName: XData.Database.FieldInfo.NativeDataType
+  nameWithType: FieldInfo.NativeDataType
+- uid: XData.Database.FieldInfo.NativeDataType*
+  name: NativeDataType
+  href: api/XData.Database.FieldInfo.html#XData_Database_FieldInfo_NativeDataType_
+  commentId: Overload:XData.Database.FieldInfo.NativeDataType
+  isSpec: "True"
+  fullName: XData.Database.FieldInfo.NativeDataType
+  nameWithType: FieldInfo.NativeDataType
+- uid: XData.Database.FieldInfo.Scale
+  name: Scale
+  href: api/XData.Database.FieldInfo.html#XData_Database_FieldInfo_Scale
+  commentId: P:XData.Database.FieldInfo.Scale
+  fullName: XData.Database.FieldInfo.Scale
+  nameWithType: FieldInfo.Scale
+- uid: XData.Database.FieldInfo.Scale*
+  name: Scale
+  href: api/XData.Database.FieldInfo.html#XData_Database_FieldInfo_Scale_
+  commentId: Overload:XData.Database.FieldInfo.Scale
+  isSpec: "True"
+  fullName: XData.Database.FieldInfo.Scale
+  nameWithType: FieldInfo.Scale
+- uid: XData.Database.FieldInfo.Size
+  name: Size
+  href: api/XData.Database.FieldInfo.html#XData_Database_FieldInfo_Size
+  commentId: P:XData.Database.FieldInfo.Size
+  fullName: XData.Database.FieldInfo.Size
+  nameWithType: FieldInfo.Size
+- uid: XData.Database.FieldInfo.Size*
+  name: Size
+  href: api/XData.Database.FieldInfo.html#XData_Database_FieldInfo_Size_
+  commentId: Overload:XData.Database.FieldInfo.Size
+  isSpec: "True"
+  fullName: XData.Database.FieldInfo.Size
+  nameWithType: FieldInfo.Size
 - uid: XData.Database.FieldInfo.ToString
   name: ToString()
   href: api/XData.Database.FieldInfo.html#XData_Database_FieldInfo_ToString
@@ -9735,6 +9854,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.Field.EnumValues
   nameWithType: Field.EnumValues
+- uid: XData.DataSource.Structure.Field.Exists
+  name: Exists
+  href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_Exists
+  commentId: P:XData.DataSource.Structure.Field.Exists
+  fullName: XData.DataSource.Structure.Field.Exists
+  nameWithType: Field.Exists
+- uid: XData.DataSource.Structure.Field.Exists*
+  name: Exists
+  href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_Exists_
+  commentId: Overload:XData.DataSource.Structure.Field.Exists
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.Field.Exists
+  nameWithType: Field.Exists
 - uid: XData.DataSource.Structure.Field.ExprScale
   name: ExprScale
   href: api/XData.DataSource.Structure.Field.html#XData_DataSource_Structure_Field_ExprScale
@@ -11508,6 +11640,19 @@ references:
   isSpec: "True"
   fullName: XData.DataSource.Structure.IField.EnumValues
   nameWithType: IField.EnumValues
+- uid: XData.DataSource.Structure.IField.Exists
+  name: Exists
+  href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_Exists
+  commentId: P:XData.DataSource.Structure.IField.Exists
+  fullName: XData.DataSource.Structure.IField.Exists
+  nameWithType: IField.Exists
+- uid: XData.DataSource.Structure.IField.Exists*
+  name: Exists
+  href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_Exists_
+  commentId: Overload:XData.DataSource.Structure.IField.Exists
+  isSpec: "True"
+  fullName: XData.DataSource.Structure.IField.Exists
+  nameWithType: IField.Exists
 - uid: XData.DataSource.Structure.IField.ExprScale
   name: ExprScale
   href: api/XData.DataSource.Structure.IField.html#XData_DataSource_Structure_IField_ExprScale
@@ -14315,6 +14460,30 @@ references:
   fullName.vb: XData.ExecuteAttachedHandler(Of T)
   nameWithType: ExecuteAttachedHandler<T>
   nameWithType.vb: ExecuteAttachedHandler(Of T)
+- uid: XData.ExistsOperation
+  name: ExistsOperation
+  href: api/XData.ExistsOperation.html
+  commentId: T:XData.ExistsOperation
+  fullName: XData.ExistsOperation
+  nameWithType: ExistsOperation
+- uid: XData.ExistsOperation.Exists
+  name: Exists
+  href: api/XData.ExistsOperation.html#XData_ExistsOperation_Exists
+  commentId: F:XData.ExistsOperation.Exists
+  fullName: XData.ExistsOperation.Exists
+  nameWithType: ExistsOperation.Exists
+- uid: XData.ExistsOperation.None
+  name: None
+  href: api/XData.ExistsOperation.html#XData_ExistsOperation_None
+  commentId: F:XData.ExistsOperation.None
+  fullName: XData.ExistsOperation.None
+  nameWithType: ExistsOperation.None
+- uid: XData.ExistsOperation.NotExists
+  name: NotExists
+  href: api/XData.ExistsOperation.html#XData_ExistsOperation_NotExists
+  commentId: F:XData.ExistsOperation.NotExists
+  fullName: XData.ExistsOperation.NotExists
+  nameWithType: ExistsOperation.NotExists
 - uid: XData.Extensions
   name: XData.Extensions
   href: api/XData.Extensions.html
@@ -17255,6 +17424,19 @@ references:
   isSpec: "True"
   fullName: XData.Interfaces.ISqlBuilder.SqlTypes
   nameWithType: ISqlBuilder.SqlTypes
+- uid: XData.Interfaces.ISqlBuilder.SqlTypeSizes
+  name: SqlTypeSizes
+  href: api/XData.Interfaces.ISqlBuilder.html#XData_Interfaces_ISqlBuilder_SqlTypeSizes
+  commentId: P:XData.Interfaces.ISqlBuilder.SqlTypeSizes
+  fullName: XData.Interfaces.ISqlBuilder.SqlTypeSizes
+  nameWithType: ISqlBuilder.SqlTypeSizes
+- uid: XData.Interfaces.ISqlBuilder.SqlTypeSizes*
+  name: SqlTypeSizes
+  href: api/XData.Interfaces.ISqlBuilder.html#XData_Interfaces_ISqlBuilder_SqlTypeSizes_
+  commentId: Overload:XData.Interfaces.ISqlBuilder.SqlTypeSizes
+  isSpec: "True"
+  fullName: XData.Interfaces.ISqlBuilder.SqlTypeSizes
+  nameWithType: ISqlBuilder.SqlTypeSizes
 - uid: XData.Interfaces.ISqlBuilder.TypeNames
   name: TypeNames
   href: api/XData.Interfaces.ISqlBuilder.html#XData_Interfaces_ISqlBuilder_TypeNames
@@ -17883,6 +18065,168 @@ references:
   commentId: T:XData.ISqlObject
   fullName: XData.ISqlObject
   nameWithType: ISqlObject
+- uid: XData.IWorkScope`1
+  name: IWorkScope<T>
+  href: api/XData.IWorkScope-1.html
+  commentId: T:XData.IWorkScope`1
+  name.vb: IWorkScope(Of T)
+  fullName: XData.IWorkScope<T>
+  fullName.vb: XData.IWorkScope(Of T)
+  nameWithType: IWorkScope<T>
+  nameWithType.vb: IWorkScope(Of T)
+- uid: XData.IWorkScope`1.With*
+  name: With
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With_
+  commentId: Overload:XData.IWorkScope`1.With
+  isSpec: "True"
+  fullName: XData.IWorkScope<T>.With
+  fullName.vb: XData.IWorkScope(Of T).With
+  nameWithType: IWorkScope<T>.With
+  nameWithType.vb: IWorkScope(Of T).With
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}})
+  name: With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Guid___
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name: With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0__XData_IWorkScope___0____
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TChild>, XData.IWorkScope<TChild>>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TChild), XData.IWorkScope(Of TChild))))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  name: With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, String)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_String_
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), String)
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>, System.String)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)), System.String)
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, String)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), String)
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name: With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, String, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_String_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0__XData_IWorkScope___0____
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), String, Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>, System.String, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TChild>, XData.IWorkScope<TChild>>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)), System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TChild), XData.IWorkScope(Of TChild))))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, String, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), String, Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name: With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0__XData_IWorkScope___0____
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TChild>, XData.IWorkScope<TChild>>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TChild), XData.IWorkScope(Of TChild))))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.String)
+  name: With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, String)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_String_
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.String)
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), String)
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.String)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.String)
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, String)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), String)
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.String,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name: With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, String, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0_____System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_String_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0__XData_IWorkScope___0____
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0[]}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.String,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), String, Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild[]>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.String, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TChild>, XData.IWorkScope<TChild>>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild())), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TChild), XData.IWorkScope(Of TChild))))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild[]>>, Expression<Func<TChild, Guid>>, String, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild())), Expression(Of Func(Of TChild, Guid)), String, Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}})
+  name: With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Guid___
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name: With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0__XData_IWorkScope___0____
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TChild>, XData.IWorkScope<TChild>>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TChild), XData.IWorkScope(Of TChild))))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  name: With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, String)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_String_
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String)
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), String)
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>, System.String)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)), System.String)
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, String)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), String)
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name: With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, String, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Boolean___System_String_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0__XData_IWorkScope___0____
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.String,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), String, Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Boolean>>, System.String, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TChild>, XData.IWorkScope<TChild>>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Boolean)), System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TChild), XData.IWorkScope(Of TChild))))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<TChild, Boolean>>, String, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of TChild, Boolean)), String, Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name: With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0__XData_IWorkScope___0____
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TChild>, XData.IWorkScope<TChild>>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TChild), XData.IWorkScope(Of TChild))))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.String)
+  name: With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, String)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_String_
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.String)
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), String)
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.String)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.String)
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, String)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), String)
+- uid: XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.String,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name: With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, String, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  href: api/XData.IWorkScope-1.html#XData_IWorkScope_1_With__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_String_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0__XData_IWorkScope___0____
+  commentId: M:XData.IWorkScope`1.With``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.String,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0},XData.IWorkScope{``0}}})
+  name.vb: With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), String, Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
+  fullName: XData.IWorkScope<T>.With<TChild>(System.Linq.Expressions.Expression<System.Func<T, TChild>>, System.Linq.Expressions.Expression<System.Func<TChild, System.Guid>>, System.String, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TChild>, XData.IWorkScope<TChild>>>)
+  fullName.vb: XData.IWorkScope(Of T).With(Of TChild)(System.Linq.Expressions.Expression(Of System.Func(Of T, TChild)), System.Linq.Expressions.Expression(Of System.Func(Of TChild, System.Guid)), System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TChild), XData.IWorkScope(Of TChild))))
+  nameWithType: IWorkScope<T>.With<TChild>(Expression<Func<T, TChild>>, Expression<Func<TChild, Guid>>, String, Expression<Func<IWorkScope<TChild>, IWorkScope<TChild>>>)
+  nameWithType.vb: IWorkScope(Of T).With(Of TChild)(Expression(Of Func(Of T, TChild)), Expression(Of Func(Of TChild, Guid)), String, Expression(Of Func(Of IWorkScope(Of TChild), IWorkScope(Of TChild))))
 - uid: XData.IWorkSet
   name: IWorkSet
   href: api/XData.IWorkSet.html
@@ -17902,6 +18246,19 @@ references:
   isSpec: "True"
   fullName: XData.IWorkSet.Clear
   nameWithType: IWorkSet.Clear
+- uid: XData.IWorkSet.DbLayer
+  name: DbLayer
+  href: api/XData.IWorkSet.html#XData_IWorkSet_DbLayer
+  commentId: P:XData.IWorkSet.DbLayer
+  fullName: XData.IWorkSet.DbLayer
+  nameWithType: IWorkSet.DbLayer
+- uid: XData.IWorkSet.DbLayer*
+  name: DbLayer
+  href: api/XData.IWorkSet.html#XData_IWorkSet_DbLayer_
+  commentId: Overload:XData.IWorkSet.DbLayer
+  isSpec: "True"
+  fullName: XData.IWorkSet.DbLayer
+  nameWithType: IWorkSet.DbLayer
 - uid: XData.IWorkSet.Name
   name: Name
   href: api/XData.IWorkSet.html#XData_IWorkSet_Name
@@ -17915,12 +18272,12 @@ references:
   isSpec: "True"
   fullName: XData.IWorkSet.Name
   nameWithType: IWorkSet.Name
-- uid: XData.IWorkSet.Submit(IDataScope)
-  name: Submit(IDataScope)
-  href: api/XData.IWorkSet.html#XData_IWorkSet_Submit_IDataScope_
-  commentId: M:XData.IWorkSet.Submit(IDataScope)
-  fullName: XData.IWorkSet.Submit(IDataScope)
-  nameWithType: IWorkSet.Submit(IDataScope)
+- uid: XData.IWorkSet.Submit
+  name: Submit()
+  href: api/XData.IWorkSet.html#XData_IWorkSet_Submit
+  commentId: M:XData.IWorkSet.Submit
+  fullName: XData.IWorkSet.Submit()
+  nameWithType: IWorkSet.Submit()
 - uid: XData.IWorkSet.Submit*
   name: Submit
   href: api/XData.IWorkSet.html#XData_IWorkSet_Submit_
@@ -17928,6 +18285,19 @@ references:
   isSpec: "True"
   fullName: XData.IWorkSet.Submit
   nameWithType: IWorkSet.Submit
+- uid: XData.IWorkSet.Type
+  name: Type
+  href: api/XData.IWorkSet.html#XData_IWorkSet_Type
+  commentId: P:XData.IWorkSet.Type
+  fullName: XData.IWorkSet.Type
+  nameWithType: IWorkSet.Type
+- uid: XData.IWorkSet.Type*
+  name: Type
+  href: api/XData.IWorkSet.html#XData_IWorkSet_Type_
+  commentId: Overload:XData.IWorkSet.Type
+  isSpec: "True"
+  fullName: XData.IWorkSet.Type
+  nameWithType: IWorkSet.Type
 - uid: XData.IWorkSet`1
   name: IWorkSet<T>
   href: api/XData.IWorkSet-1.html
@@ -17937,105 +18307,51 @@ references:
   fullName.vb: XData.IWorkSet(Of T)
   nameWithType: IWorkSet<T>
   nameWithType.vb: IWorkSet(Of T)
-- uid: XData.IWorkSet`1.Add(System.Func{`0})
-  name: Add(Func<T>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Add_System_Func__0__
-  commentId: M:XData.IWorkSet`1.Add(System.Func{`0})
-  name.vb: Add(Func(Of T))
-  fullName: XData.IWorkSet<T>.Add(System.Func<T>)
-  fullName.vb: XData.IWorkSet(Of T).Add(System.Func(Of T))
-  nameWithType: IWorkSet<T>.Add(Func<T>)
-  nameWithType.vb: IWorkSet(Of T).Add(Func(Of T))
-- uid: XData.IWorkSet`1.Add*
-  name: Add
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Add_
-  commentId: Overload:XData.IWorkSet`1.Add
+- uid: XData.IWorkSet`1.Child*
+  name: Child
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Child_
+  commentId: Overload:XData.IWorkSet`1.Child
   isSpec: "True"
-  fullName: XData.IWorkSet<T>.Add
-  fullName.vb: XData.IWorkSet(Of T).Add
-  nameWithType: IWorkSet<T>.Add
-  nameWithType.vb: IWorkSet(Of T).Add
-- uid: XData.IWorkSet`1.Assign(System.Func{`0,System.Boolean},System.Func{`0},XData.WorkState)
-  name: Assign(Func<T, Boolean>, Func<T>, WorkState)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Assign_System_Func__0_System_Boolean__System_Func__0__XData_WorkState_
-  commentId: M:XData.IWorkSet`1.Assign(System.Func{`0,System.Boolean},System.Func{`0},XData.WorkState)
-  name.vb: Assign(Func(Of T, Boolean), Func(Of T), WorkState)
-  fullName: XData.IWorkSet<T>.Assign(System.Func<T, System.Boolean>, System.Func<T>, XData.WorkState)
-  fullName.vb: XData.IWorkSet(Of T).Assign(System.Func(Of T, System.Boolean), System.Func(Of T), XData.WorkState)
-  nameWithType: IWorkSet<T>.Assign(Func<T, Boolean>, Func<T>, WorkState)
-  nameWithType.vb: IWorkSet(Of T).Assign(Func(Of T, Boolean), Func(Of T), WorkState)
-- uid: XData.IWorkSet`1.Assign(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.Func{`0},XData.WorkState)
-  name: Assign(Func<T, Int32, Boolean>, Func<T, IComparable>[], Func<T>, WorkState)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Assign_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_Func__0__XData_WorkState_
-  commentId: M:XData.IWorkSet`1.Assign(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.Func{`0},XData.WorkState)
-  name.vb: Assign(Func(Of T, Int32, Boolean), Func(Of T, IComparable)(), Func(Of T), WorkState)
-  fullName: XData.IWorkSet<T>.Assign(System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[], System.Func<T>, XData.WorkState)
-  fullName.vb: XData.IWorkSet(Of T).Assign(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)(), System.Func(Of T), XData.WorkState)
-  nameWithType: IWorkSet<T>.Assign(Func<T, Int32, Boolean>, Func<T, IComparable>[], Func<T>, WorkState)
-  nameWithType.vb: IWorkSet(Of T).Assign(Func(Of T, Int32, Boolean), Func(Of T, IComparable)(), Func(Of T), WorkState)
-- uid: XData.IWorkSet`1.Assign*
-  name: Assign
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Assign_
-  commentId: Overload:XData.IWorkSet`1.Assign
-  isSpec: "True"
-  fullName: XData.IWorkSet<T>.Assign
-  fullName.vb: XData.IWorkSet(Of T).Assign
-  nameWithType: IWorkSet<T>.Assign
-  nameWithType.vb: IWorkSet(Of T).Assign
-- uid: XData.IWorkSet`1.Assign``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0},System.Func{`0},XData.WorkState)
-  name: Assign<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, Func<T>, WorkState)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Assign__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__System_Func__0__XData_WorkState_
-  commentId: M:XData.IWorkSet`1.Assign``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0},System.Func{`0},XData.WorkState)
-  name.vb: Assign(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), Func(Of T), WorkState)
-  fullName: XData.IWorkSet<T>.Assign<TKey>(System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>, System.Func<T>, XData.WorkState)
-  fullName.vb: XData.IWorkSet(Of T).Assign(Of TKey)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey), System.Func(Of T), XData.WorkState)
-  nameWithType: IWorkSet<T>.Assign<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, Func<T>, WorkState)
-  nameWithType.vb: IWorkSet(Of T).Assign(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), Func(Of T), WorkState)
-- uid: XData.IWorkSet`1.Find*
-  name: Find
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Find_
-  commentId: Overload:XData.IWorkSet`1.Find
-  isSpec: "True"
-  fullName: XData.IWorkSet<T>.Find
-  fullName.vb: XData.IWorkSet(Of T).Find
-  nameWithType: IWorkSet<T>.Find
-  nameWithType.vb: IWorkSet(Of T).Find
-- uid: XData.IWorkSet`1.Find``1(System.Func{`0,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
-  name: Find<TRet>(Func<T, Boolean>, Expression<Func<T, IEnumerable<TRet>>>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Find__1_System_Func__0_System_Boolean__System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____
-  commentId: M:XData.IWorkSet`1.Find``1(System.Func{`0,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
-  name.vb: Find(Of TRet)(Func(Of T, Boolean), Expression(Of Func(Of T, IEnumerable(Of TRet))))
-  fullName: XData.IWorkSet<T>.Find<TRet>(System.Func<T, System.Boolean>, System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TRet>>>)
-  fullName.vb: XData.IWorkSet(Of T).Find(Of TRet)(System.Func(Of T, System.Boolean), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TRet))))
-  nameWithType: IWorkSet<T>.Find<TRet>(Func<T, Boolean>, Expression<Func<T, IEnumerable<TRet>>>)
-  nameWithType.vb: IWorkSet(Of T).Find(Of TRet)(Func(Of T, Boolean), Expression(Of Func(Of T, IEnumerable(Of TRet))))
-- uid: XData.IWorkSet`1.Find``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
-  name: Find<TRet>(Func<T, Int32, Boolean>, Func<T, IComparable>[], Expression<Func<T, IEnumerable<TRet>>>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Find__1_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____
-  commentId: M:XData.IWorkSet`1.Find``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
-  name.vb: Find(Of TRet)(Func(Of T, Int32, Boolean), Func(Of T, IComparable)(), Expression(Of Func(Of T, IEnumerable(Of TRet))))
-  fullName: XData.IWorkSet<T>.Find<TRet>(System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[], System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TRet>>>)
-  fullName.vb: XData.IWorkSet(Of T).Find(Of TRet)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)(), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TRet))))
-  nameWithType: IWorkSet<T>.Find<TRet>(Func<T, Int32, Boolean>, Func<T, IComparable>[], Expression<Func<T, IEnumerable<TRet>>>)
-  nameWithType.vb: IWorkSet(Of T).Find(Of TRet)(Func(Of T, Int32, Boolean), Func(Of T, IComparable)(), Expression(Of Func(Of T, IEnumerable(Of TRet))))
-- uid: XData.IWorkSet`1.Find``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
-  name: Find<TRet>(Expression<Func<T, IEnumerable<TRet>>>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Find__1_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____
-  commentId: M:XData.IWorkSet`1.Find``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
-  name.vb: Find(Of TRet)(Expression(Of Func(Of T, IEnumerable(Of TRet))))
-  fullName: XData.IWorkSet<T>.Find<TRet>(System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TRet>>>)
-  fullName.vb: XData.IWorkSet(Of T).Find(Of TRet)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TRet))))
-  nameWithType: IWorkSet<T>.Find<TRet>(Expression<Func<T, IEnumerable<TRet>>>)
-  nameWithType.vb: IWorkSet(Of T).Find(Of TRet)(Expression(Of Func(Of T, IEnumerable(Of TRet))))
-- uid: XData.IWorkSet`1.Find``2(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``1},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
-  name: Find<TRet, TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, Expression<Func<T, IEnumerable<TRet>>>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Find__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____
-  commentId: M:XData.IWorkSet`1.Find``2(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``1},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
-  name.vb: Find(Of TRet, TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), Expression(Of Func(Of T, IEnumerable(Of TRet))))
-  fullName: XData.IWorkSet<T>.Find<TRet, TKey>(System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>, System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TRet>>>)
-  fullName.vb: XData.IWorkSet(Of T).Find(Of TRet, TKey)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TRet))))
-  nameWithType: IWorkSet<T>.Find<TRet, TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, Expression<Func<T, IEnumerable<TRet>>>)
-  nameWithType.vb: IWorkSet(Of T).Find(Of TRet, TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), Expression(Of Func(Of T, IEnumerable(Of TRet))))
+  fullName: XData.IWorkSet<T>.Child
+  fullName.vb: XData.IWorkSet(Of T).Child
+  nameWithType: IWorkSet<T>.Child
+  nameWithType.vb: IWorkSet(Of T).Child
+- uid: XData.IWorkSet`1.Child``1(System.Func{`0,System.Boolean},System.String)
+  name: Child<TRet>(Func<T, Boolean>, String)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Child__1_System_Func__0_System_Boolean__System_String_
+  commentId: M:XData.IWorkSet`1.Child``1(System.Func{`0,System.Boolean},System.String)
+  name.vb: Child(Of TRet)(Func(Of T, Boolean), String)
+  fullName: XData.IWorkSet<T>.Child<TRet>(System.Func<T, System.Boolean>, System.String)
+  fullName.vb: XData.IWorkSet(Of T).Child(Of TRet)(System.Func(Of T, System.Boolean), System.String)
+  nameWithType: IWorkSet<T>.Child<TRet>(Func<T, Boolean>, String)
+  nameWithType.vb: IWorkSet(Of T).Child(Of TRet)(Func(Of T, Boolean), String)
+- uid: XData.IWorkSet`1.Child``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.String)
+  name: Child<TRet>(Func<T, Int32, Boolean>, Func<T, IComparable>[], String)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Child__1_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_String_
+  commentId: M:XData.IWorkSet`1.Child``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.String)
+  name.vb: Child(Of TRet)(Func(Of T, Int32, Boolean), Func(Of T, IComparable)(), String)
+  fullName: XData.IWorkSet<T>.Child<TRet>(System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[], System.String)
+  fullName.vb: XData.IWorkSet(Of T).Child(Of TRet)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)(), System.String)
+  nameWithType: IWorkSet<T>.Child<TRet>(Func<T, Int32, Boolean>, Func<T, IComparable>[], String)
+  nameWithType.vb: IWorkSet(Of T).Child(Of TRet)(Func(Of T, Int32, Boolean), Func(Of T, IComparable)(), String)
+- uid: XData.IWorkSet`1.Child``1(System.String)
+  name: Child<TRet>(String)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Child__1_System_String_
+  commentId: M:XData.IWorkSet`1.Child``1(System.String)
+  name.vb: Child(Of TRet)(String)
+  fullName: XData.IWorkSet<T>.Child<TRet>(System.String)
+  fullName.vb: XData.IWorkSet(Of T).Child(Of TRet)(System.String)
+  nameWithType: IWorkSet<T>.Child<TRet>(String)
+  nameWithType.vb: IWorkSet(Of T).Child(Of TRet)(String)
+- uid: XData.IWorkSet`1.Child``2(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``1},System.String)
+  name: Child<TRet, TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, String)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Child__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_String_
+  commentId: M:XData.IWorkSet`1.Child``2(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``1},System.String)
+  name.vb: Child(Of TRet, TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), String)
+  fullName: XData.IWorkSet<T>.Child<TRet, TKey>(System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>, System.String)
+  fullName.vb: XData.IWorkSet(Of T).Child(Of TRet, TKey)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey), System.String)
+  nameWithType: IWorkSet<T>.Child<TRet, TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, String)
+  nameWithType.vb: IWorkSet(Of T).Child(Of TRet, TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), String)
 - uid: XData.IWorkSet`1.Get(System.Func{`0,System.Boolean},XData.WorkState)
   name: Get(Func<T, Boolean>, WorkState)
   href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Get_System_Func__0_System_Boolean__XData_WorkState_
@@ -18072,24 +18388,76 @@ references:
   fullName.vb: XData.IWorkSet(Of T).Get(Of TKey)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey), XData.WorkState)
   nameWithType: IWorkSet<T>.Get<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, WorkState)
   nameWithType.vb: IWorkSet(Of T).Get(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), WorkState)
-- uid: XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Boolean})
-  name: Lock(IDataScope, Func<T, Boolean>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Boolean__
-  commentId: M:XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Boolean})
-  name.vb: Lock(IDataScope, Func(Of T, Boolean))
-  fullName: XData.IWorkSet<T>.Lock(IDataScope, System.Func<T, System.Boolean>)
-  fullName.vb: XData.IWorkSet(Of T).Lock(IDataScope, System.Func(Of T, System.Boolean))
-  nameWithType: IWorkSet<T>.Lock(IDataScope, Func<T, Boolean>)
-  nameWithType.vb: IWorkSet(Of T).Lock(IDataScope, Func(Of T, Boolean))
-- uid: XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
-  name: Lock(IDataScope, Func<T, Int32, Boolean>, Func<T, IComparable>[])
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____
-  commentId: M:XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
-  name.vb: Lock(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, IComparable)())
-  fullName: XData.IWorkSet<T>.Lock(IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[])
-  fullName.vb: XData.IWorkSet(Of T).Lock(IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)())
-  nameWithType: IWorkSet<T>.Lock(IDataScope, Func<T, Int32, Boolean>, Func<T, IComparable>[])
-  nameWithType.vb: IWorkSet(Of T).Lock(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, IComparable)())
+- uid: XData.IWorkSet`1.GetKey
+  name: GetKey()
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_GetKey
+  commentId: M:XData.IWorkSet`1.GetKey
+  fullName: XData.IWorkSet<T>.GetKey()
+  fullName.vb: XData.IWorkSet(Of T).GetKey()
+  nameWithType: IWorkSet<T>.GetKey()
+  nameWithType.vb: IWorkSet(Of T).GetKey()
+- uid: XData.IWorkSet`1.GetKey(System.Func{`0,System.Boolean},XData.WorkState)
+  name: GetKey(Func<T, Boolean>, WorkState)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_GetKey_System_Func__0_System_Boolean__XData_WorkState_
+  commentId: M:XData.IWorkSet`1.GetKey(System.Func{`0,System.Boolean},XData.WorkState)
+  name.vb: GetKey(Func(Of T, Boolean), WorkState)
+  fullName: XData.IWorkSet<T>.GetKey(System.Func<T, System.Boolean>, XData.WorkState)
+  fullName.vb: XData.IWorkSet(Of T).GetKey(System.Func(Of T, System.Boolean), XData.WorkState)
+  nameWithType: IWorkSet<T>.GetKey(Func<T, Boolean>, WorkState)
+  nameWithType.vb: IWorkSet(Of T).GetKey(Func(Of T, Boolean), WorkState)
+- uid: XData.IWorkSet`1.GetKey(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],XData.WorkState)
+  name: GetKey(Func<T, Int32, Boolean>, Func<T, IComparable>[], WorkState)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_GetKey_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____XData_WorkState_
+  commentId: M:XData.IWorkSet`1.GetKey(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],XData.WorkState)
+  name.vb: GetKey(Func(Of T, Int32, Boolean), Func(Of T, IComparable)(), WorkState)
+  fullName: XData.IWorkSet<T>.GetKey(System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[], XData.WorkState)
+  fullName.vb: XData.IWorkSet(Of T).GetKey(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)(), XData.WorkState)
+  nameWithType: IWorkSet<T>.GetKey(Func<T, Int32, Boolean>, Func<T, IComparable>[], WorkState)
+  nameWithType.vb: IWorkSet(Of T).GetKey(Func(Of T, Int32, Boolean), Func(Of T, IComparable)(), WorkState)
+- uid: XData.IWorkSet`1.GetKey(XData.WorkState)
+  name: GetKey(WorkState)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_GetKey_XData_WorkState_
+  commentId: M:XData.IWorkSet`1.GetKey(XData.WorkState)
+  fullName: XData.IWorkSet<T>.GetKey(XData.WorkState)
+  fullName.vb: XData.IWorkSet(Of T).GetKey(XData.WorkState)
+  nameWithType: IWorkSet<T>.GetKey(WorkState)
+  nameWithType.vb: IWorkSet(Of T).GetKey(WorkState)
+- uid: XData.IWorkSet`1.GetKey*
+  name: GetKey
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_GetKey_
+  commentId: Overload:XData.IWorkSet`1.GetKey
+  isSpec: "True"
+  fullName: XData.IWorkSet<T>.GetKey
+  fullName.vb: XData.IWorkSet(Of T).GetKey
+  nameWithType: IWorkSet<T>.GetKey
+  nameWithType.vb: IWorkSet(Of T).GetKey
+- uid: XData.IWorkSet`1.GetKey``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0},XData.WorkState)
+  name: GetKey<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, WorkState)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_GetKey__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__XData_WorkState_
+  commentId: M:XData.IWorkSet`1.GetKey``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0},XData.WorkState)
+  name.vb: GetKey(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), WorkState)
+  fullName: XData.IWorkSet<T>.GetKey<TKey>(System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>, XData.WorkState)
+  fullName.vb: XData.IWorkSet(Of T).GetKey(Of TKey)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey), XData.WorkState)
+  nameWithType: IWorkSet<T>.GetKey<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>, WorkState)
+  nameWithType.vb: IWorkSet(Of T).GetKey(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey), WorkState)
+- uid: XData.IWorkSet`1.Lock(System.Func{`0,System.Boolean})
+  name: Lock(Func<T, Boolean>)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_System_Func__0_System_Boolean__
+  commentId: M:XData.IWorkSet`1.Lock(System.Func{`0,System.Boolean})
+  name.vb: Lock(Func(Of T, Boolean))
+  fullName: XData.IWorkSet<T>.Lock(System.Func<T, System.Boolean>)
+  fullName.vb: XData.IWorkSet(Of T).Lock(System.Func(Of T, System.Boolean))
+  nameWithType: IWorkSet<T>.Lock(Func<T, Boolean>)
+  nameWithType.vb: IWorkSet(Of T).Lock(Func(Of T, Boolean))
+- uid: XData.IWorkSet`1.Lock(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
+  name: Lock(Func<T, Int32, Boolean>, Func<T, IComparable>[])
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____
+  commentId: M:XData.IWorkSet`1.Lock(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])
+  name.vb: Lock(Func(Of T, Int32, Boolean), Func(Of T, IComparable)())
+  fullName: XData.IWorkSet<T>.Lock(System.Func<T, System.Int32, System.Boolean>, System.Func<T, System.IComparable>[])
+  fullName.vb: XData.IWorkSet(Of T).Lock(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, System.IComparable)())
+  nameWithType: IWorkSet<T>.Lock(Func<T, Int32, Boolean>, Func<T, IComparable>[])
+  nameWithType.vb: IWorkSet(Of T).Lock(Func(Of T, Int32, Boolean), Func(Of T, IComparable)())
 - uid: XData.IWorkSet`1.Lock*
   name: Lock
   href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock_
@@ -18099,15 +18467,33 @@ references:
   fullName.vb: XData.IWorkSet(Of T).Lock
   nameWithType: IWorkSet<T>.Lock
   nameWithType.vb: IWorkSet(Of T).Lock
-- uid: XData.IWorkSet`1.Lock``1(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
-  name: Lock<TKey>(IDataScope, Func<T, Int32, Boolean>, Func<T, TKey>)
-  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock__1_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__
-  commentId: M:XData.IWorkSet`1.Lock``1(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
-  name.vb: Lock(Of TKey)(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, TKey))
-  fullName: XData.IWorkSet<T>.Lock<TKey>(IDataScope, System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>)
-  fullName.vb: XData.IWorkSet(Of T).Lock(Of TKey)(IDataScope, System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey))
-  nameWithType: IWorkSet<T>.Lock<TKey>(IDataScope, Func<T, Int32, Boolean>, Func<T, TKey>)
-  nameWithType.vb: IWorkSet(Of T).Lock(Of TKey)(IDataScope, Func(Of T, Int32, Boolean), Func(Of T, TKey))
+- uid: XData.IWorkSet`1.Lock``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
+  name: Lock<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Lock__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__
+  commentId: M:XData.IWorkSet`1.Lock``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})
+  name.vb: Lock(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey))
+  fullName: XData.IWorkSet<T>.Lock<TKey>(System.Func<T, System.Int32, System.Boolean>, System.Func<T, TKey>)
+  fullName.vb: XData.IWorkSet(Of T).Lock(Of TKey)(System.Func(Of T, System.Int32, System.Boolean), System.Func(Of T, TKey))
+  nameWithType: IWorkSet<T>.Lock<TKey>(Func<T, Int32, Boolean>, Func<T, TKey>)
+  nameWithType.vb: IWorkSet(Of T).Lock(Of TKey)(Func(Of T, Int32, Boolean), Func(Of T, TKey))
+- uid: XData.IWorkSet`1.New(System.Action{`0}[])
+  name: New(Action<T>[])
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_New_System_Action__0____
+  commentId: M:XData.IWorkSet`1.New(System.Action{`0}[])
+  name.vb: New(Action(Of T)())
+  fullName: XData.IWorkSet<T>.New(System.Action<T>[])
+  fullName.vb: XData.IWorkSet(Of T).New(System.Action(Of T)())
+  nameWithType: IWorkSet<T>.New(Action<T>[])
+  nameWithType.vb: IWorkSet(Of T).New(Action(Of T)())
+- uid: XData.IWorkSet`1.New*
+  name: New
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_New_
+  commentId: Overload:XData.IWorkSet`1.New
+  isSpec: "True"
+  fullName: XData.IWorkSet<T>.New
+  fullName.vb: XData.IWorkSet(Of T).New
+  nameWithType: IWorkSet<T>.New
+  nameWithType.vb: IWorkSet(Of T).New
 - uid: XData.IWorkSet`1.Select(XData.WorkState)
   name: Select(WorkState)
   href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_Select_XData_WorkState_
@@ -18134,6 +18520,23 @@ references:
   fullName.vb: XData.IWorkSet(Of T).Select(Of TRet)(System.Func(Of T, TRet), XData.WorkState)
   nameWithType: IWorkSet<T>.Select<TRet>(Func<T, TRet>, WorkState)
   nameWithType.vb: IWorkSet(Of T).Select(Of TRet)(Func(Of T, TRet), WorkState)
+- uid: XData.IWorkSet`1.SelectKeys(XData.WorkState)
+  name: SelectKeys(WorkState)
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_SelectKeys_XData_WorkState_
+  commentId: M:XData.IWorkSet`1.SelectKeys(XData.WorkState)
+  fullName: XData.IWorkSet<T>.SelectKeys(XData.WorkState)
+  fullName.vb: XData.IWorkSet(Of T).SelectKeys(XData.WorkState)
+  nameWithType: IWorkSet<T>.SelectKeys(WorkState)
+  nameWithType.vb: IWorkSet(Of T).SelectKeys(WorkState)
+- uid: XData.IWorkSet`1.SelectKeys*
+  name: SelectKeys
+  href: api/XData.IWorkSet-1.html#XData_IWorkSet_1_SelectKeys_
+  commentId: Overload:XData.IWorkSet`1.SelectKeys
+  isSpec: "True"
+  fullName: XData.IWorkSet<T>.SelectKeys
+  fullName.vb: XData.IWorkSet(Of T).SelectKeys
+  nameWithType: IWorkSet<T>.SelectKeys
+  nameWithType.vb: IWorkSet(Of T).SelectKeys
 - uid: XData.Json
   name: XData.Json
   href: api/XData.Json.html
@@ -18829,6 +19232,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.ColumnExpressionAttribute.DbType
   nameWithType: ColumnExpressionAttribute.DbType
+- uid: XData.Mapping.ColumnExpressionAttribute.Exists
+  name: Exists
+  href: api/XData.Mapping.ColumnExpressionAttribute.html#XData_Mapping_ColumnExpressionAttribute_Exists
+  commentId: P:XData.Mapping.ColumnExpressionAttribute.Exists
+  fullName: XData.Mapping.ColumnExpressionAttribute.Exists
+  nameWithType: ColumnExpressionAttribute.Exists
+- uid: XData.Mapping.ColumnExpressionAttribute.Exists*
+  name: Exists
+  href: api/XData.Mapping.ColumnExpressionAttribute.html#XData_Mapping_ColumnExpressionAttribute_Exists_
+  commentId: Overload:XData.Mapping.ColumnExpressionAttribute.Exists
+  isSpec: "True"
+  fullName: XData.Mapping.ColumnExpressionAttribute.Exists
+  nameWithType: ColumnExpressionAttribute.Exists
 - uid: XData.Mapping.ColumnExpressionAttribute.ExprScale
   name: ExprScale
   href: api/XData.Mapping.ColumnExpressionAttribute.html#XData_Mapping_ColumnExpressionAttribute_ExprScale
@@ -19403,6 +19819,25 @@ references:
   commentId: T:XData.Mapping.Dynamic.IExpressionPropertyAdapter
   fullName: XData.Mapping.Dynamic.IExpressionPropertyAdapter
   nameWithType: IExpressionPropertyAdapter
+- uid: XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists
+  name: Exists()
+  href: api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_Exists
+  commentId: M:XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists
+  fullName: XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists()
+  nameWithType: IExpressionPropertyAdapter.Exists()
+- uid: XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists(XData.ExistsOperation)
+  name: Exists(ExistsOperation)
+  href: api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_Exists_XData_ExistsOperation_
+  commentId: M:XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists(XData.ExistsOperation)
+  fullName: XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists(XData.ExistsOperation)
+  nameWithType: IExpressionPropertyAdapter.Exists(ExistsOperation)
+- uid: XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists*
+  name: Exists
+  href: api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_Exists_
+  commentId: Overload:XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IExpressionPropertyAdapter.Exists
+  nameWithType: IExpressionPropertyAdapter.Exists
 - uid: XData.Mapping.Dynamic.IExpressionPropertyAdapter.NativeSqlType(System.String)
   name: NativeSqlType(String)
   href: api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_NativeSqlType_System_String_
@@ -22419,6 +22854,22 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetProperty
   nameWithType: QueryDescriptionExtensions.GetProperty
+- uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetVariable*
+  name: GetVariable
+  href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_GetVariable_
+  commentId: Overload:XData.Mapping.Dynamic.QueryDescriptionExtensions.GetVariable
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetVariable
+  nameWithType: QueryDescriptionExtensions.GetVariable
+- uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetVariable``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String)
+  name: GetVariable<TResult>(IQueryStructureAdapter, String)
+  href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_GetVariable__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_
+  commentId: M:XData.Mapping.Dynamic.QueryDescriptionExtensions.GetVariable``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String)
+  name.vb: GetVariable(Of TResult)(IQueryStructureAdapter, String)
+  fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetVariable<TResult>(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String)
+  fullName.vb: XData.Mapping.Dynamic.QueryDescriptionExtensions.GetVariable(Of TResult)(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String)
+  nameWithType: QueryDescriptionExtensions.GetVariable<TResult>(IQueryStructureAdapter, String)
+  nameWithType.vb: QueryDescriptionExtensions.GetVariable(Of TResult)(IQueryStructureAdapter, String)
 - uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.HasFlag*
   name: HasFlag
   href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_HasFlag_
@@ -22490,15 +22941,15 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr
   nameWithType: QueryDescriptionExtensions.SqlExpr
-- uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}}[])
-  name: SqlExpr<TResult>(IQueryStructureAdapter, String, Expression<Func<IQueryStructureAdapter, TResult>>[])
-  href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlExpr__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0_____
-  commentId: M:XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,``0}}[])
-  name.vb: SqlExpr(Of TResult)(IQueryStructureAdapter, String, Expression(Of Func(Of IQueryStructureAdapter, TResult))())
-  fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr<TResult>(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructureAdapter, TResult>>[])
-  fullName.vb: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr(Of TResult)(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, TResult))())
-  nameWithType: QueryDescriptionExtensions.SqlExpr<TResult>(IQueryStructureAdapter, String, Expression<Func<IQueryStructureAdapter, TResult>>[])
-  nameWithType.vb: QueryDescriptionExtensions.SqlExpr(Of TResult)(IQueryStructureAdapter, String, Expression(Of Func(Of IQueryStructureAdapter, TResult))())
+- uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,System.Object}}[])
+  name: SqlExpr<TResult>(IQueryStructureAdapter, String, Expression<Func<IQueryStructureAdapter, Object>>[])
+  href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlExpr__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Object_____
+  commentId: M:XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr``1(XData.Mapping.Dynamic.IQueryStructureAdapter,System.String,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IQueryStructureAdapter,System.Object}}[])
+  name.vb: SqlExpr(Of TResult)(IQueryStructureAdapter, String, Expression(Of Func(Of IQueryStructureAdapter, Object))())
+  fullName: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr<TResult>(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String, System.Linq.Expressions.Expression<System.Func<XData.Mapping.Dynamic.IQueryStructureAdapter, System.Object>>[])
+  fullName.vb: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlExpr(Of TResult)(XData.Mapping.Dynamic.IQueryStructureAdapter, System.String, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, System.Object))())
+  nameWithType: QueryDescriptionExtensions.SqlExpr<TResult>(IQueryStructureAdapter, String, Expression<Func<IQueryStructureAdapter, Object>>[])
+  nameWithType.vb: QueryDescriptionExtensions.SqlExpr(Of TResult)(IQueryStructureAdapter, String, Expression(Of Func(Of IQueryStructureAdapter, Object))())
 - uid: XData.Mapping.Dynamic.QueryDescriptionExtensions.SqlFn*
   name: SqlFn
   href: api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlFn_
@@ -24239,6 +24690,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.PropertyExpressionAttribute.DbType
   nameWithType: PropertyExpressionAttribute.DbType
+- uid: XData.Mapping.PropertyExpressionAttribute.Exists
+  name: Exists
+  href: api/XData.Mapping.PropertyExpressionAttribute.html#XData_Mapping_PropertyExpressionAttribute_Exists
+  commentId: P:XData.Mapping.PropertyExpressionAttribute.Exists
+  fullName: XData.Mapping.PropertyExpressionAttribute.Exists
+  nameWithType: PropertyExpressionAttribute.Exists
+- uid: XData.Mapping.PropertyExpressionAttribute.Exists*
+  name: Exists
+  href: api/XData.Mapping.PropertyExpressionAttribute.html#XData_Mapping_PropertyExpressionAttribute_Exists_
+  commentId: Overload:XData.Mapping.PropertyExpressionAttribute.Exists
+  isSpec: "True"
+  fullName: XData.Mapping.PropertyExpressionAttribute.Exists
+  nameWithType: PropertyExpressionAttribute.Exists
 - uid: XData.Mapping.PropertyExpressionAttribute.ExprScale
   name: ExprScale
   href: api/XData.Mapping.PropertyExpressionAttribute.html#XData_Mapping_PropertyExpressionAttribute_ExprScale
@@ -26476,6 +26940,22 @@ references:
   fullName.vb: XData.Work.Add(Of T)(System.Collections.Generic.ICollection(Of T), System.Linq.Expressions.Expression(Of System.Func(Of T, XData.IWorkSet))())
   nameWithType: Work.Add<T>(ICollection<T>, Expression<Func<T, IWorkSet>>[])
   nameWithType.vb: Work.Add(Of T)(ICollection(Of T), Expression(Of Func(Of T, IWorkSet))())
+- uid: XData.Work.Apply*
+  name: Apply
+  href: api/XData.Work.html#XData_Work_Apply_
+  commentId: Overload:XData.Work.Apply
+  isSpec: "True"
+  fullName: XData.Work.Apply
+  nameWithType: Work.Apply
+- uid: XData.Work.Apply``1(``0,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0}}})
+  name: Apply<TRoot>(TRoot, Expression<Func<IWorkScope<TRoot>>>)
+  href: api/XData.Work.html#XData_Work_Apply__1___0_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0____
+  commentId: M:XData.Work.Apply``1(``0,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0}}})
+  name.vb: Apply(Of TRoot)(TRoot, Expression(Of Func(Of IWorkScope(Of TRoot))))
+  fullName: XData.Work.Apply<TRoot>(TRoot, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TRoot>>>)
+  fullName.vb: XData.Work.Apply(Of TRoot)(TRoot, System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TRoot))))
+  nameWithType: Work.Apply<TRoot>(TRoot, Expression<Func<IWorkScope<TRoot>>>)
+  nameWithType.vb: Work.Apply(Of TRoot)(TRoot, Expression(Of Func(Of IWorkScope(Of TRoot))))
 - uid: XData.Work.Empty*
   name: Empty
   href: api/XData.Work.html#XData_Work_Empty_
@@ -26483,24 +26963,31 @@ references:
   isSpec: "True"
   fullName: XData.Work.Empty
   nameWithType: Work.Empty
-- uid: XData.Work.Empty``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
-  name: Empty<T, TRet>(Expression<Func<T, TRet>>, Expression<Func<TRet, IWorkSet>>[])
-  href: api/XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____
-  commentId: M:XData.Work.Empty``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
-  name.vb: Empty(Of T, TRet)(Expression(Of Func(Of T, TRet)), Expression(Of Func(Of TRet, IWorkSet))())
-  fullName: XData.Work.Empty<T, TRet>(System.Linq.Expressions.Expression<System.Func<T, TRet>>, System.Linq.Expressions.Expression<System.Func<TRet, XData.IWorkSet>>[])
-  fullName.vb: XData.Work.Empty(Of T, TRet)(System.Linq.Expressions.Expression(Of System.Func(Of T, TRet)), System.Linq.Expressions.Expression(Of System.Func(Of TRet, XData.IWorkSet))())
-  nameWithType: Work.Empty<T, TRet>(Expression<Func<T, TRet>>, Expression<Func<TRet, IWorkSet>>[])
-  nameWithType.vb: Work.Empty(Of T, TRet)(Expression(Of Func(Of T, TRet)), Expression(Of Func(Of TRet, IWorkSet))())
-- uid: XData.Work.Empty``2(System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
-  name: Empty<T, TRet>(Expression<Func<T, IEnumerable<TRet>>>, Expression<Func<TRet, IWorkSet>>[])
-  href: api/XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____
-  commentId: M:XData.Work.Empty``2(System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
-  name.vb: Empty(Of T, TRet)(Expression(Of Func(Of T, IEnumerable(Of TRet))), Expression(Of Func(Of TRet, IWorkSet))())
-  fullName: XData.Work.Empty<T, TRet>(System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TRet>>>, System.Linq.Expressions.Expression<System.Func<TRet, XData.IWorkSet>>[])
-  fullName.vb: XData.Work.Empty(Of T, TRet)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TRet))), System.Linq.Expressions.Expression(Of System.Func(Of TRet, XData.IWorkSet))())
-  nameWithType: Work.Empty<T, TRet>(Expression<Func<T, IEnumerable<TRet>>>, Expression<Func<TRet, IWorkSet>>[])
-  nameWithType.vb: Work.Empty(Of T, TRet)(Expression(Of Func(Of T, IEnumerable(Of TRet))), Expression(Of Func(Of TRet, IWorkSet))())
+- uid: XData.Work.Empty``2(System.String,ISecuritySession,System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
+  name: Empty<T, TRet>(String, ISecuritySession, Expression<Func<TRet, IWorkSet>>[])
+  href: api/XData.Work.html#XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____
+  commentId: M:XData.Work.Empty``2(System.String,ISecuritySession,System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
+  name.vb: Empty(Of T, TRet)(String, ISecuritySession, Expression(Of Func(Of TRet, IWorkSet))())
+  fullName: XData.Work.Empty<T, TRet>(System.String, ISecuritySession, System.Linq.Expressions.Expression<System.Func<TRet, XData.IWorkSet>>[])
+  fullName.vb: XData.Work.Empty(Of T, TRet)(System.String, ISecuritySession, System.Linq.Expressions.Expression(Of System.Func(Of TRet, XData.IWorkSet))())
+  nameWithType: Work.Empty<T, TRet>(String, ISecuritySession, Expression<Func<TRet, IWorkSet>>[])
+  nameWithType.vb: Work.Empty(Of T, TRet)(String, ISecuritySession, Expression(Of Func(Of TRet, IWorkSet))())
+- uid: XData.Work.Export*
+  name: Export
+  href: api/XData.Work.html#XData_Work_Export_
+  commentId: Overload:XData.Work.Export
+  isSpec: "True"
+  fullName: XData.Work.Export
+  nameWithType: Work.Export
+- uid: XData.Work.Export``1(System.Guid,System.Guid,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0}}})
+  name: Export<TRoot>(Guid, Guid, Expression<Func<IWorkScope<TRoot>>>)
+  href: api/XData.Work.html#XData_Work_Export__1_System_Guid_System_Guid_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0____
+  commentId: M:XData.Work.Export``1(System.Guid,System.Guid,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0}}})
+  name.vb: Export(Of TRoot)(Guid, Guid, Expression(Of Func(Of IWorkScope(Of TRoot))))
+  fullName: XData.Work.Export<TRoot>(System.Guid, System.Guid, System.Linq.Expressions.Expression<System.Func<XData.IWorkScope<TRoot>>>)
+  fullName.vb: XData.Work.Export(Of TRoot)(System.Guid, System.Guid, System.Linq.Expressions.Expression(Of System.Func(Of XData.IWorkScope(Of TRoot))))
+  nameWithType: Work.Export<TRoot>(Guid, Guid, Expression<Func<IWorkScope<TRoot>>>)
+  nameWithType.vb: Work.Export(Of TRoot)(Guid, Guid, Expression(Of Func(Of IWorkScope(Of TRoot))))
 - uid: XData.Work.Fill*
   name: Fill
   href: api/XData.Work.html#XData_Work_Fill_
@@ -26508,31 +26995,15 @@ references:
   isSpec: "True"
   fullName: XData.Work.Fill
   nameWithType: Work.Fill
-- uid: XData.Work.Fill``2(System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
-  name: Fill<T, TRet>(Expression<Func<T, IEnumerable<TRet>>>, Expression<Func<TRet, IWorkSet>>[])
-  href: api/XData.Work.html#XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____
-  commentId: M:XData.Work.Fill``2(System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
-  name.vb: Fill(Of T, TRet)(Expression(Of Func(Of T, IEnumerable(Of TRet))), Expression(Of Func(Of TRet, IWorkSet))())
-  fullName: XData.Work.Fill<T, TRet>(System.Linq.Expressions.Expression<System.Func<T, System.Collections.Generic.IEnumerable<TRet>>>, System.Linq.Expressions.Expression<System.Func<TRet, XData.IWorkSet>>[])
-  fullName.vb: XData.Work.Fill(Of T, TRet)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Collections.Generic.IEnumerable(Of TRet))), System.Linq.Expressions.Expression(Of System.Func(Of TRet, XData.IWorkSet))())
-  nameWithType: Work.Fill<T, TRet>(Expression<Func<T, IEnumerable<TRet>>>, Expression<Func<TRet, IWorkSet>>[])
-  nameWithType.vb: Work.Fill(Of T, TRet)(Expression(Of Func(Of T, IEnumerable(Of TRet))), Expression(Of Func(Of TRet, IWorkSet))())
-- uid: XData.Work.Get*
-  name: Get
-  href: api/XData.Work.html#XData_Work_Get_
-  commentId: Overload:XData.Work.Get
-  isSpec: "True"
-  fullName: XData.Work.Get
-  nameWithType: Work.Get
-- uid: XData.Work.Get``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
-  name: Get<T, TRet>(Expression<Func<T, TRet>>, Expression<Func<TRet, IWorkSet>>[])
-  href: api/XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____
-  commentId: M:XData.Work.Get``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
-  name.vb: Get(Of T, TRet)(Expression(Of Func(Of T, TRet)), Expression(Of Func(Of TRet, IWorkSet))())
-  fullName: XData.Work.Get<T, TRet>(System.Linq.Expressions.Expression<System.Func<T, TRet>>, System.Linq.Expressions.Expression<System.Func<TRet, XData.IWorkSet>>[])
-  fullName.vb: XData.Work.Get(Of T, TRet)(System.Linq.Expressions.Expression(Of System.Func(Of T, TRet)), System.Linq.Expressions.Expression(Of System.Func(Of TRet, XData.IWorkSet))())
-  nameWithType: Work.Get<T, TRet>(Expression<Func<T, TRet>>, Expression<Func<TRet, IWorkSet>>[])
-  nameWithType.vb: Work.Get(Of T, TRet)(Expression(Of Func(Of T, TRet)), Expression(Of Func(Of TRet, IWorkSet))())
+- uid: XData.Work.Fill``2(System.String,ISecuritySession,System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
+  name: Fill<T, TRet>(String, ISecuritySession, Expression<Func<TRet, IWorkSet>>[])
+  href: api/XData.Work.html#XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____
+  commentId: M:XData.Work.Fill``2(System.String,ISecuritySession,System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])
+  name.vb: Fill(Of T, TRet)(String, ISecuritySession, Expression(Of Func(Of TRet, IWorkSet))())
+  fullName: XData.Work.Fill<T, TRet>(System.String, ISecuritySession, System.Linq.Expressions.Expression<System.Func<TRet, XData.IWorkSet>>[])
+  fullName.vb: XData.Work.Fill(Of T, TRet)(System.String, ISecuritySession, System.Linq.Expressions.Expression(Of System.Func(Of TRet, XData.IWorkSet))())
+  nameWithType: Work.Fill<T, TRet>(String, ISecuritySession, Expression<Func<TRet, IWorkSet>>[])
+  nameWithType.vb: Work.Fill(Of T, TRet)(String, ISecuritySession, Expression(Of Func(Of TRet, IWorkSet))())
 - uid: XData.Work.GetWorkSet*
   name: GetWorkSet
   href: api/XData.Work.html#XData_Work_GetWorkSet_
@@ -26549,6 +27020,22 @@ references:
   fullName.vb: XData.Work.GetWorkSet(Of T)(System.Guid)
   nameWithType: Work.GetWorkSet<T>(Guid)
   nameWithType.vb: Work.GetWorkSet(Of T)(Guid)
+- uid: XData.Work.Root*
+  name: Root
+  href: api/XData.Work.html#XData_Work_Root_
+  commentId: Overload:XData.Work.Root
+  isSpec: "True"
+  fullName: XData.Work.Root
+  nameWithType: Work.Root
+- uid: XData.Work.Root``1(System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}})
+  name: Root<T>(Expression<Func<T, Guid>>, Expression<Func<T, Guid>>)
+  href: api/XData.Work.html#XData_Work_Root__1_System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Guid___
+  commentId: M:XData.Work.Root``1(System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}})
+  name.vb: Root(Of T)(Expression(Of Func(Of T, Guid)), Expression(Of Func(Of T, Guid)))
+  fullName: XData.Work.Root<T>(System.Linq.Expressions.Expression<System.Func<T, System.Guid>>, System.Linq.Expressions.Expression<System.Func<T, System.Guid>>)
+  fullName.vb: XData.Work.Root(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Guid)), System.Linq.Expressions.Expression(Of System.Func(Of T, System.Guid)))
+  nameWithType: Work.Root<T>(Expression<Func<T, Guid>>, Expression<Func<T, Guid>>)
+  nameWithType.vb: Work.Root(Of T)(Expression(Of Func(Of T, Guid)), Expression(Of Func(Of T, Guid)))
 - uid: XData.WorkState
   name: WorkState
   href: api/XData.WorkState.html

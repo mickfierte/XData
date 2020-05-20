@@ -6,7 +6,7 @@ version 1.2.0
 
 [XData Data Access Layer package](https://github.com/mickfierte/XData/packages/95851/)
 
-[XData UnitOfWork package](https://github.com/mickfierte/XData.WorkSet/packages/95894/) - required to use [XData UnitOfWork](http://mickfierte.github.io/XData/tutorial/unit_of_work.html) implementation
+[XData WorkSet (UnitOfWork) package](https://github.com/mickfierte/XData.WorkSet/packages/95894/) - required to use [XData WorkSet (UnitOfWork)](http://mickfierte.github.io/XData/tutorial/unit_of_work.html) implementation
 
 [XData Security package](https://github.com/mickfierte/XData.Security/packages/95893/) - [_ISecuritySession_](http://mickfierte.github.io/XData/api/XData.Interfaces.ISecuritySession.html) interface implementation helper required to use [XData security](http://mickfierte.github.io/XData/tutorial/security.html) functionality
 

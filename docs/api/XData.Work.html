@@ -128,7 +128,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Add__1___0_System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet_____.md&amp;value=---%0Auid%3A%20XData.Work.Add%60%601(%60%600%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CXData.IWorkSet%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.netstandard20.cs/#L45">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.netstandard20.cs/#L48">View Source</a>
   </span>
   <a id="XData_Work_Add_" data-uid="XData.Work.Add*"></a>
   <h4 id="XData_Work_Add__1___0_System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet_____" data-uid="XData.Work.Add``1(``0,System.Linq.Expressions.Expression{System.Func{``0,XData.IWorkSet}}[])">Add&lt;T&gt;(T, Expression&lt;Func&lt;T, IWorkSet&gt;&gt;[])</h4>
@@ -138,6 +138,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IWorkSet&lt;T&gt; Add&lt;T&gt;(T data, params Expression&lt;Func&lt;T, IWorkSet&gt;&gt;[] workSets)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -198,17 +199,15 @@
   </table>
   <h5 id="XData_Work_Add__1___0_System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet______seealso">See Also</h5>
   <div class="seealso">
-      <div><a class="xref" href="XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
+      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
+      <div><a class="xref" href="XData.Work.html#XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Add__1_System_Collections_Generic_ICollection___0__System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet_____.md&amp;value=---%0Auid%3A%20XData.Work.Add%60%601(System.Collections.Generic.ICollection%7B%60%600%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CXData.IWorkSet%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.netstandard20.cs/#L76">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.netstandard20.cs/#L77">View Source</a>
   </span>
   <a id="XData_Work_Add_" data-uid="XData.Work.Add*"></a>
   <h4 id="XData_Work_Add__1_System_Collections_Generic_ICollection___0__System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet_____" data-uid="XData.Work.Add``1(System.Collections.Generic.ICollection{``0},System.Linq.Expressions.Expression{System.Func{``0,XData.IWorkSet}}[])">Add&lt;T&gt;(ICollection&lt;T&gt;, Expression&lt;Func&lt;T, IWorkSet&gt;&gt;[])</h4>
@@ -218,6 +217,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IWorkSet&lt;T&gt; Add&lt;T&gt;(ICollection&lt;T&gt; data, params Expression&lt;Func&lt;T, IWorkSet&gt;&gt;[] workSets)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -278,27 +278,85 @@
   </table>
   <h5 id="XData_Work_Add__1_System_Collections_Generic_ICollection___0__System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet______seealso">See Also</h5>
   <div class="seealso">
-      <div><a class="xref" href="XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
+      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
+      <div><a class="xref" href="XData.Work.html#XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____.md&amp;value=---%0Auid%3A%20XData.Work.Empty%60%602(System.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2C%60%601%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%601%2CXData.IWorkSet%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Apply__1___0_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0____.md&amp;value=---%0Auid%3A%20XData.Work.Apply%60%601(%60%600%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.IWorkScope%7B%60%600%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L300">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L257">View Source</a>
+  </span>
+  <a id="XData_Work_Apply_" data-uid="XData.Work.Apply*"></a>
+  <h4 id="XData_Work_Apply__1___0_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0____" data-uid="XData.Work.Apply``1(``0,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0}}})">Apply&lt;TRoot&gt;(TRoot, Expression&lt;Func&lt;IWorkScope&lt;TRoot&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Apply single data object (optionally with some childs) to work set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Apply&lt;TRoot&gt;(TRoot obj, Expression&lt;Func&lt;IWorkScope&lt;TRoot&gt;&gt;&gt; structure)
+
+    where TRoot : class, IDataObject, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRoot</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Detached data object to apply</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="XData.IWorkScope-1.html">IWorkScope</a>&lt;TRoot&gt;&gt;&gt;</td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Childs data description</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TRoot</span></td>
+        <td><p>Root object type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____.md&amp;value=---%0Auid%3A%20XData.Work.Empty%60%602(System.String%2CISecuritySession%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%601%2CXData.IWorkSet%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L35">View Source</a>
   </span>
   <a id="XData_Work_Empty_" data-uid="XData.Work.Empty*"></a>
-  <h4 id="XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____" data-uid="XData.Work.Empty``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</h4>
+  <h4 id="XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____" data-uid="XData.Work.Empty``2(System.String,ISecuritySession,System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])">Empty&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Empty single depended object initializer</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Expression&lt;Func&lt;T, IWorkSet&gt;&gt; Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt; source, params Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[] workSets)
+    <pre><code class="lang-csharp hljs">public static Expression&lt;Func&lt;T, IWorkSet&gt;&gt; Empty&lt;T, TRet&gt;(string alias = null, ISecuritySession security = null, params Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[] workSets)
+
     where T : class, IDataObject, new()
+
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -312,9 +370,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TRet&gt;&gt;</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Expression returning parent object property contains depended data object</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>(optional) Child repository alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ISecuritySession</span></td>
+        <td><span class="parametername">security</span></td>
+        <td><p>(optional) Security session</p>
 </td>
       </tr>
       <tr>
@@ -363,27 +427,27 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet______seealso">See Also</h5>
+  <h5 id="XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet______seealso">See Also</h5>
   <div class="seealso">
-      <div><a class="xref" href="XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
+      <div><a class="xref" href="XData.Work.html#XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____.md&amp;value=---%0Auid%3A%20XData.Work.Empty%60%602(System.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%601%2CXData.IWorkSet%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Export__1_System_Guid_System_Guid_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0____.md&amp;value=---%0Auid%3A%20XData.Work.Export%60%601(System.Guid%2CSystem.Guid%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7BXData.IWorkScope%7B%60%600%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L331">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L108">View Source</a>
   </span>
-  <a id="XData_Work_Empty_" data-uid="XData.Work.Empty*"></a>
-  <h4 id="XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____" data-uid="XData.Work.Empty``2(System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Empty depended collection initializer</p>
+  <a id="XData_Work_Export_" data-uid="XData.Work.Export*"></a>
+  <h4 id="XData_Work_Export__1_System_Guid_System_Guid_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0____" data-uid="XData.Work.Export``1(System.Guid,System.Guid,System.Linq.Expressions.Expression{System.Func{XData.IWorkScope{``0}}})">Export&lt;TRoot&gt;(Guid, Guid, Expression&lt;Func&lt;IWorkScope&lt;TRoot&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Export single data object (optionally with some childs) by key</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Expression&lt;Func&lt;T, IWorkSet&gt;&gt; Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; source, params Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[] workSets)
-    where T : class, IDataObject, new()
-    where TRet : class, IDataObject, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static TRoot Export&lt;TRoot&gt;(Guid layer, Guid key, Expression&lt;Func&lt;IWorkScope&lt;TRoot&gt;&gt;&gt; structure)
+
+    where TRoot : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,15 +460,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TRet&gt;&gt;&gt;</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Expression returning parent object property contains depended data object</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">layer</span></td>
+        <td><p>Data set layer</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TRet, <a class="xref" href="XData.IWorkSet.html">IWorkSet</a>&gt;&gt;[]</td>
-        <td><span class="parametername">workSets</span></td>
-        <td><p>Depended objects/collections initializers</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Work set key</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="XData.IWorkScope-1.html">IWorkScope</a>&lt;TRoot&gt;&gt;&gt;</td>
+        <td><span class="parametername">structure</span></td>
+        <td><p>Structure description</p>
 </td>
       </tr>
     </tbody>
@@ -419,9 +489,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="XData.IWorkSet.html">IWorkSet</a>&gt;&gt;</td>
-        <td><blockquote><p>Work set</p>
-</blockquote>
+        <td><span class="xref">TRoot</span></td>
+        <td><p>Data object</p>
 </td>
       </tr>
     </tbody>
@@ -436,37 +505,30 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Parent data object type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TRet</span></td>
-        <td><p>Depended data object type</p>
+        <td><span class="parametername">TRoot</span></td>
+        <td><p>Root object type</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Work.html#XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____.md&amp;value=---%0Auid%3A%20XData.Work.Fill%60%602(System.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%601%2CXData.IWorkSet%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____.md&amp;value=---%0Auid%3A%20XData.Work.Fill%60%602(System.String%2CISecuritySession%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%601%2CXData.IWorkSet%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L362">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L67">View Source</a>
   </span>
   <a id="XData_Work_Fill_" data-uid="XData.Work.Fill*"></a>
-  <h4 id="XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____" data-uid="XData.Work.Fill``2(System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])">Fill&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</h4>
+  <h4 id="XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____" data-uid="XData.Work.Fill``2(System.String,ISecuritySession,System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])">Fill&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</h4>
   <div class="markdown level1 summary"><p>Existed depended collection initializer</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Expression&lt;Func&lt;T, IWorkSet&gt;&gt; Fill&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; source, params Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[] workSets)
+    <pre><code class="lang-csharp hljs">public static Expression&lt;Func&lt;T, IWorkSet&gt;&gt; Fill&lt;T, TRet&gt;(string alias = null, ISecuritySession security = null, params Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[] workSets)
+
     where T : class, IDataObject, new()
+
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -480,9 +542,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TRet&gt;&gt;&gt;</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Expression returning parent object property contains depended data object</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>(optional) Child repository alias</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ISecuritySession</span></td>
+        <td><span class="parametername">security</span></td>
+        <td><p>(optional) Security session</p>
 </td>
       </tr>
       <tr>
@@ -531,93 +599,9 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet______seealso">See Also</h5>
+  <h5 id="XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet______seealso">See Also</h5>
   <div class="seealso">
-      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____.md&amp;value=---%0Auid%3A%20XData.Work.Get%60%602(System.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2C%60%601%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%601%2CXData.IWorkSet%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L271">View Source</a>
-  </span>
-  <a id="XData_Work_Get_" data-uid="XData.Work.Get*"></a>
-  <h4 id="XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____" data-uid="XData.Work.Get``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,XData.IWorkSet}}[])">Get&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</h4>
-  <div class="markdown level1 summary"><p>Existed single depended object initializer</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Expression&lt;Func&lt;T, IWorkSet&gt;&gt; Get&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt; source, params Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[] workSets)
-    where T : class, IDataObject, new()
-    where TRet : class, IDataObject, new()</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TRet&gt;&gt;</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>Expression returning parent object property contains depended data object</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TRet, <a class="xref" href="XData.IWorkSet.html">IWorkSet</a>&gt;&gt;[]</td>
-        <td><span class="parametername">workSets</span></td>
-        <td><p>Depended objects/collections initializers</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="XData.IWorkSet.html">IWorkSet</a>&gt;&gt;</td>
-        <td><blockquote><p>Work set</p>
-</blockquote>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>Parent data object type</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TRet</span></td>
-        <td><p>Depended data object type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet______seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
+      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -634,6 +618,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IWorkSet&lt;T&gt; GetWorkSet&lt;T&gt;(Guid layer)
+
     where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -686,14 +671,82 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Work_Root__1_System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Guid___.md&amp;value=---%0Auid%3A%20XData.Work.Root%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Guid%7D%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%60%600%2CSystem.Guid%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L93">View Source</a>
+  </span>
+  <a id="XData_Work_Root_" data-uid="XData.Work.Root*"></a>
+  <h4 id="XData_Work_Root__1_System_Linq_Expressions_Expression_System_Func___0_System_Guid___System_Linq_Expressions_Expression_System_Func___0_System_Guid___" data-uid="XData.Work.Root``1(System.Linq.Expressions.Expression{System.Func{``0,System.Guid}},System.Linq.Expressions.Expression{System.Func{``0,System.Guid}})">Root&lt;T&gt;(Expression&lt;Func&lt;T, Guid&gt;&gt;, Expression&lt;Func&lt;T, Guid&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Root structure describer for work set export/apply</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IWorkScope&lt;T&gt; Root&lt;T&gt;(Expression&lt;Func&lt;T, Guid&gt;&gt; layerProperty, Expression&lt;Func&lt;T, Guid&gt;&gt; keyProperty)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</td>
+        <td><span class="parametername">layerProperty</span></td>
+        <td><p>Data scope layer property</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;&gt;</td>
+        <td><span class="parametername">keyProperty</span></td>
+        <td><p>Work set key property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.IWorkScope-1.html">IWorkScope</a>&lt;T&gt;</td>
+        <td><p>Structure describer</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Root type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="seealso">See Also</h3>
   <div class="seealso">
-      <div><a class="xref" href="XData.Work.html#XData_Work_Add__1___0_System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet_____">Add&lt;T&gt;(T, Expression&lt;Func&lt;T, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Add__1_System_Collections_Generic_ICollection___0__System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet_____">Add&lt;T&gt;(ICollection&lt;T&gt;, Expression&lt;Func&lt;T, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, TRet&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
-      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
+      <div><a class="xref" href="XData.Work.html#XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
+      <div><a class="xref" href="XData.Work.html#XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill&lt;T, TRet&gt;(String, ISecuritySession, Expression&lt;Func&lt;TRet, IWorkSet&gt;&gt;[])</a></div>
   </div>
 </article>
           </div>

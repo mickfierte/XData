@@ -90,13 +90,13 @@ var instance = rep.New();
 /* 
     Using static class Work we init UoW container with new root object and describe 
     collections of related objects. Because of new root object we use Work.Empty 
-    method to initialize that collections.
+    method to initialize that collections without fetching any data.
 */
 using (var work = Work.Add(instance, 
-    Work.Empty&lt;Model.Patient, Model.PatientDiagnosis&gt;(x =&gt; x.PatientDiagnosisList),
-    Work.Empty&lt;Model.Patient, Model.PatientOper&gt;(x =&gt; x.PatientOperList)))
+    Work.Empty&lt;Model.Patient, Model.PatientDiagnosis&gt;()
+    .Empty&lt;Model.Patient, Model.PatientOper&gt;()))
 {
-    if (new PatientWindow { DataContext = new Patient(work), Owner = window }
+    if (new PatientWindow { DataContext = instance, Owner = window }
         .ShowDialog() == true)
         work.Submit(); // submitting UoW container changes
 }
@@ -107,27 +107,44 @@ using (var work = Work.Add(instance,
   be filled from DB using Work.Fill method.
 */
 using (var work = Work.Add(patient, 
-    Work.Fill&lt;Model.Patient, Model.PatientDiagnosis&gt;(x =&gt; x.PatientDiagnosisList),
-    Work.Fill&lt;Model.Patient, Model.PatientOper&gt;(x =&gt; x.PatientOperList)))
+    Work.Fill&lt;Model.Patient, Model.PatientDiagnosis&gt;()
+    .Fill&lt;Model.Patient, Model.PatientOper&gt;()))
 {
-    if (new PatientWindow { DataContext = new Patient(work), Owner = window }
+    if (new PatientWindow { DataContext = patient, Owner = window }
     .ShowDialog() != true) return;
     work.Submit(); // submitting UoW container changes
 }
-</code></pre><p>Initialization of single related object inside of UoW container (one-to-one relationship) is described by <a class="xref" href="../api/XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get</a> method, that analog to <a class="xref" href="../api/XData.Work.html#XData_Work_Empty__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty</a> and <a class="xref" href="../api/XData.Work.html#XData_Work_Fill__2_System_Linq_Expressions_Expression_System_Func___0_System_Collections_Generic_IEnumerable___1____System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill</a> methods we use before.</p>
-<p>UoW container can be initialized with a not only single root object, but using collection of root objects with overloaded <a href="">Add</a> method that accept an collection (<em>ICollection</em>) of root objects.</p>
-<p>To select a single object form UoW container use <a class="xref" href="../api/XData.Work.html#XData_Work_Get__2_System_Linq_Expressions_Expression_System_Func___0___1___System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Get</a> method. This method can accept predicate as parameter to specify unique condition of object selection. After acquiring a single object we can change it (or delete it as explained in followed example):</p>
+</code></pre><p>Initialization of single related object inside of UoW container (one-to-one relationship) is described by <a class="xref" href="../api/XData.Work.html#XData_Work_Add__1___0_System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet_____">Add</a> method, that analog to <a class="xref" href="../api/XData.Work.html#XData_Work_Empty__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Empty</a> and <a class="xref" href="../api/XData.Work.html#XData_Work_Fill__2_System_String_ISecuritySession_System_Linq_Expressions_Expression_System_Func___1_XData_IWorkSet_____">Fill</a> methods we use before.</p>
+<p>UoW container can be initialized with a not only single root object, but using collection of root objects with overloaded <a class="xref" href="../api/XData.Work.html#XData_Work_Add__1_System_Collections_Generic_ICollection___0__System_Linq_Expressions_Expression_System_Func___0_XData_IWorkSet_____">Add</a> method that accept an collection (<em>ICollection</em>) of root objects.</p>
+<p>To select a single object form UoW container use <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_Get_System_Func__0_System_Boolean__XData_WorkState_">Get</a> method. This method can accept predicate as parameter to specify unique condition of object selection. After acquiring a single object we can change it (or delete it as explained in followed example):</p>
 <pre><code class="lang-csharp">_patient = work.Get();
 _patient.SetDeleted(True);
 </code></pre><p>To select multiple objects from UoW container can be made using <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_Select__1_System_Func__0___0__XData_WorkState_">Select</a> method:</p>
-<pre><code class="lang-csharp">var newOperations = work.Find(x =&gt; x.PatientOperList).Select(x =&gt; x.Date &gt; startDate);
-</code></pre><p>To acquire detail UoW container we can use <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_Find__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____">Find</a> method. This method can accept predicate to select root object when root container has initialized by collection of objects. New related object can be added to detail UoW container using <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_Add_System_Func__0__">Add</a> method we discussed above:</p>
-<pre><code class="lang-csharp">work.Find(x =&gt; x.PatientOperList).Add(() =&gt; n.Data);
-</code></pre><p>To exchange object in UoW container use <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_Assign__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__System_Func__0__XData_WorkState_">Assign</a> method. When object is exchanged all his detail UoW containers will be dismissed and all changes in it will be lost!</p>
-<pre><code class="lang-csharp">work.Assign(x =&gt; true, repository.New());
-</code></pre><div class="WARNING"><h5>Warning</h5><p>Do not use <em>Assign</em> method to change object property values! Updating properties of object inside UoW container can be produced by acquiring object using <em>Get</em> method and changing it properties. Method <em>Assign</em> is used to exchange object including his detail containers by another object!</p>
+<pre><code class="lang-csharp">var newOperations = work.Child&lt;Model.PatientOper&gt;()
+    .Select(x =&gt; x.Date &gt; startDate);
+</code></pre><p>To acquire detail UoW container we can use <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_Child__1_System_String_">Child</a> method. This method can accept predicate to select root object when root container has initialized by collection of objects. New related object can be added to detail UoW container using <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_New_System_Action__0____">New</a> method we discussed above:</p>
+<pre><code class="lang-csharp">work.Child&lt;Model.PatientOper&gt;()
+    .New(x =&gt; x.SomeField = 42, x =&gt; x.OtherField = &quot;some&quot;);
+</code></pre><div class="IMPORTANT"><h5>Important</h5><p>Unit of Work realization is not internal part of XData. It can be attached to Your project when this functionality is really needed using separate NuGet package <a href="https://github.com/mickfierte/XData.WorkSet/packages/95894/">XData WorkSet (UnitOfWork) package</a>.</p>
 </div>
-<div class="IMPORTANT"><h5>Important</h5><p>Unit of Work realization is not internal part of XData. It can be attached to Your project when this functionality is really needed using separate NuGet package <a href="https://packages.nuget.org/packages/XData.WorkSet_BrokenLink/">XData UnitOfWork package</a>.</p>
+<p>In addition, the UoW container supports exporting hierarchically constructed objects using the static <a class="xref" href="../api/XData.Work.html#XData_Work_Export__1_System_Guid_System_Guid_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0____">Export</a> method. At the same time, it is possible to export any selected part of the contents of the UoW container, starting either from the root node or from any container node.</p>
+<p>To export a node, it must contain a property of type <em>Guid</em> for storing the object key in the UoW container and another property of type <em>Guid</em> for storing the data layer of the UoW container. These properties should not be included in the mapping.</p>
+<p>The <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_GetKey">GetKey</a> (or it&#39;s overload version) and <a class="xref" href="../api/XData.IWorkSet-1.html#XData_IWorkSet_1_SelectKeys_XData_WorkState_">SelectKeys</a> methods are used to get the value of the keys of UoW container objects.</p>
+<p>To export an object with child objects, it is necessary to define a property to which it will be used to store an array of child objects (or a child instance for one-to-one relation). Such properties should also not be included in the mapping.</p>
+<p>In addition, the <em>bool</em> property can be defined in the child objects to pass the delete flag. Such properties should also not be included in the mapping.</p>
+<p>To determine the structure of the exported part of the UoW container, a LINQ-style descriptor is used, the use of which is clear from the example below. Using the descriptor, it is possible not only to determine which child objects should be exported together with the root element, but also what service properties of objects at each level, what information will be filled.</p>
+<pre><code class="lang-csharp">var expInvoice = Work.Export(work.DbLayer, key.Value, 
+    () =&gt; Work.Root&lt;Invoice&gt;(z =&gt; z.Layer, /* Guid Data scope layer property */
+        z =&gt; z.Key)                        /* Guid Work set key property */
+        .With(z =&gt; z.InvoiceSpec,          /* InvoiceSpec[] child entities array property */
+            z =&gt; z.Key,                    /* child entity: Guid Work set key property */
+            z =&gt; z.Deleted));              /* child entity: bool delete flag property */
+</code></pre><p>After exporting, this object (and its child objects transferred with it) can be modified somewhere outside the system (for example, on a JS-based Web client) and then applied using the <a class="xref" href="../api/XData.Work.html#XData_Work_Apply__1___0_System_Linq_Expressions_Expression_System_Func_XData_IWorkScope___0____">Apply</a> method. In addition to the object itself, the <em>Apply</em> method accepts a descriptor built on the principle similar to that described above.</p>
+<pre><code class="lang-csharp">Work.Apply(inv, () =&gt; Work.Root&lt;Invoice&gt;(z =&gt; z.Layer, z =&gt; z.Key)
+    .With(z =&gt; z.InvoiceSpec, z =&gt; z.Key, z =&gt; z.Deleted));
+</code></pre><div class="WARNING"><h5>Warning</h5><p>In order to apply changes to the UoW container, the data layer (data scope) on which it is built must not be destroyed like the UoW container itself. XData has internal caching mechanisms that allow them to store and retrieve their instances by layer ID using the <a class="xref" href="../api/XData.IDataEngine.html#XData_IDataEngine_GetDataScope_System_Guid_System_Boolean_">GetDataScope</a> and <a class="xref" href="../api/XData.Work.html#XData_Work_GetWorkSet__1_System_Guid_">GetWorkSet</a> methods.</p>
+</div>
+<div class="IMPORTANT"><h5>Important</h5><p>Data layers are cached independently of UoW containers and you need to destroy the data layer after removing the UoW container separately!</p>
 </div>
 </article>
           </div>

@@ -95,7 +95,13 @@
       <a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_Clear">IWorkSet.Clear()</a>
     </div>
     <div>
-      <a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_Submit_IDataScope_">IWorkSet.Submit(IDataScope)</a>
+      <a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_Submit">IWorkSet.Submit()</a>
+    </div>
+    <div>
+      <a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_Type">IWorkSet.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_DbLayer">IWorkSet.DbLayer</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose">IDisposable.Dispose()</a>
@@ -105,7 +111,7 @@
   <h6><strong>Assembly</strong>: XData.WorkSet.docfx.dll</h6>
   <h5 id="XData_IWorkSet_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IWorkSet&lt;T&gt; : IWorkSet, IDisposable where T : class, IDataObject, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IWorkSet&lt;out T&gt; : IWorkSet, IDisposable where T : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,299 +136,20 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Add_System_Func__0__.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Add(System.Func%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Child__1_System_Func__0_System_Boolean__System_String_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Child%60%601(System.Func%7B%600%2CSystem.Boolean%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L205">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L158">View Source</a>
   </span>
-  <a id="XData_IWorkSet_1_Add_" data-uid="XData.IWorkSet`1.Add*"></a>
-  <h4 id="XData_IWorkSet_1_Add_System_Func__0__" data-uid="XData.IWorkSet`1.Add(System.Func{`0})">Add(Func&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Add object to work set collection</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T Add(Func&lt;T&gt; data)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</td>
-        <td><span class="parametername">data</span></td>
-        <td><p>Lazy data creator</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>Added object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Assign_System_Func__0_System_Boolean__System_Func__0__XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Assign(System.Func%7B%600%2CSystem.Boolean%7D%2CSystem.Func%7B%600%7D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L218">View Source</a>
-  </span>
-  <a id="XData_IWorkSet_1_Assign_" data-uid="XData.IWorkSet`1.Assign*"></a>
-  <h4 id="XData_IWorkSet_1_Assign_System_Func__0_System_Boolean__System_Func__0__XData_WorkState_" data-uid="XData.IWorkSet`1.Assign(System.Func{`0,System.Boolean},System.Func{`0},XData.WorkState)">Assign(Func&lt;T, Boolean&gt;, Func&lt;T&gt;, WorkState)</h4>
-  <div class="markdown level1 summary"><p>Assign single object</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T Assign(Func&lt;T, bool&gt; predicate, Func&lt;T&gt; data, WorkState state = WorkState.Active)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><span class="parametername">predicate</span></td>
-        <td><p>Predicate to find object</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</td>
-        <td><span class="parametername">data</span></td>
-        <td><p>Lazy data creator</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.WorkState.html">WorkState</a></td>
-        <td><span class="parametername">state</span></td>
-        <td><p>Work set state</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>Assigned object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_IWorkSet_1_Assign_System_Func__0_System_Boolean__System_Func__0__XData_WorkState__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Used to assign single object and reset depended work sets data changes</p>
-<p>WARNING!  Do not use this method to update data only!</p>
-<p>All depended work sets will be reset-ed and data changes are lost!</p>
-<p>Call <a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Get_System_Func__0_System_Boolean__XData_WorkState_">Get(Func&lt;T, Boolean&gt;, WorkState)</a> to obtain data object and change it instead!</p></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Assign_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_Func__0__XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Assign(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2CSystem.IComparable%7D%5B%5D%2CSystem.Func%7B%600%7D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L248">View Source</a>
-  </span>
-  <a id="XData_IWorkSet_1_Assign_" data-uid="XData.IWorkSet`1.Assign*"></a>
-  <h4 id="XData_IWorkSet_1_Assign_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_Func__0__XData_WorkState_" data-uid="XData.IWorkSet`1.Assign(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.Func{`0},XData.WorkState)">Assign(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[], Func&lt;T&gt;, WorkState)</h4>
-  <div class="markdown level1 summary"><p>Assign single object</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T Assign(Func&lt;T, int, bool&gt; predicate, Func&lt;T, IComparable&gt;[] order, Func&lt;T&gt; data, WorkState state = WorkState.Active)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><span class="parametername">predicate</span></td>
-        <td><p>Predicate to find object</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>&gt;[]</td>
-        <td><span class="parametername">order</span></td>
-        <td><p>Order statements</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</td>
-        <td><span class="parametername">data</span></td>
-        <td><p>Lazy data creator</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.WorkState.html">WorkState</a></td>
-        <td><span class="parametername">state</span></td>
-        <td><p>Work set state</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>Assigned object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_IWorkSet_1_Assign_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_Func__0__XData_WorkState__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Used to assign single object and reset depended work sets data changes</p>
-<p>WARNING!  Do not use this method to update data only!</p>
-<p>All depended work sets will be reset-ed and data changes are lost!</p>
-<p>Call <a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Get_System_Func__0_System_Boolean__XData_WorkState_">Get(Func&lt;T, Boolean&gt;, WorkState)</a> to obtain data object and change it instead!</p></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Assign__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__System_Func__0__XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Assign%60%601(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2C%60%600%7D%2CSystem.Func%7B%600%7D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L233">View Source</a>
-  </span>
-  <a id="XData_IWorkSet_1_Assign_" data-uid="XData.IWorkSet`1.Assign*"></a>
-  <h4 id="XData_IWorkSet_1_Assign__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__System_Func__0__XData_WorkState_" data-uid="XData.IWorkSet`1.Assign``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0},System.Func{`0},XData.WorkState)">Assign&lt;TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, Func&lt;T&gt;, WorkState)</h4>
-  <div class="markdown level1 summary"><p>Assign single object</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T Assign&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, Func&lt;T&gt; data, WorkState state = WorkState.Active)
-    where TKey : IComparable</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><span class="parametername">predicate</span></td>
-        <td><p>Predicate to find object</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TKey&gt;</td>
-        <td><span class="parametername">order</span></td>
-        <td><p>Order statement</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</td>
-        <td><span class="parametername">data</span></td>
-        <td><p>Lazy data creator</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="XData.WorkState.html">WorkState</a></td>
-        <td><span class="parametername">state</span></td>
-        <td><p>Work set state</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><p>Assigned object</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TKey</span></td>
-        <td><p>Order key type</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XData_IWorkSet_1_Assign__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__System_Func__0__XData_WorkState__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Used to assign single object and reset depended work sets data changes</p>
-<p>WARNING!  Do not use this method to update data only!</p>
-<p>All depended work sets will be reset-ed and data changes are lost!</p>
-<p>Call <a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Get_System_Func__0_System_Boolean__XData_WorkState_">Get(Func&lt;T, Boolean&gt;, WorkState)</a> to obtain data object and change it instead!</p></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Find__1_System_Func__0_System_Boolean__System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Find%60%601(System.Func%7B%600%2CSystem.Boolean%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%600%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L170">View Source</a>
-  </span>
-  <a id="XData_IWorkSet_1_Find_" data-uid="XData.IWorkSet`1.Find*"></a>
-  <h4 id="XData_IWorkSet_1_Find__1_System_Func__0_System_Boolean__System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____" data-uid="XData.IWorkSet`1.Find``1(System.Func{`0,System.Boolean},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})">Find&lt;TRet&gt;(Func&lt;T, Boolean&gt;, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;)</h4>
+  <a id="XData_IWorkSet_1_Child_" data-uid="XData.IWorkSet`1.Child*"></a>
+  <h4 id="XData_IWorkSet_1_Child__1_System_Func__0_System_Boolean__System_String_" data-uid="XData.IWorkSet`1.Child``1(System.Func{`0,System.Boolean},System.String)">Child&lt;TRet&gt;(Func&lt;T, Boolean&gt;, String)</h4>
   <div class="markdown level1 summary"><p>Find depended work set</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Find&lt;TRet&gt;(Func&lt;T, bool&gt; predicate, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; child)
+    <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Child&lt;TRet&gt;(Func&lt;T, bool&gt; predicate, string alias = null)
+
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -442,9 +169,9 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TRet&gt;&gt;&gt;</td>
-        <td><span class="parametername">child</span></td>
-        <td><p>Expression returning parent object property contains depended data object collection</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>(optional) Child repository alias</p>
 </td>
       </tr>
     </tbody>
@@ -483,19 +210,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Find__1_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Find%60%601(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2CSystem.IComparable%7D%5B%5D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%600%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Child__1_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_String_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Child%60%601(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2CSystem.IComparable%7D%5B%5D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L196">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L183">View Source</a>
   </span>
-  <a id="XData_IWorkSet_1_Find_" data-uid="XData.IWorkSet`1.Find*"></a>
-  <h4 id="XData_IWorkSet_1_Find__1_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____" data-uid="XData.IWorkSet`1.Find``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})">Find&lt;TRet&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[], Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;)</h4>
+  <a id="XData_IWorkSet_1_Child_" data-uid="XData.IWorkSet`1.Child*"></a>
+  <h4 id="XData_IWorkSet_1_Child__1_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_String_" data-uid="XData.IWorkSet`1.Child``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],System.String)">Child&lt;TRet&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[], String)</h4>
   <div class="markdown level1 summary"><p>Find depended work set (using order index)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Find&lt;TRet&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, IComparable&gt;[] order, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; child)
+    <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Child&lt;TRet&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, IComparable&gt;[] order, string alias = null)
+
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -521,9 +249,9 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TRet&gt;&gt;&gt;</td>
-        <td><span class="parametername">child</span></td>
-        <td><p>Expression returning parent object property contains depended data object collection</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>(optional) Child repository alias</p>
 </td>
       </tr>
     </tbody>
@@ -562,19 +290,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Find__1_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Find%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Child__1_System_String_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Child%60%601(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L160">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L148">View Source</a>
   </span>
-  <a id="XData_IWorkSet_1_Find_" data-uid="XData.IWorkSet`1.Find*"></a>
-  <h4 id="XData_IWorkSet_1_Find__1_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____" data-uid="XData.IWorkSet`1.Find``1(System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})">Find&lt;TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;)</h4>
+  <a id="XData_IWorkSet_1_Child_" data-uid="XData.IWorkSet`1.Child*"></a>
+  <h4 id="XData_IWorkSet_1_Child__1_System_String_" data-uid="XData.IWorkSet`1.Child``1(System.String)">Child&lt;TRet&gt;(String)</h4>
   <div class="markdown level1 summary"><p>Find depended work set</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Find&lt;TRet&gt;(Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; child)
+    <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Child&lt;TRet&gt;(string alias = null)
+
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -588,9 +317,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TRet&gt;&gt;&gt;</td>
-        <td><span class="parametername">child</span></td>
-        <td><p>Expression returning parent object property contains depended data object collection</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>(optional) Child repository alias</p>
 </td>
       </tr>
     </tbody>
@@ -629,20 +358,22 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Find__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Find%60%602(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2C%60%601%7D%2CSystem.Linq.Expressions.Expression%7BSystem.Func%7B%600%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Child__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_String_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Child%60%602(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2C%60%601%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L183">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L170">View Source</a>
   </span>
-  <a id="XData_IWorkSet_1_Find_" data-uid="XData.IWorkSet`1.Find*"></a>
-  <h4 id="XData_IWorkSet_1_Find__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____" data-uid="XData.IWorkSet`1.Find``2(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``1},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})">Find&lt;TRet, TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;)</h4>
+  <a id="XData_IWorkSet_1_Child_" data-uid="XData.IWorkSet`1.Child*"></a>
+  <h4 id="XData_IWorkSet_1_Child__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_String_" data-uid="XData.IWorkSet`1.Child``2(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``1},System.String)">Child&lt;TRet, TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, String)</h4>
   <div class="markdown level1 summary"><p>Find depended work set (using order index)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Find&lt;TRet, TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt; child)
+    <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Child&lt;TRet, TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, string alias = null)
+
     where TRet : class, IDataObject, new()
+
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -668,9 +399,9 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TRet&gt;&gt;&gt;</td>
-        <td><span class="parametername">child</span></td>
-        <td><p>Expression returning parent object property contains depended data object collection</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">alias</span></td>
+        <td><p>(optional) Child repository alias</p>
 </td>
       </tr>
     </tbody>
@@ -717,7 +448,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Get_System_Func__0_System_Boolean__XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Get(System.Func%7B%600%2CSystem.Boolean%7D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L117">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L98">View Source</a>
   </span>
   <a id="XData_IWorkSet_1_Get_" data-uid="XData.IWorkSet`1.Get*"></a>
   <h4 id="XData_IWorkSet_1_Get_System_Func__0_System_Boolean__XData_WorkState_" data-uid="XData.IWorkSet`1.Get(System.Func{`0,System.Boolean},XData.WorkState)">Get(Func&lt;T, Boolean&gt;, WorkState)</h4>
@@ -773,7 +504,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Get_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Get(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2CSystem.IComparable%7D%5B%5D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L137">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L118">View Source</a>
   </span>
   <a id="XData_IWorkSet_1_Get_" data-uid="XData.IWorkSet`1.Get*"></a>
   <h4 id="XData_IWorkSet_1_Get_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____XData_WorkState_" data-uid="XData.IWorkSet`1.Get(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],XData.WorkState)">Get(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[], WorkState)</h4>
@@ -835,7 +566,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Get__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Get%60%601(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2C%60%600%7D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L127">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L108">View Source</a>
   </span>
   <a id="XData_IWorkSet_1_Get_" data-uid="XData.IWorkSet`1.Get*"></a>
   <h4 id="XData_IWorkSet_1_Get__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__XData_WorkState_" data-uid="XData.IWorkSet`1.Get``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0},XData.WorkState)">Get&lt;TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, WorkState)</h4>
@@ -845,6 +576,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">T Get&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, WorkState state = WorkState.Active)
+
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -911,19 +643,51 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Lock(IDataScope%2CSystem.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_GetKey.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.GetKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L92">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L56">View Source</a>
   </span>
-  <a id="XData_IWorkSet_1_Lock_" data-uid="XData.IWorkSet`1.Lock*"></a>
-  <h4 id="XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Boolean__" data-uid="XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Boolean})">Lock(IDataScope, Func&lt;T, Boolean&gt;)</h4>
-  <div class="markdown level1 summary"><p>Try to obtain lock on data object</p>
+  <a id="XData_IWorkSet_1_GetKey_" data-uid="XData.IWorkSet`1.GetKey*"></a>
+  <h4 id="XData_IWorkSet_1_GetKey" data-uid="XData.IWorkSet`1.GetKey">GetKey()</h4>
+  <div class="markdown level1 summary"><p>Get single data object key</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool Lock(IDataScope dataScope, Func&lt;T, bool&gt; predicate = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Guid? GetKey()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><p>Data object key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_GetKey_System_Func__0_System_Boolean__XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.GetKey(System.Func%7B%600%2CSystem.Boolean%7D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L70">View Source</a>
+  </span>
+  <a id="XData_IWorkSet_1_GetKey_" data-uid="XData.IWorkSet`1.GetKey*"></a>
+  <h4 id="XData_IWorkSet_1_GetKey_System_Func__0_System_Boolean__XData_WorkState_" data-uid="XData.IWorkSet`1.GetKey(System.Func{`0,System.Boolean},XData.WorkState)">GetKey(Func&lt;T, Boolean&gt;, WorkState)</h4>
+  <div class="markdown level1 summary"><p>Get single data object key by predicate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid? GetKey(Func&lt;T, bool&gt; predicate, WorkState state = WorkState.Active)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -936,11 +700,253 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDataScope</span></td>
-        <td><span class="parametername">dataScope</span></td>
-        <td><p>Current data scope</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>Predicate to find specific object</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="XData.WorkState.html">WorkState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Work set state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><p>Data object key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_GetKey_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.GetKey(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2CSystem.IComparable%7D%5B%5D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L90">View Source</a>
+  </span>
+  <a id="XData_IWorkSet_1_GetKey_" data-uid="XData.IWorkSet`1.GetKey*"></a>
+  <h4 id="XData_IWorkSet_1_GetKey_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____XData_WorkState_" data-uid="XData.IWorkSet`1.GetKey(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[],XData.WorkState)">GetKey(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[], WorkState)</h4>
+  <div class="markdown level1 summary"><p>Get single data object key by predicate (using order index)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid? GetKey(Func&lt;T, int, bool&gt; predicate, Func&lt;T, IComparable&gt;[] order, WorkState state = WorkState.Active)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>Predicate to find specific object</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.icomparable">IComparable</a>&gt;[]</td>
+        <td><span class="parametername">order</span></td>
+        <td><p>Order statements</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.WorkState.html">WorkState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Work set state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><p>Data object key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_GetKey_XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.GetKey(XData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L62">View Source</a>
+  </span>
+  <a id="XData_IWorkSet_1_GetKey_" data-uid="XData.IWorkSet`1.GetKey*"></a>
+  <h4 id="XData_IWorkSet_1_GetKey_XData_WorkState_" data-uid="XData.IWorkSet`1.GetKey(XData.WorkState)">GetKey(WorkState)</h4>
+  <div class="markdown level1 summary"><p>Get single data object key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid? GetKey(WorkState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.WorkState.html">WorkState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Work set state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><p>Data object key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_GetKey__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.GetKey%60%601(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2C%60%600%7D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L80">View Source</a>
+  </span>
+  <a id="XData_IWorkSet_1_GetKey_" data-uid="XData.IWorkSet`1.GetKey*"></a>
+  <h4 id="XData_IWorkSet_1_GetKey__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__XData_WorkState_" data-uid="XData.IWorkSet`1.GetKey``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0},XData.WorkState)">GetKey&lt;TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, WorkState)</h4>
+  <div class="markdown level1 summary"><p>Get single data object key by predicate (using order index)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid? GetKey&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, WorkState state = WorkState.Active)
+
+    where TKey : IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>Predicate to find specific object</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TKey&gt;</td>
+        <td><span class="parametername">order</span></td>
+        <td><p>Order statement</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XData.WorkState.html">WorkState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Work set state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><p>Data object key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p>Order key type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Lock_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Lock(System.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L35">View Source</a>
+  </span>
+  <a id="XData_IWorkSet_1_Lock_" data-uid="XData.IWorkSet`1.Lock*"></a>
+  <h4 id="XData_IWorkSet_1_Lock_System_Func__0_System_Boolean__" data-uid="XData.IWorkSet`1.Lock(System.Func{`0,System.Boolean})">Lock(Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Try to obtain lock on data object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Lock(Func&lt;T, bool&gt; predicate = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">predicate</span></td>
@@ -967,19 +973,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Lock(IDataScope%2CSystem.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2CSystem.IComparable%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Lock_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Lock(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2CSystem.IComparable%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L110">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L51">View Source</a>
   </span>
   <a id="XData_IWorkSet_1_Lock_" data-uid="XData.IWorkSet`1.Lock*"></a>
-  <h4 id="XData_IWorkSet_1_Lock_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____" data-uid="XData.IWorkSet`1.Lock(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])">Lock(IDataScope, Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[])</h4>
+  <h4 id="XData_IWorkSet_1_Lock_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____" data-uid="XData.IWorkSet`1.Lock(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,System.IComparable}[])">Lock(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[])</h4>
   <div class="markdown level1 summary"><p>Try to obtain lock on data object by predicate (using order index)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool Lock(IDataScope dataScope, Func&lt;T, int, bool&gt; predicate, Func&lt;T, IComparable&gt;[] order)</code></pre>
+    <pre><code class="lang-csharp hljs">bool Lock(Func&lt;T, int, bool&gt; predicate, Func&lt;T, IComparable&gt;[] order)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -991,12 +997,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">IDataScope</span></td>
-        <td><span class="parametername">dataScope</span></td>
-        <td><p>Current data scope</p>
-</td>
-      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">predicate</span></td>
@@ -1029,19 +1029,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Lock__1_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Lock%60%601(IDataScope%2CSystem.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Lock__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Lock%60%601(System.Func%7B%600%2CSystem.Int32%2CSystem.Boolean%7D%2CSystem.Func%7B%600%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L101">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L43">View Source</a>
   </span>
   <a id="XData_IWorkSet_1_Lock_" data-uid="XData.IWorkSet`1.Lock*"></a>
-  <h4 id="XData_IWorkSet_1_Lock__1_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__" data-uid="XData.IWorkSet`1.Lock``1(IDataScope,System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})">Lock&lt;TKey&gt;(IDataScope, Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;)</h4>
+  <h4 id="XData_IWorkSet_1_Lock__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__" data-uid="XData.IWorkSet`1.Lock``1(System.Func{`0,System.Int32,System.Boolean},System.Func{`0,``0})">Lock&lt;TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;)</h4>
   <div class="markdown level1 summary"><p>Try to obtain lock on data object by predicate (using order index)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool Lock&lt;TKey&gt;(IDataScope dataScope, Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order)
+    <pre><code class="lang-csharp hljs">bool Lock&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order)
+
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1054,12 +1055,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">IDataScope</span></td>
-        <td><span class="parametername">dataScope</span></td>
-        <td><p>Current data scope</p>
-</td>
-      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">predicate</span></td>
@@ -1108,10 +1103,60 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_New_System_Action__0____.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.New(System.Action%7B%600%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L192">View Source</a>
+  </span>
+  <a id="XData_IWorkSet_1_New_" data-uid="XData.IWorkSet`1.New*"></a>
+  <h4 id="XData_IWorkSet_1_New_System_Action__0____" data-uid="XData.IWorkSet`1.New(System.Action{`0}[])">New(Action&lt;T&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Add object to work set collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">T New(params Action&lt;T&gt;[] init)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;[]</td>
+        <td><span class="parametername">init</span></td>
+        <td><p>Object creator</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>Added object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Select_XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Select(XData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L144">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L125">View Source</a>
   </span>
   <a id="XData_IWorkSet_1_Select_" data-uid="XData.IWorkSet`1.Select*"></a>
   <h4 id="XData_IWorkSet_1_Select_XData_WorkState_" data-uid="XData.IWorkSet`1.Select(XData.WorkState)">Select(WorkState)</h4>
@@ -1161,7 +1206,7 @@
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_Select__1_System_Func__0___0__XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.Select%60%601(System.Func%7B%600%2C%60%600%7D%2CXData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L152">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L140">View Source</a>
   </span>
   <a id="XData_IWorkSet_1_Select_" data-uid="XData.IWorkSet`1.Select*"></a>
   <h4 id="XData_IWorkSet_1_Select__1_System_Func__0___0__XData_WorkState_" data-uid="XData.IWorkSet`1.Select``1(System.Func{`0,``0},XData.WorkState)">Select&lt;TRet&gt;(Func&lt;T, TRet&gt;, WorkState)</h4>
@@ -1227,6 +1272,56 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1_SelectKeys_XData_WorkState_.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601.SelectKeys(XData.WorkState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L132">View Source</a>
+  </span>
+  <a id="XData_IWorkSet_1_SelectKeys_" data-uid="XData.IWorkSet`1.SelectKeys*"></a>
+  <h4 id="XData_IWorkSet_1_SelectKeys_XData_WorkState_" data-uid="XData.IWorkSet`1.SelectKeys(XData.WorkState)">SelectKeys(WorkState)</h4>
+  <div class="markdown level1 summary"><p>Retrieve all keys by work set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;Guid&gt; SelectKeys(WorkState state = WorkState.Active)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="XData.WorkState.html">WorkState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Work set state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><p>Keys sequence</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="XData.SerializationExtensions.html#XData_SerializationExtensions_ToXml__1___0_">SerializationExtensions.ToXml&lt;T&gt;(T)</a>
@@ -1277,13 +1372,17 @@
   <div class="seealso">
       <div><a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_Name">Name</a></div>
       <div><a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_Clear">Clear</a>()</div>
-      <div><a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_Submit_IDataScope_">Submit</a>(<span class="xref">IDataScope</span>)</div>
-      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Lock__1_IDataScope_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__">Lock&lt;TKey&gt;(IDataScope, Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;)</a></div>
-      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Get__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__XData_WorkState_">Get&lt;TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, WorkState)</a></div>
+      <div><a class="xref" href="XData.IWorkSet.html#XData_IWorkSet_Submit">Submit</a>()</div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Lock__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__">Lock&lt;TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;)</a></div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Get_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____XData_WorkState_">Get(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[], WorkState)</a></div>
       <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Select_XData_WorkState_">Select(WorkState)</a></div>
-      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Assign__1_System_Func__0_System_Int32_System_Boolean__System_Func__0___0__System_Func__0__XData_WorkState_">Assign&lt;TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, Func&lt;T&gt;, WorkState)</a></div>
-      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Find__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____">Find&lt;TRet, TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, Expression&lt;Func&lt;T, IEnumerable&lt;TRet&gt;&gt;&gt;)</a></div>
-      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Add_System_Func__0__">Add(Func&lt;T&gt;)</a></div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Child__1_System_String_">Child&lt;TRet&gt;(String)</a></div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Child__1_System_Func__0_System_Boolean__System_String_">Child&lt;TRet&gt;(Func&lt;T, Boolean&gt;, String)</a></div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Child__1_System_Func__0_System_Int32_System_Boolean__System_Func__0_System_IComparable____System_String_">Child&lt;TRet&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, IComparable&gt;[], String)</a></div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_Child__2_System_Func__0_System_Int32_System_Boolean__System_Func__0___1__System_String_">Child&lt;TRet, TKey&gt;(Func&lt;T, Int32, Boolean&gt;, Func&lt;T, TKey&gt;, String)</a></div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_New_System_Action__0____">New(Action&lt;T&gt;[])</a></div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_GetKey">GetKey()</a></div>
+      <div><a class="xref" href="XData.IWorkSet-1.html#XData_IWorkSet_1_SelectKeys_XData_WorkState_">SelectKeys(WorkState)</a></div>
       <div><a class="xref" href="XData.Work.html">Work</a></div>
   </div>
 </article>
@@ -1297,7 +1396,7 @@
                     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_IWorkSet_1.md&amp;value=---%0Auid%3A%20XData.IWorkSet%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/Work.cs/#L84" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mickfierte/private/blob/master/src/XData.WorkSet/IWorkSet.cs/#L28" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
