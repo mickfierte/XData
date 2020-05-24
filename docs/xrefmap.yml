@@ -397,6 +397,9 @@ references:
 - uid: tips_dictionary.md
   name: Using dictionaries
   href: tips/dictionary.html
+- uid: tips_distinct.md
+  name: Use some LINQ analogs in mapping
+  href: tips/distinct.html
 - uid: tips_events.md
   name: Using events
   href: tips/events.html
@@ -5529,6 +5532,12 @@ references:
   isSpec: "True"
   fullName: XData.Database.Dialect.BaseSqlBuilder.GetXmlNamespaces
   nameWithType: BaseSqlBuilder.GetXmlNamespaces
+- uid: XData.Database.Dialect.BaseSqlBuilder.Init
+  name: Init()
+  href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_Init
+  commentId: M:XData.Database.Dialect.BaseSqlBuilder.Init
+  fullName: XData.Database.Dialect.BaseSqlBuilder.Init()
+  nameWithType: BaseSqlBuilder.Init()
 - uid: XData.Database.Dialect.BaseSqlBuilder.Init(System.String,Microsoft.Extensions.Configuration.IConfiguration,System.String)
   name: Init(String, IConfiguration, String)
   href: api/XData.Database.Dialect.BaseSqlBuilder.html#XData_Database_Dialect_BaseSqlBuilder_Init_System_String_Microsoft_Extensions_Configuration_IConfiguration_System_String_
@@ -19038,6 +19047,32 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.ColumnAttribute.NativeSqlType
   nameWithType: ColumnAttribute.NativeSqlType
+- uid: XData.Mapping.ColumnAttribute.OrderBy
+  name: OrderBy
+  href: api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_OrderBy
+  commentId: P:XData.Mapping.ColumnAttribute.OrderBy
+  fullName: XData.Mapping.ColumnAttribute.OrderBy
+  nameWithType: ColumnAttribute.OrderBy
+- uid: XData.Mapping.ColumnAttribute.OrderBy*
+  name: OrderBy
+  href: api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_OrderBy_
+  commentId: Overload:XData.Mapping.ColumnAttribute.OrderBy
+  isSpec: "True"
+  fullName: XData.Mapping.ColumnAttribute.OrderBy
+  nameWithType: ColumnAttribute.OrderBy
+- uid: XData.Mapping.ColumnAttribute.OrderByDesc
+  name: OrderByDesc
+  href: api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_OrderByDesc
+  commentId: P:XData.Mapping.ColumnAttribute.OrderByDesc
+  fullName: XData.Mapping.ColumnAttribute.OrderByDesc
+  nameWithType: ColumnAttribute.OrderByDesc
+- uid: XData.Mapping.ColumnAttribute.OrderByDesc*
+  name: OrderByDesc
+  href: api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_OrderByDesc_
+  commentId: Overload:XData.Mapping.ColumnAttribute.OrderByDesc
+  isSpec: "True"
+  fullName: XData.Mapping.ColumnAttribute.OrderByDesc
+  nameWithType: ColumnAttribute.OrderByDesc
 - uid: XData.Mapping.ColumnAttribute.PropertyName
   name: PropertyName
   href: api/XData.Mapping.ColumnAttribute.html#XData_Mapping_ColumnAttribute_PropertyName
@@ -19555,6 +19590,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.DataObjectAttribute.Context
   nameWithType: DataObjectAttribute.Context
+- uid: XData.Mapping.DataObjectAttribute.Distinct
+  name: Distinct
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Distinct
+  commentId: P:XData.Mapping.DataObjectAttribute.Distinct
+  fullName: XData.Mapping.DataObjectAttribute.Distinct
+  nameWithType: DataObjectAttribute.Distinct
+- uid: XData.Mapping.DataObjectAttribute.Distinct*
+  name: Distinct
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Distinct_
+  commentId: Overload:XData.Mapping.DataObjectAttribute.Distinct
+  isSpec: "True"
+  fullName: XData.Mapping.DataObjectAttribute.Distinct
+  nameWithType: DataObjectAttribute.Distinct
 - uid: XData.Mapping.DataObjectAttribute.Flags
   name: Flags
   href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Flags
@@ -19568,6 +19616,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.DataObjectAttribute.Flags
   nameWithType: DataObjectAttribute.Flags
+- uid: XData.Mapping.DataObjectAttribute.Limit
+  name: Limit
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Limit
+  commentId: P:XData.Mapping.DataObjectAttribute.Limit
+  fullName: XData.Mapping.DataObjectAttribute.Limit
+  nameWithType: DataObjectAttribute.Limit
+- uid: XData.Mapping.DataObjectAttribute.Limit*
+  name: Limit
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Limit_
+  commentId: Overload:XData.Mapping.DataObjectAttribute.Limit
+  isSpec: "True"
+  fullName: XData.Mapping.DataObjectAttribute.Limit
+  nameWithType: DataObjectAttribute.Limit
 - uid: XData.Mapping.DataObjectAttribute.LogicAssemblyNames
   name: LogicAssemblyNames
   href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_LogicAssemblyNames
@@ -19581,6 +19642,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.DataObjectAttribute.LogicAssemblyNames
   nameWithType: DataObjectAttribute.LogicAssemblyNames
+- uid: XData.Mapping.DataObjectAttribute.Skip
+  name: Skip
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Skip
+  commentId: P:XData.Mapping.DataObjectAttribute.Skip
+  fullName: XData.Mapping.DataObjectAttribute.Skip
+  nameWithType: DataObjectAttribute.Skip
+- uid: XData.Mapping.DataObjectAttribute.Skip*
+  name: Skip
+  href: api/XData.Mapping.DataObjectAttribute.html#XData_Mapping_DataObjectAttribute_Skip_
+  commentId: Overload:XData.Mapping.DataObjectAttribute.Skip
+  isSpec: "True"
+  fullName: XData.Mapping.DataObjectAttribute.Skip
+  nameWithType: DataObjectAttribute.Skip
 - uid: XData.Mapping.DataSourceAttribute
   name: DataSourceAttribute
   href: api/XData.Mapping.DataSourceAttribute.html
@@ -21096,6 +21170,25 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.IPropertyMappingAdapter.Key
   nameWithType: IPropertyMappingAdapter.Key
+- uid: XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy(System.Int32)
+  name: OrderBy(Int32)
+  href: api/XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_OrderBy_System_Int32_
+  commentId: M:XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy(System.Int32)
+  fullName: XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy(System.Int32)
+  nameWithType: IPropertyMappingAdapter.OrderBy(Int32)
+- uid: XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy(System.Int32,System.Boolean)
+  name: OrderBy(Int32, Boolean)
+  href: api/XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_OrderBy_System_Int32_System_Boolean_
+  commentId: M:XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy(System.Int32,System.Boolean)
+  fullName: XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy(System.Int32, System.Boolean)
+  nameWithType: IPropertyMappingAdapter.OrderBy(Int32, Boolean)
+- uid: XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy*
+  name: OrderBy
+  href: api/XData.Mapping.Dynamic.IPropertyMappingAdapter.html#XData_Mapping_Dynamic_IPropertyMappingAdapter_OrderBy_
+  commentId: Overload:XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IPropertyMappingAdapter.OrderBy
+  nameWithType: IPropertyMappingAdapter.OrderBy
 - uid: XData.Mapping.Dynamic.IQueryDescription
   name: IQueryDescription
   href: api/XData.Mapping.Dynamic.IQueryDescription.html
@@ -21221,6 +21314,19 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.Dynamic.IQueryStructure.DataTable
   nameWithType: IQueryStructure.DataTable
+- uid: XData.Mapping.Dynamic.IQueryStructure.Distinct
+  name: Distinct()
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Distinct
+  commentId: M:XData.Mapping.Dynamic.IQueryStructure.Distinct
+  fullName: XData.Mapping.Dynamic.IQueryStructure.Distinct()
+  nameWithType: IQueryStructure.Distinct()
+- uid: XData.Mapping.Dynamic.IQueryStructure.Distinct*
+  name: Distinct
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Distinct_
+  commentId: Overload:XData.Mapping.Dynamic.IQueryStructure.Distinct
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IQueryStructure.Distinct
+  nameWithType: IQueryStructure.Distinct
 - uid: XData.Mapping.Dynamic.IQueryStructure.Hint(System.String,System.String,XData.Mapping.HintType)
   name: Hint(String, String, HintType)
   href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Hint_System_String_System_String_XData_Mapping_HintType_
@@ -21268,6 +21374,19 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IQueryStructure.InnerView(Of TInnerView)(System.String, XData.Mapping.Dynamic.IQueryDescription(Of TInnerView), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of TInnerView), XData.Mapping.Dynamic.IFilterDescription))())
   nameWithType: IQueryStructure.InnerView<TInnerView>(String, IQueryDescription<TInnerView>, Expression<Func<ISubqueryLinkAdapter<TInnerView>, IFilterDescription>>[])
   nameWithType.vb: IQueryStructure.InnerView(Of TInnerView)(String, IQueryDescription(Of TInnerView), Expression(Of Func(Of ISubqueryLinkAdapter(Of TInnerView), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IQueryStructure.Limit(System.Int32)
+  name: Limit(Int32)
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Limit_System_Int32_
+  commentId: M:XData.Mapping.Dynamic.IQueryStructure.Limit(System.Int32)
+  fullName: XData.Mapping.Dynamic.IQueryStructure.Limit(System.Int32)
+  nameWithType: IQueryStructure.Limit(Int32)
+- uid: XData.Mapping.Dynamic.IQueryStructure.Limit*
+  name: Limit
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Limit_
+  commentId: Overload:XData.Mapping.Dynamic.IQueryStructure.Limit
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IQueryStructure.Limit
+  nameWithType: IQueryStructure.Limit
 - uid: XData.Mapping.Dynamic.IQueryStructure.Map*
   name: Map
   href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Map_
@@ -21357,6 +21476,19 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IQueryStructure.Select(Of TResult)(System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, TResult)))
   nameWithType: IQueryStructure.Select<TResult>(Expression<Func<IQueryStructureAdapter, TResult>>)
   nameWithType.vb: IQueryStructure.Select(Of TResult)(Expression(Of Func(Of IQueryStructureAdapter, TResult)))
+- uid: XData.Mapping.Dynamic.IQueryStructure.Skip(System.Int32)
+  name: Skip(Int32)
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Skip_System_Int32_
+  commentId: M:XData.Mapping.Dynamic.IQueryStructure.Skip(System.Int32)
+  fullName: XData.Mapping.Dynamic.IQueryStructure.Skip(System.Int32)
+  nameWithType: IQueryStructure.Skip(Int32)
+- uid: XData.Mapping.Dynamic.IQueryStructure.Skip*
+  name: Skip
+  href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Skip_
+  commentId: Overload:XData.Mapping.Dynamic.IQueryStructure.Skip
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IQueryStructure.Skip
+  nameWithType: IQueryStructure.Skip
 - uid: XData.Mapping.Dynamic.IQueryStructure.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter,XData.Mapping.Dynamic.IFilterDescription}}[])
   name: Subquery(String, Type, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter, IFilterDescription>>[])
   href: api/XData.Mapping.Dynamic.IQueryStructure.html#XData_Mapping_Dynamic_IQueryStructure_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter_XData_Mapping_Dynamic_IFilterDescription_____
@@ -21902,6 +22034,23 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).DataTable
   nameWithType: IRepositoryStructure<T>.DataTable
   nameWithType.vb: IRepositoryStructure(Of T).DataTable
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Distinct
+  name: Distinct()
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Distinct
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Distinct
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Distinct()
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Distinct()
+  nameWithType: IRepositoryStructure<T>.Distinct()
+  nameWithType.vb: IRepositoryStructure(Of T).Distinct()
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Distinct*
+  name: Distinct
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Distinct_
+  commentId: Overload:XData.Mapping.Dynamic.IRepositoryStructure`1.Distinct
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Distinct
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Distinct
+  nameWithType: IRepositoryStructure<T>.Distinct
+  nameWithType.vb: IRepositoryStructure(Of T).Distinct
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Hint(System.String,System.String,XData.Mapping.HintType)
   name: Hint(String, String, HintType)
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Hint_System_String_System_String_XData_Mapping_HintType_
@@ -21964,6 +22113,23 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).InnerView(Of TInnerView)(System.String, XData.Variable(), System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.ISubqueryLinkAdapter(Of T, TInnerView), XData.Mapping.Dynamic.IFilterDescription))())
   nameWithType: IRepositoryStructure<T>.InnerView<TInnerView>(String, Variable[], Expression<Func<ISubqueryLinkAdapter<T, TInnerView>, IFilterDescription>>[])
   nameWithType.vb: IRepositoryStructure(Of T).InnerView(Of TInnerView)(String, Variable(), Expression(Of Func(Of ISubqueryLinkAdapter(Of T, TInnerView), IFilterDescription))())
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Limit(System.Int32)
+  name: Limit(Int32)
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Limit_System_Int32_
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Limit(System.Int32)
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Limit(System.Int32)
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Limit(System.Int32)
+  nameWithType: IRepositoryStructure<T>.Limit(Int32)
+  nameWithType.vb: IRepositoryStructure(Of T).Limit(Int32)
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Limit*
+  name: Limit
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Limit_
+  commentId: Overload:XData.Mapping.Dynamic.IRepositoryStructure`1.Limit
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Limit
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Limit
+  nameWithType: IRepositoryStructure<T>.Limit
+  nameWithType.vb: IRepositoryStructure(Of T).Limit
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Map(System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter{`0},XData.Mapping.Dynamic.IExternalLinkDefinition}}[])
   name: Map(Expression<Func<IExternalLinkDefinitionAdapter<T>, IExternalLinkDefinition>>[])
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Map_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IExternalLinkDefinitionAdapter__0__XData_Mapping_Dynamic_IExternalLinkDefinition_____
@@ -22071,6 +22237,23 @@ references:
   fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Return(Of TResult)(System.String, System.String, System.Int32, System.Linq.Expressions.Expression(Of System.Func(Of XData.Mapping.Dynamic.IQueryStructureAdapter, T)))
   nameWithType: IRepositoryStructure<T>.Return<TResult>(String, String, Int32, Expression<Func<IQueryStructureAdapter, T>>)
   nameWithType.vb: IRepositoryStructure(Of T).Return(Of TResult)(String, String, Int32, Expression(Of Func(Of IQueryStructureAdapter, T)))
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Skip(System.Int32)
+  name: Skip(Int32)
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Skip_System_Int32_
+  commentId: M:XData.Mapping.Dynamic.IRepositoryStructure`1.Skip(System.Int32)
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Skip(System.Int32)
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Skip(System.Int32)
+  nameWithType: IRepositoryStructure<T>.Skip(Int32)
+  nameWithType.vb: IRepositoryStructure(Of T).Skip(Int32)
+- uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Skip*
+  name: Skip
+  href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Skip_
+  commentId: Overload:XData.Mapping.Dynamic.IRepositoryStructure`1.Skip
+  isSpec: "True"
+  fullName: XData.Mapping.Dynamic.IRepositoryStructure<T>.Skip
+  fullName.vb: XData.Mapping.Dynamic.IRepositoryStructure(Of T).Skip
+  nameWithType: IRepositoryStructure<T>.Skip
+  nameWithType.vb: IRepositoryStructure(Of T).Skip
 - uid: XData.Mapping.Dynamic.IRepositoryStructure`1.Subquery(System.String,System.Type,System.String,XData.DataGrouping,System.Linq.Expressions.Expression{System.Func{XData.Mapping.Dynamic.ISubqueryLinkAdapter{`0},XData.Mapping.Dynamic.IFilterDescription}}[])
   name: Subquery(String, Type, String, DataGrouping, Expression<Func<ISubqueryLinkAdapter<T>, IFilterDescription>>[])
   href: api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery_System_String_System_Type_System_String_XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0__XData_Mapping_Dynamic_IFilterDescription_____
@@ -24587,6 +24770,32 @@ references:
   isSpec: "True"
   fullName: XData.Mapping.PropertyBaseAttribute.NativeSqlType
   nameWithType: PropertyBaseAttribute.NativeSqlType
+- uid: XData.Mapping.PropertyBaseAttribute.OrderBy
+  name: OrderBy
+  href: api/XData.Mapping.PropertyBaseAttribute.html#XData_Mapping_PropertyBaseAttribute_OrderBy
+  commentId: P:XData.Mapping.PropertyBaseAttribute.OrderBy
+  fullName: XData.Mapping.PropertyBaseAttribute.OrderBy
+  nameWithType: PropertyBaseAttribute.OrderBy
+- uid: XData.Mapping.PropertyBaseAttribute.OrderBy*
+  name: OrderBy
+  href: api/XData.Mapping.PropertyBaseAttribute.html#XData_Mapping_PropertyBaseAttribute_OrderBy_
+  commentId: Overload:XData.Mapping.PropertyBaseAttribute.OrderBy
+  isSpec: "True"
+  fullName: XData.Mapping.PropertyBaseAttribute.OrderBy
+  nameWithType: PropertyBaseAttribute.OrderBy
+- uid: XData.Mapping.PropertyBaseAttribute.OrderByDesc
+  name: OrderByDesc
+  href: api/XData.Mapping.PropertyBaseAttribute.html#XData_Mapping_PropertyBaseAttribute_OrderByDesc
+  commentId: P:XData.Mapping.PropertyBaseAttribute.OrderByDesc
+  fullName: XData.Mapping.PropertyBaseAttribute.OrderByDesc
+  nameWithType: PropertyBaseAttribute.OrderByDesc
+- uid: XData.Mapping.PropertyBaseAttribute.OrderByDesc*
+  name: OrderByDesc
+  href: api/XData.Mapping.PropertyBaseAttribute.html#XData_Mapping_PropertyBaseAttribute_OrderByDesc_
+  commentId: Overload:XData.Mapping.PropertyBaseAttribute.OrderByDesc
+  isSpec: "True"
+  fullName: XData.Mapping.PropertyBaseAttribute.OrderByDesc
+  nameWithType: PropertyBaseAttribute.OrderByDesc
 - uid: XData.Mapping.PropertyBaseAttribute.Source
   name: Source
   href: api/XData.Mapping.PropertyBaseAttribute.html#XData_Mapping_PropertyBaseAttribute_Source

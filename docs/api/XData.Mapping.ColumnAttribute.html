@@ -235,7 +235,7 @@ public sealed class ColumnAttribute : Attribute</code></pre>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute__ctor_System_String_System_Type_System_String_System_String_.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.%23ctor(System.String%2CSystem.Type%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L91">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L101">View Source</a>
   </span>
   <a id="XData_Mapping_ColumnAttribute__ctor_" data-uid="XData.Mapping.ColumnAttribute.#ctor*"></a>
   <h4 id="XData_Mapping_ColumnAttribute__ctor_System_String_System_Type_System_String_System_String_" data-uid="XData.Mapping.ColumnAttribute.#ctor(System.String,System.Type,System.String,System.String)">ColumnAttribute(String, Type, String, String)</h4>
@@ -447,7 +447,7 @@ public sealed class ColumnAttribute : Attribute</code></pre>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_Hidden.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.Hidden%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L72">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L82">View Source</a>
   </span>
   <a id="XData_Mapping_ColumnAttribute_Hidden_" data-uid="XData.Mapping.ColumnAttribute.Hidden*"></a>
   <h4 id="XData_Mapping_ColumnAttribute_Hidden" data-uid="XData.Mapping.ColumnAttribute.Hidden">Hidden</h4>
@@ -481,7 +481,7 @@ public sealed class ColumnAttribute : Attribute</code></pre>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_NativeSqlType.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.NativeSqlType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L80">View Source</a>
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L90">View Source</a>
   </span>
   <a id="XData_Mapping_ColumnAttribute_NativeSqlType_" data-uid="XData.Mapping.ColumnAttribute.NativeSqlType*"></a>
   <h4 id="XData_Mapping_ColumnAttribute_NativeSqlType" data-uid="XData.Mapping.ColumnAttribute.NativeSqlType">NativeSqlType</h4>
@@ -511,6 +511,68 @@ public sealed class ColumnAttribute : Attribute</code></pre>
   <div class="markdown level1 remarks"><p>Used to specify native SQL column type when conflicted with default type mapping</p>
 <p>WARNING!  May be not supported by database adapter!</p>
 </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_OrderBy.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.OrderBy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L70">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_OrderBy_" data-uid="XData.Mapping.ColumnAttribute.OrderBy*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_OrderBy" data-uid="XData.Mapping.ColumnAttribute.OrderBy">OrderBy</h4>
+  <div class="markdown level1 summary"><p>Order by priority</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int OrderBy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_OrderByDesc.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.OrderByDesc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mickfierte/private/blob/master/src/XData/Mapping/Attributes/Properties/ColumnAttribute.cs/#L75">View Source</a>
+  </span>
+  <a id="XData_Mapping_ColumnAttribute_OrderByDesc_" data-uid="XData.Mapping.ColumnAttribute.OrderByDesc*"></a>
+  <h4 id="XData_Mapping_ColumnAttribute_OrderByDesc" data-uid="XData.Mapping.ColumnAttribute.OrderByDesc">OrderByDesc</h4>
+  <div class="markdown level1 summary"><p>Order by desc flag</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OrderByDesc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/mickfierte/private/new/main/apiSpec/new?filename=XData_Mapping_ColumnAttribute_PropertyName.md&amp;value=---%0Auid%3A%20XData.Mapping.ColumnAttribute.PropertyName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>

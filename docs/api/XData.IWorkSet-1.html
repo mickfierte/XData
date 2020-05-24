@@ -149,7 +149,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Child&lt;TRet&gt;(Func&lt;T, bool&gt; predicate, string alias = null)
-
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -223,7 +222,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Child&lt;TRet&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, IComparable&gt;[] order, string alias = null)
-
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -303,7 +301,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Child&lt;TRet&gt;(string alias = null)
-
     where TRet : class, IDataObject, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -371,9 +368,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IWorkSet&lt;TRet&gt; Child&lt;TRet, TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, string alias = null)
-
     where TRet : class, IDataObject, new()
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -576,7 +571,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">T Get&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, WorkState state = WorkState.Active)
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -856,7 +850,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Guid? GetKey&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order, WorkState state = WorkState.Active)
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1042,7 +1035,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool Lock&lt;TKey&gt;(Func&lt;T, int, bool&gt; predicate, Func&lt;T, TKey&gt; order)
-
     where TKey : IComparable</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

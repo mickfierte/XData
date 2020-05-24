@@ -125,7 +125,7 @@ xdata:
 <p>... when XML configuration file is used:</p>
 <pre><code class="lang-xml">&lt;adapter name=&quot;POSTGRESQL_NPG&quot; assembly=&quot;XData.PostgreSql.NpgSql.Adapter&quot;&gt;
   &lt;schema name=&quot;public&quot;/&gt;
-&lt;/adapter
+&lt;/adapter&gt;
 </code></pre><p>... when YAML configuration file is used:</p>
 <pre><code class="lang-yaml">adapter:
     - name: &quot;DICT_POSTGRESQL&quot;
@@ -138,7 +138,26 @@ var source = new MemoryConfigurationSource { InitialData = new[] {
     new KeyValuePair&lt;string, string&gt;(&quot;schema:someschemaname&quot;, null) }};
 var conf = new ConfigurationBuilder().Add(source).Build();
 ...
-.AddAdapter(&quot;postgresql&quot;, XData.PostgreSql.Adapter, conf)
+.AddAdapter(&quot;postgresql&quot;, XDataAdapter.PostgreSql.Adapter, conf)
+</code></pre><h4 id="xdatamssqlserverdialect">XData.MsSqlServer.Dialect:</h4>
+<p>... when XML configuration file is used (for modern versions of MSSQL):</p>
+<pre><code class="lang-xml">&lt;dialect name=&quot;MSSQL&quot; assembly=&quot;XData.MsSqlServer.Dialect&quot;/&gt;
+</code></pre><p>or if you have to use MSSQL 2005/2008 </p>
+<pre><code class="lang-xml">&lt;dialect name=&quot;MSSQL&quot; assembly=&quot;XData.MsSqlServer.Dialect&quot;&gt;
+    &lt;useOldOrderBy value=&quot;true&quot;/&gt;
+&lt;/dialect&gt;
+</code></pre><p>... when YAML configuration file is used (for MSSQL 2005/2008):</p>
+<pre><code class="lang-yaml">dialect:
+    - name: &quot;DICT_MSSQL&quot;
+      assembly: &quot;XData.MsSqlServer.Dialect&quot;
+      useOldOrderBy:
+        value: true
+</code></pre><p>... when configuration is provided in runtime (for MSSQL 2005/2008):</p>
+<pre><code class="lang-csharp">var source = new MemoryConfigurationSource { InitialData = new[] {
+    new KeyValuePair&lt;string, string&gt;(&quot;useOldOrderBy:value&quot;, &quot;true&quot;) }};
+var conf = new ConfigurationBuilder().Add(source).Build();
+...
+.AddDialect(&quot;mssql&quot;, XDataAdapter.MsSqlServer.Dialect, conf)
 </code></pre><h3 id="using-di-container">Using DI container</h3>
 <p>XData can be effectively used with any DI containers You prefer. </p>
 <p>When using the .Net Standard 2.0 version of XData, the .Net Core Dependency Abstraction technology is applied internally and can be implemented with any DI container. The <a class="xref" href="../api/XData.IDataEngine.html">IDataEngine</a> interface is injected as dependency by calling <a class="xref" href="../api/XData.XDataManager.html#XData_XDataManager_AddXData_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_XData_IDataOptions_XData_IDataOptions__">AddXData</a> method during <em>ConfigureServices</em> method of <em>Startup</em> module. Any <a href="trigger_logic.html">trigger logic modules</a> can be registered as singleton services in DI container as well.</p>

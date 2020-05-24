@@ -1020,7 +1020,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.Dialect.BaseSqlBuilder.html",
-          "hash": "M9GeMBoLVMlbXkef0h/DFw=="
+          "hash": "WlowbTuOocqHgnyIi7r/pQ=="
         }
       },
       "is_incremental": false,
@@ -1188,7 +1188,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.IExpressionMergeAdapter.html",
-          "hash": "87t9cI0YAJvzV/BVmjBJFg=="
+          "hash": "74/7Lnz8pWB3sh+SeFbp/Q=="
         }
       },
       "is_incremental": false,
@@ -1236,7 +1236,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Database.SqlBlock.IPropertyMergeAdapter.html",
-          "hash": "sIZeYgJwKYfEscgYUamwGg=="
+          "hash": "q6t1BJMFVUuLmpbV5wv7lw=="
         }
       },
       "is_incremental": false,
@@ -1740,7 +1740,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.ExistsOperation.html",
-          "hash": "vM1gwhaM6cmkzFm4dQB5vw=="
+          "hash": "f759jBH264cg7yvsVuYxOg=="
         }
       },
       "is_incremental": false,
@@ -2136,7 +2136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.IWorkSet-1.html",
-          "hash": "QALFamcPdDTPdiIyDIOI/g=="
+          "hash": "xLP+L/GDz1vt2We3W/DRLg=="
         }
       },
       "is_incremental": false,
@@ -2460,7 +2460,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ColumnAttribute.html",
-          "hash": "ycqKMAtR+wLYP3WW98+3Ig=="
+          "hash": "njGIqNsp2I1DLfFLjrdjLg=="
         }
       },
       "is_incremental": false,
@@ -2520,7 +2520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.DataObjectAttribute.html",
-          "hash": "D7GUCvYeHKx3bLCIOC3C4Q=="
+          "hash": "+dEumXkX5Tw6HbqVlD6j7w=="
         }
       },
       "is_incremental": false,
@@ -2568,7 +2568,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html",
-          "hash": "qFRgjaoCAvyif7qZCMrMCg=="
+          "hash": "rw4lg/Ph6x7naFCc3JfD8Q=="
         }
       },
       "is_incremental": false,
@@ -2580,7 +2580,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IExternalLinkAdapter-2.html",
-          "hash": "wAAevSygNwoXmFTwVBQ5pw=="
+          "hash": "D6fky0nZJTSxt1cmn0wgCg=="
         }
       },
       "is_incremental": false,
@@ -2592,7 +2592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IExternalLinkDefinition.html",
-          "hash": "DX6GbyGICg7niNOGywqMOQ=="
+          "hash": "ovIF/8PpRrqtD0sH1uCmEA=="
         }
       },
       "is_incremental": false,
@@ -2604,7 +2604,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IExternalLinkDefinitionAdapter-1.html",
-          "hash": "yYOCqyWvQx1qh45SrHIRQQ=="
+          "hash": "D1X+NP77m6OQQ6caA/2DGg=="
         }
       },
       "is_incremental": false,
@@ -2616,7 +2616,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IExternalLinkFlag.html",
-          "hash": "E7E8EXqyopvEMsmzqojsVw=="
+          "hash": "sJp3k+V6aTTckNArzvo6Qw=="
         }
       },
       "is_incremental": false,
@@ -2652,7 +2652,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IInheritedStructure-1.html",
-          "hash": "PGZQ0XaAPkE/e0TBHx1w3A=="
+          "hash": "xI0vurSFjAIGpX4pxWS/ow=="
         }
       },
       "is_incremental": false,
@@ -2676,7 +2676,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.ILinkPropertyMappingAdapter-1.html",
-          "hash": "ujssAPoYD56o43DEBlcTfw=="
+          "hash": "ls5zdJK8dMZZFeJgKbIvoQ=="
         }
       },
       "is_incremental": false,
@@ -2700,7 +2700,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterAdapter.html",
-          "hash": "KfHltjvCv/U9S+zPSMXh7A=="
+          "hash": "19VTdI2VCjePUFXwFQmQeQ=="
         }
       },
       "is_incremental": false,
@@ -2712,7 +2712,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IProcedureParameterFlag.html",
-          "hash": "s03W02JfOUyJPuHRkIkzyQ=="
+          "hash": "9Vl3Vj/9lwjFgXhUtvBtLw=="
         }
       },
       "is_incremental": false,
@@ -2724,7 +2724,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IPropertyMappingAdapter.html",
-          "hash": "3UbZ/ZHwkFZKeDHCMi8VZQ=="
+          "hash": "74Ni3exH0m7iF49rJOs00A=="
         }
       },
       "is_incremental": false,
@@ -2760,7 +2760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructure.html",
-          "hash": "MDhbjcjCk02/N7UuD35yYA=="
+          "hash": "Wlv/36RAbQFHqN2vhKIBqg=="
         }
       },
       "is_incremental": false,
@@ -2772,7 +2772,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryStructureAdapter.html",
-          "hash": "/e07O8QClwizXP57/oKh1A=="
+          "hash": "9OcM4ltdwSz9nbcmL8vprQ=="
         }
       },
       "is_incremental": false,
@@ -2784,7 +2784,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryWithAdapter-1.html",
-          "hash": "ZeIeiQ1/5E1SeYGH1xrARA=="
+          "hash": "wBZbR/Yxg09j/4hA7n73bQ=="
         }
       },
       "is_incremental": false,
@@ -2796,7 +2796,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IQueryWithFlag.html",
-          "hash": "LKma0b7YBnvuYj/YXtslEQ=="
+          "hash": "+BaUjmpcNguvLs2ZSBF8FA=="
         }
       },
       "is_incremental": false,
@@ -2820,7 +2820,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryExpressionMappingAdapter.html",
-          "hash": "HSfe3eOfCuYFf03xt1DPtg=="
+          "hash": "aKJceVPWaPvJRLyWlqUsGQ=="
         }
       },
       "is_incremental": false,
@@ -2832,7 +2832,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryPropertyMappingAdapter-2.html",
-          "hash": "Migdy7TrvDWZqQHjKoBelg=="
+          "hash": "r6H636/6DA0DIYwyQboIOA=="
         }
       },
       "is_incremental": false,
@@ -2844,7 +2844,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryReadOnlyPropertyMappingAdapter.html",
-          "hash": "F795G4wfNXWQsjnJ1bHEzQ=="
+          "hash": "QvhPKjfkG22Jl0xuW2YPHQ=="
         }
       },
       "is_incremental": false,
@@ -2856,7 +2856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructure-1.html",
-          "hash": "ZPFvvJMZ+MUZ9CSD7dYfiA=="
+          "hash": "I5Sstc/0nxyBxJpJN0Z9vw=="
         }
       },
       "is_incremental": false,
@@ -2868,7 +2868,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructureAdapter-1.html",
-          "hash": "SxlC885ai8wvJC98DbWe8Q=="
+          "hash": "byea5tasfb9tjuWmlWOxfA=="
         }
       },
       "is_incremental": false,
@@ -2880,7 +2880,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html",
-          "hash": "7ipOkpIFz6MPDcjbwcvFOQ=="
+          "hash": "TAZxcbLPcmkliQabQtXG+Q=="
         }
       },
       "is_incremental": false,
@@ -2904,7 +2904,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.Dynamic.IStructureFlag.html",
-          "hash": "VZqZI2k2NfoS568EFy1z3w=="
+          "hash": "x0ELaLeSr5V29CA5agBzvg=="
         }
       },
       "is_incremental": false,
@@ -3228,7 +3228,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyAttribute.html",
-          "hash": "XgWuX9d89Xi7Ott1UcTJag=="
+          "hash": "TbXTxEPbJcICxXmi7zpAMw=="
         }
       },
       "is_incremental": false,
@@ -3240,7 +3240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.PropertyBaseAttribute.html",
-          "hash": "eTWa0nN1UfWUdpnAhKy7Tg=="
+          "hash": "FQwSWhljnla7joyeYEZbqw=="
         }
       },
       "is_incremental": false,
@@ -3312,7 +3312,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Mapping.ReferenceAttribute.html",
-          "hash": "gRMYtAosa7EjKRfcHlIz7g=="
+          "hash": "JazfDuvQEcPLjedblXJFAQ=="
         }
       },
       "is_incremental": false,
@@ -3552,7 +3552,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Security.SecuritySession.html",
-          "hash": "x0FsUIsbEkWIay9/w0tXdA=="
+          "hash": "erwX7RnuEnF9tm+3GPg5eg=="
         }
       },
       "is_incremental": false,
@@ -3720,7 +3720,7 @@
       "output": {
         ".html": {
           "relative_path": "api/XData.Work.html",
-          "hash": "EtLrFUSZVj07cDukSfJ4vg=="
+          "hash": "weJgZYOC/InLkbLDE9HI4g=="
         }
       },
       "is_incremental": false,
@@ -3804,7 +3804,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/first_mapping.html",
-          "hash": "AW0vx8XlxZ3nbBDSJF6fTA=="
+          "hash": "H5WRTT+J/S/HvosmAt6pUw=="
         }
       },
       "is_incremental": false,
@@ -3828,7 +3828,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/mapping_three.html",
-          "hash": "hnS5BuS+fujqMt4mnuiTfw=="
+          "hash": "vp4H8VQh+0rIqzIFJ275aA=="
         }
       },
       "is_incremental": false,
@@ -3864,7 +3864,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/asp_net_core/trigger.html",
-          "hash": "EyMDPEt3sK+tMxT5Yfa53A=="
+          "hash": "EJhoZeC89TlBX2mtgl+/xA=="
         }
       },
       "is_incremental": false,
@@ -3900,7 +3900,7 @@
       "output": {
         ".html": {
           "relative_path": "quick_start/inheritance/base_class.html",
-          "hash": "tlTTsAQxPChe8Dc/fEKTSg=="
+          "hash": "VkDjaO+nkPVpmTFI/RmZJg=="
         }
       },
       "is_incremental": false,
@@ -3948,7 +3948,7 @@
       "output": {
         ".html": {
           "relative_path": "tips/adapter_config.html",
-          "hash": "wXd/4PH9CxHPoN1ZWBtnJg=="
+          "hash": "BetEwo2ROWxn5jeF39w33w=="
         }
       },
       "is_incremental": false,
@@ -4124,6 +4124,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "tips/distinct.md",
+      "output": {
+        ".html": {
+          "relative_path": "tips/distinct.html",
+          "hash": "AUD4oDWmyvBgcesGWPTQ7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "tips/events.md",
       "output": {
         ".html": {
@@ -4248,7 +4260,7 @@
       "output": {
         ".html": {
           "relative_path": "tips/tips.html",
-          "hash": "Kr1rAUiUCZwEdqWI53rzKw=="
+          "hash": "WJg2On24UdZE78UoVbIruA=="
         }
       },
       "is_incremental": false,
@@ -4260,7 +4272,7 @@
       "output": {
         ".html": {
           "relative_path": "tips/toc.html",
-          "hash": "FBfiMcBccrNnRxlpDUyxPQ=="
+          "hash": "CX6ReJiKY8eU8RhdROdUdA=="
         }
       },
       "is_incremental": false,
@@ -4416,7 +4428,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/glossary.html",
-          "hash": "DRRwbxOP77DGQSPkSbuKxg=="
+          "hash": "dU9NIP0eiZ3hvfspREeGrg=="
         }
       },
       "is_incremental": false,
@@ -4512,7 +4524,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/db_diagram.html",
-          "hash": "19+B1VXYxhX/enYEmnXX+A=="
+          "hash": "u+9y3JgK7D4kDE/zWhZ7OQ=="
         }
       },
       "is_incremental": false,
@@ -4539,7 +4551,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/dynamic.html",
-          "hash": "8EJnnHIWJueHZtkv98EADA=="
+          "hash": "xgG4HOy1hNTZnLV2cgNf9w=="
         }
       },
       "is_incremental": false,
@@ -4983,7 +4995,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/dynamic/sample.html",
-          "hash": "1WJWWwxpVNjRX872AwQIJA=="
+          "hash": "O9OnjnkPgyyPVnEilmRiPw=="
         }
       },
       "is_incremental": false,
@@ -5706,7 +5718,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/sample.html",
-          "hash": "RZYXbT5V9oRgEMfWboJa3Q=="
+          "hash": "bkVp62wCMOauP0YysqcaPA=="
         }
       },
       "is_incremental": false,
@@ -5721,7 +5733,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorial/mapping/static/static.html",
-          "hash": "wJlmjh1oWkhv0MXjpB6jfQ=="
+          "hash": "yeg/A3TLJAIK46k31coGnw=="
         }
       },
       "is_incremental": false,
@@ -5923,14 +5935,19 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -5939,23 +5956,16 @@
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 165,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "total_file_count": 166,
+          "skipped_file_count": 164
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 307,
-          "skipped_file_count": 0
+          "skipped_file_count": 307
         }
       }
     },
