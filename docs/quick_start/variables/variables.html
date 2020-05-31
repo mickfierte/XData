@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Use variable in mapping | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Use variable in mapping | XData website ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../.././images/cube.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="use-variable-in-mapping">Use variable in mapping</h3>
+
+<p>Some filters can use <a href="../../tutorial/glossary.html#variables">variables</a> as values. This allows more flexible use of the same mapping in different situations. Having described such a filter during mapping, you can specify various values of variables when using the repository.</p>
+<ul>
+<li>Use variables in Constant filters</li>
+</ul>
+<pre><code class="lang-csharp">x =&gt; x.ConstFilter(&quot;ParamCode&quot;, &quot;param_code&quot;, FilterConstantType.Variable, &quot;ParamCode&quot;)
+</code></pre><p>Here, the <a class="xref" href="../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_ConstFilter_System_String_System_String_XData_FilterConstantType_System_Object_">ConstFilter</a> method is used to describe the filter. The <em>constantType</em> parameter in this case has the value <a class="xref" href="../../api/XData.FilterConstantType.html">FilterConstantType.Variable</a> and the parameter value <em>constantValue</em> will already be interpreted not as a filter value, but as a variable name, the value of which will be used as a filter value.</p>
+<ul>
+<li>Use variables in Dictionary filters</li>
+</ul>
+<pre><code class="lang-csharp">x =&gt; x.DictFilter(&quot;T_DOC_TYPE&quot;, &quot;doc_type_id&quot;, &quot;code&quot;, &quot;DocType&quot;, true)
+</code></pre><p>Now, to describe the filter, the <a class="xref" href="../../api/XData.Mapping.Dynamic.IInnerFilterAdapter.html#XData_Mapping_Dynamic_IInnerFilterAdapter_DictFilter_System_String_System_String_System_String_System_String_System_Boolean_">DictFilter</a> method overload is used with the <em>bool</em> parameter <em>valueIsVariable</em>. And if it is set to <em>true</em>, the value of the <em>dictValue</em> parameter will be interpreted as the name of the variable, the value of which will be used as the filter value.</p>
+<ul>
+<li>Use variables as SQL procedure parameter</li>
+</ul>
+<p>If in the description of <em>data object</em> the <a href="../../tutorial/mapping/mapping.html#sql-functions--procedures">SQL procedure or function</a> is used, then the values of their parameters are also transmitted as variables.</p>
+<pre><code class="lang-csharp">.Procedure(&quot;ORG&quot;, &quot;bids.get_org_list_by_period_id&quot;, ProcedureType.Function)
+.Parameter&lt;long&gt;(&quot;ORG&quot;, 1, &quot;p_period_id&quot;, DbType.Int64)
+.Return(&quot;ORG&quot;)
+</code></pre><p>To call the <a href="../../tutorial/glossary.html#data-object">data object</a> with that SQL function used, we must set parameter <em>p_period_id</em> value with one of followed methods...</p>
+<h3 id="set-data-object-variable-value">Set data object variable value</h3>
+<p>To set the values of variables <em>data object</em>, when receiving an instance of the repository using the <a class="xref" href="../../api/XData.IDataScope.html#XData_IDataScope_GetRepository__1_XData_Variable___">GetRepository</a> method, we can specify the values of the variables that are used in the mapping of this object. To do this, use the <em>variables</em> parameter.</p>
+<pre><code class="lang-csharp">dataScope.GetRepository&lt;Doc&gt;(&quot;DocType&quot;.SetVar(&quot;INVOICE&quot;));
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Variable name is case sensitive!</p>
+</div>
+<p>When describing an object being reused as a subquery (or inner view), it may often be necessary to use variables to filter data within the subquery. The value of the variable can be set for the final date of the object.</p>
+<p>But if the value of a subquery variable is dictated by the logic of its use in external mapping or in external mapping, does such a subquery participate several times? In this case, it is possible to use an overload of the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_XData_Variable___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a> (or <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_InnerView__1_System_String_XData_Variable___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">InnerView</a>) method with the <em>variables</em> parameter:</p>
+<pre><code class="lang-csharp">//subquery define
+public class DocPropertyValue : ISqlObject
+{
+    [UsedImplicitly]
+    private static Expression&lt;CustomMapping&lt;DocPropertyValue&gt;&gt; _ = 
+    () =&gt; XDataMapping.CustomMapping&lt;DocPropertyValue&gt;()
+        .DataTable(&quot;public.t_param&quot;, &quot;P&quot;,
+            x =&gt; x.ConstFilter(&quot;ParamCode&quot;, &quot;param_code&quot;, 
+                FilterConstantType.Variable, &quot;ParamCode&quot;)) //&lt;= look here
+        .DataTable(&quot;bids.t_doc_param&quot;, &quot;V&quot;,
+            x =&gt; x.Link(&quot;P&quot;, &quot;param_id&quot;).SetOperation(FilterOperation.OuterJoin),
+            x =&gt; x.ConstFilter(&quot;ParamActual&quot;, &quot;version_state&quot;, VersionState.Actual))
+        .Column(&quot;DocId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;V&quot;, string.Empty, z =&gt; z.Hidden()))
+        .Column(&quot;ParamValue&quot;, x =&gt; x.Field&lt;string&gt;(&quot;V&quot;, string.Empty, z =&gt; z.Hidden()))
+        .Map().SetBaseTable(&quot;P&quot;);
+}
+...
+.Subquery&lt;DocPropertyValue&gt;(&quot;EN&quot;, 
+    x =&gt; x.GetProperty(&quot;ParamValue&quot;), DataGrouping.None,
+    //set variable for EN subquery
+    new[] { &quot;ParamCode&quot;.SetVar(&quot;EXEC_FIO&quot;) },
+    x =&gt; x.SubqueryLink(&quot;DocId&quot;))
+.Subquery&lt;DocPropertyValue&gt;(&quot;ET&quot;, 
+    x =&gt; x.GetProperty(&quot;ParamValue&quot;), DataGrouping.None,
+    //set variable for ET subquery
+    new[] { &quot;ParamCode&quot;.SetVar(&quot;EXEC_TEL&quot;) },
+    x =&gt; x.SubqueryLink(&quot;DocId&quot;))
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mickfierte/private/blob/main/doc/quick_start/variables/variables.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
