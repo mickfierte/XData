@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Calculate using SQL expressions mapping | XData website </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Calculate using SQL expressions mapping | XData website ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../.././images/cube.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../.././images/cube-white.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="calculate-using-sql-expressions-mapping">Calculate using SQL expressions mapping</h3>
+
+<p>XData supports several mapping methods for SQL expressions: mapping to <a href="#calculate-using-subquery-sql-expressions">one field subquery result</a>, to <a href="#calculate-using-linq-style-sql-expressions">LINQ-style expression</a> mapped to SQL, to <a href="#calculate-using-plain-sql-expressions">SQL plain text</a>. Consider each of these methods and remove their advantages in various situations...</p>
+<p>Here we will consider options when a field value can be obtained using SQL language tools. We will consider the option when we need some algorithmic logic to calculate the field value in the next part of the lesson...</p>
+<h4 id="calculate-using-subquery-sql-expressions">Calculate using subquery SQL expressions</h4>
+<p><em><strong>Yes</strong></em> This method is suitable if the data for the calculation can be obtained using a subquery. </p>
+<p><em><strong>No</strong></em> It is too complicated for calculations based on scalar functions, including those built into the DBMS (consider other methods from this section). </p>
+<p><em><strong>No</strong></em> It does not work if a subquery returns more than one field or more than one row (consider using an <a href="../../tutorial/mapping/dynamic/dynamic.html#subqueries">inner view</a>).</p>
+<p><em><strong>No</strong></em> It does not work for table valued functions (consider using an <a href="../../tutorial/mapping/dynamic/dynamic.html#sql-table-valued-function-as-query-sample">table valued function</a>).</p>
+<p>We used this method several times earlier in previous lessons. To calculate a field value based on a subquery:</p>
+<p>1) Add a read-only property to the object</p>
+<pre><code class="lang-csharp">public string ExecName =&gt; this.GetProperty(x =&gt; x.ExecName);
+</code></pre><p>2) Describe the subquery, while we can describe the subquery in a separate class and then we can also use the described subquery in another mapping using <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructure-1.html#XData_Mapping_Dynamic_IRepositoryStructure_1_Subquery__1_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object___XData_DataGrouping_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_ISubqueryLinkAdapter__0___0__XData_Mapping_Dynamic_IFilterDescription_____">Subquery</a> method...</p>
+<pre><code class="lang-csharp">//subquery define
+public class DocPropertyValue : ISqlObject
+{
+    [UsedImplicitly]
+    private static Expression&lt;CustomMapping&lt;DocPropertyValue&gt;&gt; _ = 
+    () =&gt; XDataMapping.CustomMapping&lt;DocPropertyValue&gt;()
+        .DataTable(&quot;public.t_param&quot;, &quot;P&quot;,
+            x =&gt; x.ConstFilter(&quot;ParamCode&quot;, &quot;param_code&quot;, 
+                FilterConstantType.Variable, &quot;ParamCode&quot;))
+        .DataTable(&quot;bids.t_doc_param&quot;, &quot;V&quot;,
+            x =&gt; x.Link(&quot;P&quot;, &quot;param_id&quot;).SetOperation(FilterOperation.OuterJoin),
+            x =&gt; x.ConstFilter(&quot;ParamActual&quot;, &quot;version_state&quot;, VersionState.Actual))
+        .Column(&quot;DocId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;V&quot;, string.Empty, z =&gt; z.Hidden()))
+        .Column(&quot;ParamValue&quot;, x =&gt; x.Field&lt;string&gt;(&quot;V&quot;, string.Empty, z =&gt; z.Hidden()))
+        .Map().SetBaseTable(&quot;P&quot;);
+}
+...
+//define subquery
+.Subquery&lt;DocPropertyValue&gt;(&quot;EN&quot;, 
+    x =&gt; x.GetProperty(&quot;ParamValue&quot;), DataGrouping.None,
+    new[] { &quot;ParamCode&quot;.SetVar(&quot;EXEC_FIO&quot;) },
+    x =&gt; x.SubqueryLink(&quot;DocId&quot;))
+</code></pre><p>...or describe it directly in the mapping of the main <a href="../../tutorial/glossary.html#data-object">data object</a>.</p>
+<pre><code class="lang-csharp">//define subquery
+.Subquery(&quot;EN&quot;, XDataMapping.GetStructure(&quot;P&quot;)
+        .DataTable(&quot;public.t_param&quot;, &quot;P&quot;,
+            x =&gt; x.ConstFilter(&quot;ParamCode&quot;, &quot;param_code&quot;, 
+                FilterConstantType.Variable, &quot;EXEC_FIO&quot;))
+        .DataTable(&quot;bids.t_doc_param&quot;, &quot;V&quot;,
+            x =&gt; x.Link(&quot;P&quot;, &quot;param_id&quot;).SetOperation(FilterOperation.OuterJoin),
+            x =&gt; x.ConstFilter(&quot;ParamActual&quot;, &quot;version_state&quot;, VersionState.Actual))
+        .Column(&quot;DocId&quot;, x =&gt; x.Field&lt;long&gt;(&quot;V&quot;, string.Empty, z =&gt; z.Hidden()))
+        .Map(x =&gt; {
+            ParamValue = x.Field&lt;string&gt;(&quot;V&quot;, string.Empty)
+        }),
+    &quot;ParamValue&quot;, DataGrouping.None,
+    x =&gt; x.SubqueryLink(&quot;DocId&quot;))
+</code></pre><p>3) Describe a property using a subquery described previously.</p>
+<pre><code class="lang-csharp">.ReadOnlyProperty(x =&gt; x.ExecName,
+    x =&gt; x.Expr&lt;string&gt;(null, DataExpressionType.SubQuery, 
+    &quot;EN&quot;, DbType.String, z =&gt; z.Size(1024)))
+</code></pre><p>This uses the overload of the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_XData_DataExpressionType_System_String_System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr</a> method. </p>
+<ul>
+<li>The first parameter is used to indicate the field name in the resulting query. Note that the table is not used for expressions (more precisely, a <a href="../../tutorial/glossary.html#virtual-table">virtual data source</a> is used). Since the expression has the name of a property matching in the mapping, we can omit the field name by explicitly specifying <em>null</em> or <em>string.Empty</em> as the value. In this case, the name of the field will be substituted according to the rule used by default (<em>exec_name</em>).</li>
+<li>The second parameter indicates the type of SQL expression description. In this example, we are using <a class="xref" href="../../api/XData.DataExpressionType.html">DataExpressionType.SubQuery</a> - which means using a subquery expression as the SQL source. Other types of descriptions will be discussed below.</li>
+<li>The next parameter is the actual text of the expression, and in the case of a subquery, the value of this parameter must be an alias of the subquery.</li>
+<li>Next is the value type of the expression field (in this example, this is a string). </li>
+<li>And then comes the parameter - an array of modifiers with the help of which the mapping-expression-field details are specified. The example uses the <a class="xref" href="../../api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html#XData_Mapping_Dynamic_IExpressionPropertyAdapter_Size_System_Int32_">Size</a> modifier with which we specify the maximum length of the expression string. Other modifiers for expressions can be found <a class="xref" href="../../api/XData.Mapping.Dynamic.IExpressionPropertyAdapter.html">here</a> and <a class="xref" href="../../api/XData.Mapping.Dynamic.IPropertyMappingAdapter.html">here</a>.</li>
+</ul>
+<h4 id="calculate-using-linq-style-sql-expressions">Calculate using LINQ-style SQL expressions</h4>
+<p><em><strong>Yes</strong></em> This method is suitable if the data for the calculation can be obtained using scalar functions, including those built into the DBMS.</p>
+<p><em><strong>Yes</strong></em> It is suitable if the expression is a selection based on the data of the current fetch.</p>
+<p><em><strong>No</strong></em> It does not work for table valued functions (consider using an <em>table valued function</em>).</p>
+<p><em><strong>No</strong></em> The method does not allow the use of specific language constructs that are not supported by XData.</p>
+<p>1) SQL expression based on scalar function call...</p>
+<pre><code class="lang-sql">...
+coalesce(DOC.state, 0) as state
+...
+</code></pre><p>mapped as...</p>
+<pre><code class="lang-csharp">.ReadOnlyProperty(x =&gt; x.State, x =&gt; x.Expr(null,
+    z =&gt; z.SqlFn&lt;Common.DocState&gt;(&quot;coalesce&quot;,
+        a =&gt; a.CastTo&lt;Common.DocState&gt;().Field&lt;int?&gt;(&quot;DOC&quot;, &quot;state&quot;),
+        a =&gt; Common.DocState.Absent), DbType.Int32))
+</code></pre><p>Here we use the other overload of the <a class="xref" href="../../api/XData.Mapping.Dynamic.IRepositoryStructureAdapter.html#XData_Mapping_Dynamic_IRepositoryStructureAdapter_Expr__1_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Data_DbType_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IRepositoryExpressionMappingAdapter_XData_Mapping_Dynamic_IStructureFlag_____">Expr</a> method.</p>
+<ul>
+<li>The first parameter is the same (field name)</li>
+<li>The second parameter is a description of the expression. In this example, the <a class="xref" href="../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlFn__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Object_____">SqlFn</a> method is used as the basis for describing the SQL expression, with which you can describe the call of a scalar function built into the DBMS or declared in the database by the developer. The typing parameter of the <em>SqlFn</em> method indicates the type of the result of the expression (in this example, an <em>DocState</em> enum). The first parameter is the name of the SQL function. The rest are the values ​​that will be passed to it as parameters. An interesting point here is to use the <a class="xref" href="../../api/XData.Mapping.Dynamic.IQueryStructureAdapter.html#XData_Mapping_Dynamic_IQueryStructureAdapter_CastTo__1">CastTo</a> method to cast the type of source information to the resulting type at the time of mapping transformation.</li>
+<li>The third parameter is the type of the expression field (<em>int</em>).</li>
+</ul>
+<p>2) SQL expression based on switch case expression... </p>
+<pre><code class="lang-sql">...
+case DOC.state when null then null when 1 then null else DOC.version_time end as state_date
+...
+</code></pre><p>mapped as...</p>
+<pre><code class="lang-csharp">.ReadOnlyProperty(x =&gt; x.StateDate, x =&gt; x.Expr(null,
+    z =&gt; z.Case(y =&gt; y.Field&lt;int?&gt;(&quot;DOC&quot;, &quot;state&quot;),
+        a =&gt; a.Field&lt;DateTime?&gt;(&quot;DOC&quot;, &quot;version_time&quot;),
+        new int?().SetExpression(a =&gt; new DateTime?()),
+        new int?(1).SetExpression(a =&gt; new DateTime?())), DbType.DateTime))
+</code></pre><p>Here you need to pay attention to the <a class="xref" href="../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_Case__2_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___XData_Mapping_Dynamic_TaggedExpression___0___1____">Case</a> method used to describe switch case expression. And especially on the order of parameters.</p>
+<ul>
+<li>The first parameter is the field / expression used as the option selection key.</li>
+<li>But the second parameter is the value if the value does not meet any condition. The fact is that there can be several parameters describing the options of values ​​and it is convenient to describe them in the form of an <em>params</em> array. And the value of <em>else</em> is one.</li>
+<li>The last parameter is a description of the value options. Each variant is described using the <a class="xref" href="../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SetExpression__2___0_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___1___">SetExpression</a> method and the object is the value of the variant (in the example, there is an empty <em>null</em> value and a constant), and the parameter is the result of switch case expression.</li>
+</ul>
+<p>Similarly, there are methods to facilitate the description of SQL statements: <a class="xref" href="../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_DateDiff__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter_System_DateTime___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter_System_DateTime___XData_DateDiffKind_">DateDiff</a> and <a class="xref" href="../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_HasFlag__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter___0___">HasFlag</a>. Their study is recommended for self-study. There are no specifics regarding the options already considered in their use.</p>
+<p>3)Interpretation of simple expressions in SQL. All basic (embedded in the csharp language) operations and functions (*) of working with dates and strings are supported. Based on the examples discussed earlier, the following should not cause difficulties in understanding ...</p>
+<pre><code class="lang-csharp">.ReadOnlyProperty(x =&gt; x.Bids, 
+    x =&gt; x.Expr(&quot;bids&quot;, a =&gt; a.Field&lt;string&gt;(&quot;B&quot;, &quot;app_type&quot;) != null, 
+    DbType.Boolean))
+</code></pre><pre><code class="lang-csharp">.ReadOnlyProperty(x =&gt; x.Fio, 
+    x =&gt; x.Expr(&quot;Fio&quot;, o =&gt; o.Field&lt;string&gt;(&quot;C&quot;, &quot;surname&quot;) + &quot; &quot; +
+        o.Field&lt;string&gt;(&quot;C&quot;, &quot;name&quot;).Substring(0, 1) + &quot;.&quot; +
+        o.Field&lt;string&gt;(&quot;C&quot;, &quot;patronymic&quot;).Substring(0, 1) + &quot;.&quot;, DbType.String))
+</code></pre><p>* - With the exception of <em>string.Format</em> - at the moment, differences in the way text information is formatted in various SQL dialects do not allow interpretation of this function. Maybe in the next versions...</p>
+<h4 id="calculate-using-plain-sql-expressions">Calculate using plain SQL expressions</h4>
+<p><em><strong>Yes</strong></em> This method is suitable when XData cannot construct an expression, but it can nevertheless be expressed using SQL.</p>
+<p><em><strong>Yes</strong></em> We can afford to support one particular dialect of SQL</p>
+<p><em><strong>No</strong></em> This method is the &quot;refuge of last hope&quot; and it is not recommended to use this method if it is possible to use other methods from this article.</p>
+<p>This method allows using plain SQL inserts when describing mapping of properties to specific SQL expressions. To do this, when calling the <em>Expr</em> method, <a class="xref" href="../../api/XData.DataExpressionType.html">DataExpressionType.PlainSql</a> is specified as the second parameter, and plain SQL expression as the third.</p>
+<pre><code class="lang-csharp">.ReadOnlyProperty(x =&gt; x.RowNum,
+    x =&gt; x.Expr&lt;int&gt;(&quot;RowNum&quot;, DataExpressionType.PlainSql, 
+    &quot;row_number() over (order by o.sort_order, c.surname)&quot;, 
+    DbType.Int32))
+</code></pre><p>In difficult cases when you need to assemble an SQL expression from parts, you can use the <a class="xref" href="../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_SqlExpr__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_System_Linq_Expressions_Expression_System_Func_XData_Mapping_Dynamic_IQueryStructureAdapter_System_Object_____">SqlExpr</a> method which allows you to use a format string and substitution from the names of the fields of query data sources and the values of variables of both ordinary and data object variables (using <a class="xref" href="../../api/XData.Mapping.Dynamic.QueryDescriptionExtensions.html#XData_Mapping_Dynamic_QueryDescriptionExtensions_GetVariable__1_XData_Mapping_Dynamic_IQueryStructureAdapter_System_String_">GetVariable</a> method).</p>
+<pre><code class="lang-csharp">.ReadOnlyProperty(x =&gt; x.Something, x =&gt; x.Expr(null,
+    z =&gt; z.SqlExpr&lt;int&gt;(&quot;{0} something {1} {2}&quot;,
+        a =&gt; a.Field&lt;string&gt;(&quot;C&quot;, &quot;name&quot;)
+        a =&gt; someVariable,
+        a =&gt; a.GetVariable&lt;int&gt;(&quot;VarName&quot;))
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mickfierte/private/blob/main/doc/quick_start/calculated/sql_expr.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
